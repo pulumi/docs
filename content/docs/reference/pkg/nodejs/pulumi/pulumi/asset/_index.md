@@ -45,10 +45,12 @@ An Archive represents a collection of named assets.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L33" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of an Archive.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -69,10 +71,12 @@ Asset represents a single blob of text or data that is managed as a first class 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of an Asset.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -84,7 +88,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L46" >}}">class <b>AssetArchive</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An AssetArchive is an archive created from an in-memory collection of named assets or other archives.
@@ -94,20 +100,24 @@ An AssetArchive is an archive created from an in-memory collection of named asse
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L50" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AssetArchive(assets: <a href='#AssetMap'>AssetMap</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#AssetMap'>AssetMap</a>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AssetArchive-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L33" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of an Archive.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -118,7 +128,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L50" >}}">property <b>assets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>assets: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#AssetMap'>AssetMap</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A map of names to assets.
@@ -130,7 +142,9 @@ A map of names to assets.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L62" >}}">class <b>FileArchive</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A FileArchive is a file-based archive, or a collection of file-based assets.  This can be a raw directory or a
@@ -141,20 +155,24 @@ single archive file in one of the supported formats (.tar, .tar.gz, or .zip).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FileArchive(path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileArchive-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L33" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of an Archive.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -165,7 +183,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L66" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>path: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to the asset file.
@@ -177,7 +197,9 @@ The path to the asset file.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L51" >}}">class <b>FileAsset</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 FileAsset is a kind of asset produced from a given path to a file on the local filesystem.
@@ -187,20 +209,24 @@ FileAsset is a kind of asset produced from a given path to a file on the local f
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L55" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FileAsset(path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FileAsset-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of an Asset.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -211,7 +237,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L55" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>path: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to the asset file.
@@ -223,7 +251,9 @@ The path to the asset file.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L79" >}}">class <b>RemoteArchive</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Archive'>Archive</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A RemoteArchive is a file-based archive fetched from a remote location.  The URI's scheme dictates the
@@ -235,20 +265,24 @@ protocol for fetching the archive's contents: `file://` is a local file (just li
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L83" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RemoteArchive(uri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RemoteArchive-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L33" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of an Archive.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -259,7 +293,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L83" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>uri: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URI where the archive lives.
@@ -271,7 +307,9 @@ The URI where the archive lives.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L83" >}}">class <b>RemoteAsset</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 RemoteAsset is a kind of asset produced from a given URI string.  The URI's scheme dictates the protocol for fetching
@@ -283,20 +321,24 @@ specific providers may recognize alternative schemes; this is merely the base-mo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L87" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RemoteAsset(uri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RemoteAsset-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of an Asset.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -307,7 +349,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L87" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>uri: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URI where the asset lives.
@@ -319,7 +363,9 @@ The URI where the asset lives.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L66" >}}">class <b>StringAsset</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Asset'>Asset</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.
@@ -329,20 +375,24 @@ StringAsset is a kind of asset produced from an in-memory UTF8-encoded string.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StringAsset(text: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StringAsset-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of an Asset.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -353,7 +403,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="asset/asset.ts#L70" >}}">property <b>text</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>text: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The string contents.
@@ -365,7 +417,9 @@ The string contents.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="asset/archive.ts#L41" >}}">type <b>AssetMap</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> AssetMap = {[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='#Asset'>Asset</a> | <a href='#Archive'>Archive</a>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AssetMap is a map of assets.

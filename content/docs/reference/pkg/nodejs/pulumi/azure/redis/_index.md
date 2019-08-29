@@ -225,7 +225,7 @@ new resource to be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CachePatchSchedule'>CachePatchSchedule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CachePatchSchedule'>outputs.redis.CachePatchSchedule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -277,7 +277,7 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>redisConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CacheRedisConfiguration'>CacheRedisConfiguration</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>redisConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CacheRedisConfiguration'>outputs.redis.CacheRedisConfiguration</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -740,7 +740,7 @@ new resource to be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CachePatchSchedule'>CachePatchSchedule</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CachePatchSchedule'>inputs.redis.CachePatchSchedule</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -766,7 +766,7 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CacheRedisConfiguration'>CacheRedisConfiguration</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheRedisConfiguration'>inputs.redis.CacheRedisConfiguration</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -960,7 +960,7 @@ new resource to be created.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CachePatchSchedule'>CachePatchSchedule</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>patchSchedules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CachePatchSchedule'>inputs.redis.CachePatchSchedule</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1012,7 +1012,7 @@ The Static IP Address to assign to the Redis Cache when hosted inside the Virtua
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CacheRedisConfiguration'>CacheRedisConfiguration</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>redisConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CacheRedisConfiguration'>inputs.redis.CacheRedisConfiguration</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1437,7 +1437,7 @@ The minimum TLS version.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>patchSchedules: <a href='#GetCachePatchSchedule'>GetCachePatchSchedule</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>patchSchedules: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCachePatchSchedule'>outputs.redis.GetCachePatchSchedule</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1486,7 +1486,7 @@ The Primary Access Key for the Redis Instance
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>redisConfigurations: <a href='#GetCacheRedisConfiguration'>GetCacheRedisConfiguration</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>redisConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCacheRedisConfiguration'>outputs.redis.GetCacheRedisConfiguration</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 

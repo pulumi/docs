@@ -156,36 +156,46 @@ https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/lb/).
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L182" >}}">class <b>ApplicationListener</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Listener'>Listener</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="ApplicationListener-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L184" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ApplicationListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-addListenerRule">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L102" >}}">method <b>addListenerRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: x.lb.ListenerRuleArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L109" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: mod.LoadBalancerTarget, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to the `defaultTargetGroup` for this Listener.
 
@@ -195,40 +205,48 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L94" >}}">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | OutputInstance&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-containerPortMapping">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L86" >}}">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): PortMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;PortMapping&gt; | OutputInstance&lt;PortMapping&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L182" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L182" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -236,20 +254,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L182" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-defaultTargetGroup">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L184" >}}">property <b>defaultTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultTargetGroup?: x.lb.ApplicationTargetGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -257,7 +279,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L37" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListenerEndpoint'>ListenerEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -265,7 +289,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L33" >}}">property <b>listener</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listener: aws.lb.Listener;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -273,15 +299,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L183" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationListener-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L182" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -294,7 +324,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L36" >}}">class <b>ApplicationLoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#LoadBalancer'>LoadBalancer</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A application load balancer serves as the single point of contact for clients. The load balancer
@@ -310,20 +342,24 @@ more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L38" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ApplicationLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationLoadBalancerArgs'>ApplicationLoadBalancerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L59" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to the first `listener` of this LoadBalancer.  If there are multiple
 `listeners` you can add a target to specific listener to by calling `.attachTarget` directly
@@ -335,10 +371,12 @@ on it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L67" >}}">method <b>createListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ApplicationListener'>ApplicationListener</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a new listener for this [ApplicationLoadBalancer] see ApplicationListener for more
 details.
@@ -349,10 +387,12 @@ details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L78" >}}">method <b>createTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationTargetGroupArgs'>ApplicationTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a target group for this [ApplicationLoadBalancer] see ApplicationTargetGroup for more
 details.
@@ -360,23 +400,27 @@ details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L36" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -384,20 +428,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L36" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-listeners">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L37" >}}">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listeners: <a href='#ApplicationListener'>ApplicationListener</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -405,7 +453,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L23" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: aws.lb.LoadBalancer;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -413,7 +463,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L25" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroups: x.ec2.SecurityGroup[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -421,15 +473,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L38" >}}">property <b>targetGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetGroups: <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationLoadBalancer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -441,7 +497,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L24" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -450,8 +508,12 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L93" >}}">class <b>ApplicationTargetGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TargetGroup'>TargetGroup</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Each target group routes requests to one or more registered targets, such as EC2 instances, using
@@ -465,20 +527,24 @@ balancer.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L100" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ApplicationTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationTargetGroupArgs'>ApplicationTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L103" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: mod.LoadBalancerTarget, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to this target group.  See
 [Register-Targets](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-register-targets.html)
@@ -490,90 +556,108 @@ for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L79" >}}">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;x.ecs.ContainerLoadBalancer&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-containerPortMapping">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L73" >}}">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ecs.PortMapping&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-createListener">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L126" >}}">method <b>createListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationListenerArgs'>ApplicationListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ApplicationListener'>ApplicationListener</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L93" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L140" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-listenerDefaultAction">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L86" >}}">method <b>listenerDefaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.ListenerDefaultActionArgs&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-registerListener">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L94" >}}">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>registerListener(listener: x.lb.Listener): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L93" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-listeners">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L96" >}}">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listeners: x.lb.ApplicationListener[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -581,7 +665,9 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L94" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -589,15 +675,19 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L31" >}}">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetGroup: aws.lb.TargetGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationTargetGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L93" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -609,7 +699,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L32" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -618,36 +710,46 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L29" >}}">class <b>Listener</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="Listener-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L39" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Listener(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, defaultListenerAction: <a href='#ListenerDefaultAction'>ListenerDefaultAction</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, args: <a href='#ListenerArgs'>ListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-addListenerRule">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L102" >}}">method <b>addListenerRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: x.lb.ListenerRuleArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L109" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: mod.LoadBalancerTarget, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to the `defaultTargetGroup` for this Listener.
 
@@ -657,40 +759,48 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L94" >}}">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | OutputInstance&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-containerPortMapping">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L86" >}}">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): PortMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;PortMapping&gt; | OutputInstance&lt;PortMapping&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L29" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -698,20 +808,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L29" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-defaultTargetGroup">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L35" >}}">property <b>defaultTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultTargetGroup?: x.lb.TargetGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -719,7 +833,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L37" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListenerEndpoint'>ListenerEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -727,7 +843,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L33" >}}">property <b>listener</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listener: aws.lb.Listener;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -735,15 +853,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L34" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: x.lb.LoadBalancer;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Listener-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -756,7 +878,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L31" >}}">class <b>ListenerRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The rules that you define for your listener determine how the load balancer routes requests to
@@ -771,30 +895,36 @@ https://docs.aws.amazon.com/elasticloadbalancing/latest/application/listener-upd
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L32" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, listener: x.lb.Listener, args: <a href='#ListenerRuleArgs'>ListenerRuleArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L31" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L31" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -802,28 +932,34 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L31" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-listenerRule">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L32" >}}">property <b>listenerRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listenerRule: aws.lb.ListenerRule;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L31" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -836,25 +972,31 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L22" >}}">class <b>LoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="LoadBalancer-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L28" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LoadBalancer(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerArgs'>LoadBalancerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L59" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to the first `listener` of this LoadBalancer.  If there are multiple
 `listeners` you can add a target to specific listener to by calling `.attachTarget` directly
@@ -863,23 +1005,27 @@ on it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L22" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L22" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -887,20 +1033,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L22" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-listeners">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L27" >}}">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listeners: mod.Listener[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -908,7 +1058,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L23" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: aws.lb.LoadBalancer;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -916,7 +1068,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L25" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroups: x.ec2.SecurityGroup[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -924,15 +1078,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L28" >}}">property <b>targetGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetGroups: mod.TargetGroup[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L22" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -944,7 +1102,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L24" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -953,8 +1113,12 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L122" >}}">class <b>NetworkListener</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Listener'>Listener</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#IntegrationRouteTargetProvider'>IntegrationRouteTargetProvider</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A listener is a process that checks for connection requests, using the protocol and port that you
@@ -969,30 +1133,36 @@ for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L127" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-addListenerRule">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L102" >}}">method <b>addListenerRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addListenerRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: x.lb.ListenerRuleArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#ListenerRule'>ListenerRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L109" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: mod.LoadBalancerTarget, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to the `defaultTargetGroup` for this Listener.
 
@@ -1002,40 +1172,48 @@ Attaches a target to the `defaultTargetGroup` for this Listener.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L94" >}}">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt; | OutputInstance&lt;<a href='#ContainerLoadBalancer'>ContainerLoadBalancer</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-containerPortMapping">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L86" >}}">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerPortMapping(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): PortMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;PortMapping&gt; | OutputInstance&lt;PortMapping&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L122" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L122" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1043,30 +1221,36 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L122" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-target">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L158" >}}">method <b>target</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>target(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, parent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;x.apigateway.IntegrationTarget&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-defaultTargetGroup">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L127" >}}">property <b>defaultTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultTargetGroup?: x.lb.NetworkTargetGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1074,7 +1258,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L37" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListenerEndpoint'>ListenerEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1082,7 +1268,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L33" >}}">property <b>listener</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listener: aws.lb.Listener;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1090,15 +1278,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L126" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkListener-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L122" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1111,25 +1303,31 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L27" >}}">class <b>NetworkLoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#LoadBalancer'>LoadBalancer</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L29" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkLoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkLoadBalancerArgs'>NetworkLoadBalancerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L59" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerTarget'>LoadBalancerTarget</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to the first `listener` of this LoadBalancer.  If there are multiple
 `listeners` you can add a target to specific listener to by calling `.attachTarget` directly
@@ -1141,40 +1339,48 @@ on it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L46" >}}">method <b>createListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#NetworkListener'>NetworkListener</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-createTargetGroup">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L53" >}}">method <b>createTargetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkTargetGroupArgs'>NetworkTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#NetworkTargetGroup'>NetworkTargetGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L27" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1182,20 +1388,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L27" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-listeners">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L28" >}}">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listeners: <a href='#NetworkListener'>NetworkListener</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1203,7 +1413,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L23" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: aws.lb.LoadBalancer;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1211,7 +1423,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L25" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroups: x.ec2.SecurityGroup[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1219,15 +1433,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L29" >}}">property <b>targetGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetGroups: <a href='#NetworkTargetGroup'>NetworkTargetGroup</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkLoadBalancer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1239,7 +1457,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L24" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1248,8 +1468,12 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L78" >}}">class <b>NetworkTargetGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TargetGroup'>TargetGroup</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Each target group is used to route requests to one or more registered targets. When you create
@@ -1273,20 +1497,24 @@ for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L81" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NetworkTargetGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkTargetGroupArgs'>NetworkTargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L103" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: mod.LoadBalancerTarget, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to this target group.  See
 [Register-Targets](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-register-targets.html)
@@ -1298,50 +1526,60 @@ for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L79" >}}">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;x.ecs.ContainerLoadBalancer&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-containerPortMapping">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L73" >}}">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ecs.PortMapping&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-createListener">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L104" >}}">method <b>createListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createListener(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NetworkListenerArgs'>NetworkListenerArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#NetworkListener'>NetworkListener</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L78" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L78" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1352,40 +1590,48 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L86" >}}">method <b>listenerDefaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.ListenerDefaultActionArgs&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-registerListener">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L94" >}}">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>registerListener(listener: x.lb.Listener): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L78" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-listeners">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L81" >}}">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listeners: x.lb.NetworkListener[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1393,7 +1639,9 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L79" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1401,15 +1649,19 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L31" >}}">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetGroup: aws.lb.TargetGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NetworkTargetGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L78" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1421,7 +1673,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L32" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1430,26 +1684,34 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L24" >}}">class <b>TargetGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#ContainerPortMappingProvider'>ContainerPortMappingProvider</a>, <a href='#ContainerLoadBalancerProvider'>ContainerLoadBalancerProvider</a>, <a href='#ListenerDefaultAction'>ListenerDefaultAction</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="TargetGroup-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L34" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TargetGroup(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, loadBalancer: mod.LoadBalancer, args: <a href='#TargetGroupArgs'>TargetGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-attachTarget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L103" >}}">method <b>attachTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachTarget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: mod.LoadBalancerTarget, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TargetGroupAttachment'>TargetGroupAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Attaches a target to this target group.  See
 [Register-Targets](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/target-group-register-targets.html)
@@ -1461,40 +1723,48 @@ for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L79" >}}">method <b>containerLoadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerLoadBalancer(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;x.ecs.ContainerLoadBalancer&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-containerPortMapping">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L73" >}}">method <b>containerPortMapping</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerPortMapping(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.ecs.PortMapping&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L24" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L24" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1505,40 +1775,48 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L86" >}}">method <b>listenerDefaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.ListenerDefaultActionArgs&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-registerListener">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L94" >}}">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>registerListener(listener: x.lb.Listener): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L24" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-listeners">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L34" >}}">property <b>listeners</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listeners: x.lb.Listener[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1546,7 +1824,9 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L30" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancer: mod.LoadBalancer;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1554,15 +1834,19 @@ Do not call directly.  Intended for use by [Listener] and [ListenerRule]
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L31" >}}">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetGroup: aws.lb.TargetGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L24" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1574,7 +1858,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L32" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1583,35 +1869,43 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L22" >}}">class <b>TargetGroupAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L25" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TargetGroupAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, targetGroup: mod.TargetGroup, args: mod.LoadBalancerTarget, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L22" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L22" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1619,20 +1913,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L22" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-func">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L25" >}}">property <b>func</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>func?: aws.lambda.Function;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1640,7 +1938,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L24" >}}">property <b>permission</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>permission?: aws.lambda.Permission;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1648,15 +1948,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L23" >}}">property <b>targetGroupAttachment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetGroupAttachment: aws.lb.TargetGroupAttachment;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TargetGroupAttachment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L22" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1669,10 +1973,12 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L184" >}}">function <b>isLoadBalancerTargetInfoProvider</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isLoadBalancerTargetInfoProvider(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ApplicationListenerArgs">
@@ -1683,7 +1989,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L511" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the default SSL server certificate. Exactly one certificate is required if the
@@ -1697,7 +2005,9 @@ resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L492" >}}">property <b>defaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.ListenerDefaultActionArgs&gt; | x.lb.ListenerDefaultAction;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An Action block. If neither this nor [defaultActions] is provided, a suitable defaultAction
@@ -1711,7 +2021,9 @@ Do not provide both [defaultAction] and [defaultActions].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L501" >}}">property <b>defaultActions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.ListenerDefaultActionArgs&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An list of Action blocks. If neither this nor [defaultActions] is provided, a suitable
@@ -1726,7 +2038,9 @@ Do not provide both [defaultAction] and [defaultActions].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L533" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the listener should be available externally.
@@ -1749,7 +2063,9 @@ Defaults to [true].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L474" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The load balancer this listener is associated with.  If not provided, a new load balancer
@@ -1761,7 +2077,9 @@ will be automatically created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L468" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An explicit name to use for dependent resources.  Specifically, if a LoadBalancer or
@@ -1773,7 +2091,9 @@ TargetGroup is not provided, this name will be used to name those resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L479" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port. Specify a value from `1` to `65535`.  Computed from "protocol" if not provided.
@@ -1784,7 +2104,9 @@ The port. Specify a value from `1` to `65535`.  Computed from "protocol" if not 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L484" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationProtocol'>ApplicationProtocol</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol. Valid values are `HTTP`, `HTTPS`.  Computed from "port" if not provided.
@@ -1795,7 +2117,9 @@ The protocol. Valid values are `HTTP`, `HTTPS`.  Computed from "port" if not pro
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L516" >}}">property <b>sslPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
@@ -1806,7 +2130,9 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L462" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc this load balancer will be used with.  Defaults to `[Vpc.getDefault]` if
@@ -1823,19 +2149,9 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L326" >}}">property <b>accessLogs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>accessLogs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    prefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>accessLogs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | LoadBalancerAccessLogs | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerAccessLogs&gt; | OutputInstance&lt;LoadBalancerAccessLogs&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An Access Logs block. Access Logs documented below.
@@ -1846,7 +2162,9 @@ An Access Logs block. Access Logs documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L296" >}}">property <b>enableDeletionProtection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableDeletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, deletion of the load balancer will be disabled via the AWS API. This will prevent
@@ -1858,7 +2176,9 @@ Terraform from deleting the load balancer. Defaults to `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L331" >}}">property <b>enableHttp2</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableHttp2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether HTTP/2 is enabled. Defaults to `true`.
@@ -1869,7 +2189,9 @@ Indicates whether HTTP/2 is enabled. Defaults to `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L290" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not the load balancer is exposed to the internet. Defaults to `true` if
@@ -1881,7 +2203,9 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L336" >}}">property <b>idleTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>idleTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time in seconds that the connection is allowed to be idle. Default: 60.
@@ -1892,7 +2216,9 @@ The time in seconds that the connection is allowed to be idle. Default: 60.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L302" >}}">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ipv4"</span> | <span class='s2'>"dualstack"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of IP addresses used by the subnets for your load balancer. The possible values are
@@ -1904,7 +2230,9 @@ The type of IP addresses used by the subnets for your load balancer. The possibl
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L284" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the LoadBalancer. This name must be unique within your AWS account, can have a
@@ -1918,7 +2246,9 @@ LoadBalancer constructor will be hashed and used as the name.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L343" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroups?: x.ec2.SecurityGroupOrId[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of security group IDs to assign to the ALB.  If not provided, a default instance will
@@ -1931,34 +2261,9 @@ array here.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L307" >}}">property <b>subnetMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[]&gt; | OutputInstance&lt;LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A subnet mapping block as documented below.
@@ -1969,7 +2274,9 @@ A subnet mapping block as documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L314" >}}">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | x.lb.LoadBalancerSubnets;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of subnet IDs to attach to the LB. Subnets cannot be updated for Load Balancers of
@@ -1982,7 +2289,9 @@ recreation of the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L319" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1993,7 +2302,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L276" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc this load balancer will be used with.  Defaults to `[Vpc.getDefault]` if
@@ -2010,7 +2321,9 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L400" >}}">property <b>deregistrationDelay</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deregistrationDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount time for Elastic Load Balancing to wait before changing the state of a
@@ -2023,7 +2336,9 @@ is 300 seconds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L405" >}}">property <b>healthCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationTargetGroupHealthCheck'>ApplicationTargetGroupHealthCheck</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Health Check block.
@@ -2034,7 +2349,9 @@ A Health Check block.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L391" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The load balancer this target group is associated with.  If not provided, a new load balancer
@@ -2046,7 +2363,9 @@ will be automatically created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L385" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the TargetGroup. If not specified, the [name] parameter passed into the
@@ -2059,7 +2378,9 @@ provided, this name will be used to name that resource as well.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L449" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port to use to connect with the target. Valid values are either ports 1-65536. If
@@ -2071,7 +2392,9 @@ unspecified will be inferred from the [protocol].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L454" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationProtocol'>ApplicationProtocol</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol to use to connect with the target.  If unspecified will be inferred from [port].
@@ -2082,7 +2405,9 @@ The protocol to use to connect with the target.  If unspecified will be inferred
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L412" >}}">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See
@@ -2095,7 +2420,9 @@ for more information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L418" >}}">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>slowStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount time for targets to warm up before the load balancer sends them a full share of
@@ -2107,19 +2434,9 @@ requests. The range is 30-900 seconds or 0 to disable. The default value is 0 se
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L424" >}}">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TargetGroupStickiness | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TargetGroupStickiness&gt; | OutputInstance&lt;TargetGroupStickiness&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if
@@ -2131,7 +2448,9 @@ used with Load Balancers of type `Application`
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L429" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2142,7 +2461,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L441" >}}">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.TargetType&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of target that you must specify when registering targets with this target group. The
@@ -2160,7 +2481,9 @@ IP addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L378" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc this load balancer will be used with.  Defaults to `[Vpc.getDefault]` if
@@ -2173,7 +2496,9 @@ unspecified.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L354" >}}">interface <b>ApplicationTargetGroupHealthCheck</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TargetGroupHealthCheck'>TargetGroupHealthCheck</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Health Check block.
@@ -2188,7 +2513,9 @@ backend. The underlying function is invoked when target_type is set to lambda.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L161" >}}">property <b>healthyThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health checks successes required before considering an
@@ -2200,7 +2527,9 @@ unhealthy target healthy. Defaults to 3.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L123" >}}">property <b>interval</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>interval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The approximate amount of time, in seconds, between health checks of an individual
@@ -2213,7 +2542,9 @@ needs to be greater as the [timeout] of the underlying [lambda]. Default 30 seco
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L130" >}}">property <b>matcher</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>matcher?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP codes to use when checking for a successful response from a target. You can specify
@@ -2226,7 +2557,9 @@ Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balanc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L358" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Required for HTTP/HTTPS ALB) The destination for the health check request.
@@ -2237,7 +2570,9 @@ Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balanc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L141" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port to use to connect with the target.
@@ -2248,7 +2583,9 @@ The port to use to connect with the target.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L147" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol to use to connect with the target. Defaults to HTTP. Not applicable when
@@ -2260,7 +2597,9 @@ target_type is [lambda].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L364" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, during which no response means a failed health check. For
@@ -2272,7 +2611,9 @@ Application Load Balancers, the range is 2 to 60 seconds and the default is 5 se
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L370" >}}">property <b>unhealthyThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unhealthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health check failures required before considering the target
@@ -2289,380 +2630,24 @@ unhealthy. Defaults to 3.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L283" >}}">method <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>actions(): ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | OutputInstance&lt;ListenerRuleAction&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | OutputInstance&lt;ListenerRuleAction&gt;[]&gt; | OutputInstance&lt;ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | OutputInstance&lt;ListenerRuleAction&gt;[]&gt;</pre>
+{{< /md-disable >}}
+
 {{% md %}}
-
-<pre class="highlight"><span class='kd'></span>actions(): {
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt; | OutputInstance&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;</pre>
-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerActions-registerListener">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L284" >}}">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registerListener(listener: <a href='#Listener'>Listener</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -2674,7 +2659,9 @@ unhealthy. Defaults to 3.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L320" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the default SSL server certificate. Exactly one certificate is required if the
@@ -2688,7 +2675,9 @@ resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L325" >}}">property <b>defaultActions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An list of Action blocks. See [ListenerDefaultActionArgs] for more information.
@@ -2699,7 +2688,9 @@ An list of Action blocks. See [ListenerDefaultActionArgs] for more information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L312" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancer: x.lb.LoadBalancer;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2707,7 +2698,9 @@ An list of Action blocks. See [ListenerDefaultActionArgs] for more information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L330" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port. Specify a value from `1` to `65535`.
@@ -2718,7 +2711,9 @@ The port. Specify a value from `1` to `65535`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L335" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span> | <span class='s2'>"TCP"</span> | <span class='s2'>"TLS"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol.
@@ -2729,7 +2724,9 @@ The protocol.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L340" >}}">property <b>sslPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
@@ -2745,20 +2742,24 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L278" >}}">method <b>listenerDefaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listenerDefaultAction(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ListenerDefaultActionArgs'>ListenerDefaultActionArgs</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ListenerDefaultAction-registerListener">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L279" >}}">method <b>registerListener</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registerListener(listener: <a href='#Listener'>Listener</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -2775,6 +2776,7 @@ See https://www.terraform.io/docs/providers/aws/r/lb_listener.html#default_actio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L122" >}}">property <b>authenticateCognito</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authenticateCognito?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
     onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -2785,6 +2787,7 @@ See https://www.terraform.io/docs/providers/aws/r/lb_listener.html#default_actio
     userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2792,6 +2795,7 @@ See https://www.terraform.io/docs/providers/aws/r/lb_listener.html#default_actio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L160" >}}">property <b>authenticateOidc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authenticateOidc?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
     authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -2805,6 +2809,7 @@ See https://www.terraform.io/docs/providers/aws/r/lb_listener.html#default_actio
     tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2812,11 +2817,13 @@ See https://www.terraform.io/docs/providers/aws/r/lb_listener.html#default_actio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L214" >}}">property <b>fixedResponse</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedResponse?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Information for creating an action that returns a custom HTTP response. Required if type is
@@ -2828,7 +2835,9 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L226" >}}">property <b>order</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>order?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2836,6 +2845,7 @@ Information for creating an action that returns a custom HTTP response. Required
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L231" >}}">property <b>redirect</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redirect?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -2844,6 +2854,7 @@ Information for creating an action that returns a custom HTTP response. Required
     query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Information for creating a redirect action. Required if type is "redirect".
@@ -2854,7 +2865,9 @@ Information for creating a redirect action. Required if type is "redirect".
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L268" >}}">property <b>targetGroupArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the Target Group to which to route traffic. Required if type is "forward".
@@ -2865,7 +2878,9 @@ The ARN of the Target Group to which to route traffic. Required if type is "forw
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L274" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of routing action. Valid values are "forward", "redirect", "fixed-response",
@@ -2882,7 +2897,9 @@ The type of routing action. Valid values are "forward", "redirect", "fixed-respo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L25" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2890,7 +2907,9 @@ The type of routing action. Valid values are "forward", "redirect", "fixed-respo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listener.ts#L26" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2903,367 +2922,9 @@ The type of routing action. Valid values are "forward", "redirect", "fixed-respo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L75" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>actions: {
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt; | OutputInstance&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    authenticateCognito: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        userPoolArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userPoolDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    authenticateOidc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        authenticationRequestExtraParams: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        authorizationEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        clientSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        issuer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        onUnauthenticatedRequest: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionCookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        sessionTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        tokenEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        userInfoEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    fixedResponse: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        messageBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    order: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    redirect: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        statusCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    targetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt; | x.lb.ListenerActions;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>actions: ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | OutputInstance&lt;ListenerRuleAction&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | OutputInstance&lt;ListenerRuleAction&gt;[]&gt; | OutputInstance&lt;ListenerRuleAction | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleAction&gt; | OutputInstance&lt;ListenerRuleAction&gt;[]&gt; | x.lb.ListenerActions;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An Action block. Action blocks are documented below.
@@ -3274,34 +2935,9 @@ An Action block. Action blocks are documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L79" >}}">property <b>conditions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>conditions: {
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt; | OutputInstance&lt;{
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    field: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>conditions: ListenerRuleCondition | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleCondition&gt; | OutputInstance&lt;ListenerRuleCondition&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleCondition | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleCondition&gt; | OutputInstance&lt;ListenerRuleCondition&gt;[]&gt; | OutputInstance&lt;ListenerRuleCondition | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;ListenerRuleCondition&gt; | OutputInstance&lt;ListenerRuleCondition&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Condition block. Condition blocks are documented below.
@@ -3312,7 +2948,9 @@ A Condition block. Condition blocks are documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/listenerRule.ts#L83" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
@@ -3328,7 +2966,9 @@ The priority for the rule between `1` and `50000`. Leaving it unset will automat
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L124" >}}">property <b>enableDeletionProtection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableDeletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, deletion of the load balancer will be disabled via the AWS API. This will prevent
@@ -3340,7 +2980,9 @@ Terraform from deleting the load balancer. Defaults to `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L113" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not the load balancer is exposed to the internet. Defaults to `true` if
@@ -3352,7 +2994,9 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L130" >}}">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ipv4"</span> | <span class='s2'>"dualstack"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of IP addresses used by the subnets for your load balancer. The possible values are
@@ -3364,7 +3008,9 @@ The type of IP addresses used by the subnets for your load balancer. The possibl
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L118" >}}">property <b>loadBalancerType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancerType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"application"</span> | <span class='s2'>"network"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of load balancer to create. Possible values are `application` or `network`.
@@ -3375,7 +3021,9 @@ The type of load balancer to create. Possible values are `application` or `netwo
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L152" >}}">property <b>securityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroups?: x.ec2.SecurityGroupOrId[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of security group IDs to assign to the LB. Only valid for Load Balancers of type
@@ -3387,34 +3035,9 @@ A list of security group IDs to assign to the LB. Only valid for Load Balancers 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L141" >}}">property <b>subnetMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[]&gt; | OutputInstance&lt;LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A subnet mapping block as documented below.
@@ -3425,7 +3048,9 @@ A subnet mapping block as documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L136" >}}">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | <a href='#LoadBalancerSubnets'>LoadBalancerSubnets</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The subnets to use for the load balancer.  If not provided, the appropriate external or
@@ -3437,7 +3062,9 @@ internal subnets of the [network] will be used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L146" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3448,7 +3075,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L101" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc this load balancer will be used with.  Defaults to `[Vpc.getDefault]` if
@@ -3465,10 +3094,12 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L156" >}}">method <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnets(): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -3480,7 +3111,9 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L173" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Availability Zone where the IP address of the target is to be registered.
@@ -3491,7 +3124,9 @@ The Availability Zone where the IP address of the target is to be registered.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L177" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port on which targets receive traffic.
@@ -3502,7 +3137,9 @@ The port on which targets receive traffic.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L169" >}}">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the target. This is the Instance ID for an `instance`, or the container ID for an
@@ -3520,10 +3157,12 @@ ECS container. If the target type is `ip`, specify an IP address. If the target 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L181" >}}">method <b>loadBalancerTargetInfo</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancerTargetInfo(targetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.TargetType&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LoadBalancerTargetInfo'>LoadBalancerTargetInfo</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -3535,7 +3174,9 @@ ECS container. If the target type is `ip`, specify an IP address. If the target 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L428" >}}">property <b>certificateArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of the default SSL server certificate. Exactly one certificate is required if the
@@ -3549,7 +3190,9 @@ resource](https://www.terraform.io/docs/providers/aws/r/lb_listener_certificate.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L411" >}}">property <b>defaultAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.ListenerDefaultActionArgs&gt; | x.lb.ListenerDefaultAction;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An Action block. If neither this nor [defaultActions] is provided, a suitable defaultAction
@@ -3563,7 +3206,9 @@ Do not provide both [defaultAction] and [defaultActions].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L420" >}}">property <b>defaultActions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;mod.ListenerDefaultActionArgs&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An list of Action blocks. If neither this nor [defaultAction] is provided, a suitable
@@ -3578,7 +3223,9 @@ Do not provide both [defaultAction] and [defaultActions].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L392" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The load balancer this listener is associated with.  If not provided, a new load balancer
@@ -3590,7 +3237,9 @@ will be automatically created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L386" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An explicit name to use for dependent resources.  Specifically, if a LoadBalancer or
@@ -3602,7 +3251,9 @@ TargetGroup is not provided, this name will be used to name those resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L397" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port. Specify a value from `1` to `65535`.
@@ -3613,7 +3264,9 @@ The port. Specify a value from `1` to `65535`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L403" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkProtocol'>NetworkProtocol</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol for connections from clients to the load balancer. Valid values are TCP, TLS,
@@ -3625,7 +3278,9 @@ HTTP and HTTPS. Defaults to TCP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L433" >}}">property <b>sslPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
@@ -3636,7 +3291,9 @@ The name of the SSL Policy for the listener. Required if `protocol` is `HTTPS`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L380" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc this load balancer will be used with.  Defaults to `[Vpc.getDefault]` if
@@ -3653,7 +3310,9 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L254" >}}">property <b>enableCrossZoneLoadBalancing</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableCrossZoneLoadBalancing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, cross-zone load balancing of the load balancer will be enabled.  Defaults to `false`.
@@ -3664,7 +3323,9 @@ If true, cross-zone load balancing of the load balancer will be enabled.  Defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L224" >}}">property <b>enableDeletionProtection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableDeletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, deletion of the load balancer will be disabled via the AWS API. This will prevent
@@ -3676,7 +3337,9 @@ Terraform from deleting the load balancer. Defaults to `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L218" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not the load balancer is exposed to the internet. Defaults to `true` if
@@ -3688,7 +3351,9 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L230" >}}">property <b>ipAddressType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddressType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ipv4"</span> | <span class='s2'>"dualstack"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of IP addresses used by the subnets for your load balancer. The possible values are
@@ -3700,7 +3365,9 @@ The type of IP addresses used by the subnets for your load balancer. The possibl
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L212" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the LoadBalancer. This name must be unique within your AWS account, can have a
@@ -3714,34 +3381,9 @@ LoadBalancer constructor will be hashed and used as the name.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L235" >}}">property <b>subnetMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    allocationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subnetMappings?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[] | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[]&gt; | OutputInstance&lt;LoadBalancerSubnetMapping | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;LoadBalancerSubnetMapping&gt; | OutputInstance&lt;LoadBalancerSubnetMapping&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A subnet mapping block as documented below.
@@ -3752,7 +3394,9 @@ A subnet mapping block as documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L242" >}}">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt; | x.lb.LoadBalancerSubnets;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of subnet IDs to attach to the LB. Subnets cannot be updated for Load Balancers of
@@ -3765,7 +3409,9 @@ recreation of the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L247" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3776,7 +3422,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L204" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc this load balancer will be used with.  Defaults to `[Vpc.getDefault]` if
@@ -3793,7 +3441,9 @@ unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L330" >}}">property <b>deregistrationDelay</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deregistrationDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount time for Elastic Load Balancing to wait before changing the state of a
@@ -3806,7 +3456,9 @@ is 300 seconds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L335" >}}">property <b>healthCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkTargetGroupHealthCheck'>NetworkTargetGroupHealthCheck</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Health Check block. Health Check blocks are documented below.
@@ -3817,7 +3469,9 @@ A Health Check block. Health Check blocks are documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L309" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancer?: <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The load balancer this target group is associated with.  If not provided, a new load balancer
@@ -3829,7 +3483,9 @@ will be automatically created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L303" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the TargetGroup. If not specified, the [name] parameter passed into the
@@ -3842,7 +3498,9 @@ provided, this name will be used to name that resource as well.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L317" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port to use to connect with the target. Valid values are either ports 1-65536, or
@@ -3854,7 +3512,9 @@ The port to use to connect with the target. Valid values are either ports 1-6553
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L323" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NetworkProtocol'>NetworkProtocol</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol for connections from clients to the load balancer. Valid values are TCP, TLS,
@@ -3866,7 +3526,9 @@ HTTP and HTTPS. Defaults to TCP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L342" >}}">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See
@@ -3879,7 +3541,9 @@ for more information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L348" >}}">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>slowStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount time for targets to warm up before the load balancer sends them a full share of
@@ -3891,19 +3555,9 @@ requests. The range is 30-900 seconds or 0 to disable. The default value is 0 se
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L354" >}}">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TargetGroupStickiness | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TargetGroupStickiness&gt; | OutputInstance&lt;TargetGroupStickiness&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if
@@ -3915,7 +3569,9 @@ used with Load Balancers of type `Application`
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L359" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3926,7 +3582,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L372" >}}">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"instance"</span> | <span class='s2'>"ip"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of target that you must specify when registering targets with this target group. The
@@ -3945,7 +3603,9 @@ IP addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L296" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc this load balancer will be used with.  Defaults to `[Vpc.getDefault]` if
@@ -3958,7 +3618,9 @@ unspecified.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L266" >}}">interface <b>NetworkTargetGroupHealthCheck</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TargetGroupHealthCheck'>TargetGroupHealthCheck</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Health Check block.
@@ -3974,7 +3636,9 @@ backend. The underlying function is invoked when target_type is set to lambda.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L161" >}}">property <b>healthyThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health checks successes required before considering an
@@ -3986,7 +3650,9 @@ unhealthy target healthy. Defaults to 3.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L123" >}}">property <b>interval</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>interval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The approximate amount of time, in seconds, between health checks of an individual
@@ -3999,7 +3665,9 @@ needs to be greater as the [timeout] of the underlying [lambda]. Default 30 seco
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L270" >}}">property <b>matcher</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>matcher?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP)
@@ -4010,7 +3678,9 @@ Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balanc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L275" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
@@ -4021,7 +3691,9 @@ Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balanc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L141" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port to use to connect with the target.
@@ -4032,7 +3704,9 @@ The port to use to connect with the target.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L147" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol to use to connect with the target. Defaults to HTTP. Not applicable when
@@ -4044,7 +3718,9 @@ target_type is [lambda].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L281" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 For Network Load Balancers, you cannot set a custom value, and the default is 10 seconds
@@ -4056,7 +3732,9 @@ for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L288" >}}">property <b>unhealthyThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unhealthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health check failures required before considering the target
@@ -4074,7 +3752,9 @@ healthy_threshold.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L188" >}}">property <b>deregistrationDelay</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deregistrationDelay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount time for Elastic Load Balancing to wait before changing the state of a
@@ -4087,7 +3767,9 @@ is 300 seconds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L193" >}}">property <b>healthCheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TargetGroupHealthCheck'>TargetGroupHealthCheck</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Health check parameters for this target group.
@@ -4098,7 +3780,9 @@ Health check parameters for this target group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L199" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port to use to connect with the target. Valid values are either ports 1-65536, or
@@ -4110,7 +3794,9 @@ The port to use to connect with the target. Valid values are either ports 1-6553
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L204" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span> | <span class='s2'>"TCP"</span> | <span class='s2'>"TLS"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol to use to connect with the target.
@@ -4121,7 +3807,9 @@ The protocol to use to connect with the target.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L211" >}}">property <b>proxyProtocolV2</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>proxyProtocolV2?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean to enable / disable support for proxy protocol v2 on Network Load Balancers. See
@@ -4134,7 +3822,9 @@ for more information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L217" >}}">property <b>slowStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>slowStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount time for targets to warm up before the load balancer sends them a full share of
@@ -4146,19 +3836,9 @@ requests. The range is 30-900 seconds or 0 to disable. The default value is 0 se
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L223" >}}">property <b>stickiness</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-} | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt; | OutputInstance&lt;{
-    cookieDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>stickiness?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | TargetGroupStickiness | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;TargetGroupStickiness&gt; | OutputInstance&lt;TargetGroupStickiness&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Stickiness block. Stickiness blocks are documented below. `stickiness` is only valid if
@@ -4170,7 +3850,9 @@ used with Load Balancers of type `Application`
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L228" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4181,7 +3863,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L240" >}}">property <b>targetType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TargetType'>TargetType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of target that you must specify when registering targets with this target group. The
@@ -4199,7 +3883,9 @@ publicly routable IP addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L175" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc for this target group.
@@ -4215,7 +3901,9 @@ The vpc for this target group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L120" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Availability Zone where the IP address of the target is to be registered.
@@ -4226,7 +3914,9 @@ The Availability Zone where the IP address of the target is to be registered.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L135" >}}">property <b>func</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>func?: aws.lambda.Function;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional function this target group attachment targets.
@@ -4237,7 +3927,9 @@ Optional function this target group attachment targets.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L125" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port on which targets receive traffic.
@@ -4248,7 +3940,9 @@ The port on which targets receive traffic.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroupAttachment.ts#L130" >}}">property <b>targetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda.
@@ -4275,7 +3969,9 @@ backend. The underlying function is invoked when target_type is set to lambda.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L161" >}}">property <b>healthyThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health checks successes required before considering an
@@ -4287,7 +3983,9 @@ unhealthy target healthy. Defaults to 3.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L123" >}}">property <b>interval</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>interval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The approximate amount of time, in seconds, between health checks of an individual
@@ -4300,7 +3998,9 @@ needs to be greater as the [timeout] of the underlying [lambda]. Default 30 seco
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L130" >}}">property <b>matcher</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>matcher?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP codes to use when checking for a successful response from a target. You can specify
@@ -4313,7 +4013,9 @@ Applies to Application Load Balancers only (HTTP/HTTPS), not Network Load Balanc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L136" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Required for HTTP/HTTPS ALB) The destination for the health check request. Applies to
@@ -4325,7 +4027,9 @@ Application Load Balancers only (HTTP/HTTPS), not Network Load Balancers (TCP).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L141" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port to use to connect with the target.
@@ -4336,7 +4040,9 @@ The port to use to connect with the target.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L147" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol to use to connect with the target. Defaults to HTTP. Not applicable when
@@ -4348,7 +4054,9 @@ target_type is [lambda].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L155" >}}">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of time, in seconds, during which no response means a failed health check. For
@@ -4362,7 +4070,9 @@ for TCP and HTTPS health checks and 6 seconds for HTTP health checks.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L168" >}}">property <b>unhealthyThreshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unhealthyThreshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of consecutive health check failures required before considering the target
@@ -4380,10 +4090,12 @@ healthy_threshold. Defaults to 3.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L46" >}}">function <b>createDimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createDimensions(change: <a href='#CoreMetricChange'>CoreMetricChange</a>): { ... }</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CoreMetricChange">
@@ -4396,7 +4108,9 @@ healthy_threshold. Defaults to 3.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L43" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by Availability Zone.
@@ -4407,7 +4121,9 @@ Filters the metric data by Availability Zone.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -4420,7 +4136,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -4433,7 +4151,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -4446,7 +4166,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -4461,7 +4183,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L31" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancer?: aws.lb.LoadBalancer | <a href='#LoadBalancer'>LoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by load balancer.
@@ -4472,7 +4196,9 @@ Filters the metric data by load balancer.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -4485,7 +4211,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -4498,7 +4226,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L38" >}}">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetGroup?: aws.lb.TargetGroup | <a href='#TargetGroup'>TargetGroup</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by target group.  If this is a [NetworkTargetGroup] then
@@ -4511,7 +4241,9 @@ Filters the metric data by target group.  If this is a [NetworkTargetGroup] then
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -4524,7 +4256,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -4538,7 +4272,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -4558,10 +4294,12 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L182" >}}">function <b>activeConnectionCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activeConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of concurrent TCP connections active from clients to the load balancer
 and from the load balancer to targets. Reporting criteria: There is a nonzero value
@@ -4576,10 +4314,12 @@ Dimensions LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L195" >}}">function <b>clientTLSNegotiationErrorCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of TLS connections initiated by the client that did not establish a session
 with the load balancer. Possible causes include a mismatch of ciphers or protocols.
@@ -4595,10 +4335,12 @@ Dimensions: AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L208" >}}">function <b>consumedLCUs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumedLCUs(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of load balancer capacity units (LCU) used by your load balancer. You pay for
 the number of LCUs that you use per hour. For more information, see Elastic Load
@@ -4614,10 +4356,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L427" >}}">function <b>healthyHostCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of targets that are considered healthy. Reporting criteria: Reported if health
 checks are enabled
@@ -4633,10 +4377,12 @@ LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L256" >}}">function <b>httpCodeELB3XXCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeELB3XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP 3XX redirection codes that originate from the load balancer. Reporting
 criteria: There is a nonzero value
@@ -4651,10 +4397,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L271" >}}">function <b>httpCodeELB4XXCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeELB4XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP 4XX client error codes that originate from the load balancer. Client
 errors are generated when requests are malformed or incomplete. These requests have not
@@ -4672,10 +4420,12 @@ Dimensions: LoadBalancer AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L296" >}}">function <b>httpCodeELB500Count</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeELB500Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP 500 error codes that originate from the load balancer.
 
@@ -4689,10 +4439,12 @@ Statistics: The only meaningful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L306" >}}">function <b>httpCodeELB502Count</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeELB502Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP 502 error codes that originate from the load balancer. Reporting
 criteria: There is a nonzero value
@@ -4705,10 +4457,12 @@ Statistics: The only meaningful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L316" >}}">function <b>httpCodeELB503Count</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeELB503Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP 503 error codes that originate from the load balancer. Reporting
 criteria: There is a nonzero value
@@ -4721,10 +4475,12 @@ Statistics: The only meaningful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L326" >}}">function <b>httpCodeELB504Count</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeELB504Count(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP 504 error codes that originate from the load balancer. Reporting
 criteria: There is a nonzero value
@@ -4737,10 +4493,12 @@ Statistics: The only meaningful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L285" >}}">function <b>httpCodeELB5XXCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeELB5XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP 5XX server error codes that originate from the load balancer. This
 count does not include any response codes generated by the targets. Reporting criteria:
@@ -4757,10 +4515,12 @@ Dimensions: LoadBalancer AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L442" >}}">function <b>httpCodeTarget2XXCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeTarget2XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP response codes generated by the targets. This does not include any
 response codes generated by the load balancer. Reporting criteria: There is a nonzero
@@ -4778,10 +4538,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L457" >}}">function <b>httpCodeTarget3XXCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeTarget3XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP response codes generated by the targets. This does not include any
 response codes generated by the load balancer. Reporting criteria: There is a nonzero
@@ -4799,10 +4561,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L472" >}}">function <b>httpCodeTarget4XXCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeTarget4XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP response codes generated by the targets. This does not include any
 response codes generated by the load balancer. Reporting criteria: There is a nonzero
@@ -4820,10 +4584,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L487" >}}">function <b>httpCodeTarget5XXCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpCodeTarget5XXCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP response codes generated by the targets. This does not include any
 response codes generated by the load balancer. Reporting criteria: There is a nonzero
@@ -4841,10 +4607,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L220" >}}">function <b>httpFixedResponseCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpFixedResponseCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of fixed-response actions that were successful. Reporting criteria: There is a
 nonzero value
@@ -4859,10 +4627,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L232" >}}">function <b>httpRedirectCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpRedirectCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of redirect actions that were successful. Reporting criteria: There is a
 nonzero value
@@ -4877,10 +4647,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L244" >}}">function <b>httpRedirectUrlLimitExceededCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpRedirectUrlLimitExceededCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of redirect actions that couldn't be completed because the URL in the response
 location header is larger than 8K. Reporting criteria: There is a nonzero value
@@ -4895,10 +4667,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L338" >}}">function <b>ipv6ProcessedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6ProcessedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of bytes processed by the load balancer over IPv6. Reporting criteria:
 There is a nonzero value
@@ -4913,10 +4687,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L352" >}}">function <b>ipv6RequestCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6RequestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of IPv6 requests received by the load balancer. Reporting criteria: There is a
 nonzero value
@@ -4933,10 +4709,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L164" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#ApplicationMetricName'>ApplicationMetricName</a>, change: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/ApplicationELB metric with the requested [metricName]. See
 https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html
@@ -4974,10 +4752,12 @@ To filter the metrics for your Application Load Balancer, use the following dime
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L364" >}}">function <b>newConnectionCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>newConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of new TCP connections established from clients to the load balancer and
 from the load balancer to targets. Reporting criteria: There is a nonzero value
@@ -4992,10 +4772,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L502" >}}">function <b>nonStickyRequestCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nonStickyRequestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of requests where the load balancer chose a new target because it couldn't use
 an existing sticky session. For example, the request was the first request from a new
@@ -5013,10 +4795,12 @@ Statistics: The only meaningful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L376" >}}">function <b>processedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>processedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of bytes processed by the load balancer over IPv4 and IPv6. Reporting
 criteria: There is a nonzero value
@@ -5031,10 +4815,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L388" >}}">function <b>rejectedConnectionCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rejectedConnectionCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of connections that were rejected because the load balancer had reached its
 maximum number of connections. Reporting criteria: There is a nonzero value
@@ -5049,10 +4835,12 @@ Dimensions: LoadBalancer AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L402" >}}">function <b>requestCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of requests processed over IPv4 and IPv6. This count includes only the
 requests with a response generated by a target of the load balancer. Reporting criteria:
@@ -5069,10 +4857,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L516" >}}">function <b>requestCountPerTarget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requestCountPerTarget(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of requests received by each target in a target group. You must
 specify the target group using the TargetGroup dimension. This metric does not apply if
@@ -5089,10 +4879,12 @@ Dimensions: TargetGroup TargetGroup, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L414" >}}">function <b>ruleEvaluations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ruleEvaluations(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of rules processed by the load balancer given a request rate averaged over an
 hour. Reporting criteria: There is a nonzero value
@@ -5107,10 +4899,12 @@ Dimensions: LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L530" >}}">function <b>targetConnectionErrorCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetConnectionErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of connections that were not successfully established between the load
 balancer and target. This metric does not apply if the target is a Lambda function.
@@ -5127,10 +4921,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L544" >}}">function <b>targetResponseTime</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetResponseTime(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The time elapsed, in seconds, after the request leaves the load balancer until a response
 from the target is received. This is equivalent to the target_processing_time field in
@@ -5147,10 +4943,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L559" >}}">function <b>targetTLSNegotiationErrorCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of TLS connections initiated by the load balancer that did not establish a
 session with the target. Possible causes include a mismatch of ciphers or protocols. This
@@ -5168,10 +4966,12 @@ TargetGroup, AvailabilityZone, LoadBalancer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L571" >}}">function <b>unHealthyHostCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unHealthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of targets that are considered unhealthy. Reporting criteria: Reported if
 health checks are enabled
@@ -5192,7 +4992,9 @@ Dimensions: TargetGroup, LoadBalancer TargetGroup, AvailabilityZone, LoadBalance
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L130" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by Availability Zone.
@@ -5203,7 +5005,9 @@ Filters the metric data by Availability Zone.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -5216,7 +5020,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -5229,7 +5035,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -5242,7 +5050,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -5257,7 +5067,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L118" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancer?: aws.lb.LoadBalancer | <a href='#ApplicationLoadBalancer'>ApplicationLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by load balancer.
@@ -5268,7 +5080,9 @@ Filters the metric data by load balancer.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -5281,7 +5095,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -5294,7 +5110,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L125" >}}">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetGroup?: aws.lb.TargetGroup | <a href='#ApplicationTargetGroup'>ApplicationTargetGroup</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by target group.  If this is an [ApplicationTargetGroup] then
@@ -5307,7 +5125,9 @@ Filters the metric data by target group.  If this is an [ApplicationTargetGroup]
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -5320,7 +5140,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -5334,7 +5156,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -5348,7 +5172,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L79" >}}">type <b>ApplicationMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> ApplicationMetricName = <span class='s2'>"ActiveConnectionCount"</span> | <span class='s2'>"ClientTLSNegotiationErrorCount"</span> | <span class='s2'>"ConsumedLCUs"</span> | <span class='s2'>"HTTP_Fixed_Response_Count"</span> | <span class='s2'>"HTTP_Redirect_Count"</span> | <span class='s2'>"HTTP_Redirect_Url_Limit_Exceeded_Count"</span> | <span class='s2'>"HTTPCode_ELB_3XX_Count"</span> | <span class='s2'>"HTTPCode_ELB_4XX_Count"</span> | <span class='s2'>"HTTPCode_ELB_5XX_Count"</span> | <span class='s2'>"HTTPCode_ELB_500_Count"</span> | <span class='s2'>"HTTPCode_ELB_502_Count"</span> | <span class='s2'>"HTTPCode_ELB_503_Count"</span> | <span class='s2'>"HTTPCode_ELB_504_Count"</span> | <span class='s2'>"IPv6ProcessedBytes"</span> | <span class='s2'>"IPv6RequestCount"</span> | <span class='s2'>"NewConnectionCount"</span> | <span class='s2'>"ProcessedBytes"</span> | <span class='s2'>"RejectedConnectionCount"</span> | <span class='s2'>"RequestCount"</span> | <span class='s2'>"RuleEvaluations"</span> | <span class='s2'>"HealthyHostCount"</span> | <span class='s2'>"HTTPCode_Target_2XX_Count"</span> | <span class='s2'>"HTTPCode_Target_3XX_Count"</span> | <span class='s2'>"HTTPCode_Target_4XX_Count"</span> | <span class='s2'>"HTTPCode_Target_5XX_Count"</span> | <span class='s2'>"NonStickyRequestCount"</span> | <span class='s2'>"RequestCountPerTarget"</span> | <span class='s2'>"TargetConnectionErrorCount"</span> | <span class='s2'>"TargetResponseTime"</span> | <span class='s2'>"TargetTLSNegotiationErrorCount"</span> | <span class='s2'>"UnHealthyHostCount"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5363,10 +5189,12 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L661" >}}">function <b>activeFlowCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activeFlowCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of concurrent flows (or connections) from clients to targets. This
 metric includes connections in the SYN_SENT and ESTABLISHED states. TCP connections are
@@ -5381,10 +5209,12 @@ Statistics: The most useful statistics are Average, Maximum, and Minimum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L671" >}}">function <b>activeFlowCount_TLS</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activeFlowCount_TLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of concurrent TLS flows (or connections) from clients to targets. This
 metric includes only connections in the ESTABLISHED states.
@@ -5397,10 +5227,12 @@ Statistics: The most useful statistics are Average, Maximum, and Minimum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L681" >}}">function <b>clientTLSNegotiationErrorCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of TLS handshakes that failed during negotiation between a client and a
 TLS listener.
@@ -5413,10 +5245,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L690" >}}">function <b>consumedLCUs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumedLCUs(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of load balancer capacity units (LCU) used by your load balancer. You pay for
 the number of LCUs that you use per hour. For more information, see Elastic Load
@@ -5428,10 +5262,12 @@ Balancing Pricing.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L699" >}}">function <b>healthyHostCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>healthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of targets that are considered healthy.
 
@@ -5443,10 +5279,12 @@ Statistics: The most useful statistics are Maximum and Minimum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L643" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#NetworkMetricName'>NetworkMetricName</a>, change: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/NetworkELB metric with the requested [metricName]. See
 https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-cloudwatch-metrics.html
@@ -5484,10 +5322,12 @@ To filter the metrics for your Application Load Balancer, use the following dime
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L709" >}}">function <b>newFlowCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>newFlowCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of new flows (or connections) established from clients to targets in the
 time period.
@@ -5500,10 +5340,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L719" >}}">function <b>newFlowCountTLS</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>newFlowCountTLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of new TLS flows (or connections) established from clients to targets in
 the time period.
@@ -5516,10 +5358,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L728" >}}">function <b>processedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>processedBytes(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of bytes processed by the load balancer, including TCP/IP headers.
 
@@ -5531,10 +5375,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L737" >}}">function <b>processedBytesTLS</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>processedBytesTLS(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of bytes processed by TLS listeners.
 
@@ -5546,10 +5392,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L747" >}}">function <b>targetTLSNegotiationErrorCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetTLSNegotiationErrorCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of TLS handshakes that failed during negotiation between a TLS listener
 and a target.
@@ -5562,10 +5410,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L757" >}}">function <b>tcpClientResetCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tcpClientResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of reset (RST) packets sent from a client to a target. These resets are
 generated by the client and forwarded by the load balancer.
@@ -5578,10 +5428,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L766" >}}">function <b>tcpELBResetCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tcpELBResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of reset (RST) packets generated by the load balancer.
 
@@ -5593,10 +5445,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L776" >}}">function <b>tcpTargetResetCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tcpTargetResetCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of reset (RST) packets sent from a target to a client. These resets are
 generated by the target and forwarded by the load balancer.
@@ -5609,10 +5463,12 @@ Statistics: The most useful statistic is Sum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L785" >}}">function <b>unhealthyHostCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unhealthyHostCount(change?: <a href='#ElasticLoadBalancingV2MetricChange'>ElasticLoadBalancingV2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of targets that are considered unhealthy.
 
@@ -5630,7 +5486,9 @@ Statistics: The most useful statistics are Maximum and Minimum.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L609" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by Availability Zone.
@@ -5641,7 +5499,9 @@ Filters the metric data by Availability Zone.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -5654,7 +5514,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -5667,7 +5529,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -5680,7 +5544,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -5695,7 +5561,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L597" >}}">property <b>loadBalancer</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancer?: aws.lb.LoadBalancer | <a href='#NetworkLoadBalancer'>NetworkLoadBalancer</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by load balancer.
@@ -5706,7 +5574,9 @@ Filters the metric data by load balancer.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -5719,7 +5589,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -5732,7 +5604,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L604" >}}">property <b>targetGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetGroup?: aws.lb.TargetGroup | <a href='#NetworkTargetGroup'>NetworkTargetGroup</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters the metric data by target group.  If this is a [NetworkTargetGroup] then
@@ -5745,7 +5619,9 @@ Filters the metric data by target group.  If this is a [NetworkTargetGroup] then
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -5758,7 +5634,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -5772,7 +5650,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -5786,7 +5666,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="lb/metrics.ts#L577" >}}">type <b>NetworkMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> NetworkMetricName = <span class='s2'>"ActiveFlowCount"</span> | <span class='s2'>"ActiveFlowCount_TLS"</span> | <span class='s2'>"ClientTLSNegotiationErrorCount"</span> | <span class='s2'>"ConsumedLCUs"</span> | <span class='s2'>"HealthyHostCount"</span> | <span class='s2'>"NewFlowCount"</span> | <span class='s2'>"NewFlowCount_TLS"</span> | <span class='s2'>"ProcessedBytes"</span> | <span class='s2'>"ProcessedBytes_TLS"</span> | <span class='s2'>"TargetTLSNegotiationErrorCount"</span> | <span class='s2'>"TCP_Client_Reset_Count"</span> | <span class='s2'>"TCP_ELB_Reset_Count"</span> | <span class='s2'>"TCP_Target_Reset_Count"</span> | <span class='s2'>"UnHealthyHostCount"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5796,13 +5678,17 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/application.ts#L25" >}}">type <b>ApplicationProtocol</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> ApplicationProtocol = <span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerTarget">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/loadBalancer.ts#L193" >}}">type <b>LoadBalancerTarget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> LoadBalancerTarget = <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerTargetInfo'>LoadBalancerTargetInfo</a>&gt; | <a href='#LoadBalancerTargetInfoProvider'>LoadBalancerTargetInfoProvider</a> | aws.ec2.Instance | aws.lambda.EventHandler&lt;x.apigateway.Request, x.apigateway.Response&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The types of things that can be the target of a load balancer.
@@ -5815,13 +5701,17 @@ Note: A lambda event handler can only be supplied if using an application load b
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/network.ts#L25" >}}">type <b>NetworkProtocol</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> NetworkProtocol = <span class='s2'>"TCP"</span> | <span class='s2'>"TLS"</span> | <span class='s2'>"HTTP"</span> | <span class='s2'>"HTTPS"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="TargetType">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="lb/targetGroup.ts#L257" >}}">type <b>TargetType</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> TargetType = <span class='s2'>"instance"</span> | <span class='s2'>"ip"</span> | <span class='s2'>"lambda"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of target that you must specify when registering targets with a target group. The

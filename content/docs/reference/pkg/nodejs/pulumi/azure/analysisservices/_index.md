@@ -183,7 +183,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>ipv4FirewallRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServerIpv4FirewallRule'>ServerIpv4FirewallRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>ipv4FirewallRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServerIpv4FirewallRule'>outputs.analysisservices.ServerIpv4FirewallRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -321,7 +321,7 @@ Indicates if the Power BI service is allowed to access or not.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerIpv4FirewallRule'>ServerIpv4FirewallRule</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIpv4FirewallRule'>inputs.analysisservices.ServerIpv4FirewallRule</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -445,7 +445,7 @@ Indicates if the Power BI service is allowed to access or not.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerIpv4FirewallRule'>ServerIpv4FirewallRule</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>ipv4FirewallRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServerIpv4FirewallRule'>inputs.analysisservices.ServerIpv4FirewallRule</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

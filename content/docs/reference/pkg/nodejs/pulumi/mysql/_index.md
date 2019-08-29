@@ -78,7 +78,9 @@ import * as mysql from "@pulumi/mysql";
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="database.ts#L28" >}}">class <b>Database</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``mysql..Database`` resource creates and manages a database on a MySQL
@@ -106,10 +108,12 @@ const app = new mysql.Database("app", {});
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Database(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#DatabaseArgs'>DatabaseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Database resource with the given unique name, arguments, and options.
 
@@ -123,10 +127,12 @@ Create a Database resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatabaseState'>DatabaseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Database'>Database</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Database resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -137,20 +143,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Database.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -161,7 +171,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L60" >}}">property <b>defaultCharacterSet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultCharacterSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default character set to use when
@@ -174,7 +186,9 @@ to "utf8".
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L67" >}}">property <b>defaultCollation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultCollation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default collation to use when a table
@@ -188,7 +202,9 @@ changing the character set requires also changing the collation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -200,7 +216,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database. This must be unique within
@@ -213,7 +231,9 @@ the operating system on which the MySQL server is running.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -226,7 +246,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L72" >}}">class <b>Grant</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``mysql..Grant`` resource creates and manages privileges given to
@@ -298,10 +320,12 @@ const developerGrant = new mysql.Grant("developer", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L134" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Grant(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GrantArgs'>GrantArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Grant resource with the given unique name, arguments, and options.
 
@@ -315,10 +339,12 @@ Create a Grant resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L81" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#GrantState'>GrantState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Grant'>Grant</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Grant resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -329,20 +355,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L72" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L92" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Grant.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -353,7 +383,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L102" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant privileges on.
@@ -364,7 +396,9 @@ The database to grant privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L106" >}}">property <b>grant</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>grant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to also give the user privileges to grant the same privileges to other users.
@@ -375,7 +409,9 @@ Whether to also give the user privileges to grant the same privileges to other u
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L110" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to "localhost". Conflicts with `role`.
@@ -386,7 +422,9 @@ The source host of the user. Defaults to "localhost". Conflicts with `role`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L72" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -398,7 +436,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L114" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
@@ -409,7 +449,9 @@ A list of privileges to grant to the user. Refer to a list of privileges (such a
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L118" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role to grant `privileges` to. Conflicts with `user` and `host`.
@@ -420,7 +462,9 @@ The role to grant `privileges` to. Conflicts with `user` and `host`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L122" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of rols to grant to the user. Conflicts with `privileges`.
@@ -431,7 +475,9 @@ A list of rols to grant to the user. Conflicts with `privileges`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L126" >}}">property <b>table</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>table: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Which table to grant `privileges` on. Defaults to `*`, which is all tables.
@@ -442,7 +488,9 @@ Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L130" >}}">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tlsOption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
@@ -453,7 +501,9 @@ An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A v
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L72" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -465,7 +515,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L134" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user. Conflicts with `role`.
@@ -477,13 +529,15 @@ The name of the user. Conflicts with `role`.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L15" >}}">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider type for the mysql package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) for more information.
+[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown.
 
@@ -492,10 +546,12 @@ construction to achieve fine-grained programmatic control over provider settings
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L28" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Provider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ProviderArgs'>ProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Provider resource with the given unique name, arguments, and options.
 
@@ -509,20 +565,24 @@ Create a Provider resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L15" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L23" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -533,7 +593,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L15" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -545,7 +607,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L15" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -558,7 +622,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="role.ts#L24" >}}">class <b>Role</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``mysql..Role`` resource creates and manages a user on a MySQL
@@ -582,10 +648,12 @@ const developer = new mysql.Role("developer", {});
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L54" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Role(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RoleArgs'>RoleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Role resource with the given unique name, arguments, and options.
 
@@ -599,10 +667,12 @@ Create a Role resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L33" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RoleState'>RoleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Role'>Role</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Role resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -613,20 +683,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L24" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L44" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Role.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -637,7 +711,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L24" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -649,7 +725,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role.
@@ -660,7 +738,9 @@ The name of the role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L24" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -673,7 +753,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="user.ts#L44" >}}">class <b>User</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``mysql..User`` resource creates and manages a user on a MySQL
@@ -717,10 +799,12 @@ const nologin = new mysql.User("nologin", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L94" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> User(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#UserArgs'>UserArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a User resource with the given unique name, arguments, and options.
 
@@ -734,10 +818,12 @@ Create a User resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UserState'>UserState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#User'>User</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing User resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -748,20 +834,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L44" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of User.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -772,7 +862,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L74" >}}">property <b>authPlugin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>authPlugin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Use an [authentication plugin][ref-auth-plugins] to authenticate the user instead of using password authentication.  Description of the fields allowed in the block below. Conflicts with `password` and `plaintextPassword`.
@@ -783,7 +875,9 @@ Use an [authentication plugin][ref-auth-plugins] to authenticate the user instea
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L78" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to "localhost".
@@ -794,7 +888,9 @@ The source host of the user. Defaults to "localhost".
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L44" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -806,7 +902,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L82" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Deprecated alias of `plaintextPassword`, whose value is *stored as plaintext in state*. Prefer to use `plaintextPassword` instead, which stores the password as an unsalted hash. Conflicts with `authPlugin`.
@@ -817,7 +915,9 @@ Deprecated alias of `plaintextPassword`, whose value is *stored as plaintext in 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L86" >}}">property <b>plaintextPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>plaintextPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password for the user. This must be provided in plain text, so the data source for it must be secured. An _unsalted_ hash of the provided password is stored in state. Conflicts with `authPlugin`.
@@ -828,7 +928,9 @@ The password for the user. This must be provided in plain text, so the data sour
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L90" >}}">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tlsOption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `CREATE USER ... REQUIRE SSL` statement. See the [MYSQL `CREATE USER` documentation](https://dev.mysql.com/doc/refman/5.7/en/create-user.html) for more. Ignored if MySQL version is under 5.7.0.
@@ -839,7 +941,9 @@ An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suff
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L44" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -851,7 +955,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L94" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user.
@@ -863,7 +969,9 @@ The name of the user.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L10" >}}">class <b>UserPassword</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown.
@@ -873,10 +981,12 @@ The name of the user.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L56" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> UserPassword(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#UserPasswordArgs'>UserPasswordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a UserPassword resource with the given unique name, arguments, and options.
 
@@ -890,10 +1000,12 @@ Create a UserPassword resource with the given unique name, arguments, and option
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L19" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UserPasswordState'>UserPasswordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#UserPassword'>UserPassword</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing UserPassword resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -904,20 +1016,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserPassword-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L30" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of UserPassword.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -928,7 +1044,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L40" >}}">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>encryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The encrypted password, base64 encoded.
@@ -939,7 +1057,9 @@ The encrypted password, base64 encoded.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L44" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to `localhost`.
@@ -950,7 +1070,9 @@ The source host of the user. Defaults to `localhost`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -962,7 +1084,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L48" >}}">property <b>keyFingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>keyFingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fingerprint of the PGP key used to encrypt the password
@@ -973,7 +1097,9 @@ The fingerprint of the PGP key used to encrypt the password
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L52" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`.
@@ -984,7 +1110,9 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -996,7 +1124,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L56" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM user to associate with this access key.
@@ -1008,40 +1138,48 @@ The IAM user to associate with this access key.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="utilities.ts#L5" >}}">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="utilities.ts#L15" >}}">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="utilities.ts#L30" >}}">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="mysql" path="utilities.ts#L41" >}}">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="DatabaseArgs">
@@ -1057,7 +1195,9 @@ The set of arguments for constructing a Database resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L141" >}}">property <b>defaultCharacterSet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultCharacterSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default character set to use when
@@ -1070,7 +1210,9 @@ to "utf8".
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L148" >}}">property <b>defaultCollation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultCollation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default collation to use when a table
@@ -1084,7 +1226,9 @@ changing the character set requires also changing the collation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L154" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database. This must be unique within
@@ -1107,7 +1251,9 @@ Input properties used for looking up and filtering Database resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L116" >}}">property <b>defaultCharacterSet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultCharacterSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default character set to use when
@@ -1120,7 +1266,9 @@ to "utf8".
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L123" >}}">property <b>defaultCollation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultCollation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default collation to use when a table
@@ -1134,7 +1282,9 @@ changing the character set requires also changing the collation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="database.ts#L129" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database. This must be unique within
@@ -1157,7 +1307,9 @@ The set of arguments for constructing a Grant resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L232" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant privileges on.
@@ -1168,7 +1320,9 @@ The database to grant privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L236" >}}">property <b>grant</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>grant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to also give the user privileges to grant the same privileges to other users.
@@ -1179,7 +1333,9 @@ Whether to also give the user privileges to grant the same privileges to other u
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L240" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to "localhost". Conflicts with `role`.
@@ -1190,7 +1346,9 @@ The source host of the user. Defaults to "localhost". Conflicts with `role`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L244" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privileges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
@@ -1201,7 +1359,9 @@ A list of privileges to grant to the user. Refer to a list of privileges (such a
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L248" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role to grant `privileges` to. Conflicts with `user` and `host`.
@@ -1212,7 +1372,9 @@ The role to grant `privileges` to. Conflicts with `user` and `host`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L252" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of rols to grant to the user. Conflicts with `privileges`.
@@ -1223,7 +1385,9 @@ A list of rols to grant to the user. Conflicts with `privileges`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L256" >}}">property <b>table</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>table?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Which table to grant `privileges` on. Defaults to `*`, which is all tables.
@@ -1234,7 +1398,9 @@ Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L260" >}}">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tlsOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
@@ -1245,7 +1411,9 @@ An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A v
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L264" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user. Conflicts with `role`.
@@ -1266,7 +1434,9 @@ Input properties used for looking up and filtering Grant resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L190" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant privileges on.
@@ -1277,7 +1447,9 @@ The database to grant privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L194" >}}">property <b>grant</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>grant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to also give the user privileges to grant the same privileges to other users.
@@ -1288,7 +1460,9 @@ Whether to also give the user privileges to grant the same privileges to other u
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L198" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to "localhost". Conflicts with `role`.
@@ -1299,7 +1473,9 @@ The source host of the user. Defaults to "localhost". Conflicts with `role`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L202" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privileges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
@@ -1310,7 +1486,9 @@ A list of privileges to grant to the user. Refer to a list of privileges (such a
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L206" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role to grant `privileges` to. Conflicts with `user` and `host`.
@@ -1321,7 +1499,9 @@ The role to grant `privileges` to. Conflicts with `user` and `host`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L210" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of rols to grant to the user. Conflicts with `privileges`.
@@ -1332,7 +1512,9 @@ A list of rols to grant to the user. Conflicts with `privileges`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L214" >}}">property <b>table</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>table?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Which table to grant `privileges` on. Defaults to `*`, which is all tables.
@@ -1343,7 +1525,9 @@ Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L218" >}}">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tlsOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
@@ -1354,7 +1538,9 @@ An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A v
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="grant.ts#L222" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user. Conflicts with `role`.
@@ -1375,7 +1561,9 @@ The set of arguments for constructing a Provider resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L67" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1383,7 +1571,9 @@ The set of arguments for constructing a Provider resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L68" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1391,7 +1581,9 @@ The set of arguments for constructing a Provider resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L69" >}}">property <b>tls</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1399,7 +1591,9 @@ The set of arguments for constructing a Provider resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="provider.ts#L70" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1417,7 +1611,9 @@ The set of arguments for constructing a Role resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L101" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role.
@@ -1438,7 +1634,9 @@ Input properties used for looking up and filtering Role resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="role.ts#L91" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role.
@@ -1459,7 +1657,9 @@ The set of arguments for constructing a User resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L174" >}}">property <b>authPlugin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authPlugin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Use an [authentication plugin][ref-auth-plugins] to authenticate the user instead of using password authentication.  Description of the fields allowed in the block below. Conflicts with `password` and `plaintextPassword`.
@@ -1470,7 +1670,9 @@ Use an [authentication plugin][ref-auth-plugins] to authenticate the user instea
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L178" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to "localhost".
@@ -1481,7 +1683,9 @@ The source host of the user. Defaults to "localhost".
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L182" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Deprecated alias of `plaintextPassword`, whose value is *stored as plaintext in state*. Prefer to use `plaintextPassword` instead, which stores the password as an unsalted hash. Conflicts with `authPlugin`.
@@ -1492,7 +1696,9 @@ Deprecated alias of `plaintextPassword`, whose value is *stored as plaintext in 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L186" >}}">property <b>plaintextPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>plaintextPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password for the user. This must be provided in plain text, so the data source for it must be secured. An _unsalted_ hash of the provided password is stored in state. Conflicts with `authPlugin`.
@@ -1503,7 +1709,9 @@ The password for the user. This must be provided in plain text, so the data sour
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L190" >}}">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tlsOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `CREATE USER ... REQUIRE SSL` statement. See the [MYSQL `CREATE USER` documentation](https://dev.mysql.com/doc/refman/5.7/en/create-user.html) for more. Ignored if MySQL version is under 5.7.0.
@@ -1514,7 +1722,9 @@ An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suff
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L194" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user.
@@ -1535,7 +1745,9 @@ The set of arguments for constructing a UserPassword resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L133" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to `localhost`.
@@ -1546,7 +1758,9 @@ The source host of the user. Defaults to `localhost`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L137" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pgpKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`.
@@ -1557,7 +1771,9 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L141" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM user to associate with this access key.
@@ -1578,7 +1794,9 @@ Input properties used for looking up and filtering UserPassword resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L107" >}}">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The encrypted password, base64 encoded.
@@ -1589,7 +1807,9 @@ The encrypted password, base64 encoded.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L111" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to `localhost`.
@@ -1600,7 +1820,9 @@ The source host of the user. Defaults to `localhost`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L115" >}}">property <b>keyFingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyFingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fingerprint of the PGP key used to encrypt the password
@@ -1611,7 +1833,9 @@ The fingerprint of the PGP key used to encrypt the password
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L119" >}}">property <b>pgpKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pgpKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`.
@@ -1622,7 +1846,9 @@ Either a base-64 encoded PGP public key, or a keybase username in the form `keyb
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="userPassword.ts#L123" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IAM user to associate with this access key.
@@ -1643,7 +1869,9 @@ Input properties used for looking up and filtering User resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L144" >}}">property <b>authPlugin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authPlugin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Use an [authentication plugin][ref-auth-plugins] to authenticate the user instead of using password authentication.  Description of the fields allowed in the block below. Conflicts with `password` and `plaintextPassword`.
@@ -1654,7 +1882,9 @@ Use an [authentication plugin][ref-auth-plugins] to authenticate the user instea
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L148" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source host of the user. Defaults to "localhost".
@@ -1665,7 +1895,9 @@ The source host of the user. Defaults to "localhost".
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L152" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Deprecated alias of `plaintextPassword`, whose value is *stored as plaintext in state*. Prefer to use `plaintextPassword` instead, which stores the password as an unsalted hash. Conflicts with `authPlugin`.
@@ -1676,7 +1908,9 @@ Deprecated alias of `plaintextPassword`, whose value is *stored as plaintext in 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L156" >}}">property <b>plaintextPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>plaintextPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password for the user. This must be provided in plain text, so the data source for it must be secured. An _unsalted_ hash of the provided password is stored in state. Conflicts with `authPlugin`.
@@ -1687,7 +1921,9 @@ The password for the user. This must be provided in plain text, so the data sour
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L160" >}}">property <b>tlsOption</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tlsOption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `CREATE USER ... REQUIRE SSL` statement. See the [MYSQL `CREATE USER` documentation](https://dev.mysql.com/doc/refman/5.7/en/create-user.html) for more. Ignored if MySQL version is under 5.7.0.
@@ -1698,7 +1934,9 @@ An TLS-Option for the `CREATE USER` or `ALTER USER` statement. The value is suff
 <a class="pdoc-child-name" href="{{< pkg-url pkg="mysql" path="user.ts#L164" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the user.

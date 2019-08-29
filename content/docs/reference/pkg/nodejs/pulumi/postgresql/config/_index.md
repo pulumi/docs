@@ -46,7 +46,9 @@ title: Module config
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L12" >}}">let <b>connectTimeout</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> connectTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;connectTimeout&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
@@ -57,7 +59,9 @@ Maximum wait for connection, in seconds. Zero or not specified means wait indefi
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L16" >}}">let <b>database</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> database: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;database&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database to connect to in order to conenct to (defaults to `postgres`).
@@ -68,7 +72,9 @@ The name of the database to connect to in order to conenct to (defaults to `post
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L20" >}}">let <b>databaseUsername</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> databaseUsername: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;databaseUsername&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database username associated to the connected user (for user name maps)
@@ -79,7 +85,9 @@ Database username associated to the connected user (for user name maps)
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L24" >}}">let <b>expectedVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> expectedVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;expectedVersion&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify the expected version of PostgreSQL.
@@ -90,7 +98,9 @@ Specify the expected version of PostgreSQL.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L28" >}}">let <b>host</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;host&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of PostgreSQL server address to connect to
@@ -101,7 +111,9 @@ Name of PostgreSQL server address to connect to
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L32" >}}">let <b>maxConnections</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> maxConnections: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;maxConnections&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Maximum number of connections to establish to the database. Zero means unlimited.
@@ -112,7 +124,9 @@ Maximum number of connections to establish to the database. Zero means unlimited
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L36" >}}">let <b>password</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Password to be used if the PostgreSQL server demands password authentication
@@ -123,7 +137,9 @@ Password to be used if the PostgreSQL server demands password authentication
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L40" >}}">let <b>port</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;port&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
@@ -134,13 +150,17 @@ The PostgreSQL port number to connect to at the server host, or socket file name
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L41" >}}">let <b>sslMode</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> sslMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sslMode&#34;)</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="sslmode">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L46" >}}">let <b>sslmode</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> sslmode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sslmode&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
@@ -152,7 +172,9 @@ PostgreSQL server
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L51" >}}">let <b>superuser</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> superuser: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;superuser&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
@@ -164,7 +186,9 @@ Refreshing state password from Postgres)
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="config/vars.ts#L55" >}}">let <b>username</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;username&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 PostgreSQL user name to connect as

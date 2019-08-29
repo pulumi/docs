@@ -32,10 +32,12 @@ title: Module sqs
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L78" >}}">function <b>approximateAgeOfOldestMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>approximateAgeOfOldestMessage(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The approximate age of the oldest non-deleted message in the queue.
 
@@ -53,10 +55,12 @@ the Amazon SQS console)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L92" >}}">function <b>approximateNumberOfMessagesDelayed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>approximateNumberOfMessagesDelayed(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages in the queue that are delayed and not available for reading
 immediately. This can happen when the queue is configured as a delay queue or when a message
@@ -73,10 +77,12 @@ the Amazon SQS console)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L106" >}}">function <b>approximateNumberOfMessagesNotVisible</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>approximateNumberOfMessagesNotVisible(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages that are in flight. Messages are considered to be in flight if they
 have been sent to a client but have not yet been deleted or have not yet reached the end of
@@ -93,10 +99,12 @@ the Amazon SQS console)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L118" >}}">function <b>approximateNumberOfMessagesVisible</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>approximateNumberOfMessagesVisible(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages available for retrieval from the queue.
 
@@ -111,10 +119,12 @@ the Amazon SQS console)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L54" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#SqsMetricName'>SqsMetricName</a>, change: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/SQS metric with the requested [metricName]. See
 https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-monitoring-using-cloudwatch.html
@@ -141,10 +151,12 @@ The only dimension that Amazon SQS sends to CloudWatch is "QueueName"
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L130" >}}">function <b>numberOfEmptyReceives</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfEmptyReceives(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of ReceiveMessage API calls that did not return a message.
 
@@ -159,10 +171,12 @@ the Amazon SQS console)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L155" >}}">function <b>numberOfMessagesDeleted</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfMessagesDeleted(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages deleted from the queue.
 
@@ -190,10 +204,12 @@ the Amazon SQS console)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L162" >}}">function <b>numberOfMessagesReceived</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfMessagesReceived(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages returned by calls to the ReceiveMessage action.
 
@@ -203,10 +219,12 @@ The number of messages returned by calls to the ReceiveMessage action.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L174" >}}">function <b>numberOfMessagesSent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfMessagesSent(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages added to a queue.
 
@@ -221,10 +239,12 @@ the Amazon SQS console)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L186" >}}">function <b>sentMessageSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sentMessageSize(change?: <a href='#SqsMetricChange'>SqsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The size of messages added to a queue.
 
@@ -245,7 +265,9 @@ the Amazon SQS console)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -258,7 +280,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -271,7 +295,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -284,7 +310,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -299,7 +327,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -312,7 +342,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L31" >}}">property <b>queue</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>queue?: aws.sqs.Queue;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional [Queue] to filter events down to.
@@ -323,7 +355,9 @@ Optional [Queue] to filter events down to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -336,7 +370,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -349,7 +385,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -363,7 +401,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -377,7 +417,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sqs/metrics.ts#L21" >}}">type <b>SqsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> SqsMetricName = <span class='s2'>"ApproximateAgeOfOldestMessage"</span> | <span class='s2'>"ApproximateNumberOfMessagesDelayed"</span> | <span class='s2'>"ApproximateNumberOfMessagesNotVisible"</span> | <span class='s2'>"ApproximateNumberOfMessagesVisible"</span> | <span class='s2'>"NumberOfEmptyReceives"</span> | <span class='s2'>"NumberOfMessagesDeleted"</span> | <span class='s2'>"NumberOfMessagesReceived"</span> | <span class='s2'>"NumberOfMessagesSent"</span> | <span class='s2'>"SentMessageSize"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

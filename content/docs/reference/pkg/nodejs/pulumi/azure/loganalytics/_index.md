@@ -177,7 +177,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LinkedServiceLinkedServiceProperty'>LinkedServiceLinkedServiceProperty</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>linkedServiceProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinkedServiceLinkedServiceProperty'>outputs.loganalytics.LinkedServiceLinkedServiceProperty</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -292,7 +292,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LinkedServiceLinkedServiceProperty'>LinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinkedServiceLinkedServiceProperty'>inputs.loganalytics.LinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -380,7 +380,7 @@ Name of the type of linkedServices resource to connect to the Log Analytics Work
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LinkedServiceLinkedServiceProperty'>LinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linkedServiceProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinkedServiceLinkedServiceProperty'>inputs.loganalytics.LinkedServiceLinkedServiceProperty</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

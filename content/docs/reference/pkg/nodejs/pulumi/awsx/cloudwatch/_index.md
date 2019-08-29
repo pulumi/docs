@@ -238,7 +238,9 @@ More complex widget customization is possible.  See the invidual types and argum
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L35" >}}">class <b>AlarmAnnotation</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#WidgetAnnotation'>WidgetAnnotation</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Adds an alarm annotation to a [MetricWidget], allowing a metric alarm to be displayed in a
@@ -249,20 +251,24 @@ Dashboard.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L35" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AlarmAnnotation(alarmArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlarmAnnotation-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L40" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(annotations: wjson.MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -273,8 +279,12 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L97" >}}">class <b>ColumnWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#FlowWidget'>FlowWidget</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Represents a vertical sequence of [Widget]s in the [Dashboard].  There is no limit on how long
@@ -288,30 +298,36 @@ height of this widget will be the sum of all the heights of all the widgets in t
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L97" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ColumnWidget(widgets: <a href='#Widget'>Widget</a>[])</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ColumnWidget-addWidget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L42" >}}">method <b>addWidget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidget(widget: <a href='#Widget'>Widget</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ColumnWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L80" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -321,37 +337,45 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L102" >}}">method <b>getWidgetRelativePositions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, <a href='#WidgetRelativePosition'>WidgetRelativePosition</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ColumnWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L66" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ColumnWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L53" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ColumnWidget-widgets">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L34" >}}">property <b>widgets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>widgets: <a href='#Widget'>Widget</a>[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -360,7 +384,9 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">class <b>Dashboard</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> Dashboard</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [Dashboard]s are represented by a grid of columns 24 wide, with an unlimited number of rows.
@@ -376,10 +402,12 @@ for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L89" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Dashboard(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DashboardArgs'>DashboardArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Constructs a [DashboardGrid] out of [Widget]s.  If any of these Widgets are [RowWidget]s.
 then these will be treated as a sequence of rows to add to the grid.  Otherwise, this will
@@ -388,13 +416,15 @@ be treated as a single row to add to the grid.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/cloudwatch/dashboard.d.ts#L63" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: DashboardState, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): Dashboard</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Dashboard resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -402,23 +432,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/cloudwatch/dashboard.d.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Dashboard.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -426,10 +460,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-dashboardArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/cloudwatch/dashboard.d.ts#L72" >}}">property <b>dashboardArn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">property <b>dashboardArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dashboardArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of the dashboard.
@@ -437,10 +473,12 @@ The Amazon Resource Name (ARN) of the dashboard.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-dashboardBody">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/cloudwatch/dashboard.d.ts#L76" >}}">property <b>dashboardBody</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">property <b>dashboardBody</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dashboardBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
@@ -448,10 +486,12 @@ The detailed information about the dashboard, including what widgets are include
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-dashboardName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/aws/cloudwatch/dashboard.d.ts#L80" >}}">property <b>dashboardName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">property <b>dashboardName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dashboardName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the dashboard.
@@ -459,10 +499,12 @@ The name of the dashboard.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -474,7 +516,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L89" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The url this [Dashboard] is published at.
@@ -482,10 +526,12 @@ The url this [Dashboard] is published at.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L85" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -498,7 +544,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L332" >}}">class <b>ExpressionWidgetMetric</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#WidgetMetric'>WidgetMetric</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to pass math or search expressions to a [MetricWidget].
@@ -512,10 +560,12 @@ more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L332" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ExpressionWidgetMetric(expression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, id?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 * `expression` The math expression or search expression.
 * `label` The label to display in the graph to represent this time series.
 * `id` The id of this time series. This id can be used as part of a math expression.
@@ -526,10 +576,12 @@ more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L344" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addWidgetJson(metrics: wjson.MetricJson[]): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -540,7 +592,9 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L33" >}}">class <b>FlowWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A sequence of widgets flowing either horizontally or vertically.  Widgets flowing horizontally
@@ -552,30 +606,36 @@ vertically.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L34" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FlowWidget(widgets: <a href='#Widget'>Widget</a>[])</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlowWidget-addWidget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L42" >}}">method <b>addWidget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidget(widget: <a href='#Widget'>Widget</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlowWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L80" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -585,10 +645,12 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L51" >}}">method <b>getWidgetRelativePositions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, <a href='#WidgetRelativePosition'>WidgetRelativePosition</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Determines the relative positions of all the child widgets in this [FlowWidget]. 'Relative
 Position' tells us where the widget should be placed relative to the upper-left point of this
@@ -600,27 +662,33 @@ FlowWidget.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L66" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlowWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L53" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FlowWidget-widgets">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L34" >}}">property <b>widgets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>widgets: <a href='#Widget'>Widget</a>[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -629,8 +697,12 @@ FlowWidget.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L52" >}}">class <b>GraphMetricWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#MetricWidget'>MetricWidget</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Base type for widets that display metrics as a graph (either a line or stacked graph).
@@ -643,20 +715,24 @@ details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L52" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> GraphMetricWidget(graphArgs: <a href='#GraphMetricWidgetArgs'>GraphMetricWidgetArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphMetricWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L75" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -666,70 +742,84 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L253" >}}">method <b>computeProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | OutputInstance&lt;MetricWidgetPropertiesJson&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphMetricWidget-computeType">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L251" >}}">method <b>computeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | OutputInstance&lt;<span class='s2'>"metric"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphMetricWidget-computeView">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L57" >}}">method <b>computeView</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphMetricWidget-computeYAxis">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L58" >}}">method <b>computeYAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | OutputInstance&lt;<a href='#YAxis'>YAxis</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphMetricWidget-computedStacked">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L248" >}}">method <b>computedStacked</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphMetricWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L65" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GraphMetricWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L61" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -737,7 +827,9 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L122" >}}">class <b>HorizontalAnnotation</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#WidgetAnnotation'>WidgetAnnotation</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Horizontal annotations have several options for fill shading, including shading above the
@@ -749,25 +841,31 @@ linked annotation lines as part of a single band annotation
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L123" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HorizontalAnnotation(args: <a href='#HorizontalAnnotationArgs'>HorizontalAnnotationArgs</a>)</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HorizontalAnnotation(args: <a href='#HorizontalAlarmAnnotationArgs'>HorizontalAlarmAnnotationArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="HorizontalAnnotation-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L143" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(annotations: wjson.MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -778,8 +876,12 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L64" >}}">class <b>LineGraphMetricWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#GraphMetricWidget'>GraphMetricWidget</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Displays a set of metrics as a line graph.
@@ -789,20 +891,24 @@ Displays a set of metrics as a line graph.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L64" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LineGraphMetricWidget(args: <a href='#GraphMetricWidgetArgs'>GraphMetricWidgetArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LineGraphMetricWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L75" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -812,70 +918,84 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L253" >}}">method <b>computeProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | OutputInstance&lt;MetricWidgetPropertiesJson&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LineGraphMetricWidget-computeType">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L251" >}}">method <b>computeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | OutputInstance&lt;<span class='s2'>"metric"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LineGraphMetricWidget-computeView">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L57" >}}">method <b>computeView</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LineGraphMetricWidget-computeYAxis">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L58" >}}">method <b>computeYAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | OutputInstance&lt;<a href='#YAxis'>YAxis</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LineGraphMetricWidget-computedStacked">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L69" >}}">method <b>computedStacked</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LineGraphMetricWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L65" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LineGraphMetricWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L61" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -912,10 +1032,12 @@ for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L128" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Metric(args: <a href='#MetricArgs'>MetricArgs</a>, resource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 * `resource` Optional resource this is a metric for.  This is only used for parenting
 purposes.  i.e. if an [Alarm] is created from this [Metric], then [resource] will be used as
 the parent of the alarm by default.
@@ -926,10 +1048,12 @@ the parent of the alarm by default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L263" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(metrics: wjson.MetricJson[]): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -939,40 +1063,48 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L242" >}}">method <b>createAlarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createAlarm(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AlarmArgs'>AlarmArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): MetricAlarm</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-with">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L153" >}}">method <b>with</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>with(change: <a href='#MetricChange'>MetricChange</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-withColor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L204" >}}">method <b>withColor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withColor(color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-withDimensions">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L189" >}}">method <b>withDimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withDimensions(dimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Produces a new [Metric] instances with the specific [dimensions] of this instance overwritten
 with the [dimensions] pass in as arguments.  Because this is a merging, to unset a particular
@@ -985,77 +1117,93 @@ in `undefined` for the entire argument.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L231" >}}">method <b>withExtendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withExtendedStatistic(extendedStatistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-withLabel">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L208" >}}">method <b>withLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withLabel(label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-withPeriod">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L196" >}}">method <b>withPeriod</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withPeriod(period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-withStatistic">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L220" >}}">method <b>withStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withStatistic(statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-withUnit">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L200" >}}">method <b>withUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withUnit(unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-withVisible">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L212" >}}">method <b>withVisible</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withVisible(visible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-withYAxis">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L216" >}}">method <b>withYAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>withYAxis(yAxis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Metric-color">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L104" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>color: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -1068,7 +1216,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L67" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The dimensions for this metric.  For the list of available dimensions see the AWS documentation
@@ -1080,7 +1230,9 @@ The dimensions for this metric.  For the list of available dimensions see the AW
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L91" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>extendedStatistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The percentile statistic for the metric associated with the alarm. Specify a value between
@@ -1092,7 +1244,9 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L113" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -1107,7 +1261,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L62" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for this metric. See docs for
@@ -1119,7 +1275,9 @@ The name for this metric. See docs for
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L57" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The namespace for this metric. See docs for the
@@ -1133,7 +1291,9 @@ See docs for
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L79" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period in seconds over which the specified [statistic] is applied.  Must be in multiples
@@ -1152,7 +1312,9 @@ for more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L50" >}}">property <b>resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional resource this is a metric for.  Used only for parenting purposes when making new alarms.
@@ -1163,7 +1325,9 @@ Optional resource this is a metric for.  Used only for parenting purposes when m
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L86" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The statistic to apply to the alarm's associated metric. Either of the following is
@@ -1177,7 +1341,9 @@ Defaults to [Average] if [statistic] and [extendedStatistic] is unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L97" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>unit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricUnit'>MetricUnit</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unit for this metric.
@@ -1190,7 +1356,9 @@ See https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricD
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L121" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>visible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -1204,7 +1372,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L128" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>yAxis: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -1218,8 +1388,12 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L223" >}}">class <b>MetricWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#SimpleWidget'>SimpleWidget</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Base type for widgets that display data from a set of [Metric]s.  See [LineGraphMetricWidget],
@@ -1231,20 +1405,24 @@ displaying [Metric]s.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L225" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MetricWidget(metricArgs: <a href='#MetricWidgetArgs'>MetricWidgetArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L75" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -1254,70 +1432,84 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L253" >}}">method <b>computeProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | OutputInstance&lt;MetricWidgetPropertiesJson&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricWidget-computeType">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L251" >}}">method <b>computeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | OutputInstance&lt;<span class='s2'>"metric"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricWidget-computeView">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L247" >}}">method <b>computeView</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricWidget-computeYAxis">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L249" >}}">method <b>computeYAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | OutputInstance&lt;<a href='#YAxis'>YAxis</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricWidget-computedStacked">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L248" >}}">method <b>computedStacked</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L65" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L61" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -1325,8 +1517,12 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L131" >}}">class <b>RowWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#FlowWidget'>FlowWidget</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Represents a horizontal sequence of [Widget]s in the [Dashboard].  Widgets are laid out
@@ -1343,30 +1539,36 @@ wrapping. The final height of this widget will be the bottommost row that a widg
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L131" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RowWidget(widgets: <a href='#Widget'>Widget</a>[])</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RowWidget-addWidget">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L42" >}}">method <b>addWidget</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidget(widget: <a href='#Widget'>Widget</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RowWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L168" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -1376,37 +1578,45 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L136" >}}">method <b>getWidgetRelativePositions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>getWidgetRelativePositions(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<a href='#Widget'>Widget</a>, <a href='#WidgetRelativePosition'>WidgetRelativePosition</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RowWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L66" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RowWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L53" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RowWidget-widgets">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_flow.ts#L34" >}}">property <b>widgets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>widgets: <a href='#Widget'>Widget</a>[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1415,7 +1625,9 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L47" >}}">class <b>SimpleWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Base type of all non-flow Widgets to place in a DashboardGrid.
@@ -1425,20 +1637,24 @@ Base type of all non-flow Widgets to place in a DashboardGrid.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L47" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SimpleWidget(args: <a href='#SimpleWidgetArgs'>SimpleWidgetArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SimpleWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L75" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -1448,20 +1664,24 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L65" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SimpleWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L61" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -1469,8 +1689,12 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L86" >}}">class <b>SingleNumberMetricWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#MetricWidget'>MetricWidget</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Displays a set of metrics as a single number.
@@ -1480,20 +1704,24 @@ Displays a set of metrics as a single number.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L86" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SingleNumberMetricWidget(args: <a href='#MetricWidgetArgs'>MetricWidgetArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SingleNumberMetricWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L75" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -1503,70 +1731,84 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L253" >}}">method <b>computeProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | OutputInstance&lt;MetricWidgetPropertiesJson&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SingleNumberMetricWidget-computeType">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L251" >}}">method <b>computeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | OutputInstance&lt;<span class='s2'>"metric"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SingleNumberMetricWidget-computeView">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L92" >}}">method <b>computeView</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SingleNumberMetricWidget-computeYAxis">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L93" >}}">method <b>computeYAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | OutputInstance&lt;<a href='#YAxis'>YAxis</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SingleNumberMetricWidget-computedStacked">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L91" >}}">method <b>computedStacked</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SingleNumberMetricWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L65" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SingleNumberMetricWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L61" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -1574,7 +1816,9 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L92" >}}">class <b>SpaceWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Simple [Widget] that can be used for putting space between other widgets in the [Dashboard].
@@ -1584,45 +1828,55 @@ Simple [Widget] that can be used for putting space between other widgets in the 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L94" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SpaceWidget(width: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, height: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>)</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SpaceWidget(args: <a href='#SimpleWidgetArgs'>SimpleWidgetArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpaceWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L112" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpaceWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L110" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpaceWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L109" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -1630,8 +1884,12 @@ Simple [Widget] that can be used for putting space between other widgets in the 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L75" >}}">class <b>StackedAreaGraphMetricWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#GraphMetricWidget'>GraphMetricWidget</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Displays a set of metrics as a stacked area graph.
@@ -1641,20 +1899,24 @@ Displays a set of metrics as a stacked area graph.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L75" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StackedAreaGraphMetricWidget(args: <a href='#GraphMetricWidgetArgs'>GraphMetricWidgetArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L75" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -1664,70 +1926,84 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L253" >}}">method <b>computeProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): MetricWidgetPropertiesJson | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;MetricWidgetPropertiesJson&gt; | OutputInstance&lt;MetricWidgetPropertiesJson&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computeType">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L251" >}}">method <b>computeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeType(): <span class='s2'>"metric"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"metric"</span>&gt; | OutputInstance&lt;<span class='s2'>"metric"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computeView">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L57" >}}">method <b>computeView</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeView(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='s2'>"timeSeries"</span> | <span class='s2'>"singleValue"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computeYAxis">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L58" >}}">method <b>computeYAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeYAxis(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <a href='#YAxis'>YAxis</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#YAxis'>YAxis</a>&gt; | OutputInstance&lt;<a href='#YAxis'>YAxis</a>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-computedStacked">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L80" >}}">method <b>computedStacked</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computedStacked(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L65" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackedAreaGraphMetricWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L61" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -1735,8 +2011,12 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L127" >}}">class <b>TextWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#SimpleWidget'>SimpleWidget</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#Widget'>Widget</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Simple widget that displays a piece of text in the dashboard grid.
@@ -1746,25 +2026,31 @@ Simple widget that displays a piece of text in the dashboard grid.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L128" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TextWidget(markdown: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>)</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TextWidget(args: <a href='#TextWidgetArgs'>TextWidgetArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TextWidget-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L75" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(widgetJsons: wjson.WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -1774,8 +2060,8 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L143" >}}">method <b>computeProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeProperties(region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): {
     markdown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 } | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{
@@ -1783,37 +2069,45 @@ For internal use only.
 }&gt; | OutputInstance&lt;{
     markdown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TextWidget-computeType">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L139" >}}">method <b>computeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>computeType(): <span class='s2'>"text"</span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='s2'>"text"</span>&gt; | OutputInstance&lt;<span class='s2'>"text"</span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TextWidget-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L65" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TextWidget-width">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L61" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -1821,7 +2115,9 @@ For internal use only.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L229" >}}">class <b>VerticalAnnotation</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#WidgetAnnotation'>WidgetAnnotation</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Vertical annotations have several options for fill shading, including shading before the
@@ -1833,20 +2129,24 @@ linked annotation lines as part of a single band annotation
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L229" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VerticalAnnotation(args: <a href='#VerticalAnnotationArgs'>VerticalAnnotationArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VerticalAnnotation-addWidgetJson">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L237" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addWidgetJson(annotations: wjson.MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only.
 
@@ -1861,7 +2161,9 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L475" >}}">property <b>actionsEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>actionsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether or not actions should be executed during any changes to the alarm's state.
@@ -1873,7 +2175,9 @@ Defaults to `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L480" >}}">property <b>alarmActions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alarmActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | aws.sns.Topic&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of actions to execute when this alarm transitions into an ALARM state from any other
@@ -1885,7 +2189,9 @@ state. Each action is specified as an Amazon Resource Name (ARN).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L484" >}}">property <b>alarmDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alarmDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description for the alarm.
@@ -1896,7 +2202,9 @@ The description for the alarm.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L497" >}}">property <b>comparisonOperator</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>comparisonOperator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlarmComparisonOperator'>AlarmComparisonOperator</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The arithmetic operation to use when comparing the specified Statistic and Threshold. The
@@ -1912,7 +2220,9 @@ Defaults to [GreaterThanOrEqualToThreshold] if unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L501" >}}">property <b>datapointsToAlarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>datapointsToAlarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of datapoints that must be breaching to trigger the alarm.
@@ -1923,7 +2233,9 @@ The number of datapoints that must be breaching to trigger the alarm.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L509" >}}">property <b>evaluateLowSampleCountPercentiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>evaluateLowSampleCountPercentiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ignore"</span> | <span class='s2'>"evaluate"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used only for alarms based on percentiles. If you specify `ignore`, the alarm state will not
@@ -1938,7 +2250,9 @@ supported: `ignore`, and `evaluate`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L513" >}}">property <b>evaluationPeriods</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>evaluationPeriods: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of periods over which data is compared to the specified threshold.
@@ -1949,7 +2263,9 @@ The number of periods over which data is compared to the specified threshold.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L518" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The percentile statistic for the metric associated with the alarm. Specify a value between
@@ -1961,7 +2277,9 @@ p0.0 and p100.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L523" >}}">property <b>insufficientDataActions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>insufficientDataActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | aws.sns.Topic&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state
@@ -1973,6 +2291,7 @@ from any other state. Each action is specified as an Amazon Resource Name (ARN).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L527" >}}">property <b>metricQueries</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricQueries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     expression: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -1987,6 +2306,7 @@ from any other state. Each action is specified as an Amazon Resource Name (ARN).
     }&gt;;
     returnData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to create an alarm based on a metric math expression. You may specify at most 20.
@@ -1997,7 +2317,9 @@ Enables you to create an alarm based on a metric math expression. You may specif
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L488" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The descriptive name for the alarm. This name must be unique within the user's AWS account
@@ -2008,7 +2330,9 @@ The descriptive name for the alarm. This name must be unique within the user's A
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L532" >}}">property <b>okActions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>okActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | aws.sns.Topic&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of actions to execute when this alarm transitions into an OK state from any other
@@ -2020,7 +2344,9 @@ state. Each action is specified as an Amazon Resource Name (ARN).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L536" >}}">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value against which the specified statistic is compared.
@@ -2031,7 +2357,9 @@ The value against which the specified statistic is compared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L541" >}}">property <b>treatMissingData</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>treatMissingData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"missing"</span> | <span class='s2'>"ignore"</span> | <span class='s2'>"breaching"</span> | <span class='s2'>"notBreaching"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets how this alarm is to handle missing data points. The following values are supported:
@@ -2048,7 +2376,9 @@ Sets how this alarm is to handle missing data points. The following values are s
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L42" >}}">property <b>end</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>end?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The end of the time range to use for each widget on the dashboard when the dashboard loads.
@@ -2062,7 +2392,9 @@ values, specify an absolute time in the ISO 8601 format. For example,
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L28" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the dashboard.
@@ -2073,7 +2405,9 @@ The name of the dashboard.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L66" >}}">property <b>periodOverride</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>periodOverride?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"auto"</span> | <span class='s2'>"inherit"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Use this field to specify the period for the graphs when the dashboard loads. Specifying auto
@@ -2087,7 +2421,9 @@ obeyed.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L34" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Region&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region that widgets can say they're associated with.  If not provided, the region will be
@@ -2099,7 +2435,9 @@ inferred by whatever provider the [Dashboard] ends up using.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L58" >}}">property <b>start</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>start?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The start of the time range to use for each widget on the dashboard.
@@ -2121,7 +2459,9 @@ If you omit start, the dashboard shows the default time range when it loads.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/dashboard.ts#L73" >}}">property <b>widgets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>widgets?: <a href='#Widget'>Widget</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Widgets to initially add to the [DashboardDescription].  If any of these are [RowWidgets]
@@ -2135,12 +2475,16 @@ of widgets to make a single row out of.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L22" >}}">interface <b>GraphMetricWidgetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#MetricWidgetArgs'>MetricWidgetArgs</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="GraphMetricWidgetArgs-alarm">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L159" >}}">property <b>alarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='#WidgetAlarm'>WidgetAlarm</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to show a graph of a single alarm.  If, instead, you want to place horizontal lines in
@@ -2154,7 +2498,9 @@ At least one of [alarm], [annotations] or [metrics] must be supplied.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L173" >}}">property <b>annotations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>annotations?: <a href='#WidgetAnnotation'>WidgetAnnotation</a> | <a href='#WidgetAnnotation'>WidgetAnnotation</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A single metric widget can have up to one alarm, and multiple horizontal and vertical
@@ -2174,7 +2520,9 @@ At least one of [alarm], [annotations] or [metrics] must be supplied.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L211" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The percentile statistic for the metric associated with the alarm. Specify a value between
@@ -2186,7 +2534,9 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L41" >}}">property <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>height?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The height of the widget in grid units. The default is 6.
@@ -2199,7 +2549,9 @@ Valid Values: 1–1000
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L184" >}}">property <b>metrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metrics?: <a href='#WidgetMetric'>WidgetMetric</a> | <a href='#WidgetMetric'>WidgetMetric</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify a metrics array to include one or more metrics (without alarms), math expressions, or
@@ -2216,7 +2568,9 @@ At least one of [alarm], [annotations] or [metrics] must be supplied.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L194" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default period, in seconds, for all metrics in this widget. The period is the length of
@@ -2229,7 +2583,9 @@ metric definition. The default is 300.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L199" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Region&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region of the metric.  Defaults to the region of the stack if not specified.
@@ -2240,7 +2596,9 @@ The region of the metric.  Defaults to the region of the stack if not specified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L205" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default statistic to be displayed for each metric in the array. This default can be
@@ -2252,7 +2610,9 @@ overridden within the definition of each individual metric in the metrics array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L187" >}}">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The title to be displayed for the graph or number.
@@ -2263,7 +2623,9 @@ The title to be displayed for the graph or number.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L34" >}}">property <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>width?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The width of the widget in grid units (in a 24-column grid). The default is 6.
@@ -2276,7 +2638,9 @@ Valid Values: 1–24
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L27" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#YAxis'>YAxis</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Limits for the minimums and maximums of the y-axis.  This applies to every metric being
@@ -2293,7 +2657,9 @@ graphed, unless specific metrics override it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L50" >}}">property <b>alarmDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alarmDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2301,7 +2667,9 @@ graphed, unless specific metrics override it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L51" >}}">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2314,7 +2682,9 @@ graphed, unless specific metrics override it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L64" >}}">property <b>aboveEdge</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aboveEdge: <a href='#HorizontalEdge'>HorizontalEdge</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric value in the graph where the horizontal annotation line is to appear.  If
@@ -2327,7 +2697,9 @@ should not be provided.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L69" >}}">property <b>belowEdge</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>belowEdge?: <a href='#HorizontalEdge'>HorizontalEdge</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The lower edge when using band shading.
@@ -2338,7 +2710,9 @@ The lower edge when using band shading.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L75" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for the annotation. This color is used for both
@@ -2350,7 +2724,9 @@ the annotation line and the fill shading.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L85" >}}">property <b>fill</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fill?: <span class='s2'>"above"</span> | <span class='s2'>"below"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 How to use fill shading with the annotation. Valid values are above for shading above the
@@ -2366,7 +2742,9 @@ ignored.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L91" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the annotation appear in the graph, or false to have it be hidden.
@@ -2378,7 +2756,9 @@ The default is true.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L98" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <span class='s2'>"left"</span> | <span class='s2'>"right"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the graph includes multiple metrics, specifies whether the numbers in Value refer to the
@@ -2396,7 +2776,9 @@ left.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L114" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string that appears on the graph next to the annotation.
@@ -2407,7 +2789,9 @@ A string that appears on the graph next to the annotation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L109" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric value in the graph where the horizontal annotation line is to appear. On a band
@@ -2427,7 +2811,9 @@ annotations appear on the graph.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L589" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -2440,7 +2826,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L561" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The dimensions for this metric.  For the list of available dimensions see the AWS documentation
@@ -2452,7 +2840,9 @@ The dimensions for this metric.  For the list of available dimensions see the AW
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L576" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The percentile statistic for the metric associated with the alarm. Specify a value between
@@ -2464,7 +2854,9 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L598" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -2479,7 +2871,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L556" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name for this metric. See docs for
@@ -2491,7 +2885,9 @@ The name for this metric. See docs for
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L551" >}}">property <b>namespace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The namespace for this metric. See docs for the
@@ -2505,7 +2901,9 @@ See docs for
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L566" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period in seconds over which the specified `stat` is applied.  Must be in multiples of 60.
@@ -2517,7 +2915,9 @@ Default to [300] if unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L571" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The statistic to apply to the alarm's associated metric. Either of the following is
@@ -2529,7 +2929,9 @@ supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L582" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unit for this metric.
@@ -2542,7 +2944,9 @@ See https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_MetricD
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L606" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -2556,7 +2960,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L613" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -2579,7 +2985,9 @@ Interface for all the parts of a metric that can be changed.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -2592,7 +3000,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -2605,7 +3015,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -2618,7 +3030,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -2633,7 +3047,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -2646,7 +3062,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -2659,7 +3077,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -2672,7 +3092,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -2686,7 +3108,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -2700,12 +3124,16 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L152" >}}">interface <b>MetricWidgetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#SimpleWidgetArgs'>SimpleWidgetArgs</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="MetricWidgetArgs-alarm">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L159" >}}">property <b>alarm</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alarm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='#WidgetAlarm'>WidgetAlarm</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Used to show a graph of a single alarm.  If, instead, you want to place horizontal lines in
@@ -2719,7 +3147,9 @@ At least one of [alarm], [annotations] or [metrics] must be supplied.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L173" >}}">property <b>annotations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>annotations?: <a href='#WidgetAnnotation'>WidgetAnnotation</a> | <a href='#WidgetAnnotation'>WidgetAnnotation</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A single metric widget can have up to one alarm, and multiple horizontal and vertical
@@ -2739,7 +3169,9 @@ At least one of [alarm], [annotations] or [metrics] must be supplied.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L211" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The percentile statistic for the metric associated with the alarm. Specify a value between
@@ -2751,7 +3183,9 @@ The percentile statistic for the metric associated with the alarm. Specify a val
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L41" >}}">property <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>height?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The height of the widget in grid units. The default is 6.
@@ -2764,7 +3198,9 @@ Valid Values: 1–1000
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L184" >}}">property <b>metrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metrics?: <a href='#WidgetMetric'>WidgetMetric</a> | <a href='#WidgetMetric'>WidgetMetric</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify a metrics array to include one or more metrics (without alarms), math expressions, or
@@ -2781,7 +3217,9 @@ At least one of [alarm], [annotations] or [metrics] must be supplied.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L194" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default period, in seconds, for all metrics in this widget. The period is the length of
@@ -2794,7 +3232,9 @@ metric definition. The default is 300.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L199" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Region&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region of the metric.  Defaults to the region of the stack if not specified.
@@ -2805,7 +3245,9 @@ The region of the metric.  Defaults to the region of the stack if not specified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L205" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The default statistic to be displayed for each metric in the array. This default can be
@@ -2817,7 +3259,9 @@ overridden within the definition of each individual metric in the metrics array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L187" >}}">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>title?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The title to be displayed for the graph or number.
@@ -2828,7 +3272,9 @@ The title to be displayed for the graph or number.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L34" >}}">property <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>width?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The width of the widget in grid units (in a 24-column grid). The default is 6.
@@ -2846,7 +3292,9 @@ Valid Values: 1–24
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L42" >}}">property <b>max</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>max?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum value for this Y-axis
@@ -2857,7 +3305,9 @@ The maximum value for this Y-axis
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L40" >}}">property <b>min</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>min?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum value for this Y-axis
@@ -2873,7 +3323,9 @@ The minimum value for this Y-axis
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L41" >}}">property <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>height?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The height of the widget in grid units. The default is 6.
@@ -2886,7 +3338,9 @@ Valid Values: 1–1000
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L34" >}}">property <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>width?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The width of the widget in grid units (in a 24-column grid). The default is 6.
@@ -2900,12 +3354,16 @@ Valid Values: 1–24
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L117" >}}">interface <b>TextWidgetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#SimpleWidgetArgs'>SimpleWidgetArgs</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="TextWidgetArgs-height">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L41" >}}">property <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>height?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The height of the widget in grid units. The default is 6.
@@ -2918,7 +3376,9 @@ Valid Values: 1–1000
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L121" >}}">property <b>markdown</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>markdown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The text to be displayed by the widget.
@@ -2929,7 +3389,9 @@ The text to be displayed by the widget.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L34" >}}">property <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>width?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The width of the widget in grid units (in a 24-column grid). The default is 6.
@@ -2953,7 +3415,9 @@ it, or between two vertical lines that are linked as a single band annotation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L181" >}}">property <b>afterEdge</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>afterEdge?: <a href='#VerticalEdge'>VerticalEdge</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ending edge when using band shading.
@@ -2964,7 +3428,9 @@ The ending edge when using band shading.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L176" >}}">property <b>beforeEdge</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>beforeEdge: <a href='#VerticalEdge'>VerticalEdge</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric value in the graph where the vertical annotation line is to appear.  If
@@ -2977,7 +3443,9 @@ should not be provided.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L187" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for the annotation. This color is used for both
@@ -2989,7 +3457,9 @@ the annotation line and the fill shading.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L196" >}}">property <b>fill</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fill?: <span class='s2'>"before"</span> | <span class='s2'>"after"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 How to use fill shading with the annotation. Valid values are before for shading before the
@@ -3004,7 +3474,9 @@ between the two values, and any value for [fill] is ignored.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L202" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the annotation appear in the graph, or false to have it be hidden.
@@ -3021,7 +3493,9 @@ The default is true.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L221" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string that appears on the graph next to the annotation.
@@ -3032,7 +3506,9 @@ A string that appears on the graph next to the annotation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L216" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time in the graph where the vertical annotation line is to appear. On a band
@@ -3071,10 +3547,12 @@ Base type for all [Widget]s that can be placed in a [DashboardGrid].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widget.ts#L57" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addWidgetJson(widgetJsons: WidgetJson[], xOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, yOffset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;aws.Region&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Converts this widget to an appropriate JSON pojo.  The [xOffset] and [yOffset] parameters
 specify where in the final [Dashboard] grid this [Widget] should be placed.
@@ -3087,10 +3565,12 @@ For internal use only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widget.ts#L49" >}}">method <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>height(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The height of the widget in grid units. The default is 6.
 
@@ -3102,10 +3582,12 @@ Valid Values: 1–1000
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widget.ts#L42" >}}">method <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>width(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The width of the widget in grid units (in a 24-column grid). The default is 6.
 
@@ -3124,7 +3606,9 @@ Type: Integer
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L215" >}}">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -3144,10 +3628,12 @@ this interface include [aws.cloudwatch.Alarm], [AlarmAnnotation], [HorizontalAnn
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_annotations.ts#L28" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addWidgetJson(annotations: wjson.MetricWidgetAnnotationsJson): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only. Only intended to be called by [MetricWidget].
 
@@ -3170,10 +3656,12 @@ See [ExpressionWidgetMetric] and [Metric] to create instances that can be added 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_simple.ts#L322" >}}">method <b>addWidgetJson</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addWidgetJson(metrics: wjson.MetricJson[]): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For internal use only. Only intended to be called by [MetricWidget].
 
@@ -3188,7 +3676,9 @@ For internal use only. Only intended to be called by [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L32" >}}">property <b>left</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>left?: <a href='#MinMax'>MinMax</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional min and max settings for the left Y-axis.
@@ -3199,7 +3689,9 @@ Optional min and max settings for the left Y-axis.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/widgets_graph.ts#L35" >}}">property <b>right</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>right?: <a href='#MinMax'>MinMax</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional min and max settings for the right Y-axis.
@@ -3221,10 +3713,12 @@ Optional min and max settings for the right Y-axis.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L70" >}}">function <b>deadLetterInvocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadLetterInvocations(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of times a rule’s target is not invoked in response to an event. This
 includes invocations that would result in triggering the same rule again, causing an
@@ -3239,10 +3733,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L96" >}}">function <b>failedInvocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>failedInvocations(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of invocations that failed permanently. This does not include invocations
 that are retried, or that succeeded after a retry attempt. It also does not count failed
@@ -3257,10 +3753,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L84" >}}">function <b>invocations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invocations(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of times a target is invoked for a rule in response to an event. This
 includes successful and failed invocations, but does not include throttled or retried attempts
@@ -3277,10 +3775,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L116" >}}">function <b>matchedEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>matchedEvents(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of events that matched with any rule.
 
@@ -3293,10 +3793,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L49" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#CloudWatchEventMetricName'>CloudWatchEventMetricName</a>, change: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 CloudWatch Events sends metrics to Amazon CloudWatch every minute.
 
@@ -3319,10 +3821,12 @@ CloudWatch Events metrics have one dimension:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L126" >}}">function <b>throttledRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>throttledRules(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of triggered rules that are being throttled.
 
@@ -3335,10 +3839,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L106" >}}">function <b>triggeredRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>triggeredRules(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Measures the number of triggered rules that matched with any event.
 
@@ -3357,7 +3863,9 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -3370,7 +3878,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -3383,7 +3893,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L30" >}}">property <b>eventRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventRule?: aws.cloudwatch.EventRule;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters down events to those from the specified [EventRule].
@@ -3394,7 +3906,9 @@ Filters down events to those from the specified [EventRule].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -3407,7 +3921,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -3422,7 +3938,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -3435,7 +3953,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -3448,7 +3968,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -3461,7 +3983,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -3475,7 +3999,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -3489,7 +4015,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L22" >}}">type <b>CloudWatchEventMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> CloudWatchEventMetricName = <span class='s2'>"DeadLetterInvocations"</span> | <span class='s2'>"Invocations"</span> | <span class='s2'>"FailedInvocations"</span> | <span class='s2'>"TriggeredRules"</span> | <span class='s2'>"MatchedEvents"</span> | <span class='s2'>"ThrottledRules"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -3504,10 +4032,12 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L248" >}}">function <b>deliveryErrors</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deliveryErrors(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of log events for which CloudWatch Logs received an error when forwarding data to the
 subscription destination.
@@ -3522,10 +4052,12 @@ Units: None
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L260" >}}">function <b>deliveryThrottling</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deliveryThrottling(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of log events for which CloudWatch Logs was throttled when forwarding data to the
 subscription destination.
@@ -3540,10 +4072,12 @@ Units: None
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L225" >}}">function <b>forwardedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forwardedBytes(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The volume of log events in compressed bytes forwarded to the subscription destination.
 
@@ -3557,10 +4091,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L236" >}}">function <b>forwardedLogEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forwardedLogEvents(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of log events forwarded to the subscription destination.
 
@@ -3574,10 +4110,12 @@ Units: None
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L202" >}}">function <b>incomingBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>incomingBytes(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The volume of log events in uncompressed bytes uploaded to CloudWatch Logs. When used
 with the LogGroupName dimension, this is the volume of log events in uncompressed bytes
@@ -3593,10 +4131,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L214" >}}">function <b>incomingLogEvents</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>incomingLogEvents(change?: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of log events uploaded to CloudWatch Logs. When used with the LogGroupName dimension,
 this is the number of log events uploaded to the log group.
@@ -3611,10 +4151,12 @@ Units: None
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L174" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#CloudWatchLogMetricName'>CloudWatchLogMetricName</a>, change: <a href='#CloudWatchMetricChange'>CloudWatchMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 CloudWatch Logs sends metrics to Amazon CloudWatch every minute.
 
@@ -3645,7 +4187,9 @@ The dimensions that you can use with CloudWatch Logs metrics are:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -3658,7 +4202,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L146" >}}">property <b>destinationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The subscription destination for the CloudWatch Logs data, which can be AWS Lambda,
@@ -3670,7 +4216,9 @@ Amazon Kinesis Data Streams, or Amazon Kinesis Data Firehose.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -3683,7 +4231,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -3696,7 +4246,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L153" >}}">property <b>filterName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subscription filter that is forwarding data from the log group to the
@@ -3709,7 +4261,9 @@ ASCII and any unsupported characters get replaced with a question mark (?).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -3724,7 +4278,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L140" >}}">property <b>logGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logGroup?: aws.cloudwatch.LogGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters down events to those from the specified [LogGroup].
@@ -3735,7 +4291,9 @@ Filters down events to those from the specified [LogGroup].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -3748,7 +4306,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -3761,7 +4321,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -3774,7 +4336,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -3788,7 +4352,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -3802,7 +4368,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metrics.ts#L132" >}}">type <b>CloudWatchLogMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> CloudWatchLogMetricName = <span class='s2'>"IncomingBytes"</span> | <span class='s2'>"IncomingLogEvents"</span> | <span class='s2'>"ForwardedBytes"</span> | <span class='s2'>"ForwardedLogEvents"</span> | <span class='s2'>"DeliveryErrors"</span> | <span class='s2'>"DeliveryThrottling"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -3812,17 +4380,23 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L466" >}}">type <b>AlarmComparisonOperator</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> AlarmComparisonOperator = <span class='s2'>"GreaterThanOrEqualToThreshold"</span> | <span class='s2'>"GreaterThanThreshold"</span> | <span class='s2'>"LessThanThreshold"</span> | <span class='s2'>"LessThanOrEqualToThreshold"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="MetricStatistic">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L616" >}}">type <b>MetricStatistic</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> MetricStatistic = <span class='s2'>"SampleCount"</span> | <span class='s2'>"Average"</span> | <span class='s2'>"Sum"</span> | <span class='s2'>"Minimum"</span> | <span class='s2'>"Maximum"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="MetricUnit">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L617" >}}">type <b>MetricUnit</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> MetricUnit = <span class='s2'>"Seconds"</span> | <span class='s2'>"Microseconds"</span> | <span class='s2'>"Milliseconds"</span> | <span class='s2'>"Bytes"</span> | <span class='s2'>"Kilobytes"</span> | <span class='s2'>"Megabytes"</span> | <span class='s2'>"Gigabytes"</span> | <span class='s2'>"Terabytes"</span> | <span class='s2'>"Bits"</span> | <span class='s2'>"Kilobits"</span> | <span class='s2'>"Megabits"</span> | <span class='s2'>"Gigabits"</span> | <span class='s2'>"Terabits"</span> | <span class='s2'>"Percent"</span> | <span class='s2'>"Count"</span> | <span class='s2'>"Bytes/Second"</span> | <span class='s2'>"Kilobytes/Second"</span> | <span class='s2'>"Megabytes/Second"</span> | <span class='s2'>"Gigabytes/Second"</span> | <span class='s2'>"Terabytes/Second"</span> | <span class='s2'>"Bits/Second"</span> | <span class='s2'>"Kilobits/Second"</span> | <span class='s2'>"Megabits/Second"</span> | <span class='s2'>"Gigabits/Second"</span> | <span class='s2'>"Terabits/Second"</span> | <span class='s2'>"Count/Second"</span> | <span class='s2'>"None"</span>;</pre>
+{{< /md-disable >}}
 </div>

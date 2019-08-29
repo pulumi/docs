@@ -46,7 +46,9 @@ title: Module firewall
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L43" >}}">class <b>Firewall</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a v1 firewall resource within OpenStack.
@@ -89,10 +91,12 @@ const firewall1 = new openstack.firewall.Firewall("firewall1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L119" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Firewall(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FirewallArgs'>FirewallArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Firewall resource with the given unique name, arguments, and options.
 
@@ -106,10 +110,12 @@ Create a Firewall resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FirewallState'>FirewallState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Firewall'>Firewall</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Firewall resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -117,23 +123,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L43" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Firewall.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -144,7 +154,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L75" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the firewall
@@ -157,7 +169,9 @@ Changing this updates the `adminStateUp` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L81" >}}">property <b>associatedRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>associatedRouters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Router(s) to associate this firewall instance
@@ -170,7 +184,9 @@ of an existing firewall. Conflicts with `noRouters`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L86" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall. Changing this
@@ -179,10 +195,12 @@ updates the `description` of an existing firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L43" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -194,7 +212,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L91" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the firewall. Changing this
@@ -206,7 +226,9 @@ updates the `name` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L97" >}}">property <b>noRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>noRouters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this firewall not be associated with any routers
@@ -219,7 +241,9 @@ Conflicts with `associatedRouters`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L102" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy resource id for the firewall. Changing
@@ -231,7 +255,9 @@ this updates the `policyId` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L109" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 networking client.
@@ -245,7 +271,9 @@ firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L115" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the floating IP. Required if admin wants
@@ -255,10 +283,12 @@ firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L43" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -270,7 +300,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L119" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -282,7 +314,9 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L40" >}}">class <b>Policy</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a v1 firewall policy resource within OpenStack.
@@ -322,10 +356,12 @@ const policy1 = new openstack.firewall.Policy("policy1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L110" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Policy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#PolicyArgs'>PolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Policy resource with the given unique name, arguments, and options.
 
@@ -339,10 +375,12 @@ Create a Policy resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PolicyState'>PolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Policy'>Policy</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Policy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -350,23 +388,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L40" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Policy.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -377,7 +419,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L74" >}}">property <b>audited</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>audited: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Audit status of the firewall policy
@@ -392,7 +436,9 @@ firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L79" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall policy. Changing
@@ -401,10 +447,12 @@ this updates the `description` of an existing firewall policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L40" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -416,7 +464,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L84" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the firewall policy. Changing this
@@ -428,7 +478,9 @@ updates the `name` of an existing firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L91" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 networking client.
@@ -442,7 +494,9 @@ firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L97" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of one or more firewall rules that comprise
@@ -455,7 +509,9 @@ existing firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L105" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shared: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sharing status of the firewall policy (must be "true"
@@ -470,15 +526,19 @@ can specify if the policy should be shared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L106" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Policy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L40" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -490,7 +550,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L110" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -502,7 +564,9 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L27" >}}">class <b>Rule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a v1 firewall rule resource within OpenStack.
@@ -529,10 +593,12 @@ const rule1 = new openstack.firewall.Rule("rule1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L127" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Rule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RuleArgs'>RuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Rule resource with the given unique name, arguments, and options.
 
@@ -546,10 +612,12 @@ Create a Rule resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RuleState'>RuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Rule'>Rule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Rule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -557,23 +625,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Rule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -584,7 +656,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L59" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Action to be taken ( must be "allow" or "deny") when the
@@ -597,7 +671,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L64" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall rule. Changing this
@@ -609,7 +685,9 @@ updates the `description` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L70" >}}">property <b>destinationIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>destinationIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The destination IP address on which the
@@ -622,7 +700,9 @@ of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L76" >}}">property <b>destinationPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>destinationPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The destination port on which the firewall
@@ -635,7 +715,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L82" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enabled status for the firewall rule (must be "true"
@@ -645,10 +727,12 @@ or "false" if provided - defaults to "true"). Changing this updates the
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -660,7 +744,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L87" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this
@@ -672,7 +758,9 @@ updates the `ipVersion` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L92" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the firewall rule. Changing this
@@ -684,7 +772,9 @@ updates the `name` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L98" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol type on which the firewall rule operates.
@@ -697,7 +787,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L105" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 Compute client.
@@ -711,7 +803,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L111" >}}">property <b>sourceIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sourceIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source IP address on which the firewall
@@ -724,7 +818,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L117" >}}">property <b>sourcePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sourcePort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source port on which the firewall
@@ -737,7 +833,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L123" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the firewall rule. Required if admin
@@ -747,10 +845,12 @@ new firewall rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Rule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -762,7 +862,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L127" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -774,10 +876,12 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L23" >}}">function <b>getPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getPolicy(args?: <a href='#GetPolicyArgs'>GetPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetPolicyResult'>GetPolicyResult</a>&gt; &amp; <a href='#GetPolicyResult'>GetPolicyResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get firewall policy information of an available OpenStack firewall policy.
 
@@ -809,7 +913,9 @@ The set of arguments for constructing a Firewall resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L233" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the firewall
@@ -822,7 +928,9 @@ Changing this updates the `adminStateUp` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L239" >}}">property <b>associatedRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedRouters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Router(s) to associate this firewall instance
@@ -835,7 +943,9 @@ of an existing firewall. Conflicts with `noRouters`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L244" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall. Changing this
@@ -847,7 +957,9 @@ updates the `description` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L249" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the firewall. Changing this
@@ -859,7 +971,9 @@ updates the `name` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L255" >}}">property <b>noRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noRouters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this firewall not be associated with any routers
@@ -872,7 +986,9 @@ Conflicts with `associatedRouters`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L260" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy resource id for the firewall. Changing
@@ -884,7 +1000,9 @@ this updates the `policyId` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L267" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 networking client.
@@ -898,7 +1016,9 @@ firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L273" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the floating IP. Required if admin wants
@@ -911,7 +1031,9 @@ firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L277" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -932,7 +1054,9 @@ Input properties used for looking up and filtering Firewall resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L177" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the firewall
@@ -945,7 +1069,9 @@ Changing this updates the `adminStateUp` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L183" >}}">property <b>associatedRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>associatedRouters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Router(s) to associate this firewall instance
@@ -958,7 +1084,9 @@ of an existing firewall. Conflicts with `noRouters`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L188" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall. Changing this
@@ -970,7 +1098,9 @@ updates the `description` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L193" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the firewall. Changing this
@@ -982,7 +1112,9 @@ updates the `name` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L199" >}}">property <b>noRouters</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noRouters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this firewall not be associated with any routers
@@ -995,7 +1127,9 @@ Conflicts with `associatedRouters`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L204" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The policy resource id for the firewall. Changing
@@ -1007,7 +1141,9 @@ this updates the `policyId` of an existing firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L211" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 networking client.
@@ -1021,7 +1157,9 @@ firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L217" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the floating IP. Required if admin wants
@@ -1034,7 +1172,9 @@ firewall.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/firewall.ts#L221" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -1055,7 +1195,9 @@ A collection of arguments for invoking getPolicy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L49" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the firewall policy.
@@ -1066,7 +1208,9 @@ The name of the firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L53" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the firewall policy.
@@ -1077,7 +1221,9 @@ The ID of the firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L59" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -1090,7 +1236,9 @@ A Neutron client is needed to retrieve firewall policy ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L63" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the firewall policy.
@@ -1111,7 +1259,9 @@ A collection of values returned by getPolicy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L73" >}}">property <b>audited</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>audited: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The audit status of the firewall policy.
@@ -1122,7 +1272,9 @@ The audit status of the firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L77" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of the firewall policy.
@@ -1133,7 +1285,9 @@ The description of the firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L105" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1144,7 +1298,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L81" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1155,7 +1311,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L85" >}}">property <b>policyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1166,7 +1324,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L89" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1177,7 +1337,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L93" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The array of one or more firewall rules that comprise the policy.
@@ -1188,7 +1350,9 @@ The array of one or more firewall rules that comprise the policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L97" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The sharing status of the firewall policy.
@@ -1199,7 +1363,9 @@ The sharing status of the firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/getPolicy.ts#L101" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1220,7 +1386,9 @@ The set of arguments for constructing a Policy resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L215" >}}">property <b>audited</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>audited?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Audit status of the firewall policy
@@ -1235,7 +1403,9 @@ firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L220" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall policy. Changing
@@ -1247,7 +1417,9 @@ this updates the `description` of an existing firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L225" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the firewall policy. Changing this
@@ -1259,7 +1431,9 @@ updates the `name` of an existing firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L232" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 networking client.
@@ -1273,7 +1447,9 @@ firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L238" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of one or more firewall rules that comprise
@@ -1286,7 +1462,9 @@ existing firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L246" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sharing status of the firewall policy (must be "true"
@@ -1301,7 +1479,9 @@ can specify if the policy should be shared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L247" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1309,7 +1489,9 @@ can specify if the policy should be shared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L251" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -1330,7 +1512,9 @@ Input properties used for looking up and filtering Policy resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L165" >}}">property <b>audited</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>audited?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Audit status of the firewall policy
@@ -1345,7 +1529,9 @@ firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L170" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall policy. Changing
@@ -1357,7 +1543,9 @@ this updates the `description` of an existing firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L175" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the firewall policy. Changing this
@@ -1369,7 +1557,9 @@ updates the `name` of an existing firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L182" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 networking client.
@@ -1383,7 +1573,9 @@ firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L188" >}}">property <b>rules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of one or more firewall rules that comprise
@@ -1396,7 +1588,9 @@ existing firewall policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L196" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sharing status of the firewall policy (must be "true"
@@ -1411,7 +1605,9 @@ can specify if the policy should be shared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L197" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1419,7 +1615,9 @@ can specify if the policy should be shared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/policy.ts#L201" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -1440,7 +1638,9 @@ The set of arguments for constructing a Rule resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L276" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Action to be taken ( must be "allow" or "deny") when the
@@ -1453,7 +1653,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L281" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall rule. Changing this
@@ -1465,7 +1667,9 @@ updates the `description` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L287" >}}">property <b>destinationIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The destination IP address on which the
@@ -1478,7 +1682,9 @@ of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L293" >}}">property <b>destinationPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The destination port on which the firewall
@@ -1491,7 +1697,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L299" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enabled status for the firewall rule (must be "true"
@@ -1504,7 +1712,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L304" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this
@@ -1516,7 +1726,9 @@ updates the `ipVersion` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L309" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the firewall rule. Changing this
@@ -1528,7 +1740,9 @@ updates the `name` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L315" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol type on which the firewall rule operates.
@@ -1541,7 +1755,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L322" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 Compute client.
@@ -1555,7 +1771,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L328" >}}">property <b>sourceIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source IP address on which the firewall
@@ -1568,7 +1786,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L334" >}}">property <b>sourcePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourcePort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source port on which the firewall
@@ -1581,7 +1801,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L340" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the firewall rule. Required if admin
@@ -1594,7 +1816,9 @@ new firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L344" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -1615,7 +1839,9 @@ Input properties used for looking up and filtering Rule resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L196" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Action to be taken ( must be "allow" or "deny") when the
@@ -1628,7 +1854,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L201" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description for the firewall rule. Changing this
@@ -1640,7 +1868,9 @@ updates the `description` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L207" >}}">property <b>destinationIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The destination IP address on which the
@@ -1653,7 +1883,9 @@ of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L213" >}}">property <b>destinationPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The destination port on which the firewall
@@ -1666,7 +1898,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L219" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enabled status for the firewall rule (must be "true"
@@ -1679,7 +1913,9 @@ or "false" if provided - defaults to "true"). Changing this updates the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L224" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this
@@ -1691,7 +1927,9 @@ updates the `ipVersion` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L229" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the firewall rule. Changing this
@@ -1703,7 +1941,9 @@ updates the `name` of an existing firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L235" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol type on which the firewall rule operates.
@@ -1716,7 +1956,9 @@ Valid values are: `tcp`, `udp`, `icmp`, and `any`. Changing this updates the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L242" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the v1 Compute client.
@@ -1730,7 +1972,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L248" >}}">property <b>sourceIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source IP address on which the firewall
@@ -1743,7 +1987,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L254" >}}">property <b>sourcePort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourcePort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source port on which the firewall
@@ -1756,7 +2002,9 @@ firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L260" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the firewall rule. Required if admin
@@ -1769,7 +2017,9 @@ new firewall rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="firewall/rule.ts#L264" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.

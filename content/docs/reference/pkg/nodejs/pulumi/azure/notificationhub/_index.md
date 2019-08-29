@@ -409,7 +409,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>apnsCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#HubApnsCredential'>HubApnsCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>apnsCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HubApnsCredential'>outputs.notificationhub.HubApnsCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -422,7 +422,7 @@ A `apnsCredential` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>gcmCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#HubGcmCredential'>HubGcmCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>gcmCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#HubGcmCredential'>outputs.notificationhub.HubGcmCredential</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -704,7 +704,7 @@ The ServiceBus Endpoint for this Notification Hub Namespace.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NamespaceSku'>outputs.notificationhub.NamespaceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1094,7 +1094,7 @@ A collection of values returned by getHub.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>apnsCredentials: <a href='#GetHubApnsCredential'>GetHubApnsCredential</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>apnsCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetHubApnsCredential'>outputs.notificationhub.GetHubApnsCredential</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1107,7 +1107,7 @@ A `apnsCredential` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>gcmCredentials: <a href='#GetHubGcmCredential'>GetHubGcmCredential</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>gcmCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetHubGcmCredential'>outputs.notificationhub.GetHubGcmCredential</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1307,7 +1307,7 @@ The Type of Namespace, such as `Messaging` or `NotificationHub`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='#GetNamespaceSku'>GetNamespaceSku</a>;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNamespaceSku'>outputs.notificationhub.GetNamespaceSku</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1330,7 +1330,7 @@ The set of arguments for constructing a Hub resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#HubApnsCredential'>HubApnsCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubApnsCredential'>inputs.notificationhub.HubApnsCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1343,7 +1343,7 @@ A `apnsCredential` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#HubGcmCredential'>HubGcmCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubGcmCredential'>inputs.notificationhub.HubGcmCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1418,7 +1418,7 @@ Input properties used for looking up and filtering Hub resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#HubApnsCredential'>HubApnsCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>apnsCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubApnsCredential'>inputs.notificationhub.HubApnsCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1431,7 +1431,7 @@ A `apnsCredential` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#HubGcmCredential'>HubGcmCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>gcmCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#HubGcmCredential'>inputs.notificationhub.HubGcmCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1571,7 +1571,7 @@ The name of the Resource Group in which the Notification Hub Namespace should ex
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.notificationhub.NamespaceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1685,7 +1685,7 @@ The ServiceBus Endpoint for this Notification Hub Namespace.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.notificationhub.NamespaceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

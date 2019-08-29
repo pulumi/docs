@@ -32,10 +32,12 @@ title: Module sns
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L90" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#SnsMetricName'>SnsMetricName</a>, change: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/SNS metric with the requested [metricName]. See
 https://docs.aws.amazon.com/sns/latest/dg/sns-monitoring-using-cloudwatch.html for list of
@@ -75,10 +77,12 @@ Amazon Simple Notification Service sends the following dimensions to CloudWatch:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L126" >}}">function <b>numberOfMessagesPublished</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfMessagesPublished(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages published to your Amazon SNS topics.
 
@@ -92,10 +96,12 @@ Valid Statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L143" >}}">function <b>numberOfNotificationsDelivered</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfNotificationsDelivered(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages successfully delivered from your Amazon SNS topics to subscribing
 endpoints.
@@ -115,10 +121,12 @@ Valid Statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L162" >}}">function <b>numberOfNotificationsFailed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfNotificationsFailed(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages that Amazon SNS failed to deliver.
 
@@ -140,10 +148,12 @@ Valid Statistics: Sum, Average
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L187" >}}">function <b>numberOfNotificationsFilteredOut_InvalidAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfNotificationsFilteredOut_InvalidAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages that were rejected by subscription filter policies because the
 messages' attributes are invalid – for example, because the attribute JSON is incorrectly
@@ -159,10 +169,12 @@ Valid Statistics: Sum, Average
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L174" >}}">function <b>numberOfNotificationsFilteredOut_NoMessageAttributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfNotificationsFilteredOut_NoMessageAttributes(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of messages that were rejected by subscription filter policies because the
 messages have no attributes.
@@ -177,10 +189,12 @@ Valid Statistics: Sum, Average
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L198" >}}">function <b>publishSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>publishSize(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of database connections in use.
 
@@ -194,10 +208,12 @@ Valid Statistics: Minimum, Maximum, Average and Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L213" >}}">function <b>smsMonthToDateSpentUSD</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>smsMonthToDateSpentUSD(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The charges you have accrued since the start of the current calendar month for sending SMS
 messages.
@@ -215,10 +231,12 @@ Valid Statistics: Maximum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L224" >}}">function <b>smsSuccessRate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>smsSuccessRate(change?: <a href='#SnsMetricChange'>SnsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The rate of successful SMS message deliveries.
 
@@ -238,7 +256,9 @@ Valid Statistics: Sum, Average, Data Samples
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L38" >}}">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>application?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters on application objects, which represent an app and device registered with one of
@@ -250,7 +270,9 @@ the supported push notification services, such as APNS and FCM.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -263,7 +285,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L44" >}}">property <b>country</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>country?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters on the destination country or region of an SMS message. The country or region is
@@ -275,7 +299,9 @@ represented by its ISO 3166-1 alpha-2 code.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -288,7 +314,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -301,7 +329,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -316,7 +346,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -329,7 +361,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L49" >}}">property <b>platform</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>platform?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters on platform objects for the push notification services, such as APNS and FCM.
@@ -340,7 +374,9 @@ Filters on platform objects for the push notification services, such as APNS and
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L54" >}}">property <b>smsType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>smsType?: <span class='s2'>"promotional"</span> | <span class='s2'>"transactional"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filters on the message type of SMS message.
@@ -351,7 +387,9 @@ Filters on the message type of SMS message.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -364,7 +402,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L32" >}}">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic?: aws.sns.Topic;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional topic to filter down to.
@@ -375,7 +415,9 @@ Optional topic to filter down to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -388,7 +430,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -402,7 +446,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -416,7 +462,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="sns/metrics.ts#L21" >}}">type <b>SnsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> SnsMetricName = <span class='s2'>"NumberOfMessagesPublished"</span> | <span class='s2'>"NumberOfNotificationsDelivered"</span> | <span class='s2'>"NumberOfNotificationsFailed"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut-NoMessageAttributes"</span> | <span class='s2'>"NumberOfNotificationsFilteredOut-InvalidAttributes"</span> | <span class='s2'>"PublishSize"</span> | <span class='s2'>"SMSMonthToDateSpentUSD"</span> | <span class='s2'>"SMSSuccessRate"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

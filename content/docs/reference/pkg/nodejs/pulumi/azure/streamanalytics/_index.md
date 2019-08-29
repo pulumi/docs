@@ -186,7 +186,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionJavaScriptUDFInput'>outputs.streamanalytics.FunctionJavaScriptUDFInput</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -212,7 +212,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionJavaScriptUDFOutput'>outputs.streamanalytics.FunctionJavaScriptUDFOutput</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -772,7 +772,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputBlobSerialization'>outputs.streamanalytics.OutputBlobSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1037,7 +1037,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputEventHubSerialization'>outputs.streamanalytics.OutputEventHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1536,7 +1536,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutputServiceBusQueueSerialization'>outputs.streamanalytics.OutputServiceBusQueueSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1802,7 +1802,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputBlobSerialization'>outputs.streamanalytics.StreamInputBlobSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2088,7 +2088,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputEventHubSerialization'>outputs.streamanalytics.StreamInputEventHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2363,7 +2363,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#StreamInputIotHubSerialization'>outputs.streamanalytics.StreamInputIotHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2470,7 +2470,7 @@ The set of arguments for constructing a FunctionJavaScriptUDF resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>inputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFInput'>inputs.streamanalytics.FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2496,7 +2496,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>output: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFOutput'>inputs.streamanalytics.FunctionJavaScriptUDFOutput</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2558,7 +2558,7 @@ Input properties used for looking up and filtering FunctionJavaScriptUDF resourc
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionJavaScriptUDFInput'>FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>inputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFInput'>inputs.streamanalytics.FunctionJavaScriptUDFInput</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2584,7 +2584,7 @@ The name of the JavaScript UDF Function. Changing this forces a new resource to 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>output?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionJavaScriptUDFOutput'>FunctionJavaScriptUDFOutput</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>output?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionJavaScriptUDFOutput'>inputs.streamanalytics.FunctionJavaScriptUDFOutput</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3252,7 +3252,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputBlobSerialization'>inputs.streamanalytics.OutputBlobSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3392,7 +3392,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutputBlobSerialization'>OutputBlobSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputBlobSerialization'>inputs.streamanalytics.OutputBlobSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3519,7 +3519,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputEventHubSerialization'>inputs.streamanalytics.OutputEventHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3633,7 +3633,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutputEventHubSerialization'>OutputEventHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputEventHubSerialization'>inputs.streamanalytics.OutputEventHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3969,7 +3969,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServiceBusQueueSerialization'>inputs.streamanalytics.OutputServiceBusQueueSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4083,7 +4083,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutputServiceBusQueueSerialization'>OutputServiceBusQueueSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutputServiceBusQueueSerialization'>inputs.streamanalytics.OutputServiceBusQueueSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4210,7 +4210,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputBlobSerialization'>inputs.streamanalytics.StreamInputBlobSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4350,7 +4350,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#StreamInputBlobSerialization'>StreamInputBlobSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputBlobSerialization'>inputs.streamanalytics.StreamInputBlobSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4490,7 +4490,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputEventHubSerialization'>inputs.streamanalytics.StreamInputEventHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4617,7 +4617,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#StreamInputEventHubSerialization'>StreamInputEventHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputEventHubSerialization'>inputs.streamanalytics.StreamInputEventHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4757,7 +4757,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputIotHubSerialization'>inputs.streamanalytics.StreamInputIotHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4884,7 +4884,7 @@ The name of the Resource Group where the Stream Analytics Job exists. Changing t
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#StreamInputIotHubSerialization'>StreamInputIotHubSerialization</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>serialization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#StreamInputIotHubSerialization'>inputs.streamanalytics.StreamInputIotHubSerialization</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

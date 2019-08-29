@@ -831,7 +831,7 @@ The name of the DNS CAA Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CaaRecordRecord'>CaaRecordRecord</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CaaRecordRecord'>outputs.dns.CaaRecordRecord</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1050,7 +1050,7 @@ The name of the DNS MX Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MxRecordRecord'>MxRecordRecord</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MxRecordRecord'>outputs.dns.MxRecordRecord</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1263,7 +1263,7 @@ The name of the DNS NS Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>record: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#NsRecordRecord'>NsRecordRecord</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>record: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NsRecordRecord'>outputs.dns.NsRecordRecord</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1698,7 +1698,7 @@ The name of the DNS SRV Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SrvRecordRecord'>SrvRecordRecord</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SrvRecordRecord'>outputs.dns.SrvRecordRecord</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1915,7 +1915,7 @@ The name of the DNS TXT Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TxtRecordRecord'>TxtRecordRecord</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#TxtRecordRecord'>outputs.dns.TxtRecordRecord</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2803,7 +2803,7 @@ The name of the DNS CAA Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CaaRecordRecord'>CaaRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CaaRecordRecord'>inputs.dns.CaaRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2891,7 +2891,7 @@ The name of the DNS CAA Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CaaRecordRecord'>CaaRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CaaRecordRecord'>inputs.dns.CaaRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3151,7 +3151,7 @@ The name of the DNS MX Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MxRecordRecord'>MxRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MxRecordRecord'>inputs.dns.MxRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3239,7 +3239,7 @@ The name of the DNS MX Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MxRecordRecord'>MxRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MxRecordRecord'>inputs.dns.MxRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3327,7 +3327,7 @@ The name of the DNS NS Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NsRecordRecord'>NsRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NsRecordRecord'>inputs.dns.NsRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3428,7 +3428,7 @@ The name of the DNS NS Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NsRecordRecord'>NsRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NsRecordRecord'>inputs.dns.NsRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3705,7 +3705,7 @@ The name of the DNS SRV Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SrvRecordRecord'>SrvRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SrvRecordRecord'>inputs.dns.SrvRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3793,7 +3793,7 @@ The name of the DNS SRV Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SrvRecordRecord'>SrvRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SrvRecordRecord'>inputs.dns.SrvRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3881,7 +3881,7 @@ The name of the DNS TXT Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TxtRecordRecord'>TxtRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TxtRecordRecord'>inputs.dns.TxtRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3969,7 +3969,7 @@ The name of the DNS TXT Record.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TxtRecordRecord'>TxtRecordRecord</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#TxtRecordRecord'>inputs.dns.TxtRecordRecord</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

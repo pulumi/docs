@@ -381,7 +381,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LoadBalancerFrontendIpConfiguration'>outputs.lb.LoadBalancerFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1221,7 +1221,7 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#OutboundRuleFrontendIpConfiguration'>outputs.lb.OutboundRuleFrontendIpConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2260,7 +2260,7 @@ A collection of values returned by getLB.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations: <a href='#GetLBFrontendIpConfiguration'>GetLBFrontendIpConfiguration</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLBFrontendIpConfiguration'>outputs.lb.GetLBFrontendIpConfiguration</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2384,7 +2384,7 @@ The set of arguments for constructing a LoadBalancer resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoadBalancerFrontendIpConfiguration'>inputs.lb.LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2472,7 +2472,7 @@ Input properties used for looking up and filtering LoadBalancer resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerFrontendIpConfiguration'>LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LoadBalancerFrontendIpConfiguration'>inputs.lb.LoadBalancerFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3151,7 +3151,7 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutboundRuleFrontendIpConfiguration'>inputs.lb.OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3278,7 +3278,7 @@ Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connectio
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#OutboundRuleFrontendIpConfiguration'>OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>frontendIpConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#OutboundRuleFrontendIpConfiguration'>inputs.lb.OutboundRuleFrontendIpConfiguration</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

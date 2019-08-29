@@ -40,7 +40,9 @@ title: Module cm
 <a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L28" >}}">class <b>Device</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 `f5bigip.cm.Device` provides details about a specific bigip
@@ -68,10 +70,12 @@ const myNewDevice = new f5bigip.cm.Device("myNewDevice", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Device(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DeviceArgs'>DeviceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Device resource with the given unique name, arguments, and options.
 
@@ -85,10 +89,12 @@ Create a Device resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DeviceState'>DeviceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Device'>Device</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Device resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -99,20 +105,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Device-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Device.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -123,7 +133,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L58" >}}">property <b>configsyncIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>configsyncIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address used for config sync
@@ -134,7 +146,9 @@ IP address used for config sync
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -146,7 +160,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L62" >}}">property <b>mirrorIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mirrorIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address used for state mirroring
@@ -157,7 +173,9 @@ IP address used for state mirroring
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L66" >}}">property <b>mirrorSecondaryIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mirrorSecondaryIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Secondary IP address used for state mirroring
@@ -168,7 +186,9 @@ Secondary IP address used for state mirroring
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Address of the Device which needs to be Deviceensed
@@ -179,7 +199,9 @@ Address of the Device which needs to be Deviceensed
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -192,7 +214,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L36" >}}">class <b>DeviceGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 `f5bigip.cm.DeviceGroup` A device group is a collection of BIG-IP devices that are configured to securely synchronize their BIG-IP configuration data, and fail over when needed.
@@ -227,10 +251,12 @@ const myNewDevicegroup = new f5bigip.cm.DeviceGroup("myNewDevicegroup", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L102" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DeviceGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#DeviceGroupArgs'>DeviceGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DeviceGroup resource with the given unique name, arguments, and options.
 
@@ -244,10 +270,12 @@ Create a DeviceGroup resource with the given unique name, arguments, and options
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DeviceGroupState'>DeviceGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DeviceGroup'>DeviceGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DeviceGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -258,20 +286,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DeviceGroup-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DeviceGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -282,7 +314,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L66" >}}">property <b>autoSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoSync: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will automatically sync configuration data to its members
@@ -293,7 +327,9 @@ Specifies if the device-group will automatically sync configuration data to its 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L70" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Description of Device group
@@ -304,10 +340,12 @@ Description of Device group
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L74" >}}">property <b>devices</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>devices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     setSyncLeader: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the device to be included in device group, this need to be configured before using devicegroup resource
@@ -318,7 +356,9 @@ Name of the device to be included in device group, this need to be configured be
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L78" >}}">property <b>fullLoadOnSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fullLoadOnSync: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will perform a full-load upon sync
@@ -329,7 +369,9 @@ Specifies if the device-group will perform a full-load upon sync
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -341,7 +383,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L82" >}}">property <b>incrementalConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>incrementalConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
@@ -352,7 +396,9 @@ Specifies the maximum size (in KB) to devote to incremental config sync cached t
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L86" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is the name of the device Group
@@ -363,7 +409,9 @@ Is the name of the device Group
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L90" >}}">property <b>networkFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>networkFailover: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will use a network connection for failover
@@ -374,7 +422,9 @@ Specifies if the device-group will use a network connection for failover
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L94" >}}">property <b>partition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>partition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Device administrative partition
@@ -385,7 +435,9 @@ Device administrative partition
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L98" >}}">property <b>saveOnAutoSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>saveOnAutoSync: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the configuration should be saved upon auto-sync.
@@ -396,7 +448,9 @@ Specifies whether the configuration should be saved upon auto-sync.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L102" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will be used for failover or resource syncing
@@ -407,7 +461,9 @@ Specifies if the device-group will be used for failover or resource syncing
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -429,7 +485,9 @@ The set of arguments for constructing a Device resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L141" >}}">property <b>configsyncIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>configsyncIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address used for config sync
@@ -440,7 +498,9 @@ IP address used for config sync
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L145" >}}">property <b>mirrorIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mirrorIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address used for state mirroring
@@ -451,7 +511,9 @@ IP address used for state mirroring
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L149" >}}">property <b>mirrorSecondaryIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mirrorSecondaryIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Secondary IP address used for state mirroring
@@ -462,7 +524,9 @@ Secondary IP address used for state mirroring
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L153" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Address of the Device which needs to be Deviceensed
@@ -483,7 +547,9 @@ The set of arguments for constructing a DeviceGroup resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L203" >}}">property <b>autoSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will automatically sync configuration data to its members
@@ -494,7 +560,9 @@ Specifies if the device-group will automatically sync configuration data to its 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L207" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Description of Device group
@@ -505,10 +573,12 @@ Description of Device group
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L211" >}}">property <b>devices</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>devices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     setSyncLeader: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the device to be included in device group, this need to be configured before using devicegroup resource
@@ -519,7 +589,9 @@ Name of the device to be included in device group, this need to be configured be
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L215" >}}">property <b>fullLoadOnSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fullLoadOnSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will perform a full-load upon sync
@@ -530,7 +602,9 @@ Specifies if the device-group will perform a full-load upon sync
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L219" >}}">property <b>incrementalConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>incrementalConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
@@ -541,7 +615,9 @@ Specifies the maximum size (in KB) to devote to incremental config sync cached t
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L223" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is the name of the device Group
@@ -552,7 +628,9 @@ Is the name of the device Group
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L227" >}}">property <b>networkFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkFailover?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will use a network connection for failover
@@ -563,7 +641,9 @@ Specifies if the device-group will use a network connection for failover
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L231" >}}">property <b>partition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>partition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Device administrative partition
@@ -574,7 +654,9 @@ Device administrative partition
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L235" >}}">property <b>saveOnAutoSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>saveOnAutoSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the configuration should be saved upon auto-sync.
@@ -585,7 +667,9 @@ Specifies whether the configuration should be saved upon auto-sync.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L239" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will be used for failover or resource syncing
@@ -606,7 +690,9 @@ Input properties used for looking up and filtering DeviceGroup resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L157" >}}">property <b>autoSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will automatically sync configuration data to its members
@@ -617,7 +703,9 @@ Specifies if the device-group will automatically sync configuration data to its 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L161" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Description of Device group
@@ -628,10 +716,12 @@ Description of Device group
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L165" >}}">property <b>devices</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>devices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     setSyncLeader: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the device to be included in device group, this need to be configured before using devicegroup resource
@@ -642,7 +732,9 @@ Name of the device to be included in device group, this need to be configured be
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L169" >}}">property <b>fullLoadOnSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fullLoadOnSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will perform a full-load upon sync
@@ -653,7 +745,9 @@ Specifies if the device-group will perform a full-load upon sync
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L173" >}}">property <b>incrementalConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>incrementalConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum size (in KB) to devote to incremental config sync cached transactions. The default is 1024 KB.
@@ -664,7 +758,9 @@ Specifies the maximum size (in KB) to devote to incremental config sync cached t
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L177" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is the name of the device Group
@@ -675,7 +771,9 @@ Is the name of the device Group
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L181" >}}">property <b>networkFailover</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkFailover?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will use a network connection for failover
@@ -686,7 +784,9 @@ Specifies if the device-group will use a network connection for failover
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L185" >}}">property <b>partition</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>partition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Device administrative partition
@@ -697,7 +797,9 @@ Device administrative partition
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L189" >}}">property <b>saveOnAutoSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>saveOnAutoSync?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the configuration should be saved upon auto-sync.
@@ -708,7 +810,9 @@ Specifies whether the configuration should be saved upon auto-sync.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/deviceGroup.ts#L193" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if the device-group will be used for failover or resource syncing
@@ -729,7 +833,9 @@ Input properties used for looking up and filtering Device resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L119" >}}">property <b>configsyncIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>configsyncIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address used for config sync
@@ -740,7 +846,9 @@ IP address used for config sync
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L123" >}}">property <b>mirrorIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mirrorIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address used for state mirroring
@@ -751,7 +859,9 @@ IP address used for state mirroring
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L127" >}}">property <b>mirrorSecondaryIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mirrorSecondaryIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Secondary IP address used for state mirroring
@@ -762,7 +872,9 @@ Secondary IP address used for state mirroring
 <a class="pdoc-child-name" href="{{< pkg-url pkg="f5bigip" path="cm/device.ts#L131" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Address of the Device which needs to be Deviceensed

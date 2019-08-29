@@ -44,7 +44,9 @@ title: Module state
 <a class="pdoc-member-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L51" >}}">class <b>RemoteStateReference</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a reference to a Terraform Remote State.. The root outputs of the remote state are available
@@ -55,10 +57,12 @@ via the `outputs` property or the `getOutput` method.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L55" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RemoteStateReference(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RemoteStateReferenceArgs'>RemoteStateReferenceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a RemoteStateReference resource with the given unique name, arguments, and options.
 
@@ -72,33 +76,39 @@ Create a RemoteStateReference resource with the given unique name, arguments, an
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L77" >}}">method <b>getOutput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getOutput(name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Fetches the value of a root output from the Terraform Remote State.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RemoteStateReference-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L51" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RemoteStateReference-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="node_modules/@pulumi/pulumi/resource.d.ts#L217" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -106,10 +116,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RemoteStateReference-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L51" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -121,7 +133,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L55" >}}">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The root outputs of the referenced Terraform state.
@@ -129,10 +143,12 @@ The root outputs of the referenced Terraform state.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RemoteStateReference-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L51" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -154,7 +170,9 @@ The configuration options for a Terraform Remote State stored in the Artifactory
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/artifactoryBackendConfig.ts#L25" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"artifactory"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -166,7 +184,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/artifactoryBackendConfig.ts#L37" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password with which to authenticate to Artifactory. Sourced from `ARTIFACTORY_PASSWORD`
@@ -178,7 +198,9 @@ in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/artifactoryBackendConfig.ts#L49" >}}">property <b>repo</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>repo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The repository name.
@@ -189,7 +211,9 @@ The repository name.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/artifactoryBackendConfig.ts#L54" >}}">property <b>subpath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subpath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path within the repository.
@@ -200,7 +224,9 @@ Path within the repository.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/artifactoryBackendConfig.ts#L44" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Artifactory URL. Note that this is the base URL to artifactory, not the full repo and
@@ -213,7 +239,9 @@ will end in `/artifactory`. Sourced from `ARTIFACTORY_URL` in the environment, i
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/artifactoryBackendConfig.ts#L31" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The username with which to authenticate to Artifactory. Sourced from `ARTIFACTORY_USERNAME`
@@ -225,7 +253,9 @@ in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/artifactoryBackendConfig.ts#L59" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -246,7 +276,9 @@ The configuration options for a Terraform Remote State stored in the AzureRM bac
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L96" >}}">property <b>accessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Access Key used to access the blob storage account. Used when authenticating using
@@ -258,7 +290,9 @@ an access key. Sourced from `ARM_ACCESS_KEY` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L31" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"azurerm"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -270,7 +304,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L108" >}}">property <b>clientId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The client ID of the service principal. Used when authenticating using a service principal.
@@ -282,7 +318,9 @@ Sourced from `ARM_CLIENT_ID` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L114" >}}">property <b>clientSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The client secret of the service principal. Used when authenticating using a service principal.
@@ -294,7 +332,9 @@ Sourced from `ARM_CLIENT_SECRET` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L41" >}}">property <b>containerName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>containerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the storage container within the storage account.
@@ -305,7 +345,9 @@ The name of the storage container within the storage account.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L57" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The custom endpoint for Azure Resource Manager. Sourced from `ARM_ENDPOINT`, if unset.
@@ -316,7 +358,9 @@ The custom endpoint for Azure Resource Manager. Sourced from `ARM_ENDPOINT`, if 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L52" >}}">property <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AzureEnvironment'>AzureEnvironment</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Azure environment which should be used. Possible values are `public` (default), `china`,
@@ -328,7 +372,9 @@ The Azure environment which should be used. Possible values are `public` (defaul
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L46" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the blob in representing the Terraform State file inside the storage container.
@@ -339,7 +385,9 @@ The name of the blob in representing the Terraform State file inside the storage
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L84" >}}">property <b>msiEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>msiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to a custom Managed Service Identity endpoint. Used when authenticating using
@@ -352,7 +400,9 @@ if unset. Automatically determined, if no value is provided.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L102" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the storage account exists. Used when authenticating
@@ -364,7 +414,9 @@ using a service principal.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L90" >}}">property <b>sasToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sasToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The SAS Token used to access the Blob Storage Account. Used when authenticating using
@@ -376,7 +428,9 @@ a SAS Token. Sourced from `ARM_SAS_TOKEN` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L36" >}}">property <b>storageAccountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the storage account.
@@ -387,7 +441,9 @@ The name of the storage account.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L70" >}}">property <b>subscriptionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Subscription ID in which the Storage Account exists. Used when authenticating using
@@ -400,7 +456,9 @@ if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L77" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Tenant ID in which the Subscription exists. Used when authenticating using the
@@ -413,7 +471,9 @@ if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L63" >}}">property <b>useMsi</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>useMsi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to authenticate using Managed Service Identity (MSI). Sourced from `ARM_USE_MSI`
@@ -425,7 +485,9 @@ if unset. Defaults to false if no value is specified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L119" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -446,7 +508,9 @@ The configuration options for a Terraform Remote State stored in the Consul back
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L35" >}}">property <b>accessToken</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Consul Access Token. Sourced from `CONSUL_HTTP_TOKEN` in the environment, if unset.
@@ -457,7 +521,9 @@ Consul Access Token. Sourced from `CONSUL_HTTP_TOKEN` in the environment, if uns
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L41" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 DNS name and port of the Consul HTTP endpoint specified in the format `dnsname:port`. Defaults
@@ -469,7 +535,9 @@ to the local agent HTTP listener.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L25" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"consul"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -481,7 +549,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L70" >}}">property <b>caFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>caFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A path to a PEM-encoded certificate authority used to verify the remote agent's certificate. Sourced
@@ -493,7 +563,9 @@ from `CONSUL_CAFILE` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L76" >}}">property <b>certFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A path to a PEM-encoded certificate provided to the remote agent; requires use of key_file. Sourced
@@ -505,7 +577,9 @@ from `CONSUL_CLIENT_CERT` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L52" >}}">property <b>datacenter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>datacenter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The datacenter to use. Defaults to that of the agent.
@@ -516,7 +590,9 @@ The datacenter to use. Defaults to that of the agent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L64" >}}">property <b>gzip</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gzip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to compress the state data using gzip. Set to `true` to compress the state data using gzip,
@@ -528,7 +604,9 @@ or `false` (default) to leave it uncompressed.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L58" >}}">property <b>httpAuth</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpAuth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 HTTP Basic Authentication credentials to be used when communicating with Consul, in the format of
@@ -540,7 +618,9 @@ either `user` or `user:pass`. Sourced from `CONSUL_HTTP_AUTH`, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L82" >}}">property <b>keyFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A path to a PEM-encoded private key, required if cert_file is specified. Sourced from `CONSUL_CLIENT_KEY`
@@ -552,7 +632,9 @@ in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L30" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path in the Consul KV store.
@@ -563,7 +645,9 @@ Path in the Consul KV store.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L47" >}}">property <b>scheme</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scheme?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies which protocol to use when talking to the given address - either `http` or `https`. TLS
@@ -575,7 +659,9 @@ support can also be enabled by setting the environment variable `CONSUL_HTTP_SSL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/consulBackendConfig.ts#L87" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -597,7 +683,9 @@ that there is a separate configuration class for state stored in the ectd v3 bac
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdBackendConfig.ts#L26" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"etcd"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -609,7 +697,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdBackendConfig.ts#L36" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A space-separated list of the etcd endpoints.
@@ -620,7 +710,9 @@ A space-separated list of the etcd endpoints.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdBackendConfig.ts#L46" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The username with which to authenticate to etcd.
@@ -631,7 +723,9 @@ The username with which to authenticate to etcd.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdBackendConfig.ts#L31" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path at which to store the state.
@@ -642,7 +736,9 @@ The path at which to store the state.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdBackendConfig.ts#L41" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The username with which to authenticate to etcd.
@@ -653,7 +749,9 @@ The username with which to authenticate to etcd.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdBackendConfig.ts#L51" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -675,7 +773,9 @@ that there is a separate configuration class for state stored in the ectd v2 bac
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L26" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"etcdv3"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -687,7 +787,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L54" >}}">property <b>cacertPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacertPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path to a PEM-encoded certificate authority bundle with which to verify certificates
@@ -699,7 +801,9 @@ of TLS-enabled etcd servers.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L59" >}}">property <b>certPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path to a PEM-encoded certificate to provide to etcd for client authentication.
@@ -710,7 +814,9 @@ Path to a PEM-encoded certificate to provide to etcd for client authentication.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L31" >}}">property <b>endpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the etcd endpoints.
@@ -721,7 +827,9 @@ A list of the etcd endpoints.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L64" >}}">property <b>keyPath</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path to a PEM-encoded key to use for client authentication.
@@ -732,7 +840,9 @@ Path to a PEM-encoded key to use for client authentication.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L43" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The username with which to authenticate to etcd. Sourced from `ETCDV3_PASSWORD` in
@@ -744,7 +854,9 @@ the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L48" >}}">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional prefix to be added to keys when storing state in etcd.
@@ -755,7 +867,9 @@ An optional prefix to be added to keys when storing state in etcd.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L37" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The username with which to authenticate to etcd. Sourced from `ETCDV3_USERNAME` in
@@ -767,7 +881,9 @@ the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/etcdV3BackendConfig.ts#L69" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -789,7 +905,9 @@ backend.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/gcsBackendConfig.ts#L26" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"gcs"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -801,7 +919,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/gcsBackendConfig.ts#L31" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Google Cloud Storage bucket.
@@ -812,7 +932,9 @@ The name of the Google Cloud Storage bucket.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/gcsBackendConfig.ts#L38" >}}">property <b>credentials</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>credentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Local path to Google Cloud Platform account credentials in JSON format. Sourced from
@@ -825,7 +947,9 @@ Application Default Credentials are used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/gcsBackendConfig.ts#L50" >}}">property <b>encryptionKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encryptionKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A 32 byte, base64-encoded customer supplied encryption key used to encrypt the
@@ -837,7 +961,9 @@ state. Sourced from `GOOGLE_ENCRYPTION_KEY` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/gcsBackendConfig.ts#L44" >}}">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Prefix used inside the Google Cloud Storage bucket. Named states for workspaces
@@ -849,7 +975,9 @@ are stored in an object named `<prefix>/<name>.tfstate`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/gcsBackendConfig.ts#L55" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -870,7 +998,9 @@ The configuration options for a Terraform Remote State stored in the HTTP backen
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L31" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address of the HTTP endpoint.
@@ -881,7 +1011,9 @@ The address of the HTTP endpoint.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L26" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"http"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -893,7 +1025,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L41" >}}">property <b>lockAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lockAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address of the lock REST endpoint. Not setting a value disables locking.
@@ -904,7 +1038,9 @@ The address of the lock REST endpoint. Not setting a value disables locking.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L46" >}}">property <b>lockMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lockMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP method to use when locking. Defaults to `LOCK`.
@@ -915,7 +1051,9 @@ The HTTP method to use when locking. Defaults to `LOCK`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L66" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password used for HTTP basic authentication.
@@ -926,7 +1064,9 @@ The password used for HTTP basic authentication.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L71" >}}">property <b>skipCertVerification</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skipCertVerification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to skip TLS verification. Defaults to false.
@@ -937,7 +1077,9 @@ Whether to skip TLS verification. Defaults to false.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L51" >}}">property <b>unlockAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unlockAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The address of the unlock REST endpoint. Not setting a value disables locking.
@@ -948,7 +1090,9 @@ The address of the unlock REST endpoint. Not setting a value disables locking.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L56" >}}">property <b>unlockMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unlockMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The HTTP method to use when unlocking. Defaults to `UNLOCK`.
@@ -959,7 +1103,9 @@ The HTTP method to use when unlocking. Defaults to `UNLOCK`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L36" >}}">property <b>updateMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updateMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 HTTP method to use when updating state. Defaults to `POST`.
@@ -970,7 +1116,9 @@ HTTP method to use when updating state. Defaults to `POST`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L61" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The username used for HTTP basic authentication.
@@ -981,7 +1129,9 @@ The username used for HTTP basic authentication.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/httpBackendConfig.ts#L76" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -1003,7 +1153,9 @@ backend.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/localBackendConfig.ts#L26" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"local"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -1015,7 +1167,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/localBackendConfig.ts#L31" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to the Terraform state file.
@@ -1036,7 +1190,9 @@ The configuration options for a Terraform Remote State stored in the Manta backe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L31" >}}">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>account: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Manta account. Sourced from `SDC_ACCOUNT` or `_ACCOUNT` in the
@@ -1048,7 +1204,9 @@ environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L25" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"manta"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -1060,7 +1218,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L69" >}}">property <b>insecureSkipTlsVerify</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>insecureSkipTlsVerify: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Skip verifying the TLS certificate presented by the Manta endpoint. This can
@@ -1073,7 +1233,9 @@ root CA. Defaults to false.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L56" >}}">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fingerprint of the public key matching the key material specified in
@@ -1085,7 +1247,9 @@ keyMaterial, or in the local SSH agent.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L50" >}}">property <b>keyMaterial</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyMaterial?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The private key material corresponding with the SSH key whose fingerprint is
@@ -1099,7 +1263,9 @@ is used for signing requests.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L62" >}}">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path relative to your private storage directory (`/$MANTA_USER/stor`)
@@ -1111,7 +1277,9 @@ where the state file will be stored.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L42" >}}">property <b>url</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Manta API Endpoint. Sourced from `MANTA_URL` in the environment, if unset.
@@ -1123,7 +1291,9 @@ Defaults to `https://us-east.manta.joyent.com`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L36" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The username of the Manta account with which to authenticate.
@@ -1134,7 +1304,9 @@ The username of the Manta account with which to authenticate.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/mantaBackendConfig.ts#L74" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -1155,7 +1327,9 @@ The configuration options for a Terraform Remote State stored in the Postgres ba
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/pgBackendConfig.ts#L25" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"pg"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -1167,7 +1341,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/pgBackendConfig.ts#L30" >}}">property <b>connStr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connStr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Postgres connection string; a `postgres://` URL
@@ -1178,7 +1354,9 @@ Postgres connection string; a `postgres://` URL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/pgBackendConfig.ts#L35" >}}">property <b>schemaName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schemaName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the automatically-managed Postgres schema. Defaults to `terraform_remote_state`.
@@ -1189,7 +1367,9 @@ Name of the automatically-managed Postgres schema. Defaults to `terraform_remote
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/pgBackendConfig.ts#L40" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -1211,7 +1391,9 @@ backend.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteBackendConfig.ts#L44" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"remote"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -1223,7 +1405,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteBackendConfig.ts#L49" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The remote backend hostname to which to connect. Defaults to `app.terraform.io`.
@@ -1234,7 +1418,9 @@ The remote backend hostname to which to connect. Defaults to `app.terraform.io`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteBackendConfig.ts#L54" >}}">property <b>organization</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>organization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the organization containing the targeted workspace(s).
@@ -1245,7 +1431,9 @@ The name of the organization containing the targeted workspace(s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteBackendConfig.ts#L59" >}}">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The token used to authenticate with the remote backend.
@@ -1256,7 +1444,9 @@ The token used to authenticate with the remote backend.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteBackendConfig.ts#L64" >}}">property <b>workspaces</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RemoteBackendWorkspaceConfig'>RemoteBackendWorkspaceConfig</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block specifying which remote workspace(s) to use.
@@ -1277,7 +1467,9 @@ Configuration options for a workspace for use with the remote enhanced backend.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteBackendConfig.ts#L25" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full name of one remote workspace. When configured, only the default workspace
@@ -1289,7 +1481,9 @@ can be used. This option conflicts with prefix.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/remoteBackendConfig.ts#L32" >}}">property <b>prefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A prefix used in the names of one or more remote workspaces, all of which can be used
@@ -1312,7 +1506,9 @@ The configuration options for a Terraform Remote State stored in the S3 backend.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L51" >}}">property <b>accessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS Access Key. Sourced from the standard credentials pipeline, if unset.
@@ -1323,7 +1519,9 @@ AWS Access Key. Sourced from the standard credentials pipeline, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L25" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"s3"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -1335,7 +1533,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L30" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the S3 bucket.
@@ -1346,7 +1546,9 @@ The name of the S3 bucket.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L46" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A custom endpoint for the S3 API. Also sourced from `AWS_S3_ENDPOINT` in the environment, if unset.
@@ -1357,7 +1559,9 @@ A custom endpoint for the S3 API. Also sourced from `AWS_S3_ENDPOINT` in the env
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L82" >}}">property <b>externalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The external ID to use when assuming the IAM role.
@@ -1368,7 +1572,9 @@ The external ID to use when assuming the IAM role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L98" >}}">property <b>iamEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>iamEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A custom endpoint for the IAM API. Sourced from `AWS_IAM_ENDPOINT`, if unset.
@@ -1379,7 +1585,9 @@ A custom endpoint for the IAM API. Sourced from `AWS_IAM_ENDPOINT`, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L36" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to the state file inside the bucket. When using a non-default workspace,
@@ -1391,7 +1599,9 @@ the state path will be `/workspace_key_prefix/workspace_name/key`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L61" >}}">property <b>profile</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AWS profile name as set in the shared credentials file.
@@ -1402,7 +1612,9 @@ The AWS profile name as set in the shared credentials file.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L41" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region of the S3 bucket. Also sourced from `AWS_DEFAULT_REGION` in the environment, if unset.
@@ -1413,7 +1625,9 @@ The region of the S3 bucket. Also sourced from `AWS_DEFAULT_REGION` in the envir
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L77" >}}">property <b>roleArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roleArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ARN of an IAM Role to be assumed in order to read the state from S3.
@@ -1424,7 +1638,9 @@ The ARN of an IAM Role to be assumed in order to read the state from S3.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L56" >}}">property <b>secretKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 AWS Secret Access Key. Sourced from the standard credentials pipeline, if unset.
@@ -1435,7 +1651,9 @@ AWS Secret Access Key. Sourced from the standard credentials pipeline, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L87" >}}">property <b>sessionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sessionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The session name to use when assuming the IAM role.
@@ -1446,7 +1664,9 @@ The session name to use when assuming the IAM role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L67" >}}">property <b>sharedCredentialsFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sharedCredentialsFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The path to the shared credentials file. If this is not set and a profile is
@@ -1458,7 +1678,9 @@ specified, `~/.aws/credentials` will be used by default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L103" >}}">property <b>stsEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stsEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A custom endpoint for the STS API. Sourced from `AWS_STS_ENDPOINT`, if unset.
@@ -1469,7 +1691,9 @@ A custom endpoint for the STS API. Sourced from `AWS_STS_ENDPOINT`, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L72" >}}">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An MFA token. Sourced from the `AWS_SESSION_TOKEN` in the environment variable if needed and unset.
@@ -1480,7 +1704,9 @@ An MFA token. Sourced from the `AWS_SESSION_TOKEN` in the environment variable i
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L108" >}}">property <b>workspace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Terraform workspace from which to read state.
@@ -1491,7 +1717,9 @@ The Terraform workspace from which to read state.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/s3BackendConfig.ts#L93" >}}">property <b>workspaceKeyPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspaceKeyPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The prefix applied to the state path inside the bucket. This is only relevant when
@@ -1513,7 +1741,9 @@ The configuration options for a Terraform Remote State stored in the Swift backe
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L30" >}}">property <b>authUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>authUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Identity authentication URL. Sourced from `OS_AUTH_URL` in the environment, if unset.
@@ -1524,7 +1754,9 @@ The Identity authentication URL. Sourced from `OS_AUTH_URL` in the environment, 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L25" >}}">property <b>backendType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backendType: <span class='s2'>"swift"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A constant describing the name of the Terraform backend, used as the discriminant
@@ -1536,7 +1768,9 @@ for the union of backend configurations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L102" >}}">property <b>cacertFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cacertFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A path to a CA root certificate for verifying the server TLS certificate. Sourced from
@@ -1548,7 +1782,9 @@ A path to a CA root certificate for verifying the server TLS certificate. Source
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L108" >}}">property <b>cert</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A path to a client certificate for TLS client authentication. Sourced from `OS_CERT`
@@ -1560,7 +1796,9 @@ in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L35" >}}">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>container: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the container in which the Terraform state file is stored.
@@ -1571,7 +1809,9 @@ The name of the container in which the Terraform state file is stored.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L83" >}}">property <b>domainId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the domain to scope the log in to (identity v3). Sourced from `OS_USER_DOMAIN_ID`,
@@ -1583,7 +1823,9 @@ The ID of the domain to scope the log in to (identity v3). Sourced from `OS_USER
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L90" >}}">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the domain to scope the log in to (identity v3). Sourced from
@@ -1596,7 +1838,9 @@ if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L96" >}}">property <b>insecure</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>insecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to disable verification of the server TLS certificate. Sourced from
@@ -1608,7 +1852,9 @@ Whether to disable verification of the server TLS certificate. Sourced from
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L114" >}}">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A path to the private key corresponding to the client certificate for TLS client
@@ -1620,7 +1866,9 @@ authentication. Sourced from `OS_KEY` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L53" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The password with which to log in. Sourced from `OS_PASSWORD` in the environment,
@@ -1632,7 +1880,9 @@ if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L65" >}}">property <b>regionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which the state file is stored. Sourced from `OS_REGION_NAME`, if
@@ -1644,7 +1894,9 @@ unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L71" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the tenant (for identity v2) or project (identity v3) which which to log in.
@@ -1656,7 +1908,9 @@ Sourced from `OS_TENANT_ID` or `OS_PROJECT_ID` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L77" >}}">property <b>tenantName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the tenant (for identity v2) or project (identity v3) which which to log in.
@@ -1668,7 +1922,9 @@ Sourced from `OS_TENANT_NAME` or `OS_PROJECT_NAME` in the environment, if unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L59" >}}">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Access token with which to log in in stead of a username and password. Sourced from
@@ -1680,7 +1936,9 @@ Access token with which to log in in stead of a username and password. Sourced f
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L47" >}}">property <b>userId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user ID with which to log in. Sourced from `OS_USER_ID` in the environment, if
@@ -1692,7 +1950,9 @@ unset.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="terraform" path="state/swiftBackendConfig.ts#L41" >}}">property <b>userName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The username with which to log in. Sourced from `OS_USERNAME` in the environment, if
@@ -1705,13 +1965,17 @@ unset.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="terraform" path="state/azurermBackendConfig.ts#L17" >}}">type <b>AzureEnvironment</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> AzureEnvironment = <span class='s2'>"public"</span> | <span class='s2'>"china"</span> | <span class='s2'>"german"</span> | <span class='s2'>"stack"</span> | <span class='s2'>"usgovernment"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="RemoteStateReferenceArgs">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="terraform" path="state/remoteStateReference.ts#L33" >}}">type <b>RemoteStateReferenceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> RemoteStateReferenceArgs = <a href='#ArtifactoryRemoteStateReferenceArgs'>ArtifactoryRemoteStateReferenceArgs</a> | <a href='#AzureRMRemoteStateReferenceArgs'>AzureRMRemoteStateReferenceArgs</a> | <a href='#ConsulRemoteStateReferenceArgs'>ConsulRemoteStateReferenceArgs</a> | <a href='#EtcdV2RemoteStateReferenceArgs'>EtcdV2RemoteStateReferenceArgs</a> | <a href='#EtcdV3RemoteStateReferenceArgs'>EtcdV3RemoteStateReferenceArgs</a> | <a href='#GCSRemoteStateReferenceArgs'>GCSRemoteStateReferenceArgs</a> | <a href='#HttpRemoteStateReferenceArgs'>HttpRemoteStateReferenceArgs</a> | <a href='#LocalBackendRemoteStateReferenceArgs'>LocalBackendRemoteStateReferenceArgs</a> | <a href='#MantaRemoteStateReferenceArgs'>MantaRemoteStateReferenceArgs</a> | <a href='#PostgresRemoteStateReferenceArgs'>PostgresRemoteStateReferenceArgs</a> | <a href='#RemoteBackendRemoteStateReferenceArgs'>RemoteBackendRemoteStateReferenceArgs</a> | <a href='#S3RemoteStateReferenceArgs'>S3RemoteStateReferenceArgs</a> | <a href='#SwiftRemoteStateReferenceArgs'>SwiftRemoteStateReferenceArgs</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of arguments for constructing a RemoteStateReference resource.

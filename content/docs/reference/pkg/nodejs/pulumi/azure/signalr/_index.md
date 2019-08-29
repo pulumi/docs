@@ -293,7 +293,7 @@ The publicly accessible port of the SignalR service which is designed for custom
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceSku'>ServiceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSku'>outputs.signalr.ServiceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -382,7 +382,7 @@ The name of the resource group in which to create the SignalR service. Changing 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSku'>ServiceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.signalr.ServiceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -561,7 +561,7 @@ The publicly accessible port of the SignalR service which is designed for custom
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceSku'>ServiceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSku'>inputs.signalr.ServiceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

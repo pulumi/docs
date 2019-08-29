@@ -466,7 +466,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseImport'>DatabaseImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>import: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseImport'>outputs.sql.DatabaseImport</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -636,7 +636,7 @@ A mapping of tags to assign to the resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>threatDetectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>threatDetectionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#DatabaseThreatDetectionPolicy'>outputs.sql.DatabaseThreatDetectionPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1125,7 +1125,7 @@ The name of the failover group. Changing this forces a new resource to be create
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>partnerServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FailoverGroupPartnerServer'>FailoverGroupPartnerServer</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>partnerServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupPartnerServer'>outputs.sql.FailoverGroupPartnerServer</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1138,7 +1138,7 @@ A list of secondary servers as documented below
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>readWriteEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FailoverGroupReadWriteEndpointFailoverPolicy'>FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>readWriteEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupReadWriteEndpointFailoverPolicy'>outputs.sql.FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1151,7 +1151,7 @@ A read/write policy as documented below
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>readonlyEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FailoverGroupReadonlyEndpointFailoverPolicy'>FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>readonlyEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FailoverGroupReadonlyEndpointFailoverPolicy'>outputs.sql.FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2118,7 +2118,7 @@ The name of the elastic database pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseImport'>DatabaseImport</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseImport'>inputs.sql.DatabaseImport</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2288,7 +2288,7 @@ A mapping of tags to assign to the resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy'>inputs.sql.DatabaseThreatDetectionPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2399,7 +2399,7 @@ The name of the elastic database pool.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseImport'>DatabaseImport</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>import?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseImport'>inputs.sql.DatabaseImport</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2569,7 +2569,7 @@ A mapping of tags to assign to the resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseThreatDetectionPolicy'>DatabaseThreatDetectionPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>threatDetectionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#DatabaseThreatDetectionPolicy'>inputs.sql.DatabaseThreatDetectionPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2911,7 +2911,7 @@ The name of the failover group. Changing this forces a new resource to be create
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>partnerServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FailoverGroupPartnerServer'>FailoverGroupPartnerServer</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>partnerServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupPartnerServer'>inputs.sql.FailoverGroupPartnerServer</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2924,7 +2924,7 @@ A list of secondary servers as documented below
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>readWriteEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FailoverGroupReadWriteEndpointFailoverPolicy'>FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>readWriteEndpointFailoverPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadWriteEndpointFailoverPolicy'>inputs.sql.FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2937,7 +2937,7 @@ A read/write policy as documented below
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>readonlyEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FailoverGroupReadonlyEndpointFailoverPolicy'>FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>readonlyEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadonlyEndpointFailoverPolicy'>inputs.sql.FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3038,7 +3038,7 @@ The name of the failover group. Changing this forces a new resource to be create
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>partnerServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FailoverGroupPartnerServer'>FailoverGroupPartnerServer</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>partnerServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupPartnerServer'>inputs.sql.FailoverGroupPartnerServer</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3051,7 +3051,7 @@ A list of secondary servers as documented below
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>readWriteEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FailoverGroupReadWriteEndpointFailoverPolicy'>FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>readWriteEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadWriteEndpointFailoverPolicy'>inputs.sql.FailoverGroupReadWriteEndpointFailoverPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3064,7 +3064,7 @@ A read/write policy as documented below
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>readonlyEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FailoverGroupReadonlyEndpointFailoverPolicy'>FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>readonlyEndpointFailoverPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FailoverGroupReadonlyEndpointFailoverPolicy'>inputs.sql.FailoverGroupReadonlyEndpointFailoverPolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

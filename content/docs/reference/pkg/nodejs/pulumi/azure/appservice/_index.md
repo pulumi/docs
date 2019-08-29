@@ -372,7 +372,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceAuthSettings'>AppServiceAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceAuthSettings'>outputs.appservice.AppServiceAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -385,7 +385,7 @@ A `authSettings` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceBackup'>AppServiceBackup</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>backup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceBackup'>outputs.appservice.AppServiceBackup</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -421,7 +421,7 @@ Does the App Service require client certificates for incoming requests? Defaults
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceConnectionString'>AppServiceConnectionString</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceConnectionString'>outputs.appservice.AppServiceConnectionString</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -487,7 +487,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceIdentity'>AppServiceIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceIdentity'>outputs.appservice.AppServiceIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -513,7 +513,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceLogs'>AppServiceLogs</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogs'>outputs.appservice.AppServiceLogs</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -578,7 +578,7 @@ The name of the resource group in which to create the App Service.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceSiteConfig'>AppServiceSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSiteConfig'>outputs.appservice.AppServiceSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -591,7 +591,7 @@ A `siteConfig` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceSiteCredential'>AppServiceSiteCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSiteCredential'>outputs.appservice.AppServiceSiteCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -604,7 +604,7 @@ A `siteCredential` block as defined below, which contains the site-level credent
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sourceControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceSourceControl'>AppServiceSourceControl</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sourceControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSourceControl'>outputs.appservice.AppServiceSourceControl</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -617,7 +617,7 @@ A `sourceControl` block as defined below, which contains the Source Control info
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AppServiceStorageAccount'>AppServiceStorageAccount</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceStorageAccount'>outputs.appservice.AppServiceStorageAccount</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -673,7 +673,7 @@ into the Function App.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ArchiveFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ArchiveFunctionAppArgs'>ArchiveFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ArchiveFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ArchiveFunctionAppArgs'>ArchiveFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -724,7 +724,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>account: <a href='#Account'>Account</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -737,7 +737,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>container: Container;</pre>
+<pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -763,7 +763,7 @@ Root HTTP endpoint of the Function App.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>functionApp: FunctionApp;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -776,7 +776,7 @@ The Function App which contains the functions from the archive.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>plan: <a href='#Plan'>Plan</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -803,7 +803,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>zipBlob: <a href='#ZipBlob'>ZipBlob</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -834,7 +834,7 @@ details on this process.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CallbackFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindingsOrFunc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt; | <a href='#Function'>Function</a>&lt;C, E, R&gt;, args: <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;C, E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CallbackFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindingsOrFunc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt; | <a href='#Function'>Function</a>&lt;C, E, R&gt;, args: <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;C, E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -919,7 +919,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>account: <a href='#Account'>Account</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -958,7 +958,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppAuthSettings'>outputs.appservice.FunctionAppAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -984,7 +984,7 @@ Should the Function App send session affinity cookies, which route client reques
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppConnectionString'>FunctionAppConnectionString</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppConnectionString'>outputs.appservice.FunctionAppConnectionString</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -997,7 +997,7 @@ An `connectionString` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>container: Container;</pre>
+<pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1089,7 +1089,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppIdentity'>outputs.appservice.FunctionAppIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1154,7 +1154,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>plan: <a href='#Plan'>Plan</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1193,7 +1193,7 @@ The name of the resource group in which to create the Function App.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppSiteConfig'>outputs.appservice.FunctionAppSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1206,7 +1206,7 @@ A `siteConfig` object as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppSiteCredential'>FunctionAppSiteCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppSiteCredential'>outputs.appservice.FunctionAppSiteCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1272,7 +1272,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>zipBlob: <a href='#ZipBlob'>ZipBlob</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1484,7 +1484,7 @@ azure resource an an FunctionApp that will be triggered when something happens t
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventSubscription(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindingsOrFunc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt; | <a href='#Function'>Function</a>&lt;C, E, R&gt;, args: <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;C, E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventSubscription(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, bindingsOrFunc: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt; | <a href='#Function'>Function</a>&lt;C, E, R&gt;, args: <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;C, E, R&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -1837,7 +1837,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppAuthSettings'>outputs.appservice.FunctionAppAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1863,7 +1863,7 @@ Should the Function App send session affinity cookies, which route client reques
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppConnectionString'>FunctionAppConnectionString</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppConnectionString'>outputs.appservice.FunctionAppConnectionString</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1942,7 +1942,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppIdentity'>outputs.appservice.FunctionAppIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2033,7 +2033,7 @@ The name of the resource group in which to create the Function App.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppSiteConfig'>outputs.appservice.FunctionAppSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2046,7 +2046,7 @@ A `siteConfig` object as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FunctionAppSiteCredential'>FunctionAppSiteCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FunctionAppSiteCredential'>outputs.appservice.FunctionAppSiteCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2113,7 +2113,7 @@ The runtime version associated with the Function App. Defaults to `~1`.
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2127,7 +2127,7 @@ JavaScript/TypeScript callback function.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HttpEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HttpEventSubscriptionArgs'>HttpEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> HttpEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#HttpEventSubscriptionArgs'>HttpEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -2178,7 +2178,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2216,7 +2216,7 @@ deployments.
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2266,7 +2266,7 @@ An array of function binding definitions.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2310,7 +2310,7 @@ details on this process.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MultiCallbackFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MultiCallbackFunctionAppArgs'>MultiCallbackFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MultiCallbackFunctionApp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MultiCallbackFunctionAppArgs'>MultiCallbackFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -2361,7 +2361,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>account: <a href='#Account'>Account</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2374,7 +2374,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>container: Container;</pre>
+<pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2400,7 +2400,7 @@ Root HTTP endpoint of the Function App.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>functionApp: FunctionApp;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2413,7 +2413,7 @@ The Function App which contains the functions from the archive.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>plan: <a href='#Plan'>Plan</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2440,7 +2440,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>zipBlob: <a href='#ZipBlob'>ZipBlob</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2469,7 +2469,7 @@ tree.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PackagedFunctionApp(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ArchiveFunctionAppArgs'>ArchiveFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PackagedFunctionApp(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ArchiveFunctionAppArgs'>ArchiveFunctionAppArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -2520,7 +2520,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>account: <a href='#Account'>Account</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>account: storageForTypesOnly.Account;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2533,7 +2533,7 @@ Storage account where the FunctionApp's zipbBlob is uploaded to.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>container: Container;</pre>
+<pre class="highlight"><span class='kd'>public </span>container: storageForTypesOnly.Container;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2559,7 +2559,7 @@ Root HTTP endpoint of the Function App.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>functionApp: FunctionApp;</pre>
+<pre class="highlight"><span class='kd'>public </span>functionApp: appservice.FunctionApp;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2572,7 +2572,7 @@ The Function App which contains the functions from the archive.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>plan: <a href='#Plan'>Plan</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>plan: appservice.Plan;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2599,7 +2599,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>zipBlob: <a href='#ZipBlob'>ZipBlob</a>;</pre>
+<pre class="highlight"><span class='kd'>public </span>zipBlob: storageForTypesOnly.ZipBlob;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2894,7 +2894,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PlanProperties'>PlanProperties</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PlanProperties'>outputs.appservice.PlanProperties</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2930,7 +2930,7 @@ The name of the resource group in which to create the App Service Plan component
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#PlanSku'>PlanSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PlanSku'>outputs.appservice.PlanSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3204,7 +3204,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotAuthSettings'>SlotAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>authSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotAuthSettings'>outputs.appservice.SlotAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3230,7 +3230,7 @@ Should the App Service Slot send session affinity cookies, which route client re
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotConnectionString'>SlotConnectionString</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotConnectionString'>outputs.appservice.SlotConnectionString</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3296,7 +3296,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotIdentity'>SlotIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotIdentity'>outputs.appservice.SlotIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3348,7 +3348,7 @@ The name of the resource group in which to create the App Service Slot component
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotSiteConfig'>SlotSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotSiteConfig'>outputs.appservice.SlotSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3361,7 +3361,7 @@ A `siteConfig` object as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SlotSiteCredential'>SlotSiteCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>siteCredential: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotSiteCredential'>outputs.appservice.SlotSiteCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3487,7 +3487,7 @@ Function name.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TimerSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TimerSubscriptionArgs'>TimerSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TimerSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TimerSubscriptionArgs'>TimerSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -3758,7 +3758,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceAuthSettings'>AppServiceAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceAuthSettings'>inputs.appservice.AppServiceAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3771,7 +3771,7 @@ A `authSettings` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceBackup'>AppServiceBackup</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceBackup'>inputs.appservice.AppServiceBackup</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3807,7 +3807,7 @@ Does the App Service require client certificates for incoming requests? Defaults
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceConnectionString'>AppServiceConnectionString</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceConnectionString'>inputs.appservice.AppServiceConnectionString</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3846,7 +3846,7 @@ Can the App Service only be accessed via HTTPS? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceIdentity'>AppServiceIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceIdentity'>inputs.appservice.AppServiceIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3872,7 +3872,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceLogs'>AppServiceLogs</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceLogs'>inputs.appservice.AppServiceLogs</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3911,7 +3911,7 @@ The name of the resource group in which to create the App Service.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceSiteConfig'>AppServiceSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceSiteConfig'>inputs.appservice.AppServiceSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3924,7 +3924,7 @@ A `siteConfig` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceStorageAccount'>AppServiceStorageAccount</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceStorageAccount'>inputs.appservice.AppServiceStorageAccount</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3986,7 +3986,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceAuthSettings'>AppServiceAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceAuthSettings'>inputs.appservice.AppServiceAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3999,7 +3999,7 @@ A `authSettings` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceBackup'>AppServiceBackup</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>backup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceBackup'>inputs.appservice.AppServiceBackup</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -4035,7 +4035,7 @@ Does the App Service require client certificates for incoming requests? Defaults
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceConnectionString'>AppServiceConnectionString</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceConnectionString'>inputs.appservice.AppServiceConnectionString</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4087,7 +4087,7 @@ Can the App Service only be accessed via HTTPS? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceIdentity'>AppServiceIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceIdentity'>inputs.appservice.AppServiceIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4113,7 +4113,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceLogs'>AppServiceLogs</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceLogs'>inputs.appservice.AppServiceLogs</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4178,7 +4178,7 @@ The name of the resource group in which to create the App Service.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceSiteConfig'>AppServiceSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceSiteConfig'>inputs.appservice.AppServiceSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4191,7 +4191,7 @@ A `siteConfig` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceSiteCredential'>AppServiceSiteCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceSiteCredential'>inputs.appservice.AppServiceSiteCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4204,7 +4204,7 @@ A `siteCredential` block as defined below, which contains the site-level credent
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sourceControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceSourceControl'>AppServiceSourceControl</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sourceControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceSourceControl'>inputs.appservice.AppServiceSourceControl</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4217,7 +4217,7 @@ A `sourceControl` block as defined below, which contains the Source Control info
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AppServiceStorageAccount'>AppServiceStorageAccount</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceStorageAccount'>inputs.appservice.AppServiceStorageAccount</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -4284,7 +4284,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>archive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>Archive</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>archive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#Archive'>pulumi.asset.Archive</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5326,7 +5326,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppAuthSettings'>inputs.appservice.FunctionAppAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5352,7 +5352,7 @@ Should the Function App send session affinity cookies, which route client reques
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppConnectionString'>FunctionAppConnectionString</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppConnectionString'>inputs.appservice.FunctionAppConnectionString</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5404,7 +5404,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppIdentity'>inputs.appservice.FunctionAppIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5456,7 +5456,7 @@ The name of the resource group in which to create the Function App.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppSiteConfig'>inputs.appservice.FunctionAppSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5544,7 +5544,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppAuthSettings'>FunctionAppAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppAuthSettings'>inputs.appservice.FunctionAppAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5570,7 +5570,7 @@ Should the Function App send session affinity cookies, which route client reques
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppConnectionString'>FunctionAppConnectionString</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppConnectionString'>inputs.appservice.FunctionAppConnectionString</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5635,7 +5635,7 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppIdentity'>FunctionAppIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppIdentity'>inputs.appservice.FunctionAppIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5726,7 +5726,7 @@ The name of the resource group in which to create the Function App.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppSiteConfig'>FunctionAppSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppSiteConfig'>inputs.appservice.FunctionAppSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5739,7 +5739,7 @@ A `siteConfig` object as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FunctionAppSiteCredential'>FunctionAppSiteCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FunctionAppSiteCredential'>inputs.appservice.FunctionAppSiteCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6030,7 +6030,7 @@ Maximum number of instances that can be assigned to this App Service plan.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>properties: <a href='#GetAppServicePlanProperty'>GetAppServicePlanProperty</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServicePlanProperty'>outputs.appservice.GetAppServicePlanProperty</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6053,7 +6053,7 @@ A `properties` block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='#GetAppServicePlanSku'>GetAppServicePlanSku</a>;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServicePlanSku'>outputs.appservice.GetAppServicePlanSku</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6141,7 +6141,7 @@ Does the App Service require client certificates for incoming requests?
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>connectionStrings: <a href='#GetAppServiceConnectionString'>GetAppServiceConnectionString</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceConnectionString'>outputs.appservice.GetAppServiceConnectionString</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6265,7 +6265,7 @@ A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteConfigs: <a href='#GetAppServiceSiteConfig'>GetAppServiceSiteConfig</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>siteConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfig'>outputs.appservice.GetAppServiceSiteConfig</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6278,7 +6278,7 @@ A `siteConfig` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteCredentials: <a href='#GetAppServiceSiteCredential'>GetAppServiceSiteCredential</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>siteCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteCredential'>outputs.appservice.GetAppServiceSiteCredential</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -6288,7 +6288,7 @@ A `siteConfig` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sourceControls: <a href='#GetAppServiceSourceControl'>GetAppServiceSourceControl</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>sourceControls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSourceControl'>outputs.appservice.GetAppServiceSourceControl</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -6443,7 +6443,7 @@ support.
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>extends</span> <a href='#HttpFunctionArgs'>HttpFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#HttpFunctionArgs'>HttpFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 {{< /md-disable >}}
 <h3 class="pdoc-member-header" id="HttpEventSubscriptionArgs-account">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
@@ -6478,7 +6478,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6492,7 +6492,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6823,14 +6823,14 @@ The runtime version associated with the Function App. Defaults to `~2`.
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;</pre>
 {{< /md-disable >}}
 <h3 class="pdoc-member-header" id="HttpFunctionArgs-callback">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -6844,7 +6844,7 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#Context'>Context</a>&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;mod.Context&lt;HttpResponse&gt;, HttpRequest, <a href='#ExtendedHttpResponse'>ExtendedHttpResponse</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7648,7 +7648,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanProperties'>PlanProperties</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PlanProperties'>inputs.appservice.PlanProperties</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -7684,7 +7684,7 @@ The name of the resource group in which to create the App Service Plan component
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanSku'>PlanSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PlanSku'>inputs.appservice.PlanSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -7821,7 +7821,7 @@ Can Apps assigned to this App Service Plan be scaled independently? If set to `f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanProperties'>PlanProperties</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PlanProperties'>inputs.appservice.PlanProperties</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -7857,7 +7857,7 @@ The name of the resource group in which to create the App Service Plan component
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#PlanSku'>PlanSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PlanSku'>inputs.appservice.PlanSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8015,7 +8015,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotAuthSettings'>SlotAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotAuthSettings'>inputs.appservice.SlotAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8041,7 +8041,7 @@ Should the App Service Slot send session affinity cookies, which route client re
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotConnectionString'>SlotConnectionString</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotConnectionString'>inputs.appservice.SlotConnectionString</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8080,7 +8080,7 @@ Can the App Service Slot only be accessed via HTTPS? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotIdentity'>SlotIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotIdentity'>inputs.appservice.SlotIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8132,7 +8132,7 @@ The name of the resource group in which to create the App Service Slot component
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotSiteConfig'>SlotSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotSiteConfig'>inputs.appservice.SlotSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8207,7 +8207,7 @@ A key-value pair of App Settings.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotAuthSettings'>SlotAuthSettings</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>authSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotAuthSettings'>inputs.appservice.SlotAuthSettings</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8233,7 +8233,7 @@ Should the App Service Slot send session affinity cookies, which route client re
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotConnectionString'>SlotConnectionString</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotConnectionString'>inputs.appservice.SlotConnectionString</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8285,7 +8285,7 @@ Can the App Service Slot only be accessed via HTTPS? Defaults to `false`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotIdentity'>SlotIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotIdentity'>inputs.appservice.SlotIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8337,7 +8337,7 @@ The name of the resource group in which to create the App Service Slot component
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotSiteConfig'>SlotSiteConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotSiteConfig'>inputs.appservice.SlotSiteConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -8350,7 +8350,7 @@ A `siteConfig` object as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SlotSiteCredential'>SlotSiteCredential</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>siteCredential?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotSiteCredential'>inputs.appservice.SlotSiteCredential</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -9095,7 +9095,7 @@ The runtime version associated with the Function App. Defaults to `~2`.
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>type</span> BindingDefinition = BindingDefinition;</pre>
+<pre class="highlight"><span class='kd'>type</span> BindingDefinition = azurefunctions.BindingDefinition;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -9199,7 +9199,7 @@ be '{ myoutput: "My Value" }'.
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>type</span> HttpRequest = HttpRequest;</pre>
+<pre class="highlight"><span class='kd'>type</span> HttpRequest = azurefunctions.HttpRequest;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -9212,7 +9212,7 @@ HTTP request object. Provided to your function when using HttpEventSubscription.
 </h2>
 <div class="pdoc-module-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>type</span> HttpResponse = HttpResponse;</pre>
+<pre class="highlight"><span class='kd'>type</span> HttpResponse = azureessentials.HttpResponse;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

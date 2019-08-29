@@ -133,7 +133,9 @@ title: Module networking
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L43" >}}">class <b>AddressScope</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 Neutron addressscope resource within OpenStack.
@@ -176,10 +178,12 @@ const subnetpool1 = new openstack.networking.SubnetPool("subnetpool1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L98" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AddressScope(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#AddressScopeArgs'>AddressScopeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a AddressScope resource with the given unique name, arguments, and options.
 
@@ -193,10 +197,12 @@ Create a AddressScope resource with the given unique name, arguments, and option
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AddressScopeState'>AddressScopeState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AddressScope'>AddressScope</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing AddressScope resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -204,23 +210,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AddressScope-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L43" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AddressScope-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of AddressScope.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -228,10 +238,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AddressScope-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L43" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -243,7 +255,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L74" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this
@@ -255,7 +269,9 @@ creates a new address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L79" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the address-scope. Changing this updates the
@@ -267,7 +283,9 @@ name of the existing address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L85" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the address-scope. Required if admin
@@ -280,7 +298,9 @@ new address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L92" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -294,7 +314,9 @@ address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L98" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shared: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this address-scope is shared across
@@ -304,10 +326,12 @@ address-scope.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AddressScope-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L43" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -320,7 +344,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L26" >}}">class <b>FloatingIp</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 floating IP resource within OpenStack Neutron (networking)
@@ -346,10 +372,12 @@ const floatip1 = new openstack.networking.FloatingIp("floatip1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L125" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FloatingIp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FloatingIpArgs'>FloatingIpArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a FloatingIp resource with the given unique name, arguments, and options.
 
@@ -363,10 +391,12 @@ Create a FloatingIp resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L35" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FloatingIpState'>FloatingIpState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FloatingIp'>FloatingIp</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing FloatingIp resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -374,23 +404,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L46" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of FloatingIp.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -401,7 +435,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L59" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The actual/specific floating IP to obtain. By default,
@@ -415,7 +451,9 @@ user or project.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L64" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the floating IP, which have
@@ -427,7 +465,9 @@ been explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L68" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description for the floating IP.
@@ -438,7 +478,9 @@ Human-readable description for the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L75" >}}">property <b>dnsDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The floating IP DNS domain. Available, when Neutron
@@ -452,7 +494,9 @@ service. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L82" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The floating IP DNS name. Available, when Neutron DNS
@@ -466,7 +510,9 @@ service. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L87" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fixedIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Fixed IP of the port to associate with this floating IP. Required if
@@ -475,10 +521,12 @@ the port has multiple fixed IPs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L26" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -490,7 +538,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L92" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>pool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the pool from which to obtain the floating
@@ -502,7 +552,9 @@ IP. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L97" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of an existing port with at least one IP address to
@@ -514,7 +566,9 @@ associate with this floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L105" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -529,7 +583,9 @@ floating IP (which may or may not have a different address).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L110" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The subnet ID of the floating IP pool. Specify this if
@@ -541,7 +597,9 @@ the floating IP network has multiple subnets.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L114" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the floating IP.
@@ -552,7 +610,9 @@ A set of string tags for the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L121" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The target tenant ID in which to allocate the floating
@@ -563,10 +623,12 @@ may or may not have a different address)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -578,7 +640,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L125" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -590,7 +654,9 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L29" >}}">class <b>FloatingIpAssociate</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Associates a floating IP to a port. This is useful for situations
@@ -619,10 +685,12 @@ const fip1 = new openstack.networking.FloatingIpAssociate("fip1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L73" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FloatingIpAssociate(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FloatingIpAssociateArgs'>FloatingIpAssociateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a FloatingIpAssociate resource with the given unique name, arguments, and options.
 
@@ -636,10 +704,12 @@ Create a FloatingIpAssociate resource with the given unique name, arguments, and
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FloatingIpAssociateState'>FloatingIpAssociateState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FloatingIpAssociate'>FloatingIpAssociate</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing FloatingIpAssociate resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -647,23 +717,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of FloatingIpAssociate.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -674,7 +748,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L56" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fixedIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -682,7 +758,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L60" >}}">property <b>floatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>floatingIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP Address of an existing floating IP.
@@ -690,10 +768,12 @@ IP Address of an existing floating IP.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -705,7 +785,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L65" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of an existing port with at least one IP address to
@@ -717,7 +799,9 @@ associate with this floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L73" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -729,10 +813,12 @@ floating IP (which may or may not have a different address).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssociate-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -745,7 +831,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L52" >}}">class <b>Network</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 Neutron network resource within OpenStack.
@@ -797,10 +885,12 @@ const instance1 = new openstack.compute.Instance("instance1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L174" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Network(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#NetworkArgs'>NetworkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Network resource with the given unique name, arguments, and options.
 
@@ -814,10 +904,12 @@ Create a Network resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NetworkState'>NetworkState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Network'>Network</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Network resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -825,23 +917,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Network-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L52" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Network-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Network.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -852,7 +948,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L84" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the network.
@@ -865,7 +963,9 @@ state of the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L89" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the network, which have been
@@ -877,7 +977,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L96" >}}">property <b>availabilityZoneHints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>availabilityZoneHints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An availability zone is used to make
@@ -891,7 +993,9 @@ creates a new network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L101" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the network. Changing this
@@ -903,7 +1007,9 @@ updates the name of the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L108" >}}">property <b>dnsDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network DNS domain. Available, when Neutron DNS
@@ -917,7 +1023,9 @@ service when Neutron is configured to integrate with such a service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L114" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>external: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource has the
@@ -927,10 +1035,12 @@ false. Changing this updates the external attribute of the existing network.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Network-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L52" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -942,7 +1052,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L120" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mtu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network MTU. Available for read-only, when Neutron
@@ -955,7 +1067,9 @@ Neutron `net-mtu-writable` extension is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the network. Changing this updates the name of
@@ -967,7 +1081,9 @@ the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L133" >}}">property <b>portSecurityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portSecurityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to explicitly enable or disable
@@ -982,7 +1098,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L137" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Reference to the associated QoS policy.
@@ -993,7 +1111,9 @@ Reference to the associated QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L144" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -1007,11 +1127,13 @@ network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L148" >}}">property <b>segments</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>segments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     networkType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     physicalNetwork: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     segmentationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of one or more provider segment objects.
@@ -1022,7 +1144,9 @@ An array of one or more provider segment objects.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L154" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shared: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource can be accessed
@@ -1035,7 +1159,9 @@ existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L158" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the network.
@@ -1046,7 +1172,9 @@ A set of string tags for the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L163" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the network. Required if admin wants to
@@ -1058,7 +1186,9 @@ create a network for another tenant. Changing this creates a new network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L170" >}}">property <b>transparentVlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>transparentVlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource has the
@@ -1069,10 +1199,12 @@ network.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Network-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L52" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1084,7 +1216,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L174" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -1096,7 +1230,9 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L74" >}}">class <b>Port</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 port resource within OpenStack.
@@ -1170,10 +1306,12 @@ documentation.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L236" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Port(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PortArgs'>PortArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Port resource with the given unique name, arguments, and options.
 
@@ -1187,10 +1325,12 @@ Create a Port resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L83" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PortState'>PortState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Port'>Port</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Port resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1198,23 +1338,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Port-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L74" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Port-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L94" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Port.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1225,7 +1369,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L106" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the port
@@ -1238,7 +1384,9 @@ Administrative up/down status for the port
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L111" >}}">property <b>allFixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allFixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of Fixed IP addresses on the port in the
@@ -1250,7 +1398,9 @@ order returned by the Network v2 API.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L116" >}}">property <b>allSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allSecurityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of Security Group IDs on the port
@@ -1262,7 +1412,9 @@ which have been explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L121" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the port, which have been
@@ -1274,10 +1426,12 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L127" >}}">property <b>allowedAddressPairs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowedAddressPairs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     macAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An IP/MAC Address pair of additional IP
@@ -1290,6 +1444,7 @@ below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L132" >}}">property <b>binding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>binding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     hostId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     profile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -1297,6 +1452,7 @@ below.
     vifType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     vnicType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port binding allows to specify binding information
@@ -1308,7 +1464,9 @@ for the port. The structure is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L137" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the floating IP. Changing
@@ -1320,7 +1478,9 @@ this updates the `description` of an existing port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L142" >}}">property <b>deviceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>deviceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the device attached to the port. Changing this
@@ -1332,7 +1492,9 @@ creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L147" >}}">property <b>deviceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>deviceOwner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The device owner of the Port. Changing this creates
@@ -1344,7 +1506,9 @@ a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L151" >}}">property <b>dnsAssignments</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsAssignments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of maps representing port DNS assignments.
@@ -1355,7 +1519,9 @@ The list of maps representing port DNS assignments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L156" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port DNS name. Available, when Neutron DNS extension
@@ -1367,11 +1533,13 @@ is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L162" >}}">property <b>extraDhcpOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>extraDhcpOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     ipVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An extra DHCP option that needs to be configured
@@ -1384,10 +1552,12 @@ times.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L167" >}}">property <b>fixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of desired IPs for
@@ -1396,10 +1566,12 @@ this port. The structure is described below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Port-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L74" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1411,7 +1583,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L172" >}}">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>macAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify a specific MAC address for the port. Changing
@@ -1423,7 +1597,9 @@ this creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L177" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the port. Changing this
@@ -1435,7 +1611,9 @@ updates the `name` of an existing port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L182" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>networkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network to attach the port to. Changing
@@ -1447,7 +1625,9 @@ this creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L188" >}}">property <b>noFixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>noFixedIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Create a port with no fixed
@@ -1460,7 +1640,9 @@ is the only valid value for this argument.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L196" >}}">property <b>noSecurityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>noSecurityGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If set to
@@ -1475,7 +1657,9 @@ security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L205" >}}">property <b>portSecurityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portSecurityEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to explicitly enable or disable
@@ -1491,7 +1675,9 @@ and `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L209" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Reference to the associated QoS policy.
@@ -1502,7 +1688,9 @@ Reference to the associated QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L216" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -1516,7 +1704,9 @@ port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L223" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list
@@ -1530,7 +1720,9 @@ the Compute Instance).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L227" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the port.
@@ -1541,7 +1733,9 @@ A set of string tags for the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L232" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Port. Required if admin wants
@@ -1550,10 +1744,12 @@ to create a port for another tenant. Changing this creates a new port.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Port-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L74" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1565,7 +1761,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L236" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -1577,7 +1775,9 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L10" >}}">class <b>PortSecGroupAssociate</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_port_secgroup_associate_v2.html.markdown.
@@ -1587,10 +1787,12 @@ Map of additional options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L63" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PortSecGroupAssociate(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PortSecGroupAssociateArgs'>PortSecGroupAssociateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a PortSecGroupAssociate resource with the given unique name, arguments, and options.
 
@@ -1604,10 +1806,12 @@ Create a PortSecGroupAssociate resource with the given unique name, arguments, a
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L19" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PortSecGroupAssociateState'>PortSecGroupAssociateState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PortSecGroupAssociate'>PortSecGroupAssociate</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing PortSecGroupAssociate resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1615,23 +1819,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PortSecGroupAssociate-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PortSecGroupAssociate-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L30" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of PortSecGroupAssociate.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1642,7 +1850,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L41" >}}">property <b>allSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allSecurityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of Security Group IDs on the port
@@ -1654,7 +1864,9 @@ which have been explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L46" >}}">property <b>enforce</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enforce: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to replace or append the list of security
@@ -1663,10 +1875,12 @@ groups, specified in the `securityGroupIds`. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PortSecGroupAssociate-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1678,7 +1892,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L50" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An UUID of the port to apply security groups to.
@@ -1689,7 +1905,9 @@ An UUID of the port to apply security groups to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L57" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -1703,7 +1921,9 @@ resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L63" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of security group IDs to apply to
@@ -1713,10 +1933,12 @@ opposed to how they are configured with the Compute Instance).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PortSecGroupAssociate-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1729,7 +1951,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L31" >}}">class <b>QosBandwidthLimitRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 Neutron QoS bandwidth limit rule resource within OpenStack.
@@ -1760,10 +1984,12 @@ const bwLimitRule1 = new openstack.networking.QosBandwidthLimitRule("bwLimitRule
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QosBandwidthLimitRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QosBandwidthLimitRuleArgs'>QosBandwidthLimitRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a QosBandwidthLimitRule resource with the given unique name, arguments, and options.
 
@@ -1777,10 +2003,12 @@ Create a QosBandwidthLimitRule resource with the given unique name, arguments, a
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L40" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#QosBandwidthLimitRuleState'>QosBandwidthLimitRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#QosBandwidthLimitRule'>QosBandwidthLimitRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing QosBandwidthLimitRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1788,23 +2016,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L31" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L51" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of QosBandwidthLimitRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1815,7 +2047,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L62" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of traffic. Defaults to "egress". Changing this updates the direction of the
@@ -1824,10 +2058,12 @@ existing QoS bandwidth limit rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L31" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1839,7 +2075,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L67" >}}">property <b>maxBurstKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxBurstKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum burst size in kilobits of a QoS bandwidth limit rule. Changing this updates the
@@ -1851,7 +2089,9 @@ maximum burst size in kilobits of the existing QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L72" >}}">property <b>maxKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum kilobits per second of a QoS bandwidth limit rule. Changing this updates the
@@ -1863,7 +2103,9 @@ maximum kilobits per second of the existing QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L76" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
@@ -1874,7 +2116,9 @@ The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L82" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -1884,10 +2128,12 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosBandwidthLimitRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L31" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1900,7 +2146,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L29" >}}">class <b>QosDscpMarkingRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 Neutron QoS DSCP marking rule resource within OpenStack.
@@ -1929,10 +2177,12 @@ const dscpMarkingRule1 = new openstack.networking.QosDscpMarkingRule("dscpMarkin
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QosDscpMarkingRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QosDscpMarkingRuleArgs'>QosDscpMarkingRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a QosDscpMarkingRule resource with the given unique name, arguments, and options.
 
@@ -1946,10 +2196,12 @@ Create a QosDscpMarkingRule resource with the given unique name, arguments, and 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#QosDscpMarkingRuleState'>QosDscpMarkingRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#QosDscpMarkingRule'>QosDscpMarkingRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing QosDscpMarkingRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1957,23 +2209,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of QosDscpMarkingRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1984,7 +2240,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L60" >}}">property <b>dscpMark</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dscpMark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of DSCP mark. Changing this updates the DSCP mark value existing
@@ -1993,10 +2251,12 @@ QoS DSCP marking rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2008,7 +2268,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L64" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
@@ -2019,7 +2281,9 @@ The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L70" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -2029,10 +2293,12 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosDscpMarkingRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2045,7 +2311,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L29" >}}">class <b>QosMinimumBandwidthRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 Neutron QoS minimum bandwidth rule resource within OpenStack.
@@ -2074,10 +2342,12 @@ const minimumBandwidthRule1 = new openstack.networking.QosMinimumBandwidthRule("
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L75" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QosMinimumBandwidthRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QosMinimumBandwidthRuleArgs'>QosMinimumBandwidthRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a QosMinimumBandwidthRule resource with the given unique name, arguments, and options.
 
@@ -2091,10 +2361,12 @@ Create a QosMinimumBandwidthRule resource with the given unique name, arguments,
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#QosMinimumBandwidthRuleState'>QosMinimumBandwidthRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#QosMinimumBandwidthRule'>QosMinimumBandwidthRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing QosMinimumBandwidthRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2102,23 +2374,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of QosMinimumBandwidthRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2129,7 +2405,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L60" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of traffic. Defaults to "egress". Changing this updates the direction of the
@@ -2138,10 +2416,12 @@ existing QoS minimum bandwidth rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2153,7 +2433,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L65" >}}">property <b>minKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum kilobits per second. Changing this updates the min kbps value of the existing
@@ -2165,7 +2447,9 @@ QoS minimum bandwidth rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L69" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
@@ -2176,7 +2460,9 @@ The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L75" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -2186,10 +2472,12 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosMinimumBandwidthRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2202,7 +2490,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L25" >}}">class <b>QosPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 Neutron QoS policy resource within OpenStack.
@@ -2227,10 +2517,12 @@ const qosPolicy1 = new openstack.networking.QosPolicy("qosPolicy1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L110" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QosPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#QosPolicyArgs'>QosPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a QosPolicy resource with the given unique name, arguments, and options.
 
@@ -2244,10 +2536,12 @@ Create a QosPolicy resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L34" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#QosPolicyState'>QosPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#QosPolicy'>QosPolicy</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing QosPolicy resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2255,23 +2549,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L25" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L45" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of QosPolicy.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2282,7 +2580,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L56" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the QoS policy, which have been
@@ -2294,7 +2594,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L60" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which QoS policy was created.
@@ -2305,7 +2607,9 @@ The time at which QoS policy was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L65" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the QoS policy.
@@ -2314,10 +2618,12 @@ Changing this updates the description of the existing QoS policy.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L25" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2329,7 +2635,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L71" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>isDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the QoS policy is default
@@ -2342,7 +2650,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the QoS policy. Changing this updates the name of
@@ -2354,7 +2664,9 @@ the existing QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L81" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the QoS policy. Required if admin wants to
@@ -2366,7 +2678,9 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L88" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -2380,7 +2694,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L92" >}}">property <b>revisionNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>revisionNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The revision number of the QoS policy.
@@ -2391,7 +2707,9 @@ The revision number of the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L98" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shared: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this QoS policy is shared across
@@ -2404,7 +2722,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L102" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the QoS policy.
@@ -2415,7 +2735,9 @@ A set of string tags for the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L106" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which QoS policy was created.
@@ -2423,10 +2745,12 @@ The time at which QoS policy was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QosPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L25" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2438,7 +2762,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L110" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -2450,7 +2776,9 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L24" >}}">class <b>Router</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 router resource within OpenStack.
@@ -2474,10 +2802,12 @@ const router1 = new openstack.networking.Router("router1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L135" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Router(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RouterArgs'>RouterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Router resource with the given unique name, arguments, and options.
 
@@ -2491,10 +2821,12 @@ Create a Router resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L33" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RouterState'>RouterState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Router'>Router</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Router resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2502,23 +2834,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Router-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L24" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Router-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L44" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Router.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2529,7 +2865,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L56" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the router
@@ -2542,7 +2880,9 @@ Administrative up/down status for the router
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L61" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the router, which have been
@@ -2554,7 +2894,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L67" >}}">property <b>availabilityZoneHints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>availabilityZoneHints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An availability zone is used to make
@@ -2567,7 +2909,9 @@ this creates a new router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L71" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description for the router.
@@ -2578,7 +2922,9 @@ Human-readable description for the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L77" >}}">property <b>distributed</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>distributed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether or not to create a
@@ -2591,7 +2937,9 @@ usage of this property to administrative users only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L83" >}}">property <b>enableSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableSnat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enable Source NAT for the router. Valid values are
@@ -2604,10 +2952,12 @@ set this property. Changing this updates the `enableSnat` of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L90" >}}">property <b>externalFixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>externalFixedIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An external fixed IP for the router. This
@@ -2621,7 +2971,9 @@ external fixed IPs of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L98" >}}">property <b>externalGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>externalGateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The
@@ -2636,7 +2988,9 @@ of an existing router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L105" >}}">property <b>externalNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>externalNetworkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network UUID of an external gateway
@@ -2647,10 +3001,12 @@ this updates the external gateway of the router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Router-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L24" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2662,7 +3018,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L110" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the router. Changing this
@@ -2674,7 +3032,9 @@ updates the `name` of an existing router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L117" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -2688,7 +3048,9 @@ router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L121" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the router.
@@ -2699,7 +3061,9 @@ A set of string tags for the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L126" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the floating IP. Required if admin wants
@@ -2708,10 +3072,12 @@ to create a router for another tenant. Changing this creates a new router.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Router-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L24" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2723,7 +3089,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L130" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional driver-specific options.
@@ -2734,9 +3102,11 @@ Map of additional driver-specific options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L135" >}}">property <b>vendorOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vendorOptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     setRouterGatewayAfterCreate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
 } | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional vendor-specific options.
@@ -2749,7 +3119,9 @@ Supported options are described below.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L35" >}}">class <b>RouterInterface</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 router interface resource within OpenStack.
@@ -2784,10 +3156,12 @@ const routerInterface1 = new openstack.networking.RouterInterface("routerInterfa
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L83" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RouterInterface(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RouterInterfaceArgs'>RouterInterfaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a RouterInterface resource with the given unique name, arguments, and options.
 
@@ -2801,10 +3175,12 @@ Create a RouterInterface resource with the given unique name, arguments, and opt
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RouterInterfaceState'>RouterInterfaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RouterInterface'>RouterInterface</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing RouterInterface resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2812,23 +3188,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouterInterface-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouterInterface-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of RouterInterface.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2836,10 +3216,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouterInterface-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2851,7 +3233,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L66" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the port this interface connects to. Changing
@@ -2863,7 +3247,9 @@ this creates a new router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L73" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -2877,7 +3263,9 @@ router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L78" >}}">property <b>routerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>routerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the router this interface belongs to. Changing
@@ -2889,7 +3277,9 @@ this creates a new router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L83" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the subnet this interface connects to. Changing
@@ -2898,10 +3288,12 @@ this creates a new router interface.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouterInterface-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2914,7 +3306,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L46" >}}">class <b>RouterRoute</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a routing entry on a OpenStack V2 router.
@@ -2960,10 +3354,12 @@ resource that connects the next hop to the router, as in the example above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L94" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RouterRoute(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RouterRouteArgs'>RouterRouteArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a RouterRoute resource with the given unique name, arguments, and options.
 
@@ -2977,10 +3373,12 @@ Create a RouterRoute resource with the given unique name, arguments, and options
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L55" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RouterRouteState'>RouterRouteState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#RouterRoute'>RouterRoute</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing RouterRoute resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2988,23 +3386,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouterRoute-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L46" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouterRoute-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L66" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of RouterRoute.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3015,7 +3417,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L77" >}}">property <b>destinationCidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>destinationCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR block to match on the packet’s destination IP. Changing
@@ -3024,10 +3428,12 @@ this creates a new routing entry.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouterRoute-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L46" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3039,7 +3445,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L82" >}}">property <b>nextHop</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>nextHop: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address of the next hop gateway.  Changing
@@ -3051,7 +3459,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L89" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -3065,7 +3475,9 @@ routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L94" >}}">property <b>routerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>routerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the router this routing entry belongs to. Changing
@@ -3074,10 +3486,12 @@ this creates a new routing entry.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RouterRoute-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L46" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3090,7 +3504,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L10" >}}">class <b>SecGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_secgroup_v2.html.markdown.
@@ -3100,10 +3516,12 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SecGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#SecGroupArgs'>SecGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SecGroup resource with the given unique name, arguments, and options.
 
@@ -3117,10 +3535,12 @@ Create a SecGroup resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L19" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SecGroupState'>SecGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SecGroup'>SecGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SecGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3128,23 +3548,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L10" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L30" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SecGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3155,7 +3579,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L41" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the security group, which have
@@ -3167,7 +3593,9 @@ been explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L47" >}}">property <b>deleteDefaultRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>deleteDefaultRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not to delete the default
@@ -3180,7 +3608,9 @@ for more information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L51" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the security group.
@@ -3188,10 +3618,12 @@ A unique name for the security group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L10" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3203,7 +3635,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L55" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the security group.
@@ -3214,7 +3648,9 @@ A unique name for the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L62" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -3228,7 +3664,9 @@ security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L66" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the security group.
@@ -3239,7 +3677,9 @@ A set of string tags for the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L72" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the security group. Required if admin
@@ -3249,10 +3689,12 @@ security group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L10" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3265,7 +3707,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L34" >}}">class <b>SecGroupRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 neutron security group rule resource within OpenStack.
@@ -3299,10 +3743,12 @@ const secgroupRule1 = new openstack.networking.SecGroupRule("secgroupRule1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L141" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SecGroupRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SecGroupRuleArgs'>SecGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SecGroupRule resource with the given unique name, arguments, and options.
 
@@ -3316,10 +3762,12 @@ Create a SecGroupRule resource with the given unique name, arguments, and option
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SecGroupRuleState'>SecGroupRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SecGroupRule'>SecGroupRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SecGroupRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3327,23 +3775,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecGroupRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L34" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecGroupRule-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SecGroupRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3354,7 +3806,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L64" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description of the rule. Changing this creates a new security group rule.
@@ -3365,7 +3819,9 @@ A description of the rule. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L69" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of the rule, valid values are __ingress__
@@ -3377,7 +3833,9 @@ or __egress__. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L74" >}}">property <b>ethertype</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ethertype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The layer 3 protocol type, valid values are __IPv4__
@@ -3386,10 +3844,12 @@ or __IPv6__. Changing this creates a new security group rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecGroupRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L34" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3401,7 +3861,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L80" >}}">property <b>portRangeMax</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portRangeMax: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The higher part of the allowed port range, valid
@@ -3414,7 +3876,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L86" >}}">property <b>portRangeMin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portRangeMin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The lower part of the allowed port range, valid
@@ -3427,7 +3891,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L111" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
@@ -3459,7 +3925,9 @@ The layer 4 protocol type, valid values are following. Changing this creates a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L118" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -3473,7 +3941,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L124" >}}">property <b>remoteGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>remoteGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The remote group id, the value needs to be an
@@ -3486,7 +3956,9 @@ a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L129" >}}">property <b>remoteIpPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>remoteIpPrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The remote CIDR, the value needs to be a valid
@@ -3498,7 +3970,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L135" >}}">property <b>securityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security group id the rule should belong
@@ -3511,7 +3985,9 @@ tenant. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L141" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the security group. Required if admin
@@ -3521,10 +3997,12 @@ security group rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecGroupRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L34" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3537,7 +4015,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L27" >}}">class <b>Subnet</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 Neutron subnet resource within OpenStack.
@@ -3564,10 +4044,12 @@ const subnet1 = new openstack.networking.Subnet("subnet1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L173" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Subnet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubnetArgs'>SubnetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Subnet resource with the given unique name, arguments, and options.
 
@@ -3581,10 +4063,12 @@ Create a Subnet resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubnetState'>SubnetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Subnet'>Subnet</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Subnet resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3592,23 +4076,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Subnet.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3619,7 +4107,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L58" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of ags assigned on the subnet, which have been
@@ -3631,10 +4121,12 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L67" >}}">property <b>allocationPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allocationPools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     end: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block declaring the start and end range of
@@ -3650,10 +4142,12 @@ The `allocationPool` block is documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L74" >}}">property <b>allocationPoolsCollection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allocationPoolsCollection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     end: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block declaring the start and end range of the IP addresses available for
@@ -3666,7 +4160,9 @@ The `allocationPools` block is documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L80" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR representing IP range for this subnet, based on IP
@@ -3679,7 +4175,9 @@ subnet pool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L85" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the subnet. Changing this
@@ -3691,7 +4189,9 @@ updates the name of the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L91" >}}">property <b>dnsNameservers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dnsNameservers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of DNS name server names used by hosts
@@ -3704,7 +4204,9 @@ subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L97" >}}">property <b>enableDhcp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableDhcp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the network.
@@ -3717,7 +4219,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L104" >}}">property <b>gatewayIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>gatewayIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Default gateway used by devices in this subnet.
@@ -3731,10 +4235,12 @@ existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L112" >}}">property <b>hostRoutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hostRoutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     destinationCidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     nextHop: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (**Deprecated** - use `openstack.networking.SubnetRoute`
@@ -3746,10 +4252,12 @@ for the existing subnet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3761,7 +4269,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L117" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this creates a
@@ -3773,7 +4283,9 @@ new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L122" >}}">property <b>ipv6AddressMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipv6AddressMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 address mode. Valid values are
@@ -3785,7 +4297,9 @@ The IPv6 address mode. Valid values are
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L127" >}}">property <b>ipv6RaMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipv6RaMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 Router Advertisement mode. Valid values
@@ -3797,7 +4311,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L132" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subnet. Changing this updates the name of
@@ -3809,7 +4325,9 @@ the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L137" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>networkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the parent network. Changing this
@@ -3821,7 +4339,9 @@ creates a new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L142" >}}">property <b>noGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>noGateway: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Do not set a gateway IP on this subnet. Changing
@@ -3833,7 +4353,9 @@ this removes or adds a default gateway IP of the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L149" >}}">property <b>prefixLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>prefixLength: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The prefix length to use when creating a subnet
@@ -3847,7 +4369,9 @@ creates a new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L156" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -3861,7 +4385,9 @@ subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L160" >}}">property <b>subnetpoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetpoolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnetpool associated with the subnet.
@@ -3872,7 +4398,9 @@ The ID of the subnetpool associated with the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L164" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the subnet.
@@ -3883,7 +4411,9 @@ A set of string tags for the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L169" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the subnet. Required if admin wants to
@@ -3892,10 +4422,12 @@ create a subnet for another tenant. Changing this creates a new subnet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3907,7 +4439,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L173" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -3919,7 +4453,9 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L48" >}}">class <b>SubnetPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 Neutron subnetpool resource within OpenStack.
@@ -3967,10 +4503,12 @@ const subnet1 = new openstack.networking.Subnet("subnet1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L177" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SubnetPool(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubnetPoolArgs'>SubnetPoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SubnetPool resource with the given unique name, arguments, and options.
 
@@ -3984,10 +4522,12 @@ Create a SubnetPool resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubnetPoolState'>SubnetPoolState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SubnetPool'>SubnetPool</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SubnetPool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3995,23 +4535,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubnetPool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L48" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubnetPool-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L68" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SubnetPool.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4022,7 +4566,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L80" >}}">property <b>addressScopeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addressScopeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Neutron address scope to assign to the
@@ -4035,7 +4581,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L85" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the subnetpool, which have been
@@ -4047,7 +4595,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L89" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which subnetpool was created.
@@ -4058,7 +4608,9 @@ The time at which subnetpool was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L96" >}}">property <b>defaultPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultPrefixlen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the prefix to allocate when the cidr
@@ -4072,7 +4624,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L102" >}}">property <b>defaultQuota</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultQuota: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The per-project quota on the prefix space that can be
@@ -4085,7 +4639,9 @@ default quota of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L107" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the subnetpool.
@@ -4094,10 +4650,12 @@ Changing this updates the description of the existing subnetpool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubnetPool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L48" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4109,7 +4667,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L111" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP protocol version.
@@ -4120,7 +4680,9 @@ The IP protocol version.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L117" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>isDefault: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the subnetpool is default
@@ -4133,7 +4695,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L124" >}}">property <b>maxPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxPrefixlen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum prefix size that can be allocated from
@@ -4147,7 +4711,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L130" >}}">property <b>minPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minPrefixlen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The smallest prefix that can be allocated from a
@@ -4160,7 +4726,9 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L135" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subnetpool. Changing this updates the name of
@@ -4172,7 +4740,9 @@ the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L143" >}}">property <b>prefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>prefixes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of subnet prefixes to assign to the subnetpool.
@@ -4187,7 +4757,9 @@ of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L148" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>projectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the subnetpool. Required if admin wants to
@@ -4199,7 +4771,9 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L155" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -4213,7 +4787,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L159" >}}">property <b>revisionNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>revisionNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The revision number of the subnetpool.
@@ -4224,7 +4800,9 @@ The revision number of the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L165" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shared: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this subnetpool is shared across
@@ -4237,7 +4815,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L169" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the subnetpool.
@@ -4248,7 +4828,9 @@ A set of string tags for the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L173" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which subnetpool was created.
@@ -4256,10 +4838,12 @@ The time at which subnetpool was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubnetPool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L48" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4271,7 +4855,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L177" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>valueSpecs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -4283,7 +4869,9 @@ Map of additional options.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L36" >}}">class <b>SubnetRoute</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Creates a routing entry on a OpenStack V2 subnet.
@@ -4319,10 +4907,12 @@ const subnetRoute1 = new openstack.networking.SubnetRoute("subnetRoute1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L84" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SubnetRoute(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubnetRouteArgs'>SubnetRouteArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SubnetRoute resource with the given unique name, arguments, and options.
 
@@ -4336,10 +4926,12 @@ Create a SubnetRoute resource with the given unique name, arguments, and options
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubnetRouteState'>SubnetRouteState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SubnetRoute'>SubnetRoute</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SubnetRoute resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4347,23 +4939,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubnetRoute-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubnetRoute-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SubnetRoute.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4374,7 +4970,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L67" >}}">property <b>destinationCidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>destinationCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR block to match on the packet’s destination IP. Changing
@@ -4383,10 +4981,12 @@ this creates a new routing entry.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubnetRoute-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4398,7 +4998,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L72" >}}">property <b>nextHop</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>nextHop: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address of the next hop gateway.  Changing
@@ -4410,7 +5012,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L79" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -4424,7 +5028,9 @@ routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L84" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the subnet this routing entry belongs to. Changing
@@ -4433,10 +5039,12 @@ this creates a new routing entry.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubnetRoute-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4449,7 +5057,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L53" >}}">class <b>Trunk</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a networking V2 trunk resource within OpenStack.
@@ -4502,10 +5112,12 @@ const instance1 = new openstack.compute.Instance("instance1", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L127" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Trunk(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TrunkArgs'>TrunkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Trunk resource with the given unique name, arguments, and options.
 
@@ -4519,10 +5131,12 @@ Create a Trunk resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L62" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TrunkState'>TrunkState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Trunk'>Trunk</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Trunk resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4530,23 +5144,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trunk-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L53" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trunk-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L73" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Trunk.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4557,7 +5175,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L85" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>adminStateUp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the trunk
@@ -4570,7 +5190,9 @@ Administrative up/down status for the trunk
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L90" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the trunk, which have been
@@ -4582,7 +5204,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L95" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the trunk. Changing this
@@ -4591,10 +5215,12 @@ updates the name of the existing trunk.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trunk-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L53" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4606,7 +5232,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L100" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the trunk. Changing this
@@ -4618,7 +5246,9 @@ updates the `name` of an existing trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L106" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the port to be used as the parent port of the
@@ -4631,7 +5261,9 @@ port. Changing this creates a new trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L113" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -4645,11 +5277,13 @@ trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L118" >}}">property <b>subPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subPorts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
     portId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     segmentationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     segmentationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of ports that will be made subports of the trunk.
@@ -4661,7 +5295,9 @@ The structure of each subport is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L122" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the port.
@@ -4672,7 +5308,9 @@ A set of string tags for the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L127" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Trunk. Required if admin wants
@@ -4681,10 +5319,12 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Trunk-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L53" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4697,10 +5337,12 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L25" >}}">function <b>getAddressScope</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getAddressScope(args?: <a href='#GetAddressScopeArgs'>GetAddressScopeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAddressScopeResult'>GetAddressScopeResult</a>&gt; &amp; <a href='#GetAddressScopeResult'>GetAddressScopeResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack address-scope.
 
@@ -4725,10 +5367,12 @@ const publicAddressscope = openstack.networking.getAddressScope({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L23" >}}">function <b>getFloatingIp</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getFloatingIp(args?: <a href='#GetFloatingIpArgs'>GetFloatingIpArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetFloatingIpResult'>GetFloatingIpResult</a>&gt; &amp; <a href='#GetFloatingIpResult'>GetFloatingIpResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack floating IP.
 
@@ -4751,10 +5395,12 @@ const floatingip1 = openstack.networking.getFloatingIp({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L23" >}}">function <b>getNetwork</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getNetwork(args?: <a href='#GetNetworkArgs'>GetNetworkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetNetworkResult'>GetNetworkResult</a>&gt; &amp; <a href='#GetNetworkResult'>GetNetworkResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack network.
 
@@ -4777,10 +5423,12 @@ const network = openstack.networking.getNetwork({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L23" >}}">function <b>getPort</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getPort(args?: <a href='#GetPortArgs'>GetPortArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetPortResult'>GetPortResult</a>&gt; &amp; <a href='#GetPortResult'>GetPortResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack port.
 
@@ -4803,10 +5451,12 @@ const port1 = openstack.networking.getPort({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L24" >}}">function <b>getPortIds</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getPortIds(args?: <a href='#GetPortIdsArgs'>GetPortIdsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetPortIdsResult'>GetPortIdsResult</a>&gt; &amp; <a href='#GetPortIdsResult'>GetPortIdsResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get a list of Openstack Port IDs matching the
 specified criteria.
@@ -4830,10 +5480,12 @@ const ports = openstack.networking.getPortIds({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L23" >}}">function <b>getQosBandwidthLimitRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getQosBandwidthLimitRule(args: <a href='#GetQosBandwidthLimitRuleArgs'>GetQosBandwidthLimitRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetQosBandwidthLimitRuleResult'>GetQosBandwidthLimitRuleResult</a>&gt; &amp; <a href='#GetQosBandwidthLimitRuleResult'>GetQosBandwidthLimitRuleResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack QoS bandwidth limit rule.
 
@@ -4856,10 +5508,12 @@ const qosBandwidthLimitRule1 = openstack.networking.getQosBandwidthLimitRule({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getQosDscpMarkingRule.ts#L23" >}}">function <b>getQosDscpMarkingRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getQosDscpMarkingRule(args: <a href='#GetQosDscpMarkingRuleArgs'>GetQosDscpMarkingRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetQosDscpMarkingRuleResult'>GetQosDscpMarkingRuleResult</a>&gt; &amp; <a href='#GetQosDscpMarkingRuleResult'>GetQosDscpMarkingRuleResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack QoS DSCP marking rule.
 
@@ -4882,10 +5536,12 @@ const qosDscpMarkingRule1 = openstack.networking.getQosDscpMarkingRule({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L23" >}}">function <b>getQosMinimumBandwidthRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getQosMinimumBandwidthRule(args: <a href='#GetQosMinimumBandwidthRuleArgs'>GetQosMinimumBandwidthRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetQosMinimumBandwidthRuleResult'>GetQosMinimumBandwidthRuleResult</a>&gt; &amp; <a href='#GetQosMinimumBandwidthRuleResult'>GetQosMinimumBandwidthRuleResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack QoS minimum bandwidth rule.
 
@@ -4908,10 +5564,12 @@ const qosMinBwRule1 = openstack.networking.getQosMinimumBandwidthRule({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L23" >}}">function <b>getQosPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getQosPolicy(args?: <a href='#GetQosPolicyArgs'>GetQosPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetQosPolicyResult'>GetQosPolicyResult</a>&gt; &amp; <a href='#GetQosPolicyResult'>GetQosPolicyResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack QoS policy.
 
@@ -4934,10 +5592,12 @@ const qosPolicy1 = openstack.networking.getQosPolicy({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L23" >}}">function <b>getRouter</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getRouter(args?: <a href='#GetRouterArgs'>GetRouterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetRouterResult'>GetRouterResult</a>&gt; &amp; <a href='#GetRouterResult'>GetRouterResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack router.
 
@@ -4960,10 +5620,12 @@ const router = openstack.networking.getRouter({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L23" >}}">function <b>getSecGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getSecGroup(args?: <a href='#GetSecGroupArgs'>GetSecGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSecGroupResult'>GetSecGroupResult</a>&gt; &amp; <a href='#GetSecGroupResult'>GetSecGroupResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack security group.
 
@@ -4986,10 +5648,12 @@ const secgroup = openstack.networking.getSecGroup({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L23" >}}">function <b>getSubnet</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getSubnet(args?: <a href='#GetSubnetArgs'>GetSubnetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSubnetResult'>GetSubnetResult</a>&gt; &amp; <a href='#GetSubnetResult'>GetSubnetResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack subnet.
 
@@ -5012,10 +5676,12 @@ const subnet1 = openstack.networking.getSubnet({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L23" >}}">function <b>getSubnetPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getSubnetPool(args?: <a href='#GetSubnetPoolArgs'>GetSubnetPoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSubnetPoolResult'>GetSubnetPoolResult</a>&gt; &amp; <a href='#GetSubnetPoolResult'>GetSubnetPoolResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack subnetpool.
 
@@ -5038,10 +5704,12 @@ const subnetpool1 = openstack.networking.getSubnetPool({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L23" >}}">function <b>getTrunk</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getTrunk(args?: <a href='#GetTrunkArgs'>GetTrunkArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetTrunkResult'>GetTrunkResult</a>&gt; &amp; <a href='#GetTrunkResult'>GetTrunkResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to get the ID of an available OpenStack trunk.
 
@@ -5073,7 +5741,9 @@ The set of arguments for constructing a AddressScope resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L179" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this
@@ -5085,7 +5755,9 @@ creates a new address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L184" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the address-scope. Changing this updates the
@@ -5097,7 +5769,9 @@ name of the existing address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L190" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the address-scope. Required if admin
@@ -5110,7 +5784,9 @@ new address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L197" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -5124,7 +5800,9 @@ address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L203" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this address-scope is shared across
@@ -5147,7 +5825,9 @@ Input properties used for looking up and filtering AddressScope resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L144" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this
@@ -5159,7 +5839,9 @@ creates a new address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L149" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the address-scope. Changing this updates the
@@ -5171,7 +5853,9 @@ name of the existing address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L155" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the address-scope. Required if admin
@@ -5184,7 +5868,9 @@ new address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L162" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -5198,7 +5884,9 @@ address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/addressScope.ts#L168" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this address-scope is shared across
@@ -5221,7 +5909,9 @@ The set of arguments for constructing a FloatingIp resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L271" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The actual/specific floating IP to obtain. By default,
@@ -5235,7 +5925,9 @@ user or project.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L275" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description for the floating IP.
@@ -5246,7 +5938,9 @@ Human-readable description for the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L282" >}}">property <b>dnsDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The floating IP DNS domain. Available, when Neutron
@@ -5260,7 +5954,9 @@ service. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L289" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The floating IP DNS name. Available, when Neutron DNS
@@ -5274,7 +5970,9 @@ service. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L294" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Fixed IP of the port to associate with this floating IP. Required if
@@ -5286,7 +5984,9 @@ the port has multiple fixed IPs.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L299" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the pool from which to obtain the floating
@@ -5298,7 +5998,9 @@ IP. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L304" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of an existing port with at least one IP address to
@@ -5310,7 +6012,9 @@ associate with this floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L312" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -5325,7 +6029,9 @@ floating IP (which may or may not have a different address).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L317" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The subnet ID of the floating IP pool. Specify this if
@@ -5337,7 +6043,9 @@ the floating IP network has multiple subnets.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L321" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the floating IP.
@@ -5348,7 +6056,9 @@ A set of string tags for the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L328" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The target tenant ID in which to allocate the floating
@@ -5362,7 +6072,9 @@ may or may not have a different address)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L332" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -5383,7 +6095,9 @@ The set of arguments for constructing a FloatingIpAssociate resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L143" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5391,7 +6105,9 @@ The set of arguments for constructing a FloatingIpAssociate resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L147" >}}">property <b>floatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>floatingIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP Address of an existing floating IP.
@@ -5402,7 +6118,9 @@ IP Address of an existing floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L152" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of an existing port with at least one IP address to
@@ -5414,7 +6132,9 @@ associate with this floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L160" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -5439,7 +6159,9 @@ Input properties used for looking up and filtering FloatingIpAssociate resources
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L119" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5447,7 +6169,9 @@ Input properties used for looking up and filtering FloatingIpAssociate resources
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L123" >}}">property <b>floatingIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>floatingIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP Address of an existing floating IP.
@@ -5458,7 +6182,9 @@ IP Address of an existing floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L128" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of an existing port with at least one IP address to
@@ -5470,7 +6196,9 @@ associate with this floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIpAssociate.ts#L136" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -5495,7 +6223,9 @@ Input properties used for looking up and filtering FloatingIp resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L192" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The actual/specific floating IP to obtain. By default,
@@ -5509,7 +6239,9 @@ user or project.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L197" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the floating IP, which have
@@ -5521,7 +6253,9 @@ been explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L201" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description for the floating IP.
@@ -5532,7 +6266,9 @@ Human-readable description for the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L208" >}}">property <b>dnsDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The floating IP DNS domain. Available, when Neutron
@@ -5546,7 +6282,9 @@ service. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L215" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The floating IP DNS name. Available, when Neutron DNS
@@ -5560,7 +6298,9 @@ service. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L220" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Fixed IP of the port to associate with this floating IP. Required if
@@ -5572,7 +6312,9 @@ the port has multiple fixed IPs.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L225" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the pool from which to obtain the floating
@@ -5584,7 +6326,9 @@ IP. Changing this creates a new floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L230" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of an existing port with at least one IP address to
@@ -5596,7 +6340,9 @@ associate with this floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L238" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -5611,7 +6357,9 @@ floating IP (which may or may not have a different address).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L243" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The subnet ID of the floating IP pool. Specify this if
@@ -5623,7 +6371,9 @@ the floating IP network has multiple subnets.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L247" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the floating IP.
@@ -5634,7 +6384,9 @@ A set of string tags for the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L254" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The target tenant ID in which to allocate the floating
@@ -5648,7 +6400,9 @@ may or may not have a different address)
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/floatingIp.ts#L258" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -5669,7 +6423,9 @@ A collection of arguments for invoking getAddressScope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L52" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version.
@@ -5680,7 +6436,9 @@ IP version.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L56" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the address-scope.
@@ -5691,7 +6449,9 @@ Name of the address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L60" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the address-scope.
@@ -5702,7 +6462,9 @@ The owner of the address-scope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L66" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -5715,7 +6477,9 @@ A Neutron client is needed to retrieve address-scopes. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L71" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this address-scope is shared across
@@ -5737,7 +6501,9 @@ A collection of values returned by getAddressScope.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L98" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -5748,7 +6514,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L81" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -5759,7 +6527,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L85" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -5770,7 +6540,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L89" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -5781,7 +6553,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L90" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5789,7 +6563,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getAddressScope.ts#L94" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -5810,7 +6586,9 @@ A collection of arguments for invoking getFloatingIp.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L54" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>address?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the floating IP.
@@ -5821,7 +6599,9 @@ The IP address of the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L58" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the floating IP.
@@ -5832,7 +6612,9 @@ Human-readable description of the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L62" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The specific IP address of the internal port which should be associated with the floating IP.
@@ -5843,7 +6625,9 @@ The specific IP address of the internal port which should be associated with the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L66" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pool?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the pool from which the floating IP belongs to.
@@ -5854,7 +6638,9 @@ The name of the pool from which the floating IP belongs to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L70" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the port the floating IP is attached.
@@ -5865,7 +6651,9 @@ The ID of the port the floating IP is attached.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L76" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -5878,7 +6666,9 @@ A Neutron client is needed to retrieve floating IP ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L80" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 status of the floating IP (ACTIVE/DOWN).
@@ -5889,7 +6679,9 @@ status of the floating IP (ACTIVE/DOWN).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L84" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of floating IP tags to filter.
@@ -5900,7 +6692,9 @@ The list of floating IP tags to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L88" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the floating IP.
@@ -5921,7 +6715,9 @@ A collection of values returned by getFloatingIp.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L95" >}}">property <b>address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>address?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5929,7 +6725,9 @@ A collection of values returned by getFloatingIp.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L99" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags applied on the floating IP.
@@ -5940,7 +6738,9 @@ A set of string tags applied on the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L100" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5948,7 +6748,9 @@ A set of string tags applied on the floating IP.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L105" >}}">property <b>dnsDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsDomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The floating IP DNS domain. Available, when Neutron DNS
@@ -5960,7 +6762,9 @@ extension is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L110" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The floating IP DNS name. Available, when Neutron DNS extension
@@ -5972,7 +6776,9 @@ is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L111" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5980,7 +6786,9 @@ is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L121" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -5991,7 +6799,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L112" >}}">property <b>pool</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pool?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -5999,7 +6809,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L113" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6007,7 +6819,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L114" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6015,7 +6829,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L115" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6023,7 +6839,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L116" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6031,7 +6849,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getFloatingIp.ts#L117" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6049,7 +6869,9 @@ A collection of arguments for invoking getNetwork.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L56" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the network.
@@ -6060,7 +6882,9 @@ Human-readable description of the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L60" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The external routing facility of the network.
@@ -6071,7 +6895,9 @@ The external routing facility of the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L64" >}}">property <b>matchingSubnetCidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>matchingSubnetCidr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The CIDR of a subnet within the network.
@@ -6082,7 +6908,9 @@ The CIDR of a subnet within the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L69" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network MTU to filter. Available, when Neutron `net-mtu`
@@ -6094,7 +6922,9 @@ extension is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the network.
@@ -6105,7 +6935,9 @@ The name of the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L77" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network.
@@ -6116,7 +6948,9 @@ The ID of the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L83" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -6129,7 +6963,9 @@ A Neutron client is needed to retrieve networks ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L87" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the network.
@@ -6140,7 +6976,9 @@ The status of the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L91" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of network tags to filter.
@@ -6151,7 +6989,9 @@ The list of network tags to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L95" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the network.
@@ -6162,7 +7002,9 @@ The owner of the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L100" >}}">property <b>transparentVlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transparentVlan?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The VLAN transparent attribute for the
@@ -6184,7 +7026,9 @@ A collection of values returned by getNetwork.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L110" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the network.
@@ -6195,7 +7039,9 @@ The administrative state of the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L114" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of string tags applied on the network.
@@ -6206,7 +7052,9 @@ The set of string tags applied on the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L118" >}}">property <b>availabilityZoneHints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZoneHints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The availability zone candidates for the network.
@@ -6217,7 +7065,9 @@ The availability zone candidates for the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L122" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -6228,7 +7078,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L127" >}}">property <b>dnsDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsDomain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network DNS domain. Available, when Neutron DNS extension
@@ -6240,7 +7092,9 @@ is enabled
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L131" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -6251,7 +7105,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L161" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -6262,7 +7118,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L132" >}}">property <b>matchingSubnetCidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>matchingSubnetCidr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6270,7 +7128,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L136" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -6281,7 +7141,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L140" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -6292,7 +7154,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L141" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6300,7 +7164,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L145" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -6311,7 +7177,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L150" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource can be accessed by any
@@ -6323,7 +7191,9 @@ tenant or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L151" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6331,7 +7201,9 @@ tenant or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L152" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6339,7 +7211,9 @@ tenant or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L153" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6347,7 +7221,9 @@ tenant or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getNetwork.ts#L157" >}}">property <b>transparentVlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transparentVlan?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -6368,7 +7244,9 @@ A collection of arguments for invoking getPort.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L61" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the port.
@@ -6379,7 +7257,9 @@ The administrative state of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L65" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the port.
@@ -6390,7 +7270,9 @@ Human-readable description of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L69" >}}">property <b>deviceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the device the port belongs to.
@@ -6401,7 +7283,9 @@ The ID of the device the port belongs to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L73" >}}">property <b>deviceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceOwner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The device owner of the port.
@@ -6412,7 +7296,9 @@ The device owner of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L78" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port DNS name to filter. Available, when Neutron
@@ -6424,7 +7310,9 @@ DNS extension is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L82" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port IP address filter.
@@ -6435,7 +7323,9 @@ The port IP address filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L86" >}}">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>macAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The MAC address of the port.
@@ -6446,7 +7336,9 @@ The MAC address of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the port.
@@ -6457,7 +7349,9 @@ The name of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L94" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network the port belongs to.
@@ -6468,7 +7362,9 @@ The ID of the network the port belongs to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L98" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the port.
@@ -6479,7 +7375,9 @@ The ID of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L102" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the port.
@@ -6490,7 +7388,9 @@ The owner of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L108" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -6503,7 +7403,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L112" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of port security group IDs to filter.
@@ -6514,7 +7416,9 @@ The list of port security group IDs to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L116" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the port.
@@ -6525,7 +7429,9 @@ The status of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L120" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of port tags to filter.
@@ -6536,7 +7442,9 @@ The list of port tags to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L121" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6554,7 +7462,9 @@ A collection of arguments for invoking getPortIds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L63" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the port.
@@ -6565,7 +7475,9 @@ The administrative state of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L67" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the port.
@@ -6576,7 +7488,9 @@ Human-readable description of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L71" >}}">property <b>deviceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the device the port belongs to.
@@ -6587,7 +7501,9 @@ The ID of the device the port belongs to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L75" >}}">property <b>deviceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceOwner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The device owner of the port.
@@ -6598,7 +7514,9 @@ The device owner of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L76" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6606,7 +7524,9 @@ The device owner of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L80" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port IP address filter.
@@ -6617,7 +7537,9 @@ The port IP address filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L84" >}}">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>macAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The MAC address of the port.
@@ -6628,7 +7550,9 @@ The MAC address of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L88" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the port.
@@ -6639,7 +7563,9 @@ The name of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L92" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network the port belongs to.
@@ -6650,7 +7576,9 @@ The ID of the network the port belongs to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L96" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the port.
@@ -6661,7 +7589,9 @@ The owner of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L102" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -6674,7 +7604,9 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L106" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of port security group IDs to filter.
@@ -6685,7 +7617,9 @@ The list of port security group IDs to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L111" >}}">property <b>sortDirection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sortDirection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Order the results in either `asc` or `desc`.
@@ -6697,7 +7631,9 @@ Defaults to none.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L115" >}}">property <b>sortKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sortKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sort ports based on a certain key. Defaults to none.
@@ -6708,7 +7644,9 @@ Sort ports based on a certain key. Defaults to none.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L119" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the port.
@@ -6719,7 +7657,9 @@ The status of the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L123" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of port tags to filter.
@@ -6730,7 +7670,9 @@ The list of port tags to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L124" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6748,7 +7690,9 @@ A collection of values returned by getPortIds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L131" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6756,7 +7700,9 @@ A collection of values returned by getPortIds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L132" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6764,7 +7710,9 @@ A collection of values returned by getPortIds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L133" >}}">property <b>deviceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6772,7 +7720,9 @@ A collection of values returned by getPortIds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L134" >}}">property <b>deviceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceOwner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6780,7 +7730,9 @@ A collection of values returned by getPortIds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L135" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6788,7 +7740,9 @@ A collection of values returned by getPortIds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L136" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6796,7 +7750,9 @@ A collection of values returned by getPortIds.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L152" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -6807,7 +7763,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L137" >}}">property <b>ids</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6815,7 +7773,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L138" >}}">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>macAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6823,7 +7783,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L139" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6831,7 +7793,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L140" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6839,7 +7803,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L141" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6847,7 +7813,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L142" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6855,7 +7823,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L143" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6863,7 +7833,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L144" >}}">property <b>sortDirection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sortDirection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6871,7 +7843,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L145" >}}">property <b>sortKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sortKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6879,7 +7853,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L146" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6887,7 +7863,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L147" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6895,7 +7873,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPortIds.ts#L148" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -6913,7 +7893,9 @@ A collection of values returned by getPort.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L131" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -6924,7 +7906,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L136" >}}">property <b>allFixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allFixedIps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of Fixed IP addresses on the port in the
@@ -6936,7 +7920,9 @@ order returned by the Network v2 API.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L140" >}}">property <b>allSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allSecurityGroupIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of security group IDs applied on the port.
@@ -6947,7 +7933,9 @@ The set of security group IDs applied on the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L144" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of string tags applied on the port.
@@ -6958,10 +7946,12 @@ The set of string tags applied on the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L150" >}}">property <b>allowedAddressPairs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedAddressPairs: {
     ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     macAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An IP/MAC Address pair of additional IP
@@ -6974,6 +7964,7 @@ below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L154" >}}">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bindings: {
     hostId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     profile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -6981,6 +7972,7 @@ below.
     vifType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     vnicType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port binding information. The structure is described below.
@@ -6991,7 +7983,9 @@ The port binding information. The structure is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L158" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7002,7 +7996,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L162" >}}">property <b>deviceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7013,7 +8009,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L166" >}}">property <b>deviceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceOwner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7024,7 +8022,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L170" >}}">property <b>dnsAssignments</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsAssignments: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of maps representing port DNS assignments.
@@ -7035,7 +8035,9 @@ The list of maps representing port DNS assignments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L174" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7046,11 +8048,13 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L179" >}}">property <b>extraDhcpOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extraDhcpOptions: {
     ipVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An extra DHCP option configured on the port.
@@ -7062,7 +8066,9 @@ The structure is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L180" >}}">property <b>fixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7070,7 +8076,9 @@ The structure is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L212" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7081,7 +8089,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L184" >}}">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>macAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The additional MAC address.
@@ -7092,7 +8102,9 @@ The additional MAC address.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L188" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the DHCP option.
@@ -7103,7 +8115,9 @@ Name of the DHCP option.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L192" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7114,7 +8128,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L196" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7125,7 +8141,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L200" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7136,7 +8154,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L204" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7147,7 +8167,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L205" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7155,7 +8177,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L206" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7163,7 +8187,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L207" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7171,7 +8197,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getPort.ts#L208" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7189,7 +8217,9 @@ A collection of arguments for invoking getQosBandwidthLimitRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L48" >}}">property <b>maxBurstKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxBurstKbps?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum burst size in kilobits of a QoS bandwidth limit rule.
@@ -7200,7 +8230,9 @@ The maximum burst size in kilobits of a QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L52" >}}">property <b>maxKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxKbps?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum kilobits per second of a QoS bandwidth limit rule.
@@ -7211,7 +8243,9 @@ The maximum kilobits per second of a QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L56" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference.
@@ -7222,7 +8256,9 @@ The QoS policy reference.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L62" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -7245,7 +8281,9 @@ A collection of values returned by getQosBandwidthLimitRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L72" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7256,7 +8294,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L92" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7267,7 +8307,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L76" >}}">property <b>maxBurstKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxBurstKbps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7278,7 +8320,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L80" >}}">property <b>maxKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxKbps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7289,7 +8333,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L84" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7300,7 +8346,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosBandwidthLimitRule.ts#L88" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7321,7 +8369,9 @@ A collection of arguments for invoking getQosDscpMarkingRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosDscpMarkingRule.ts#L47" >}}">property <b>dscpMark</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dscpMark?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of a DSCP mark.
@@ -7332,7 +8382,9 @@ The value of a DSCP mark.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosDscpMarkingRule.ts#L51" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference.
@@ -7343,7 +8395,9 @@ The QoS policy reference.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosDscpMarkingRule.ts#L57" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -7366,7 +8420,9 @@ A collection of values returned by getQosDscpMarkingRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosDscpMarkingRule.ts#L67" >}}">property <b>dscpMark</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dscpMark: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7377,7 +8433,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosDscpMarkingRule.ts#L79" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7388,7 +8446,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosDscpMarkingRule.ts#L71" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7399,7 +8459,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosDscpMarkingRule.ts#L75" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7420,7 +8482,9 @@ A collection of arguments for invoking getQosMinimumBandwidthRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L45" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7428,7 +8492,9 @@ A collection of arguments for invoking getQosMinimumBandwidthRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L49" >}}">property <b>minKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minKbps?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of a minimum kbps bandwidth.
@@ -7439,7 +8505,9 @@ The value of a minimum kbps bandwidth.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L53" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference.
@@ -7450,7 +8518,9 @@ The QoS policy reference.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L59" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -7473,7 +8543,9 @@ A collection of values returned by getQosMinimumBandwidthRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L66" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7481,7 +8553,9 @@ A collection of values returned by getQosMinimumBandwidthRule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L82" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7492,7 +8566,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L70" >}}">property <b>minKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minKbps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7503,7 +8579,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L74" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7514,7 +8592,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosMinimumBandwidthRule.ts#L78" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7535,7 +8615,9 @@ A collection of arguments for invoking getQosPolicy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L52" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the QoS policy.
@@ -7546,7 +8628,9 @@ The human-readable description for the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L56" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDefault?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the QoS policy is default policy or not.
@@ -7557,7 +8641,9 @@ Whether the QoS policy is default policy or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L60" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the QoS policy.
@@ -7568,7 +8654,9 @@ The name of the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L64" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the QoS policy.
@@ -7579,7 +8667,9 @@ The owner of the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L70" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -7592,7 +8682,9 @@ A Networking client is needed to retrieve a QoS policy ID. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L74" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether this QoS policy is shared across all projects.
@@ -7603,7 +8695,9 @@ Whether this QoS policy is shared across all projects.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L78" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of QoS policy tags to filter.
@@ -7624,7 +8718,9 @@ A collection of values returned by getQosPolicy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L88" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of string tags applied on the QoS policy.
@@ -7635,7 +8731,9 @@ The set of string tags applied on the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L92" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which QoS policy was created.
@@ -7646,7 +8744,9 @@ The time at which QoS policy was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L96" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7657,7 +8757,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L126" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7668,7 +8770,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L100" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDefault: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7679,7 +8783,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L104" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7690,7 +8796,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L105" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7698,7 +8806,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L109" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7709,7 +8819,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L113" >}}">property <b>revisionNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>revisionNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The revision number of the QoS policy.
@@ -7720,7 +8832,9 @@ The revision number of the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L117" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -7731,7 +8845,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L118" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7739,7 +8855,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getQosPolicy.ts#L122" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which QoS policy was created.
@@ -7760,7 +8878,9 @@ A collection of arguments for invoking getRouter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L55" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the router (must be "true" or "false" if provided).
@@ -7771,7 +8891,9 @@ Administrative up/down status for the router (must be "true" or "false" if provi
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L59" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the router.
@@ -7782,7 +8904,9 @@ Human-readable description of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L63" >}}">property <b>distributed</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>distributed?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether or not to get a distributed router.
@@ -7793,7 +8917,9 @@ Indicates whether or not to get a distributed router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L64" >}}">property <b>enableSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableSnat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7801,7 +8927,9 @@ Indicates whether or not to get a distributed router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the router.
@@ -7812,7 +8940,9 @@ The name of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L74" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -7825,7 +8955,9 @@ A Neutron client is needed to retrieve router ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L78" >}}">property <b>routerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routerId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the router resource.
@@ -7836,7 +8968,9 @@ The UUID of the router resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L82" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the router (ACTIVE/DOWN).
@@ -7847,7 +8981,9 @@ The status of the router (ACTIVE/DOWN).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L86" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of router tags to filter.
@@ -7858,7 +8994,9 @@ The list of router tags to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L90" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the router.
@@ -7879,7 +9017,9 @@ A collection of values returned by getRouter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L97" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7887,7 +9027,9 @@ A collection of values returned by getRouter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L101" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of string tags applied on the router.
@@ -7898,7 +9040,9 @@ The set of string tags applied on the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L105" >}}">property <b>availabilityZoneHints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZoneHints: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The availability zone that is used to make router resources highly available.
@@ -7909,7 +9053,9 @@ The availability zone that is used to make router resources highly available.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L106" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7917,7 +9063,9 @@ The availability zone that is used to make router resources highly available.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L107" >}}">property <b>distributed</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>distributed?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7925,7 +9073,9 @@ The availability zone that is used to make router resources highly available.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L111" >}}">property <b>enableSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableSnat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value that points out if the Source NAT is enabled on the router.
@@ -7936,10 +9086,12 @@ The value that points out if the Source NAT is enabled on the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L115" >}}">property <b>externalFixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalFixedIps: {
     ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The external fixed IPs of the router.
@@ -7950,7 +9102,9 @@ The external fixed IPs of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L119" >}}">property <b>externalNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalNetworkId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network UUID of an external gateway for the router.
@@ -7961,7 +9115,9 @@ The network UUID of an external gateway for the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L129" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7972,7 +9128,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L120" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7980,7 +9138,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L121" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7988,7 +9148,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L122" >}}">property <b>routerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routerId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -7996,7 +9158,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L123" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8004,7 +9168,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L124" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8012,7 +9178,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getRouter.ts#L125" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8030,7 +9198,9 @@ A collection of arguments for invoking getSecGroup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L51" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description the the subnet.
@@ -8041,7 +9211,9 @@ Human-readable description the the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L55" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the security group.
@@ -8052,7 +9224,9 @@ The name of the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L61" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -8065,7 +9239,9 @@ A Neutron client is needed to retrieve security groups ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L65" >}}">property <b>secgroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secgroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the security group.
@@ -8076,7 +9252,9 @@ The ID of the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L69" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of security group tags to filter.
@@ -8087,7 +9265,9 @@ The list of security group tags to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L73" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the security group.
@@ -8108,7 +9288,9 @@ A collection of values returned by getSecGroup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L83" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of string tags applied on the security group.
@@ -8119,7 +9301,9 @@ The set of string tags applied on the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L84" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8127,7 +9311,9 @@ The set of string tags applied on the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L100" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8138,7 +9324,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L89" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8150,7 +9338,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L93" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8161,7 +9351,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L94" >}}">property <b>secgroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secgroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8169,7 +9361,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L95" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8177,7 +9371,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSecGroup.ts#L96" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8195,7 +9391,9 @@ A collection of arguments for invoking getSubnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L60" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The CIDR of the subnet.
@@ -8206,7 +9404,9 @@ The CIDR of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L64" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description for the subnet.
@@ -8217,7 +9417,9 @@ Human-readable description for the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L68" >}}">property <b>dhcpDisabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dhcpDisabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the subnet has DHCP disabled.
@@ -8228,7 +9430,9 @@ If the subnet has DHCP disabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L72" >}}">property <b>dhcpEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dhcpEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If the subnet has DHCP enabled.
@@ -8239,7 +9443,9 @@ If the subnet has DHCP enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L76" >}}">property <b>gatewayIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gatewayIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP of the subnet's gateway.
@@ -8250,7 +9456,9 @@ The IP of the subnet's gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L80" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP version of the subnet (either 4 or 6).
@@ -8261,7 +9469,9 @@ The IP version of the subnet (either 4 or 6).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L85" >}}">property <b>ipv6AddressMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6AddressMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 address mode. Valid values are
@@ -8273,7 +9483,9 @@ The IPv6 address mode. Valid values are
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L90" >}}">property <b>ipv6RaMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6RaMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 Router Advertisement mode. Valid values
@@ -8285,7 +9497,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L94" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subnet.
@@ -8296,7 +9510,9 @@ The name of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L98" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network the subnet belongs to.
@@ -8307,7 +9523,9 @@ The ID of the network the subnet belongs to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L104" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -8320,7 +9538,9 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L108" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnet.
@@ -8331,7 +9551,9 @@ The ID of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L112" >}}">property <b>subnetpoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetpoolId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnetpool associated with the subnet.
@@ -8342,7 +9564,9 @@ The ID of the subnetpool associated with the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L116" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of subnet tags to filter.
@@ -8353,7 +9577,9 @@ The list of subnet tags to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L120" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the subnet.
@@ -8374,7 +9600,9 @@ A collection of arguments for invoking getSubnetPool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L59" >}}">property <b>addressScopeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressScopeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Neutron address scope that subnetpools
@@ -8386,7 +9614,9 @@ is assigned to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L64" >}}">property <b>defaultPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrefixlen?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the subnetpool default prefix
@@ -8398,7 +9628,9 @@ length.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L69" >}}">property <b>defaultQuota</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultQuota?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The per-project quota on the prefix space that
@@ -8410,7 +9642,9 @@ can be allocated from the subnetpool for project subnets.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L73" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the subnetpool.
@@ -8421,7 +9655,9 @@ The human-readable description for the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L77" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP protocol version.
@@ -8432,7 +9668,9 @@ The IP protocol version.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L81" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDefault?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the subnetpool is default subnetpool or not.
@@ -8443,7 +9681,9 @@ Whether the subnetpool is default subnetpool or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L85" >}}">property <b>maxPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxPrefixlen?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the subnetpool max prefix length.
@@ -8454,7 +9694,9 @@ The size of the subnetpool max prefix length.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L89" >}}">property <b>minPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minPrefixlen?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the subnetpool min prefix length.
@@ -8465,7 +9707,9 @@ The size of the subnetpool min prefix length.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L93" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subnetpool.
@@ -8476,7 +9720,9 @@ The name of the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L97" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the subnetpool.
@@ -8487,7 +9733,9 @@ The owner of the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L103" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -8500,7 +9748,9 @@ A Networking client is needed to retrieve a subnetpool id. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L107" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether this subnetpool is shared across all projects.
@@ -8511,7 +9761,9 @@ Whether this subnetpool is shared across all projects.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L111" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of subnetpool tags to filter.
@@ -8532,7 +9784,9 @@ A collection of values returned by getSubnetPool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L122" >}}">property <b>addressScopeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressScopeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8544,7 +9798,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L126" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of string tags applied on the subnetpool.
@@ -8555,7 +9811,9 @@ The set of string tags applied on the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L130" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which subnetpool was created.
@@ -8566,7 +9824,9 @@ The time at which subnetpool was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L134" >}}">property <b>defaultPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrefixlen: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8577,7 +9837,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L138" >}}">property <b>defaultQuota</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultQuota: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8588,7 +9850,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L142" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8599,7 +9863,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L188" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8610,7 +9876,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L143" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8618,7 +9886,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L147" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDefault: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8629,7 +9899,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L151" >}}">property <b>maxPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxPrefixlen: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8640,7 +9912,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L155" >}}">property <b>minPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minPrefixlen: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8651,7 +9925,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L159" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8662,7 +9938,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L163" >}}">property <b>prefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefixes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8673,7 +9951,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L167" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8684,7 +9964,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L171" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8695,7 +9977,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L175" >}}">property <b>revisionNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>revisionNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The revision number of the subnetpool.
@@ -8706,7 +9990,9 @@ The revision number of the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L179" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8717,7 +10003,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L180" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8725,7 +10013,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnetPool.ts#L184" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which subnetpool was created.
@@ -8746,7 +10036,9 @@ A collection of values returned by getSubnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L130" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags applied on the subnet.
@@ -8757,10 +10049,12 @@ A set of string tags applied on the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L134" >}}">property <b>allocationPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allocationPools: {
     end: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allocation pools of the subnet.
@@ -8771,7 +10065,9 @@ Allocation pools of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L135" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8779,7 +10075,9 @@ Allocation pools of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L136" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8787,7 +10085,9 @@ Allocation pools of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L137" >}}">property <b>dhcpDisabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dhcpDisabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8795,7 +10095,9 @@ Allocation pools of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L138" >}}">property <b>dhcpEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dhcpEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8803,7 +10105,9 @@ Allocation pools of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L142" >}}">property <b>dnsNameservers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsNameservers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 DNS Nameservers of the subnet.
@@ -8814,7 +10118,9 @@ DNS Nameservers of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L146" >}}">property <b>enableDhcp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableDhcp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the subnet has DHCP enabled or not.
@@ -8825,7 +10131,9 @@ Whether the subnet has DHCP enabled or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L147" >}}">property <b>gatewayIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gatewayIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8833,10 +10141,12 @@ Whether the subnet has DHCP enabled or not.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L151" >}}">property <b>hostRoutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostRoutes: {
     destinationCidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     nextHop: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Host Routes of the subnet.
@@ -8847,7 +10157,9 @@ Host Routes of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L168" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8858,7 +10170,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L152" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8866,7 +10180,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L153" >}}">property <b>ipv6AddressMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6AddressMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8874,7 +10190,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L154" >}}">property <b>ipv6RaMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6RaMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8882,7 +10200,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L155" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8890,7 +10210,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L156" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8898,7 +10220,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L160" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -8909,7 +10233,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L161" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8917,7 +10243,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L162" >}}">property <b>subnetpoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetpoolId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8925,7 +10253,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L163" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8933,7 +10263,9 @@ See Argument Reference above.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getSubnet.ts#L164" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -8951,7 +10283,9 @@ A collection of arguments for invoking getTrunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L54" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the trunk.
@@ -8962,7 +10296,9 @@ The administrative state of the trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L58" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the trunk.
@@ -8973,7 +10309,9 @@ Human-readable description of the trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L62" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the trunk.
@@ -8984,7 +10322,9 @@ The name of the trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L66" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the trunk parent port.
@@ -8995,7 +10335,9 @@ The ID of the trunk parent port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L70" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the trunk.
@@ -9006,7 +10348,9 @@ The owner of the trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L76" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Neutron client.
@@ -9019,7 +10363,9 @@ A Neutron client is needed to retrieve trunk ids. If omitted, the
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L80" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the trunk.
@@ -9030,7 +10376,9 @@ The status of the trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L84" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of trunk tags to filter.
@@ -9041,7 +10389,9 @@ The list of trunk tags to filter.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L88" >}}">property <b>trunkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>trunkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the trunk.
@@ -9062,7 +10412,9 @@ A collection of values returned by getTrunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L95" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -9070,7 +10422,9 @@ A collection of values returned by getTrunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L99" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of string tags applied on the trunk.
@@ -9081,7 +10435,9 @@ The set of string tags applied on the trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L100" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -9089,7 +10445,9 @@ The set of string tags applied on the trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L119" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -9100,7 +10458,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L101" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -9108,7 +10468,9 @@ id is the provider-assigned unique ID for this managed resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L105" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the trunk subport.
@@ -9119,7 +10481,9 @@ The ID of the trunk subport.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L106" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -9127,7 +10491,9 @@ The ID of the trunk subport.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L107" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -9135,7 +10501,9 @@ The ID of the trunk subport.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L108" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -9143,11 +10511,13 @@ The ID of the trunk subport.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L113" >}}">property <b>subPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subPorts: {
     portId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     segmentationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
     segmentationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of the trunk subports. The structure of each subport is
@@ -9159,7 +10529,9 @@ described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L114" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -9167,7 +10539,9 @@ described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/getTrunk.ts#L115" >}}">property <b>trunkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>trunkId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -9185,7 +10559,9 @@ The set of arguments for constructing a Network resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L347" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the network.
@@ -9198,7 +10574,9 @@ state of the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L354" >}}">property <b>availabilityZoneHints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZoneHints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An availability zone is used to make
@@ -9212,7 +10590,9 @@ creates a new network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L359" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the network. Changing this
@@ -9224,7 +10604,9 @@ updates the name of the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L366" >}}">property <b>dnsDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network DNS domain. Available, when Neutron DNS
@@ -9238,7 +10620,9 @@ service when Neutron is configured to integrate with such a service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L372" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource has the
@@ -9251,7 +10635,9 @@ false. Changing this updates the external attribute of the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L378" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network MTU. Available for read-only, when Neutron
@@ -9264,7 +10650,9 @@ Neutron `net-mtu-writable` extension is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L383" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the network. Changing this updates the name of
@@ -9276,7 +10664,9 @@ the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L391" >}}">property <b>portSecurityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portSecurityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to explicitly enable or disable
@@ -9291,7 +10681,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L395" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Reference to the associated QoS policy.
@@ -9302,7 +10694,9 @@ Reference to the associated QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L402" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -9316,11 +10710,13 @@ network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L406" >}}">property <b>segments</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>segments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     networkType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     physicalNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     segmentationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of one or more provider segment objects.
@@ -9331,7 +10727,9 @@ An array of one or more provider segment objects.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L412" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource can be accessed
@@ -9344,7 +10742,9 @@ existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L416" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the network.
@@ -9355,7 +10755,9 @@ A set of string tags for the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L421" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the network. Required if admin wants to
@@ -9367,7 +10769,9 @@ create a network for another tenant. Changing this creates a new network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L428" >}}">property <b>transparentVlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transparentVlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource has the
@@ -9381,7 +10785,9 @@ network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L432" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -9402,7 +10808,9 @@ Input properties used for looking up and filtering Network resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L245" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the network.
@@ -9415,7 +10823,9 @@ state of the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L250" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the network, which have been
@@ -9427,7 +10837,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L257" >}}">property <b>availabilityZoneHints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZoneHints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An availability zone is used to make
@@ -9441,7 +10853,9 @@ creates a new network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L262" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the network. Changing this
@@ -9453,7 +10867,9 @@ updates the name of the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L269" >}}">property <b>dnsDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network DNS domain. Available, when Neutron DNS
@@ -9467,7 +10883,9 @@ service when Neutron is configured to integrate with such a service.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L275" >}}">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource has the
@@ -9480,7 +10898,9 @@ false. Changing this updates the external attribute of the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L281" >}}">property <b>mtu</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mtu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network MTU. Available for read-only, when Neutron
@@ -9493,7 +10913,9 @@ Neutron `net-mtu-writable` extension is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L286" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the network. Changing this updates the name of
@@ -9505,7 +10927,9 @@ the existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L294" >}}">property <b>portSecurityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portSecurityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to explicitly enable or disable
@@ -9520,7 +10944,9 @@ explicitly to `false` will disable port security. Valid values are `true` and
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L298" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Reference to the associated QoS policy.
@@ -9531,7 +10957,9 @@ Reference to the associated QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L305" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -9545,11 +10973,13 @@ network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L309" >}}">property <b>segments</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>segments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     networkType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     physicalNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     segmentationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of one or more provider segment objects.
@@ -9560,7 +10990,9 @@ An array of one or more provider segment objects.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L315" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource can be accessed
@@ -9573,7 +11005,9 @@ existing network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L319" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the network.
@@ -9584,7 +11018,9 @@ A set of string tags for the network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L324" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the network. Required if admin wants to
@@ -9596,7 +11032,9 @@ create a network for another tenant. Changing this creates a new network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L331" >}}">property <b>transparentVlan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transparentVlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether the network resource has the
@@ -9610,7 +11048,9 @@ network.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/network.ts#L335" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -9631,7 +11071,9 @@ The set of arguments for constructing a Port resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L468" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the port
@@ -9644,10 +11086,12 @@ Administrative up/down status for the port
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L474" >}}">property <b>allowedAddressPairs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedAddressPairs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     macAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An IP/MAC Address pair of additional IP
@@ -9660,6 +11104,7 @@ below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L479" >}}">property <b>binding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>binding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     hostId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     profile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -9667,6 +11112,7 @@ below.
     vifType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     vnicType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port binding allows to specify binding information
@@ -9678,7 +11124,9 @@ for the port. The structure is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L484" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the floating IP. Changing
@@ -9690,7 +11138,9 @@ this updates the `description` of an existing port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L489" >}}">property <b>deviceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the device attached to the port. Changing this
@@ -9702,7 +11152,9 @@ creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L494" >}}">property <b>deviceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The device owner of the Port. Changing this creates
@@ -9714,7 +11166,9 @@ a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L499" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port DNS name. Available, when Neutron DNS extension
@@ -9726,11 +11180,13 @@ is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L505" >}}">property <b>extraDhcpOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extraDhcpOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
     name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An extra DHCP option that needs to be configured
@@ -9743,10 +11199,12 @@ times.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L510" >}}">property <b>fixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of desired IPs for
@@ -9758,7 +11216,9 @@ this port. The structure is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L515" >}}">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>macAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify a specific MAC address for the port. Changing
@@ -9770,7 +11230,9 @@ this creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L520" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the port. Changing this
@@ -9782,7 +11244,9 @@ updates the `name` of an existing port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L525" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network to attach the port to. Changing
@@ -9794,7 +11258,9 @@ this creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L531" >}}">property <b>noFixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noFixedIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Create a port with no fixed
@@ -9807,7 +11273,9 @@ is the only valid value for this argument.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L539" >}}">property <b>noSecurityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noSecurityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If set to
@@ -9822,7 +11290,9 @@ security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L548" >}}">property <b>portSecurityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portSecurityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to explicitly enable or disable
@@ -9838,7 +11308,9 @@ and `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L552" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Reference to the associated QoS policy.
@@ -9849,7 +11321,9 @@ Reference to the associated QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L559" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -9863,7 +11337,9 @@ port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L566" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list
@@ -9877,7 +11353,9 @@ the Compute Instance).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L570" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the port.
@@ -9888,7 +11366,9 @@ A set of string tags for the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L575" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Port. Required if admin wants
@@ -9900,7 +11380,9 @@ to create a port for another tenant. Changing this creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L579" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -9921,7 +11403,9 @@ The set of arguments for constructing a PortSecGroupAssociate resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L148" >}}">property <b>enforce</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enforce?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to replace or append the list of security
@@ -9933,7 +11417,9 @@ groups, specified in the `securityGroupIds`. Defaults to `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L152" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An UUID of the port to apply security groups to.
@@ -9944,7 +11430,9 @@ An UUID of the port to apply security groups to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L159" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -9958,7 +11446,9 @@ resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L165" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of security group IDs to apply to
@@ -9981,7 +11471,9 @@ Input properties used for looking up and filtering PortSecGroupAssociate resourc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L115" >}}">property <b>allSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of Security Group IDs on the port
@@ -9993,7 +11485,9 @@ which have been explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L120" >}}">property <b>enforce</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enforce?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to replace or append the list of security
@@ -10005,7 +11499,9 @@ groups, specified in the `securityGroupIds`. Defaults to `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L124" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An UUID of the port to apply security groups to.
@@ -10016,7 +11512,9 @@ An UUID of the port to apply security groups to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L131" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -10030,7 +11528,9 @@ resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/portSecGroupAssociate.ts#L137" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of security group IDs to apply to
@@ -10053,7 +11553,9 @@ Input properties used for looking up and filtering Port resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L326" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the port
@@ -10066,7 +11568,9 @@ Administrative up/down status for the port
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L331" >}}">property <b>allFixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allFixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of Fixed IP addresses on the port in the
@@ -10078,7 +11582,9 @@ order returned by the Network v2 API.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L336" >}}">property <b>allSecurityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of Security Group IDs on the port
@@ -10090,7 +11596,9 @@ which have been explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L341" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the port, which have been
@@ -10102,10 +11610,12 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L347" >}}">property <b>allowedAddressPairs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowedAddressPairs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     macAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An IP/MAC Address pair of additional IP
@@ -10118,6 +11628,7 @@ below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L352" >}}">property <b>binding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>binding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     hostId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     profile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
@@ -10125,6 +11636,7 @@ below.
     vifType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     vnicType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port binding allows to specify binding information
@@ -10136,7 +11648,9 @@ for the port. The structure is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L357" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the floating IP. Changing
@@ -10148,7 +11662,9 @@ this updates the `description` of an existing port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L362" >}}">property <b>deviceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the device attached to the port. Changing this
@@ -10160,7 +11676,9 @@ creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L367" >}}">property <b>deviceOwner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deviceOwner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The device owner of the Port. Changing this creates
@@ -10172,7 +11690,9 @@ a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L371" >}}">property <b>dnsAssignments</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsAssignments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of maps representing port DNS assignments.
@@ -10183,7 +11703,9 @@ The list of maps representing port DNS assignments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L376" >}}">property <b>dnsName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port DNS name. Available, when Neutron DNS extension
@@ -10195,11 +11717,13 @@ is enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L382" >}}">property <b>extraDhcpOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extraDhcpOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
     name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An extra DHCP option that needs to be configured
@@ -10212,10 +11736,12 @@ times.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L387" >}}">property <b>fixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of desired IPs for
@@ -10227,7 +11753,9 @@ this port. The structure is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L392" >}}">property <b>macAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>macAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify a specific MAC address for the port. Changing
@@ -10239,7 +11767,9 @@ this creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L397" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the port. Changing this
@@ -10251,7 +11781,9 @@ updates the `name` of an existing port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L402" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the network to attach the port to. Changing
@@ -10263,7 +11795,9 @@ this creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L408" >}}">property <b>noFixedIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noFixedIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Create a port with no fixed
@@ -10276,7 +11810,9 @@ is the only valid value for this argument.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L416" >}}">property <b>noSecurityGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noSecurityGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If set to
@@ -10291,7 +11827,9 @@ security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L425" >}}">property <b>portSecurityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portSecurityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to explicitly enable or disable
@@ -10307,7 +11845,9 @@ and `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L429" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Reference to the associated QoS policy.
@@ -10318,7 +11858,9 @@ Reference to the associated QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L436" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -10332,7 +11874,9 @@ port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L443" >}}">property <b>securityGroupIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list
@@ -10346,7 +11890,9 @@ the Compute Instance).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L447" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the port.
@@ -10357,7 +11903,9 @@ A set of string tags for the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L452" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Port. Required if admin wants
@@ -10369,7 +11917,9 @@ to create a port for another tenant. Changing this creates a new port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/port.ts#L456" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -10390,7 +11940,9 @@ The set of arguments for constructing a QosBandwidthLimitRule resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L165" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of traffic. Defaults to "egress". Changing this updates the direction of the
@@ -10402,7 +11954,9 @@ existing QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L170" >}}">property <b>maxBurstKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxBurstKbps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum burst size in kilobits of a QoS bandwidth limit rule. Changing this updates the
@@ -10414,7 +11968,9 @@ maximum burst size in kilobits of the existing QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L175" >}}">property <b>maxKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum kilobits per second of a QoS bandwidth limit rule. Changing this updates the
@@ -10426,7 +11982,9 @@ maximum kilobits per second of the existing QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L179" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
@@ -10437,7 +11995,9 @@ The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L185" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -10460,7 +12020,9 @@ Input properties used for looking up and filtering QosBandwidthLimitRule resourc
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L134" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of traffic. Defaults to "egress". Changing this updates the direction of the
@@ -10472,7 +12034,9 @@ existing QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L139" >}}">property <b>maxBurstKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxBurstKbps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum burst size in kilobits of a QoS bandwidth limit rule. Changing this updates the
@@ -10484,7 +12048,9 @@ maximum burst size in kilobits of the existing QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L144" >}}">property <b>maxKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxKbps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum kilobits per second of a QoS bandwidth limit rule. Changing this updates the
@@ -10496,7 +12062,9 @@ maximum kilobits per second of the existing QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L148" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
@@ -10507,7 +12075,9 @@ The QoS policy reference. Changing this creates a new QoS bandwidth limit rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosBandwidthLimitRule.ts#L154" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -10530,7 +12100,9 @@ The set of arguments for constructing a QosDscpMarkingRule resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L139" >}}">property <b>dscpMark</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dscpMark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of DSCP mark. Changing this updates the DSCP mark value existing
@@ -10542,7 +12114,9 @@ QoS DSCP marking rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L143" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
@@ -10553,7 +12127,9 @@ The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L149" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -10576,7 +12152,9 @@ Input properties used for looking up and filtering QosDscpMarkingRule resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L118" >}}">property <b>dscpMark</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dscpMark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of DSCP mark. Changing this updates the DSCP mark value existing
@@ -10588,7 +12166,9 @@ QoS DSCP marking rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L122" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
@@ -10599,7 +12179,9 @@ The QoS policy reference. Changing this creates a new QoS DSCP marking rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosDscpMarkingRule.ts#L128" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -10622,7 +12204,9 @@ The set of arguments for constructing a QosMinimumBandwidthRule resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L151" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of traffic. Defaults to "egress". Changing this updates the direction of the
@@ -10634,7 +12218,9 @@ existing QoS minimum bandwidth rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L156" >}}">property <b>minKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minKbps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum kilobits per second. Changing this updates the min kbps value of the existing
@@ -10646,7 +12232,9 @@ QoS minimum bandwidth rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L160" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
@@ -10657,7 +12245,9 @@ The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L166" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -10680,7 +12270,9 @@ Input properties used for looking up and filtering QosMinimumBandwidthRule resou
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L125" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of traffic. Defaults to "egress". Changing this updates the direction of the
@@ -10692,7 +12284,9 @@ existing QoS minimum bandwidth rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L130" >}}">property <b>minKbps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minKbps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum kilobits per second. Changing this updates the min kbps value of the existing
@@ -10704,7 +12298,9 @@ QoS minimum bandwidth rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L134" >}}">property <b>qosPolicyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>qosPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule.
@@ -10715,7 +12311,9 @@ The QoS policy reference. Changing this creates a new QoS minimum bandwidth rule
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosMinimumBandwidthRule.ts#L140" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -10738,7 +12336,9 @@ The set of arguments for constructing a QosPolicy resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L235" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the QoS policy.
@@ -10750,7 +12350,9 @@ Changing this updates the description of the existing QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L241" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the QoS policy is default
@@ -10763,7 +12365,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L246" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the QoS policy. Changing this updates the name of
@@ -10775,7 +12379,9 @@ the existing QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L251" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the QoS policy. Required if admin wants to
@@ -10787,7 +12393,9 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L258" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -10801,7 +12409,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L264" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this QoS policy is shared across
@@ -10814,7 +12424,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L268" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the QoS policy.
@@ -10825,7 +12437,9 @@ A set of string tags for the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L272" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -10846,7 +12460,9 @@ Input properties used for looking up and filtering QosPolicy resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L170" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the QoS policy, which have been
@@ -10858,7 +12474,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L174" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which QoS policy was created.
@@ -10869,7 +12487,9 @@ The time at which QoS policy was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L179" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the QoS policy.
@@ -10881,7 +12501,9 @@ Changing this updates the description of the existing QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L185" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the QoS policy is default
@@ -10894,7 +12516,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L190" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the QoS policy. Changing this updates the name of
@@ -10906,7 +12530,9 @@ the existing QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L195" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the QoS policy. Required if admin wants to
@@ -10918,7 +12544,9 @@ create a QoS policy for another project. Changing this creates a new QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L202" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -10932,7 +12560,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L206" >}}">property <b>revisionNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>revisionNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The revision number of the QoS policy.
@@ -10943,7 +12573,9 @@ The revision number of the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L212" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this QoS policy is shared across
@@ -10956,7 +12588,9 @@ QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L216" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the QoS policy.
@@ -10967,7 +12601,9 @@ A set of string tags for the QoS policy.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L220" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which QoS policy was created.
@@ -10978,7 +12614,9 @@ The time at which QoS policy was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/qosPolicy.ts#L224" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -10999,7 +12637,9 @@ The set of arguments for constructing a Router resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L293" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the router
@@ -11012,7 +12652,9 @@ Administrative up/down status for the router
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L299" >}}">property <b>availabilityZoneHints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZoneHints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An availability zone is used to make
@@ -11025,7 +12667,9 @@ this creates a new router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L303" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description for the router.
@@ -11036,7 +12680,9 @@ Human-readable description for the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L309" >}}">property <b>distributed</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>distributed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether or not to create a
@@ -11049,7 +12695,9 @@ usage of this property to administrative users only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L315" >}}">property <b>enableSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableSnat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enable Source NAT for the router. Valid values are
@@ -11062,10 +12710,12 @@ set this property. Changing this updates the `enableSnat` of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L322" >}}">property <b>externalFixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalFixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An external fixed IP for the router. This
@@ -11079,7 +12729,9 @@ external fixed IPs of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L330" >}}">property <b>externalGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The
@@ -11094,7 +12746,9 @@ of an existing router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L337" >}}">property <b>externalNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network UUID of an external gateway
@@ -11108,7 +12762,9 @@ this updates the external gateway of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L342" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the router. Changing this
@@ -11120,7 +12776,9 @@ updates the `name` of an existing router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L349" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11134,7 +12792,9 @@ router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L353" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the router.
@@ -11145,7 +12805,9 @@ A set of string tags for the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L358" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the floating IP. Required if admin wants
@@ -11157,7 +12819,9 @@ to create a router for another tenant. Changing this creates a new router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L362" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional driver-specific options.
@@ -11168,9 +12832,11 @@ Map of additional driver-specific options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L367" >}}">property <b>vendorOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vendorOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     setRouterGatewayAfterCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional vendor-specific options.
@@ -11192,7 +12858,9 @@ The set of arguments for constructing a RouterInterface resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L158" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the port this interface connects to. Changing
@@ -11204,7 +12872,9 @@ this creates a new router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L165" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11218,7 +12888,9 @@ router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L170" >}}">property <b>routerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the router this interface belongs to. Changing
@@ -11230,7 +12902,9 @@ this creates a new router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L175" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the subnet this interface connects to. Changing
@@ -11252,7 +12926,9 @@ Input properties used for looking up and filtering RouterInterface resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L130" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the port this interface connects to. Changing
@@ -11264,7 +12940,9 @@ this creates a new router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L137" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11278,7 +12956,9 @@ router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L142" >}}">property <b>routerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the router this interface belongs to. Changing
@@ -11290,7 +12970,9 @@ this creates a new router interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerInterface.ts#L147" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the subnet this interface connects to. Changing
@@ -11312,7 +12994,9 @@ The set of arguments for constructing a RouterRoute resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L175" >}}">property <b>destinationCidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR block to match on the packet’s destination IP. Changing
@@ -11324,7 +13008,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L180" >}}">property <b>nextHop</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nextHop: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address of the next hop gateway.  Changing
@@ -11336,7 +13022,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L187" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11350,7 +13038,9 @@ routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L192" >}}">property <b>routerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the router this routing entry belongs to. Changing
@@ -11372,7 +13062,9 @@ Input properties used for looking up and filtering RouterRoute resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L147" >}}">property <b>destinationCidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR block to match on the packet’s destination IP. Changing
@@ -11384,7 +13076,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L152" >}}">property <b>nextHop</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nextHop?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address of the next hop gateway.  Changing
@@ -11396,7 +13090,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L159" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11410,7 +13106,9 @@ routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/routerRoute.ts#L164" >}}">property <b>routerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>routerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the router this routing entry belongs to. Changing
@@ -11432,7 +13130,9 @@ Input properties used for looking up and filtering Router resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L202" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the router
@@ -11445,7 +13145,9 @@ Administrative up/down status for the router
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L207" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the router, which have been
@@ -11457,7 +13159,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L213" >}}">property <b>availabilityZoneHints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZoneHints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An availability zone is used to make
@@ -11470,7 +13174,9 @@ this creates a new router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L217" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description for the router.
@@ -11481,7 +13187,9 @@ Human-readable description for the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L223" >}}">property <b>distributed</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>distributed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether or not to create a
@@ -11494,7 +13202,9 @@ usage of this property to administrative users only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L229" >}}">property <b>enableSnat</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableSnat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enable Source NAT for the router. Valid values are
@@ -11507,10 +13217,12 @@ set this property. Changing this updates the `enableSnat` of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L236" >}}">property <b>externalFixedIps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalFixedIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An external fixed IP for the router. This
@@ -11524,7 +13236,9 @@ external fixed IPs of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L244" >}}">property <b>externalGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The
@@ -11539,7 +13253,9 @@ of an existing router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L251" >}}">property <b>externalNetworkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externalNetworkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The network UUID of an external gateway
@@ -11553,7 +13269,9 @@ this updates the external gateway of the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L256" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the router. Changing this
@@ -11565,7 +13283,9 @@ updates the `name` of an existing router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L263" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11579,7 +13299,9 @@ router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L267" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the router.
@@ -11590,7 +13312,9 @@ A set of string tags for the router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L272" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the floating IP. Required if admin wants
@@ -11602,7 +13326,9 @@ to create a router for another tenant. Changing this creates a new router.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L276" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional driver-specific options.
@@ -11613,9 +13339,11 @@ Map of additional driver-specific options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/router.ts#L281" >}}">property <b>vendorOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vendorOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     setRouterGatewayAfterCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional vendor-specific options.
@@ -11637,7 +13365,9 @@ The set of arguments for constructing a SecGroup resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L165" >}}">property <b>deleteDefaultRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deleteDefaultRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not to delete the default
@@ -11650,7 +13380,9 @@ for more information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L169" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the security group.
@@ -11661,7 +13393,9 @@ A unique name for the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L173" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the security group.
@@ -11672,7 +13406,9 @@ A unique name for the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L180" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11686,7 +13422,9 @@ security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L184" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the security group.
@@ -11697,7 +13435,9 @@ A set of string tags for the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L190" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the security group. Required if admin
@@ -11720,7 +13460,9 @@ The set of arguments for constructing a SecGroupRule resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L294" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description of the rule. Changing this creates a new security group rule.
@@ -11731,7 +13473,9 @@ A description of the rule. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L299" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of the rule, valid values are __ingress__
@@ -11743,7 +13487,9 @@ or __egress__. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L304" >}}">property <b>ethertype</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ethertype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The layer 3 protocol type, valid values are __IPv4__
@@ -11755,7 +13501,9 @@ or __IPv6__. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L310" >}}">property <b>portRangeMax</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portRangeMax?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The higher part of the allowed port range, valid
@@ -11768,7 +13516,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L316" >}}">property <b>portRangeMin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portRangeMin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The lower part of the allowed port range, valid
@@ -11781,7 +13531,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L341" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
@@ -11813,7 +13565,9 @@ The layer 4 protocol type, valid values are following. Changing this creates a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L348" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11827,7 +13581,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L354" >}}">property <b>remoteGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>remoteGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The remote group id, the value needs to be an
@@ -11840,7 +13596,9 @@ a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L359" >}}">property <b>remoteIpPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>remoteIpPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The remote CIDR, the value needs to be a valid
@@ -11852,7 +13610,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L365" >}}">property <b>securityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security group id the rule should belong
@@ -11865,7 +13625,9 @@ tenant. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L371" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the security group. Required if admin
@@ -11888,7 +13650,9 @@ Input properties used for looking up and filtering SecGroupRule resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L207" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A description of the rule. Changing this creates a new security group rule.
@@ -11899,7 +13663,9 @@ A description of the rule. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L212" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of the rule, valid values are __ingress__
@@ -11911,7 +13677,9 @@ or __egress__. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L217" >}}">property <b>ethertype</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ethertype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The layer 3 protocol type, valid values are __IPv4__
@@ -11923,7 +13691,9 @@ or __IPv6__. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L223" >}}">property <b>portRangeMax</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portRangeMax?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The higher part of the allowed port range, valid
@@ -11936,7 +13706,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L229" >}}">property <b>portRangeMin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portRangeMin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The lower part of the allowed port range, valid
@@ -11949,7 +13721,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L254" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The layer 4 protocol type, valid values are following. Changing this creates a new security group rule. This is required if you want to specify a port range.
@@ -11981,7 +13755,9 @@ The layer 4 protocol type, valid values are following. Changing this creates a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L261" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -11995,7 +13771,9 @@ security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L267" >}}">property <b>remoteGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>remoteGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The remote group id, the value needs to be an
@@ -12008,7 +13786,9 @@ a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L272" >}}">property <b>remoteIpPrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>remoteIpPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The remote CIDR, the value needs to be a valid
@@ -12020,7 +13800,9 @@ CIDR (i.e. 192.168.0.0/16). Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L278" >}}">property <b>securityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security group id the rule should belong
@@ -12033,7 +13815,9 @@ tenant. Changing this creates a new security group rule.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroupRule.ts#L284" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the security group. Required if admin
@@ -12056,7 +13840,9 @@ Input properties used for looking up and filtering SecGroup resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L122" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the security group, which have
@@ -12068,7 +13854,9 @@ been explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L128" >}}">property <b>deleteDefaultRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deleteDefaultRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not to delete the default
@@ -12081,7 +13869,9 @@ for more information.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L132" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the security group.
@@ -12092,7 +13882,9 @@ A unique name for the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L136" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the security group.
@@ -12103,7 +13895,9 @@ A unique name for the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L143" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -12117,7 +13911,9 @@ security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L147" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the security group.
@@ -12128,7 +13924,9 @@ A set of string tags for the security group.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/secGroup.ts#L153" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the security group. Required if admin
@@ -12151,10 +13949,12 @@ The set of arguments for constructing a Subnet resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L384" >}}">property <b>allocationPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allocationPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     end: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     start: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block declaring the start and end range of
@@ -12170,10 +13970,12 @@ The `allocationPool` block is documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L391" >}}">property <b>allocationPoolsCollection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allocationPoolsCollection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     end: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     start: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block declaring the start and end range of the IP addresses available for
@@ -12186,7 +13988,9 @@ The `allocationPools` block is documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L397" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR representing IP range for this subnet, based on IP
@@ -12199,7 +14003,9 @@ subnet pool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L402" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the subnet. Changing this
@@ -12211,7 +14017,9 @@ updates the name of the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L408" >}}">property <b>dnsNameservers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsNameservers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of DNS name server names used by hosts
@@ -12224,7 +14032,9 @@ subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L414" >}}">property <b>enableDhcp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the network.
@@ -12237,7 +14047,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L421" >}}">property <b>gatewayIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gatewayIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Default gateway used by devices in this subnet.
@@ -12251,10 +14063,12 @@ existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L429" >}}">property <b>hostRoutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostRoutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     destinationCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     nextHop: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (**Deprecated** - use `openstack.networking.SubnetRoute`
@@ -12269,7 +14083,9 @@ for the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L434" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this creates a
@@ -12281,7 +14097,9 @@ new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L439" >}}">property <b>ipv6AddressMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6AddressMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 address mode. Valid values are
@@ -12293,7 +14111,9 @@ The IPv6 address mode. Valid values are
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L444" >}}">property <b>ipv6RaMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6RaMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 Router Advertisement mode. Valid values
@@ -12305,7 +14125,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L449" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subnet. Changing this updates the name of
@@ -12317,7 +14139,9 @@ the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L454" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the parent network. Changing this
@@ -12329,7 +14153,9 @@ creates a new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L459" >}}">property <b>noGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Do not set a gateway IP on this subnet. Changing
@@ -12341,7 +14167,9 @@ this removes or adds a default gateway IP of the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L466" >}}">property <b>prefixLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefixLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The prefix length to use when creating a subnet
@@ -12355,7 +14183,9 @@ creates a new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L473" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -12369,7 +14199,9 @@ subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L477" >}}">property <b>subnetpoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetpoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnetpool associated with the subnet.
@@ -12380,7 +14212,9 @@ The ID of the subnetpool associated with the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L481" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the subnet.
@@ -12391,7 +14225,9 @@ A set of string tags for the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L486" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the subnet. Required if admin wants to
@@ -12403,7 +14239,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L490" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -12424,7 +14262,9 @@ The set of arguments for constructing a SubnetPool resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L364" >}}">property <b>addressScopeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Neutron address scope to assign to the
@@ -12437,7 +14277,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L371" >}}">property <b>defaultPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrefixlen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the prefix to allocate when the cidr
@@ -12451,7 +14293,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L377" >}}">property <b>defaultQuota</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The per-project quota on the prefix space that can be
@@ -12464,7 +14308,9 @@ default quota of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L382" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the subnetpool.
@@ -12476,7 +14322,9 @@ Changing this updates the description of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L386" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP protocol version.
@@ -12487,7 +14335,9 @@ The IP protocol version.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L392" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the subnetpool is default
@@ -12500,7 +14350,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L399" >}}">property <b>maxPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxPrefixlen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum prefix size that can be allocated from
@@ -12514,7 +14366,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L405" >}}">property <b>minPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minPrefixlen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The smallest prefix that can be allocated from a
@@ -12527,7 +14381,9 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L410" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subnetpool. Changing this updates the name of
@@ -12539,7 +14395,9 @@ the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L418" >}}">property <b>prefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefixes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of subnet prefixes to assign to the subnetpool.
@@ -12554,7 +14412,9 @@ of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L423" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the subnetpool. Required if admin wants to
@@ -12566,7 +14426,9 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L430" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -12580,7 +14442,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L436" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this subnetpool is shared across
@@ -12593,7 +14457,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L440" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the subnetpool.
@@ -12604,7 +14470,9 @@ A set of string tags for the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L444" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -12625,7 +14493,9 @@ Input properties used for looking up and filtering SubnetPool resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L255" >}}">property <b>addressScopeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>addressScopeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Neutron address scope to assign to the
@@ -12638,7 +14508,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L260" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the subnetpool, which have been
@@ -12650,7 +14522,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L264" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which subnetpool was created.
@@ -12661,7 +14535,9 @@ The time at which subnetpool was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L271" >}}">property <b>defaultPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrefixlen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the prefix to allocate when the cidr
@@ -12675,7 +14551,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L277" >}}">property <b>defaultQuota</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultQuota?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The per-project quota on the prefix space that can be
@@ -12688,7 +14566,9 @@ default quota of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L282" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The human-readable description for the subnetpool.
@@ -12700,7 +14580,9 @@ Changing this updates the description of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L286" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP protocol version.
@@ -12711,7 +14593,9 @@ The IP protocol version.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L292" >}}">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDefault?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether the subnetpool is default
@@ -12724,7 +14608,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L299" >}}">property <b>maxPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxPrefixlen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum prefix size that can be allocated from
@@ -12738,7 +14624,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L305" >}}">property <b>minPrefixlen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minPrefixlen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The smallest prefix that can be allocated from a
@@ -12751,7 +14639,9 @@ is 64. Changing this updates the min prefixlen of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L310" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subnetpool. Changing this updates the name of
@@ -12763,7 +14653,9 @@ the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L318" >}}">property <b>prefixes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefixes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of subnet prefixes to assign to the subnetpool.
@@ -12778,7 +14670,9 @@ of the existing subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L323" >}}">property <b>projectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the subnetpool. Required if admin wants to
@@ -12790,7 +14684,9 @@ create a subnetpool for another project. Changing this creates a new subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L330" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -12804,7 +14700,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L334" >}}">property <b>revisionNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>revisionNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The revision number of the subnetpool.
@@ -12815,7 +14713,9 @@ The revision number of the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L340" >}}">property <b>shared</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shared?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Indicates whether this subnetpool is shared across
@@ -12828,7 +14728,9 @@ subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L344" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the subnetpool.
@@ -12839,7 +14741,9 @@ A set of string tags for the subnetpool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L348" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time at which subnetpool was created.
@@ -12850,7 +14754,9 @@ The time at which subnetpool was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetPool.ts#L352" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -12871,7 +14777,9 @@ The set of arguments for constructing a SubnetRoute resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L165" >}}">property <b>destinationCidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR block to match on the packet’s destination IP. Changing
@@ -12883,7 +14791,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L170" >}}">property <b>nextHop</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nextHop: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address of the next hop gateway.  Changing
@@ -12895,7 +14805,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L177" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -12909,7 +14821,9 @@ routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L182" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the subnet this routing entry belongs to. Changing
@@ -12931,7 +14845,9 @@ Input properties used for looking up and filtering SubnetRoute resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L137" >}}">property <b>destinationCidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationCidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR block to match on the packet’s destination IP. Changing
@@ -12943,7 +14859,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L142" >}}">property <b>nextHop</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nextHop?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP address of the next hop gateway.  Changing
@@ -12955,7 +14873,9 @@ this creates a new routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L149" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -12969,7 +14889,9 @@ routing entry.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnetRoute.ts#L154" >}}">property <b>subnetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the subnet this routing entry belongs to. Changing
@@ -12991,7 +14913,9 @@ Input properties used for looking up and filtering Subnet resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L254" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of ags assigned on the subnet, which have been
@@ -13003,10 +14927,12 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L263" >}}">property <b>allocationPools</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allocationPools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     end: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     start: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block declaring the start and end range of
@@ -13022,10 +14948,12 @@ The `allocationPool` block is documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L270" >}}">property <b>allocationPoolsCollection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allocationPoolsCollection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     end: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     start: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block declaring the start and end range of the IP addresses available for
@@ -13038,7 +14966,9 @@ The `allocationPools` block is documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L276" >}}">property <b>cidr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CIDR representing IP range for this subnet, based on IP
@@ -13051,7 +14981,9 @@ subnet pool.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L281" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the subnet. Changing this
@@ -13063,7 +14995,9 @@ updates the name of the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L287" >}}">property <b>dnsNameservers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dnsNameservers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of DNS name server names used by hosts
@@ -13076,7 +15010,9 @@ subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L293" >}}">property <b>enableDhcp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableDhcp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The administrative state of the network.
@@ -13089,7 +15025,9 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L300" >}}">property <b>gatewayIp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gatewayIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Default gateway used by devices in this subnet.
@@ -13103,10 +15041,12 @@ existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L308" >}}">property <b>hostRoutes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostRoutes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     destinationCidr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     nextHop: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (**Deprecated** - use `openstack.networking.SubnetRoute`
@@ -13121,7 +15061,9 @@ for the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L313" >}}">property <b>ipVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 IP version, either 4 (default) or 6. Changing this creates a
@@ -13133,7 +15075,9 @@ new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L318" >}}">property <b>ipv6AddressMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6AddressMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 address mode. Valid values are
@@ -13145,7 +15089,9 @@ The IPv6 address mode. Valid values are
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L323" >}}">property <b>ipv6RaMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6RaMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 Router Advertisement mode. Valid values
@@ -13157,7 +15103,9 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L328" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the subnet. Changing this updates the name of
@@ -13169,7 +15117,9 @@ the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L333" >}}">property <b>networkId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The UUID of the parent network. Changing this
@@ -13181,7 +15131,9 @@ creates a new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L338" >}}">property <b>noGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noGateway?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Do not set a gateway IP on this subnet. Changing
@@ -13193,7 +15145,9 @@ this removes or adds a default gateway IP of the existing subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L345" >}}">property <b>prefixLength</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefixLength?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The prefix length to use when creating a subnet
@@ -13207,7 +15161,9 @@ creates a new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L352" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Networking client.
@@ -13221,7 +15177,9 @@ subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L356" >}}">property <b>subnetpoolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnetpoolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the subnetpool associated with the subnet.
@@ -13232,7 +15190,9 @@ The ID of the subnetpool associated with the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L360" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the subnet.
@@ -13243,7 +15203,9 @@ A set of string tags for the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L365" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the subnet. Required if admin wants to
@@ -13255,7 +15217,9 @@ create a subnet for another tenant. Changing this creates a new subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/subnet.ts#L369" >}}">property <b>valueSpecs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>valueSpecs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Map of additional options.
@@ -13276,7 +15240,9 @@ The set of arguments for constructing a Trunk resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L239" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the trunk
@@ -13289,7 +15255,9 @@ Administrative up/down status for the trunk
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L244" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the trunk. Changing this
@@ -13301,7 +15269,9 @@ updates the name of the existing trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L249" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the trunk. Changing this
@@ -13313,7 +15283,9 @@ updates the `name` of an existing trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L255" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the port to be used as the parent port of the
@@ -13326,7 +15298,9 @@ port. Changing this creates a new trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L262" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -13340,11 +15314,13 @@ trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L267" >}}">property <b>subPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     segmentationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
     segmentationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of ports that will be made subports of the trunk.
@@ -13356,7 +15332,9 @@ The structure of each subport is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L271" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the port.
@@ -13367,7 +15345,9 @@ A set of string tags for the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L276" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Trunk. Required if admin wants
@@ -13389,7 +15369,9 @@ Input properties used for looking up and filtering Trunk resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L185" >}}">property <b>adminStateUp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>adminStateUp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Administrative up/down status for the trunk
@@ -13402,7 +15384,9 @@ Administrative up/down status for the trunk
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L190" >}}">property <b>allTags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The collection of tags assigned on the trunk, which have been
@@ -13414,7 +15398,9 @@ explicitly and implicitly added.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L195" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Human-readable description of the trunk. Changing this
@@ -13426,7 +15412,9 @@ updates the name of the existing trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L200" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the trunk. Changing this
@@ -13438,7 +15426,9 @@ updates the `name` of an existing trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L206" >}}">property <b>portId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>portId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the port to be used as the parent port of the
@@ -13451,7 +15441,9 @@ port. Changing this creates a new trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L213" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 networking client.
@@ -13465,11 +15457,13 @@ trunk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L218" >}}">property <b>subPorts</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subPorts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     portId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     segmentationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
     segmentationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The set of ports that will be made subports of the trunk.
@@ -13481,7 +15475,9 @@ The structure of each subport is described below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L222" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A set of string tags for the port.
@@ -13492,7 +15488,9 @@ A set of string tags for the port.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="networking/trunk.ts#L227" >}}">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The owner of the Trunk. Required if admin wants

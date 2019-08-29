@@ -32,10 +32,12 @@ title: Module cognito
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cognito/metrics.ts#L66" >}}">function <b>accountTakeOverRisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountTakeOverRisk(change?: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests where Amazon Cognito detected account take-over risk.
 
@@ -45,10 +47,12 @@ Requests where Amazon Cognito detected account take-over risk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cognito/metrics.ts#L59" >}}">function <b>compromisedCredentialsRisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>compromisedCredentialsRisk(change?: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests where Amazon Cognito detected compromised credentials.
 
@@ -58,10 +62,12 @@ Requests where Amazon Cognito detected compromised credentials.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cognito/metrics.ts#L43" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#CognitoMetricName'>CognitoMetricName</a>, change: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/Cognito metric with the requested [metricName]. See
 https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-viewing-advanced-security-metrics.html
@@ -80,10 +86,12 @@ level.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cognito/metrics.ts#L87" >}}">function <b>noRisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>noRisk(change?: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests where Amazon Cognito did not identify any risk.
 
@@ -93,10 +101,12 @@ Requests where Amazon Cognito did not identify any risk.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cognito/metrics.ts#L73" >}}">function <b>overrideBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>overrideBlock(change?: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests that Amazon Cognito blocked because of the configuration provided by the developer.
 
@@ -106,10 +116,12 @@ Requests that Amazon Cognito blocked because of the configuration provided by th
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cognito/metrics.ts#L80" >}}">function <b>risk</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>risk(change?: <a href='#CognitoMetricChange'>CognitoMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Requests that Amazon Cognito marked as risky.
 
@@ -125,7 +137,9 @@ Requests that Amazon Cognito marked as risky.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -138,7 +152,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -151,7 +167,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -164,7 +182,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -179,7 +199,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -192,7 +214,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -205,7 +229,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -218,7 +244,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cognito/metrics.ts#L28" >}}">property <b>userPool</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userPool?: aws.cognito.UserPool;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional [UserPool] this metric should be filtered down to.
@@ -229,7 +257,9 @@ Optional [UserPool] this metric should be filtered down to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -243,7 +273,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -257,7 +289,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cognito/metrics.ts#L21" >}}">type <b>CognitoMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> CognitoMetricName = <span class='s2'>"CompromisedCredentialsRisk"</span> | <span class='s2'>"AccountTakeOverRisk"</span> | <span class='s2'>"OverrideBlock"</span> | <span class='s2'>"Risk"</span> | <span class='s2'>"NoRisk"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

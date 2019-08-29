@@ -212,113 +212,145 @@ https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/ec2/).
 
 
 <h2 class="pdoc-module-header" id="AllTcpPorts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L74" >}}">class <b>AllTcpPorts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L76" >}}">class <b>AllTcpPorts</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#TcpPorts'>TcpPorts</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="AllTcpPorts-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L74" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L76" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AllTcpPorts()</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllTcpPorts-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L67" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L69" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllTcpPorts-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L66" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L68" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <span class='s2'>"tcp"</span> = &#34;tcp&#34;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllTcpPorts-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L68" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L70" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AllTraffic">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L100" >}}">class <b>AllTraffic</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L102" >}}">class <b>AllTraffic</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="AllTraffic-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L102" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L104" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fromPort: 0 = 0;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllTraffic-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L101" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L103" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <span class='s2'>"-1"</span> = &#34;-1&#34;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllTraffic-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L103" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L105" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>toPort: 0 = 0;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AllUdpPorts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L87" >}}">class <b>AllUdpPorts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L89" >}}">class <b>AllUdpPorts</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#UdpPorts'>UdpPorts</a></pre>
+{{< /md-disable >}}
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="AllUdpPorts-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L87" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L89" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AllUdpPorts()</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllUdpPorts-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L82" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L84" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllUdpPorts-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L81" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L83" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <span class='s2'>"udp"</span> = &#34;udp&#34;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AllUdpPorts-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L83" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L85" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -327,12 +359,16 @@ https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/ec2/).
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L57" >}}">class <b>AnyIPv4Location</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="AnyIPv4Location-cidrBlocks">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L58" >}}">property <b>cidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] =  [&#34;0.0.0.0/0&#34;];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -341,12 +377,16 @@ https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/ec2/).
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L61" >}}">class <b>AnyIPv6Location</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="AnyIPv6Location-ipv6CidrBlocks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L62" >}}">property <b>ipv6CidrBlocks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L64" >}}">property <b>ipv6CidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>ipv6CidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] =  [&#34;::0/0&#34;];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>ipv6CidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] =  [&#34;::/0&#34;];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -359,10 +399,12 @@ https://pulumi.io/reference/pkg/nodejs/@pulumi/awsx/ec2/).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/cidr.ts#L43" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Cidr32Block(startIpAddressInclusive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, subnetMaskLeading1Bits: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Do not call directly.  Use the static factory methods to generate a cidr block
 
@@ -372,10 +414,12 @@ Do not call directly.  Use the static factory methods to generate a cidr block
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/cidr.ts#L68" >}}">method <b>fromCidrNotation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>fromCidrNotation(cidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#Cidr32Block'>Cidr32Block</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns a cidr block given notation like "a.b.c.d/n"
 
@@ -385,27 +429,33 @@ Returns a cidr block given notation like "a.b.c.d/n"
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/cidr.ts#L100" >}}">method <b>nextBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>nextBlock(): <a href='#Cidr32Block'>Cidr32Block</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cidr32Block-toString">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/cidr.ts#L106" >}}">method <b>toString</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>toString(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cidr32Block-endIpAddressExclusive">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/cidr.ts#L43" >}}">property <b>endIpAddressExclusive</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endIpAddressExclusive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -413,7 +463,9 @@ Returns a cidr block given notation like "a.b.c.d/n"
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/cidr.ts#L46" >}}">property <b>startIpAddressInclusive</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>startIpAddressInclusive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -421,84 +473,102 @@ Returns a cidr block given notation like "a.b.c.d/n"
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/cidr.ts#L47" >}}">property <b>subnetMaskLeading1Bits</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetMaskLeading1Bits: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EgressSecurityGroupRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L177" >}}">class <b>EgressSecurityGroupRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L179" >}}">class <b>EgressSecurityGroupRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#SecurityGroupRule'>SecurityGroupRule</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L177" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L179" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EgressSecurityGroupRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, args: <a href='#SimpleSecurityGroupRuleArgs'>SimpleSecurityGroupRuleArgs</a> | <a href='#EgressSecurityGroupRuleArgs'>EgressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-egress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L150" >}}">method <b>egress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L152" >}}">method <b>egress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-egressArgs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L124" >}}">method <b>egressArgs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L126" >}}">method <b>egressArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>egressArgs(destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#EgressSecurityGroupRuleArgs'>EgressSecurityGroupRuleArgs</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L179" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-ingress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L163" >}}">method <b>ingress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L165" >}}">method <b>ingress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-ingressArgs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L131" >}}">method <b>ingressArgs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L133" >}}">method <b>ingressArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>ingressArgs(source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#IngressSecurityGroupRuleArgs'>IngressSecurityGroupRuleArgs</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L179" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -506,36 +576,44 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L179" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-securityGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}">property <b>securityGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L110" >}}">property <b>securityGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroup: x.ec2.SecurityGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-securityGroupRule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L107" >}}">property <b>securityGroupRule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L109" >}}">property <b>securityGroupRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroupRule: aws.ec2.SecurityGroupRule;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L179" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -545,118 +623,144 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IcmpPorts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L93" >}}">class <b>IcmpPorts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L95" >}}">class <b>IcmpPorts</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="IcmpPorts-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L94" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L96" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IcmpPorts(fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;, toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IcmpPorts-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L95" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L97" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IcmpPorts-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L94" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L96" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <span class='s2'>"icmp"</span> = &#34;icmp&#34;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IcmpPorts-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L96" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L98" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressSecurityGroupRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L195" >}}">class <b>IngressSecurityGroupRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L197" >}}">class <b>IngressSecurityGroupRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#SecurityGroupRule'>SecurityGroupRule</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L195" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L197" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IngressSecurityGroupRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, args: <a href='#SimpleSecurityGroupRuleArgs'>SimpleSecurityGroupRuleArgs</a> | <a href='#IngressSecurityGroupRuleArgs'>IngressSecurityGroupRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-egress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L150" >}}">method <b>egress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L152" >}}">method <b>egress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-egressArgs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L124" >}}">method <b>egressArgs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L126" >}}">method <b>egressArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>egressArgs(destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#EgressSecurityGroupRuleArgs'>EgressSecurityGroupRuleArgs</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L197" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-ingress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L163" >}}">method <b>ingress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L165" >}}">method <b>ingress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-ingressArgs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L131" >}}">method <b>ingressArgs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L133" >}}">method <b>ingressArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>ingressArgs(source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#IngressSecurityGroupRuleArgs'>IngressSecurityGroupRuleArgs</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L197" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -664,36 +768,44 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L197" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-securityGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}">property <b>securityGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L110" >}}">property <b>securityGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroup: x.ec2.SecurityGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-securityGroupRule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L107" >}}">property <b>securityGroupRule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L109" >}}">property <b>securityGroupRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroupRule: aws.ec2.SecurityGroupRule;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L197" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -706,55 +818,69 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L21" >}}">class <b>SecurityGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="SecurityGroup-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L30" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SecurityGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SecurityGroupArgs'>SecurityGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-createEgressRule">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L89" >}}">method <b>createEgressRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createEgressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: x.ec2.SimpleSecurityGroupRuleArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): x.ec2.EgressSecurityGroupRule</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createEgressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: x.ec2.EgressSecurityGroupRuleArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): x.ec2.EgressSecurityGroupRule</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-createIngressRule">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L95" >}}">method <b>createIngressRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createIngressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: x.ec2.SimpleSecurityGroupRuleArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): x.ec2.IngressSecurityGroupRule</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createIngressRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: x.ec2.IngressSecurityGroupRuleArgs, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): x.ec2.IngressSecurityGroupRule</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-fromExistingId">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L79" >}}">method <b>fromExistingId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>fromExistingId(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, args: <a href='#SecurityGroupArgs'>SecurityGroupArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#SecurityGroup'>SecurityGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SecurityGroup resource's state with the given name and ID. This will not
 cause a SecurityGroup to be created, and removing this SecurityGroup from your pulumi
@@ -763,23 +889,27 @@ application will not cause the existing cloud resource to be destroyed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L21" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L21" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -787,20 +917,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L21" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-egressRules">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L26" >}}">property <b>egressRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>egressRules: x.ec2.IngressSecurityGroupRule[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -808,7 +942,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L23" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -816,7 +952,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L27" >}}">property <b>ingressRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ingressRules: x.ec2.IngressSecurityGroupRule[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -824,15 +962,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L22" >}}">property <b>securityGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroup: aws.ec2.SecurityGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L21" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -844,84 +986,102 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L24" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityGroupRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L106" >}}">class <b>SecurityGroupRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}">class <b>SecurityGroupRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="SecurityGroupRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L110" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SecurityGroupRule(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, args: <a href='#SecurityGroupRuleArgs'>SecurityGroupRuleArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-egress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L150" >}}">method <b>egress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L152" >}}">method <b>egress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>egress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EgressSecurityGroupRule'>EgressSecurityGroupRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-egressArgs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L124" >}}">method <b>egressArgs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L126" >}}">method <b>egressArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>egressArgs(destination: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#EgressSecurityGroupRuleArgs'>EgressSecurityGroupRuleArgs</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-ingress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L163" >}}">method <b>ingress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L165" >}}">method <b>ingress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>ingress(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, securityGroup: x.ec2.SecurityGroup, source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#IngressSecurityGroupRule'>IngressSecurityGroupRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-ingressArgs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L131" >}}">method <b>ingressArgs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L133" >}}">method <b>ingressArgs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>ingressArgs(source: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>, ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>, description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#IngressSecurityGroupRuleArgs'>IngressSecurityGroupRuleArgs</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -929,36 +1089,44 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-securityGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}">property <b>securityGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L110" >}}">property <b>securityGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroup: x.ec2.SecurityGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-securityGroupRule">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L107" >}}">property <b>securityGroupRule</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L109" >}}">property <b>securityGroupRule</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>securityGroupRule: aws.ec2.SecurityGroupRule;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L108" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -971,55 +1139,69 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L21" >}}">class <b>Subnet</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="Subnet-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L37" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Subnet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpc: x.ec2.Vpc, args: <a href='#SubnetArgs'>SubnetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Subnet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpc: x.ec2.Vpc, args: <a href='#ExistingSubnetArgs'>ExistingSubnetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-createRoute">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L85" >}}">method <b>createRoute</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createRoute(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RouteArgs'>RouteArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createRoute(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, provider: <a href='#SubnetRouteProvider'>SubnetRouteProvider</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L21" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L21" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1027,20 +1209,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L21" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-id">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Underlying id for the aws subnet.  This should be used over [this.subnet.id] as this
@@ -1052,7 +1238,9 @@ Output will only resolve once the route table and all associations are resolved.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L34" >}}">property <b>routeTable</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>routeTable: aws.ec2.RouteTable | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1060,7 +1248,9 @@ Output will only resolve once the route table and all associations are resolved.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L35" >}}">property <b>routeTableAssociation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>routeTableAssociation: aws.ec2.RouteTableAssociation | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1068,7 +1258,9 @@ Output will only resolve once the route table and all associations are resolved.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L37" >}}">property <b>routes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>routes: aws.ec2.Route[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1076,7 +1268,9 @@ Output will only resolve once the route table and all associations are resolved.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L33" >}}">property <b>subnet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnet: aws.ec2.Subnet;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1084,15 +1278,19 @@ Output will only resolve once the route table and all associations are resolved.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L26" >}}">property <b>subnetName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subnetName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subnet-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L21" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1104,87 +1302,109 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L25" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TcpPorts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L65" >}}">class <b>TcpPorts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L67" >}}">class <b>TcpPorts</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="TcpPorts-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L66" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L68" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TcpPorts(fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;, toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TcpPorts-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L67" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L69" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TcpPorts-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L66" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L68" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <span class='s2'>"tcp"</span> = &#34;tcp&#34;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TcpPorts-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L68" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L70" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UdpPorts">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L80" >}}">class <b>UdpPorts</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L82" >}}">class <b>UdpPorts</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>implements</span> <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="UdpPorts-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L81" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L83" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> UdpPorts(fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;, toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UdpPorts-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L82" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L84" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UdpPorts-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L81" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L83" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>protocol: <span class='s2'>"udp"</span> = &#34;udp&#34;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UdpPorts-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L83" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L85" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1193,30 +1413,38 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L26" >}}">class <b>Vpc</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="Vpc-constructor">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L50" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Vpc(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#VpcArgs'>VpcArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Vpc(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ExistingVpcArgs'>ExistingVpcArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vpc-addInternetGateway">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L179" >}}">method <b>addInternetGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addInternetGateway(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, subnets?: x.ec2.Subnet[], args: aws.ec2.InternetGatewayArgs, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): InternetGateway</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Adds an [awsx.ec2.InternetGateway] to this VPC.  Will fail if this Vpc already has an
 InternetGateway.
@@ -1227,10 +1455,12 @@ InternetGateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L206" >}}">method <b>addNatGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>addNatGateway(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: x.ec2.NatGatewayArgs, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): NatGateway</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Adds an [awsx.ec2.NatGateway] to this VPC. The NatGateway must be supplied a subnet (normally
 public) to be placed in.  After adding the NatGateway you should update the route table
@@ -1245,10 +1475,12 @@ This can be done by calling [subnet.createRoute] and passing in the newly create
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L264" >}}">method <b>fromExistingIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>fromExistingIds(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, idArgs: <a href='#ExistingVpcIdArgs'>ExistingVpcIdArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#Vpc'>Vpc</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Vpc resource's state with the given name and IDs of its relevant
 sub-resources. This will not cause a VPC (or any sub-resources) to be created, and removing
@@ -1261,10 +1493,12 @@ sub-resources) to be destroyed.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L221" >}}">method <b>getDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>getDefault(opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='#Vpc'>Vpc</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Gets the default vpc for the current aws account and region.
 
@@ -1277,43 +1511,51 @@ version be used instead.  This version will properly respect providers.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vpc-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L26" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vpc-getSubnetIds">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L163" >}}">method <b>getSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getSubnetIds(type: <a href='#VpcSubnetType'>VpcSubnetType</a>): OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; &amp; { ... }[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vpc-getSubnets">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L154" >}}">method <b>getSubnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getSubnets(type: <a href='#VpcSubnetType'>VpcSubnetType</a>): <a href='#Subnet'>Subnet</a>[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vpc-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L26" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1321,20 +1563,24 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vpc-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L26" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vpc-id">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L34" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1342,7 +1588,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L44" >}}">property <b>internetGateway</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>internetGateway?: x.ec2.InternetGateway;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The internet gateway created to allow traffic to/from the internet to the public subnets.
@@ -1354,7 +1602,9 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L31" >}}">property <b>isolatedSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>isolatedSubnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1362,7 +1612,9 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L38" >}}">property <b>isolatedSubnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>isolatedSubnets: x.ec2.Subnet[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1370,7 +1622,9 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L50" >}}">property <b>natGateways</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>natGateways: x.ec2.NatGateway[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The nat gateways created to allow private subnets access to the internet.
@@ -1382,7 +1636,9 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L30" >}}">property <b>privateSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privateSubnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1390,7 +1646,9 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L37" >}}">property <b>privateSubnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privateSubnets: x.ec2.Subnet[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1398,7 +1656,9 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L29" >}}">property <b>publicSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>publicSubnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1406,15 +1666,19 @@ Only available if this was created using [VpcArgs].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L36" >}}">property <b>publicSubnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>publicSubnets: x.ec2.Subnet[] =  [];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Vpc-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L26" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1426,7 +1690,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L33" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vpc: aws.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1435,31 +1701,37 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/vpcTopology.ts#L29" >}}">function <b>create</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>create(resource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Resource'>pulumi.Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, vpcName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, vpcCidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, ipv6CidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, availabilityZones: <a href='#AvailabilityZoneDescription'>AvailabilityZoneDescription</a>[], numberOfNatGateways: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, assignGeneratedIpv6CidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;, subnetArgsArray: x.ec2.VpcSubnetArgs[]): <a href='#VpcTopologyDescription'>VpcTopologyDescription</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getIPv4Address">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/cidr.ts#L136" >}}">function <b>getIPv4Address</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getIPv4Address(value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="EgressSecurityGroupRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L308" >}}">interface <b>EgressSecurityGroupRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L310" >}}">interface <b>EgressSecurityGroupRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-cidrBlocks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L312" >}}">property <b>cidrBlocks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L314" >}}">property <b>cidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of CIDR blocks. Cannot be specified with `source_security_group_id`.
@@ -1467,10 +1739,12 @@ List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L316" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L318" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Description of the rule.
@@ -1478,10 +1752,12 @@ Description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L320" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L322" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The start port (or ICMP type number if protocol is "icmp").
@@ -1489,10 +1765,12 @@ The start port (or ICMP type number if protocol is "icmp").
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-ipv6CidrBlocks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L324" >}}">property <b>ipv6CidrBlocks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L326" >}}">property <b>ipv6CidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6CidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv6 CIDR blocks.
@@ -1500,10 +1778,12 @@ List of IPv6 CIDR blocks.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-prefixListIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L328" >}}">property <b>prefixListIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L330" >}}">property <b>prefixListIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefixListIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of prefix list IDs (for allowing access to VPC endpoints).
@@ -1511,10 +1791,12 @@ List of prefix list IDs (for allowing access to VPC endpoints).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L333" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L335" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol. If not icmp, tcp, udp, or all use the [protocol
@@ -1523,10 +1805,12 @@ number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-self">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L338" >}}">property <b>self</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L340" >}}">property <b>self</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>self?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, the security group itself will be added as
@@ -1535,10 +1819,12 @@ a source to this ingress rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-sourceSecurityGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L343" >}}">property <b>sourceSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L345" >}}">property <b>sourceSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceSecurityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security group id to allow access to/from,
@@ -1547,10 +1833,12 @@ depending on the `type`. Cannot be specified with `cidr_blocks`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EgressSecurityGroupRuleArgs-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L347" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L349" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>toPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The end port (or ICMP code if protocol is "icmp").
@@ -1566,7 +1854,9 @@ The end port (or ICMP code if protocol is "icmp").
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L122" >}}">property <b>subnet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnet: aws.ec2.Subnet;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional existing instance to use to make the awsx Subnet out of.  If this is provided No
@@ -1583,7 +1873,9 @@ RouteTable or RouteTableAssociation will be automatically be created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L463" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc: aws.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the VPC.
@@ -1599,7 +1891,9 @@ The id of the VPC.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L452" >}}">property <b>internetGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>internetGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the internet gateway for this VPC
@@ -1610,7 +1904,9 @@ The id of the internet gateway for this VPC
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L450" >}}">property <b>isolatedSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isolatedSubnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The isolated subnets for the vpc.
@@ -1621,7 +1917,9 @@ The isolated subnets for the vpc.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L454" >}}">property <b>natGatewayIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>natGatewayIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ids of the nat gateways for this VPC
@@ -1632,7 +1930,9 @@ The ids of the nat gateways for this VPC
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L448" >}}">property <b>privateSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateSubnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The private subnets for the vpc.
@@ -1643,7 +1943,9 @@ The private subnets for the vpc.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L446" >}}">property <b>publicSubnetIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>publicSubnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The public subnets for the vpc.
@@ -1654,7 +1956,9 @@ The public subnets for the vpc.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L444" >}}">property <b>vpcId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the VPC.
@@ -1663,14 +1967,16 @@ The id of the VPC.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IngressSecurityGroupRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L355" >}}">interface <b>IngressSecurityGroupRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L357" >}}">interface <b>IngressSecurityGroupRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRuleArgs-cidrBlocks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L359" >}}">property <b>cidrBlocks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L361" >}}">property <b>cidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of CIDR blocks. Cannot be specified with `source_security_group_id`.
@@ -1678,10 +1984,12 @@ List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRuleArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L363" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L365" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Description of the rule.
@@ -1689,10 +1997,12 @@ Description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRuleArgs-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L367" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L369" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The start port (or ICMP type number if protocol is "icmp").
@@ -1700,10 +2010,12 @@ The start port (or ICMP type number if protocol is "icmp").
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRuleArgs-ipv6CidrBlocks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L371" >}}">property <b>ipv6CidrBlocks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L373" >}}">property <b>ipv6CidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6CidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv6 CIDR blocks.
@@ -1711,10 +2023,12 @@ List of IPv6 CIDR blocks.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRuleArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L376" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L378" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol. If not icmp, tcp, udp, or all use the [protocol
@@ -1723,10 +2037,12 @@ number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRuleArgs-self">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L381" >}}">property <b>self</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L383" >}}">property <b>self</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>self?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, the security group itself will be added as
@@ -1735,10 +2051,12 @@ a source to this ingress rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRuleArgs-sourceSecurityGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L386" >}}">property <b>sourceSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L388" >}}">property <b>sourceSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceSecurityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security group id to allow access to/from,
@@ -1747,10 +2065,12 @@ depending on the `type`. Cannot be specified with `cidr_blocks`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IngressSecurityGroupRuleArgs-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L390" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L392" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>toPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The end port (or ICMP code if protocol is "icmp").
@@ -1771,7 +2091,9 @@ The set of arguments for constructing a Route resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L140" >}}">property <b>destinationCidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationCidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The destination CIDR block.
@@ -1782,7 +2104,9 @@ The destination CIDR block.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L144" >}}">property <b>destinationIpv6CidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>destinationIpv6CidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The destination IPv6 CIDR block.
@@ -1793,7 +2117,9 @@ The destination IPv6 CIDR block.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L148" >}}">property <b>egressOnlyGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>egressOnlyGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Identifier of a VPC Egress Only Internet Gateway.
@@ -1804,7 +2130,9 @@ Identifier of a VPC Egress Only Internet Gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L152" >}}">property <b>gatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>gatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Identifier of a VPC internet gateway or a virtual private gateway.
@@ -1815,7 +2143,9 @@ Identifier of a VPC internet gateway or a virtual private gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L156" >}}">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Identifier of an EC2 instance.
@@ -1826,7 +2156,9 @@ Identifier of an EC2 instance.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L160" >}}">property <b>natGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>natGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Identifier of a VPC NAT gateway.
@@ -1837,7 +2169,9 @@ Identifier of a VPC NAT gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L164" >}}">property <b>networkInterfaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkInterfaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Identifier of an EC2 network interface.
@@ -1848,7 +2182,9 @@ Identifier of an EC2 network interface.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L168" >}}">property <b>transitGatewayId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transitGatewayId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Identifier of an EC2 Transit Gateway.
@@ -1859,7 +2195,9 @@ Identifier of an EC2 Transit Gateway.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L172" >}}">property <b>vpcPeeringConnectionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpcPeeringConnectionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Identifier of a VPC peering connection.
@@ -1875,7 +2213,9 @@ Identifier of a VPC peering connection.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L156" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security group description. Defaults to "Managed by Terraform". Cannot be "". __NOTE__:
@@ -1888,7 +2228,9 @@ you'd like to classify your security groups in a way that can be updated, use `t
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L162" >}}">property <b>egress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>egress?: x.ec2.EgressSecurityGroupRuleArgs[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Can be specified multiple times for each egress rule. Each egress block supports fields
@@ -1900,7 +2242,9 @@ documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L168" >}}">property <b>ingress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ingress?: x.ec2.IngressSecurityGroupRuleArgs[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Can be specified multiple times for each ingress rule. Each ingress block supports fields
@@ -1912,7 +2256,9 @@ documented below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L177" >}}">property <b>revokeRulesOnDelete</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>revokeRulesOnDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Instruct Terraform to revoke all of the Security Groups attached ingress and egress rules
@@ -1927,7 +2273,9 @@ from being destroyed without removing the dependency first. Default `false`
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L144" >}}">property <b>securityGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>securityGroup?: aws.ec2.SecurityGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An existing SecurityGroup to use for this awsx SecurityGroup.  If not provided, a default
@@ -1939,7 +2287,9 @@ one will be created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L179" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1947,7 +2297,9 @@ one will be created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L149" >}}">property <b>vpc</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vpc?: x.ec2.Vpc;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The vpc this security group applies to.  Or [Vpc.getDefault] if unspecified.
@@ -1956,14 +2308,16 @@ The vpc this security group applies to.  Or [Vpc.getDefault] if unspecified.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SecurityGroupRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L218" >}}">interface <b>SecurityGroupRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L220" >}}">interface <b>SecurityGroupRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-cidrBlocks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L222" >}}">property <b>cidrBlocks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L224" >}}">property <b>cidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of CIDR blocks. Cannot be specified with `source_security_group_id`.
@@ -1971,10 +2325,12 @@ List of CIDR blocks. Cannot be specified with `source_security_group_id`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L227" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L229" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Description of the rule.
@@ -1982,10 +2338,12 @@ Description of the rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-fromPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L232" >}}">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L234" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The start port (or ICMP type number if protocol is "icmp").
@@ -1993,10 +2351,12 @@ The start port (or ICMP type number if protocol is "icmp").
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-ipv6CidrBlocks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L237" >}}">property <b>ipv6CidrBlocks</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L239" >}}">property <b>ipv6CidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6CidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv6 CIDR blocks.
@@ -2004,10 +2364,12 @@ List of IPv6 CIDR blocks.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-prefixListIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L242" >}}">property <b>prefixListIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L244" >}}">property <b>prefixListIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>prefixListIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of prefix list IDs (for allowing access to VPC endpoints). Only valid with `egress`.
@@ -2015,10 +2377,12 @@ List of prefix list IDs (for allowing access to VPC endpoints). Only valid with 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-protocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L248" >}}">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L250" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol. If not icmp, tcp, udp, or all use the [protocol
@@ -2027,10 +2391,12 @@ number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-self">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L254" >}}">property <b>self</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L256" >}}">property <b>self</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>self?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If true, the security group itself will be added as
@@ -2039,10 +2405,12 @@ a source to this ingress rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-sourceSecurityGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L260" >}}">property <b>sourceSecurityGroupId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L262" >}}">property <b>sourceSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceSecurityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security group id to allow access to/from, depending on the `type`. Cannot be specified
@@ -2051,10 +2419,12 @@ with `cidr_blocks`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-toPort">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L265" >}}">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L267" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>toPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The end port (or ICMP code if protocol is "icmp").
@@ -2062,10 +2432,12 @@ The end port (or ICMP code if protocol is "icmp").
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SecurityGroupRuleArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L271" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L273" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"ingress"</span> | <span class='s2'>"egress"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of rule being created. Valid options are `ingress` (inbound)
@@ -2082,7 +2454,9 @@ or `egress` (outbound).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L25" >}}">property <b>cidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of CIDR blocks. Cannot be specified with `sourceSecurityGroupId`.
@@ -2093,7 +2467,9 @@ List of CIDR blocks. Cannot be specified with `sourceSecurityGroupId`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L30" >}}">property <b>ipv6CidrBlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6CidrBlocks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv6 CIDR blocks.
@@ -2104,7 +2480,9 @@ List of IPv6 CIDR blocks.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L36" >}}">property <b>sourceSecurityGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceSecurityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The security group id to allow access to/from, depending on the `type`. Cannot be specified
@@ -2121,7 +2499,9 @@ with `cidrblocks`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L50" >}}">property <b>fromPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fromPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The start port (or ICMP type number if protocol is "icmp").
@@ -2132,7 +2512,9 @@ The start port (or ICMP type number if protocol is "icmp").
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L46" >}}">property <b>protocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SecurityGroupRuleProtocol'>SecurityGroupRuleProtocol</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The protocol. If not icmp, tcp, udp, or all use the [protocol
@@ -2144,7 +2526,9 @@ number](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L54" >}}">property <b>toPort</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>toPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The end port (or ICMP code if protocol is "icmp").  Defaults to 'fromPort' if not specified.
@@ -2153,14 +2537,16 @@ The end port (or ICMP code if protocol is "icmp").  Defaults to 'fromPort' if no
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SimpleSecurityGroupRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L274" >}}">interface <b>SimpleSecurityGroupRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L276" >}}">interface <b>SimpleSecurityGroupRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="SimpleSecurityGroupRuleArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L295" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L297" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional description for the rule to make it easier to document in the AWS console.
@@ -2168,10 +2554,12 @@ Optional description for the rule to make it easier to document in the AWS conso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SimpleSecurityGroupRuleArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L282" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L284" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <a href='#SecurityGroupRuleLocation'>SecurityGroupRuleLocation</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The source or destination location of the rule.  This allows controlling of the ipv4 or ipv6
@@ -2183,10 +2571,12 @@ using the AnyIPv4Location and AnyIPv6Location types.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SimpleSecurityGroupRuleArgs-ports">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L290" >}}">property <b>ports</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L292" >}}">property <b>ports</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ports: <a href='#SecurityGroupRulePorts'>SecurityGroupRulePorts</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ports and protocol this rule allows access to/from.  There are easy ways to open anything
@@ -2205,7 +2595,9 @@ from a single port, to a wide set of ports, to all ports and all protocols using
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L189" >}}">property <b>assignIpv6AddressOnCreation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>assignIpv6AddressOnCreation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify true to indicate that network interfaces created in the specified subnet should be
@@ -2218,7 +2610,9 @@ assigned an IPv6 address. Default's to `true` if the Vpc this is associated with
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L193" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AZ for the subnet.
@@ -2229,7 +2623,9 @@ The AZ for the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L197" >}}">property <b>availabilityZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AZ ID of the subnet.
@@ -2240,7 +2636,9 @@ The AZ ID of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L183" >}}">property <b>cidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The CIDR block for the subnet.
@@ -2251,7 +2649,9 @@ The CIDR block for the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L202" >}}">property <b>ipv6CidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6CidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 network range for the subnet,
@@ -2263,7 +2663,9 @@ in CIDR notation. The subnet size must use a /64 prefix length.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L207" >}}">property <b>mapPublicIpOnLaunch</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mapPublicIpOnLaunch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify true to indicate that instances launched into the subnet should be assigned a public
@@ -2275,7 +2677,9 @@ IP address. Default is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L211" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2291,10 +2695,12 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L106" >}}">method <b>route</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>route(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#RouteArgs'>RouteArgs</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -2306,7 +2712,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L513" >}}">property <b>assignGeneratedIpv6CidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>assignGeneratedIpv6CidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC. You cannot
@@ -2319,7 +2727,9 @@ to `true`, then subnets created will default to `assignIpv6AddressOnCreation: tr
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L518" >}}">property <b>cidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidrBlock?: <a href='#CidrBlock'>CidrBlock</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The CIDR block for the VPC.  Defaults to "10.0.0.0/16" if unspecified.
@@ -2330,7 +2740,9 @@ The CIDR block for the VPC.  Defaults to "10.0.0.0/16" if unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L524" >}}">property <b>enableClassiclink</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableClassiclink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean flag to enable/disable ClassicLink
@@ -2343,7 +2755,9 @@ See the [ClassicLink documentation][1] for more information. Defaults false.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L529" >}}">property <b>enableClassiclinkDnsSupport</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableClassiclinkDnsSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean flag to enable/disable ClassicLink DNS Support for the VPC.
@@ -2355,7 +2769,9 @@ Only valid in regions and accounts that support EC2 Classic.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L533" >}}">property <b>enableDnsHostnames</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableDnsHostnames?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean flag to enable/disable DNS hostnames in the VPC. Defaults to true if unspecified.
@@ -2366,7 +2782,9 @@ A boolean flag to enable/disable DNS hostnames in the VPC. Defaults to true if u
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L537" >}}">property <b>enableDnsSupport</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableDnsSupport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean flag to enable/disable DNS support in the VPC. Defaults true if unspecified.
@@ -2377,7 +2795,9 @@ A boolean flag to enable/disable DNS support in the VPC. Defaults true if unspec
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L541" >}}">property <b>instanceTenancy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceTenancy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"default"</span> | <span class='s2'>"dedicated"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A tenancy option for instances launched into the VPC.  Defaults to "default" if unspecified.
@@ -2388,7 +2808,9 @@ A tenancy option for instances launched into the VPC.  Defaults to "default" if 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L485" >}}">property <b>numberOfAvailabilityZones</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfAvailabilityZones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='s2'>"all"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of availability zones to use in the current region.  Defaults to `2` if
@@ -2400,7 +2822,9 @@ unspecified.  Use `"all"` to use all the availability zones in the current regio
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L506" >}}">property <b>numberOfNatGateways</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfNatGateways?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The max number of NAT gateways to create if there are any private subnets created.  A NAT
@@ -2427,7 +2851,9 @@ Defaults to [numberOfAvailabilityZones].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L479" >}}">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subnets?: <a href='#VpcSubnetArgs'>VpcSubnetArgs</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The information about what subnets to create per availability zone.  Defaults to one public and
@@ -2439,7 +2865,9 @@ one private subnet if unspecified.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L545" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2468,7 +2896,9 @@ See https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html for more d
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L406" >}}">property <b>assignIpv6AddressOnCreation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>assignIpv6AddressOnCreation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify true to indicate that network interfaces created in the specified subnet should be
@@ -2480,7 +2910,9 @@ assigned an IPv6 address. Defaults to the value of VpcArgs.assignGeneratedIpv6Ci
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L386" >}}">property <b>cidrMask</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidrMask?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of leading bits in the Vpc cidrBlock to use to define the cidrBlock for this
@@ -2501,7 +2933,9 @@ If this property is provided, [location] cannot be provided.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L400" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='#CidrBlock'>CidrBlock</a> | <a href='#VpcSubnetLocation'>VpcSubnetLocation</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 More precise information about the location of this subnet.  Can either be a simple CidrBlock
@@ -2521,7 +2955,9 @@ If this property is provided for one subnet, it must be provided for all subnets
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L412" >}}">property <b>mapPublicIpOnLaunch</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mapPublicIpOnLaunch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify true to indicate that instances launched into the subnet should be assigned a public
@@ -2533,7 +2969,9 @@ IP address. Default's to `true` if `type` is `public`.  `false` otherwise.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L371" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional name to use as part of the subnet name.  If not provided, will be set to
@@ -2546,7 +2984,9 @@ multiple subnets with the same type.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L414" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;aws.Tags&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2554,7 +2994,9 @@ multiple subnets with the same type.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L364" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='#VpcSubnetType'>VpcSubnetType</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of subnet to make in each availability zone.
@@ -2570,7 +3012,9 @@ The type of subnet to make in each availability zone.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L426" >}}">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AZ for the subnet.
@@ -2581,7 +3025,9 @@ The AZ for the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L430" >}}">property <b>availabilityZoneId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The AZ ID of the subnet.
@@ -2592,7 +3038,9 @@ The AZ ID of the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L434" >}}">property <b>cidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cidrBlock: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CidrBlock'>CidrBlock</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The CIDR block for the subnet.
@@ -2603,7 +3051,9 @@ The CIDR block for the subnet.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L439" >}}">property <b>ipv6CidrBlock</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6CidrBlock?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 network range for the subnet, in CIDR notation. The subnet size must use a /64
@@ -2620,10 +3070,12 @@ prefix length.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L136" >}}">function <b>cpuCreditBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuCreditBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of earned CPU credits that an instance has accrued since it was launched or started.
 For T2 Standard, the CPUCreditBalance also includes the number of launch credits that have been
@@ -2650,10 +3102,12 @@ CPU credit metrics are available at a five-minute frequency only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L112" >}}">function <b>cpuCreditUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuCreditUsage(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of CPU credits spent by the instance for CPU utilization. One CPU credit equals one
 vCPU running at 100% utilization for one minute or an equivalent combination of vCPUs,
@@ -2669,10 +3123,12 @@ than five minutes, use the Sum statistic instead of the Average statistic.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L148" >}}">function <b>cpuSurplusCreditBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuSurplusCreditBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of surplus credits that have been spent by an unlimited instance when its
 CPUCreditBalance value is zero.
@@ -2687,10 +3143,12 @@ spent surplus credits above the maximum incur an additional charge.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L163" >}}">function <b>cpuSurplusCreditsCharged</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuSurplusCreditsCharged(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of spent surplus credits that are not paid down by earned CPU credits, and which thus
 incur an additional charge.
@@ -2708,10 +3166,12 @@ Spent surplus credits are charged when any of the following occurs:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L177" >}}">function <b>cpuUtilization</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuUtilization(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The percentage of allocated EC2 compute units that are currently in use on the instance. This
 metric identifies the processing power required to run an application upon a selected
@@ -2728,10 +3188,12 @@ Units: Percent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L225" >}}">function <b>diskReadBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskReadBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Bytes read from all instance store volumes available to the instance.
 
@@ -2752,10 +3214,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L192" >}}">function <b>diskReadOps</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskReadOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Completed read operations from all instance store volumes available to the instance in a
 specified period of time.
@@ -2773,10 +3237,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L243" >}}">function <b>diskWriteBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskWriteBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Bytes written to all instance store volumes available to the instance.
 
@@ -2797,10 +3263,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L207" >}}">function <b>diskWriteOps</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskWriteOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Completed write operations to all instance store volumes available to the instance in a
 specified period of time.
@@ -2818,10 +3286,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L415" >}}">function <b>ebsByteBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ebsByteBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Available only for the smaller instance sizes. Provides information about the percentage of
 throughput credits remaining in the burst bucket. This metric is available for basic
@@ -2835,10 +3305,12 @@ Unit: Percent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L404" >}}">function <b>ebsIOBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ebsIOBalance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Available only for the smaller instance sizes. Provides information about the percentage of
 I/O credits remaining in the burst bucket. This metric is available for basic monitoring
@@ -2852,10 +3324,12 @@ Unit: Percent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L380" >}}">function <b>ebsReadBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ebsReadBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Bytes read from all EBS volumes attached to the instance in a specified period of time.
 
@@ -2871,10 +3345,12 @@ Unit: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L352" >}}">function <b>ebsReadOps</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ebsReadOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Completed read operations from all Amazon EBS volumes attached to the instance in a specified
 period of time.
@@ -2892,10 +3368,12 @@ Unit: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L393" >}}">function <b>ebsWriteBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ebsWriteBytes(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Bytes written to all EBS volumes attached to the instance in a specified period of time.
 
@@ -2911,10 +3389,12 @@ Unit: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L367" >}}">function <b>ebsWriteOps</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ebsWriteOps(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Completed write operations to all EBS volumes attached to the instance in a specified period
 of time.
@@ -2932,10 +3412,12 @@ Unit: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L82" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#Ec2MetricName'>Ec2MetricName</a>, change: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/EC2 metric with the requested [metricName]. See
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/viewing_metrics_with_cloudwatch.html for list
@@ -2973,10 +3455,12 @@ You can use the following dimensions to refine the metrics returned for your ins
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L257" >}}">function <b>networkIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkIn(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of bytes received on all network interfaces by the instance. This metric
 identifies the volume of incoming network traffic to a single instance.
@@ -2993,10 +3477,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L271" >}}">function <b>networkOut</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkOut(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of bytes sent out on all network interfaces by the instance. This metric
 identifies the volume of outgoing network traffic from a single instance.
@@ -3013,10 +3499,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L284" >}}">function <b>networkPacketsIn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkPacketsIn(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of packets received on all network interfaces by the instance. This metric
 identifies the volume of incoming traffic in terms of the number of packets on a single
@@ -3032,10 +3520,12 @@ Statistics: Minimum, Maximum, Average
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L297" >}}">function <b>networkPacketsOut</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkPacketsOut(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of packets sent out on all network interfaces by the instance. This metric
 identifies the volume of outgoing traffic in terms of the number of packets on a single
@@ -3051,10 +3541,12 @@ Statistics: Minimum, Maximum, Average
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L311" >}}">function <b>statusCheckFailed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCheckFailed(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Reports whether the instance has passed both the instance status check and the system status
 check in the last minute.
@@ -3071,10 +3563,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L324" >}}">function <b>statusCheckFailed_Instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCheckFailed_Instance(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Reports whether the instance has passed the instance status check in the last minute.
 
@@ -3090,10 +3584,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L337" >}}">function <b>statusCheckFailed_System</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statusCheckFailed_System(change?: <a href='#Ec2MetricChange'>Ec2MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Reports whether the instance has passed the system status check in the last minute.
 
@@ -3115,7 +3611,9 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -3128,7 +3626,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -3141,7 +3641,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -3154,7 +3656,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L39" >}}">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>imageId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for all instances running this Amazon EC2
@@ -3166,7 +3670,9 @@ Amazon Machine Image (AMI). Available for instances with Detailed Monitoring ena
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L33" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance?: aws.ec2.Instance;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional [Instance] this metric should be filtered down to.
@@ -3177,7 +3683,9 @@ Optional [Instance] this metric should be filtered down to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L48" >}}">property <b>instanceType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceType?: aws.ec2.InstanceType;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for all instances running with this specified
@@ -3192,7 +3700,9 @@ instances with Detailed Monitoring enabled.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -3207,7 +3717,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -3220,7 +3732,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -3233,7 +3747,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -3246,7 +3762,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -3260,7 +3778,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -3274,7 +3794,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="ec2/metrics.ts#L21" >}}">type <b>Ec2MetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Ec2MetricName = <span class='s2'>"CPUCreditUsage"</span> | <span class='s2'>"CPUCreditBalance"</span> | <span class='s2'>"CPUSurplusCreditBalance"</span> | <span class='s2'>"CPUSurplusCreditsCharged"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"DiskReadOps"</span> | <span class='s2'>"DiskWriteOps"</span> | <span class='s2'>"DiskReadBytes"</span> | <span class='s2'>"DiskWriteBytes"</span> | <span class='s2'>"NetworkIn"</span> | <span class='s2'>"NetworkOut"</span> | <span class='s2'>"NetworkPacketsIn"</span> | <span class='s2'>"NetworkPacketsOut"</span> | <span class='s2'>"StatusCheckFailed"</span> | <span class='s2'>"StatusCheckFailed_Instance"</span> | <span class='s2'>"StatusCheckFailed_System"</span> | <span class='s2'>"EBSReadOps"</span> | <span class='s2'>"EBSWriteOps"</span> | <span class='s2'>"EBSReadBytes"</span> | <span class='s2'>"EBSWriteBytes"</span> | <span class='s2'>"EBSIOBalance%"</span> | <span class='s2'>"EBSByteBalance%"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -3283,7 +3805,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L420" >}}">type <b>CidrBlock</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> CidrBlock = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Alias for a cidr block.
@@ -3294,25 +3818,33 @@ Alias for a cidr block.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroup.ts#L105" >}}">type <b>SecurityGroupOrId</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> SecurityGroupOrId = <a href='#SecurityGroup'>SecurityGroup</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="SecurityGroupRuleProtocol">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/securityGroupRule.ts#L39" >}}">type <b>SecurityGroupRuleProtocol</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> SecurityGroupRuleProtocol = <span class='s2'>"-1"</span> | <span class='s2'>"tcp"</span> | <span class='s2'>"udp"</span> | <span class='s2'>"icmp"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="SubnetOrId">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/subnet.ts#L113" >}}">type <b>SubnetOrId</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> SubnetOrId = <a href='#Subnet'>Subnet</a> | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="VpcSubnetType">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="ec2/vpc.ts#L347" >}}">type <b>VpcSubnetType</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> VpcSubnetType = <span class='s2'>"public"</span> | <span class='s2'>"private"</span> | <span class='s2'>"isolated"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of this subet.

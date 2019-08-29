@@ -33,7 +33,9 @@ title: Module config
 <a class="pdoc-member-name" href="{{< pkg-url pkg="docker" path="config/vars.ts#L12" >}}">let <b>caMaterial</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> caMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;caMaterial&#34;) || utilities.getEnv(&#34;DOCKER_CA_MATERIAL&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 PEM-encoded content of Docker host CA certificate
@@ -44,7 +46,9 @@ PEM-encoded content of Docker host CA certificate
 <a class="pdoc-member-name" href="{{< pkg-url pkg="docker" path="config/vars.ts#L16" >}}">let <b>certMaterial</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> certMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certMaterial&#34;) || utilities.getEnv(&#34;DOCKER_CERT_MATERIAL&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 PEM-encoded content of Docker client certificate
@@ -55,7 +59,9 @@ PEM-encoded content of Docker client certificate
 <a class="pdoc-member-name" href="{{< pkg-url pkg="docker" path="config/vars.ts#L20" >}}">let <b>certPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> certPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;certPath&#34;) || utilities.getEnv(&#34;DOCKER_CERT_PATH&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Path to directory with Docker TLS config
@@ -66,7 +72,9 @@ Path to directory with Docker TLS config
 <a class="pdoc-member-name" href="{{< pkg-url pkg="docker" path="config/vars.ts#L24" >}}">let <b>host</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> = <span class='s2'> utilities.requireWithDefault(() =&gt; __config.require(&#34;host&#34;), (utilities.getEnv(&#34;DOCKER_HOST&#34;) || &#34;unix:///var/run/docker.sock&#34;))</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Docker daemon address
@@ -77,7 +85,9 @@ The Docker daemon address
 <a class="pdoc-member-name" href="{{< pkg-url pkg="docker" path="config/vars.ts#L28" >}}">let <b>keyMaterial</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> keyMaterial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;keyMaterial&#34;) || utilities.getEnv(&#34;DOCKER_KEY_MATERIAL&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 PEM-encoded content of Docker client private key
@@ -88,10 +98,12 @@ PEM-encoded content of Docker client private key
 <a class="pdoc-member-name" href="{{< pkg-url pkg="docker" path="config/vars.ts#L29" >}}">let <b>registryAuth</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> registryAuth: {
     address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     configFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 }[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;{ address: string, configFile?: string, password?: string, username?: string }[]&gt;(&#34;registryAuth&#34;)</span>;</pre>
+{{< /md-disable >}}
 </div>

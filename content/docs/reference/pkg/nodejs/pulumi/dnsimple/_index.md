@@ -68,13 +68,15 @@ import * as dnsimple from "@pulumi/dnsimple";
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L15" >}}">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider type for the dnsimple package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) for more information.
+[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/index.html.markdown.
 
@@ -83,10 +85,12 @@ construction to achieve fine-grained programmatic control over provider settings
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L28" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Provider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ProviderArgs'>ProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Provider resource with the given unique name, arguments, and options.
 
@@ -100,20 +104,24 @@ Create a Provider resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L15" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L23" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -124,7 +132,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L15" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -136,7 +146,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L15" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -149,7 +161,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L12" >}}">class <b>Record</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-dnsimple/blob/master/website/docs/r/record.html.markdown.
@@ -159,10 +173,12 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Record(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#RecordArgs'>RecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Record resource with the given unique name, arguments, and options.
 
@@ -176,10 +192,12 @@ Create a Record resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RecordState'>RecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Record'>Record</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Record resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -190,20 +208,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L12" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Record-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Record.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -214,7 +236,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L42" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to add the record to
@@ -225,7 +249,9 @@ The domain to add the record to
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L46" >}}">property <b>domainId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain ID of the record
@@ -236,7 +262,9 @@ The domain ID of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L50" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the record
@@ -247,7 +275,9 @@ The FQDN of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L12" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -259,7 +289,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L54" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the record
@@ -270,7 +302,9 @@ The name of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L58" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the record - only useful for some record types
@@ -281,7 +315,9 @@ The priority of the record - only useful for some record types
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L62" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of the record
@@ -292,7 +328,9 @@ The TTL of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L66" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the record
@@ -303,7 +341,9 @@ The type of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L12" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -315,7 +355,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L70" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the record
@@ -327,40 +369,48 @@ The value of the record
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="utilities.ts#L5" >}}">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="utilities.ts#L15" >}}">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="utilities.ts#L30" >}}">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="utilities.ts#L41" >}}">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
@@ -376,7 +426,9 @@ The set of arguments for constructing a Provider resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L63" >}}">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>account?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The account for API operations.
@@ -387,7 +439,9 @@ The account for API operations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L67" >}}">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The DNSimple account email address.
@@ -398,7 +452,9 @@ The DNSimple account email address.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="provider.ts#L71" >}}">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The API v2 token for API operations.
@@ -419,7 +475,9 @@ The set of arguments for constructing a Record resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L171" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to add the record to
@@ -430,7 +488,9 @@ The domain to add the record to
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L175" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the record
@@ -441,7 +501,9 @@ The name of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L179" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the record - only useful for some record types
@@ -452,7 +514,9 @@ The priority of the record - only useful for some record types
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L183" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of the record
@@ -463,7 +527,9 @@ The TTL of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L187" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the record
@@ -474,7 +540,9 @@ The type of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L191" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the record
@@ -495,7 +563,9 @@ Input properties used for looking up and filtering Record resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L133" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to add the record to
@@ -506,7 +576,9 @@ The domain to add the record to
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L137" >}}">property <b>domainId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain ID of the record
@@ -517,7 +589,9 @@ The domain ID of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L141" >}}">property <b>hostname</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the record
@@ -528,7 +602,9 @@ The FQDN of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L145" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the record
@@ -539,7 +615,9 @@ The name of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L149" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the record - only useful for some record types
@@ -550,7 +628,9 @@ The priority of the record - only useful for some record types
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L153" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of the record
@@ -561,7 +641,9 @@ The TTL of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L157" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of the record
@@ -572,7 +654,9 @@ The type of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="record.ts#L161" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the record
@@ -588,7 +672,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L2" >}}">const <b>A</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> A: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;A&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -596,7 +682,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L3" >}}">const <b>AAAA</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> AAAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;AAAA&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -604,7 +692,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L4" >}}">const <b>ALIAS</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> ALIAS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;ALIAS&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -612,7 +702,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L5" >}}">const <b>CAA</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> CAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CAA&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -620,7 +712,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L6" >}}">const <b>CNAME</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> CNAME: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CNAME&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -628,7 +722,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L7" >}}">const <b>HINFO</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> HINFO: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;HINFO&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -636,7 +732,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L8" >}}">const <b>MX</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> MX: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;MX&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -644,7 +742,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L9" >}}">const <b>NAPTR</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> NAPTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NAPTR&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -652,7 +752,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L10" >}}">const <b>NS</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> NS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NS&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -660,7 +762,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L11" >}}">const <b>POOL</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> POOL: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;POOL&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -668,7 +772,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L12" >}}">const <b>PTR</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> PTR: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;PTR&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -676,7 +782,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L13" >}}">const <b>SPF</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> SPF: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SPF&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -684,7 +792,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L14" >}}">const <b>SRV</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> SRV: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SRV&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -692,7 +802,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L15" >}}">const <b>SSHFP</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> SSHFP: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SSHFP&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -700,7 +812,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L16" >}}">const <b>TXT</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> TXT: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;TXT&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -708,7 +822,9 @@ The value of the record
 <a class="pdoc-child-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L17" >}}">const <b>URL</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> URL: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;URL&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -717,5 +833,7 @@ The value of the record
 <a class="pdoc-member-name" href="{{< pkg-url pkg="dnsimple" path="recordType.ts#L20" >}}">type <b>RecordType</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> RecordType = <span class='s2'>"A"</span> | <span class='s2'>"AAAA"</span> | <span class='s2'>"ALIAS"</span> | <span class='s2'>"CAA"</span> | <span class='s2'>"CNAME"</span> | <span class='s2'>"HINFO"</span> | <span class='s2'>"MX"</span> | <span class='s2'>"NAPTR"</span> | <span class='s2'>"NS"</span> | <span class='s2'>"POOL"</span> | <span class='s2'>"PTR"</span> | <span class='s2'>"SPF"</span> | <span class='s2'>"SRV"</span> | <span class='s2'>"SSHFP"</span> | <span class='s2'>"TXT"</span> | <span class='s2'>"URL"</span>;</pre>
+{{< /md-disable >}}
 </div>

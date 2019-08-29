@@ -467,7 +467,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RoleDefinitionPermission'>RoleDefinitionPermission</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RoleDefinitionPermission'>outputs.authorization.RoleDefinitionPermission</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1065,7 +1065,7 @@ id is the provider-assigned unique ID for this managed resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>permissions: <a href='#GetBuiltinRoleDefinitionPermission'>GetBuiltinRoleDefinitionPermission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetBuiltinRoleDefinitionPermission'>outputs.authorization.GetBuiltinRoleDefinitionPermission</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1199,7 +1199,7 @@ id is the provider-assigned unique ID for this managed resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>permissions: <a href='#GetRoleDefinitionPermission'>GetRoleDefinitionPermission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetRoleDefinitionPermission'>outputs.authorization.GetRoleDefinitionPermission</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1425,7 +1425,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RoleDefinitionPermission'>RoleDefinitionPermission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RoleDefinitionPermission'>inputs.authorization.RoleDefinitionPermission</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1513,7 +1513,7 @@ The name of the Role Definition. Changing this forces a new resource to be creat
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RoleDefinitionPermission'>RoleDefinitionPermission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RoleDefinitionPermission'>inputs.authorization.RoleDefinitionPermission</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

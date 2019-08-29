@@ -147,7 +147,9 @@ import * as pulumi from "@pulumi/pulumi";
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L637" >}}">class <b>ComponentResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Resource'>Resource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ComponentResource is a resource that aggregates one or more other child resources into a higher
@@ -159,10 +161,12 @@ operations for provisioning.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L651" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ComponentResource(type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, unused?: <a href='#Inputs'>Inputs</a>, opts: <a href='#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates and registers a new component resource.  [type] is the fully qualified type token and
 [name] is the "name" part to use in creating a stable and globally unique URN for the object.
@@ -181,20 +185,24 @@ perform resource operations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L177" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentResource-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L649" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -205,17 +213,21 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L685" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#Inputs'>Inputs</a>&gt; | <a href='#Output'>Output</a>&lt;<a href='#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ComponentResource-urn">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L134" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -241,20 +253,24 @@ fully qualified names, such as `pulumi:foo:a`, ..., and `pulumi:bar:a`, respecti
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L37" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Config(name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Config-get">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>get&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): K | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 get loads an optional configuration value by its key, or undefined if it doesn't exist.
 
@@ -264,10 +280,12 @@ get loads an optional configuration value by its key, or undefined if it doesn't
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L108" >}}">method <b>getBoolean</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getBoolean(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getBoolean loads an optional configuration value, as a boolean, by its key, or undefined if it doesn't exist.
 If the configuration value isn't a legal boolean, this function will throw an error.
@@ -278,10 +296,12 @@ If the configuration value isn't a legal boolean, this function will throw an er
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L143" >}}">method <b>getNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#NumberConfigOptions'>NumberConfigOptions</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getNumber loads an optional configuration value, as a number, by its key, or undefined if it doesn't exist.
 If the configuration value isn't a legal number, this function will throw an error.
@@ -292,10 +312,12 @@ If the configuration value isn't a legal number, this function will throw an err
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L185" >}}">method <b>getObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getObject&lt;T&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getObject loads an optional configuration value, as an object, by its key, or undefined if it doesn't exist.
 This routine simply JSON parses and doesn't validate the shape of the contents.
@@ -306,10 +328,12 @@ This routine simply JSON parses and doesn't validate the shape of the contents.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L93" >}}">method <b>getSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getSecret&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): <a href='#Output'>Output</a>&lt;K&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getSecret loads an optional configuration value by its key, marking it as a secret, or undefined if it
 doesn't exist.
@@ -320,10 +344,12 @@ doesn't exist.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L127" >}}">method <b>getSecretBoolean</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getSecretBoolean(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getSecretBoolean loads an optional configuration value, as a boolean, by its key, making it as a secret
 or undefined if it doesn't exist. If the configuration value isn't a legal boolean, this function will
@@ -335,10 +361,12 @@ throw an error.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L170" >}}">method <b>getSecretNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getSecretNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#NumberConfigOptions'>NumberConfigOptions</a>): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getSecretNumber loads an optional configuration value, as a number, by its key, marking it as a secret
 or undefined if it doesn't exist.
@@ -350,10 +378,12 @@ If the configuration value isn't a legal number, this function will throw an err
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L205" >}}">method <b>getSecretObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getSecretObject&lt;T&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#Output'>Output</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getSecretObject loads an optional configuration value, as an object, by its key, marking it as a secret
 or undefined if it doesn't exist.
@@ -365,10 +395,12 @@ This routine simply JSON parses and doesn't validate the shape of the contents.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L221" >}}">method <b>require</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>require&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): K</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 require loads a configuration value by its given key.  If it doesn't exist, an error is thrown.
 
@@ -378,10 +410,12 @@ require loads a configuration value by its given key.  If it doesn't exist, an e
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L246" >}}">method <b>requireBoolean</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireBoolean(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 requireBoolean loads a configuration value, as a boolean, by its given key.  If it doesn't exist, or the
 configuration value is not a legal boolean, an error is thrown.
@@ -392,10 +426,12 @@ configuration value is not a legal boolean, an error is thrown.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L271" >}}">method <b>requireNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#NumberConfigOptions'>NumberConfigOptions</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 requireNumber loads a configuration value, as a number, by its given key.  If it doesn't exist, or the
 configuration value is not a legal number, an error is thrown.
@@ -406,10 +442,12 @@ configuration value is not a legal number, an error is thrown.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L296" >}}">method <b>requireObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireObject&lt;T&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): T</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 requireObject loads a configuration value as a JSON string and deserializes the JSON into a JavaScript object. If
 it doesn't exist, or the configuration value is not a legal JSON string, an error is thrown.
@@ -420,10 +458,12 @@ it doesn't exist, or the configuration value is not a legal JSON string, an erro
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L236" >}}">method <b>requireSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireSecret&lt;K&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#StringConfigOptions'>StringConfigOptions</a>&lt;K&gt;): <a href='#Output'>Output</a>&lt;K&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 require loads a configuration value by its given key, marking it as a secet.  If it doesn't exist, an error
 is thrown.
@@ -434,10 +474,12 @@ is thrown.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L260" >}}">method <b>requireSecretBoolean</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireSecretBoolean(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 requireSecretBoolean loads a configuration value, as a boolean, by its given key, marking it as a secret.
 If it doesn't exist, or the configuration value is not a legal boolean, an error is thrown.
@@ -448,10 +490,12 @@ If it doesn't exist, or the configuration value is not a legal boolean, an error
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L286" >}}">method <b>requireSecretNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireSecretNumber(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, opts?: <a href='#NumberConfigOptions'>NumberConfigOptions</a>): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 requireSecretNumber loads a configuration value, as a number, by its given key, marking it as a secret.
 If it doesn't exist, or the configuration value is not a legal number, an error is thrown.
@@ -462,10 +506,12 @@ If it doesn't exist, or the configuration value is not a legal number, an error 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L311" >}}">method <b>requireSecretObject</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireSecretObject&lt;T&gt;(key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#Output'>Output</a>&lt;T&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 requireSecretObject loads a configuration value as a JSON string and deserializes the JSON into a JavaScript
 object, marking it as a secret. If it doesn't exist, or the configuration value is not a legal JSON
@@ -477,7 +523,9 @@ string, an error is thrown.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="config.ts#L37" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 name is the configuration bag's logical name and uniquely identifies it.  The default is the name of the current
@@ -490,7 +538,9 @@ project.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L549" >}}">class <b>CustomResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Resource'>Resource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CustomResource is a resource whose create, read, update, and delete (CRUD) operations are managed
@@ -503,10 +553,12 @@ loaded plugin for the defining package.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L577" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CustomResource(t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props?: <a href='#Inputs'>Inputs</a>, opts: <a href='#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates and registers a new managed resource.  t is the fully qualified type token and name
 is the "name" part to use in creating a stable and globally unique URN for the object.
@@ -526,20 +578,24 @@ upon the diffing of the new goal state compared to the current known resource st
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L177" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResource-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L575" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -550,7 +606,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L569" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>id: <a href='#Output'>Output</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -562,7 +620,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L134" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -575,7 +635,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L609" >}}">class <b>ProviderResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ProviderResource is a resource that implements CRUD operations for other custom resources. These resources are
@@ -586,10 +648,12 @@ managed similarly to other resources, including the usual diffing and update sem
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L611" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ProviderResource(pkg: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props?: <a href='#Inputs'>Inputs</a>, opts: <a href='#ResourceOptions'>ResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates and registers a new provider resource for a particular package.
 
@@ -604,20 +668,24 @@ Creates and registers a new provider resource for a particular package.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L177" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderResource-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L575" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -628,7 +696,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L569" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>id: <a href='#Output'>Output</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -640,7 +710,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L134" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -662,10 +734,12 @@ Resource represents a class whose CRUD operations are implemented by a provider 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L185" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Resource(t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, custom: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, props: <a href='#Inputs'>Inputs</a>, opts: <a href='#ResourceOptions'>ResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates and registers a new resource object.  [t] is the fully qualified type token and
 [name] is the "name" part to use in creating a stable and globally unique URN for the object.
@@ -684,27 +758,33 @@ the order in which we perform resource operations.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L177" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L172" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Resource-urn">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L134" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -717,7 +797,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L51" >}}">class <b>ResourceError</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ResourceError can be used for terminating a program abruptly, specifically associating the
@@ -730,20 +812,24 @@ no usefulness of presenting that stack to the user.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L65" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ResourceError(message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, resource: <a href='#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, hideStack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ResourceError-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of a ResourceError.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -754,7 +840,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L51" >}}">property <b>Error</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>Error: ErrorConstructor;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -762,7 +850,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L67" >}}">property <b>hideStack</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hideStack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -770,7 +860,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L51" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -778,7 +870,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -786,7 +880,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L67" >}}">property <b>resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resource: <a href='#Resource'>Resource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -794,7 +890,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L51" >}}">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -803,7 +901,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L24" >}}">class <b>RunError</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 RunError can be used for terminating a program abruptly, but resulting in a clean exit rather
@@ -816,20 +916,24 @@ that as many errors as possible can be associated with a Resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L38" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> RunError(message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RunError-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L36" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of a RunError.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -840,7 +944,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L24" >}}">property <b>Error</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>Error: ErrorConstructor;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -848,7 +954,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L24" >}}">property <b>message</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -856,7 +964,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L24" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -864,7 +974,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="errors.ts#L24" >}}">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -873,7 +985,9 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L23" >}}">class <b>StackReference</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a reference to a Pulumi stack. The referenced stack's outputs are available via the
@@ -881,13 +995,15 @@ Manages a reference to a Pulumi stack. The referenced stack's outputs are availa
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StackReference-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L32" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L37" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> StackReference(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#StackReferenceArgs'>StackReferenceArgs</a>, opts?: <a href='#CustomResourceOptions'>CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a StackReference resource with the given unique name, arguments, and options.
 
@@ -900,26 +1016,30 @@ If args is not specified, the name of the referenced stack will be the name of t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackReference-getOutput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L57" >}}">method <b>getOutput</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L63" >}}">method <b>getOutput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getOutput(name: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Fetches the value of the named stack output, or undefined if the stack output was not found.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackReference-getOutputSync">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L84" >}}">method <b>getOutputSync</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L95" >}}">method <b>getOutputSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getOutputSync(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Fetches the value promptly of the named stack output.  May return undefined if the value is
 not known for some reason.
@@ -933,20 +1053,24 @@ are secrets.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L177" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackReference-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L575" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -954,26 +1078,30 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackReference-requireOutput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L66" >}}">method <b>requireOutput</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L76" >}}">method <b>requireOutput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireOutput(name: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Fetches the value of the named stack output, or throws an error if the output was not found.
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="StackReference-requireOutputSync">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L103" >}}">method <b>requireOutputSync</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L114" >}}">method <b>requireOutputSync</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requireOutputSync(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Fetches the value promptly of the named stack output.  Throws an error if the stack output is
 not found.
@@ -987,7 +1115,9 @@ are secrets.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L569" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>id: <a href='#Output'>Output</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -999,7 +1129,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L27" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the referenced stack.
@@ -1010,10 +1142,25 @@ The name of the referenced stack.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L32" >}}">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>outputs: <a href='#Output'>Output</a>&lt;{[name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The outputs of the referenced stack.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="StackReference-secretOutputNames">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L37" >}}">property <b>secretOutputNames</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>secretOutputNames: <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The names of any stack outputs which contain secrets.
 
 {{% /md %}}
 </div>
@@ -1021,7 +1168,9 @@ The outputs of the referenced stack.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L134" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='#Output'>Output</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1034,7 +1183,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L334" >}}">const <b>rootStackResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> rootStackResource: <a href='#Resource'>Resource</a> = <span class='s2'> undefined!</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Constant to represent the 'root stack' resource for a Pulumi application.  The purpose of this is
@@ -1057,16 +1208,20 @@ semantics.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="version.ts#L15" >}}">const <b>version</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> version: <span class='s2'>"${VERSION}"</span> = <span class='s2'>&#34;${VERSION}&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="all">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L413" >}}">function <b>all</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T&gt;(val: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#Input'>Input</a>&lt;T&gt;&gt;): <a href='#Output'>Output</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Allows for multiple Output objects to be combined into a single Output object.  The single Output
 will depend on the union of Resources that the individual dependencies depend on.
@@ -1084,55 +1239,73 @@ In this example, taking a dependency on d3 means a resource will depend on all t
 d1 and d2.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T1,T2,T3,T4,T5,T6,T7,T8&gt;(values: [, <a href='#Input'>Input</a>&lt;T1&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T2&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T3&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T4&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T5&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T6&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T7&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T8&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>]): <a href='#Output'>Output</a>&lt;[, <a href='#Unwrap'>Unwrap</a>&lt;T1&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T2&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T3&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T4&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T5&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T6&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T7&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T8&gt;]&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T1,T2,T3,T4,T5,T6,T7&gt;(values: [, <a href='#Input'>Input</a>&lt;T1&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T2&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T3&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T4&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T5&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T6&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T7&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>]): <a href='#Output'>Output</a>&lt;[, <a href='#Unwrap'>Unwrap</a>&lt;T1&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T2&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T3&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T4&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T5&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T6&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T7&gt;]&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T1,T2,T3,T4,T5,T6&gt;(values: [, <a href='#Input'>Input</a>&lt;T1&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T2&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T3&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T4&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T5&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T6&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>]): <a href='#Output'>Output</a>&lt;[, <a href='#Unwrap'>Unwrap</a>&lt;T1&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T2&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T3&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T4&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T5&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T6&gt;]&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T1,T2,T3,T4,T5&gt;(values: [, <a href='#Input'>Input</a>&lt;T1&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T2&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T3&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T4&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T5&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>]): <a href='#Output'>Output</a>&lt;[, <a href='#Unwrap'>Unwrap</a>&lt;T1&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T2&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T3&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T4&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T5&gt;]&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T1,T2,T3,T4&gt;(values: [, <a href='#Input'>Input</a>&lt;T1&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T2&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T3&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T4&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>]): <a href='#Output'>Output</a>&lt;[, <a href='#Unwrap'>Unwrap</a>&lt;T1&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T2&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T3&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T4&gt;]&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T1,T2,T3&gt;(values: [, <a href='#Input'>Input</a>&lt;T1&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T2&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T3&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>]): <a href='#Output'>Output</a>&lt;[, <a href='#Unwrap'>Unwrap</a>&lt;T1&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T2&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T3&gt;]&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T1,T2&gt;(values: [, <a href='#Input'>Input</a>&lt;T1&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, <a href='#Input'>Input</a>&lt;T2&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>]): <a href='#Output'>Output</a>&lt;[, <a href='#Unwrap'>Unwrap</a>&lt;T1&gt;, <a href='#Unwrap'>Unwrap</a>&lt;T2&gt;]&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>all&lt;T&gt;(ds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#OutputInstance'>OutputInstance</a>&lt;T&gt;[]): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="concat">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L721" >}}">function <b>concat</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>concat(params: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;[]): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 [concat] takes a sequence of [Inputs], stringifies each, and concatenates all values into one
 final string.  Individual inputs can be any sort of [Input] value.  i.e. they can be [Promise]s,
@@ -1150,10 +1323,12 @@ final string.  Individual inputs can be any sort of [Input] value.  i.e. they ca
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L29" >}}">function <b>createUrn</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createUrn(name: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, type: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;, parent?: <a href='#Resource'>Resource</a> | <a href='#Input'>Input</a>&lt;<a href='#URN'>URN</a>&gt;, project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 createUrn computes a URN from the combination of a resource name, resource type, optional parent,
 optional project and optional stack.
@@ -1164,10 +1339,12 @@ optional project and optional stack.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="metadata.ts#L22" >}}">function <b>getProject</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProject(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getProject returns the current project name.  It throws an exception if none is registered.
 
@@ -1177,10 +1354,12 @@ getProject returns the current project name.  It throws an exception if none is 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="metadata.ts#L28" >}}">function <b>getStack</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getStack(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getStack returns the current stack name.  It throws an exception if none is registered.
 
@@ -1190,10 +1369,12 @@ getStack returns the current stack name.  It throws an exception if none is regi
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L737" >}}">function <b>interpolate</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>interpolate(literals: TemplateStringsArray, placeholders: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;[]): <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 [interpolate] is similar to [concat] but is designed to be used as a tagged template expression.
 i.e.:
@@ -1209,13 +1390,15 @@ As with [concat] the 'placeholders' between `${}` can be any Inputs.  i.e. they 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="liftProperties">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="utils.ts#L96" >}}">function <b>liftProperties</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="utils.ts#L106" >}}">function <b>liftProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>liftProperties&lt;T&gt;(promise: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; &amp; T</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Lifts the properties of the value a promise resolves to and adds them to the promise itself. This
 can be used to take a function that was previously async (i.e. Promise-returning) and make it
@@ -1232,10 +1415,12 @@ Pulumi application.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L714" >}}">function <b>mergeOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mergeOptions(opts1: <a href='#CustomResourceOptions'>CustomResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts2: <a href='#CustomResourceOptions'>CustomResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#CustomResourceOptions'>CustomResourceOptions</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 [mergeOptions] takes two ResourceOptions values and produces a new ResourceOptions with the
 respective properties of `opts2` merged over the same properties in `opts1`.  The original
@@ -1252,25 +1437,31 @@ Conceptually property merging follows these basic rules:
     collections, even if only a single value was provided.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mergeOptions(opts1: <a href='#ComponentResourceOptions'>ComponentResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts2: <a href='#ComponentResourceOptions'>ComponentResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#ComponentResourceOptions'>ComponentResourceOptions</a></pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mergeOptions(opts1: <a href='#ResourceOptions'>ResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>, opts2: <a href='#ResourceOptions'>ResourceOptions</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#ResourceOptions'>ResourceOptions</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="output">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L342" >}}">function <b>output</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 [output] takes any Input value and converts it into an Output, deeply unwrapping nested Input
 values as necessary.
@@ -1289,28 +1480,34 @@ The expected way to use this function is like so:
 ```
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>output&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="secret">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L381" >}}">function <b>secret</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secret&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 [secret] behaves the same as [output] except the resturned output is marked as contating sensitive data.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secret&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="Alias">
@@ -1348,7 +1545,9 @@ This form is self-descriptive and makes the intent clearer than using:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L366" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The previous name of the resource.  If not provided, the current name of the resource is
@@ -1360,7 +1559,9 @@ used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L379" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parent?: <a href='#Resource'>Resource</a> | <a href='#Input'>Input</a>&lt;<a href='#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The previous parent of the resource.  If not provided (i.e. `{ name: "foo" }`), the current
@@ -1375,7 +1576,9 @@ To specify no original parent, use `{ parent: pulumi.rootStackResource }`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L387" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The previous project of the resource. If not provided, defaults to `pulumi.getProject()`.
@@ -1386,7 +1589,9 @@ The previous project of the resource. If not provided, defaults to `pulumi.getPr
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L383" >}}">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stack?: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The previous stack of the resource.  If not provided, defaults to `pulumi.getStack()`.
@@ -1397,7 +1602,9 @@ The previous stack of the resource.  If not provided, defaults to `pulumi.getSta
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L370" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The previous type of the resource.  If not provided, the current type of the resource is used.
@@ -1409,7 +1616,9 @@ The previous type of the resource.  If not provided, the current type of the res
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L524" >}}">interface <b>ComponentResourceOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#ResourceOptions'>ResourceOptions</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ComponentResourceOptions is a bag of optional settings that control a component resource's behavior.
@@ -1419,7 +1628,9 @@ ComponentResourceOptions is a bag of optional settings that control a component 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L456" >}}">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aliases?: <a href='#Input'>Input</a>&lt;<a href='#URN'>URN</a> | <a href='#Alias'>Alias</a>&gt;[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional list of aliases to treat this resource as matching.
@@ -1430,7 +1641,9 @@ An optional list of aliases to treat this resource as matching.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L468" >}}">property <b>customTimeouts</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customTimeouts?: <a href='#CustomTimeouts'>CustomTimeouts</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional customTimeouts configuration block.
@@ -1441,7 +1654,9 @@ An optional customTimeouts configuration block.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L438" >}}">property <b>dependsOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dependsOn?: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;[]&gt; | <a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional additional explicit dependencies on other resources.
@@ -1452,7 +1667,9 @@ An optional additional explicit dependencies on other resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L430" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <a href='#Input'>Input</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional existing ID to load, rather than create.
@@ -1463,7 +1680,9 @@ An optional existing ID to load, rather than create.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L446" >}}">property <b>ignoreChanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ignoreChanges?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Ignore changes to any of the specified properties.
@@ -1474,7 +1693,9 @@ Ignore changes to any of the specified properties.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L434" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parent?: <a href='#Resource'>Resource</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional parent resource to which this resource belongs.
@@ -1485,7 +1706,9 @@ An optional parent resource to which this resource belongs.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L442" >}}">property <b>protect</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When set to true, protect ensures this resource cannot be deleted.
@@ -1496,7 +1719,9 @@ When set to true, protect ensures this resource cannot be deleted.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L464" >}}">property <b>provider</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>provider?: <a href='#ProviderResource'>ProviderResource</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional provider to use for this resource's CRUD operations. If no provider is supplied,
@@ -1511,7 +1736,9 @@ If this is a [ComponentResourceOptions] do not provide both [provider] and [prov
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L537" >}}">property <b>providers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>providers?: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#ProviderResource'>ProviderResource</a>&gt; | <a href='#ProviderResource'>ProviderResource</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional set of providers to use for child resources. Either keyed by package name (e.g.
@@ -1528,7 +1755,9 @@ Note: do not provide both [provider] and [providers];
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L452" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional version, corresponding to the version of the provider plugin that should be used when operating on
@@ -1542,7 +1771,9 @@ rarely be used.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L492" >}}">interface <b>CustomResourceOptions</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#ResourceOptions'>ResourceOptions</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 CustomResourceOptions is a bag of optional settings that control a custom resource's behavior.
@@ -1552,7 +1783,9 @@ CustomResourceOptions is a bag of optional settings that control a custom resour
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L507" >}}">property <b>additionalSecretOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>additionalSecretOutputs?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The names of outputs for this resource that should be treated as secrets. This augments the list that
@@ -1565,7 +1798,9 @@ to mark certain ouputs as a secrets on a per resource basis.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L456" >}}">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aliases?: <a href='#Input'>Input</a>&lt;<a href='#URN'>URN</a> | <a href='#Alias'>Alias</a>&gt;[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional list of aliases to treat this resource as matching.
@@ -1576,7 +1811,9 @@ An optional list of aliases to treat this resource as matching.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L468" >}}">property <b>customTimeouts</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customTimeouts?: <a href='#CustomTimeouts'>CustomTimeouts</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional customTimeouts configuration block.
@@ -1587,7 +1824,9 @@ An optional customTimeouts configuration block.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L500" >}}">property <b>deleteBeforeReplace</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deleteBeforeReplace?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When set to true, deleteBeforeReplace indicates that this resource should be deleted before its replacement
@@ -1599,7 +1838,9 @@ is created when replacement is necessary.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L438" >}}">property <b>dependsOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dependsOn?: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;[]&gt; | <a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional additional explicit dependencies on other resources.
@@ -1610,7 +1851,9 @@ An optional additional explicit dependencies on other resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L430" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <a href='#Input'>Input</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional existing ID to load, rather than create.
@@ -1621,7 +1864,9 @@ An optional existing ID to load, rather than create.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L446" >}}">property <b>ignoreChanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ignoreChanges?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Ignore changes to any of the specified properties.
@@ -1632,7 +1877,9 @@ Ignore changes to any of the specified properties.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L515" >}}">property <b>import</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>import?: <a href='#ID'>ID</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When provided with a resource ID, import indicates that this resource's provider should import its state from
@@ -1646,7 +1893,9 @@ options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L434" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parent?: <a href='#Resource'>Resource</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional parent resource to which this resource belongs.
@@ -1657,7 +1906,9 @@ An optional parent resource to which this resource belongs.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L442" >}}">property <b>protect</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When set to true, protect ensures this resource cannot be deleted.
@@ -1668,7 +1919,9 @@ When set to true, protect ensures this resource cannot be deleted.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L464" >}}">property <b>provider</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>provider?: <a href='#ProviderResource'>ProviderResource</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional provider to use for this resource's CRUD operations. If no provider is supplied,
@@ -1683,7 +1936,9 @@ If this is a [ComponentResourceOptions] do not provide both [provider] and [prov
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L452" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional version, corresponding to the version of the provider plugin that should be used when operating on
@@ -1701,7 +1956,9 @@ rarely be used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L478" >}}">property <b>create</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>create?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The optional create timeout represented as a string e.g. 5m, 40s, 1d.
@@ -1712,7 +1969,9 @@ The optional create timeout represented as a string e.g. 5m, 40s, 1d.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L486" >}}">property <b>delete</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>delete?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The optional delete timeout represented as a string e.g. 5m, 40s, 1d.
@@ -1723,7 +1982,9 @@ The optional delete timeout represented as a string e.g. 5m, 40s, 1d.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L482" >}}">property <b>update</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>update?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The optional update timeout represented as a string e.g. 5m, 40s, 1d.
@@ -1745,25 +2006,31 @@ arbitrary values to see if they are [Output]s.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L591" >}}">method <b>create</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>create&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt;): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>create&lt;T&gt;(val: <a href='#Input'>Input</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='#Output'>Output</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutputConstructor-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L594" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isInstance&lt;T&gt;(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 </div>
@@ -1781,10 +2048,12 @@ for working with the underlying value of an [Output<T>].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L570" >}}">method <b>apply</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apply&lt;U&gt;(func: (t: T) => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;U&gt;): <a href='#Output'>Output</a>&lt;U&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Transforms the data of the output with the provided func.  The result remains a
 Output so that dependent resources can be properly tracked.
@@ -1812,25 +2081,31 @@ available for functions that end up executing in the cloud during runtime.  To g
 of the Output during cloud runtime execution, use `get()`.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apply&lt;U&gt;(func: (t: T) => <a href='#OutputInstance'>OutputInstance</a>&lt;U&gt;): <a href='#Output'>Output</a>&lt;U&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apply&lt;U&gt;(func: (t: T) => U): <a href='#Output'>Output</a>&lt;U&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="OutputInstance-get">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L583" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>get(): T</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Retrieves the underlying value of this dependency.
 
@@ -1856,7 +2131,9 @@ ResourceOptions is a bag of optional settings that control a resource's behavior
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L456" >}}">property <b>aliases</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aliases?: <a href='#Input'>Input</a>&lt;<a href='#URN'>URN</a> | <a href='#Alias'>Alias</a>&gt;[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional list of aliases to treat this resource as matching.
@@ -1867,7 +2144,9 @@ An optional list of aliases to treat this resource as matching.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L468" >}}">property <b>customTimeouts</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customTimeouts?: <a href='#CustomTimeouts'>CustomTimeouts</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional customTimeouts configuration block.
@@ -1878,7 +2157,9 @@ An optional customTimeouts configuration block.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L438" >}}">property <b>dependsOn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dependsOn?: <a href='#Input'>Input</a>&lt;<a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;[]&gt; | <a href='#Input'>Input</a>&lt;<a href='#Resource'>Resource</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional additional explicit dependencies on other resources.
@@ -1889,7 +2170,9 @@ An optional additional explicit dependencies on other resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L430" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id?: <a href='#Input'>Input</a>&lt;<a href='#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional existing ID to load, rather than create.
@@ -1900,7 +2183,9 @@ An optional existing ID to load, rather than create.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L446" >}}">property <b>ignoreChanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ignoreChanges?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Ignore changes to any of the specified properties.
@@ -1911,7 +2196,9 @@ Ignore changes to any of the specified properties.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L434" >}}">property <b>parent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parent?: <a href='#Resource'>Resource</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional parent resource to which this resource belongs.
@@ -1922,7 +2209,9 @@ An optional parent resource to which this resource belongs.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L442" >}}">property <b>protect</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>protect?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When set to true, protect ensures this resource cannot be deleted.
@@ -1933,7 +2222,9 @@ When set to true, protect ensures this resource cannot be deleted.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L464" >}}">property <b>provider</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>provider?: <a href='#ProviderResource'>ProviderResource</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional provider to use for this resource's CRUD operations. If no provider is supplied,
@@ -1948,7 +2239,9 @@ If this is a [ComponentResourceOptions] do not provide both [provider] and [prov
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L452" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional version, corresponding to the version of the provider plugin that should be used when operating on
@@ -1959,7 +2252,7 @@ rarely be used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="StackReferenceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L118" >}}">interface <b>StackReferenceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L128" >}}">interface <b>StackReferenceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1968,10 +2261,12 @@ The set of arguments for constructing a StackReference resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="StackReferenceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L122" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="stackReference.ts#L132" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the stack to reference.
@@ -1983,15 +2278,19 @@ The name of the stack to reference.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">interface <b>UnwrappedArray</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array'>Array</a>&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="UnwrappedArray-__@iterator">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>__@iterator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>__@iterator(): IterableIterator&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Iterator
 
@@ -2001,8 +2300,8 @@ Iterator
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>__@unscopables</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>__@unscopables(): {
     copyWithin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
     entries: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
@@ -2012,7 +2311,9 @@ Iterator
     keys: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
     values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
 }</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns an object whose properties have the value 'true'
 when they will be absent when used in a 'with' statement.
@@ -2023,18 +2324,22 @@ when they will be absent when used in a 'with' statement.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>concat</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>concat(items: ConcatArray&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;[]): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Combines two or more arrays.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>concat(items: T | ConcatArray&lt;T&gt;[]): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Combines two or more arrays.
 
@@ -2044,10 +2349,12 @@ Combines two or more arrays.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>copyWithin</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>copyWithin(target: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, end?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'>this</span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns the this object after copying a section of the array identified by start and end
 to the same array starting at position target
@@ -2058,10 +2365,12 @@ to the same array starting at position target
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>entries</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>entries(): IterableIterator&lt;[, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, <a href='#Unwrap'>Unwrap</a>&lt;T&gt;]&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns an iterable of key, value pairs for every entry in the array
 
@@ -2071,10 +2380,12 @@ Returns an iterable of key, value pairs for every entry in the array
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>every</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>every(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Determines whether all the members of an array satisfy the specified test.
 
@@ -2084,10 +2395,12 @@ Determines whether all the members of an array satisfy the specified test.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>fill</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fill(value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, start?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, end?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'>this</span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns the this object after filling the section identified by start and end with value
 
@@ -2097,18 +2410,22 @@ Returns the this object after filling the section identified by start and end wi
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>filter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filter&lt;S&gt;(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): S[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filter(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
@@ -2118,29 +2435,35 @@ Returns the elements of an array that meet the condition specified in a callback
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>find</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>find&lt;S&gt;(predicate: (this: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>, value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, obj: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): S | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns the value of the first element in the array where predicate is true, and undefined
 otherwise.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>find(predicate: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, obj: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='#Unwrap'>Unwrap</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UnwrappedArray-findIndex">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>findIndex</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>findIndex(predicate: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, obj: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns the index of the first element in the array where predicate is true, and -1
 otherwise.
@@ -2151,10 +2474,12 @@ otherwise.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>forEach</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forEach(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Performs the specified action for each element in an array.
 
@@ -2164,10 +2489,12 @@ Performs the specified action for each element in an array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>includes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>includes(searchElement: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, fromIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Determines whether an array includes a certain element, returning true or false as appropriate.
 
@@ -2177,10 +2504,12 @@ Determines whether an array includes a certain element, returning true or false 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>indexOf</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>indexOf(searchElement: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, fromIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns the index of the first occurrence of a value in an array.
 
@@ -2190,10 +2519,12 @@ Returns the index of the first occurrence of a value in an array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>join</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>join(separator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Adds all the elements of an array separated by the specified separator string.
 
@@ -2203,10 +2534,12 @@ Adds all the elements of an array separated by the specified separator string.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>keys</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keys(): IterableIterator&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns an iterable of keys in the array
 
@@ -2216,10 +2549,12 @@ Returns an iterable of keys in the array
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>lastIndexOf</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lastIndexOf(searchElement: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, fromIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns the index of the last occurrence of a specified value in an array.
 
@@ -2229,10 +2564,12 @@ Returns the index of the last occurrence of a specified value in an array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>map</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>map&lt;U&gt;(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => U, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): U[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
@@ -2242,10 +2579,12 @@ Calls a defined callback function on each element of an array, and returns an ar
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>pop</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pop(): <a href='#Unwrap'>Unwrap</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Removes the last element from an array and returns it.
 
@@ -2255,10 +2594,12 @@ Removes the last element from an array and returns it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>push</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>push(items: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Appends new elements to an array, and returns the new length of the array.
 
@@ -2268,23 +2609,29 @@ Appends new elements to an array, and returns the new length of the array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>reduce</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reduce(callbackfn: (previousValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentIndex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <a href='#Unwrap'>Unwrap</a>&lt;T&gt;): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reduce(callbackfn: (previousValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentIndex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, initialValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reduce&lt;U&gt;(callbackfn: (previousValue: U, currentValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentIndex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => U, initialValue: U): U</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
@@ -2294,23 +2641,29 @@ Calls the specified callback function for all the elements in an array. The retu
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>reduceRight</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reduceRight(callbackfn: (previousValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentIndex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <a href='#Unwrap'>Unwrap</a>&lt;T&gt;): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reduceRight(callbackfn: (previousValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentIndex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, initialValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;</pre>
+{{< /md-disable >}}
 
-{{% /md %}}
 {{% md %}}
+{{% /md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reduceRight&lt;U&gt;(callbackfn: (previousValue: U, currentValue: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, currentIndex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => U, initialValue: U): U</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
@@ -2320,10 +2673,12 @@ Calls the specified callback function for all the elements in an array, in desce
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>reverse</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reverse(): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Reverses the elements in an Array.
 
@@ -2333,10 +2688,12 @@ Reverses the elements in an Array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>shift</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shift(): <a href='#Unwrap'>Unwrap</a>&lt;T&gt; | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Removes the first element from an array and returns it.
 
@@ -2346,10 +2703,12 @@ Removes the first element from an array and returns it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>slice</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>slice(start?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, end?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns a section of an array.
 
@@ -2359,10 +2718,12 @@ Returns a section of an array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>some</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>some(callbackfn: (value: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, array: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, thisArg?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Determines whether the specified callback function returns true for any element of an array.
 
@@ -2372,10 +2733,12 @@ Determines whether the specified callback function returns true for any element 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>sort</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sort(compareFn?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (a: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;, b: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <span class='kd'>this</span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Sorts an array.
 
@@ -2385,18 +2748,22 @@ Sorts an array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>splice</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>splice(start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, deleteCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 
 {{% /md %}}
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>splice(start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, deleteCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, items: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]): <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 
@@ -2406,10 +2773,12 @@ Removes elements from an array and, if necessary, inserts new elements in their 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>toLocaleString</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>toLocaleString(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns a string representation of an array. The elements are converted to string using their toLocalString methods.
 
@@ -2419,10 +2788,12 @@ Returns a string representation of an array. The elements are converted to strin
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>toString</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>toString(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns a string representation of an array.
 
@@ -2432,10 +2803,12 @@ Returns a string representation of an array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>unshift</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unshift(items: <a href='#Unwrap'>Unwrap</a>&lt;T&gt;[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Inserts new elements at the start of an array.
 
@@ -2445,10 +2818,12 @@ Inserts new elements at the start of an array.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">method <b>values</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>values(): IterableIterator&lt;<a href='#Unwrap'>Unwrap</a>&lt;T&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns an iterable of values in the array
 
@@ -2458,7 +2833,9 @@ Returns an iterable of values in the array
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">property <b>Array</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>Array: ArrayConstructor;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2466,7 +2843,9 @@ Returns an iterable of values in the array
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L528" >}}">property <b>length</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>length: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
@@ -2478,13 +2857,17 @@ Gets or sets the length of the array. This is a number one higher than the highe
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L22" >}}">type <b>ID</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> ID = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="Input">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L469" >}}">type <b>Input</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Input = T | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt; | <a href='#OutputInstance'>OutputInstance</a>&lt;T&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [Input] is a property input for a resource.  It may be a promptly available T, a promise for one,
@@ -2496,7 +2879,9 @@ or the output from a existing Resource.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L474" >}}">type <b>Inputs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Inputs = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [Inputs] is a map of property name to property input, one for each resource property value.
@@ -2507,7 +2892,9 @@ or the output from a existing Resource.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L682" >}}">type <b>Lifted</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Lifted = Lifted<T>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The [Lifted] type allows us to express the operation of taking a type, with potentially deeply
@@ -2548,21 +2935,27 @@ Instead, you still need to write;
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L700" >}}">type <b>LiftedArray</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> LiftedArray = {
     length: <a href='#Output'>Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
 };</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="LiftedObject">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L696" >}}">type <b>LiftedObject</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> LiftedObject = { ... };</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="Output">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L645" >}}">type <b>Output</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Output = <a href='#OutputInstance'>OutputInstance</a>&lt;T&gt; &amp; <a href='#Lifted'>Lifted</a>&lt;T&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 [Output] helps encode the relationship between Resources in a Pulumi application. Specifically an
@@ -2612,13 +3005,17 @@ Instead of having to write:
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="resource.ts#L23" >}}">type <b>URN</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> URN = <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="Unwrap">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L500" >}}">type <b>Unwrap</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Unwrap = Unwrap<T>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The 'Unwrap' type allows us to express the operation of taking a type, with potentially deeply
@@ -2650,7 +3047,9 @@ It should always either be `{ a: Promise<NonOutput> }` or just `{ a: Output<...>
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L513" >}}">type <b>UnwrapSimple</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> UnwrapSimple = UnwrapSimple<T>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Handles encountering basic types when unwrapping.
@@ -2661,5 +3060,7 @@ Handles encountering basic types when unwrapping.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="output.ts#L530" >}}">type <b>UnwrappedObject</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> UnwrappedObject = { ... };</pre>
+{{< /md-disable >}}
 </div>

@@ -39,7 +39,9 @@ title: Module config
 <a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L12" >}}">let <b>address</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;address&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Domain name/IP of the BigIP
@@ -50,7 +52,9 @@ Domain name/IP of the BigIP
 <a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L16" >}}">let <b>loginRef</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> loginRef: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;loginRef&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Login reference for token authentication (see BIG-IP REST docs for details)
@@ -61,7 +65,9 @@ Login reference for token authentication (see BIG-IP REST docs for details)
 <a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L20" >}}">let <b>password</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The user's password
@@ -72,7 +78,9 @@ The user's password
 <a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L24" >}}">let <b>tokenAuth</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> tokenAuth: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;tokenAuth&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enable to use an external authentication source (LDAP, TACACS, etc)
@@ -83,7 +91,9 @@ Enable to use an external authentication source (LDAP, TACACS, etc)
 <a class="pdoc-member-name" href="{{< pkg-url pkg="f5bigip" path="config/vars.ts#L28" >}}">let <b>username</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;username&#34;)</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Username with API access to the BigIP

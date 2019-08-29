@@ -402,7 +402,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SettingNotification'>SettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingNotification'>outputs.autoscale.SettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -415,7 +415,7 @@ Specifies a `notification` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SettingProfile'>SettingProfile</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SettingProfile'>outputs.autoscale.SettingProfile</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -530,7 +530,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SettingNotification'>SettingNotification</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingNotification'>inputs.autoscale.SettingNotification</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -543,7 +543,7 @@ Specifies a `notification` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SettingProfile'>SettingProfile</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingProfile'>inputs.autoscale.SettingProfile</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -644,7 +644,7 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SettingNotification'>SettingNotification</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingNotification'>inputs.autoscale.SettingNotification</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -657,7 +657,7 @@ Specifies a `notification` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SettingProfile'>SettingProfile</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SettingProfile'>inputs.autoscale.SettingProfile</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

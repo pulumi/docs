@@ -134,7 +134,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GroupContainer'>GroupContainer</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainer'>outputs.containerservice.GroupContainer</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -147,7 +147,7 @@ The definition of a container that is part of the group as documented in the `co
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>diagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GroupDiagnostics'>GroupDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>diagnostics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupDiagnostics'>outputs.containerservice.GroupDiagnostics</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -200,7 +200,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GroupIdentity'>GroupIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupIdentity'>outputs.containerservice.GroupIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -213,7 +213,7 @@ An `identity` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>imageRegistryCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>imageRegistryCredentials: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupImageRegistryCredential'>outputs.containerservice.GroupImageRegistryCredential</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -433,7 +433,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>addonProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>addonProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfile'>outputs.containerservice.KubernetesClusterAddonProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -443,7 +443,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterAgentPoolProfile'>KubernetesClusterAgentPoolProfile</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAgentPoolProfile'>outputs.containerservice.KubernetesClusterAgentPoolProfile</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -516,7 +516,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>kubeAdminConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterKubeAdminConfig'>KubernetesClusterKubeAdminConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>kubeAdminConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeAdminConfig'>outputs.containerservice.KubernetesClusterKubeAdminConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -542,7 +542,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>kubeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeConfig'>outputs.containerservice.KubernetesClusterKubeConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -578,7 +578,7 @@ Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/referen
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterLinuxProfile'>outputs.containerservice.KubernetesClusterLinuxProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -614,7 +614,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>networkProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>networkProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterNetworkProfile'>outputs.containerservice.KubernetesClusterNetworkProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -650,7 +650,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>roleBasedAccessControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>roleBasedAccessControl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterRoleBasedAccessControl'>outputs.containerservice.KubernetesClusterRoleBasedAccessControl</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -660,7 +660,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterServicePrincipal'>outputs.containerservice.KubernetesClusterServicePrincipal</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -697,7 +697,7 @@ deployments.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>windowsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>windowsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterWindowsProfile'>outputs.containerservice.KubernetesClusterWindowsProfile</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -916,7 +916,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>networkRuleSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>networkRuleSet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryNetworkRuleSet'>outputs.containerservice.RegistryNetworkRuleSet</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -955,7 +955,7 @@ The SKU name of the the container registry. Possible values are `Classic` (which
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>storageAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RegistryStorageAccount'>RegistryStorageAccount</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>storageAccount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#RegistryStorageAccount'>outputs.containerservice.RegistryStorageAccount</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -1346,7 +1346,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>agentPoolProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceAgentPoolProfile'>ServiceAgentPoolProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>agentPoolProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAgentPoolProfile'>outputs.containerservice.ServiceAgentPoolProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1359,7 +1359,7 @@ A Agent Pool Profile's block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>diagnosticsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceDiagnosticsProfile'>ServiceDiagnosticsProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>diagnosticsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceDiagnosticsProfile'>outputs.containerservice.ServiceDiagnosticsProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1386,7 +1386,7 @@ deployments and may be missing (undefined) during planning phases.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceLinuxProfile'>ServiceLinuxProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceLinuxProfile'>outputs.containerservice.ServiceLinuxProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1412,7 +1412,7 @@ The location where the Container Service instance should be created. Changing th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>masterProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceMasterProfile'>ServiceMasterProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>masterProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceMasterProfile'>outputs.containerservice.ServiceMasterProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1464,7 +1464,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServiceServicePrincipal'>ServiceServicePrincipal</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceServicePrincipal'>outputs.containerservice.ServiceServicePrincipal</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1644,7 +1644,7 @@ A collection of values returned by getKubernetesCluster.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>addonProfiles: <a href='#GetKubernetesClusterAddonProfile'>GetKubernetesClusterAddonProfile</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>addonProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAddonProfile'>outputs.containerservice.GetKubernetesClusterAddonProfile</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1657,7 +1657,7 @@ A `addonProfile` block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>agentPoolProfiles: <a href='#GetKubernetesClusterAgentPoolProfile'>GetKubernetesClusterAgentPoolProfile</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterAgentPoolProfile'>outputs.containerservice.GetKubernetesClusterAgentPoolProfile</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1722,7 +1722,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>kubeAdminConfigs: <a href='#GetKubernetesClusterKubeAdminConfig'>GetKubernetesClusterKubeAdminConfig</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>kubeAdminConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeAdminConfig'>outputs.containerservice.GetKubernetesClusterKubeAdminConfig</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1748,7 +1748,7 @@ Base64 encoded Kubernetes configuration.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>kubeConfigs: <a href='#GetKubernetesClusterKubeConfig'>GetKubernetesClusterKubeConfig</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterKubeConfig'>outputs.containerservice.GetKubernetesClusterKubeConfig</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1774,7 +1774,7 @@ The version of Kubernetes used on the managed Kubernetes Cluster.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linuxProfiles: <a href='#GetKubernetesClusterLinuxProfile'>GetKubernetesClusterLinuxProfile</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>linuxProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterLinuxProfile'>outputs.containerservice.GetKubernetesClusterLinuxProfile</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1813,7 +1813,7 @@ The name assigned to this pool of agents.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkProfiles: <a href='#GetKubernetesClusterNetworkProfile'>GetKubernetesClusterNetworkProfile</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>networkProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterNetworkProfile'>outputs.containerservice.GetKubernetesClusterNetworkProfile</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1849,7 +1849,7 @@ Auto-generated Resource Group containing AKS Cluster resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>roleBasedAccessControls: <a href='#GetKubernetesClusterRoleBasedAccessControl'>GetKubernetesClusterRoleBasedAccessControl</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>roleBasedAccessControls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterRoleBasedAccessControl'>outputs.containerservice.GetKubernetesClusterRoleBasedAccessControl</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1862,7 +1862,7 @@ A `roleBasedAccessControl` block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>servicePrincipals: <a href='#GetKubernetesClusterServicePrincipal'>GetKubernetesClusterServicePrincipal</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>servicePrincipals: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterServicePrincipal'>outputs.containerservice.GetKubernetesClusterServicePrincipal</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1888,7 +1888,7 @@ A mapping of tags assigned to this resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>windowsProfiles: <a href='#GetKubernetesClusterWindowsProfile'>GetKubernetesClusterWindowsProfile</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>windowsProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKubernetesClusterWindowsProfile'>outputs.containerservice.GetKubernetesClusterWindowsProfile</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2199,7 +2199,7 @@ The set of arguments for constructing a Group resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GroupContainer'>GroupContainer</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>containers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer'>inputs.containerservice.GroupContainer</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2212,7 +2212,7 @@ The definition of a container that is part of the group as documented in the `co
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GroupDiagnostics'>GroupDiagnostics</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics'>inputs.containerservice.GroupDiagnostics</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2238,7 +2238,7 @@ The DNS label/name for the container groups IP. Changing this forces a new resou
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GroupIdentity'>GroupIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity'>inputs.containerservice.GroupIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2251,7 +2251,7 @@ An `identity` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential'>inputs.containerservice.GroupImageRegistryCredential</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2378,7 +2378,7 @@ Input properties used for looking up and filtering Group resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GroupContainer'>GroupContainer</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>containers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer'>inputs.containerservice.GroupContainer</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2391,7 +2391,7 @@ The definition of a container that is part of the group as documented in the `co
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GroupDiagnostics'>GroupDiagnostics</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>diagnostics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics'>inputs.containerservice.GroupDiagnostics</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2430,7 +2430,7 @@ The FQDN of the container group derived from `dnsNameLabel`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GroupIdentity'>GroupIdentity</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity'>inputs.containerservice.GroupIdentity</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2443,7 +2443,7 @@ An `identity` block as defined below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#GroupImageRegistryCredential'>GroupImageRegistryCredential</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>imageRegistryCredentials?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential'>inputs.containerservice.GroupImageRegistryCredential</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2583,7 +2583,7 @@ The set of arguments for constructing a KubernetesCluster resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile'>inputs.containerservice.KubernetesClusterAddonProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2593,7 +2593,7 @@ The set of arguments for constructing a KubernetesCluster resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterAgentPoolProfile'>KubernetesClusterAgentPoolProfile</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>agentPoolProfiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAgentPoolProfile'>inputs.containerservice.KubernetesClusterAgentPoolProfile</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2649,7 +2649,7 @@ DNS prefix specified when creating the managed cluster. Changing this forces a n
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile'>inputs.containerservice.KubernetesClusterLinuxProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2685,7 +2685,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile'>inputs.containerservice.KubernetesClusterNetworkProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2721,7 +2721,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl'>inputs.containerservice.KubernetesClusterRoleBasedAccessControl</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2731,7 +2731,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>servicePrincipal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal'>inputs.containerservice.KubernetesClusterServicePrincipal</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2754,7 +2754,7 @@ A `servicePrincipal` block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile'>inputs.containerservice.KubernetesClusterWindowsProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2774,7 +2774,7 @@ Input properties used for looking up and filtering KubernetesCluster resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterAddonProfile'>KubernetesClusterAddonProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>addonProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile'>inputs.containerservice.KubernetesClusterAddonProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2784,7 +2784,7 @@ Input properties used for looking up and filtering KubernetesCluster resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>agentPoolProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterAgentPoolProfile'>KubernetesClusterAgentPoolProfile</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>agentPoolProfiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAgentPoolProfile'>inputs.containerservice.KubernetesClusterAgentPoolProfile</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2843,7 +2843,7 @@ The FQDN of the Azure Kubernetes Managed Cluster.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>kubeAdminConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterKubeAdminConfig'>KubernetesClusterKubeAdminConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>kubeAdminConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeAdminConfig'>inputs.containerservice.KubernetesClusterKubeAdminConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2869,7 +2869,7 @@ Raw Kubernetes config for the admin account to be used by [kubectl](https://kube
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>kubeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterKubeConfig'>inputs.containerservice.KubernetesClusterKubeConfig</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2905,7 +2905,7 @@ Raw Kubernetes config to be used by [kubectl](https://kubernetes.io/docs/referen
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterLinuxProfile'>KubernetesClusterLinuxProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile'>inputs.containerservice.KubernetesClusterLinuxProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2941,7 +2941,7 @@ The name of the Managed Kubernetes Cluster to create. Changing this forces a new
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterNetworkProfile'>KubernetesClusterNetworkProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile'>inputs.containerservice.KubernetesClusterNetworkProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2977,7 +2977,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterRoleBasedAccessControl'>KubernetesClusterRoleBasedAccessControl</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>roleBasedAccessControl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl'>inputs.containerservice.KubernetesClusterRoleBasedAccessControl</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -2987,7 +2987,7 @@ Specifies the Resource Group where the Managed Kubernetes Cluster should exist. 
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterServicePrincipal'>KubernetesClusterServicePrincipal</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal'>inputs.containerservice.KubernetesClusterServicePrincipal</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3010,7 +3010,7 @@ A `servicePrincipal` block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterWindowsProfile'>KubernetesClusterWindowsProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>windowsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile'>inputs.containerservice.KubernetesClusterWindowsProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3082,7 +3082,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryNetworkRuleSet'>inputs.containerservice.RegistryNetworkRuleSet</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3121,7 +3121,7 @@ The SKU name of the the container registry. Possible values are `Classic` (which
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RegistryStorageAccount'>RegistryStorageAccount</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryStorageAccount'>inputs.containerservice.RegistryStorageAccount</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3258,7 +3258,7 @@ Specifies the name of the Container Registry. Changing this forces a new resourc
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RegistryNetworkRuleSet'>RegistryNetworkRuleSet</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkRuleSet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryNetworkRuleSet'>inputs.containerservice.RegistryNetworkRuleSet</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3297,7 +3297,7 @@ The SKU name of the the container registry. Possible values are `Classic` (which
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RegistryStorageAccount'>RegistryStorageAccount</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>storageAccount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#RegistryStorageAccount'>inputs.containerservice.RegistryStorageAccount</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3617,7 +3617,7 @@ The set of arguments for constructing a Service resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>agentPoolProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceAgentPoolProfile'>ServiceAgentPoolProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>agentPoolProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAgentPoolProfile'>inputs.containerservice.ServiceAgentPoolProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3630,7 +3630,7 @@ A Agent Pool Profile's block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>diagnosticsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceDiagnosticsProfile'>ServiceDiagnosticsProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>diagnosticsProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceDiagnosticsProfile'>inputs.containerservice.ServiceDiagnosticsProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3643,7 +3643,7 @@ A VM Diagnostics Profile block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceLinuxProfile'>ServiceLinuxProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linuxProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceLinuxProfile'>inputs.containerservice.ServiceLinuxProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3669,7 +3669,7 @@ The location where the Container Service instance should be created. Changing th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>masterProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceMasterProfile'>ServiceMasterProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>masterProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceMasterProfile'>inputs.containerservice.ServiceMasterProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3721,7 +3721,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceServicePrincipal'>ServiceServicePrincipal</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceServicePrincipal'>inputs.containerservice.ServiceServicePrincipal</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3757,7 +3757,7 @@ Input properties used for looking up and filtering Service resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>agentPoolProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceAgentPoolProfile'>ServiceAgentPoolProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>agentPoolProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAgentPoolProfile'>inputs.containerservice.ServiceAgentPoolProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3770,7 +3770,7 @@ A Agent Pool Profile's block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>diagnosticsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceDiagnosticsProfile'>ServiceDiagnosticsProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>diagnosticsProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceDiagnosticsProfile'>inputs.containerservice.ServiceDiagnosticsProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3783,7 +3783,7 @@ A VM Diagnostics Profile block as documented below.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceLinuxProfile'>ServiceLinuxProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>linuxProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceLinuxProfile'>inputs.containerservice.ServiceLinuxProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3809,7 +3809,7 @@ The location where the Container Service instance should be created. Changing th
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>masterProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceMasterProfile'>ServiceMasterProfile</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>masterProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceMasterProfile'>inputs.containerservice.ServiceMasterProfile</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3861,7 +3861,7 @@ Specifies the resource group where the resource exists. Changing this forces a n
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServiceServicePrincipal'>ServiceServicePrincipal</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>servicePrincipal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceServicePrincipal'>inputs.containerservice.ServiceServicePrincipal</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

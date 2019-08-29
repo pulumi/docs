@@ -32,10 +32,12 @@ title: Module s3
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L197" >}}">function <b>allRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of HTTP requests made to an Amazon S3 bucket, regardless of type. If you're
 using a metrics configuration with a filter, then this metric only returns the HTTP requests
@@ -51,10 +53,12 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L170" >}}">function <b>bucketSizeBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucketSizeBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of data in bytes stored in a bucket in the STANDARD storage class,
 INTELLIGENT_TIERING storage class, Standard - Infrequent Access (STANDARD_IA) storage class,
@@ -73,10 +77,12 @@ Valid statistics: Average
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L320" >}}">function <b>bytesDownloaded</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bytesDownloaded(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number bytes downloaded for requests made to an Amazon S3 bucket, where the response
 includes a body.
@@ -91,10 +97,12 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L331" >}}">function <b>bytesUploaded</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bytesUploaded(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number bytes uploaded that contain a request body, made to an Amazon S3 bucket.
 
@@ -108,10 +116,12 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L236" >}}">function <b>deleteRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deleteRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP DELETE requests made for objects in an Amazon S3 bucket. This also
 includes Delete Multiple Objects requests. This metric shows the number of requests, not the
@@ -127,10 +137,12 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L345" >}}">function <b>errors4xx</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>errors4xx(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 he number of HTTP 4xx client error status code requests made to an Amazon S3 bucket with a
 value of either 0 or 1. The average statistic shows the error rate, and the sum statistic
@@ -147,10 +159,12 @@ Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L359" >}}">function <b>errors5xx</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>errors5xx(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP 5xx server error status code requests made to an Amazon S3 bucket with a
 value of either 0 or 1. The average statistic shows the error rate, and the sum statistic
@@ -167,10 +181,12 @@ Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L371" >}}">function <b>firstByteLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>firstByteLatency(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The per-request time from the complete request being received by an Amazon S3 bucket to when
 the response starts to be returned.
@@ -185,10 +201,12 @@ Valid statistics: Average, Sum, Min, Max, Sample Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L212" >}}">function <b>getRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP GET requests made for objects in an Amazon S3 bucket. This doesn't include
 list operations.
@@ -206,10 +224,12 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L247" >}}">function <b>headRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>headRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP HEAD requests made to an Amazon S3 bucket.
 
@@ -223,10 +243,12 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L308" >}}">function <b>listRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP requests that list the contents of a bucket.
 
@@ -240,10 +262,12 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L137" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#S3MetricName'>S3MetricName</a>, change: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/S3 metric with the requested [metricName]. See
 https://docs.aws.amazon.com/AmazonS3/latest/dev/cloudwatch-monitoring.html for list of all
@@ -312,10 +336,12 @@ The following dimensions are used to filter Amazon S3 metrics:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L184" >}}">function <b>numberOfObjects</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfObjects(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total number of objects stored in a bucket for all storage classes except for the GLACIER
 storage class. This value is calculated by counting all objects in the bucket (both current
@@ -332,10 +358,12 @@ Valid statistics: Average
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L261" >}}">function <b>postRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>postRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP POST requests made to an Amazon S3 bucket.
 
@@ -352,10 +380,12 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L223" >}}">function <b>putRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>putRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of HTTP PUT requests made for objects in an Amazon S3 bucket.
 
@@ -369,10 +399,12 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L273" >}}">function <b>selectRequests</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectRequests(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of Amazon S3 SELECT Object Content requests made for objects in an Amazon S3
 bucket.
@@ -387,10 +419,12 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L297" >}}">function <b>selectReturnedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectReturnedBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of bytes of data returned with Amazon S3 SELECT Object Content requests in an
 Amazon S3 bucket.
@@ -405,10 +439,12 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L285" >}}">function <b>selectScannedBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectScannedBytes(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of bytes of data scanned with Amazon S3 SELECT Object Content requests in an
 Amazon S3 bucket.
@@ -423,10 +459,12 @@ Valid statistics: Average (bytes per request), Sum (bytes per period), Sample Co
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L384" >}}">function <b>totalRequestLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>totalRequestLatency(change?: <a href='#S3MetricChange'>S3MetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The elapsed per-request time from the first byte received to the last byte sent to an Amazon
 S3 bucket. This includes the time taken to receive the request body and send the response
@@ -448,7 +486,9 @@ Valid statistics: Average, Sum, Min, Max, Sample Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L33" >}}">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: aws.s3.Bucket;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional bucket to filter metrics down to.
@@ -459,7 +499,9 @@ Optional bucket to filter metrics down to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -472,7 +514,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -485,7 +529,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -498,7 +544,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L72" >}}">property <b>filterId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters metrics configurations that you specify for request metrics on a
@@ -512,7 +560,9 @@ configuration. For more information, see
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -527,7 +577,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -540,7 +592,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -553,7 +607,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L62" >}}">property <b>storageType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageType?: <span class='s2'>"StandardStorage"</span> | <span class='s2'>"IntelligentTieringFAStorage"</span> | <span class='s2'>"IntelligentTieringIAStorage"</span> | <span class='s2'>"StandardIAStorage"</span> | <span class='s2'>"StandardIAStorage"</span> | <span class='s2'>"StandardIASizeOverhead"</span> | <span class='s2'>"OneZoneIAStorage"</span> | <span class='s2'>"OneZoneIASizeOverhead"</span> | <span class='s2'>"ReducedRedundancyStorage"</span> | <span class='s2'>"GlacierStorage"</span> | <span class='s2'>"GlacierStorageOverhead"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data that you have stored in a bucket by the following types
@@ -588,7 +644,9 @@ of storage:
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -601,7 +659,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -615,7 +675,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -629,7 +691,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="s3/metrics.ts#L21" >}}">type <b>S3MetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> S3MetricName = <span class='s2'>"BucketSizeBytes"</span> | <span class='s2'>"NumberOfObjects"</span> | <span class='s2'>"AllRequests"</span> | <span class='s2'>"GetRequests"</span> | <span class='s2'>"PutRequests"</span> | <span class='s2'>"DeleteRequests"</span> | <span class='s2'>"HeadRequests"</span> | <span class='s2'>"PostRequests"</span> | <span class='s2'>"SelectRequests"</span> | <span class='s2'>"SelectScannedBytes"</span> | <span class='s2'>"SelectReturnedBytes"</span> | <span class='s2'>"ListRequests"</span> | <span class='s2'>"BytesDownloaded"</span> | <span class='s2'>"BytesUploaded"</span> | <span class='s2'>"4xxErrors"</span> | <span class='s2'>"5xxErrors"</span> | <span class='s2'>"FirstByteLatency"</span> | <span class='s2'>"TotalRequestLatency"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

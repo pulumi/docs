@@ -676,7 +676,7 @@ properties used to qualify the lookup.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#ServiceBusFunction'>ServiceBusFunction</a></pre>
+<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#ServiceBusFunction'>ServiceBusFunction</a></pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -1295,7 +1295,7 @@ deployments.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -1972,7 +1972,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SubscriptionRuleCorrelationFilter'>outputs.servicebus.SubscriptionRuleCorrelationFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2776,7 +2776,7 @@ deployments.
 <div class="pdoc-member-contents">
 
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
 {{< /md-disable >}}
 
 {{% md %}}
@@ -5486,7 +5486,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>inputs.servicebus.SubscriptionRuleCorrelationFilter</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -5613,7 +5613,7 @@ Represents set of actions written in SQL language-based syntax that is performed
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SubscriptionRuleCorrelationFilter'>inputs.servicebus.SubscriptionRuleCorrelationFilter</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

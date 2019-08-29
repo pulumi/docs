@@ -511,7 +511,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CertifiateCertificate'>CertifiateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificate'>outputs.keyvault.CertifiateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -537,7 +537,7 @@ The raw Key Vault Certificate.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicy'>outputs.keyvault.CertifiateCertificatePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -860,7 +860,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CertificateCertificate'>CertificateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificate'>outputs.keyvault.CertificateCertificate</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -886,7 +886,7 @@ The raw Key Vault Certificate.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertificateCertificatePolicy'>outputs.keyvault.CertificateCertificatePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1454,7 +1454,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultAccessPolicy'>outputs.keyvault.KeyVaultAccessPolicy</a>[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1546,7 +1546,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultNetworkAcls'>outputs.keyvault.KeyVaultNetworkAcls</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -1572,7 +1572,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KeyVaultSku'>KeyVaultSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KeyVaultSku'>outputs.keyvault.KeyVaultSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2332,7 +2332,7 @@ The set of arguments for constructing a Certifiate resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertifiateCertificate'>CertifiateCertificate</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate'>inputs.keyvault.CertifiateCertificate</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2345,7 +2345,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy'>inputs.keyvault.CertifiateCertificatePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2417,7 +2417,7 @@ Input properties used for looking up and filtering Certifiate resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertifiateCertificate'>CertifiateCertificate</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate'>inputs.keyvault.CertifiateCertificate</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2443,7 +2443,7 @@ The raw Key Vault Certificate.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertifiateCertificatePolicy'>CertifiateCertificatePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy'>inputs.keyvault.CertifiateCertificatePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2554,7 +2554,7 @@ The set of arguments for constructing a Certificate resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateCertificate'>CertificateCertificate</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificate'>inputs.keyvault.CertificateCertificate</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2567,7 +2567,7 @@ A `certificate` block as defined below, used to Import an existing certificate.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificatePolicy'>inputs.keyvault.CertificateCertificatePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2639,7 +2639,7 @@ Input properties used for looking up and filtering Certificate resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateCertificate'>CertificateCertificate</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificate'>inputs.keyvault.CertificateCertificate</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -2665,7 +2665,7 @@ The raw Key Vault Certificate.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateCertificatePolicy'>CertificateCertificatePolicy</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>certificatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertificateCertificatePolicy'>inputs.keyvault.CertificateCertificatePolicy</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3099,7 +3099,7 @@ A collection of values returned by getKeyVault.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>accessPolicies: <a href='#GetKeyVaultAccessPolicy'>GetKeyVaultAccessPolicy</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>accessPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultAccessPolicy'>outputs.keyvault.GetKeyVaultAccessPolicy</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3190,7 +3190,7 @@ The name of the SKU used for this Key Vault.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkAcls: <a href='#GetKeyVaultNetworkAcl'>GetKeyVaultNetworkAcl</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>networkAcls: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultNetworkAcl'>outputs.keyvault.GetKeyVaultNetworkAcl</a>[];</pre>
 {{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
@@ -3210,7 +3210,7 @@ The name of the SKU used for this Key Vault.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku: <a href='#GetKeyVaultSku'>GetKeyVaultSku</a>;</pre>
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetKeyVaultSku'>outputs.keyvault.GetKeyVaultSku</a>;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3720,7 +3720,7 @@ The set of arguments for constructing a KeyVault resource.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultAccessPolicy'>inputs.keyvault.KeyVaultAccessPolicy</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3798,7 +3798,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultNetworkAcls'>inputs.keyvault.KeyVaultNetworkAcls</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3824,7 +3824,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KeyVaultSku'>KeyVaultSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultSku'>inputs.keyvault.KeyVaultSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3886,7 +3886,7 @@ Input properties used for looking up and filtering KeyVault resources.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KeyVaultAccessPolicy'>KeyVaultAccessPolicy</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>accessPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultAccessPolicy'>inputs.keyvault.KeyVaultAccessPolicy</a>&gt;[]&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3964,7 +3964,7 @@ Specifies the name of the Key Vault. Changing this forces a new resource to be c
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KeyVaultNetworkAcls'>KeyVaultNetworkAcls</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>networkAcls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultNetworkAcls'>inputs.keyvault.KeyVaultNetworkAcls</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -3990,7 +3990,7 @@ The name of the resource group in which to create the Key Vault. Changing this f
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KeyVaultSku'>KeyVaultSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KeyVaultSku'>inputs.keyvault.KeyVaultSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

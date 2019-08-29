@@ -32,10 +32,12 @@ title: Module rds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L449" >}}">function <b>activeTransactions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activeTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of current transactions executing on an Aurora database instance per
 second. By default, Aurora doesn't enable this metric. To begin measuring this value, set
@@ -49,10 +51,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L462" >}}">function <b>auroraBinlogReplicaLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraBinlogReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of time a replica DB cluster running on Aurora with MySQL compatibility lags
 behind the source DB cluster. This metric reports the value of the Seconds_Behind_Master
@@ -68,10 +72,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L480" >}}">function <b>auroraGlobalDBDataTransferBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraGlobalDBDataTransferBytes(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Units: Bytes
 
@@ -83,10 +89,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L471" >}}">function <b>auroraGlobalDBReplicatedWriteIO</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraGlobalDBReplicatedWriteIO(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Units: Bytes
 
@@ -98,10 +106,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L489" >}}">function <b>auroraGlobalDBReplicationLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraGlobalDBReplicationLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Units: Milliseconds
 
@@ -113,10 +123,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L499" >}}">function <b>auroraReplicaLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 For an Aurora Replica, the amount of lag when replicating updates from the primary instance,
 in milliseconds.
@@ -129,10 +141,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L509" >}}">function <b>auroraReplicaLagMaximum</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraReplicaLagMaximum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The maximum amount of lag between the primary instance and each Aurora DB instance in the DB
 cluster, in milliseconds.
@@ -145,10 +159,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L519" >}}">function <b>auroraReplicaLagMinimum</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraReplicaLagMinimum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The minimum amount of lag between the primary instance and each Aurora DB instance in the DB
 cluster, in milliseconds.
@@ -161,10 +177,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L528" >}}">function <b>backtrackChangeRecordsCreationRate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backtrackChangeRecordsCreationRate(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of backtrack change records created over five minutes for your DB cluster.
 
@@ -176,10 +194,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L537" >}}">function <b>backtrackChangeRecordsStored</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backtrackChangeRecordsStored(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The actual number of backtrack change records used by your DB cluster.
 
@@ -191,10 +211,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L546" >}}">function <b>backtrackWindowActual</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backtrackWindowActual(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The difference between the target backtrack window and the actual backtrack window.
 
@@ -206,10 +228,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L556" >}}">function <b>backtrackWindowAlert</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backtrackWindowAlert(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of times that the actual backtrack window is smaller than the target backtrack
 window for a given period of time.
@@ -222,10 +246,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L568" >}}">function <b>backupRetentionPeriodStorageUsed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backupRetentionPeriodStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total amount of backup storage in GiB used to support the point-in-time restore feature
 within the Aurora DB cluster's backup retention window. Included in the total reported by the
@@ -240,10 +266,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L198" >}}">function <b>binLogDiskUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>binLogDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of disk space occupied by binary logs on the master. Applies to MySQL read
 replicas.
@@ -256,10 +284,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L577" >}}">function <b>blockedTransactions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockedTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of transactions in the database that are blocked per second.
 
@@ -271,10 +301,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L586" >}}">function <b>bufferCacheHitRatio</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bufferCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The percentage of requests that are served by the buffer cache.
 
@@ -286,10 +318,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L207" >}}">function <b>burstBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>burstBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The percent of General Purpose SSD (gp2) burst-bucket I/O credits available.
 
@@ -301,10 +335,12 @@ Units: Percent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L595" >}}">function <b>commitLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>commitLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of latency for commit operations, in milliseconds.
 
@@ -316,10 +352,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L604" >}}">function <b>commitThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>commitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of commit operations per second.
 
@@ -331,10 +369,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L251" >}}">function <b>cpuCreditBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuCreditBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 [T2 instances] The number of earned CPU credits that an instance has accrued since it was
 launched or started. For T2 Standard, the CPUCreditBalance also includes the number of launch
@@ -359,10 +399,12 @@ CPU credit metrics are available at a five-minute frequency only.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L229" >}}">function <b>cpuCreditUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuCreditUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 [T2 instances] The number of CPU credits spent by the instance for CPU utilization. One CPU
 credit equals one vCPU running at 100% utilization for one minute or an equivalent
@@ -378,10 +420,12 @@ greater than five minutes, use the Sum statistic instead of the Average statisti
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L216" >}}">function <b>cpuUtilization</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuUtilization(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The percentage of CPU utilization.
 
@@ -393,10 +437,12 @@ Units: Percent
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L260" >}}">function <b>databaseConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseConnections(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of database connections in use.
 
@@ -408,10 +454,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L614" >}}">function <b>ddlLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ddlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of latency for data definition language (DDL) requests, in milliseconds—for
 example, create, alter, and drop requests.
@@ -424,10 +472,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L623" >}}">function <b>ddlThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ddlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of DDL requests per second.
 
@@ -439,10 +489,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L632" >}}">function <b>deadlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadlocks(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of deadlocks in the database per second.
 
@@ -454,10 +506,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L641" >}}">function <b>deleteLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deleteLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of latency for delete queries, in milliseconds.
 
@@ -469,10 +523,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L650" >}}">function <b>deleteThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deleteThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of delete queries per second.
 
@@ -484,10 +540,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L269" >}}">function <b>diskQueueDepth</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskQueueDepth(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of outstanding IOs (read/write requests) waiting to access the disk.
 
@@ -499,10 +557,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L659" >}}">function <b>dmlLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dmlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of latency for inserts, updates, and deletes, in milliseconds.
 
@@ -514,10 +574,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L668" >}}">function <b>dmlThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dmlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of inserts, updates, and deletes per second.
 
@@ -529,10 +591,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L677" >}}">function <b>engineUptime</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>engineUptime(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of time that the instance has been running, in seconds.
 
@@ -544,10 +608,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L278" >}}">function <b>failedSQLServerAgentJobsCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>failedSQLServerAgentJobsCount(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of failed SQL Server Agent jobs during the last minute.
 
@@ -559,10 +625,12 @@ Unit: Count/Minute
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L690" >}}">function <b>freeLocalStorage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>freeLocalStorage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of storage available for temporary tables and logs, in bytes. Unlike for other DB
 engines, for Aurora DB instances this metric reports the amount of storage available to each
@@ -578,10 +646,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L296" >}}">function <b>freeStorageSpace</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>freeStorageSpace(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of available storage space.
 
@@ -593,10 +663,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L287" >}}">function <b>freeableMemory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>freeableMemory(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of available random access memory.
 
@@ -608,10 +680,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L699" >}}">function <b>insertLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>insertLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of latency for insert queries, in milliseconds.
 
@@ -623,10 +697,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L708" >}}">function <b>insertThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>insertThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of insert queries per second.
 
@@ -638,10 +714,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L717" >}}">function <b>loginFailures</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loginFailures(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of failed login attempts per second.
 
@@ -653,10 +731,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L305" >}}">function <b>maximumUsedTransactionIDs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maximumUsedTransactionIDs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The maximum transaction ID that has been used. Applies to PostgreSQL.
 
@@ -668,10 +748,12 @@ Units: Count
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L164" >}}">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#RdsMetricName'>RdsMetricName</a>, change: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates an AWS/RDS metric with the requested [metricName]. See
 https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html#monitoring-cloudwatch
@@ -709,10 +791,12 @@ Amazon RDS metrics data can be filtered by using any of the following dimensions
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L315" >}}">function <b>networkReceiveThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkReceiveThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The incoming (Receive) network traffic on the DB instance, including both customer database
 traffic and Amazon RDS traffic used for monitoring and replication.
@@ -725,10 +809,12 @@ Units: Bytes/Second
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L728" >}}">function <b>networkThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of network throughput both received from and transmitted to clients by each
 instance in the Aurora MySQL DB cluster, in bytes per second. This throughput doesn't include
@@ -742,10 +828,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L325" >}}">function <b>networkTransmitThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkTransmitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The outgoing (Transmit) network traffic on the DB instance, including both customer database
 traffic and Amazon RDS traffic used for monitoring and replication.
@@ -758,10 +846,12 @@ Units: Bytes/Second
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L335" >}}">function <b>oldestReplicationSlotLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>oldestReplicationSlotLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The lagging size of the replica lagging the most in terms of WAL data received. Applies to
 PostgreSQL.
@@ -774,10 +864,12 @@ Units: Megabytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L737" >}}">function <b>queries</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>queries(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of queries executed per second.
 
@@ -789,10 +881,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L747" >}}">function <b>rdsToAuroraPostgreSQLReplicaLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rdsToAuroraPostgreSQLReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of lag in seconds when replicating updates from the primary RDS PostgreSQL
 instance to other nodes in the cluster.
@@ -805,10 +899,12 @@ Applies to: Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L344" >}}">function <b>readIOPS</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of disk read I/O operations per second.
 
@@ -820,10 +916,12 @@ Units: Count/Second
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L353" >}}">function <b>readLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average amount of time taken per disk I/O operation.
 
@@ -835,10 +933,12 @@ Units: Seconds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L362" >}}">function <b>readThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of bytes read from disk per second.
 
@@ -850,10 +950,12 @@ Units: Bytes/Second
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L372" >}}">function <b>replicaLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>replicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of time a Read Replica DB instance lags behind the source DB instance. Applies to
 MySQL, MariaDB, and PostgreSQL Read Replicas.
@@ -866,10 +968,12 @@ Units: Seconds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L381" >}}">function <b>replicationSlotDiskUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>replicationSlotDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The disk space used by replication slot files. Applies to PostgreSQL.
 
@@ -881,10 +985,12 @@ Units: Megabytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L756" >}}">function <b>resultSetCacheHitRatio</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resultSetCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The percentage of requests that are served by the Resultset cache.
 
@@ -896,10 +1002,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L765" >}}">function <b>selectLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of latency for select queries, in milliseconds.
 
@@ -911,10 +1019,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L774" >}}">function <b>selectThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of select queries per second.
 
@@ -926,10 +1036,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L786" >}}">function <b>snapshotStorageUsed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total amount of backup storage in GiB consumed by all Aurora snapshots for an Aurora DB
 cluster outside its backup retention window. Included in the total reported by the
@@ -944,10 +1056,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L391" >}}">function <b>swapUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>swapUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of swap space used on the DB instance. This metric is not available for SQL
 Server.
@@ -960,10 +1074,12 @@ Units: Bytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L798" >}}">function <b>totalBackupStorageBilled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>totalBackupStorageBilled(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The total amount of backup storage in GiB for which you are billed for a given Aurora DB
 cluster. Includes the backup storage measured by the BackupRetentionPeriodStorageUsed and
@@ -978,10 +1094,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L400" >}}">function <b>transactionLogsDiskUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transactionLogsDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The disk space used by transaction logs. Applies to PostgreSQL.
 
@@ -993,10 +1111,12 @@ Units: Megabytes
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L409" >}}">function <b>transactionLogsGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transactionLogsGeneration(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The size of transaction logs generated per second. Applies to PostgreSQL.
 
@@ -1008,10 +1128,12 @@ Units: Megabytes/Second
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L807" >}}">function <b>updateLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updateLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of latency for update queries, in milliseconds.
 
@@ -1023,10 +1145,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L816" >}}">function <b>updateThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updateThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of update queries per second.
 
@@ -1038,10 +1162,12 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L826" >}}">function <b>volumeBytesUsed</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeBytesUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The amount of storage used by your Aurora DB instance, in bytes. This value affects the cost
 of the Aurora DB cluster (for pricing information, see the Amazon RDS product page).
@@ -1054,10 +1180,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L844" >}}">function <b>volumeReadIOPs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeReadIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of billed read I/O operations from a cluster volume, reported at 5-minute
 intervals. Billed read operations are calculated at the cluster volume level, aggregated from
@@ -1078,10 +1206,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L855" >}}">function <b>volumeWriteIOPs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeWriteIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The number of write disk I/O operations to the cluster volume, reported at 5-minute
 intervals. See the description of VolumeReadIOPS above for a detailed description of how
@@ -1095,10 +1225,12 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L418" >}}">function <b>writeIOPS</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of disk write I/O operations per second.
 
@@ -1110,10 +1242,12 @@ Units: Count/Second
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L427" >}}">function <b>writeLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average amount of time taken per disk I/O operation.
 
@@ -1125,10 +1259,12 @@ Units: Seconds
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L436" >}}">function <b>writeThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 The average number of bytes written to disk per second.
 
@@ -1146,7 +1282,9 @@ Units: Bytes/Second
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L102" >}}">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cluster?: aws.rds.Cluster;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional [Cluster] to filter down events to.
@@ -1157,7 +1295,9 @@ Optional [Cluster] to filter down events to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -1170,7 +1310,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L118" >}}">property <b>databaseClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseClass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for all instances in a database class. For
@@ -1183,7 +1325,9 @@ example, you can aggregate metrics for all instances that belong to the database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -1196,7 +1340,9 @@ cleared.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L124" >}}">property <b>engineName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>engineName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for the identified engine name only. For
@@ -1208,7 +1354,9 @@ example, you can aggregate metrics for all instances that have the engine name [
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -1221,7 +1369,9 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L97" >}}">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance?: aws.rds.Instance;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional [Instance] to filter down events to.
@@ -1232,7 +1382,9 @@ Optional [Instance] to filter down events to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -1247,7 +1399,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -1260,7 +1414,9 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L111" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <span class='s2'>"WRITER"</span> | <span class='s2'>"READER"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for a specific Aurora DB cluster, aggregating
@@ -1275,7 +1431,9 @@ If this is provided then [cluster] must be provided as well.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L130" >}}">property <b>sourceRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceRegion?: aws.Region;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for the specified region only. For example,
@@ -1287,7 +1445,9 @@ you can aggregate metrics for all instances in the region [us-east-1].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -1300,7 +1460,9 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -1313,7 +1475,9 @@ to the default.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -1327,7 +1491,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -1341,7 +1507,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L21" >}}">type <b>RdsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> RdsMetricName = <span class='s2'>"BinLogDiskUsage"</span> | <span class='s2'>"BurstBalance"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"CPUCreditUsage"</span> | <span class='s2'>"CPUCreditBalance"</span> | <span class='s2'>"DatabaseConnections"</span> | <span class='s2'>"DiskQueueDepth"</span> | <span class='s2'>"FailedSQLServerAgentJobsCount"</span> | <span class='s2'>"FreeableMemory"</span> | <span class='s2'>"FreeStorageSpace"</span> | <span class='s2'>"MaximumUsedTransactionIDs"</span> | <span class='s2'>"NetworkReceiveThroughput"</span> | <span class='s2'>"NetworkTransmitThroughput"</span> | <span class='s2'>"OldestReplicationSlotLag"</span> | <span class='s2'>"ReadIOPS"</span> | <span class='s2'>"ReadLatency"</span> | <span class='s2'>"ReadThroughput"</span> | <span class='s2'>"ReplicaLag"</span> | <span class='s2'>"ReplicationSlotDiskUsage"</span> | <span class='s2'>"SwapUsage"</span> | <span class='s2'>"TransactionLogsDiskUsage"</span> | <span class='s2'>"TransactionLogsGeneration"</span> | <span class='s2'>"WriteIOPS"</span> | <span class='s2'>"WriteLatency"</span> | <span class='s2'>"WriteThroughput"</span> | <span class='s2'>"ActiveTransactions"</span> | <span class='s2'>"AuroraBinlogReplicaLag"</span> | <span class='s2'>"AuroraGlobalDBReplicatedWriteIO"</span> | <span class='s2'>"AuroraGlobalDBDataTransferBytes"</span> | <span class='s2'>"AuroraGlobalDBReplicationLag"</span> | <span class='s2'>"AuroraReplicaLag"</span> | <span class='s2'>"AuroraReplicaLagMaximum"</span> | <span class='s2'>"AuroraReplicaLagMinimum"</span> | <span class='s2'>"BacktrackChangeRecordsCreationRate"</span> | <span class='s2'>"BacktrackChangeRecordsStored"</span> | <span class='s2'>"BacktrackWindowActual"</span> | <span class='s2'>"BacktrackWindowAlert"</span> | <span class='s2'>"BackupRetentionPeriodStorageUsed"</span> | <span class='s2'>"BinLogDiskUsage"</span> | <span class='s2'>"BlockedTransactions"</span> | <span class='s2'>"BufferCacheHitRatio"</span> | <span class='s2'>"CommitLatency"</span> | <span class='s2'>"CommitThroughput"</span> | <span class='s2'>"CPUCreditBalance"</span> | <span class='s2'>"CPUCreditUsage"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"DatabaseConnections"</span> | <span class='s2'>"DDLLatency"</span> | <span class='s2'>"DDLThroughput"</span> | <span class='s2'>"Deadlocks"</span> | <span class='s2'>"DeleteLatency"</span> | <span class='s2'>"DeleteThroughput"</span> | <span class='s2'>"DiskQueueDepth"</span> | <span class='s2'>"DMLLatency"</span> | <span class='s2'>"DMLThroughput"</span> | <span class='s2'>"EngineUptime"</span> | <span class='s2'>"FreeableMemory"</span> | <span class='s2'>"FreeLocalStorage"</span> | <span class='s2'>"InsertLatency"</span> | <span class='s2'>"InsertThroughput"</span> | <span class='s2'>"LoginFailures"</span> | <span class='s2'>"MaximumUsedTransactionIDs"</span> | <span class='s2'>"NetworkReceiveThroughput"</span> | <span class='s2'>"NetworkThroughput"</span> | <span class='s2'>"NetworkTransmitThroughput"</span> | <span class='s2'>"Queries"</span> | <span class='s2'>"RDSToAuroraPostgreSQLReplicaLag"</span> | <span class='s2'>"ReadIOPS"</span> | <span class='s2'>"ReadLatency"</span> | <span class='s2'>"ReadThroughput"</span> | <span class='s2'>"ResultSetCacheHitRatio"</span> | <span class='s2'>"SelectLatency"</span> | <span class='s2'>"SelectThroughput"</span> | <span class='s2'>"SnapshotStorageUsed"</span> | <span class='s2'>"SwapUsage"</span> | <span class='s2'>"TotalBackupStorageBilled"</span> | <span class='s2'>"TransactionLogsDiskUsage"</span> | <span class='s2'>"UpdateLatency"</span> | <span class='s2'>"UpdateThroughput"</span> | <span class='s2'>"VolumeBytesUsed"</span> | <span class='s2'>"VolumeReadIOPs"</span> | <span class='s2'>"VolumeWriteIOPs"</span> | <span class='s2'>"WriteIOPS"</span> | <span class='s2'>"WriteLatency"</span> | <span class='s2'>"WriteThroughput"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>

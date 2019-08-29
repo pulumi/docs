@@ -254,7 +254,7 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#NamespaceSku'>outputs.relay.NamespaceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -356,7 +356,7 @@ The name of the resource group in which to create the Azure Relay Namespace.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.relay.NamespaceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 
@@ -509,7 +509,7 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 </h3>
 <div class="pdoc-member-contents">
 {{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#NamespaceSku'>inputs.relay.NamespaceSku</a>&gt;;</pre>
 {{< /md-disable >}}
 {{% md %}}
 

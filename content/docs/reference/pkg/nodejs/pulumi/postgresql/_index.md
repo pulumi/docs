@@ -72,6 +72,7 @@ import * as postgresql from "@pulumi/postgresql";
 <div class="pdoc-module-contents">
 <ul>
 <li><a href="config">config</a></li>
+<li><a href="types">types</a></li>
 </ul>
 </div>
 </div>
@@ -81,7 +82,9 @@ import * as postgresql from "@pulumi/postgresql";
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L30" >}}">class <b>Database</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``postgresql..Database`` resource creates and manages [database
@@ -110,10 +113,12 @@ const myDb = new postgresql.Database("myDb", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L109" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Database(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#DatabaseArgs'>DatabaseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Database resource with the given unique name, arguments, and options.
 
@@ -127,10 +132,12 @@ Create a Database resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L39" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatabaseState'>DatabaseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Database'>Database</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Database resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -141,20 +148,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L30" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L50" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Database.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -165,7 +176,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L62" >}}">property <b>allowConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowConnections: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `false` then no one can connect to this
@@ -178,7 +191,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L67" >}}">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 How many concurrent connections can be
@@ -190,7 +205,9 @@ established to this database. `-1` (the default) means no limit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L71" >}}">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Character set encoding to use in the new database
@@ -201,7 +218,9 @@ Character set encoding to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L30" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -213,7 +232,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L77" >}}">property <b>isTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>isTemplate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, then this database can be cloned by any
@@ -226,7 +247,9 @@ superusers or the owner of the database can clone it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L81" >}}">property <b>lcCollate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lcCollate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Collation order (LC_COLLATE) to use in the new database
@@ -237,7 +260,9 @@ Collation order (LC_COLLATE) to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L85" >}}">property <b>lcCtype</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lcCtype: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Character classification (LC_CTYPE) to use in the new database
@@ -248,7 +273,9 @@ Character classification (LC_CTYPE) to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database. Must be unique on the PostgreSQL
@@ -260,7 +287,9 @@ server instance where it is configured.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L98" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role name of the user who will own the database, or
@@ -275,7 +304,9 @@ the username in the provider is a superuser.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L105" >}}">property <b>tablespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tablespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the tablespace that will be
@@ -289,7 +320,9 @@ created in this database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L109" >}}">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>template: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the template from which to create the new database
@@ -300,7 +333,9 @@ The name of the template from which to create the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L30" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -313,7 +348,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L30" >}}">class <b>DefaultPrivileg</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``postgresql..DefaultPrivileg`` resource creates and manages default privileges given to a user for a database schema.
@@ -343,10 +380,12 @@ const readOnlyTables = new postgresql.DefaultPrivileg("readOnlyTables", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L80" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DefaultPrivileg(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DefaultPrivilegArgs'>DefaultPrivilegArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DefaultPrivileg resource with the given unique name, arguments, and options.
 
@@ -360,10 +399,12 @@ Create a DefaultPrivileg resource with the given unique name, arguments, and opt
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L39" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DefaultPrivilegState'>DefaultPrivilegState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DefaultPrivileg'>DefaultPrivileg</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DefaultPrivileg resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -374,20 +415,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L30" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DefaultPrivileg-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L50" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DefaultPrivileg.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -398,7 +443,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L60" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant default privileges for this role.
@@ -409,7 +456,9 @@ The database to grant default privileges for this role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L30" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -421,7 +470,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L64" >}}">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>objectType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PostgreSQL object type to set the default privileges on (one of: table, sequence).
@@ -432,7 +483,9 @@ The PostgreSQL object type to set the default privileges on (one of: table, sequ
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L68" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).
@@ -443,7 +496,9 @@ Role for which apply default privileges (You can change default privileges only 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L72" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of privileges to apply as default privileges.
@@ -454,7 +509,9 @@ The list of privileges to apply as default privileges.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L76" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role to which grant default privileges on.
@@ -465,7 +522,9 @@ The name of the role to which grant default privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L80" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database schema to set default privileges for this role.
@@ -476,7 +535,9 @@ The database schema to set default privileges for this role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L30" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -489,7 +550,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L23" >}}">class <b>Extension</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``postgresql..Extension`` resource creates and manages an extension on a PostgreSQL
@@ -511,10 +574,12 @@ const myExtension = new postgresql.Extension("myExtension", {});
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L65" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Extension(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ExtensionArgs'>ExtensionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Extension resource with the given unique name, arguments, and options.
 
@@ -528,10 +593,12 @@ Create a Extension resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L32" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ExtensionState'>ExtensionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Extension'>Extension</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Extension resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -542,20 +609,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L23" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Extension-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L43" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Extension.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -566,7 +637,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L53" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Which database to create the extension on. Defaults to provider database.
@@ -577,7 +650,9 @@ Which database to create the extension on. Defaults to provider database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L23" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -589,7 +664,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L57" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the extension.
@@ -600,7 +677,9 @@ The name of the extension.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L61" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the schema of an extension.
@@ -611,7 +690,9 @@ Sets the schema of an extension.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L23" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -623,7 +704,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L65" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the version number of the extension.
@@ -635,7 +718,9 @@ Sets the version number of the extension.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L29" >}}">class <b>Grant</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``postgresql..Grant`` resource creates and manages privileges given to a user for a database schema.
@@ -664,10 +749,12 @@ const readonlyTables = new postgresql.Grant("readonlyTables", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L75" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Grant(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GrantArgs'>GrantArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Grant resource with the given unique name, arguments, and options.
 
@@ -681,10 +768,12 @@ Create a Grant resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L38" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#GrantState'>GrantState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Grant'>Grant</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Grant resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -695,20 +784,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L29" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Grant-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L49" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Grant.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -719,7 +812,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L59" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant privileges on for this role.
@@ -730,7 +825,9 @@ The database to grant privileges on for this role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L29" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -742,7 +839,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L63" >}}">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>objectType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PostgreSQL object type to grant the privileges on (one of: table, sequence).
@@ -753,7 +852,9 @@ The PostgreSQL object type to grant the privileges on (one of: table, sequence).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L67" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of privileges to grant.
@@ -764,7 +865,9 @@ The list of privileges to grant.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L71" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role to grant privileges on.
@@ -775,7 +878,9 @@ The name of the role to grant privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L75" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database schema to grant privileges on for this role.
@@ -786,7 +891,9 @@ The database schema to grant privileges on for this role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L29" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -796,28 +903,32 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L15" >}}">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L17" >}}">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider type for the postgresql package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) for more information.
+[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-postgresql/blob/master/website/docs/index.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L28" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L30" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Provider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ProviderArgs'>ProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Provider resource with the given unique name, arguments, and options.
 
@@ -828,23 +939,27 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L15" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L17" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L23" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L25" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -852,10 +967,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L15" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L17" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -864,10 +981,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L15" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -880,7 +999,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L44" >}}">class <b>Role</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``postgresql..Role`` resource creates and manages a role on a PostgreSQL
@@ -924,10 +1045,12 @@ const myRole = new postgresql.Role("myRole", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L167" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Role(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#RoleArgs'>RoleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Role resource with the given unique name, arguments, and options.
 
@@ -941,10 +1064,12 @@ Create a Role resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#RoleState'>RoleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Role'>Role</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Role resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -955,20 +1080,24 @@ properties used to qualify the lookup.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L44" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Role-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Role.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -979,7 +1108,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L75" >}}">property <b>bypassRowLevelSecurity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bypassRowLevelSecurity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role bypasses every
@@ -991,7 +1122,9 @@ row-level security (RLS) policy.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L81" >}}">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>connectionLimit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If this role can log in, this specifies how
@@ -1004,7 +1137,9 @@ limit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L86" >}}">property <b>createDatabase</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createDatabase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines a role's ability to execute `CREATE
@@ -1016,7 +1151,9 @@ DATABASE`.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L92" >}}">property <b>createRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines a role's ability to execute `CREATE ROLE`.
@@ -1029,7 +1166,9 @@ is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L93" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>encrypted: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -1037,7 +1176,9 @@ is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L101" >}}">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>encryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether the password is stored
@@ -1052,7 +1193,9 @@ behavior of
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L44" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1064,7 +1207,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L106" >}}">property <b>inherit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>inherit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role "inherits" the privileges of
@@ -1076,7 +1221,9 @@ roles it is a member of.  Default value is `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L112" >}}">property <b>login</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether role is allowed to log in.  Roles without
@@ -1089,7 +1236,9 @@ in the usual sense of the word.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L117" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role. Must be unique on the PostgreSQL
@@ -1101,7 +1250,9 @@ server instance where it is configured.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L122" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the role's password. A password is only of use
@@ -1113,7 +1264,9 @@ for roles having the `login` attribute set to true.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L128" >}}">property <b>replication</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>replication: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role is allowed to initiate
@@ -1126,7 +1279,9 @@ value is `false`
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L132" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>roles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines list of roles which will be granted to this new role.
@@ -1137,7 +1292,9 @@ Defines list of roles which will be granted to this new role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L142" >}}">property <b>skipDropRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>skipDropRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When a PostgreSQL ROLE exists in multiple
@@ -1154,7 +1311,9 @@ This is the third and final step taken when removing a ROLE from a database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L153" >}}">property <b>skipReassignOwned</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>skipReassignOwned: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When a PostgreSQL ROLE exists in multiple
@@ -1172,7 +1331,9 @@ an implicit
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L159" >}}">property <b>superuser</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>superuser: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether the role is a "superuser", and
@@ -1185,7 +1346,9 @@ value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L44" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1197,7 +1360,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L167" >}}">property <b>validUntil</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>validUntil: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the date and time after which the role's
@@ -1210,10 +1375,12 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Schema">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L47" >}}">class <b>Schema</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L49" >}}">class <b>Schema</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ``postgresql..Schema`` resource creates and manages [schema
@@ -1256,13 +1423,15 @@ const mySchema = new postgresql.Schema("mySchema", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Schema-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L91" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L93" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Schema(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#SchemaArgs'>SchemaArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Schema resource with the given unique name, arguments, and options.
 
@@ -1273,13 +1442,15 @@ Create a Schema resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SchemaState'>SchemaState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Schema'>Schema</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Schema resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1287,23 +1458,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L47" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L49" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Schema.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1311,10 +1486,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L47" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L49" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1323,10 +1500,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-ifNotExists">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L77" >}}">property <b>ifNotExists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L79" >}}">property <b>ifNotExists</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ifNotExists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When true, use the existing schema if it exists. (Default: true)
@@ -1334,10 +1513,12 @@ When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L82" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L84" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the schema. Must be unique in the PostgreSQL
@@ -1346,10 +1527,12 @@ database instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L86" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L88" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ROLE who owns the schema.
@@ -1357,16 +1540,12 @@ The ROLE who owns the schema.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-policies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L91" >}}">property <b>policies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L93" >}}">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    create: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    createWithGrant: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    role: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    usage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    usageWithGrant: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>policies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/output/#SchemaPolicy'>outputs.SchemaPolicy</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Can be specified multiple times for each policy.  Each
@@ -1375,10 +1554,12 @@ policy block supports fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Schema-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L47" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L49" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1391,40 +1572,48 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="utilities.ts#L5" >}}">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="utilities.ts#L15" >}}">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="utilities.ts#L30" >}}">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="utilities.ts#L41" >}}">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="DatabaseArgs">
@@ -1440,7 +1629,9 @@ The set of arguments for constructing a Database resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L225" >}}">property <b>allowConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowConnections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `false` then no one can connect to this
@@ -1453,7 +1644,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L230" >}}">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 How many concurrent connections can be
@@ -1465,7 +1658,9 @@ established to this database. `-1` (the default) means no limit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L234" >}}">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Character set encoding to use in the new database
@@ -1476,7 +1671,9 @@ Character set encoding to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L240" >}}">property <b>isTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, then this database can be cloned by any
@@ -1489,7 +1686,9 @@ superusers or the owner of the database can clone it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L244" >}}">property <b>lcCollate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lcCollate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Collation order (LC_COLLATE) to use in the new database
@@ -1500,7 +1699,9 @@ Collation order (LC_COLLATE) to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L248" >}}">property <b>lcCtype</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lcCtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Character classification (LC_CTYPE) to use in the new database
@@ -1511,7 +1712,9 @@ Character classification (LC_CTYPE) to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L253" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database. Must be unique on the PostgreSQL
@@ -1523,7 +1726,9 @@ server instance where it is configured.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L261" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role name of the user who will own the database, or
@@ -1538,7 +1743,9 @@ the username in the provider is a superuser.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L268" >}}">property <b>tablespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tablespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the tablespace that will be
@@ -1552,7 +1759,9 @@ created in this database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L272" >}}">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the template from which to create the new database
@@ -1573,7 +1782,9 @@ Input properties used for looking up and filtering Database resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L166" >}}">property <b>allowConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowConnections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `false` then no one can connect to this
@@ -1586,7 +1797,9 @@ other mechanisms, such as `GRANT` or `REVOKE CONNECT`).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L171" >}}">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 How many concurrent connections can be
@@ -1598,7 +1811,9 @@ established to this database. `-1` (the default) means no limit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L175" >}}">property <b>encoding</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encoding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Character set encoding to use in the new database
@@ -1609,7 +1824,9 @@ Character set encoding to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L181" >}}">property <b>isTemplate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isTemplate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, then this database can be cloned by any
@@ -1622,7 +1839,9 @@ superusers or the owner of the database can clone it.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L185" >}}">property <b>lcCollate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lcCollate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Collation order (LC_COLLATE) to use in the new database
@@ -1633,7 +1852,9 @@ Collation order (LC_COLLATE) to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L189" >}}">property <b>lcCtype</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lcCtype?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Character classification (LC_CTYPE) to use in the new database
@@ -1644,7 +1865,9 @@ Character classification (LC_CTYPE) to use in the new database
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L194" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database. Must be unique on the PostgreSQL
@@ -1656,7 +1879,9 @@ server instance where it is configured.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L202" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The role name of the user who will own the database, or
@@ -1671,7 +1896,9 @@ the username in the provider is a superuser.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L209" >}}">property <b>tablespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tablespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the tablespace that will be
@@ -1685,7 +1912,9 @@ created in this database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="database.ts#L213" >}}">property <b>template</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>template?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the template from which to create the new database
@@ -1706,7 +1935,9 @@ The set of arguments for constructing a DefaultPrivileg resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L175" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant default privileges for this role.
@@ -1717,7 +1948,9 @@ The database to grant default privileges for this role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L179" >}}">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>objectType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PostgreSQL object type to set the default privileges on (one of: table, sequence).
@@ -1728,7 +1961,9 @@ The PostgreSQL object type to set the default privileges on (one of: table, sequ
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L183" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).
@@ -1739,7 +1974,9 @@ Role for which apply default privileges (You can change default privileges only 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L187" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of privileges to apply as default privileges.
@@ -1750,7 +1987,9 @@ The list of privileges to apply as default privileges.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L191" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role to which grant default privileges on.
@@ -1761,7 +2000,9 @@ The name of the role to which grant default privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L195" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database schema to set default privileges for this role.
@@ -1782,7 +2023,9 @@ Input properties used for looking up and filtering DefaultPrivileg resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L145" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant default privileges for this role.
@@ -1793,7 +2036,9 @@ The database to grant default privileges for this role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L149" >}}">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>objectType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PostgreSQL object type to set the default privileges on (one of: table, sequence).
@@ -1804,7 +2049,9 @@ The PostgreSQL object type to set the default privileges on (one of: table, sequ
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L153" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Role for which apply default privileges (You can change default privileges only for objects that will be created by yourself or by roles that you are a member of).
@@ -1815,7 +2062,9 @@ Role for which apply default privileges (You can change default privileges only 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L157" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privileges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of privileges to apply as default privileges.
@@ -1826,7 +2075,9 @@ The list of privileges to apply as default privileges.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L161" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role to which grant default privileges on.
@@ -1837,7 +2088,9 @@ The name of the role to which grant default privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="defaultPrivileg.ts#L165" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database schema to set default privileges for this role.
@@ -1858,7 +2111,9 @@ The set of arguments for constructing a Extension resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L130" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Which database to create the extension on. Defaults to provider database.
@@ -1869,7 +2124,9 @@ Which database to create the extension on. Defaults to provider database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L134" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the extension.
@@ -1880,7 +2137,9 @@ The name of the extension.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L138" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the schema of an extension.
@@ -1891,7 +2150,9 @@ Sets the schema of an extension.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L142" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the version number of the extension.
@@ -1912,7 +2173,9 @@ Input properties used for looking up and filtering Extension resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L108" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Which database to create the extension on. Defaults to provider database.
@@ -1923,7 +2186,9 @@ Which database to create the extension on. Defaults to provider database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L112" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the extension.
@@ -1934,7 +2199,9 @@ The name of the extension.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L116" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the schema of an extension.
@@ -1945,7 +2212,9 @@ Sets the schema of an extension.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="extension.ts#L120" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the version number of the extension.
@@ -1966,7 +2235,9 @@ The set of arguments for constructing a Grant resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L161" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant privileges on for this role.
@@ -1977,7 +2248,9 @@ The database to grant privileges on for this role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L165" >}}">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>objectType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PostgreSQL object type to grant the privileges on (one of: table, sequence).
@@ -1988,7 +2261,9 @@ The PostgreSQL object type to grant the privileges on (one of: table, sequence).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L169" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privileges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of privileges to grant.
@@ -1999,7 +2274,9 @@ The list of privileges to grant.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L173" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role to grant privileges on.
@@ -2010,7 +2287,9 @@ The name of the role to grant privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L177" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database schema to grant privileges on for this role.
@@ -2031,7 +2310,9 @@ Input properties used for looking up and filtering Grant resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L135" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database to grant privileges on for this role.
@@ -2042,7 +2323,9 @@ The database to grant privileges on for this role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L139" >}}">property <b>objectType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>objectType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PostgreSQL object type to grant the privileges on (one of: table, sequence).
@@ -2053,7 +2336,9 @@ The PostgreSQL object type to grant the privileges on (one of: table, sequence).
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L143" >}}">property <b>privileges</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privileges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of privileges to grant.
@@ -2064,7 +2349,9 @@ The list of privileges to grant.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L147" >}}">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role to grant privileges on.
@@ -2075,7 +2362,9 @@ The name of the role to grant privileges on.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="grant.ts#L151" >}}">property <b>schema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The database schema to grant privileges on for this role.
@@ -2084,7 +2373,7 @@ The database schema to grant privileges on for this role.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L68" >}}">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L70" >}}">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2093,10 +2382,12 @@ The set of arguments for constructing a Provider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-connectTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L72" >}}">property <b>connectTimeout</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L74" >}}">property <b>connectTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
@@ -2104,10 +2395,12 @@ Maximum wait for connection, in seconds. Zero or not specified means wait indefi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-database">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L76" >}}">property <b>database</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L78" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database to connect to in order to conenct to (defaults to `postgres`).
@@ -2115,10 +2408,12 @@ The name of the database to connect to in order to conenct to (defaults to `post
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-databaseUsername">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L80" >}}">property <b>databaseUsername</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L82" >}}">property <b>databaseUsername</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseUsername?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database username associated to the connected user (for user name maps)
@@ -2126,10 +2421,12 @@ Database username associated to the connected user (for user name maps)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-expectedVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L84" >}}">property <b>expectedVersion</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L86" >}}">property <b>expectedVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expectedVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify the expected version of PostgreSQL.
@@ -2137,10 +2434,12 @@ Specify the expected version of PostgreSQL.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L88" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L90" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of PostgreSQL server address to connect to
@@ -2148,10 +2447,12 @@ Name of PostgreSQL server address to connect to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-maxConnections">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L92" >}}">property <b>maxConnections</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L94" >}}">property <b>maxConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxConnections?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Maximum number of connections to establish to the database. Zero means unlimited.
@@ -2159,10 +2460,12 @@ Maximum number of connections to establish to the database. Zero means unlimited
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L96" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L98" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Password to be used if the PostgreSQL server demands password authentication
@@ -2170,10 +2473,12 @@ Password to be used if the PostgreSQL server demands password authentication
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L101" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L103" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain
@@ -2182,18 +2487,22 @@ connections
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-sslMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L102" >}}">property <b>sslMode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L104" >}}">property <b>sslMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-sslmode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L107" >}}">property <b>sslmode</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L109" >}}">property <b>sslmode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslmode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
@@ -2202,10 +2511,12 @@ PostgreSQL server
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-superuser">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L112" >}}">property <b>superuser</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L114" >}}">property <b>superuser</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>superuser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
@@ -2214,10 +2525,12 @@ Refreshing state password from Postgres)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-username">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L116" >}}">property <b>username</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="provider.ts#L118" >}}">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 PostgreSQL user name to connect as
@@ -2238,7 +2551,9 @@ The set of arguments for constructing a Role resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L338" >}}">property <b>bypassRowLevelSecurity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bypassRowLevelSecurity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role bypasses every
@@ -2250,7 +2565,9 @@ row-level security (RLS) policy.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L344" >}}">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If this role can log in, this specifies how
@@ -2263,7 +2580,9 @@ limit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L349" >}}">property <b>createDatabase</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createDatabase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines a role's ability to execute `CREATE
@@ -2275,7 +2594,9 @@ DATABASE`.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L355" >}}">property <b>createRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines a role's ability to execute `CREATE ROLE`.
@@ -2288,7 +2609,9 @@ is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L356" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2296,7 +2619,9 @@ is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L364" >}}">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether the password is stored
@@ -2311,7 +2636,9 @@ behavior of
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L369" >}}">property <b>inherit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inherit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role "inherits" the privileges of
@@ -2323,7 +2650,9 @@ roles it is a member of.  Default value is `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L375" >}}">property <b>login</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether role is allowed to log in.  Roles without
@@ -2336,7 +2665,9 @@ in the usual sense of the word.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L380" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role. Must be unique on the PostgreSQL
@@ -2348,7 +2679,9 @@ server instance where it is configured.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L385" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the role's password. A password is only of use
@@ -2360,7 +2693,9 @@ for roles having the `login` attribute set to true.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L391" >}}">property <b>replication</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>replication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role is allowed to initiate
@@ -2373,7 +2708,9 @@ value is `false`
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L395" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines list of roles which will be granted to this new role.
@@ -2384,7 +2721,9 @@ Defines list of roles which will be granted to this new role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L405" >}}">property <b>skipDropRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skipDropRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When a PostgreSQL ROLE exists in multiple
@@ -2401,7 +2740,9 @@ This is the third and final step taken when removing a ROLE from a database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L416" >}}">property <b>skipReassignOwned</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skipReassignOwned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When a PostgreSQL ROLE exists in multiple
@@ -2419,7 +2760,9 @@ an implicit
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L422" >}}">property <b>superuser</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>superuser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether the role is a "superuser", and
@@ -2432,7 +2775,9 @@ value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L430" >}}">property <b>validUntil</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>validUntil?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the date and time after which the role's
@@ -2457,7 +2802,9 @@ Input properties used for looking up and filtering Role resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L235" >}}">property <b>bypassRowLevelSecurity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bypassRowLevelSecurity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role bypasses every
@@ -2469,7 +2816,9 @@ row-level security (RLS) policy.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L241" >}}">property <b>connectionLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionLimit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If this role can log in, this specifies how
@@ -2482,7 +2831,9 @@ limit.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L246" >}}">property <b>createDatabase</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createDatabase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines a role's ability to execute `CREATE
@@ -2494,7 +2845,9 @@ DATABASE`.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L252" >}}">property <b>createRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines a role's ability to execute `CREATE ROLE`.
@@ -2507,7 +2860,9 @@ is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L253" >}}">property <b>encrypted</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encrypted?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2515,7 +2870,9 @@ is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L261" >}}">property <b>encryptedPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>encryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether the password is stored
@@ -2530,7 +2887,9 @@ behavior of
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L266" >}}">property <b>inherit</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inherit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role "inherits" the privileges of
@@ -2542,7 +2901,9 @@ roles it is a member of.  Default value is `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L272" >}}">property <b>login</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether role is allowed to log in.  Roles without
@@ -2555,7 +2916,9 @@ in the usual sense of the word.  Default value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L277" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the role. Must be unique on the PostgreSQL
@@ -2567,7 +2930,9 @@ server instance where it is configured.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L282" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Sets the role's password. A password is only of use
@@ -2579,7 +2944,9 @@ for roles having the `login` attribute set to true.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L288" >}}">property <b>replication</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>replication?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether a role is allowed to initiate
@@ -2592,7 +2959,9 @@ value is `false`
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L292" >}}">property <b>roles</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>roles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines list of roles which will be granted to this new role.
@@ -2603,7 +2972,9 @@ Defines list of roles which will be granted to this new role.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L302" >}}">property <b>skipDropRole</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skipDropRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When a PostgreSQL ROLE exists in multiple
@@ -2620,7 +2991,9 @@ This is the third and final step taken when removing a ROLE from a database.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L313" >}}">property <b>skipReassignOwned</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skipReassignOwned?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When a PostgreSQL ROLE exists in multiple
@@ -2638,7 +3011,9 @@ an implicit
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L319" >}}">property <b>superuser</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>superuser?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines whether the role is a "superuser", and
@@ -2651,7 +3026,9 @@ value is `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="role.ts#L327" >}}">property <b>validUntil</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>validUntil?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines the date and time after which the role's
@@ -2664,7 +3041,7 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SchemaArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L154" >}}">interface <b>SchemaArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L156" >}}">interface <b>SchemaArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2673,10 +3050,12 @@ The set of arguments for constructing a Schema resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SchemaArgs-ifNotExists">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L158" >}}">property <b>ifNotExists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L160" >}}">property <b>ifNotExists</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ifNotExists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When true, use the existing schema if it exists. (Default: true)
@@ -2684,10 +3063,12 @@ When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L163" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L165" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the schema. Must be unique in the PostgreSQL
@@ -2696,10 +3077,12 @@ database instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaArgs-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L167" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L169" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ROLE who owns the schema.
@@ -2707,16 +3090,12 @@ The ROLE who owns the schema.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaArgs-policies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L172" >}}">property <b>policies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L174" >}}">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    create: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    createWithGrant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    usage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    usageWithGrant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/input/#SchemaPolicy'>inputs.SchemaPolicy</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Can be specified multiple times for each policy.  Each
@@ -2726,7 +3105,7 @@ policy block supports fields documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SchemaState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L130" >}}">interface <b>SchemaState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L132" >}}">interface <b>SchemaState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2735,10 +3114,12 @@ Input properties used for looking up and filtering Schema resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SchemaState-ifNotExists">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L134" >}}">property <b>ifNotExists</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L136" >}}">property <b>ifNotExists</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ifNotExists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 When true, use the existing schema if it exists. (Default: true)
@@ -2746,10 +3127,12 @@ When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L139" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L141" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the schema. Must be unique in the PostgreSQL
@@ -2758,10 +3141,12 @@ database instance where it is configured.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaState-owner">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L143" >}}">property <b>owner</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L145" >}}">property <b>owner</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ROLE who owns the schema.
@@ -2769,16 +3154,12 @@ The ROLE who owns the schema.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SchemaState-policies">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L148" >}}">property <b>policies</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="postgresql" path="schema.ts#L150" >}}">property <b>policies</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    create: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    createWithGrant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    usage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    usageWithGrant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>policies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/postgresql/types/input/#SchemaPolicy'>inputs.SchemaPolicy</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Can be specified multiple times for each policy.  Each

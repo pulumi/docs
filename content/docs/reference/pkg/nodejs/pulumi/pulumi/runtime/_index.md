@@ -38,6 +38,7 @@ title: Module runtime
 <li><a href="#hasMonitor">function hasMonitor</a></li>
 <li><a href="#invoke">function invoke</a></li>
 <li><a href="#isDryRun">function isDryRun</a></li>
+<li><a href="#isLegacyApplyEnabled">function isLegacyApplyEnabled</a></li>
 <li><a href="#isQueryMode">function isQueryMode</a></li>
 <li><a href="#isTestModeEnabled">function isTestModeEnabled</a></li>
 <li><a href="#listResourceOutputs">function listResourceOutputs</a></li>
@@ -83,7 +84,9 @@ title: Module runtime
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/stack.ts#L26" >}}">const <b>rootPulumiStackTypeName</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> rootPulumiStackTypeName: <span class='s2'>"pulumi:pulumi:Stack"</span> = <span class='s2'>&#34;pulumi:pulumi:Stack&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 rootPulumiStackTypeName is the type name that should be used to construct the root component in the tree of Pulumi
@@ -96,7 +99,9 @@ resources allocated by a deployment.  This must be kept up to date with
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L229" >}}">const <b>specialArchiveSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> specialArchiveSig: <span class='s2'>"0def7320c3a5731c473e5ecbe6d01bc7"</span> = <span class='s2'>&#34;0def7320c3a5731c473e5ecbe6d01bc7&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 specialArchiveSig is a randomly assigned hash used to identify archives in maps. See pkg/resource/asset.go.
@@ -107,7 +112,9 @@ specialArchiveSig is a randomly assigned hash used to identify archives in maps.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L225" >}}">const <b>specialAssetSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> specialAssetSig: <span class='s2'>"c44067f5952c0a294b673a41bacd8c17"</span> = <span class='s2'>&#34;c44067f5952c0a294b673a41bacd8c17&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 specialAssetSig is a randomly assigned hash used to identify assets in maps. See pkg/resource/asset.go.
@@ -118,7 +125,9 @@ specialAssetSig is a randomly assigned hash used to identify assets in maps. See
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L233" >}}">const <b>specialSecretSig</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> specialSecretSig: <span class='s2'>"1b47061264138c4ac30d75fd1eb44270"</span> = <span class='s2'>&#34;1b47061264138c4ac30d75fd1eb44270&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 specialSecretSig is a randomly assigned hash used to identify secrets in maps. See pkg/resource/properties.go.
@@ -129,7 +138,9 @@ specialSecretSig is a randomly assigned hash used to identify secrets in maps. S
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L221" >}}">const <b>specialSigKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> specialSigKey: <span class='s2'>"4dabf18193072939515e22adb298388d"</span> = <span class='s2'>&#34;4dabf18193072939515e22adb298388d&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 specialSigKey is sometimes used to encode type identity inside of a map. See pkg/resource/properties.go.
@@ -140,7 +151,9 @@ specialSigKey is sometimes used to encode type identity inside of a map. See pkg
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L217" >}}">const <b>unknownValue</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> unknownValue: <span class='s2'>"04da6b54-80e4-46f7-96ec-b56ff0331ba9"</span> = <span class='s2'>&#34;04da6b54-80e4-46f7-96ec-b56ff0331ba9&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unknown values are encoded as a distinguished string value.
@@ -151,20 +164,24 @@ Unknown values are encoded as a distinguished string value.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L87" >}}">function <b>_setQueryMode</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>_setQueryMode(val: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="allConfig">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/config.ts#L25" >}}">function <b>allConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allConfig(): {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 allConfig returns a copy of the full config map.
 
@@ -174,10 +191,12 @@ allConfig returns a copy of the full config map.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/debuggable.ts#L40" >}}">function <b>debuggablePromise</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>debuggablePromise&lt;T&gt;(p: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;, ctx: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;T&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 debuggablePromise optionally wraps a promise with some goo to make it easier to debug common problems.
 
@@ -187,36 +206,42 @@ debuggablePromise optionally wraps a promise with some goo to make it easier to 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L124" >}}">function <b>deserializeProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deserializeProperties(outputsStruct: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 deserializeProperties fetches the raw outputs and deserializes them from a gRPC call result.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="deserializeProperty">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L390" >}}">function <b>deserializeProperty</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L392" >}}">function <b>deserializeProperty</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deserializeProperty(prop: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 deserializeProperty unpacks some special types, reversing the above process.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="disconnect">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L228" >}}">function <b>disconnect</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L236" >}}">function <b>disconnect</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disconnect(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 disconnect permanently disconnects from the server, closing the connections.  It waits for the existing RPC
 queue to drain.  If any RPCs come in afterwards, however, they will crash the process.
@@ -224,13 +249,15 @@ queue to drain.  If any RPCs come in afterwards, however, they will crash the pr
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="disconnectSync">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L246" >}}">function <b>disconnectSync</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L254" >}}">function <b>disconnectSync</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disconnectSync(): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 disconnectSync permanently disconnects from the server, closing the connections. Unlike `disconnect`. it does not
 wait for the existing RPC queue to drain. Any RPCs that come in after this call will crash the process.
@@ -241,10 +268,12 @@ wait for the existing RPC queue to drain. Any RPCs that come in after this call 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/debuggable.ts#L102" >}}">function <b>errorString</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>errorString(err: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 errorString produces a string from an error, conditionally including additional diagnostics.
 
@@ -254,62 +283,72 @@ errorString produces a string from an error, conditionally including additional 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/config.ts#L39" >}}">function <b>getConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getConfig(k: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getConfig returns a configuration variable's value or undefined if it is unset.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEngine">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L175" >}}">function <b>getEngine</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L182" >}}">function <b>getEngine</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEngine(): Object | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getEngine returns the current engine, if any, for RPC communications back to the resource engine.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getMonitor">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L153" >}}">function <b>getMonitor</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L160" >}}">function <b>getMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getMonitor(): Object | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getMonitor returns the current resource monitoring service client for RPC communications.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getProject">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L101" >}}">function <b>getProject</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L108" >}}">function <b>getProject</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProject(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get the project being run by the current update.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRootResource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L290" >}}">function <b>getRootResource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L298" >}}">function <b>getRootResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getRootResource(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#URN'>URN</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 getRootResource returns a root resource URN that will automatically become the default parent of all resources.  This
 can be used to ensure that all resources without explicit parents are parented to a common parent resource.
@@ -317,26 +356,30 @@ can be used to ensure that all resources without explicit parents are parented t
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getStack">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L121" >}}">function <b>getStack</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L128" >}}">function <b>getStack</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getStack(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get the stack being targeted by the current update.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="hasMonitor">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L146" >}}">function <b>hasMonitor</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L153" >}}">function <b>hasMonitor</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hasMonitor(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 hasMonitor returns true if we are currently connected to a resource monitoring service.
 
@@ -346,10 +389,12 @@ hasMonitor returns true if we are currently connected to a resource monitoring s
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/invoke.ts#L31" >}}">function <b>invoke</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invoke(tok: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 invoke dynamically invokes the function, tok, which is offered by a provider plugin.  The inputs
 can be a bag of computed values (Ts or Promise<T>s), and the result is a Promise<any> that
@@ -358,13 +403,15 @@ resolves when the invoke finishes.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isDryRun">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L60" >}}">function <b>isDryRun</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L61" >}}">function <b>isDryRun</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isDryRun(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if we're currently performing a dry-run, or false if this is a true update. Note that we
 always consider executions in test mode to be "dry-runs", since we will never actually carry out an update,
@@ -372,40 +419,61 @@ and therefore certain output properties will never be resolved.
 
 {{% /md %}}
 </div>
+<h2 class="pdoc-module-header" id="isLegacyApplyEnabled">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L101" >}}">function <b>isLegacyApplyEnabled</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>isLegacyApplyEnabled(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Returns true if we will resolve missing outputs to inputs during preview (PULUMI_ENABLE_LEGACY_APPLY).
+
+{{% /md %}}
+</div>
 <h2 class="pdoc-module-header" id="isQueryMode">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L94" >}}">function <b>isQueryMode</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isQueryMode(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if query mode is enabled.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="isTestModeEnabled">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L72" >}}">function <b>isTestModeEnabled</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L73" >}}">function <b>isTestModeEnabled</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isTestModeEnabled(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if test mode is enabled (PULUMI_TEST_MODE).
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="listResourceOutputs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/resource.ts#L559" >}}">function <b>listResourceOutputs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/resource.ts#L566" >}}">function <b>listResourceOutputs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listResourceOutputs&lt;U&gt;(typeFilter?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>) => <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, stackName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): query.AsyncQueryable&lt;ResolvedResource&lt;U&gt;&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 listResourceOutputs returns the resource outputs (if any) for a stack, or an error if the stack
 cannot be found. Resources are retrieved from the latest stack snapshot, which may include
@@ -414,13 +482,15 @@ ongoing updates.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="monitorSupportsSecrets">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L359" >}}">function <b>monitorSupportsSecrets</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L367" >}}">function <b>monitorSupportsSecrets</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitorSupportsSecrets(): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 monitorSupportsSecrets returns a promise that when resolved tells you if the resource monitor we are connected
 to is able to support secrets across it's RPC interface. When it does, we marshal outputs marked with the secret
@@ -429,13 +499,15 @@ bit in a special way.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="readResource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/resource.ts#L87" >}}">function <b>readResource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/resource.ts#L91" >}}">function <b>readResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readResource(res: <a href='#Resource'>Resource</a>, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>, opts: <a href='#ResourceOptions'>ResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Reads an existing custom resource's state from the resource monitor.  Note that resources read in this way
 will not be part of the resulting stack's state, as they are presumed to belong to another.
@@ -443,13 +515,15 @@ will not be part of the resulting stack's state, as they are presumed to belong 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="registerResource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/resource.ts#L157" >}}">function <b>registerResource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/resource.ts#L161" >}}">function <b>registerResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registerResource(res: <a href='#Resource'>Resource</a>, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, custom: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, props: <a href='#Inputs'>Inputs</a>, opts: <a href='#ResourceOptions'>ResourceOptions</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 registerResource registers a new resource object with a given type t and name.  It returns the auto-generated
 URN and the ID that will resolve after the deployment has completed.  All properties will be initialized to property
@@ -458,13 +532,15 @@ objects that the registration operation will resolve at the right time (or remai
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="registerResourceOutputs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/resource.ts#L496" >}}">function <b>registerResourceOutputs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/resource.ts#L503" >}}">function <b>registerResourceOutputs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registerResourceOutputs(res: <a href='#Resource'>Resource</a>, outputs: <a href='#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#Inputs'>Inputs</a>&gt; | <a href='#Output'>Output</a>&lt;<a href='#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 registerResourceOutputs completes the resource registration, attaching an optional set of computed outputs.
 
@@ -474,10 +550,12 @@ registerResourceOutputs completes the resource registration, attaching an option
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L144" >}}">function <b>resolveProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resolveProperties(res: <a href='#Resource'>Resource</a>, resolvers: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, (v: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, isKnown: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, isSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;, t: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, allProps: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 resolveProperties takes as input a gRPC serialized proto.google.protobuf.Struct and resolves all
 of the resource's matching properties to the values inside.
@@ -489,13 +567,15 @@ output properties to work correctly w.r.t. knowns/unknowns: this function assume
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="rpcKeepAlive">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L277" >}}">function <b>rpcKeepAlive</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L285" >}}">function <b>rpcKeepAlive</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rpcKeepAlive(): () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 rpcKeepAlive registers a pending call to ensure that we don't prematurely disconnect from the server.  It returns
 a function that, when invoked, signals that the RPC has completed.
@@ -506,10 +586,12 @@ a function that, when invoked, signals that the RPC has completed.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/stack.ts#L32" >}}">function <b>runInPulumiStack</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>runInPulumiStack(init: () => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#Inputs'>Inputs</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 runInPulumiStack creates a new Pulumi stack resource and executes the callback inside of it.  Any outputs
 returned by the callback will be stored as output properties on this resulting Stack object.
@@ -517,13 +599,15 @@ returned by the callback will be stored as output properties on this resulting S
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="serialize">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L189" >}}">function <b>serialize</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L196" >}}">function <b>serialize</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serialize(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 serialize returns true if resource operations should be serialized.
 
@@ -533,10 +617,12 @@ serialize returns true if resource operations should be serialized.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L116" >}}">function <b>serializeProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serializeProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;{ ... }&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 serializeProperties walks the props object passed in, awaiting all interior promises, creating a reasonable
 POJO object that can be remoted over to registerResource.
@@ -547,10 +633,12 @@ POJO object that can be remoted over to registerResource.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L239" >}}">function <b>serializeProperty</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serializeProperty(ctx: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, prop: <a href='#Input'>Input</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;, dependentResources: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 serializeProperty serializes properties deeply.  This understands how to wait on any unresolved promises, as
 appropriate, in addition to translating certain "special" values so that they are ready to go on the wire.
@@ -561,10 +649,12 @@ appropriate, in addition to translating certain "special" values so that they ar
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L108" >}}">function <b>serializeResourceProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serializeResourceProperties(label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;[, { ... }, <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map'>Map</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set'>Set</a>&lt;<a href='#Resource'>Resource</a>&gt;&gt;]&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 serializeResourceProperties walks the props object passed in, awaiting all interior promises besides those for `id`
 and `urn`, creating a reasonable POJO object that can be remoted over to registerResource.
@@ -575,23 +665,27 @@ and `urn`, creating a reasonable POJO object that can be remoted over to registe
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/config.ts#L32" >}}">function <b>setConfig</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>setConfig(k: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, v: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 setConfig sets a configuration variable.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="setRootResource">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L327" >}}">function <b>setRootResource</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L335" >}}">function <b>setRootResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>setRootResource(res: <a href='#ComponentResource'>ComponentResource</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 setRootResource registers a resource that will become the default parent for all resources without explicit parents.
 
@@ -601,10 +695,12 @@ setRootResource registers a resource that will become the default parent for all
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L38" >}}">function <b>transferProperties</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transferProperties(onto: <a href='#Resource'>Resource</a>, label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, props: <a href='#Inputs'>Inputs</a>): <a href='#OutputResolvers'>OutputResolvers</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 transferProperties mutates the 'onto' resource so that it has Promise-valued properties for all
 the 'props' input/output props.  *Importantly* all these promises are completely unresolved. This
@@ -632,7 +728,9 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L40" >}}">property <b>dryRun</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dryRun?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -640,7 +738,19 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L38" >}}">property <b>engineAddr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>engineAddr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Options-legacyApply">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L43" >}}">property <b>legacyApply</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>legacyApply?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -648,7 +758,9 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L39" >}}">property <b>monitorAddr</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitorAddr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -656,7 +768,9 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L37" >}}">property <b>parallel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parallel?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -664,7 +778,9 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L35" >}}">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -672,7 +788,9 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L42" >}}">property <b>queryMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>queryMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -680,7 +798,9 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L36" >}}">property <b>stack</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stack?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -688,7 +808,9 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-child-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L41" >}}">property <b>testModeEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>testModeEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -697,7 +819,9 @@ Options is a bag of settings that controls the behavior of previews and deployme
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/settings.ts#L29" >}}">let <b>excessiveDebugOutput</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> excessiveDebugOutput: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> = <span class='s2'>false</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 excessiveDebugOutput enables, well, pretty excessive debug output pertaining to resources and properties.
@@ -708,5 +832,7 @@ excessiveDebugOutput enables, well, pretty excessive debug output pertaining to 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="runtime/rpc.ts#L24" >}}">type <b>OutputResolvers</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> OutputResolvers = Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, (value: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, isStable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>, isSecret: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
+{{< /md-disable >}}
 </div>
