@@ -18,23 +18,21 @@ title: Module types/input
 <li><a href="#ProjectSharedWithGroup">interface ProjectSharedWithGroup</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="gitlab" path="types/input.ts" >}}">types/input.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/input.ts">types/input.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ProjectSharedWithGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gitlab" path="types/input.ts#L7" >}}">interface <b>ProjectSharedWithGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/input.ts#L7">interface <b>ProjectSharedWithGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ProjectSharedWithGroup-groupAccessLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/input.ts#L12" >}}">property <b>groupAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/input.ts#L12">property <b>groupAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupAccessLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Group's sharing permissions. See [group members permission][groupMembersPermissions] for more info.
@@ -43,12 +41,10 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectSharedWithGroup-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/input.ts#L16" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/input.ts#L16">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Group id of the group you want to share the project with.
@@ -56,12 +52,10 @@ Group id of the group you want to share the project with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectSharedWithGroup-groupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/input.ts#L20" >}}">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/input.ts#L20">property <b>groupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Group's name.

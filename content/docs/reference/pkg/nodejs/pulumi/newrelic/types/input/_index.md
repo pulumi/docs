@@ -24,153 +24,103 @@ title: Module types/input
 <li><a href="#NrqlAlertConditionTerm">interface NrqlAlertConditionTerm</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="newrelic" path="types/input.ts" >}}">types/input.ts</a> 
+<a href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts">types/input.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="AlertConditionTerm">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L7" >}}">interface <b>AlertConditionTerm</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L7">interface <b>AlertConditionTerm</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="AlertConditionTerm-duration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L8" >}}">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L8">property <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertConditionTerm-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L9" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L9">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertConditionTerm-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L10" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L10">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertConditionTerm-threshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L11" >}}">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L11">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertConditionTerm-timeFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L12" >}}">property <b>timeFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L12">property <b>timeFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DashboardFilter">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L15" >}}">interface <b>DashboardFilter</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L15">interface <b>DashboardFilter</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="DashboardFilter-attributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L16" >}}">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L16">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DashboardFilter-eventTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L17" >}}">property <b>eventTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L17">property <b>eventTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DashboardWidget">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L20" >}}">interface <b>DashboardWidget</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L20">interface <b>DashboardWidget</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="DashboardWidget-column">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L21" >}}">property <b>column</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L21">property <b>column</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>column: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DashboardWidget-height">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L22" >}}">property <b>height</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L22">property <b>height</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>height?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DashboardWidget-notes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L23" >}}">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L23">property <b>notes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DashboardWidget-nrql">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L24" >}}">property <b>nrql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L24">property <b>nrql</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nrql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DashboardWidget-row">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L25" >}}">property <b>row</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L25">property <b>row</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>row: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DashboardWidget-title">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L29" >}}">property <b>title</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L29">property <b>title</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>title: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The title of the dashboard.
@@ -178,173 +128,113 @@ The title of the dashboard.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DashboardWidget-visualization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L30" >}}">property <b>visualization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L30">property <b>visualization</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visualization: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DashboardWidget-width">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L31" >}}">property <b>width</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L31">property <b>width</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>width?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InfraAlertConditionCritical">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L34" >}}">interface <b>InfraAlertConditionCritical</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L34">interface <b>InfraAlertConditionCritical</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InfraAlertConditionCritical-duration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L35" >}}">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L35">property <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InfraAlertConditionCritical-timeFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L36" >}}">property <b>timeFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L36">property <b>timeFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InfraAlertConditionCritical-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L37" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L37">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InfraAlertConditionWarning">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L40" >}}">interface <b>InfraAlertConditionWarning</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L40">interface <b>InfraAlertConditionWarning</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="InfraAlertConditionWarning-duration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L41" >}}">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L41">property <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InfraAlertConditionWarning-timeFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L42" >}}">property <b>timeFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L42">property <b>timeFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeFunction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InfraAlertConditionWarning-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L43" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L43">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NrqlAlertConditionNrql">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L46" >}}">interface <b>NrqlAlertConditionNrql</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L46">interface <b>NrqlAlertConditionNrql</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="NrqlAlertConditionNrql-query">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L47" >}}">property <b>query</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L47">property <b>query</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>query: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NrqlAlertConditionNrql-sinceValue">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L48" >}}">property <b>sinceValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L48">property <b>sinceValue</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sinceValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NrqlAlertConditionTerm">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L51" >}}">interface <b>NrqlAlertConditionTerm</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L51">interface <b>NrqlAlertConditionTerm</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="NrqlAlertConditionTerm-duration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L52" >}}">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L52">property <b>duration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NrqlAlertConditionTerm-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L53" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L53">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NrqlAlertConditionTerm-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L54" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L54">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NrqlAlertConditionTerm-threshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L55" >}}">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L55">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NrqlAlertConditionTerm-timeFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="newrelic" path="types/input.ts#L56" >}}">property <b>timeFunction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/types/input.ts#L56">property <b>timeFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeFunction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

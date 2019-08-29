@@ -27,19 +27,17 @@ title: Module budgets
 <li><a href="#BudgetState">interface BudgetState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="aws" path="budgets/budget.ts" >}}">budgets/budget.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts">budgets/budget.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Budget">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L68" >}}">class <b>Budget</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L68">class <b>Budget</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides a budgets budget resource. Budgets use the cost visualisation provided by Cost Explorer to show you the status of your budgets, to provide forecasts of your estimated costs, and to track your AWS usage, including your free tier usage.
@@ -102,13 +100,11 @@ const s3 = new aws.budgets.Budget("s3", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Budget-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L142" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L142"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Budget(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BudgetArgs'>BudgetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -121,13 +117,11 @@ Create a Budget resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L77" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BudgetState'>BudgetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Budget'>Budget</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -137,25 +131,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L68" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L68">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L88" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L88">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -165,12 +155,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L98" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L98">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the target account for budget. Will use current user's accountId by default if omitted.
@@ -178,12 +166,10 @@ The ID of the target account for budget. Will use current user's accountId by de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-budgetType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L102" >}}">property <b>budgetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L102">property <b>budgetType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>budgetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether this budget tracks monetary cost or usage.
@@ -191,12 +177,10 @@ Whether this budget tracks monetary cost or usage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-costFilters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L106" >}}">property <b>costFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L106">property <b>costFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>costFilters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Map of CostFilters key/value pairs to apply to the budget.
@@ -204,12 +188,10 @@ Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-costTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L110" >}}">property <b>costTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L110">property <b>costTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>costTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BudgetCostTypes'>outputs.budgets.BudgetCostTypes</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
@@ -217,12 +199,10 @@ Object containing CostTypes The types of cost included in a budget, such as tax 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L68">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -231,12 +211,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-limitAmount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L114" >}}">property <b>limitAmount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L114">property <b>limitAmount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>limitAmount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The amount of cost or usage being measured for a budget.
@@ -244,12 +222,10 @@ The amount of cost or usage being measured for a budget.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-limitUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L118" >}}">property <b>limitUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L118">property <b>limitUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>limitUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
@@ -257,12 +233,10 @@ The unit of measurement used for the budget forecast, actual spend, or budget th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L122" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L122">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of a budget. Unique within accounts.
@@ -270,12 +244,10 @@ The name of a budget. Unique within accounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-namePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L126" >}}">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L126">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The prefix of the name of a budget. Unique within accounts.
@@ -283,12 +255,10 @@ The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-notifications">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L130" >}}">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L130">property <b>notifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#BudgetNotification'>outputs.budgets.BudgetNotification</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
@@ -296,12 +266,10 @@ Object containing Budget Notifications. Can be used multiple times to define mor
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-timePeriodEnd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L134" >}}">property <b>timePeriodEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L134">property <b>timePeriodEnd</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>timePeriodEnd: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
@@ -309,12 +277,10 @@ The end of the time period covered by the budget. There are no restrictions on t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-timePeriodStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L138" >}}">property <b>timePeriodStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L138">property <b>timePeriodStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>timePeriodStart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
@@ -322,12 +288,10 @@ The start of the time period covered by the budget. The start date must come bef
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-timeUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L142" >}}">property <b>timeUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L142">property <b>timeUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>timeUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
@@ -335,12 +299,10 @@ The length of time until a budget resets the actual and forecasted spend. Valid 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Budget-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L68" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L68">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -350,7 +312,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BudgetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L266" >}}">interface <b>BudgetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L266">interface <b>BudgetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -359,12 +321,10 @@ The set of arguments for constructing a Budget resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BudgetArgs-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L270" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L270">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the target account for budget. Will use current user's accountId by default if omitted.
@@ -372,12 +332,10 @@ The ID of the target account for budget. Will use current user's accountId by de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-budgetType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L274" >}}">property <b>budgetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L274">property <b>budgetType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>budgetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether this budget tracks monetary cost or usage.
@@ -385,12 +343,10 @@ Whether this budget tracks monetary cost or usage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-costFilters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L278" >}}">property <b>costFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L278">property <b>costFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>costFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Map of CostFilters key/value pairs to apply to the budget.
@@ -398,12 +354,10 @@ Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-costTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L282" >}}">property <b>costTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L282">property <b>costTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>costTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetCostTypes'>inputs.budgets.BudgetCostTypes</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
@@ -411,12 +365,10 @@ Object containing CostTypes The types of cost included in a budget, such as tax 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-limitAmount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L286" >}}">property <b>limitAmount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L286">property <b>limitAmount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>limitAmount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The amount of cost or usage being measured for a budget.
@@ -424,12 +376,10 @@ The amount of cost or usage being measured for a budget.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-limitUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L290" >}}">property <b>limitUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L290">property <b>limitUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>limitUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
@@ -437,12 +387,10 @@ The unit of measurement used for the budget forecast, actual spend, or budget th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L294" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L294">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of a budget. Unique within accounts.
@@ -450,12 +398,10 @@ The name of a budget. Unique within accounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-namePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L298" >}}">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L298">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The prefix of the name of a budget. Unique within accounts.
@@ -463,12 +409,10 @@ The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-notifications">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L302" >}}">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L302">property <b>notifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetNotification'>inputs.budgets.BudgetNotification</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
@@ -476,12 +420,10 @@ Object containing Budget Notifications. Can be used multiple times to define mor
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-timePeriodEnd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L306" >}}">property <b>timePeriodEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L306">property <b>timePeriodEnd</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timePeriodEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
@@ -489,12 +431,10 @@ The end of the time period covered by the budget. There are no restrictions on t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-timePeriodStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L310" >}}">property <b>timePeriodStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L310">property <b>timePeriodStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timePeriodStart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
@@ -502,12 +442,10 @@ The start of the time period covered by the budget. The start date must come bef
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetArgs-timeUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L314" >}}">property <b>timeUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L314">property <b>timeUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeUnit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.
@@ -516,7 +454,7 @@ The length of time until a budget resets the actual and forecasted spend. Valid 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="BudgetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L212" >}}">interface <b>BudgetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L212">interface <b>BudgetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -525,12 +463,10 @@ Input properties used for looking up and filtering Budget resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="BudgetState-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L216" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L216">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the target account for budget. Will use current user's accountId by default if omitted.
@@ -538,12 +474,10 @@ The ID of the target account for budget. Will use current user's accountId by de
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-budgetType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L220" >}}">property <b>budgetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L220">property <b>budgetType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>budgetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether this budget tracks monetary cost or usage.
@@ -551,12 +485,10 @@ Whether this budget tracks monetary cost or usage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-costFilters">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L224" >}}">property <b>costFilters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L224">property <b>costFilters</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>costFilters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Map of CostFilters key/value pairs to apply to the budget.
@@ -564,12 +496,10 @@ Map of CostFilters key/value pairs to apply to the budget.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-costTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L228" >}}">property <b>costTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L228">property <b>costTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>costTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetCostTypes'>inputs.budgets.BudgetCostTypes</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Object containing CostTypes The types of cost included in a budget, such as tax and subscriptions..
@@ -577,12 +507,10 @@ Object containing CostTypes The types of cost included in a budget, such as tax 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-limitAmount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L232" >}}">property <b>limitAmount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L232">property <b>limitAmount</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>limitAmount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The amount of cost or usage being measured for a budget.
@@ -590,12 +518,10 @@ The amount of cost or usage being measured for a budget.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-limitUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L236" >}}">property <b>limitUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L236">property <b>limitUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>limitUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The unit of measurement used for the budget forecast, actual spend, or budget threshold, such as dollars or GB. See [Spend](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/data-type-spend.html) documentation.
@@ -603,12 +529,10 @@ The unit of measurement used for the budget forecast, actual spend, or budget th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L240" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L240">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of a budget. Unique within accounts.
@@ -616,12 +540,10 @@ The name of a budget. Unique within accounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-namePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L244" >}}">property <b>namePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L244">property <b>namePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The prefix of the name of a budget. Unique within accounts.
@@ -629,12 +551,10 @@ The prefix of the name of a budget. Unique within accounts.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-notifications">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L248" >}}">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L248">property <b>notifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#BudgetNotification'>inputs.budgets.BudgetNotification</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Object containing Budget Notifications. Can be used multiple times to define more than one budget notification
@@ -642,12 +562,10 @@ Object containing Budget Notifications. Can be used multiple times to define mor
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-timePeriodEnd">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L252" >}}">property <b>timePeriodEnd</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L252">property <b>timePeriodEnd</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timePeriodEnd?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The end of the time period covered by the budget. There are no restrictions on the end date. Format: `2017-01-01_12:00`.
@@ -655,12 +573,10 @@ The end of the time period covered by the budget. There are no restrictions on t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-timePeriodStart">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L256" >}}">property <b>timePeriodStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L256">property <b>timePeriodStart</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timePeriodStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The start of the time period covered by the budget. The start date must come before the end date. Format: `2017-01-01_12:00`.
@@ -668,12 +584,10 @@ The start of the time period covered by the budget. The start date must come bef
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="BudgetState-timeUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="budgets/budget.ts#L260" >}}">property <b>timeUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/budgets/budget.ts#L260">property <b>timeUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The length of time until a budget resets the actual and forecasted spend. Valid values: `MONTHLY`, `QUARTERLY`, `ANNUALLY`.

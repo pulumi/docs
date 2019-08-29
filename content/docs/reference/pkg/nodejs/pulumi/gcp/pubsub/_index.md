@@ -53,19 +53,17 @@ title: Module pubsub
 <li><a href="#TopicEventHandler">type TopicEventHandler</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts" >}}">pubsub/subscription.ts</a> <a href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts" >}}">pubsub/subscriptionIAMBinding.ts</a> <a href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts" >}}">pubsub/subscriptionIAMMember.ts</a> <a href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts" >}}">pubsub/subscriptionIAMPolicy.ts</a> <a href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts" >}}">pubsub/topic.ts</a> <a href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts" >}}">pubsub/topicIAMBinding.ts</a> <a href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts" >}}">pubsub/topicIAMMember.ts</a> <a href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts" >}}">pubsub/topicIAMPolicy.ts</a> <a href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts" >}}">pubsub/zMixins.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts">pubsub/subscription.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts">pubsub/subscriptionIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts">pubsub/subscriptionIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts">pubsub/subscriptionIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts">pubsub/topic.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts">pubsub/topicIAMBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts">pubsub/topicIAMMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts">pubsub/topicIAMPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts">pubsub/zMixins.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Subscription">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L82" >}}">class <b>Subscription</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L82">class <b>Subscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A named resource representing the stream of messages from a single,
@@ -141,13 +139,11 @@ const exampleSubscription = new gcp.pubsub.Subscription("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Subscription-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L122" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L122"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Subscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubscriptionArgs'>SubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -160,13 +156,11 @@ Create a Subscription resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L91" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L91">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubscriptionState'>SubscriptionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Subscription'>Subscription</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -176,25 +170,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L82" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L82">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L102" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L102">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -204,32 +194,22 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-ackDeadlineSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L109" >}}">property <b>ackDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L109">property <b>ackDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ackDeadlineSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-expirationPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L110" >}}">property <b>expirationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L110">property <b>expirationPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>expirationPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionExpirationPolicy'>outputs.pubsub.SubscriptionExpirationPolicy</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L82" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L82">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -238,52 +218,34 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L111" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L111">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-messageRetentionDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L112" >}}">property <b>messageRetentionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L112">property <b>messageRetentionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>messageRetentionDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L113" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L113">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L114" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L114">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L119" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L119">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -292,42 +254,28 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-pushConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L120" >}}">property <b>pushConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L120">property <b>pushConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>pushConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#SubscriptionPushConfig'>outputs.pubsub.SubscriptionPushConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-retainAckedMessages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L121" >}}">property <b>retainAckedMessages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L121">property <b>retainAckedMessages</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>retainAckedMessages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L122" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L122">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L82" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L82">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -337,12 +285,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L66" >}}">class <b>SubscriptionIAMBinding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L66">class <b>SubscriptionIAMBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage your IAM policy for pubsub subscription. Each of these resources serves a different use case:
@@ -403,13 +349,11 @@ const editor = new gcp.pubsub.SubscriptionIAMMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L112" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L112"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SubscriptionIAMBinding(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubscriptionIAMBindingArgs'>SubscriptionIAMBindingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -422,13 +366,11 @@ Create a SubscriptionIAMBinding resource with the given unique name, arguments, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L75" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L75">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubscriptionIAMBindingState'>SubscriptionIAMBindingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SubscriptionIAMBinding'>SubscriptionIAMBinding</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -438,25 +380,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L66" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L66">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L86" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L86">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -466,12 +404,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L96" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L96">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the subscription's IAM policy.
@@ -479,12 +415,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L66" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L66">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -493,22 +427,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L97" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L97">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L102" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L102">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -517,12 +445,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L108" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L108">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -532,12 +458,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L112" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L112">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subscription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -545,12 +469,10 @@ The subscription name or id to bind to attach IAM policy to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBinding-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L66" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L66">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -560,12 +482,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L66" >}}">class <b>SubscriptionIAMMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L66">class <b>SubscriptionIAMMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage your IAM policy for pubsub subscription. Each of these resources serves a different use case:
@@ -626,13 +546,11 @@ const editor = new gcp.pubsub.SubscriptionIAMMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L112" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L112"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SubscriptionIAMMember(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubscriptionIAMMemberArgs'>SubscriptionIAMMemberArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -645,13 +563,11 @@ Create a SubscriptionIAMMember resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L75" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L75">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubscriptionIAMMemberState'>SubscriptionIAMMemberState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SubscriptionIAMMember'>SubscriptionIAMMember</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -661,25 +577,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L66" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L66">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L86" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L86">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -689,12 +601,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L96" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L96">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the subscription's IAM policy.
@@ -702,12 +612,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L66" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L66">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -716,22 +624,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L97" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L97">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L102" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L102">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -740,12 +642,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L108" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L108">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -755,12 +655,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L112" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L112">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subscription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -768,12 +666,10 @@ The subscription name or id to bind to attach IAM policy to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMember-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L66" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L66">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -783,12 +679,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L66" >}}">class <b>SubscriptionIAMPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L66">class <b>SubscriptionIAMPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage your IAM policy for pubsub subscription. Each of these resources serves a different use case:
@@ -849,13 +743,11 @@ const editor = new gcp.pubsub.SubscriptionIAMMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L110" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L110"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SubscriptionIAMPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubscriptionIAMPolicyArgs'>SubscriptionIAMPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -868,13 +760,11 @@ Create a SubscriptionIAMPolicy resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L75" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L75">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubscriptionIAMPolicyState'>SubscriptionIAMPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SubscriptionIAMPolicy'>SubscriptionIAMPolicy</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -884,25 +774,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L66" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L66">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L86" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L86">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -912,12 +798,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L96" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L96">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the subscription's IAM policy.
@@ -925,12 +809,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L66" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L66">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -939,12 +821,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L101" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L101">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -953,12 +833,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L106" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L106">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -967,12 +845,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L110" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L110">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subscription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -980,12 +856,10 @@ The subscription name or id to bind to attach IAM policy to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L66" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L66">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -995,12 +869,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Topic">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L52" >}}">class <b>Topic</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L52">class <b>Topic</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A named resource to which messages are sent by publishers.
@@ -1046,13 +918,11 @@ const example = new gcp.pubsub.Topic("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L86" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L86"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Topic(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#TopicArgs'>TopicArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1065,13 +935,11 @@ Create a Topic resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L61" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L61">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TopicState'>TopicState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): Topic</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1081,25 +949,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L52" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L52">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L72" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L72">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1109,13 +973,11 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-onMessagePublished">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L78" >}}">method <b>onMessagePublished</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L78">method <b>onMessagePublished</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onMessagePublished(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, handler: <a href='#TopicEventHandler'>TopicEventHandler</a> | <a href='#TopicEventCallbackFunctionArgs'>TopicEventCallbackFunctionArgs</a>, args?: <a href='#TopicMessagePublishedArgs'>TopicMessagePublishedArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): cloudfunctions.CallbackFunction</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1129,12 +991,10 @@ See https://cloud.google.com/functions/docs/calling/pubsub for more details.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L52" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L52">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1143,42 +1003,28 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-kmsKeyName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L79" >}}">property <b>kmsKeyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L79">property <b>kmsKeyName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kmsKeyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L80" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L80">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L81" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L81">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L86" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L86">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -1187,12 +1033,10 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L52" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L52">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1202,12 +1046,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L68" >}}">class <b>TopicIAMBinding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L68">class <b>TopicIAMBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage your IAM policy for Pubsub Topic. Each of these resources serves a different use case:
@@ -1270,13 +1112,11 @@ const editor = new gcp.pubsub.TopicIAMMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L114" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L114"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TopicIAMBinding(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TopicIAMBindingArgs'>TopicIAMBindingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1289,13 +1129,11 @@ Create a TopicIAMBinding resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L77" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TopicIAMBindingState'>TopicIAMBindingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TopicIAMBinding'>TopicIAMBinding</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1305,25 +1143,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L68" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L68">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L88" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L88">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1333,12 +1167,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L98" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L98">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the topic's IAM policy.
@@ -1346,12 +1178,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L68">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1360,22 +1190,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L99" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L99">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L104" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L104">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -1384,12 +1208,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L110" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L110">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1399,12 +1221,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L114" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L114">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -1412,12 +1232,10 @@ The topic name or id to bind to attach IAM policy to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBinding-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L68" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L68">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1427,12 +1245,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L68" >}}">class <b>TopicIAMMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L68">class <b>TopicIAMMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage your IAM policy for Pubsub Topic. Each of these resources serves a different use case:
@@ -1495,13 +1311,11 @@ const editor = new gcp.pubsub.TopicIAMMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L114" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L114"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TopicIAMMember(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TopicIAMMemberArgs'>TopicIAMMemberArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1514,13 +1328,11 @@ Create a TopicIAMMember resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L77" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TopicIAMMemberState'>TopicIAMMemberState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TopicIAMMember'>TopicIAMMember</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1530,25 +1342,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L68" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L68">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L88" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L88">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1558,12 +1366,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L98" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L98">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the topic's IAM policy.
@@ -1571,12 +1377,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L68">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1585,22 +1389,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L99" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L99">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L104" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L104">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -1609,12 +1407,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L110" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L110">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1624,12 +1420,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L114" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L114">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -1637,12 +1431,10 @@ The topic name or id to bind to attach IAM policy to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMember-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L68" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L68">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1652,12 +1444,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L68" >}}">class <b>TopicIAMPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L68">class <b>TopicIAMPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Three different resources help you manage your IAM policy for Pubsub Topic. Each of these resources serves a different use case:
@@ -1720,13 +1510,11 @@ const editor = new gcp.pubsub.TopicIAMMember("editor", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L112" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L112"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TopicIAMPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TopicIAMPolicyArgs'>TopicIAMPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1739,13 +1527,11 @@ Create a TopicIAMPolicy resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L77" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TopicIAMPolicyState'>TopicIAMPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TopicIAMPolicy'>TopicIAMPolicy</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1755,25 +1541,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L68" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L68">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L88" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L88">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1783,12 +1565,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L98" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L98">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the topic's IAM policy.
@@ -1796,12 +1576,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L68">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1810,12 +1588,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L103" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L103">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -1824,12 +1600,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L108" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L108">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -1838,12 +1612,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L112" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L112">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -1851,12 +1623,10 @@ The topic name or id to bind to attach IAM policy to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L68" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L68">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1866,7 +1636,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L196" >}}">interface <b>SubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L196">interface <b>SubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1875,62 +1645,40 @@ The set of arguments for constructing a Subscription resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionArgs-ackDeadlineSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L197" >}}">property <b>ackDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L197">property <b>ackDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ackDeadlineSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-expirationPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L198" >}}">property <b>expirationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L198">property <b>expirationPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expirationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionExpirationPolicy'>inputs.pubsub.SubscriptionExpirationPolicy</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L199" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L199">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-messageRetentionDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L200" >}}">property <b>messageRetentionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L200">property <b>messageRetentionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>messageRetentionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L201" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L201">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L206" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L206">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -1939,38 +1687,26 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-pushConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L207" >}}">property <b>pushConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L207">property <b>pushConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pushConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionPushConfig'>inputs.pubsub.SubscriptionPushConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-retainAckedMessages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L208" >}}">property <b>retainAckedMessages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L208">property <b>retainAckedMessages</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>retainAckedMessages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L209" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L209">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L188" >}}">interface <b>SubscriptionIAMBindingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L188">interface <b>SubscriptionIAMBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1979,22 +1715,16 @@ The set of arguments for constructing a SubscriptionIAMBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L189" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L189">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L194" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L194">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -2003,12 +1733,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L200" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L200">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2018,12 +1746,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingArgs-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L204" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L204">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -2032,7 +1758,7 @@ The subscription name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L162" >}}">interface <b>SubscriptionIAMBindingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L162">interface <b>SubscriptionIAMBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2041,12 +1767,10 @@ Input properties used for looking up and filtering SubscriptionIAMBinding resour
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L166" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L166">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the subscription's IAM policy.
@@ -2054,22 +1778,16 @@ Input properties used for looking up and filtering SubscriptionIAMBinding resour
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L167" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L167">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L172" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L172">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -2078,12 +1796,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L178" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L178">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2093,12 +1809,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMBindingState-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMBinding.ts#L182" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMBinding.ts#L182">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -2107,7 +1821,7 @@ The subscription name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L188" >}}">interface <b>SubscriptionIAMMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L188">interface <b>SubscriptionIAMMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2116,22 +1830,16 @@ The set of arguments for constructing a SubscriptionIAMMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L189" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L189">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L194" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L194">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -2140,12 +1848,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L200" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L200">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2155,12 +1861,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberArgs-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L204" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L204">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -2169,7 +1873,7 @@ The subscription name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L162" >}}">interface <b>SubscriptionIAMMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L162">interface <b>SubscriptionIAMMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2178,12 +1882,10 @@ Input properties used for looking up and filtering SubscriptionIAMMember resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L166" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L166">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the subscription's IAM policy.
@@ -2191,22 +1893,16 @@ Input properties used for looking up and filtering SubscriptionIAMMember resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L167" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L167">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L172" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L172">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -2215,12 +1911,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L178" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L178">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2230,12 +1924,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMMemberState-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMMember.ts#L182" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMMember.ts#L182">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -2244,7 +1936,7 @@ The subscription name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L179" >}}">interface <b>SubscriptionIAMPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L179">interface <b>SubscriptionIAMPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2253,12 +1945,10 @@ The set of arguments for constructing a SubscriptionIAMPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L184" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L184">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -2267,12 +1957,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicyArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L189" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L189">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -2281,12 +1969,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicyArgs-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L193" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L193">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -2295,7 +1981,7 @@ The subscription name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionIAMPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L155" >}}">interface <b>SubscriptionIAMPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L155">interface <b>SubscriptionIAMPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2304,12 +1990,10 @@ Input properties used for looking up and filtering SubscriptionIAMPolicy resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L159" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L159">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the subscription's IAM policy.
@@ -2317,12 +2001,10 @@ Input properties used for looking up and filtering SubscriptionIAMPolicy resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L164" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L164">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -2331,12 +2013,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicyState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L169" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L169">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -2345,12 +2025,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionIAMPolicyState-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscriptionIAMPolicy.ts#L173" >}}">property <b>subscription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscriptionIAMPolicy.ts#L173">property <b>subscription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The subscription name or id to bind to attach IAM policy to.
@@ -2359,7 +2037,7 @@ The subscription name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L176" >}}">interface <b>SubscriptionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L176">interface <b>SubscriptionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2368,72 +2046,46 @@ Input properties used for looking up and filtering Subscription resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionState-ackDeadlineSeconds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L177" >}}">property <b>ackDeadlineSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L177">property <b>ackDeadlineSeconds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ackDeadlineSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-expirationPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L178" >}}">property <b>expirationPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L178">property <b>expirationPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>expirationPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionExpirationPolicy'>inputs.pubsub.SubscriptionExpirationPolicy</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L179" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L179">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-messageRetentionDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L180" >}}">property <b>messageRetentionDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L180">property <b>messageRetentionDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>messageRetentionDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L181" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L181">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-path">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L182" >}}">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L182">property <b>path</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L187" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L187">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -2442,38 +2094,26 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-pushConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L188" >}}">property <b>pushConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L188">property <b>pushConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pushConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#SubscriptionPushConfig'>inputs.pubsub.SubscriptionPushConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-retainAckedMessages">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L189" >}}">property <b>retainAckedMessages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L189">property <b>retainAckedMessages</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>retainAckedMessages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/subscription.ts#L190" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/subscription.ts#L190">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L139" >}}">interface <b>TopicArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L139">interface <b>TopicArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2482,42 +2122,28 @@ The set of arguments for constructing a Topic resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicArgs-kmsKeyName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L140" >}}">property <b>kmsKeyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L140">property <b>kmsKeyName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L141" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L141">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L142" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L142">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L147" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L147">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -2527,24 +2153,20 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicContext">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L36" >}}">interface <b>TopicContext</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L36">interface <b>TopicContext</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Shape of the [context] object passed to a Cloud Function when a topic event fires.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicContext-eventId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L30" >}}">property <b>eventId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L30">property <b>eventId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique ID for the event. For example: "70172329041928".
@@ -2552,36 +2174,26 @@ A unique ID for the event. For example: "70172329041928".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicContext-eventType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L37" >}}">property <b>eventType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L37">property <b>eventType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventType: <span class='s2'>"google.pubsub.topic.publish"</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicContext-resource">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L39" >}}">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L39">property <b>resource</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resource: {
     name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     service: <span class='s2'>"pubsub.googleapis.com"</span>;
     type: <span class='s2'>"type.googleapis.com/google.pubsub.v1.PubsubMessage"</span>;
 };</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicContext-timestamp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L33" >}}">property <b>timestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L33">property <b>timestamp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timestamp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The date/time this event was created. For example: "2018-04-09T07:56:12.975Z".
@@ -2590,7 +2202,7 @@ The date/time this event was created. For example: "2018-04-09T07:56:12.975Z".
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicData">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L51" >}}">interface <b>TopicData</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L51">interface <b>TopicData</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2601,22 +2213,16 @@ See https://cloud.google.com/pubsub/docs/reference/rest/v1/PubsubMessage for mor
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicData-@type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L52" >}}">property <b>@type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L52">property <b>@type</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>@type: <span class='s2'>"type.googleapis.com/google.pubsub.v1.PubsubMessage"</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicData-attributes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L57" >}}">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L57">property <b>attributes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>attributes: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 key/value pairs included with the topic even.
@@ -2624,12 +2230,10 @@ key/value pairs included with the topic even.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicData-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L63" >}}">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L63">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Base64 encoded data.  Use `Buffer.from(pubSubMessage.data, 'base64')` to get raw bytes of the
@@ -2639,12 +2243,10 @@ message.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicEventCallbackFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L12" >}}">interface <b>TopicEventCallbackFunctionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L12">interface <b>TopicEventCallbackFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Arguments that can be provided to control the Cloud Function created as the serverless endpoint
@@ -2652,12 +2254,10 @@ for a topic event.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-availableMemoryMb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L283" >}}">property <b>availableMemoryMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L283">property <b>availableMemoryMb</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availableMemoryMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Memory (in MB), available to the function. Default value is 256MB. Allowed values are: 128MB, 256MB, 512MB, 1024MB, and 2048MB.
@@ -2665,12 +2265,10 @@ Memory (in MB), available to the function. Default value is 256MB. Allowed value
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L349" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L349">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: storage.Bucket;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The bucket to use as the sourceArchiveBucket for the generated CloudFunctions Function source
@@ -2680,32 +2278,22 @@ code.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L13" >}}">property <b>callback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L13">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#TopicEventHandler'>TopicEventHandler</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L14" >}}">property <b>callbackFactory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L14">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | () => <a href='#TopicEventHandler'>TopicEventHandler</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-codePathOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L279" >}}">property <b>codePathOptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L279">property <b>codePathOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Options to control which paths/packages should be included or excluded in the zip file containing
@@ -2714,12 +2302,10 @@ the code for the GCP Function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L287" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L287">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Description of the function.
@@ -2727,12 +2313,10 @@ Description of the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-environmentVariables">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L291" >}}">property <b>environmentVariables</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L291">property <b>environmentVariables</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>environmentVariables?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A set of key/value environment variable pairs to assign to the function.
@@ -2740,32 +2324,22 @@ A set of key/value environment variable pairs to assign to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-eventTrigger">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L21" >}}">property <b>eventTrigger</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L21">property <b>eventTrigger</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventTrigger?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-httpsTriggerUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L19" >}}">property <b>httpsTriggerUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L19">property <b>httpsTriggerUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpsTriggerUrl?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L304" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L304">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A set of key/value label pairs to assign to the function.
@@ -2773,12 +2347,10 @@ A set of key/value label pairs to assign to the function.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L308" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L308">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Project of the function. If it is not provided, the provider project is used.
@@ -2786,12 +2358,10 @@ Project of the function. If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L312" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L312">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Region of function. Currently can be only "us-central1". If it is not provided, the provider region is used.
@@ -2799,12 +2369,10 @@ Region of function. Currently can be only "us-central1". If it is not provided, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-serviceAccountEmail">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L316" >}}">property <b>serviceAccountEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L316">property <b>serviceAccountEmail</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serviceAccountEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 If provided, the self-provided service account to run the function with.
@@ -2812,12 +2380,10 @@ If provided, the self-provided service account to run the function with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-timeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="cloudfunctions/zMixins.ts#L320" >}}">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/cloudfunctions/zMixins.ts#L320">property <b>timeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be more than 540 seconds.
@@ -2825,18 +2391,14 @@ Timeout (in seconds) for the function. Default value is 60 seconds. Cannot be mo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicEventCallbackFunctionArgs-triggerHttp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L20" >}}">property <b>triggerHttp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L20">property <b>triggerHttp</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>triggerHttp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L190" >}}">interface <b>TopicIAMBindingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L190">interface <b>TopicIAMBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2845,22 +2407,16 @@ The set of arguments for constructing a TopicIAMBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L191" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L191">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBindingArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L196" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L196">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -2869,12 +2425,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L202" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L202">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2884,12 +2438,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBindingArgs-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L206" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L206">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -2898,7 +2450,7 @@ The topic name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L164" >}}">interface <b>TopicIAMBindingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L164">interface <b>TopicIAMBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2907,12 +2459,10 @@ Input properties used for looking up and filtering TopicIAMBinding resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L168" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L168">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the topic's IAM policy.
@@ -2920,22 +2470,16 @@ Input properties used for looking up and filtering TopicIAMBinding resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L169" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L169">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBindingState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L174" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L174">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -2944,12 +2488,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L180" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L180">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2959,12 +2501,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMBindingState-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMBinding.ts#L184" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMBinding.ts#L184">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -2973,7 +2513,7 @@ The topic name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L190" >}}">interface <b>TopicIAMMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L190">interface <b>TopicIAMMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2982,22 +2522,16 @@ The set of arguments for constructing a TopicIAMMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L191" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L191">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMemberArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L196" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L196">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -3006,12 +2540,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L202" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L202">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3021,12 +2553,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMemberArgs-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L206" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L206">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -3035,7 +2565,7 @@ The topic name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L164" >}}">interface <b>TopicIAMMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L164">interface <b>TopicIAMMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3044,12 +2574,10 @@ Input properties used for looking up and filtering TopicIAMMember resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L168" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L168">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the topic's IAM policy.
@@ -3057,22 +2585,16 @@ Input properties used for looking up and filtering TopicIAMMember resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L169" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L169">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMemberState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L174" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L174">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -3081,12 +2603,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L180" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L180">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3096,12 +2616,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMMemberState-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMMember.ts#L184" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMMember.ts#L184">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -3110,7 +2628,7 @@ The topic name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L181" >}}">interface <b>TopicIAMPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L181">interface <b>TopicIAMPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3119,12 +2637,10 @@ The set of arguments for constructing a TopicIAMPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L186" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L186">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -3133,12 +2649,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicyArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L191" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L191">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -3147,12 +2661,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicyArgs-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L195" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L195">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -3161,7 +2673,7 @@ The topic name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicIAMPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L157" >}}">interface <b>TopicIAMPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L157">interface <b>TopicIAMPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3170,12 +2682,10 @@ Input properties used for looking up and filtering TopicIAMPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicIAMPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L161" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L161">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the topic's IAM policy.
@@ -3183,12 +2693,10 @@ Input properties used for looking up and filtering TopicIAMPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L166" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L166">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -3197,12 +2705,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicyState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L171" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L171">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The project in which the resource belongs. If it
@@ -3211,12 +2717,10 @@ is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicIAMPolicyState-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topicIAMPolicy.ts#L175" >}}">property <b>topic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topicIAMPolicy.ts#L175">property <b>topic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The topic name or id to bind to attach IAM policy to.
@@ -3225,7 +2729,7 @@ The topic name or id to bind to attach IAM policy to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicMessagePublishedArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L29" >}}">interface <b>TopicMessagePublishedArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L29">interface <b>TopicMessagePublishedArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3236,18 +2740,14 @@ See [cloudfunctions.FailurePolicy] for more information on this.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicMessagePublishedArgs-failurePolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L30" >}}">property <b>failurePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L30">property <b>failurePolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>failurePolicy?: cloudfunctions.FailurePolicy;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L125" >}}">interface <b>TopicState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L125">interface <b>TopicState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3256,42 +2756,28 @@ Input properties used for looking up and filtering Topic resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicState-kmsKeyName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L126" >}}">property <b>kmsKeyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L126">property <b>kmsKeyName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kmsKeyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L127" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L127">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L128" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L128">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="pubsub/topic.ts#L133" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/topic.ts#L133">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -3301,10 +2787,8 @@ If it is not provided, the provider project is used.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicEventHandler">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="pubsub/zMixins.ts#L66" >}}">type <b>TopicEventHandler</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/pubsub/zMixins.ts#L66">type <b>TopicEventHandler</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> TopicEventHandler = cloudfunctions.Callback&lt;<a href='#TopicData'>TopicData</a>, <a href='#TopicContext'>TopicContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;;</pre>
-{{< /md-disable >}}
 </div>

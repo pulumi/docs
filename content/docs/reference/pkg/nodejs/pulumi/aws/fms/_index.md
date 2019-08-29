@@ -27,19 +27,17 @@ title: Module fms
 <li><a href="#AdminAccountState">interface AdminAccountState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts" >}}">fms/adminAccount.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts">fms/adminAccount.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="AdminAccount">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L21" >}}">class <b>AdminAccount</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L21">class <b>AdminAccount</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to associate/disassociate an AWS Firewall Manager administrator account. This operation must be performed in the `us-east-1` region.
@@ -57,13 +55,11 @@ const example = new aws.fms.AdminAccount("example", {});
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AdminAccount-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L51" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L51"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AdminAccount(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#AdminAccountArgs'>AdminAccountArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -76,13 +72,11 @@ Create a AdminAccount resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AdminAccount-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L30" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L30">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AdminAccountState'>AdminAccountState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AdminAccount'>AdminAccount</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -92,25 +86,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AdminAccount-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L21" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L21">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AdminAccount-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L41" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L41">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -120,12 +110,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AdminAccount-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L51" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L51">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Manager administrator account. This can be an AWS Organizations master account or a member account. Defaults to the current account. Must be configured to perform drift detection.
@@ -133,12 +121,10 @@ The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Ma
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AdminAccount-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L21" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L21">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -147,12 +133,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AdminAccount-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L21" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L21">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -162,7 +146,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AdminAccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L94" >}}">interface <b>AdminAccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L94">interface <b>AdminAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -171,12 +155,10 @@ The set of arguments for constructing a AdminAccount resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AdminAccountArgs-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L98" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L98">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Manager administrator account. This can be an AWS Organizations master account or a member account. Defaults to the current account. Must be configured to perform drift detection.
@@ -185,7 +167,7 @@ The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Ma
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AdminAccountState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L84" >}}">interface <b>AdminAccountState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L84">interface <b>AdminAccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -194,12 +176,10 @@ Input properties used for looking up and filtering AdminAccount resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AdminAccountState-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="fms/adminAccount.ts#L88" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/fms/adminAccount.ts#L88">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Manager administrator account. This can be an AWS Organizations master account or a member account. Defaults to the current account. Must be configured to perform drift detection.

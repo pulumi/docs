@@ -18,24 +18,22 @@ title: Module rds
 <li><a href="#metrics">module metrics</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="rds/metrics.ts" >}}">rds/metrics.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts">rds/metrics.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="metrics">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L20" >}}">module <b>metrics</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L20">module <b>metrics</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="activeTransactions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L449" >}}">function <b>activeTransactions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L449">function <b>activeTransactions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activeTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -48,13 +46,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="auroraBinlogReplicaLag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L462" >}}">function <b>auroraBinlogReplicaLag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L462">function <b>auroraBinlogReplicaLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraBinlogReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -69,13 +65,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="auroraGlobalDBDataTransferBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L480" >}}">function <b>auroraGlobalDBDataTransferBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L480">function <b>auroraGlobalDBDataTransferBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraGlobalDBDataTransferBytes(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -86,13 +80,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="auroraGlobalDBReplicatedWriteIO">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L471" >}}">function <b>auroraGlobalDBReplicatedWriteIO</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L471">function <b>auroraGlobalDBReplicatedWriteIO</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraGlobalDBReplicatedWriteIO(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -103,13 +95,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="auroraGlobalDBReplicationLag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L489" >}}">function <b>auroraGlobalDBReplicationLag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L489">function <b>auroraGlobalDBReplicationLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraGlobalDBReplicationLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -120,13 +110,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="auroraReplicaLag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L499" >}}">function <b>auroraReplicaLag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L499">function <b>auroraReplicaLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -138,13 +126,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="auroraReplicaLagMaximum">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L509" >}}">function <b>auroraReplicaLagMaximum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L509">function <b>auroraReplicaLagMaximum</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraReplicaLagMaximum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -156,13 +142,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="auroraReplicaLagMinimum">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L519" >}}">function <b>auroraReplicaLagMinimum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L519">function <b>auroraReplicaLagMinimum</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>auroraReplicaLagMinimum(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -174,13 +158,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="backtrackChangeRecordsCreationRate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L528" >}}">function <b>backtrackChangeRecordsCreationRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L528">function <b>backtrackChangeRecordsCreationRate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backtrackChangeRecordsCreationRate(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -191,13 +173,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="backtrackChangeRecordsStored">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L537" >}}">function <b>backtrackChangeRecordsStored</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L537">function <b>backtrackChangeRecordsStored</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backtrackChangeRecordsStored(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -208,13 +188,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="backtrackWindowActual">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L546" >}}">function <b>backtrackWindowActual</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L546">function <b>backtrackWindowActual</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backtrackWindowActual(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -225,13 +203,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="backtrackWindowAlert">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L556" >}}">function <b>backtrackWindowAlert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L556">function <b>backtrackWindowAlert</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backtrackWindowAlert(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -243,13 +219,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="backupRetentionPeriodStorageUsed">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L568" >}}">function <b>backupRetentionPeriodStorageUsed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L568">function <b>backupRetentionPeriodStorageUsed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backupRetentionPeriodStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -263,13 +237,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="binLogDiskUsage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L198" >}}">function <b>binLogDiskUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L198">function <b>binLogDiskUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>binLogDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -281,13 +253,11 @@ Units: Bytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="blockedTransactions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L577" >}}">function <b>blockedTransactions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L577">function <b>blockedTransactions</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>blockedTransactions(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -298,13 +268,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="bufferCacheHitRatio">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L586" >}}">function <b>bufferCacheHitRatio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L586">function <b>bufferCacheHitRatio</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bufferCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -315,13 +283,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="burstBalance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L207" >}}">function <b>burstBalance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L207">function <b>burstBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>burstBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -332,13 +298,11 @@ Units: Percent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="commitLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L595" >}}">function <b>commitLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L595">function <b>commitLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>commitLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -349,13 +313,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="commitThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L604" >}}">function <b>commitThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L604">function <b>commitThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>commitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -366,13 +328,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="cpuCreditBalance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L251" >}}">function <b>cpuCreditBalance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L251">function <b>cpuCreditBalance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuCreditBalance(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -396,13 +356,11 @@ CPU credit metrics are available at a five-minute frequency only.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="cpuCreditUsage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L229" >}}">function <b>cpuCreditUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L229">function <b>cpuCreditUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuCreditUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -417,13 +375,11 @@ greater than five minutes, use the Sum statistic instead of the Average statisti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="cpuUtilization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L216" >}}">function <b>cpuUtilization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L216">function <b>cpuUtilization</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cpuUtilization(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -434,13 +390,11 @@ Units: Percent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="databaseConnections">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L260" >}}">function <b>databaseConnections</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L260">function <b>databaseConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseConnections(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -451,13 +405,11 @@ Units: Count
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ddlLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L614" >}}">function <b>ddlLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L614">function <b>ddlLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ddlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -469,13 +421,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ddlThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L623" >}}">function <b>ddlThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L623">function <b>ddlThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ddlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -486,13 +436,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="deadlocks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L632" >}}">function <b>deadlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L632">function <b>deadlocks</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadlocks(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -503,13 +451,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="deleteLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L641" >}}">function <b>deleteLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L641">function <b>deleteLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deleteLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -520,13 +466,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="deleteThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L650" >}}">function <b>deleteThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L650">function <b>deleteThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deleteThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -537,13 +481,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="diskQueueDepth">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L269" >}}">function <b>diskQueueDepth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L269">function <b>diskQueueDepth</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>diskQueueDepth(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -554,13 +496,11 @@ Units: Count
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="dmlLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L659" >}}">function <b>dmlLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L659">function <b>dmlLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dmlLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -571,13 +511,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="dmlThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L668" >}}">function <b>dmlThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L668">function <b>dmlThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dmlThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -588,13 +526,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="engineUptime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L677" >}}">function <b>engineUptime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L677">function <b>engineUptime</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>engineUptime(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -605,13 +541,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="failedSQLServerAgentJobsCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L278" >}}">function <b>failedSQLServerAgentJobsCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L278">function <b>failedSQLServerAgentJobsCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>failedSQLServerAgentJobsCount(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -622,13 +556,11 @@ Unit: Count/Minute
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="freeLocalStorage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L690" >}}">function <b>freeLocalStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L690">function <b>freeLocalStorage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>freeLocalStorage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -643,13 +575,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="freeStorageSpace">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L296" >}}">function <b>freeStorageSpace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L296">function <b>freeStorageSpace</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>freeStorageSpace(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -660,13 +590,11 @@ Units: Bytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="freeableMemory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L287" >}}">function <b>freeableMemory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L287">function <b>freeableMemory</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>freeableMemory(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -677,13 +605,11 @@ Units: Bytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="insertLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L699" >}}">function <b>insertLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L699">function <b>insertLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>insertLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -694,13 +620,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="insertThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L708" >}}">function <b>insertThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L708">function <b>insertThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>insertThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -711,13 +635,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="loginFailures">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L717" >}}">function <b>loginFailures</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L717">function <b>loginFailures</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loginFailures(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -728,13 +650,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="maximumUsedTransactionIDs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L305" >}}">function <b>maximumUsedTransactionIDs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L305">function <b>maximumUsedTransactionIDs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maximumUsedTransactionIDs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -745,13 +665,11 @@ Units: Count
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="metric">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L164" >}}">function <b>metric</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L164">function <b>metric</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metric(metricName: <a href='#RdsMetricName'>RdsMetricName</a>, change: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -788,13 +706,11 @@ Amazon RDS metrics data can be filtered by using any of the following dimensions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="networkReceiveThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L315" >}}">function <b>networkReceiveThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L315">function <b>networkReceiveThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkReceiveThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -806,13 +722,11 @@ Units: Bytes/Second
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="networkThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L728" >}}">function <b>networkThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L728">function <b>networkThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -825,13 +739,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="networkTransmitThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L325" >}}">function <b>networkTransmitThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L325">function <b>networkTransmitThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>networkTransmitThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -843,13 +755,11 @@ Units: Bytes/Second
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="oldestReplicationSlotLag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L335" >}}">function <b>oldestReplicationSlotLag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L335">function <b>oldestReplicationSlotLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>oldestReplicationSlotLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -861,13 +771,11 @@ Units: Megabytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="queries">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L737" >}}">function <b>queries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L737">function <b>queries</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>queries(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -878,13 +786,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="rdsToAuroraPostgreSQLReplicaLag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L747" >}}">function <b>rdsToAuroraPostgreSQLReplicaLag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L747">function <b>rdsToAuroraPostgreSQLReplicaLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>rdsToAuroraPostgreSQLReplicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -896,13 +802,11 @@ Applies to: Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="readIOPS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L344" >}}">function <b>readIOPS</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L344">function <b>readIOPS</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -913,13 +817,11 @@ Units: Count/Second
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="readLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L353" >}}">function <b>readLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L353">function <b>readLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -930,13 +832,11 @@ Units: Seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="readThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L362" >}}">function <b>readThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L362">function <b>readThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>readThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -947,13 +847,11 @@ Units: Bytes/Second
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="replicaLag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L372" >}}">function <b>replicaLag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L372">function <b>replicaLag</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>replicaLag(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -965,13 +863,11 @@ Units: Seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="replicationSlotDiskUsage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L381" >}}">function <b>replicationSlotDiskUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L381">function <b>replicationSlotDiskUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>replicationSlotDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -982,13 +878,11 @@ Units: Megabytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="resultSetCacheHitRatio">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L756" >}}">function <b>resultSetCacheHitRatio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L756">function <b>resultSetCacheHitRatio</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resultSetCacheHitRatio(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -999,13 +893,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="selectLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L765" >}}">function <b>selectLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L765">function <b>selectLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1016,13 +908,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="selectThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L774" >}}">function <b>selectThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L774">function <b>selectThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selectThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1033,13 +923,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="snapshotStorageUsed">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L786" >}}">function <b>snapshotStorageUsed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L786">function <b>snapshotStorageUsed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotStorageUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1053,13 +941,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="swapUsage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L391" >}}">function <b>swapUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L391">function <b>swapUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>swapUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1071,13 +957,11 @@ Units: Bytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="totalBackupStorageBilled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L798" >}}">function <b>totalBackupStorageBilled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L798">function <b>totalBackupStorageBilled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>totalBackupStorageBilled(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1091,13 +975,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="transactionLogsDiskUsage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L400" >}}">function <b>transactionLogsDiskUsage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L400">function <b>transactionLogsDiskUsage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transactionLogsDiskUsage(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1108,13 +990,11 @@ Units: Megabytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="transactionLogsGeneration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L409" >}}">function <b>transactionLogsGeneration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L409">function <b>transactionLogsGeneration</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>transactionLogsGeneration(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1125,13 +1005,11 @@ Units: Megabytes/Second
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="updateLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L807" >}}">function <b>updateLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L807">function <b>updateLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updateLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1142,13 +1020,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="updateThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L816" >}}">function <b>updateThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L816">function <b>updateThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updateThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1159,13 +1035,11 @@ Applies to: Aurora MySQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeBytesUsed">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L826" >}}">function <b>volumeBytesUsed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L826">function <b>volumeBytesUsed</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeBytesUsed(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1177,13 +1051,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeReadIOPs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L844" >}}">function <b>volumeReadIOPs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L844">function <b>volumeReadIOPs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeReadIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1203,13 +1075,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="volumeWriteIOPs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L855" >}}">function <b>volumeWriteIOPs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L855">function <b>volumeWriteIOPs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeWriteIOPs(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1222,13 +1092,11 @@ Applies to: Aurora MySQL and Aurora PostgreSQL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="writeIOPS">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L418" >}}">function <b>writeIOPS</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L418">function <b>writeIOPS</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeIOPS(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1239,13 +1107,11 @@ Units: Count/Second
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="writeLatency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L427" >}}">function <b>writeLatency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L427">function <b>writeLatency</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeLatency(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1256,13 +1122,11 @@ Units: Seconds
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="writeThroughput">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L436" >}}">function <b>writeThroughput</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L436">function <b>writeThroughput</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>writeThroughput(change?: <a href='#RdsMetricChange'>RdsMetricChange</a>): <a href='#Metric'>Metric</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1273,18 +1137,14 @@ Units: Bytes/Second
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L93" >}}">interface <b>RdsMetricChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L93">interface <b>RdsMetricChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
-{{% /md %}}
 <h3 class="pdoc-member-header" id="RdsMetricChange-cluster">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L102" >}}">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L102">property <b>cluster</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cluster?: aws.rds.Cluster;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Optional [Cluster] to filter down events to.
@@ -1292,12 +1152,10 @@ Optional [Cluster] to filter down events to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-color">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L439" >}}">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The six-digit HTML hex color code to be used for this metric.
@@ -1307,12 +1165,10 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-databaseClass">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L118" >}}">property <b>databaseClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L118">property <b>databaseClass</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databaseClass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for all instances in a database class. For
@@ -1322,12 +1178,10 @@ example, you can aggregate metrics for all instances that belong to the database
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-dimensions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L408" >}}">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new dimension for this metric.  If this object is missing this property, then no change
@@ -1337,12 +1191,10 @@ cleared.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-engineName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L124" >}}">property <b>engineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L124">property <b>engineName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>engineName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for the identified engine name only. For
@@ -1351,12 +1203,10 @@ example, you can aggregate metrics for all instances that have the engine name [
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L426" >}}">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new percentile statistic for the metric associated with the alarm.  If this object is
@@ -1366,12 +1216,10 @@ to [undefined] then the value will be set to the default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-instance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L97" >}}">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L97">property <b>instance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instance?: aws.rds.Instance;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Optional [Instance] to filter down events to.
@@ -1379,12 +1227,10 @@ Optional [Instance] to filter down events to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-label">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L448" >}}">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The label to display for this metric in the graph legend. If this is not specified, the
@@ -1396,12 +1242,10 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L414" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new period in seconds over which the specified `stat` is applied.  If this object is
@@ -1411,12 +1255,10 @@ to [undefined] then the value will be set to the default (300s).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L111" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L111">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <span class='s2'>"WRITER"</span> | <span class='s2'>"READER"</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for a specific Aurora DB cluster, aggregating
@@ -1428,12 +1270,10 @@ If this is provided then [cluster] must be provided as well.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-sourceRegion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L130" >}}">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L130">property <b>sourceRegion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceRegion?: aws.Region;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This dimension filters the data you request for the specified region only. For example,
@@ -1442,12 +1282,10 @@ you can aggregate metrics for all instances in the region [us-east-1].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-statistic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L420" >}}">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new statistic to apply to the alarm's associated metric.  If this object is missing this
@@ -1457,12 +1295,10 @@ property, then no change will be made.  However, if the property is there by set
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-unit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L432" >}}">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The new unit for this metric.   If this object is missing this property, then no change will
@@ -1472,12 +1308,10 @@ to the default.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-visible">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L456" >}}">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Set this to true to have the metric appear in the graph, or false to have it be hidden. The
@@ -1488,12 +1322,10 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricChange-yAxis">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="cloudwatch/metric.ts#L463" >}}">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Where on the graph to display the y-axis for this metric. The default is left.
@@ -1504,13 +1336,9 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 </div>
 </div>
 <h3 class="pdoc-member-header" id="RdsMetricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="awsx" path="rds/metrics.ts#L21" >}}">type <b>RdsMetricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L21">type <b>RdsMetricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> RdsMetricName = <span class='s2'>"BinLogDiskUsage"</span> | <span class='s2'>"BurstBalance"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"CPUCreditUsage"</span> | <span class='s2'>"CPUCreditBalance"</span> | <span class='s2'>"DatabaseConnections"</span> | <span class='s2'>"DiskQueueDepth"</span> | <span class='s2'>"FailedSQLServerAgentJobsCount"</span> | <span class='s2'>"FreeableMemory"</span> | <span class='s2'>"FreeStorageSpace"</span> | <span class='s2'>"MaximumUsedTransactionIDs"</span> | <span class='s2'>"NetworkReceiveThroughput"</span> | <span class='s2'>"NetworkTransmitThroughput"</span> | <span class='s2'>"OldestReplicationSlotLag"</span> | <span class='s2'>"ReadIOPS"</span> | <span class='s2'>"ReadLatency"</span> | <span class='s2'>"ReadThroughput"</span> | <span class='s2'>"ReplicaLag"</span> | <span class='s2'>"ReplicationSlotDiskUsage"</span> | <span class='s2'>"SwapUsage"</span> | <span class='s2'>"TransactionLogsDiskUsage"</span> | <span class='s2'>"TransactionLogsGeneration"</span> | <span class='s2'>"WriteIOPS"</span> | <span class='s2'>"WriteLatency"</span> | <span class='s2'>"WriteThroughput"</span> | <span class='s2'>"ActiveTransactions"</span> | <span class='s2'>"AuroraBinlogReplicaLag"</span> | <span class='s2'>"AuroraGlobalDBReplicatedWriteIO"</span> | <span class='s2'>"AuroraGlobalDBDataTransferBytes"</span> | <span class='s2'>"AuroraGlobalDBReplicationLag"</span> | <span class='s2'>"AuroraReplicaLag"</span> | <span class='s2'>"AuroraReplicaLagMaximum"</span> | <span class='s2'>"AuroraReplicaLagMinimum"</span> | <span class='s2'>"BacktrackChangeRecordsCreationRate"</span> | <span class='s2'>"BacktrackChangeRecordsStored"</span> | <span class='s2'>"BacktrackWindowActual"</span> | <span class='s2'>"BacktrackWindowAlert"</span> | <span class='s2'>"BackupRetentionPeriodStorageUsed"</span> | <span class='s2'>"BinLogDiskUsage"</span> | <span class='s2'>"BlockedTransactions"</span> | <span class='s2'>"BufferCacheHitRatio"</span> | <span class='s2'>"CommitLatency"</span> | <span class='s2'>"CommitThroughput"</span> | <span class='s2'>"CPUCreditBalance"</span> | <span class='s2'>"CPUCreditUsage"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"DatabaseConnections"</span> | <span class='s2'>"DDLLatency"</span> | <span class='s2'>"DDLThroughput"</span> | <span class='s2'>"Deadlocks"</span> | <span class='s2'>"DeleteLatency"</span> | <span class='s2'>"DeleteThroughput"</span> | <span class='s2'>"DiskQueueDepth"</span> | <span class='s2'>"DMLLatency"</span> | <span class='s2'>"DMLThroughput"</span> | <span class='s2'>"EngineUptime"</span> | <span class='s2'>"FreeableMemory"</span> | <span class='s2'>"FreeLocalStorage"</span> | <span class='s2'>"InsertLatency"</span> | <span class='s2'>"InsertThroughput"</span> | <span class='s2'>"LoginFailures"</span> | <span class='s2'>"MaximumUsedTransactionIDs"</span> | <span class='s2'>"NetworkReceiveThroughput"</span> | <span class='s2'>"NetworkThroughput"</span> | <span class='s2'>"NetworkTransmitThroughput"</span> | <span class='s2'>"Queries"</span> | <span class='s2'>"RDSToAuroraPostgreSQLReplicaLag"</span> | <span class='s2'>"ReadIOPS"</span> | <span class='s2'>"ReadLatency"</span> | <span class='s2'>"ReadThroughput"</span> | <span class='s2'>"ResultSetCacheHitRatio"</span> | <span class='s2'>"SelectLatency"</span> | <span class='s2'>"SelectThroughput"</span> | <span class='s2'>"SnapshotStorageUsed"</span> | <span class='s2'>"SwapUsage"</span> | <span class='s2'>"TotalBackupStorageBilled"</span> | <span class='s2'>"TransactionLogsDiskUsage"</span> | <span class='s2'>"UpdateLatency"</span> | <span class='s2'>"UpdateThroughput"</span> | <span class='s2'>"VolumeBytesUsed"</span> | <span class='s2'>"VolumeReadIOPs"</span> | <span class='s2'>"VolumeWriteIOPs"</span> | <span class='s2'>"WriteIOPS"</span> | <span class='s2'>"WriteLatency"</span> | <span class='s2'>"WriteThroughput"</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

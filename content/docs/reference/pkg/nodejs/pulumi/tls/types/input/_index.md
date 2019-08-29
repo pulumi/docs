@@ -19,199 +19,127 @@ title: Module types/input
 <li><a href="#SelfSignedCertSubject">interface SelfSignedCertSubject</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="tls" path="types/input.ts" >}}">types/input.ts</a> 
+<a href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts">types/input.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="CertRequestSubject">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L7" >}}">interface <b>CertRequestSubject</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L7">interface <b>CertRequestSubject</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="CertRequestSubject-commonName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L8" >}}">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L8">property <b>commonName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestSubject-country">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L9" >}}">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L9">property <b>country</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestSubject-locality">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L10" >}}">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L10">property <b>locality</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestSubject-organization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L11" >}}">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L11">property <b>organization</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestSubject-organizationalUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L12" >}}">property <b>organizationalUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L12">property <b>organizationalUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>organizationalUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestSubject-postalCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L13" >}}">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L13">property <b>postalCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>postalCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestSubject-province">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L14" >}}">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L14">property <b>province</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>province?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestSubject-serialNumber">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L15" >}}">property <b>serialNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L15">property <b>serialNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serialNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertRequestSubject-streetAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L16" >}}">property <b>streetAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L16">property <b>streetAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>streetAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SelfSignedCertSubject">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L19" >}}">interface <b>SelfSignedCertSubject</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L19">interface <b>SelfSignedCertSubject</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-commonName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L20" >}}">property <b>commonName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L20">property <b>commonName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>commonName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-country">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L21" >}}">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L21">property <b>country</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>country?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-locality">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L22" >}}">property <b>locality</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L22">property <b>locality</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-organization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L23" >}}">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L23">property <b>organization</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>organization?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-organizationalUnit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L24" >}}">property <b>organizationalUnit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L24">property <b>organizationalUnit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>organizationalUnit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-postalCode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L25" >}}">property <b>postalCode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L25">property <b>postalCode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>postalCode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-province">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L26" >}}">property <b>province</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L26">property <b>province</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>province?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-serialNumber">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L27" >}}">property <b>serialNumber</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L27">property <b>serialNumber</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serialNumber?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SelfSignedCertSubject-streetAddresses">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="tls" path="types/input.ts#L28" >}}">property <b>streetAddresses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-tls/blob/5a3cd52c7e7b20ccbdcd5f637189db2c17129ba4/sdk/nodejs/types/input.ts#L28">property <b>streetAddresses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>streetAddresses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

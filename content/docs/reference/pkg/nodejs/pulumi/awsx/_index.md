@@ -30,7 +30,7 @@ import * as awsx from "@pulumi/awsx";
 <li><a href="#Overwrite">type Overwrite</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="awsx" path="aws.ts" >}}">aws.ts</a> <a href="{{< pkg-url pkg="awsx" path="utils.ts" >}}">utils.ts</a> 
+<a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/aws.ts">aws.ts</a> <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/utils.ts">utils.ts</a> 
 </div>
 </div>
 </div>
@@ -68,34 +68,28 @@ import * as awsx from "@pulumi/awsx";
 </div>
 
 <h2 class="pdoc-module-header" id="getAvailabilityZone">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="aws.ts#L24" >}}">function <b>getAvailabilityZone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/aws.ts#L24">function <b>getAvailabilityZone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getAvailabilityZone(index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getAvailabilityZones">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="aws.ts#L29" >}}">function <b>getAvailabilityZones</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/aws.ts#L29">function <b>getAvailabilityZones</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getAvailabilityZones(opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="Overwrite">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="awsx" path="utils.ts#L27" >}}">type <b>Overwrite</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/utils.ts#L27">type <b>Overwrite</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Overwrite = Pick&lt;T, <a href='#Diff'>Diff</a>&lt;keyof T, keyof U&gt;&gt; &amp; U;</pre>
-{{< /md-disable >}}
 </div>

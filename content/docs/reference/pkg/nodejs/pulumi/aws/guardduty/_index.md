@@ -39,19 +39,17 @@ title: Module guardduty
 <li><a href="#ThreatIntelSetState">interface ThreatIntelSetState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="aws" path="guardduty/detector.ts" >}}">guardduty/detector.ts</a> <a href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts" >}}">guardduty/iPSet.ts</a> <a href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts" >}}">guardduty/inviteAccepter.ts</a> <a href="{{< pkg-url pkg="aws" path="guardduty/member.ts" >}}">guardduty/member.ts</a> <a href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts" >}}">guardduty/threatIntelSet.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts">guardduty/detector.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts">guardduty/iPSet.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts">guardduty/inviteAccepter.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts">guardduty/member.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts">guardduty/threatIntelSet.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Detector">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L25" >}}">class <b>Detector</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L25">class <b>Detector</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to manage a GuardDuty detector.
@@ -73,13 +71,11 @@ const myDetector = new aws.guardduty.Detector("MyDetector", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Detector-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L63" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L63"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Detector(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#DetectorArgs'>DetectorArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -92,13 +88,11 @@ Create a Detector resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Detector-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L34" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L34">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DetectorState'>DetectorState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Detector'>Detector</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -108,25 +102,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Detector-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L25" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L25">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Detector-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L45" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L45">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -136,12 +126,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Detector-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L55" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L55">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The AWS account ID of the GuardDuty detector
@@ -149,12 +137,10 @@ The AWS account ID of the GuardDuty detector
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Detector-enable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L59" >}}">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L59">property <b>enable</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
@@ -162,12 +148,10 @@ Enable monitoring and feedback reporting. Setting to `false` is equivalent to "s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Detector-findingPublishingFrequency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L63" >}}">property <b>findingPublishingFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L63">property <b>findingPublishingFrequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>findingPublishingFrequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty master account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty master accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and master accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
@@ -175,12 +159,10 @@ Specifies the frequency of notifications sent for subsequent finding occurrences
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Detector-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L25" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L25">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -189,12 +171,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Detector-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L25" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L25">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -204,12 +184,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IPSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L40" >}}">class <b>IPSet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L40">class <b>IPSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to manage a GuardDuty IPSet.
@@ -246,13 +224,11 @@ const myIPSetIPSet = new aws.guardduty.IPSet("MyIPSet", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IPSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L86" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L86"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> IPSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#IPSetArgs'>IPSetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -265,13 +241,11 @@ Create a IPSet resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L49">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#IPSetState'>IPSetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IPSet'>IPSet</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -281,25 +255,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L40" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L40">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L60">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -309,12 +279,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-activate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L70" >}}">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L70">property <b>activate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether GuardDuty is to start using the uploaded IPSet.
@@ -322,12 +290,10 @@ Specifies whether GuardDuty is to start using the uploaded IPSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L74" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L74">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty.
@@ -335,12 +301,10 @@ The detector ID of the GuardDuty.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L78" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L78">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
@@ -348,12 +312,10 @@ The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L40" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L40">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -362,12 +324,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L82" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L82">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The URI of the file that contains the IPSet.
@@ -375,12 +335,10 @@ The URI of the file that contains the IPSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L86" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L86">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The friendly name to identify the IPSet.
@@ -388,12 +346,10 @@ The friendly name to identify the IPSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSet-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L40" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L40">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -403,12 +359,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InviteAccepter">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L12" >}}">class <b>InviteAccepter</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L12">class <b>InviteAccepter</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to accept a pending GuardDuty invite on creation, ensure the detector has the correct master account on read, and disassociate with the master account upon removal.
@@ -417,13 +371,11 @@ Provides a resource to accept a pending GuardDuty invite on creation, ensure the
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InviteAccepter-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L46" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L46"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> InviteAccepter(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#InviteAccepterArgs'>InviteAccepterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -436,13 +388,11 @@ Create a InviteAccepter resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepter-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#InviteAccepterState'>InviteAccepterState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#InviteAccepter'>InviteAccepter</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -452,25 +402,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepter-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepter-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -480,12 +426,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepter-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L42" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L42">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the member GuardDuty account.
@@ -493,12 +437,10 @@ The detector ID of the member GuardDuty account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepter-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -507,12 +449,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepter-masterAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L46" >}}">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L46">property <b>masterAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>masterAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID for master account.
@@ -520,12 +460,10 @@ AWS account ID for master account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepter-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -535,12 +473,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Member">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L12" >}}">class <b>Member</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L12">class <b>Member</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to manage a GuardDuty member. To accept invitations in member accounts, see the [`aws.guardduty.InviteAccepter` resource](https://www.terraform.io/docs/providers/aws/r/guardduty_invite_accepter.html).
@@ -549,13 +485,11 @@ Provides a resource to manage a GuardDuty member. To accept invitations in membe
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Member-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L66" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L66"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Member(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MemberArgs'>MemberArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -568,13 +502,11 @@ Create a Member resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MemberState'>MemberState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Member'>Member</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -584,25 +516,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -612,12 +540,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L42" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L42">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID for member account.
@@ -625,12 +551,10 @@ AWS account ID for member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L46" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L46">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty account where you want to create member accounts.
@@ -638,12 +562,10 @@ The detector ID of the GuardDuty account where you want to create member account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-disableEmailNotification">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L50" >}}">property <b>disableEmailNotification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L50">property <b>disableEmailNotification</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>disableEmailNotification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether an email notification is sent to the accounts. Defaults to `false`.
@@ -651,12 +573,10 @@ Boolean whether an email notification is sent to the accounts. Defaults to `fals
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-email">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L54" >}}">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L54">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Email address for member account.
@@ -664,12 +584,10 @@ Email address for member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -678,12 +596,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-invitationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L58" >}}">property <b>invitationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L58">property <b>invitationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>invitationMessage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Message for invitation.
@@ -691,12 +607,10 @@ Message for invitation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-invite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L62" >}}">property <b>invite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L62">property <b>invite</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>invite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationshipStatus` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
@@ -704,12 +618,10 @@ Boolean whether to invite the account to GuardDuty as a member. Defaults to `fal
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-relationshipStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L66" >}}">property <b>relationshipStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L66">property <b>relationshipStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>relationshipStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
@@ -717,12 +629,10 @@ The status of the relationship between the member account and its master account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Member-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -732,12 +642,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ThreatIntelSet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L40" >}}">class <b>ThreatIntelSet</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L40">class <b>ThreatIntelSet</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource to manage a GuardDuty ThreatIntelSet.
@@ -774,13 +682,11 @@ const myThreatIntelSetThreatIntelSet = new aws.guardduty.ThreatIntelSet("MyThrea
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ThreatIntelSet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L86" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L86"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ThreatIntelSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ThreatIntelSetArgs'>ThreatIntelSetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -793,13 +699,11 @@ Create a ThreatIntelSet resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L49">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ThreatIntelSetState'>ThreatIntelSetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ThreatIntelSet'>ThreatIntelSet</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -809,25 +713,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L40" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L40">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L60">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -837,12 +737,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-activate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L70" >}}">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L70">property <b>activate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
@@ -850,12 +748,10 @@ Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L74" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L74">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty.
@@ -863,12 +759,10 @@ The detector ID of the GuardDuty.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L78" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L78">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
@@ -876,12 +770,10 @@ The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L40" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L40">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -890,12 +782,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L82" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L82">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The URI of the file that contains the ThreatIntelSet.
@@ -903,12 +793,10 @@ The URI of the file that contains the ThreatIntelSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L86" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L86">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The friendly name to identify the ThreatIntelSet.
@@ -916,12 +804,10 @@ The friendly name to identify the ThreatIntelSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSet-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L40" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L40">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -931,7 +817,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DetectorArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L118" >}}">interface <b>DetectorArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L118">interface <b>DetectorArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -940,12 +826,10 @@ The set of arguments for constructing a Detector resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DetectorArgs-enable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L122" >}}">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L122">property <b>enable</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
@@ -953,12 +837,10 @@ Enable monitoring and feedback reporting. Setting to `false` is equivalent to "s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DetectorArgs-findingPublishingFrequency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L126" >}}">property <b>findingPublishingFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L126">property <b>findingPublishingFrequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>findingPublishingFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty master account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty master accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and master accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
@@ -967,7 +849,7 @@ Specifies the frequency of notifications sent for subsequent finding occurrences
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DetectorState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L100" >}}">interface <b>DetectorState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L100">interface <b>DetectorState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -976,12 +858,10 @@ Input properties used for looking up and filtering Detector resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DetectorState-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L104" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L104">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The AWS account ID of the GuardDuty detector
@@ -989,12 +869,10 @@ The AWS account ID of the GuardDuty detector
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DetectorState-enable">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L108" >}}">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L108">property <b>enable</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Enable monitoring and feedback reporting. Setting to `false` is equivalent to "suspending" GuardDuty. Defaults to `true`.
@@ -1002,12 +880,10 @@ Enable monitoring and feedback reporting. Setting to `false` is equivalent to "s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DetectorState-findingPublishingFrequency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/detector.ts#L112" >}}">property <b>findingPublishingFrequency</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/detector.ts#L112">property <b>findingPublishingFrequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>findingPublishingFrequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the frequency of notifications sent for subsequent finding occurrences. If the detector is a GuardDuty member account, the value is determined by the GuardDuty master account and cannot be modified, otherwise defaults to `SIX_HOURS`. For standalone and GuardDuty master accounts, it must be configured in this provider to enable drift detection. Valid values for standalone and master accounts: `FIFTEEN_MINUTES`, `ONE_HOUR`, `SIX_HOURS`. See [AWS Documentation](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_findings_cloudwatch.html#guardduty_findings_cloudwatch_notification_frequency) for more information.
@@ -1016,7 +892,7 @@ Specifies the frequency of notifications sent for subsequent finding occurrences
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IPSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L165" >}}">interface <b>IPSetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L165">interface <b>IPSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1025,12 +901,10 @@ The set of arguments for constructing a IPSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IPSetArgs-activate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L169" >}}">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L169">property <b>activate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether GuardDuty is to start using the uploaded IPSet.
@@ -1038,12 +912,10 @@ Specifies whether GuardDuty is to start using the uploaded IPSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSetArgs-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L173" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L173">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty.
@@ -1051,12 +923,10 @@ The detector ID of the GuardDuty.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSetArgs-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L177" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L177">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
@@ -1064,12 +934,10 @@ The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSetArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L181" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L181">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The URI of the file that contains the IPSet.
@@ -1077,12 +945,10 @@ The URI of the file that contains the IPSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L185" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L185">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The friendly name to identify the IPSet.
@@ -1091,7 +957,7 @@ The friendly name to identify the IPSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="IPSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L139" >}}">interface <b>IPSetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L139">interface <b>IPSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1100,12 +966,10 @@ Input properties used for looking up and filtering IPSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="IPSetState-activate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L143" >}}">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L143">property <b>activate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether GuardDuty is to start using the uploaded IPSet.
@@ -1113,12 +977,10 @@ Specifies whether GuardDuty is to start using the uploaded IPSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSetState-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L147" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L147">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty.
@@ -1126,12 +988,10 @@ The detector ID of the GuardDuty.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSetState-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L151" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L151">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
@@ -1139,12 +999,10 @@ The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSetState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L155" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L155">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The URI of the file that contains the IPSet.
@@ -1152,12 +1010,10 @@ The URI of the file that contains the IPSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="IPSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/iPSet.ts#L159" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/iPSet.ts#L159">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The friendly name to identify the IPSet.
@@ -1166,7 +1022,7 @@ The friendly name to identify the IPSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InviteAccepterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L101" >}}">interface <b>InviteAccepterArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L101">interface <b>InviteAccepterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1175,12 +1031,10 @@ The set of arguments for constructing a InviteAccepter resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InviteAccepterArgs-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L105" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L105">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the member GuardDuty account.
@@ -1188,12 +1042,10 @@ The detector ID of the member GuardDuty account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepterArgs-masterAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L109" >}}">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L109">property <b>masterAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>masterAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID for master account.
@@ -1202,7 +1054,7 @@ AWS account ID for master account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InviteAccepterState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L87" >}}">interface <b>InviteAccepterState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L87">interface <b>InviteAccepterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1211,12 +1063,10 @@ Input properties used for looking up and filtering InviteAccepter resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InviteAccepterState-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L91" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L91">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the member GuardDuty account.
@@ -1224,12 +1074,10 @@ The detector ID of the member GuardDuty account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InviteAccepterState-masterAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/inviteAccepter.ts#L95" >}}">property <b>masterAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/inviteAccepter.ts#L95">property <b>masterAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>masterAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID for master account.
@@ -1238,7 +1086,7 @@ AWS account ID for master account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L154" >}}">interface <b>MemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L154">interface <b>MemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1247,12 +1095,10 @@ The set of arguments for constructing a Member resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MemberArgs-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L158" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L158">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID for member account.
@@ -1260,12 +1106,10 @@ AWS account ID for member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L162" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L162">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty account where you want to create member accounts.
@@ -1273,12 +1117,10 @@ The detector ID of the GuardDuty account where you want to create member account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-disableEmailNotification">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L166" >}}">property <b>disableEmailNotification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L166">property <b>disableEmailNotification</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disableEmailNotification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether an email notification is sent to the accounts. Defaults to `false`.
@@ -1286,12 +1128,10 @@ Boolean whether an email notification is sent to the accounts. Defaults to `fals
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-email">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L170" >}}">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L170">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Email address for member account.
@@ -1299,12 +1139,10 @@ Email address for member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-invitationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L174" >}}">property <b>invitationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L174">property <b>invitationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invitationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Message for invitation.
@@ -1312,12 +1150,10 @@ Message for invitation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberArgs-invite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L178" >}}">property <b>invite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L178">property <b>invite</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationshipStatus` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
@@ -1326,7 +1162,7 @@ Boolean whether to invite the account to GuardDuty as a member. Defaults to `fal
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L120" >}}">interface <b>MemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L120">interface <b>MemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1335,12 +1171,10 @@ Input properties used for looking up and filtering Member resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MemberState-accountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L124" >}}">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L124">property <b>accountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 AWS account ID for member account.
@@ -1348,12 +1182,10 @@ AWS account ID for member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L128" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L128">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty account where you want to create member accounts.
@@ -1361,12 +1193,10 @@ The detector ID of the GuardDuty account where you want to create member account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-disableEmailNotification">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L132" >}}">property <b>disableEmailNotification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L132">property <b>disableEmailNotification</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disableEmailNotification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether an email notification is sent to the accounts. Defaults to `false`.
@@ -1374,12 +1204,10 @@ Boolean whether an email notification is sent to the accounts. Defaults to `fals
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-email">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L136" >}}">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L136">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Email address for member account.
@@ -1387,12 +1215,10 @@ Email address for member account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-invitationMessage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L140" >}}">property <b>invitationMessage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L140">property <b>invitationMessage</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invitationMessage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Message for invitation.
@@ -1400,12 +1226,10 @@ Message for invitation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-invite">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L144" >}}">property <b>invite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L144">property <b>invite</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationshipStatus` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
@@ -1413,12 +1237,10 @@ Boolean whether to invite the account to GuardDuty as a member. Defaults to `fal
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MemberState-relationshipStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/member.ts#L148" >}}">property <b>relationshipStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/member.ts#L148">property <b>relationshipStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>relationshipStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The status of the relationship between the member account and its master account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
@@ -1427,7 +1249,7 @@ The status of the relationship between the member account and its master account
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ThreatIntelSetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L165" >}}">interface <b>ThreatIntelSetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L165">interface <b>ThreatIntelSetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1436,12 +1258,10 @@ The set of arguments for constructing a ThreatIntelSet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ThreatIntelSetArgs-activate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L169" >}}">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L169">property <b>activate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
@@ -1449,12 +1269,10 @@ Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSetArgs-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L173" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L173">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>detectorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty.
@@ -1462,12 +1280,10 @@ The detector ID of the GuardDuty.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSetArgs-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L177" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L177">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
@@ -1475,12 +1291,10 @@ The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSetArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L181" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L181">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The URI of the file that contains the ThreatIntelSet.
@@ -1488,12 +1302,10 @@ The URI of the file that contains the ThreatIntelSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L185" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L185">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The friendly name to identify the ThreatIntelSet.
@@ -1502,7 +1314,7 @@ The friendly name to identify the ThreatIntelSet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ThreatIntelSetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L139" >}}">interface <b>ThreatIntelSetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L139">interface <b>ThreatIntelSetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1511,12 +1323,10 @@ Input properties used for looking up and filtering ThreatIntelSet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ThreatIntelSetState-activate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L143" >}}">property <b>activate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L143">property <b>activate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>activate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
@@ -1524,12 +1334,10 @@ Specifies whether GuardDuty is to start using the uploaded ThreatIntelSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSetState-detectorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L147" >}}">property <b>detectorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L147">property <b>detectorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>detectorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The detector ID of the GuardDuty.
@@ -1537,12 +1345,10 @@ The detector ID of the GuardDuty.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSetState-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L151" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L151">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
@@ -1550,12 +1356,10 @@ The format of the file that contains the ThreatIntelSet. Valid values: `TXT` | `
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSetState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L155" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L155">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The URI of the file that contains the ThreatIntelSet.
@@ -1563,12 +1367,10 @@ The URI of the file that contains the ThreatIntelSet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ThreatIntelSetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="guardduty/threatIntelSet.ts#L159" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/guardduty/threatIntelSet.ts#L159">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The friendly name to identify the ThreatIntelSet.

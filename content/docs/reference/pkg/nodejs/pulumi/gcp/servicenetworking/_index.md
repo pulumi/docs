@@ -27,19 +27,17 @@ title: Module servicenetworking
 <li><a href="#ConnectionState">interface ConnectionState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts" >}}">servicenetworking/connection.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts">servicenetworking/connection.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Connection">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L35" >}}">class <b>Connection</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L35">class <b>Connection</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a private VPC connection with a GCP service provider. For more information see
@@ -71,13 +69,11 @@ const foobar = new gcp.servicenetworking.Connection("foobar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Connection-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L78" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Connection(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ConnectionArgs'>ConnectionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -90,13 +86,11 @@ Create a Connection resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L44" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L44">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConnectionState'>ConnectionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Connection'>Connection</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -106,25 +100,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L35" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L35">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L55" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L55">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -134,12 +124,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L35" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L35">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -148,12 +136,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-network">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L65" >}}">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L65">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of VPC network connected with service producers using VPC peering.
@@ -161,22 +147,16 @@ Name of VPC network connected with service producers using VPC peering.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-peering">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L66" >}}">property <b>peering</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L66">property <b>peering</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>peering: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-reservedPeeringRanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L72" >}}">property <b>reservedPeeringRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L72">property <b>reservedPeeringRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>reservedPeeringRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Named IP address range(s) of PEERING type reserved for
@@ -186,12 +166,10 @@ is already established will not reallocate already provisioned service producer 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-service">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L78" >}}">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L78">property <b>service</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provider peering service that is managing peering connectivity for a
@@ -201,12 +179,10 @@ service provider organization. For Google services that support this functionali
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Connection-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L35" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L35">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -216,7 +192,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConnectionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L149" >}}">interface <b>ConnectionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L149">interface <b>ConnectionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -225,12 +201,10 @@ The set of arguments for constructing a Connection resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConnectionArgs-network">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L153" >}}">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L153">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of VPC network connected with service producers using VPC peering.
@@ -238,12 +212,10 @@ Name of VPC network connected with service producers using VPC peering.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionArgs-reservedPeeringRanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L159" >}}">property <b>reservedPeeringRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L159">property <b>reservedPeeringRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reservedPeeringRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Named IP address range(s) of PEERING type reserved for
@@ -253,12 +225,10 @@ is already established will not reallocate already provisioned service producer 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionArgs-service">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L165" >}}">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L165">property <b>service</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provider peering service that is managing peering connectivity for a
@@ -269,7 +239,7 @@ service provider organization. For Google services that support this functionali
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConnectionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L126" >}}">interface <b>ConnectionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L126">interface <b>ConnectionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -278,12 +248,10 @@ Input properties used for looking up and filtering Connection resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConnectionState-network">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L130" >}}">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L130">property <b>network</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of VPC network connected with service producers using VPC peering.
@@ -291,22 +259,16 @@ Name of VPC network connected with service producers using VPC peering.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-peering">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L131" >}}">property <b>peering</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L131">property <b>peering</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>peering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-reservedPeeringRanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L137" >}}">property <b>reservedPeeringRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L137">property <b>reservedPeeringRanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>reservedPeeringRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Named IP address range(s) of PEERING type reserved for
@@ -316,12 +278,10 @@ is already established will not reallocate already provisioned service producer 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConnectionState-service">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="servicenetworking/connection.ts#L143" >}}">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/servicenetworking/connection.ts#L143">property <b>service</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provider peering service that is managing peering connectivity for a

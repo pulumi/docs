@@ -48,19 +48,17 @@ title: Module blockstorage
 <li><a href="#VolumeV2State">interface VolumeV2State</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts" >}}">blockstorage/getAvailabilityZonesV3.ts</a> <a href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts" >}}">blockstorage/getSnapshotV2.ts</a> <a href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts" >}}">blockstorage/getSnapshotV3.ts</a> <a href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts" >}}">blockstorage/volume.ts</a> <a href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts" >}}">blockstorage/volumeAttach.ts</a> <a href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts" >}}">blockstorage/volumeAttachV2.ts</a> <a href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts" >}}">blockstorage/volumeV1.ts</a> <a href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts" >}}">blockstorage/volumeV2.ts</a> 
+<a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts">blockstorage/getAvailabilityZonesV3.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts">blockstorage/getSnapshotV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts">blockstorage/getSnapshotV3.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts">blockstorage/volume.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts">blockstorage/volumeAttach.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts">blockstorage/volumeAttachV2.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts">blockstorage/volumeV1.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts">blockstorage/volumeV2.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L25" >}}">class <b>Volume</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L27">class <b>Volume</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a V3 volume resource within OpenStack.
@@ -82,13 +80,11 @@ const volume1 = new openstack.blockstorage.Volume("volume1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Volume-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L126" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L128"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Volume(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VolumeArgs'>VolumeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -101,13 +97,11 @@ Create a Volume resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L34" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeState'>VolumeState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Volume'>Volume</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -117,25 +111,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L25" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L27">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L45" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -145,16 +135,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-attachments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L57" >}}">property <b>attachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L59">property <b>attachments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    device: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#VolumeAttachment'>outputs.blockstorage.VolumeAttachment</a>[]&gt;;</pre>
 {{% md %}}
 
 If a volume is attached to an instance, this attribute will
@@ -164,12 +148,10 @@ sees it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L62" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L64">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -178,12 +160,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-consistencyGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L67" >}}">property <b>consistencyGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L69">property <b>consistencyGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>consistencyGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The consistency group to place the volume
@@ -192,12 +172,10 @@ in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L72" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L74">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -206,12 +184,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-enableOnlineResize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L78" >}}">property <b>enableOnlineResize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L80">property <b>enableOnlineResize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableOnlineResize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When this option is set it allows extending
@@ -221,12 +197,10 @@ support for version 3.42 and a compatible storage driver.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L25" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L27">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -235,12 +209,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L83" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L85">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -249,12 +221,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L88" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L90">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -263,12 +233,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-multiattach">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L92" >}}">property <b>multiattach</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L94">property <b>multiattach</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>multiattach: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Allow the volume to be attached to more than one Compute instance.
@@ -276,12 +244,10 @@ Allow the volume to be attached to more than one Compute instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L97" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L99">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -290,12 +256,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L103" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L105">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -305,12 +269,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L107" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L109">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes).
@@ -318,12 +280,10 @@ The size of the volume to create (in gigabytes).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L112" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L114">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>snapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -332,12 +292,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-sourceReplica">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L116" >}}">property <b>sourceReplica</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L118">property <b>sourceReplica</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sourceReplica: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID to replicate with.
@@ -345,12 +303,10 @@ The volume ID to replicate with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L121" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L123">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sourceVolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -359,12 +315,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L25" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L27">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -373,12 +327,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L126" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L128">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>volumeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.
@@ -388,12 +340,10 @@ Changing this creates a new volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttach">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L44" >}}">class <b>VolumeAttach</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L44">class <b>VolumeAttach</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This resource is experimental and may be removed in the future! Feedback
@@ -434,13 +384,11 @@ const va1 = new openstack.blockstorage.VolumeAttach("va1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttach-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L140" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L140"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttach(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VolumeAttachArgs'>VolumeAttachArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -453,13 +401,11 @@ Create a VolumeAttach resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeAttachState'>VolumeAttachState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VolumeAttach'>VolumeAttach</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -469,25 +415,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L44" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L44">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -497,12 +439,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-attachMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L76" >}}">property <b>attachMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L76">property <b>attachMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specify whether to attach the volume as Read-Only
@@ -512,12 +452,10 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L82" >}}">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L82">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This is a map of key/value pairs that contain the connection
@@ -527,12 +465,10 @@ script to finalize the connection. See below for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-device">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L88" >}}">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L88">property <b>device</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>device: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The device to tell the Block Storage service this
@@ -542,12 +478,10 @@ You can specify `auto` or a device such as `/dev/vdc`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-driverVolumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L92" >}}">property <b>driverVolumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L92">property <b>driverVolumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>driverVolumeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The storage driver that the volume is based on.
@@ -555,12 +489,10 @@ The storage driver that the volume is based on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-hostName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L96" >}}">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L96">property <b>hostName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hostName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The host to attach the volume to.
@@ -568,12 +500,10 @@ The host to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L44" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L44">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -582,12 +512,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-initiator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L100" >}}">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L100">property <b>initiator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>initiator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator string to make the connection.
@@ -595,12 +523,10 @@ The iSCSI initiator string to make the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L104" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L104">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the `hostName` above.
@@ -608,12 +534,10 @@ The IP address of the `hostName` above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-mountPointBase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L108" >}}">property <b>mountPointBase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L108">property <b>mountPointBase</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mountPointBase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mount point base name for shared storage.
@@ -621,12 +545,10 @@ A mount point base name for shared storage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-multipath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L112" >}}">property <b>multipath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L112">property <b>multipath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>multipath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether to connect to this volume via multipath.
@@ -634,12 +556,10 @@ Whether to connect to this volume via multipath.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-osType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L116" >}}">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L116">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>osType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator OS type.
@@ -647,12 +567,10 @@ The iSCSI initiator OS type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-platform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L120" >}}">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L120">property <b>platform</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator platform.
@@ -660,12 +578,10 @@ The iSCSI initiator platform.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L127" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L127">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V3 Block Storage
@@ -676,12 +592,10 @@ creates a new volume attachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L44" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L44">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -690,12 +604,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L131" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L131">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Volume to attach to an Instance.
@@ -703,12 +615,10 @@ The ID of the Volume to attach to an Instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-wwnn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L135" >}}">property <b>wwnn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L135">property <b>wwnn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>wwnn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A wwnn name. Used for Fibre Channel connections.
@@ -716,12 +626,10 @@ A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttach-wwpns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L140" >}}">property <b>wwpns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L140">property <b>wwpns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>wwpns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An array of wwpn strings. Used for Fibre Channel
@@ -731,12 +639,10 @@ connections.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachV2">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L44" >}}">class <b>VolumeAttachV2</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L44">class <b>VolumeAttachV2</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This resource is experimental and may be removed in the future! Feedback
@@ -777,13 +683,11 @@ const va1 = new openstack.blockstorage.VolumeAttachV2("va1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachV2-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L140" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L140"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttachV2(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VolumeAttachV2Args'>VolumeAttachV2Args</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -796,13 +700,11 @@ Create a VolumeAttachV2 resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L53" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L53">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeAttachV2State'>VolumeAttachV2State</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VolumeAttachV2'>VolumeAttachV2</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -812,25 +714,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L44" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L44">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L64" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L64">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -840,12 +738,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-attachMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L76" >}}">property <b>attachMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L76">property <b>attachMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>attachMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specify whether to attach the volume as Read-Only
@@ -855,12 +751,10 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L82" >}}">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L82">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This is a map of key/value pairs that contain the connection
@@ -870,12 +764,10 @@ script to finalize the connection. See below for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-device">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L88" >}}">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L88">property <b>device</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>device: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The device to tell the Block Storage service this
@@ -885,12 +777,10 @@ You can specify `auto` or a device such as `/dev/vdc`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-driverVolumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L92" >}}">property <b>driverVolumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L92">property <b>driverVolumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>driverVolumeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The storage driver that the volume is based on.
@@ -898,12 +788,10 @@ The storage driver that the volume is based on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-hostName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L96" >}}">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L96">property <b>hostName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hostName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The host to attach the volume to.
@@ -911,12 +799,10 @@ The host to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L44" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L44">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -925,12 +811,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-initiator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L100" >}}">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L100">property <b>initiator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>initiator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator string to make the connection.
@@ -938,12 +822,10 @@ The iSCSI initiator string to make the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L104" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L104">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the `hostName` above.
@@ -951,12 +833,10 @@ The IP address of the `hostName` above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-mountPointBase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L108" >}}">property <b>mountPointBase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L108">property <b>mountPointBase</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>mountPointBase: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mount point base name for shared storage.
@@ -964,12 +844,10 @@ A mount point base name for shared storage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-multipath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L112" >}}">property <b>multipath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L112">property <b>multipath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>multipath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether to connect to this volume via multipath.
@@ -977,12 +855,10 @@ Whether to connect to this volume via multipath.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-osType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L116" >}}">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L116">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>osType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator OS type.
@@ -990,12 +866,10 @@ The iSCSI initiator OS type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-platform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L120" >}}">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L120">property <b>platform</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>platform: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator platform.
@@ -1003,12 +877,10 @@ The iSCSI initiator platform.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L127" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L127">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Block Storage
@@ -1019,12 +891,10 @@ creates a new volume attachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L44" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L44">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1033,12 +903,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L131" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L131">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Volume to attach to an Instance.
@@ -1046,12 +914,10 @@ The ID of the Volume to attach to an Instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-wwnn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L135" >}}">property <b>wwnn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L135">property <b>wwnn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>wwnn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A wwnn name. Used for Fibre Channel connections.
@@ -1059,12 +925,10 @@ A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2-wwpns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L140" >}}">property <b>wwpns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L140">property <b>wwpns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>wwpns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An array of wwpn strings. Used for Fibre Channel
@@ -1074,12 +938,10 @@ connections.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeV1">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L25" >}}">class <b>VolumeV1</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L27">class <b>VolumeV1</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a V1 volume resource within OpenStack.
@@ -1101,13 +963,11 @@ const volume1 = new openstack.blockstorage.VolumeV1("volume1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeV1-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L108" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L110"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeV1(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VolumeV1Args'>VolumeV1Args</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1120,13 +980,11 @@ Create a VolumeV1 resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L34" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeV1State'>VolumeV1State</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VolumeV1'>VolumeV1</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1136,25 +994,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L25" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L27">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L45" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1164,16 +1018,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-attachments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L57" >}}">property <b>attachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L59">property <b>attachments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    device: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#VolumeV1Attachment'>outputs.blockstorage.VolumeV1Attachment</a>[]&gt;;</pre>
 {{% md %}}
 
 If a volume is attached to an instance, this attribute will
@@ -1183,12 +1031,10 @@ sees it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L62" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L64">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -1197,12 +1043,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L67" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L69">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -1211,12 +1055,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L25" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L27">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1225,12 +1067,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L72" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L74">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -1239,12 +1079,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L77" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L79">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -1253,12 +1091,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L82" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L84">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -1267,12 +1103,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L88" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L90">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -1282,12 +1116,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L93" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L95">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes). Changing
@@ -1296,12 +1128,10 @@ this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L98" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L100">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>snapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -1310,12 +1140,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L103" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L105">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sourceVolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -1324,12 +1152,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L25" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L27">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1338,12 +1164,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L108" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L110">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>volumeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.
@@ -1353,12 +1177,10 @@ Changing this creates a new volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeV2">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L25" >}}">class <b>VolumeV2</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L27">class <b>VolumeV2</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a V2 volume resource within OpenStack.
@@ -1380,13 +1202,11 @@ const volume1 = new openstack.blockstorage.VolumeV2("volume1", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeV2-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L117" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L119"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeV2(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VolumeV2Args'>VolumeV2Args</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1399,13 +1219,11 @@ Create a VolumeV2 resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L34" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeV2State'>VolumeV2State</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VolumeV2'>VolumeV2</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1415,25 +1233,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L25" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L27">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L45" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1443,16 +1257,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-attachments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L57" >}}">property <b>attachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L59">property <b>attachments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    device: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>attachments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#VolumeV2Attachment'>outputs.blockstorage.VolumeV2Attachment</a>[]&gt;;</pre>
 {{% md %}}
 
 If a volume is attached to an instance, this attribute will
@@ -1462,12 +1270,10 @@ sees it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L62" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L64">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -1476,12 +1282,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-consistencyGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L67" >}}">property <b>consistencyGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L69">property <b>consistencyGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>consistencyGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The consistency group to place the volume
@@ -1490,12 +1294,10 @@ in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L72" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L74">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -1504,12 +1306,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L25" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L27">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1518,12 +1318,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L77" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L79">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -1532,12 +1330,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L82" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L84">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -1546,12 +1342,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L87" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L89">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -1560,12 +1354,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L93" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L95">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -1575,12 +1367,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L98" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L100">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes). Changing
@@ -1589,12 +1379,10 @@ this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L103" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L105">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>snapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -1603,12 +1391,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-sourceReplica">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L107" >}}">property <b>sourceReplica</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L109">property <b>sourceReplica</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sourceReplica: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID to replicate with.
@@ -1616,12 +1402,10 @@ The volume ID to replicate with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L112" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L114">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sourceVolId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -1630,12 +1414,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L25" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L27">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1644,12 +1426,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L117" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L119">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>volumeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.
@@ -1659,13 +1439,11 @@ Changing this creates a new volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getAvailabilityZonesV3">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L21" >}}">function <b>getAvailabilityZonesV3</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L23">function <b>getAvailabilityZonesV3</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getAvailabilityZonesV3(args?: <a href='#GetAvailabilityZonesV3Args'>GetAvailabilityZonesV3Args</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAvailabilityZonesV3Result'>GetAvailabilityZonesV3Result</a>&gt; &amp; <a href='#GetAvailabilityZonesV3Result'>GetAvailabilityZonesV3Result</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1685,13 +1463,11 @@ const zones = openstack.blockstorage.getAvailabilityZonesV3({});
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSnapshotV2">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L24" >}}">function <b>getSnapshotV2</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L26">function <b>getSnapshotV2</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getSnapshotV2(args?: <a href='#GetSnapshotV2Args'>GetSnapshotV2Args</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSnapshotV2Result'>GetSnapshotV2Result</a>&gt; &amp; <a href='#GetSnapshotV2Result'>GetSnapshotV2Result</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1714,13 +1490,11 @@ const snapshot1 = openstack.blockstorage.getSnapshotV2({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSnapshotV3">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L24" >}}">function <b>getSnapshotV3</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L26">function <b>getSnapshotV3</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getSnapshotV3(args?: <a href='#GetSnapshotV3Args'>GetSnapshotV3Args</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSnapshotV3Result'>GetSnapshotV3Result</a>&gt; &amp; <a href='#GetSnapshotV3Result'>GetSnapshotV3Result</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1743,7 +1517,7 @@ const snapshot1 = openstack.blockstorage.getSnapshotV3({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetAvailabilityZonesV3Args">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L41" >}}">interface <b>GetAvailabilityZonesV3Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L43">interface <b>GetAvailabilityZonesV3Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1752,12 +1526,10 @@ A collection of arguments for invoking getAvailabilityZonesV3.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Args-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L46" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L48">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the Block Storage client.
@@ -1766,12 +1538,10 @@ If omitted, the `region` argument of the provider is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Args-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L51" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L53">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `state` of the availability zones to match. Can
@@ -1781,7 +1551,7 @@ either be `available` or `unavailable`. Default is `available`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAvailabilityZonesV3Result">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L57" >}}">interface <b>GetAvailabilityZonesV3Result</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L59">interface <b>GetAvailabilityZonesV3Result</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1790,12 +1560,10 @@ A collection of values returned by getAvailabilityZonesV3.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Result-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L74" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L76">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1803,12 +1571,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Result-names">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L62" >}}">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L64">property <b>names</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The names of the availability zones, ordered alphanumerically, that
@@ -1817,12 +1583,10 @@ match the queried `state`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Result-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L66" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L68">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1830,12 +1594,10 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAvailabilityZonesV3Result-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getAvailabilityZonesV3.ts#L70" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getAvailabilityZonesV3.ts#L72">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1844,7 +1606,7 @@ See Argument Reference above.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotV2Args">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L47" >}}">interface <b>GetSnapshotV2Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L49">interface <b>GetSnapshotV2Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1853,12 +1615,10 @@ A collection of arguments for invoking getSnapshotV2.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotV2Args-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L52" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L54">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Pick the most recently created snapshot if there
@@ -1867,12 +1627,10 @@ are multiple results.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Args-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L56" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L58">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the snapshot.
@@ -1880,12 +1638,10 @@ The name of the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Args-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L61" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L63">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Block Storage
@@ -1894,12 +1650,10 @@ client. If omitted, the `region` argument of the provider is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Args-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L65" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L67">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The status of the snapshot.
@@ -1907,12 +1661,10 @@ The status of the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Args-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L69" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L71">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the snapshot's volume.
@@ -1921,7 +1673,7 @@ The ID of the snapshot's volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotV2Result">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L75" >}}">interface <b>GetSnapshotV2Result</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L77">interface <b>GetSnapshotV2Result</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1930,12 +1682,10 @@ A collection of values returned by getSnapshotV2.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L79" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L81">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot's description.
@@ -1943,12 +1693,10 @@ The snapshot's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L108" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L110">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1956,12 +1704,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L83" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L85">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot's metadata.
@@ -1969,22 +1715,16 @@ The snapshot's metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L84" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L86">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L88" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L90">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -1992,12 +1732,10 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L92" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L94">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -2005,12 +1743,10 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L96" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L98">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the snapshot.
@@ -2018,12 +1754,10 @@ The size of the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L100" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L102">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -2031,12 +1765,10 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV2Result-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV2.ts#L104" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV2.ts#L106">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -2045,7 +1777,7 @@ See Argument Reference above.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotV3Args">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L47" >}}">interface <b>GetSnapshotV3Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L49">interface <b>GetSnapshotV3Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2054,12 +1786,10 @@ A collection of arguments for invoking getSnapshotV3.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotV3Args-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L52" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L54">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Pick the most recently created snapshot if there
@@ -2068,12 +1798,10 @@ are multiple results.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Args-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L56" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L58">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the snapshot.
@@ -2081,12 +1809,10 @@ The name of the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Args-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L61" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L63">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V3 Block Storage
@@ -2095,12 +1821,10 @@ client. If omitted, the `region` argument of the provider is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Args-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L65" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L67">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The status of the snapshot.
@@ -2108,12 +1832,10 @@ The status of the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Args-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L69" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L71">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the snapshot's volume.
@@ -2122,7 +1844,7 @@ The ID of the snapshot's volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSnapshotV3Result">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L75" >}}">interface <b>GetSnapshotV3Result</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L77">interface <b>GetSnapshotV3Result</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2131,12 +1853,10 @@ A collection of values returned by getSnapshotV3.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L79" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L81">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot's description.
@@ -2144,12 +1864,10 @@ The snapshot's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L108" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L110">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2157,12 +1875,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L83" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L85">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot's metadata.
@@ -2170,22 +1886,16 @@ The snapshot's metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L84" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L86">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L88" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L90">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -2193,12 +1903,10 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L92" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L94">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -2206,12 +1914,10 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L96" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L98">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the snapshot.
@@ -2219,12 +1925,10 @@ The size of the snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L100" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L102">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -2232,12 +1936,10 @@ See Argument Reference above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSnapshotV3Result-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/getSnapshotV3.ts#L104" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/getSnapshotV3.ts#L106">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 See Argument Reference above.
@@ -2246,7 +1948,7 @@ See Argument Reference above.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L271" >}}">interface <b>VolumeArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L273">interface <b>VolumeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2255,12 +1957,10 @@ The set of arguments for constructing a Volume resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeArgs-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L276" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L278">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -2269,12 +1969,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-consistencyGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L281" >}}">property <b>consistencyGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L283">property <b>consistencyGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consistencyGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The consistency group to place the volume
@@ -2283,12 +1981,10 @@ in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L286" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L288">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -2297,12 +1993,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-enableOnlineResize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L292" >}}">property <b>enableOnlineResize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L294">property <b>enableOnlineResize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableOnlineResize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When this option is set it allows extending
@@ -2312,12 +2006,10 @@ support for version 3.42 and a compatible storage driver.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L297" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L299">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -2326,12 +2018,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L302" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L304">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -2340,12 +2030,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-multiattach">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L306" >}}">property <b>multiattach</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L308">property <b>multiattach</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>multiattach?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Allow the volume to be attached to more than one Compute instance.
@@ -2353,12 +2041,10 @@ Allow the volume to be attached to more than one Compute instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L311" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L313">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -2367,12 +2053,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L317" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L319">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -2382,12 +2066,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L321" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L323">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes).
@@ -2395,12 +2077,10 @@ The size of the volume to create (in gigabytes).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L326" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L328">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -2409,12 +2089,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-sourceReplica">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L330" >}}">property <b>sourceReplica</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L332">property <b>sourceReplica</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceReplica?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID to replicate with.
@@ -2422,12 +2100,10 @@ The volume ID to replicate with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L335" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L337">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceVolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -2436,12 +2112,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L340" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L342">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.
@@ -2451,7 +2125,7 @@ Changing this creates a new volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L283" >}}">interface <b>VolumeAttachArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L283">interface <b>VolumeAttachArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2460,12 +2134,10 @@ The set of arguments for constructing a VolumeAttach resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-attachMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L289" >}}">property <b>attachMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L289">property <b>attachMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>attachMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specify whether to attach the volume as Read-Only
@@ -2475,12 +2147,10 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-device">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L295" >}}">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L295">property <b>device</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>device?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The device to tell the Block Storage service this
@@ -2490,12 +2160,10 @@ You can specify `auto` or a device such as `/dev/vdc`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-hostName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L299" >}}">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L299">property <b>hostName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The host to attach the volume to.
@@ -2503,12 +2171,10 @@ The host to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-initiator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L303" >}}">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L303">property <b>initiator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>initiator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator string to make the connection.
@@ -2516,12 +2182,10 @@ The iSCSI initiator string to make the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L307" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L307">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the `hostName` above.
@@ -2529,12 +2193,10 @@ The IP address of the `hostName` above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-multipath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L311" >}}">property <b>multipath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L311">property <b>multipath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>multipath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether to connect to this volume via multipath.
@@ -2542,12 +2204,10 @@ Whether to connect to this volume via multipath.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-osType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L315" >}}">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L315">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator OS type.
@@ -2555,12 +2215,10 @@ The iSCSI initiator OS type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-platform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L319" >}}">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L319">property <b>platform</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator platform.
@@ -2568,12 +2226,10 @@ The iSCSI initiator platform.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L326" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L326">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V3 Block Storage
@@ -2584,12 +2240,10 @@ creates a new volume attachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L330" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L330">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Volume to attach to an Instance.
@@ -2597,12 +2251,10 @@ The ID of the Volume to attach to an Instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-wwnn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L334" >}}">property <b>wwnn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L334">property <b>wwnn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>wwnn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A wwnn name. Used for Fibre Channel connections.
@@ -2610,12 +2262,10 @@ A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachArgs-wwpns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L339" >}}">property <b>wwpns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L339">property <b>wwpns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>wwpns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An array of wwpn strings. Used for Fibre Channel
@@ -2625,7 +2275,7 @@ connections.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L207" >}}">interface <b>VolumeAttachState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L207">interface <b>VolumeAttachState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2634,12 +2284,10 @@ Input properties used for looking up and filtering VolumeAttach resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachState-attachMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L213" >}}">property <b>attachMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L213">property <b>attachMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>attachMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specify whether to attach the volume as Read-Only
@@ -2649,12 +2297,10 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L219" >}}">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L219">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>data?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This is a map of key/value pairs that contain the connection
@@ -2664,12 +2310,10 @@ script to finalize the connection. See below for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-device">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L225" >}}">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L225">property <b>device</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>device?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The device to tell the Block Storage service this
@@ -2679,12 +2323,10 @@ You can specify `auto` or a device such as `/dev/vdc`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-driverVolumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L229" >}}">property <b>driverVolumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L229">property <b>driverVolumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>driverVolumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The storage driver that the volume is based on.
@@ -2692,12 +2334,10 @@ The storage driver that the volume is based on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-hostName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L233" >}}">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L233">property <b>hostName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The host to attach the volume to.
@@ -2705,12 +2345,10 @@ The host to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-initiator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L237" >}}">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L237">property <b>initiator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>initiator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator string to make the connection.
@@ -2718,12 +2356,10 @@ The iSCSI initiator string to make the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L241" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L241">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the `hostName` above.
@@ -2731,12 +2367,10 @@ The IP address of the `hostName` above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-mountPointBase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L245" >}}">property <b>mountPointBase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L245">property <b>mountPointBase</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mountPointBase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mount point base name for shared storage.
@@ -2744,12 +2378,10 @@ A mount point base name for shared storage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-multipath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L249" >}}">property <b>multipath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L249">property <b>multipath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>multipath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether to connect to this volume via multipath.
@@ -2757,12 +2389,10 @@ Whether to connect to this volume via multipath.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-osType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L253" >}}">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L253">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator OS type.
@@ -2770,12 +2400,10 @@ The iSCSI initiator OS type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-platform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L257" >}}">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L257">property <b>platform</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator platform.
@@ -2783,12 +2411,10 @@ The iSCSI initiator platform.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L264" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L264">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V3 Block Storage
@@ -2799,12 +2425,10 @@ creates a new volume attachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L268" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L268">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Volume to attach to an Instance.
@@ -2812,12 +2436,10 @@ The ID of the Volume to attach to an Instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-wwnn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L272" >}}">property <b>wwnn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L272">property <b>wwnn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>wwnn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A wwnn name. Used for Fibre Channel connections.
@@ -2825,12 +2447,10 @@ A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachState-wwpns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttach.ts#L277" >}}">property <b>wwpns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttach.ts#L277">property <b>wwpns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>wwpns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An array of wwpn strings. Used for Fibre Channel
@@ -2840,7 +2460,7 @@ connections.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachV2Args">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L283" >}}">interface <b>VolumeAttachV2Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L283">interface <b>VolumeAttachV2Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2849,12 +2469,10 @@ The set of arguments for constructing a VolumeAttachV2 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-attachMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L289" >}}">property <b>attachMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L289">property <b>attachMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>attachMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specify whether to attach the volume as Read-Only
@@ -2864,12 +2482,10 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-device">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L295" >}}">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L295">property <b>device</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>device?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The device to tell the Block Storage service this
@@ -2879,12 +2495,10 @@ You can specify `auto` or a device such as `/dev/vdc`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-hostName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L299" >}}">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L299">property <b>hostName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The host to attach the volume to.
@@ -2892,12 +2506,10 @@ The host to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-initiator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L303" >}}">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L303">property <b>initiator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>initiator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator string to make the connection.
@@ -2905,12 +2517,10 @@ The iSCSI initiator string to make the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L307" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L307">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the `hostName` above.
@@ -2918,12 +2528,10 @@ The IP address of the `hostName` above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-multipath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L311" >}}">property <b>multipath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L311">property <b>multipath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>multipath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether to connect to this volume via multipath.
@@ -2931,12 +2539,10 @@ Whether to connect to this volume via multipath.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-osType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L315" >}}">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L315">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator OS type.
@@ -2944,12 +2550,10 @@ The iSCSI initiator OS type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-platform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L319" >}}">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L319">property <b>platform</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator platform.
@@ -2957,12 +2561,10 @@ The iSCSI initiator platform.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L326" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L326">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Block Storage
@@ -2973,12 +2575,10 @@ creates a new volume attachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L330" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L330">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Volume to attach to an Instance.
@@ -2986,12 +2586,10 @@ The ID of the Volume to attach to an Instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-wwnn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L334" >}}">property <b>wwnn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L334">property <b>wwnn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>wwnn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A wwnn name. Used for Fibre Channel connections.
@@ -2999,12 +2597,10 @@ A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2Args-wwpns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L339" >}}">property <b>wwpns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L339">property <b>wwpns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>wwpns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An array of wwpn strings. Used for Fibre Channel
@@ -3014,7 +2610,7 @@ connections.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachV2State">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L207" >}}">interface <b>VolumeAttachV2State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L207">interface <b>VolumeAttachV2State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3023,12 +2619,10 @@ Input properties used for looking up and filtering VolumeAttachV2 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-attachMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L213" >}}">property <b>attachMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L213">property <b>attachMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>attachMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specify whether to attach the volume as Read-Only
@@ -3038,12 +2632,10 @@ If left unspecified, the Block Storage API will apply a default of `rw`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L219" >}}">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L219">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>data?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 This is a map of key/value pairs that contain the connection
@@ -3053,12 +2645,10 @@ script to finalize the connection. See below for more information.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-device">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L225" >}}">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L225">property <b>device</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>device?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The device to tell the Block Storage service this
@@ -3068,12 +2658,10 @@ You can specify `auto` or a device such as `/dev/vdc`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-driverVolumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L229" >}}">property <b>driverVolumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L229">property <b>driverVolumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>driverVolumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The storage driver that the volume is based on.
@@ -3081,12 +2669,10 @@ The storage driver that the volume is based on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-hostName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L233" >}}">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L233">property <b>hostName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The host to attach the volume to.
@@ -3094,12 +2680,10 @@ The host to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-initiator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L237" >}}">property <b>initiator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L237">property <b>initiator</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>initiator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator string to make the connection.
@@ -3107,12 +2691,10 @@ The iSCSI initiator string to make the connection.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L241" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L241">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the `hostName` above.
@@ -3120,12 +2702,10 @@ The IP address of the `hostName` above.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-mountPointBase">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L245" >}}">property <b>mountPointBase</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L245">property <b>mountPointBase</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mountPointBase?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mount point base name for shared storage.
@@ -3133,12 +2713,10 @@ A mount point base name for shared storage.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-multipath">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L249" >}}">property <b>multipath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L249">property <b>multipath</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>multipath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether to connect to this volume via multipath.
@@ -3146,12 +2724,10 @@ Whether to connect to this volume via multipath.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-osType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L253" >}}">property <b>osType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L253">property <b>osType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>osType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator OS type.
@@ -3159,12 +2735,10 @@ The iSCSI initiator OS type.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-platform">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L257" >}}">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L257">property <b>platform</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>platform?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The iSCSI initiator platform.
@@ -3172,12 +2746,10 @@ The iSCSI initiator platform.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L264" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L264">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to obtain the V2 Block Storage
@@ -3188,12 +2760,10 @@ creates a new volume attachment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L268" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L268">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Volume to attach to an Instance.
@@ -3201,12 +2771,10 @@ The ID of the Volume to attach to an Instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-wwnn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L272" >}}">property <b>wwnn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L272">property <b>wwnn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>wwnn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A wwnn name. Used for Fibre Channel connections.
@@ -3214,12 +2782,10 @@ A wwnn name. Used for Fibre Channel connections.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachV2State-wwpns">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeAttachV2.ts#L277" >}}">property <b>wwpns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeAttachV2.ts#L277">property <b>wwpns</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>wwpns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 An array of wwpn strings. Used for Fibre Channel
@@ -3229,7 +2795,7 @@ connections.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L190" >}}">interface <b>VolumeState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L192">interface <b>VolumeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3238,16 +2804,10 @@ Input properties used for looking up and filtering Volume resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeState-attachments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L196" >}}">property <b>attachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L198">property <b>attachments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    device: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#VolumeAttachment'>inputs.blockstorage.VolumeAttachment</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 If a volume is attached to an instance, this attribute will
@@ -3257,12 +2817,10 @@ sees it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L201" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L203">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -3271,12 +2829,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-consistencyGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L206" >}}">property <b>consistencyGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L208">property <b>consistencyGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consistencyGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The consistency group to place the volume
@@ -3285,12 +2841,10 @@ in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L211" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L213">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -3299,12 +2853,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-enableOnlineResize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L217" >}}">property <b>enableOnlineResize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L219">property <b>enableOnlineResize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableOnlineResize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 When this option is set it allows extending
@@ -3314,12 +2866,10 @@ support for version 3.42 and a compatible storage driver.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L222" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L224">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -3328,12 +2878,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L227" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L229">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -3342,12 +2890,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-multiattach">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L231" >}}">property <b>multiattach</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L233">property <b>multiattach</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>multiattach?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Allow the volume to be attached to more than one Compute instance.
@@ -3355,12 +2901,10 @@ Allow the volume to be attached to more than one Compute instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L236" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L238">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -3369,12 +2913,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L242" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L244">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -3384,12 +2926,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L246" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L248">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes).
@@ -3397,12 +2937,10 @@ The size of the volume to create (in gigabytes).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L251" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L253">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -3411,12 +2949,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-sourceReplica">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L255" >}}">property <b>sourceReplica</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L257">property <b>sourceReplica</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceReplica?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID to replicate with.
@@ -3424,12 +2960,10 @@ The volume ID to replicate with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L260" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L262">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceVolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -3438,12 +2972,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volume.ts#L265" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volume.ts#L267">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.
@@ -3453,7 +2985,7 @@ Changing this creates a new volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeV1Args">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L227" >}}">interface <b>VolumeV1Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L229">interface <b>VolumeV1Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3462,12 +2994,10 @@ The set of arguments for constructing a VolumeV1 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeV1Args-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L232" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L234">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -3476,12 +3006,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L237" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L239">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -3490,12 +3018,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L242" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L244">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -3504,12 +3030,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L247" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L249">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -3518,12 +3042,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L252" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L254">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -3532,12 +3054,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L258" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L260">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -3547,12 +3067,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L263" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L265">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes). Changing
@@ -3561,12 +3079,10 @@ this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L268" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L270">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -3575,12 +3091,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L273" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L275">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceVolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -3589,12 +3103,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1Args-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L278" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L280">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.
@@ -3604,7 +3116,7 @@ Changing this creates a new volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeV1State">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L164" >}}">interface <b>VolumeV1State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L166">interface <b>VolumeV1State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3613,16 +3125,10 @@ Input properties used for looking up and filtering VolumeV1 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeV1State-attachments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L170" >}}">property <b>attachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L172">property <b>attachments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    device: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#VolumeV1Attachment'>inputs.blockstorage.VolumeV1Attachment</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 If a volume is attached to an instance, this attribute will
@@ -3632,12 +3138,10 @@ sees it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L175" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L177">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -3646,12 +3150,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L180" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L182">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -3660,12 +3162,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L185" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L187">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -3674,12 +3174,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L190" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L192">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -3688,12 +3186,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L195" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L197">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -3702,12 +3198,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L201" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L203">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -3717,12 +3211,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L206" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L208">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes). Changing
@@ -3731,12 +3223,10 @@ this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L211" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L213">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -3745,12 +3235,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L216" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L218">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceVolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -3759,12 +3247,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV1State-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV1.ts#L221" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV1.ts#L223">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.
@@ -3774,7 +3260,7 @@ Changing this creates a new volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeV2Args">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L249" >}}">interface <b>VolumeV2Args</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L251">interface <b>VolumeV2Args</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3783,12 +3269,10 @@ The set of arguments for constructing a VolumeV2 resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeV2Args-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L254" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L256">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -3797,12 +3281,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-consistencyGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L259" >}}">property <b>consistencyGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L261">property <b>consistencyGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consistencyGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The consistency group to place the volume
@@ -3811,12 +3293,10 @@ in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L264" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L266">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -3825,12 +3305,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L269" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L271">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -3839,12 +3317,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L274" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L276">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -3853,12 +3329,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L279" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L281">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -3867,12 +3341,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L285" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L287">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -3882,12 +3354,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L290" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L292">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes). Changing
@@ -3896,12 +3366,10 @@ this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L295" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L297">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -3910,12 +3378,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-sourceReplica">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L299" >}}">property <b>sourceReplica</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L301">property <b>sourceReplica</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceReplica?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID to replicate with.
@@ -3923,12 +3389,10 @@ The volume ID to replicate with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L304" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L306">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceVolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -3937,12 +3401,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2Args-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L309" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L311">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.
@@ -3952,7 +3414,7 @@ Changing this creates a new volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeV2State">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L177" >}}">interface <b>VolumeV2State</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L179">interface <b>VolumeV2State</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3961,16 +3423,10 @@ Input properties used for looking up and filtering VolumeV2 resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeV2State-attachments">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L183" >}}">property <b>attachments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L185">property <b>attachments</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    device: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>attachments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#VolumeV2Attachment'>inputs.blockstorage.VolumeV2Attachment</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 If a volume is attached to an instance, this attribute will
@@ -3980,12 +3436,10 @@ sees it.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-availabilityZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L188" >}}">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L190">property <b>availabilityZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The availability zone for the volume.
@@ -3994,12 +3448,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-consistencyGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L193" >}}">property <b>consistencyGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L195">property <b>consistencyGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consistencyGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The consistency group to place the volume
@@ -4008,12 +3460,10 @@ in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L198" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L200">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A description of the volume. Changing this updates
@@ -4022,12 +3472,10 @@ the volume's description.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-imageId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L203" >}}">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L205">property <b>imageId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The image ID from which to create the volume.
@@ -4036,12 +3484,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L208" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L210">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Metadata key/value pairs to associate with the volume.
@@ -4050,12 +3496,10 @@ Changing this updates the existing volume metadata.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L213" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L215">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the volume. Changing this updates the
@@ -4064,12 +3508,10 @@ volume's name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L219" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L221">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the volume. If
@@ -4079,12 +3521,10 @@ creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L224" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L226">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the volume to create (in gigabytes). Changing
@@ -4093,12 +3533,10 @@ this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L229" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L231">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The snapshot ID from which to create the volume.
@@ -4107,12 +3545,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-sourceReplica">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L233" >}}">property <b>sourceReplica</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L235">property <b>sourceReplica</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceReplica?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID to replicate with.
@@ -4120,12 +3556,10 @@ The volume ID to replicate with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-sourceVolId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L238" >}}">property <b>sourceVolId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L240">property <b>sourceVolId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sourceVolId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The volume ID from which to create the volume.
@@ -4134,12 +3568,10 @@ Changing this creates a new volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeV2State-volumeType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="blockstorage/volumeV2.ts#L243" >}}">property <b>volumeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/blockstorage/volumeV2.ts#L245">property <b>volumeType</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The type of volume to create.

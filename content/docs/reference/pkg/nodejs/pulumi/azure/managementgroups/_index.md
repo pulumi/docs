@@ -30,19 +30,17 @@ title: Module managementgroups
 <li><a href="#ManagementGroupState">interface ManagementGroupState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts" >}}">managementgroups/getManagementGroup.ts</a> <a href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts" >}}">managementgroups/managementGroup.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts">managementgroups/getManagementGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts">managementgroups/managementGroup.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ManagementGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L30" >}}">class <b>ManagementGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L30">class <b>ManagementGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Management Group.
@@ -69,13 +67,11 @@ const exampleChild = new azure.management.Group("exampleChild", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManagementGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L72" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L72"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ManagementGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ManagementGroupArgs'>ManagementGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -88,13 +84,11 @@ Create a ManagementGroup resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ManagementGroupState'>ManagementGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ManagementGroup'>ManagementGroup</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -104,25 +98,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L30" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L30">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L50">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -132,12 +122,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L60" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L60">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly name for this Management Group. If not specified, this'll be the same as the `groupId`.
@@ -145,12 +133,10 @@ A friendly name for this Management Group. If not specified, this'll be the same
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L64" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L64">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
@@ -158,12 +144,10 @@ The UUID for this Management Group, which needs to be unique across your tenant 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L30" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L30">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -172,12 +156,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-parentManagementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L68" >}}">property <b>parentManagementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L68">property <b>parentManagementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parentManagementGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Parent Management Group. Changing this forces a new resource to be created.
@@ -185,12 +167,10 @@ The ID of the Parent Management Group. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-subscriptionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L72" >}}">property <b>subscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L72">property <b>subscriptionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subscriptionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Subscription GUIDs which should be assigned to the Management Group.
@@ -198,12 +178,10 @@ A list of Subscription GUIDs which should be assigned to the Management Group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L30" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L30">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -213,13 +191,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getManagementGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L25" >}}">function <b>getManagementGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L25">function <b>getManagementGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getManagementGroup(args: <a href='#GetManagementGroupArgs'>GetManagementGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetManagementGroupResult'>GetManagementGroupResult</a>&gt; &amp; <a href='#GetManagementGroupResult'>GetManagementGroupResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -243,7 +219,7 @@ export const displayName = test.displayName;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetManagementGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L43" >}}">interface <b>GetManagementGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L43">interface <b>GetManagementGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -252,12 +228,10 @@ A collection of arguments for invoking getManagementGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetManagementGroupArgs-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L47" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L47">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the UUID of this Management Group.
@@ -266,7 +240,7 @@ Specifies the UUID of this Management Group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetManagementGroupResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L53" >}}">interface <b>GetManagementGroupResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L53">interface <b>GetManagementGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -275,12 +249,10 @@ A collection of values returned by getManagementGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetManagementGroupResult-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L57" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L57">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly name for the Management Group.
@@ -288,22 +260,16 @@ A friendly name for the Management Group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagementGroupResult-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L58" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L58">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagementGroupResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L70" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L70">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -311,12 +277,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagementGroupResult-parentManagementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L62" >}}">property <b>parentManagementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L62">property <b>parentManagementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentManagementGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of any Parent Management Group.
@@ -324,12 +288,10 @@ The ID of any Parent Management Group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetManagementGroupResult-subscriptionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/getManagementGroup.ts#L66" >}}">property <b>subscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/getManagementGroup.ts#L66">property <b>subscriptionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Subscription ID's which are assigned to the Management Group.
@@ -338,7 +300,7 @@ A list of Subscription ID's which are assigned to the Management Group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagementGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L133" >}}">interface <b>ManagementGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L133">interface <b>ManagementGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -347,12 +309,10 @@ The set of arguments for constructing a ManagementGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManagementGroupArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L137" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L137">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly name for this Management Group. If not specified, this'll be the same as the `groupId`.
@@ -360,12 +320,10 @@ A friendly name for this Management Group. If not specified, this'll be the same
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroupArgs-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L141" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L141">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
@@ -373,12 +331,10 @@ The UUID for this Management Group, which needs to be unique across your tenant 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroupArgs-parentManagementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L145" >}}">property <b>parentManagementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L145">property <b>parentManagementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentManagementGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Parent Management Group. Changing this forces a new resource to be created.
@@ -386,12 +342,10 @@ The ID of the Parent Management Group. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroupArgs-subscriptionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L149" >}}">property <b>subscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L149">property <b>subscriptionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Subscription GUIDs which should be assigned to the Management Group.
@@ -400,7 +354,7 @@ A list of Subscription GUIDs which should be assigned to the Management Group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ManagementGroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L111" >}}">interface <b>ManagementGroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L111">interface <b>ManagementGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -409,12 +363,10 @@ Input properties used for looking up and filtering ManagementGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ManagementGroupState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L115" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L115">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly name for this Management Group. If not specified, this'll be the same as the `groupId`.
@@ -422,12 +374,10 @@ A friendly name for this Management Group. If not specified, this'll be the same
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroupState-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L119" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L119">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
@@ -435,12 +385,10 @@ The UUID for this Management Group, which needs to be unique across your tenant 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroupState-parentManagementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L123" >}}">property <b>parentManagementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L123">property <b>parentManagementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentManagementGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Parent Management Group. Changing this forces a new resource to be created.
@@ -448,12 +396,10 @@ The ID of the Parent Management Group. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ManagementGroupState-subscriptionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="managementgroups/managementGroup.ts#L127" >}}">property <b>subscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/managementgroups/managementGroup.ts#L127">property <b>subscriptionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Subscription GUIDs which should be assigned to the Management Group.

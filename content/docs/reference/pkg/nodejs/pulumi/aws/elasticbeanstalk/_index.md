@@ -45,19 +45,17 @@ title: Module elasticbeanstalk
 <li><a href="#GetSolutionStackResult">interface GetSolutionStackResult</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts" >}}">elasticbeanstalk/application.ts</a> <a href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts" >}}">elasticbeanstalk/applicationVersion.ts</a> <a href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts" >}}">elasticbeanstalk/configurationTemplate.ts</a> <a href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts" >}}">elasticbeanstalk/environment.ts</a> <a href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts" >}}">elasticbeanstalk/getApplication.ts</a> <a href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getHostedZone.ts" >}}">elasticbeanstalk/getHostedZone.ts</a> <a href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts" >}}">elasticbeanstalk/getSolutionStack.ts</a> 
+<a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts">elasticbeanstalk/application.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts">elasticbeanstalk/applicationVersion.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts">elasticbeanstalk/configurationTemplate.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts">elasticbeanstalk/environment.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts">elasticbeanstalk/getApplication.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getHostedZone.ts">elasticbeanstalk/getHostedZone.ts</a> <a href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts">elasticbeanstalk/getSolutionStack.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Application">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L35" >}}">class <b>Application</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L35">class <b>Application</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides an Elastic Beanstalk Application Resource. Elastic Beanstalk allows
@@ -87,13 +85,11 @@ const tftest = new aws.elasticbeanstalk.Application("tftest", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L78" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L78"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Application(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ApplicationArgs'>ApplicationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -106,13 +102,11 @@ Create a Application resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L44" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L44">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ApplicationState'>ApplicationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Application'>Application</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -122,25 +116,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L35" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L35">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L55" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L55">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -150,22 +140,16 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-appversionLifecycle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L62" >}}">property <b>appversionLifecycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L62">property <b>appversionLifecycle</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>appversionLifecycle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ApplicationAppversionLifecycle'>outputs.elasticbeanstalk.ApplicationAppversionLifecycle</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L66" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L66">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN assigned by AWS for this Elastic Beanstalk Application.
@@ -173,12 +157,10 @@ The ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L70" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L70">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the application
@@ -186,12 +168,10 @@ Short description of the application
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L35" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L35">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -200,12 +180,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L74" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L74">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the application, must be unique within your account
@@ -213,12 +191,10 @@ The name of the application, must be unique within your account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L78" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L78">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Key-value mapping of tags for the Elastic Beanstalk Application.
@@ -226,12 +202,10 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L35" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L35">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -241,12 +215,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationVersion">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L55" >}}">class <b>ApplicationVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L55">class <b>ApplicationVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides an Elastic Beanstalk Application Version Resource. Elastic Beanstalk allows
@@ -293,13 +265,11 @@ const defaultApplicationVersion = new aws.elasticbeanstalk.ApplicationVersion("d
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationVersion-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L114" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L114"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ApplicationVersion(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationVersionArgs'>ApplicationVersionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -312,13 +282,11 @@ Create a ApplicationVersion resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L64" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L64">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ApplicationVersionState'>ApplicationVersionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ApplicationVersion'>ApplicationVersion</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -328,25 +296,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L55" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L55">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L75" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L75">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -356,12 +320,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L85" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L85">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>application: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Application'>Application</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the Beanstalk Application the version is associated with.
@@ -369,12 +331,10 @@ Name of the Beanstalk Application the version is associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L89" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L89">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN assigned by AWS for this Elastic Beanstalk Application.
@@ -382,12 +342,10 @@ The ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L93" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L93">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 S3 bucket that contains the Application Version source bundle.
@@ -395,12 +353,10 @@ S3 bucket that contains the Application Version source bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L97" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L97">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Application Version.
@@ -408,12 +364,10 @@ Short description of the Application Version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-forceDelete">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L102" >}}">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L102">property <b>forceDelete</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>forceDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 On delete, force an Application Version to be deleted when it may be in use
@@ -422,12 +376,10 @@ by multiple Elastic Beanstalk Environments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L55" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L55">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -436,12 +388,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L106" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L106">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 S3 object that is the Application Version source bundle.
@@ -449,12 +399,10 @@ S3 object that is the Application Version source bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L110" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L110">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the this Application Version.
@@ -462,12 +410,10 @@ A unique name for the this Application Version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L114" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L114">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Key-value mapping of tags for the Elastic Beanstalk Application Version.
@@ -475,12 +421,10 @@ Key-value mapping of tags for the Elastic Beanstalk Application Version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersion-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L55" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L55">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -490,12 +434,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationTemplate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L40" >}}">class <b>ConfigurationTemplate</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L40">class <b>ConfigurationTemplate</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides an Elastic Beanstalk Configuration Template, which are associated with
@@ -530,13 +472,11 @@ The `setting` field supports the following format:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L93" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L93"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ConfigurationTemplate(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ConfigurationTemplateArgs'>ConfigurationTemplateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -549,13 +489,11 @@ Create a ConfigurationTemplate resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L49">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConfigurationTemplateState'>ConfigurationTemplateState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ConfigurationTemplate'>ConfigurationTemplate</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -565,25 +503,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L40" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L40">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L60">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -593,12 +527,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L70" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L70">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>application: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 name of the application to associate with this configuration template
@@ -606,12 +538,10 @@ name of the application to associate with this configuration template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L74" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L74">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Template
@@ -619,12 +549,10 @@ Short description of the Template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-environmentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L78" >}}">property <b>environmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L78">property <b>environmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>environmentId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the environment used with this configuration template
@@ -632,12 +560,10 @@ The ID of the environment used with this configuration template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L40" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L40">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -646,12 +572,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L82" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L82">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for this Template.
@@ -659,12 +583,10 @@ A unique name for this Template.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L88" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L88">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ConfigurationTemplateSetting'>outputs.elasticbeanstalk.ConfigurationTemplateSetting</a>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Option settings to configure the new Environment. These
@@ -674,12 +596,10 @@ below in Option Settings
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-solutionStackName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L93" >}}">property <b>solutionStackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L93">property <b>solutionStackName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>solutionStackName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A solution stack to base your Template
@@ -688,12 +608,10 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplate-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L40" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L40">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -703,12 +621,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Environment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L76" >}}">class <b>Environment</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L76">class <b>Environment</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Provides an Elastic Beanstalk Environment Resource. Elastic Beanstalk allows
@@ -776,13 +692,11 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Environment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L205" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L205"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Environment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EnvironmentArgs'>EnvironmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -795,13 +709,11 @@ Create a Environment resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L85" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L85">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EnvironmentState'>EnvironmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Environment'>Environment</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -811,25 +723,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L76" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L76">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L96" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L96">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -839,12 +747,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-allSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L108" >}}">property <b>allSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L108">property <b>allSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EnvironmentAllSetting'>outputs.elasticbeanstalk.EnvironmentAllSetting</a>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 List of all option settings configured in the Environment. These
@@ -854,12 +760,10 @@ the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L113" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L113">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>application: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Application'>Application</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the application that contains the version
@@ -868,22 +772,16 @@ to be deployed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L114" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L114">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-autoscalingGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L118" >}}">property <b>autoscalingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L118">property <b>autoscalingGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoscalingGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The autoscaling groups used by this environment.
@@ -891,12 +789,10 @@ The autoscaling groups used by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-cname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L122" >}}">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L122">property <b>cname</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Fully qualified DNS name for the Environment.
@@ -904,12 +800,10 @@ Fully qualified DNS name for the Environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-cnamePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L127" >}}">property <b>cnamePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L127">property <b>cnamePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>cnamePrefix: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Prefix to use for the fully qualified DNS name of
@@ -918,12 +812,10 @@ the Environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L131" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L131">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Environment
@@ -931,12 +823,10 @@ Short description of the Environment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L76" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L76">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -945,12 +835,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-instances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L135" >}}">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L135">property <b>instances</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Instances used by this environment.
@@ -958,12 +846,10 @@ Instances used by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-launchConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L139" >}}">property <b>launchConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L139">property <b>launchConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>launchConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Launch configurations in use by this environment.
@@ -971,12 +857,10 @@ Launch configurations in use by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-loadBalancers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L143" >}}">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L143">property <b>loadBalancers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>loadBalancers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Elastic load balancers in use by this environment.
@@ -984,12 +868,10 @@ Elastic load balancers in use by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L148" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L148">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for this Environment. This name is used
@@ -998,12 +880,10 @@ in the application URL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-platformArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L153" >}}">property <b>platformArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L153">property <b>platformArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>platformArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The [ARN][2] of the Elastic Beanstalk [Platform][3]
@@ -1012,12 +892,10 @@ to use in deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-pollInterval">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L160" >}}">property <b>pollInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L160">property <b>pollInterval</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>pollInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The time between polling the AWS API to
@@ -1028,12 +906,10 @@ use the default behavior, which is an exponential backoff
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-queues">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L164" >}}">property <b>queues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L164">property <b>queues</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>queues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 SQS queues in use by this environment.
@@ -1041,12 +917,10 @@ SQS queues in use by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L170" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L170">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EnvironmentSetting'>outputs.elasticbeanstalk.EnvironmentSetting</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Option settings to configure the new Environment. These
@@ -1056,12 +930,10 @@ below in Option Settings
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-solutionStackName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L175" >}}">property <b>solutionStackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L175">property <b>solutionStackName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>solutionStackName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A solution stack to base your environment
@@ -1070,12 +942,10 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L179" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L179">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A set of tags to apply to the Environment.
@@ -1083,12 +953,10 @@ A set of tags to apply to the Environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-templateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L184" >}}">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L184">property <b>templateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>templateName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Elastic Beanstalk Configuration
@@ -1097,12 +965,10 @@ template to use in deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-tier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L189" >}}">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L189">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Elastic Beanstalk Environment tier. Valid values are `Worker`
@@ -1111,12 +977,10 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-triggers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L193" >}}">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L193">property <b>triggers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>triggers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Autoscaling triggers in use by this environment.
@@ -1124,12 +988,10 @@ Autoscaling triggers in use by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L76" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L76">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1138,12 +1000,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L198" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L198">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApplicationVersion'>ApplicationVersion</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Elastic Beanstalk Application Version
@@ -1152,12 +1012,10 @@ to use in deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Environment-waitForReadyTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L205" >}}">property <b>waitForReadyTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L205">property <b>waitForReadyTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>waitForReadyTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The maximum
@@ -1169,13 +1027,11 @@ out.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getApplication">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L28" >}}">function <b>getApplication</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L28">function <b>getApplication</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getApplication(args: <a href='#GetApplicationArgs'>GetApplicationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetApplicationResult'>GetApplicationResult</a>&gt; &amp; <a href='#GetApplicationResult'>GetApplicationResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1200,13 +1056,11 @@ export const description = example.description;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getHostedZone">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getHostedZone.ts#L23" >}}">function <b>getHostedZone</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getHostedZone.ts#L23">function <b>getHostedZone</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getHostedZone(args?: <a href='#GetHostedZoneArgs'>GetHostedZoneArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetHostedZoneResult'>GetHostedZoneResult</a>&gt; &amp; <a href='#GetHostedZoneResult'>GetHostedZoneResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1226,13 +1080,11 @@ const current = aws.elasticbeanstalk.getHostedZone({});
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSolutionStack">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L26" >}}">function <b>getSolutionStack</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L26">function <b>getSolutionStack</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getSolutionStack(args: <a href='#GetSolutionStackArgs'>GetSolutionStackArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSolutionStackResult'>GetSolutionStackResult</a>&gt; &amp; <a href='#GetSolutionStackResult'>GetSolutionStackResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1255,7 +1107,7 @@ const multiDocker = aws.elasticbeanstalk.getSolutionStack({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ApplicationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L142" >}}">interface <b>ApplicationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L142">interface <b>ApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1264,22 +1116,16 @@ The set of arguments for constructing a Application resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationArgs-appversionLifecycle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L143" >}}">property <b>appversionLifecycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L143">property <b>appversionLifecycle</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>appversionLifecycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppversionLifecycle'>inputs.elasticbeanstalk.ApplicationAppversionLifecycle</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L147" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L147">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the application
@@ -1287,12 +1133,10 @@ Short description of the application
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L151" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L151">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the application, must be unique within your account
@@ -1300,12 +1144,10 @@ The name of the application, must be unique within your account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L155" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L155">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Key-value mapping of tags for the Elastic Beanstalk Application.
@@ -1314,7 +1156,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L119" >}}">interface <b>ApplicationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L119">interface <b>ApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1323,22 +1165,16 @@ Input properties used for looking up and filtering Application resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationState-appversionLifecycle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L120" >}}">property <b>appversionLifecycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L120">property <b>appversionLifecycle</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>appversionLifecycle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ApplicationAppversionLifecycle'>inputs.elasticbeanstalk.ApplicationAppversionLifecycle</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L124" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L124">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN assigned by AWS for this Elastic Beanstalk Application.
@@ -1346,12 +1182,10 @@ The ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L128" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L128">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the application
@@ -1359,12 +1193,10 @@ Short description of the application
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L132" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L132">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the application, must be unique within your account
@@ -1372,12 +1204,10 @@ The name of the application, must be unique within your account
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/application.ts#L136" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/application.ts#L136">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Key-value mapping of tags for the Elastic Beanstalk Application.
@@ -1386,7 +1216,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationVersionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L209" >}}">interface <b>ApplicationVersionArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L209">interface <b>ApplicationVersionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1395,12 +1225,10 @@ The set of arguments for constructing a ApplicationVersion resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationVersionArgs-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L213" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L213">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>application: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Application'>Application</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the Beanstalk Application the version is associated with.
@@ -1408,12 +1236,10 @@ Name of the Beanstalk Application the version is associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionArgs-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L217" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L217">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Bucket&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 S3 bucket that contains the Application Version source bundle.
@@ -1421,12 +1247,10 @@ S3 bucket that contains the Application Version source bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L221" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L221">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Application Version.
@@ -1434,12 +1258,10 @@ Short description of the Application Version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionArgs-forceDelete">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L226" >}}">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L226">property <b>forceDelete</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 On delete, force an Application Version to be deleted when it may be in use
@@ -1448,12 +1270,10 @@ by multiple Elastic Beanstalk Environments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionArgs-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L230" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L230">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 S3 object that is the Application Version source bundle.
@@ -1461,12 +1281,10 @@ S3 object that is the Application Version source bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L234" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L234">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the this Application Version.
@@ -1474,12 +1292,10 @@ A unique name for the this Application Version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L238" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L238">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Key-value mapping of tags for the Elastic Beanstalk Application Version.
@@ -1488,7 +1304,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application Version.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationVersionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L170" >}}">interface <b>ApplicationVersionState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L170">interface <b>ApplicationVersionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1497,12 +1313,10 @@ Input properties used for looking up and filtering ApplicationVersion resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationVersionState-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L174" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L174">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>application?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Application'>Application</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the Beanstalk Application the version is associated with.
@@ -1510,12 +1324,10 @@ Name of the Beanstalk Application the version is associated with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L178" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L178">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ARN assigned by AWS for this Elastic Beanstalk Application.
@@ -1523,12 +1335,10 @@ The ARN assigned by AWS for this Elastic Beanstalk Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionState-bucket">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L182" >}}">property <b>bucket</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L182">property <b>bucket</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | Bucket&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 S3 bucket that contains the Application Version source bundle.
@@ -1536,12 +1346,10 @@ S3 bucket that contains the Application Version source bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L186" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L186">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Application Version.
@@ -1549,12 +1357,10 @@ Short description of the Application Version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionState-forceDelete">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L191" >}}">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L191">property <b>forceDelete</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 On delete, force an Application Version to be deleted when it may be in use
@@ -1563,12 +1369,10 @@ by multiple Elastic Beanstalk Environments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionState-key">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L195" >}}">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L195">property <b>key</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>key?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 S3 object that is the Application Version source bundle.
@@ -1576,12 +1380,10 @@ S3 object that is the Application Version source bundle.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L199" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L199">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the this Application Version.
@@ -1589,12 +1391,10 @@ A unique name for the this Application Version.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationVersionState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/applicationVersion.ts#L203" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/applicationVersion.ts#L203">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Key-value mapping of tags for the Elastic Beanstalk Application Version.
@@ -1603,7 +1403,7 @@ Key-value mapping of tags for the Elastic Beanstalk Application Version.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationTemplateArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L172" >}}">interface <b>ConfigurationTemplateArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L172">interface <b>ConfigurationTemplateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1612,12 +1412,10 @@ The set of arguments for constructing a ConfigurationTemplate resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationTemplateArgs-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L176" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L176">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>application: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 name of the application to associate with this configuration template
@@ -1625,12 +1423,10 @@ name of the application to associate with this configuration template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L180" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L180">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Template
@@ -1638,12 +1434,10 @@ Short description of the Template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateArgs-environmentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L184" >}}">property <b>environmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L184">property <b>environmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>environmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the environment used with this configuration template
@@ -1651,12 +1445,10 @@ The ID of the environment used with this configuration template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L188" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L188">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for this Template.
@@ -1664,12 +1456,10 @@ A unique name for this Template.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateArgs-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L194" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L194">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationTemplateSetting'>inputs.elasticbeanstalk.ConfigurationTemplateSetting</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Option settings to configure the new Environment. These
@@ -1679,12 +1469,10 @@ below in Option Settings
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateArgs-solutionStackName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L199" >}}">property <b>solutionStackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L199">property <b>solutionStackName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>solutionStackName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A solution stack to base your Template
@@ -1694,7 +1482,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationTemplateState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L139" >}}">interface <b>ConfigurationTemplateState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L139">interface <b>ConfigurationTemplateState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1703,12 +1491,10 @@ Input properties used for looking up and filtering ConfigurationTemplate resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationTemplateState-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L143" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L143">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>application?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 name of the application to associate with this configuration template
@@ -1716,12 +1502,10 @@ name of the application to associate with this configuration template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L147" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L147">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Template
@@ -1729,12 +1513,10 @@ Short description of the Template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateState-environmentId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L151" >}}">property <b>environmentId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L151">property <b>environmentId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>environmentId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the environment used with this configuration template
@@ -1742,12 +1524,10 @@ The ID of the environment used with this configuration template
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L155" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L155">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for this Template.
@@ -1755,12 +1535,10 @@ A unique name for this Template.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateState-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L161" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L161">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ConfigurationTemplateSetting'>inputs.elasticbeanstalk.ConfigurationTemplateSetting</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Option settings to configure the new Environment. These
@@ -1770,12 +1548,10 @@ below in Option Settings
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationTemplateState-solutionStackName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/configurationTemplate.ts#L166" >}}">property <b>solutionStackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/configurationTemplate.ts#L166">property <b>solutionStackName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>solutionStackName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A solution stack to base your Template
@@ -1785,7 +1561,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EnvironmentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L392" >}}">interface <b>EnvironmentArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L392">interface <b>EnvironmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1794,12 +1570,10 @@ The set of arguments for constructing a Environment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EnvironmentArgs-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L397" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L397">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>application: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Application'>Application</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the application that contains the version
@@ -1808,12 +1582,10 @@ to be deployed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-cnamePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L402" >}}">property <b>cnamePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L402">property <b>cnamePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cnamePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Prefix to use for the fully qualified DNS name of
@@ -1822,12 +1594,10 @@ the Environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L406" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L406">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Environment
@@ -1835,12 +1605,10 @@ Short description of the Environment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L411" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L411">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for this Environment. This name is used
@@ -1849,12 +1617,10 @@ in the application URL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-platformArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L416" >}}">property <b>platformArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L416">property <b>platformArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>platformArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The [ARN][2] of the Elastic Beanstalk [Platform][3]
@@ -1863,12 +1629,10 @@ to use in deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-pollInterval">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L423" >}}">property <b>pollInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L423">property <b>pollInterval</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pollInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The time between polling the AWS API to
@@ -1879,12 +1643,10 @@ use the default behavior, which is an exponential backoff
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L429" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L429">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentSetting'>inputs.elasticbeanstalk.EnvironmentSetting</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Option settings to configure the new Environment. These
@@ -1894,12 +1656,10 @@ below in Option Settings
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-solutionStackName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L434" >}}">property <b>solutionStackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L434">property <b>solutionStackName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>solutionStackName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A solution stack to base your environment
@@ -1908,12 +1668,10 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L438" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L438">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A set of tags to apply to the Environment.
@@ -1921,12 +1679,10 @@ A set of tags to apply to the Environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-templateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L443" >}}">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L443">property <b>templateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>templateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Elastic Beanstalk Configuration
@@ -1935,12 +1691,10 @@ template to use in deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-tier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L448" >}}">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L448">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Elastic Beanstalk Environment tier. Valid values are `Worker`
@@ -1949,12 +1703,10 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L453" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L453">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationVersion'>ApplicationVersion</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Elastic Beanstalk Application Version
@@ -1963,12 +1715,10 @@ to use in deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentArgs-waitForReadyTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L460" >}}">property <b>waitForReadyTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L460">property <b>waitForReadyTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>waitForReadyTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The maximum
@@ -1980,7 +1730,7 @@ out.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EnvironmentState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L283" >}}">interface <b>EnvironmentState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L283">interface <b>EnvironmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1989,12 +1739,10 @@ Input properties used for looking up and filtering Environment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EnvironmentState-allSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L289" >}}">property <b>allSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L289">property <b>allSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentAllSetting'>inputs.elasticbeanstalk.EnvironmentAllSetting</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 List of all option settings configured in the Environment. These
@@ -2004,12 +1752,10 @@ the configuration.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-application">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L294" >}}">property <b>application</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L294">property <b>application</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>application?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Application'>Application</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Name of the application that contains the version
@@ -2018,22 +1764,16 @@ to be deployed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L295" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L295">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-autoscalingGroups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L299" >}}">property <b>autoscalingGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L299">property <b>autoscalingGroups</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoscalingGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The autoscaling groups used by this environment.
@@ -2041,12 +1781,10 @@ The autoscaling groups used by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-cname">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L303" >}}">property <b>cname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L303">property <b>cname</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Fully qualified DNS name for the Environment.
@@ -2054,12 +1792,10 @@ Fully qualified DNS name for the Environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-cnamePrefix">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L308" >}}">property <b>cnamePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L308">property <b>cnamePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cnamePrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Prefix to use for the fully qualified DNS name of
@@ -2068,12 +1804,10 @@ the Environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L312" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L312">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the Environment
@@ -2081,12 +1815,10 @@ Short description of the Environment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-instances">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L316" >}}">property <b>instances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L316">property <b>instances</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Instances used by this environment.
@@ -2094,12 +1826,10 @@ Instances used by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-launchConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L320" >}}">property <b>launchConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L320">property <b>launchConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>launchConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Launch configurations in use by this environment.
@@ -2107,12 +1837,10 @@ Launch configurations in use by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-loadBalancers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L324" >}}">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L324">property <b>loadBalancers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Elastic load balancers in use by this environment.
@@ -2120,12 +1848,10 @@ Elastic load balancers in use by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L329" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L329">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for this Environment. This name is used
@@ -2134,12 +1860,10 @@ in the application URL
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-platformArn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L334" >}}">property <b>platformArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L334">property <b>platformArn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>platformArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The [ARN][2] of the Elastic Beanstalk [Platform][3]
@@ -2148,12 +1872,10 @@ to use in deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-pollInterval">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L341" >}}">property <b>pollInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L341">property <b>pollInterval</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>pollInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The time between polling the AWS API to
@@ -2164,12 +1886,10 @@ use the default behavior, which is an exponential backoff
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-queues">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L345" >}}">property <b>queues</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L345">property <b>queues</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>queues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 SQS queues in use by this environment.
@@ -2177,12 +1897,10 @@ SQS queues in use by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-settings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L351" >}}">property <b>settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L351">property <b>settings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentSetting'>inputs.elasticbeanstalk.EnvironmentSetting</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Option settings to configure the new Environment. These
@@ -2192,12 +1910,10 @@ below in Option Settings
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-solutionStackName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L356" >}}">property <b>solutionStackName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L356">property <b>solutionStackName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>solutionStackName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A solution stack to base your environment
@@ -2206,12 +1922,10 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L360" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L360">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A set of tags to apply to the Environment.
@@ -2219,12 +1933,10 @@ A set of tags to apply to the Environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-templateName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L365" >}}">property <b>templateName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L365">property <b>templateName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>templateName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Elastic Beanstalk Configuration
@@ -2233,12 +1945,10 @@ template to use in deployment
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-tier">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L370" >}}">property <b>tier</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L370">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Elastic Beanstalk Environment tier. Valid values are `Worker`
@@ -2247,12 +1957,10 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-triggers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L374" >}}">property <b>triggers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L374">property <b>triggers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>triggers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Autoscaling triggers in use by this environment.
@@ -2260,12 +1968,10 @@ Autoscaling triggers in use by this environment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L379" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L379">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationVersion'>ApplicationVersion</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Elastic Beanstalk Application Version
@@ -2274,12 +1980,10 @@ to use in deployment.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EnvironmentState-waitForReadyTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/environment.ts#L386" >}}">property <b>waitForReadyTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/environment.ts#L386">property <b>waitForReadyTimeout</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>waitForReadyTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The maximum
@@ -2291,7 +1995,7 @@ out.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L46" >}}">interface <b>GetApplicationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L46">interface <b>GetApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2300,12 +2004,10 @@ A collection of arguments for invoking getApplication.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L50" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L50">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the application
@@ -2314,7 +2016,7 @@ The name of the application
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L56" >}}">interface <b>GetApplicationResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L56">interface <b>GetApplicationResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2323,22 +2025,16 @@ A collection of values returned by getApplication.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationResult-appversionLifecycle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L57" >}}">property <b>appversionLifecycle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L57">property <b>appversionLifecycle</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>appversionLifecycle: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetApplicationAppversionLifecycle'>outputs.elasticbeanstalk.GetApplicationAppversionLifecycle</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-arn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L61" >}}">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L61">property <b>arn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Amazon Resource Name (ARN) of the application.
@@ -2346,12 +2042,10 @@ The Amazon Resource Name (ARN) of the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L65" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L65">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Short description of the application
@@ -2359,12 +2053,10 @@ Short description of the application
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L70" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L70">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2372,18 +2064,14 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getApplication.ts#L66" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getApplication.ts#L66">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetHostedZoneArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getHostedZone.ts#L42" >}}">interface <b>GetHostedZoneArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getHostedZone.ts#L42">interface <b>GetHostedZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2392,12 +2080,10 @@ A collection of arguments for invoking getHostedZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetHostedZoneArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getHostedZone.ts#L46" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getHostedZone.ts#L46">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region you'd like the zone for. By default, fetches the current region.
@@ -2406,7 +2092,7 @@ The region you'd like the zone for. By default, fetches the current region.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetHostedZoneResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getHostedZone.ts#L52" >}}">interface <b>GetHostedZoneResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getHostedZone.ts#L52">interface <b>GetHostedZoneResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2415,12 +2101,10 @@ A collection of values returned by getHostedZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetHostedZoneResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getHostedZone.ts#L60" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getHostedZone.ts#L60">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2428,12 +2112,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetHostedZoneResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getHostedZone.ts#L56" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getHostedZone.ts#L56">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region of the hosted zone.
@@ -2442,7 +2124,7 @@ The region of the hosted zone.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSolutionStackArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L45" >}}">interface <b>GetSolutionStackArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L45">interface <b>GetSolutionStackArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2451,12 +2133,10 @@ A collection of arguments for invoking getSolutionStack.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSolutionStackArgs-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L50" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L50">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 If more than one result is returned, use the most
@@ -2465,12 +2145,10 @@ recent solution stack.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSolutionStackArgs-nameRegex">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L56" >}}">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L56">property <b>nameRegex</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameRegex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A regex string to apply to the solution stack list returned
@@ -2481,7 +2159,7 @@ AWS documentation for reference solution stack names.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSolutionStackResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L62" >}}">interface <b>GetSolutionStackResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L62">interface <b>GetSolutionStackResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2490,12 +2168,10 @@ A collection of values returned by getSolutionStack.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSolutionStackResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L72" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L72">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2503,22 +2179,16 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSolutionStackResult-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L63" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L63">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSolutionStackResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L67" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L67">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the solution stack.
@@ -2526,13 +2196,9 @@ The name of the solution stack.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSolutionStackResult-nameRegex">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="aws" path="elasticbeanstalk/getSolutionStack.ts#L68" >}}">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b4f0718b9e050ce286d7b2eaf56bb9d373da84c7/sdk/nodejs/elasticbeanstalk/getSolutionStack.ts#L68">property <b>nameRegex</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameRegex: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

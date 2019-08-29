@@ -27,19 +27,17 @@ title: Module ddosprotection
 <li><a href="#PlanState">interface PlanState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts" >}}">ddosprotection/plan.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts">ddosprotection/plan.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Plan">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L33" >}}">class <b>Plan</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L33">class <b>Plan</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages an Azure DDoS Protection Plan.
@@ -69,13 +67,11 @@ const testPlan = new azure.ddosprotection.Plan("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Plan-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L79" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L79"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Plan(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PlanArgs'>PlanArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -88,13 +84,11 @@ Create a Plan resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L42">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PlanState'>PlanState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Plan'>Plan</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -104,25 +98,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L33" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L33">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L53">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -132,12 +122,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L33" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L33">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -146,12 +134,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L63" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L63">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -159,12 +145,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L67" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L67">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the DDoS Protection Plan. Changing this forces a new resource to be created.
@@ -172,12 +156,10 @@ Specifies the name of the DDoS Protection Plan. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L71" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L71">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
@@ -185,12 +167,10 @@ The name of the resource group in which to create the resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L75" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L75">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -198,12 +178,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L33" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L33">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -212,12 +190,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Plan-virtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L79" >}}">property <b>virtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L79">property <b>virtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>virtualNetworkIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Resource ID list of the Virtual Networks associated with DDoS Protection Plan.
@@ -226,7 +202,7 @@ The Resource ID list of the Virtual Networks associated with DDoS Protection Pla
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PlanArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L149" >}}">interface <b>PlanArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L149">interface <b>PlanArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -235,12 +211,10 @@ The set of arguments for constructing a Plan resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PlanArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L153" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L153">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -248,12 +222,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L157" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L157">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the DDoS Protection Plan. Changing this forces a new resource to be created.
@@ -261,12 +233,10 @@ Specifies the name of the DDoS Protection Plan. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L161" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L161">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
@@ -274,12 +244,10 @@ The name of the resource group in which to create the resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L165" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L165">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -288,7 +256,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PlanState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L123" >}}">interface <b>PlanState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L123">interface <b>PlanState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -297,12 +265,10 @@ Input properties used for looking up and filtering Plan resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PlanState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L127" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L127">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -310,12 +276,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L131" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L131">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the DDoS Protection Plan. Changing this forces a new resource to be created.
@@ -323,12 +287,10 @@ Specifies the name of the DDoS Protection Plan. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L135" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L135">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the resource. Changing this forces a new resource to be created.
@@ -336,12 +298,10 @@ The name of the resource group in which to create the resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L139" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L139">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -349,12 +309,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PlanState-virtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="ddosprotection/plan.ts#L143" >}}">property <b>virtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/ddosprotection/plan.ts#L143">property <b>virtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>virtualNetworkIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Resource ID list of the Virtual Networks associated with DDoS Protection Plan.

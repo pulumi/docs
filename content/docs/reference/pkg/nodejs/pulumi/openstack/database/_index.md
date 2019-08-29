@@ -36,19 +36,17 @@ title: Module database
 <li><a href="#UserState">interface UserState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="openstack" path="database/configuration.ts" >}}">database/configuration.ts</a> <a href="{{< pkg-url pkg="openstack" path="database/database.ts" >}}">database/database.ts</a> <a href="{{< pkg-url pkg="openstack" path="database/instance.ts" >}}">database/instance.ts</a> <a href="{{< pkg-url pkg="openstack" path="database/user.ts" >}}">database/user.ts</a> 
+<a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts">database/configuration.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts">database/database.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts">database/instance.ts</a> <a href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts">database/user.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Configuration">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L33" >}}">class <b>Configuration</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L35">class <b>Configuration</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a V1 DB configuration resource within OpenStack.
@@ -78,13 +76,11 @@ const test = new openstack.database.Configuration("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Configuration-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L81" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L83"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Configuration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ConfigurationArgs'>ConfigurationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -97,13 +93,11 @@ Create a Configuration resource with the given unique name, arguments, and optio
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L44">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConfigurationState'>ConfigurationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Configuration'>Configuration</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -113,25 +107,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L33" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L35">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L55">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -141,15 +131,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-configurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L63" >}}">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L65">property <b>configurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>configurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>configurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ConfigurationConfiguration'>outputs.database.ConfigurationConfiguration</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
@@ -157,15 +142,10 @@ An array of configuration parameter name and value. Can be specified multiple ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-datastore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L68" >}}">property <b>datastore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L70">property <b>datastore</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#ConfigurationDatastore'>outputs.database.ConfigurationDatastore</a>&gt;;</pre>
 {{% md %}}
 
 An array of database engine type and version. The datastore
@@ -174,12 +154,10 @@ object structure is documented below. Changing this creates resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L72" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L74">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Description of the resource.
@@ -187,12 +165,10 @@ Description of the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L33" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L35">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -201,12 +177,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L76" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L78">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -214,12 +188,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L81" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L83">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the db instance. Changing this
@@ -228,12 +200,10 @@ creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Configuration-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L33" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L35">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -243,12 +213,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Database">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L25" >}}">class <b>Database</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L27">class <b>Database</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a V1 DB database resource within OpenStack.
@@ -270,13 +238,11 @@ const mydb = new openstack.database.Database("mydb", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Database-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L63" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L65"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Database(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DatabaseArgs'>DatabaseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -289,13 +255,11 @@ Create a Database resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L34" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L36">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatabaseState'>DatabaseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Database'>Database</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -305,25 +269,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L25" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L27">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L45" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L47">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -333,12 +293,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L25" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L27">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -347,12 +305,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L55" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L57">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID for the database instance.
@@ -360,12 +316,10 @@ The ID for the database instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L59" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L61">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -373,12 +327,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L63" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L65">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Openstack region resource is created in.
@@ -386,12 +338,10 @@ Openstack region resource is created in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L25" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L27">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -401,12 +351,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Instance">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L34" >}}">class <b>Instance</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L36">class <b>Instance</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a V1 DB instance resource within OpenStack.
@@ -437,13 +385,11 @@ const test = new openstack.database.Instance("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L104" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L106"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Instance(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#InstanceArgs'>InstanceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -456,13 +402,11 @@ Create a Instance resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L45">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#InstanceState'>InstanceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Instance'>Instance</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -472,25 +416,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L34" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L36">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L56">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -500,12 +440,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-configurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L65" >}}">property <b>configurationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L67">property <b>configurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>configurationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Configuration ID to be attached to the instance. Database instance
@@ -514,16 +452,10 @@ will be rebooted when configuration is detached.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-databases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L70" >}}">property <b>databases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L72">property <b>databases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>databases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    charset: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    collate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>databases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceDatabase'>outputs.database.InstanceDatabase</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 An array of database name, charset and collate. The database
@@ -532,15 +464,10 @@ object structure is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-datastore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L75" >}}">property <b>datastore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L77">property <b>datastore</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceDatastore'>outputs.database.InstanceDatastore</a>&gt;;</pre>
 {{% md %}}
 
 An array of database engine type and version. The datastore
@@ -549,12 +476,10 @@ object structure is documented below. Changing this creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-flavorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L80" >}}">property <b>flavorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L82">property <b>flavorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>flavorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The flavor ID of the desired flavor for the instance.
@@ -563,12 +488,10 @@ Changing this creates new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L34" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L36">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -577,12 +500,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L84" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L86">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -590,17 +511,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-networks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L90" >}}">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L92">property <b>networks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    fixedIpV4: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    fixedIpV6: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    uuid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>networks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceNetwork'>outputs.database.InstanceNetwork</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 An array of one or more networks to attach to the
@@ -610,12 +524,10 @@ creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L95" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L97">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the db instance. Changing this
@@ -624,12 +536,10 @@ creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L99" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L101">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the volume size in GB. Changing this creates new instance.
@@ -637,12 +547,10 @@ Specifies the volume size in GB. Changing this creates new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L34" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L36">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -651,17 +559,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Instance-users">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L104" >}}">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L106">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    databases: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>users: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#InstanceUser'>outputs.database.InstanceUser</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 An array of username, password, host and databases. The user
@@ -671,12 +572,10 @@ object structure is documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="User">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L27" >}}">class <b>User</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L29">class <b>User</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a V1 DB user resource within OpenStack.
@@ -700,13 +599,11 @@ const basic = new openstack.database.User("basic", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L71" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L73"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> User(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#UserArgs'>UserArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -719,13 +616,11 @@ Create a User resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L36" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L38">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#UserState'>UserState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#User'>User</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -735,25 +630,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L27" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L29">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L47" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L49">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -763,12 +654,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-databases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L57" >}}">property <b>databases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L59">property <b>databases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>databases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of database user should have access to.
@@ -776,22 +665,16 @@ A list of database user should have access to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L58" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L60">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L27" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L29">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -800,22 +683,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L59" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L61">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L63" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L65">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -823,12 +700,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L67" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L69">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 User's password.
@@ -836,12 +711,10 @@ User's password.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L71" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L73">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Openstack region resource is created in.
@@ -849,12 +722,10 @@ Openstack region resource is created in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L27" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L29">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -864,7 +735,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L156" >}}">interface <b>ConfigurationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L158">interface <b>ConfigurationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -873,15 +744,10 @@ The set of arguments for constructing a Configuration resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationArgs-configurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L160" >}}">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L162">property <b>configurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationConfiguration'>inputs.database.ConfigurationConfiguration</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
@@ -889,15 +755,10 @@ An array of configuration parameter name and value. Can be specified multiple ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-datastore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L165" >}}">property <b>datastore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L167">property <b>datastore</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationDatastore'>inputs.database.ConfigurationDatastore</a>&gt;;</pre>
 {{% md %}}
 
 An array of database engine type and version. The datastore
@@ -906,12 +767,10 @@ object structure is documented below. Changing this creates resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L169" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L171">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Description of the resource.
@@ -919,12 +778,10 @@ Description of the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L173" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L175">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -932,12 +789,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L178" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L180">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the db instance. Changing this
@@ -947,7 +802,7 @@ creates a new instance.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigurationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L128" >}}">interface <b>ConfigurationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L130">interface <b>ConfigurationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -956,15 +811,10 @@ Input properties used for looking up and filtering Configuration resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigurationState-configurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L132" >}}">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L134">property <b>configurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>configurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationConfiguration'>inputs.database.ConfigurationConfiguration</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An array of configuration parameter name and value. Can be specified multiple times. The configuration object structure is documented below.
@@ -972,15 +822,10 @@ An array of configuration parameter name and value. Can be specified multiple ti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-datastore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L137" >}}">property <b>datastore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L139">property <b>datastore</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>datastore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>datastore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#ConfigurationDatastore'>inputs.database.ConfigurationDatastore</a>&gt;;</pre>
 {{% md %}}
 
 An array of database engine type and version. The datastore
@@ -989,12 +834,10 @@ object structure is documented below. Changing this creates resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L141" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L143">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Description of the resource.
@@ -1002,12 +845,10 @@ Description of the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L145" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L147">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -1015,12 +856,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigurationState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/configuration.ts#L150" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/configuration.ts#L152">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the db instance. Changing this
@@ -1030,7 +869,7 @@ creates a new instance.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L121" >}}">interface <b>DatabaseArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L123">interface <b>DatabaseArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1039,12 +878,10 @@ The set of arguments for constructing a Database resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseArgs-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L125" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L127">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID for the database instance.
@@ -1052,12 +889,10 @@ The ID for the database instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L129" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L131">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -1065,12 +900,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L133" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L135">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Openstack region resource is created in.
@@ -1079,7 +912,7 @@ Openstack region resource is created in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L103" >}}">interface <b>DatabaseState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L105">interface <b>DatabaseState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1088,12 +921,10 @@ Input properties used for looking up and filtering Database resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseState-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L107" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L109">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID for the database instance.
@@ -1101,12 +932,10 @@ The ID for the database instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L111" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L113">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -1114,12 +943,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/database.ts#L115" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/database.ts#L117">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Openstack region resource is created in.
@@ -1128,7 +955,7 @@ Openstack region resource is created in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L209" >}}">interface <b>InstanceArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L211">interface <b>InstanceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1137,12 +964,10 @@ The set of arguments for constructing a Instance resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceArgs-configurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L214" >}}">property <b>configurationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L216">property <b>configurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>configurationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Configuration ID to be attached to the instance. Database instance
@@ -1151,16 +976,10 @@ will be rebooted when configuration is detached.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-databases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L219" >}}">property <b>databases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L221">property <b>databases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    collate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatabase'>inputs.database.InstanceDatabase</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An array of database name, charset and collate. The database
@@ -1169,15 +988,10 @@ object structure is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-datastore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L224" >}}">property <b>datastore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L226">property <b>datastore</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>datastore: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatastore'>inputs.database.InstanceDatastore</a>&gt;;</pre>
 {{% md %}}
 
 An array of database engine type and version. The datastore
@@ -1186,12 +1000,10 @@ object structure is documented below. Changing this creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-flavorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L229" >}}">property <b>flavorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L231">property <b>flavorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>flavorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The flavor ID of the desired flavor for the instance.
@@ -1200,12 +1012,10 @@ Changing this creates new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L233" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L235">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -1213,17 +1023,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-networks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L239" >}}">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L241">property <b>networks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fixedIpV4: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fixedIpV6: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    uuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceNetwork'>inputs.database.InstanceNetwork</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An array of one or more networks to attach to the
@@ -1233,12 +1036,10 @@ creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L244" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L246">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the db instance. Changing this
@@ -1247,12 +1048,10 @@ creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L248" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L250">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the volume size in GB. Changing this creates new instance.
@@ -1260,17 +1059,10 @@ Specifies the volume size in GB. Changing this creates new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceArgs-users">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L253" >}}">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L255">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    databases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceUser'>inputs.database.InstanceUser</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An array of username, password, host and databases. The user
@@ -1280,7 +1072,7 @@ object structure is documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="InstanceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L159" >}}">interface <b>InstanceState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L161">interface <b>InstanceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1289,12 +1081,10 @@ Input properties used for looking up and filtering Instance resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="InstanceState-configurationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L164" >}}">property <b>configurationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L166">property <b>configurationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>configurationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Configuration ID to be attached to the instance. Database instance
@@ -1303,16 +1093,10 @@ will be rebooted when configuration is detached.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-databases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L169" >}}">property <b>databases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L171">property <b>databases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    collate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatabase'>inputs.database.InstanceDatabase</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An array of database name, charset and collate. The database
@@ -1321,15 +1105,10 @@ object structure is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-datastore">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L174" >}}">property <b>datastore</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L176">property <b>datastore</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>datastore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>datastore?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceDatastore'>inputs.database.InstanceDatastore</a>&gt;;</pre>
 {{% md %}}
 
 An array of database engine type and version. The datastore
@@ -1338,12 +1117,10 @@ object structure is documented below. Changing this creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-flavorId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L179" >}}">property <b>flavorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L181">property <b>flavorId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>flavorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The flavor ID of the desired flavor for the instance.
@@ -1352,12 +1129,10 @@ Changing this creates new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L183" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L185">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -1365,17 +1140,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-networks">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L189" >}}">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L191">property <b>networks</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    fixedIpV4: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    fixedIpV6: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    uuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceNetwork'>inputs.database.InstanceNetwork</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An array of one or more networks to attach to the
@@ -1385,12 +1153,10 @@ creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L194" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L196">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The region in which to create the db instance. Changing this
@@ -1399,12 +1165,10 @@ creates a new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L198" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L200">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the volume size in GB. Changing this creates new instance.
@@ -1412,17 +1176,10 @@ Specifies the volume size in GB. Changing this creates new instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="InstanceState-users">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/instance.ts#L203" >}}">property <b>users</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/instance.ts#L205">property <b>users</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
-<pre class="highlight"><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    databases: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{< /md-disable >}}
+<pre class="highlight"><span class='kd'></span>users?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#InstanceUser'>inputs.database.InstanceUser</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 An array of username, password, host and databases. The user
@@ -1432,7 +1189,7 @@ object structure is documented below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L144" >}}">interface <b>UserArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L146">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1441,12 +1198,10 @@ The set of arguments for constructing a User resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserArgs-databases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L148" >}}">property <b>databases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L150">property <b>databases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of database user should have access to.
@@ -1454,32 +1209,22 @@ A list of database user should have access to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L149" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L151">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L150" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L152">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L154" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -1487,12 +1232,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L158" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L160">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 User's password.
@@ -1500,12 +1243,10 @@ User's password.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L162" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L164">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Openstack region resource is created in.
@@ -1514,7 +1255,7 @@ Openstack region resource is created in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L120" >}}">interface <b>UserState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L122">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1523,12 +1264,10 @@ Input properties used for looking up and filtering User resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserState-databases">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L124" >}}">property <b>databases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L126">property <b>databases</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>databases?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of database user should have access to.
@@ -1536,32 +1275,22 @@ A list of database user should have access to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L125" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L127">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-instanceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L126" >}}">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L128">property <b>instanceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>instanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L130" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L132">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A unique name for the resource.
@@ -1569,12 +1298,10 @@ A unique name for the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L134" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L136">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 User's password.
@@ -1582,12 +1309,10 @@ User's password.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="openstack" path="database/user.ts#L138" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/aba8962d6ec72352225edd955ac59b713638b6be/sdk/nodejs/database/user.ts#L140">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Openstack region resource is created in.

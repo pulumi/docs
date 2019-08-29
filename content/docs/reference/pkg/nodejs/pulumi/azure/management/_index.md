@@ -33,19 +33,17 @@ title: Module management
 <li><a href="#LockState">interface LockState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="management/getGroup.ts" >}}">management/getGroup.ts</a> <a href="{{< pkg-url pkg="azure" path="management/group.ts" >}}">management/group.ts</a> <a href="{{< pkg-url pkg="azure" path="management/lock.ts" >}}">management/lock.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts">management/getGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts">management/group.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts">management/lock.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L30" >}}">class <b>Group</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L30">class <b>Group</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Management Group.
@@ -72,13 +70,11 @@ const exampleChild = new azure.management.Group("exampleChild", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L72" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L72"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Group(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#GroupArgs'>GroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -91,13 +87,11 @@ Create a Group resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#GroupState'>GroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Group'>Group</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -107,25 +101,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L30" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L30">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L50">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -135,12 +125,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L60" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L60">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly name for this Management Group. If not specified, this'll be the same as the `groupId`.
@@ -148,12 +136,10 @@ A friendly name for this Management Group. If not specified, this'll be the same
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L64" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L64">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
@@ -161,12 +147,10 @@ The UUID for this Management Group, which needs to be unique across your tenant 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L30" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L30">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -175,12 +159,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-parentManagementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L68" >}}">property <b>parentManagementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L68">property <b>parentManagementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parentManagementGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Parent Management Group. Changing this forces a new resource to be created.
@@ -188,12 +170,10 @@ The ID of the Parent Management Group. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-subscriptionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L72" >}}">property <b>subscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L72">property <b>subscriptionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subscriptionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Subscription GUIDs which should be assigned to the Management Group.
@@ -201,12 +181,10 @@ A list of Subscription GUIDs which should be assigned to the Management Group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L30" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L30">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -216,12 +194,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Lock">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L70" >}}">class <b>Lock</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L70">class <b>Lock</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a Management Lock which is scoped to a Subscription, Resource Group or Resource.
@@ -288,13 +264,11 @@ const publicIp = new azure.management.Lock("public-ip", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Lock-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L112" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L112"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Lock(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LockArgs'>LockArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -307,13 +281,11 @@ Create a Lock resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L79" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L79">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#LockState'>LockState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Lock'>Lock</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -323,25 +295,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L70" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L70">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L90" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L90">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -351,12 +319,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L70" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L70">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -365,12 +331,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-lockLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L100" >}}">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L100">property <b>lockLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lockLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Level to be used for this Lock. Possible values are `CanNotDelete` and `ReadOnly`. Changing this forces a new resource to be created.
@@ -378,12 +342,10 @@ Specifies the Level to be used for this Lock. Possible values are `CanNotDelete`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L104" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L104">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Management Lock. Changing this forces a new resource to be created.
@@ -391,12 +353,10 @@ Specifies the name of the Management Lock. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-notes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L108" >}}">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L108">property <b>notes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies some notes about the lock. Maximum of 512 characters. Changing this forces a new resource to be created.
@@ -404,12 +364,10 @@ Specifies some notes about the lock. Maximum of 512 characters. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L112" >}}">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L112">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the scope at which the Management Lock should be created. Changing this forces a new resource to be created.
@@ -417,12 +375,10 @@ Specifies the scope at which the Management Lock should be created. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Lock-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L70" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L70">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -432,13 +388,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L25" >}}">function <b>getGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L25">function <b>getGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getGroup(args: <a href='#GetGroupArgs'>GetGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetGroupResult'>GetGroupResult</a>&gt; &amp; <a href='#GetGroupResult'>GetGroupResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -462,7 +416,7 @@ export const displayName = test.displayName;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="GetGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L43" >}}">interface <b>GetGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L43">interface <b>GetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -471,12 +425,10 @@ A collection of arguments for invoking getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupArgs-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L47" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L47">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the UUID of this Management Group.
@@ -485,7 +437,7 @@ Specifies the UUID of this Management Group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L53" >}}">interface <b>GetGroupResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L53">interface <b>GetGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -494,12 +446,10 @@ A collection of values returned by getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupResult-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L57" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L57">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly name for the Management Group.
@@ -507,22 +457,16 @@ A friendly name for the Management Group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L58" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L58">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L70" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L70">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -530,12 +474,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-parentManagementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L62" >}}">property <b>parentManagementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L62">property <b>parentManagementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentManagementGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of any Parent Management Group.
@@ -543,12 +485,10 @@ The ID of any Parent Management Group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-subscriptionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/getGroup.ts#L66" >}}">property <b>subscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/getGroup.ts#L66">property <b>subscriptionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Subscription ID's which are assigned to the Management Group.
@@ -557,7 +497,7 @@ A list of Subscription ID's which are assigned to the Management Group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L135" >}}">interface <b>GroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L135">interface <b>GroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -566,12 +506,10 @@ The set of arguments for constructing a Group resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L139" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L139">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly name for this Management Group. If not specified, this'll be the same as the `groupId`.
@@ -579,12 +517,10 @@ A friendly name for this Management Group. If not specified, this'll be the same
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L143" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L143">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
@@ -592,12 +528,10 @@ The UUID for this Management Group, which needs to be unique across your tenant 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-parentManagementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L147" >}}">property <b>parentManagementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L147">property <b>parentManagementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentManagementGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Parent Management Group. Changing this forces a new resource to be created.
@@ -605,12 +539,10 @@ The ID of the Parent Management Group. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-subscriptionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L151" >}}">property <b>subscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L151">property <b>subscriptionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Subscription GUIDs which should be assigned to the Management Group.
@@ -619,7 +551,7 @@ A list of Subscription GUIDs which should be assigned to the Management Group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L113" >}}">interface <b>GroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L113">interface <b>GroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -628,12 +560,10 @@ Input properties used for looking up and filtering Group resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L117" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L117">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A friendly name for this Management Group. If not specified, this'll be the same as the `groupId`.
@@ -641,12 +571,10 @@ A friendly name for this Management Group. If not specified, this'll be the same
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L121" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L121">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The UUID for this Management Group, which needs to be unique across your tenant - which will be generated if not provided. Changing this forces a new resource to be created.
@@ -654,12 +582,10 @@ The UUID for this Management Group, which needs to be unique across your tenant 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-parentManagementGroupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L125" >}}">property <b>parentManagementGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L125">property <b>parentManagementGroupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parentManagementGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Parent Management Group. Changing this forces a new resource to be created.
@@ -667,12 +593,10 @@ The ID of the Parent Management Group. Changing this forces a new resource to be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-subscriptionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/group.ts#L129" >}}">property <b>subscriptionIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/group.ts#L129">property <b>subscriptionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A list of Subscription GUIDs which should be assigned to the Management Group.
@@ -681,7 +605,7 @@ A list of Subscription GUIDs which should be assigned to the Management Group.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LockArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L181" >}}">interface <b>LockArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L181">interface <b>LockArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -690,12 +614,10 @@ The set of arguments for constructing a Lock resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LockArgs-lockLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L185" >}}">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L185">property <b>lockLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lockLevel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Level to be used for this Lock. Possible values are `CanNotDelete` and `ReadOnly`. Changing this forces a new resource to be created.
@@ -703,12 +625,10 @@ Specifies the Level to be used for this Lock. Possible values are `CanNotDelete`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LockArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L189" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L189">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Management Lock. Changing this forces a new resource to be created.
@@ -716,12 +636,10 @@ Specifies the name of the Management Lock. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LockArgs-notes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L193" >}}">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L193">property <b>notes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies some notes about the lock. Maximum of 512 characters. Changing this forces a new resource to be created.
@@ -729,12 +647,10 @@ Specifies some notes about the lock. Maximum of 512 characters. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LockArgs-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L197" >}}">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L197">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the scope at which the Management Lock should be created. Changing this forces a new resource to be created.
@@ -743,7 +659,7 @@ Specifies the scope at which the Management Lock should be created. Changing thi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LockState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L159" >}}">interface <b>LockState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L159">interface <b>LockState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -752,12 +668,10 @@ Input properties used for looking up and filtering Lock resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LockState-lockLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L163" >}}">property <b>lockLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L163">property <b>lockLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lockLevel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Level to be used for this Lock. Possible values are `CanNotDelete` and `ReadOnly`. Changing this forces a new resource to be created.
@@ -765,12 +679,10 @@ Specifies the Level to be used for this Lock. Possible values are `CanNotDelete`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LockState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L167" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L167">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Management Lock. Changing this forces a new resource to be created.
@@ -778,12 +690,10 @@ Specifies the name of the Management Lock. Changing this forces a new resource t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LockState-notes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L171" >}}">property <b>notes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L171">property <b>notes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies some notes about the lock. Maximum of 512 characters. Changing this forces a new resource to be created.
@@ -791,12 +701,10 @@ Specifies some notes about the lock. Maximum of 512 characters. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LockState-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="management/lock.ts#L175" >}}">property <b>scope</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/management/lock.ts#L175">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the scope at which the Management Lock should be created. Changing this forces a new resource to be created.

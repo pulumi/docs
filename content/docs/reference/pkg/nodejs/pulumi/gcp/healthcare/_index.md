@@ -72,19 +72,17 @@ title: Module healthcare
 <li><a href="#Hl7StoreState">interface Hl7StoreState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts" >}}">healthcare/dataset.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts" >}}">healthcare/datasetIamBinding.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts" >}}">healthcare/datasetIamMember.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts" >}}">healthcare/datasetIamPolicy.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts" >}}">healthcare/dicomStore.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts" >}}">healthcare/dicomStoreIamBinding.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts" >}}">healthcare/dicomStoreIamMember.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts" >}}">healthcare/dicomStoreIamPolicy.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts" >}}">healthcare/fhirStore.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts" >}}">healthcare/fhirStoreIamBinding.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts" >}}">healthcare/fhirStoreIamMember.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts" >}}">healthcare/fhirStoreIamPolicy.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts" >}}">healthcare/hl7Store.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts" >}}">healthcare/hl7StoreIamBinding.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts" >}}">healthcare/hl7StoreIamMember.ts</a> <a href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts" >}}">healthcare/hl7StoreIamPolicy.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts">healthcare/dataset.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts">healthcare/datasetIamBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts">healthcare/datasetIamMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts">healthcare/datasetIamPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts">healthcare/dicomStore.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts">healthcare/dicomStoreIamBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts">healthcare/dicomStoreIamMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts">healthcare/dicomStoreIamPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts">healthcare/fhirStore.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts">healthcare/fhirStoreIamBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts">healthcare/fhirStoreIamMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts">healthcare/fhirStoreIamPolicy.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts">healthcare/hl7Store.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts">healthcare/hl7StoreIamBinding.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts">healthcare/hl7StoreIamMember.ts</a> <a href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts">healthcare/hl7StoreIamPolicy.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Dataset">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L18" >}}">class <b>Dataset</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L18">class <b>Dataset</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A Healthcare `Dataset` is a toplevel logical grouping of `dicomStores`, `fhirStores` and `hl7V2Stores`.
@@ -99,13 +97,11 @@ To get more information about Dataset, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Dataset-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L53" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L53"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Dataset(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DatasetArgs'>DatasetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -118,13 +114,11 @@ Create a Dataset resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L27" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L27">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatasetState'>DatasetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Dataset'>Dataset</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -134,25 +128,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L18" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L18">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L38" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L38">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -162,12 +152,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L18" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L18">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -176,32 +164,22 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L45" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L45">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L46" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L46">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L51" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L51">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -210,32 +188,22 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L52" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L52">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-timeZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L53" >}}">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L53">property <b>timeZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>timeZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Dataset-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L18" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L18">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -245,25 +213,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L10" >}}">class <b>DatasetIamBinding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L10">class <b>DatasetIamBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_binding.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L54"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DatasetIamBinding(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DatasetIamBindingArgs'>DatasetIamBindingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -276,13 +240,11 @@ Create a DatasetIamBinding resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatasetIamBindingState'>DatasetIamBindingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DatasetIamBinding'>DatasetIamBinding</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -292,25 +254,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L10">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -320,12 +278,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L43" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L43">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -336,12 +292,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L47" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L47">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the dataset's IAM policy.
@@ -349,12 +303,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L10">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -363,22 +315,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L48" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L48">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L54" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L54">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -388,12 +334,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBinding-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L10">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -403,25 +347,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L10" >}}">class <b>DatasetIamMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L10">class <b>DatasetIamMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_member.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L54"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DatasetIamMember(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DatasetIamMemberArgs'>DatasetIamMemberArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -434,13 +374,11 @@ Create a DatasetIamMember resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatasetIamMemberState'>DatasetIamMemberState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DatasetIamMember'>DatasetIamMember</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -450,25 +388,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L10">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -478,12 +412,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L43" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L43">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -494,12 +426,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L47" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L47">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the dataset's IAM policy.
@@ -507,12 +437,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L10">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -521,22 +449,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L48" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L48">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L54" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L54">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -546,12 +468,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMember-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L10">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -561,25 +481,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L10" >}}">class <b>DatasetIamPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L10">class <b>DatasetIamPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dataset_iam_policy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L52" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L52"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DatasetIamPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DatasetIamPolicyArgs'>DatasetIamPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -592,13 +508,11 @@ Create a DatasetIamPolicy resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L19">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatasetIamPolicyState'>DatasetIamPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DatasetIamPolicy'>DatasetIamPolicy</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -608,25 +522,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L10" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L10">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L30">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -636,12 +546,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L43" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L43">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -652,12 +560,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L47" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L47">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the dataset's IAM policy.
@@ -665,12 +571,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L10" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L10">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -679,12 +583,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L52" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L52">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -693,12 +595,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L10" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L10">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -708,12 +608,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStore">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L21" >}}">class <b>DicomStore</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L21">class <b>DicomStore</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A DicomStore is a datastore inside a Healthcare dataset that conforms to the DICOM
@@ -729,13 +627,11 @@ To get more information about DicomStore, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStore-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L52" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L52"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DicomStore(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DicomStoreArgs'>DicomStoreArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -748,13 +644,11 @@ Create a DicomStore resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L30" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L30">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DicomStoreState'>DicomStoreState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DicomStore'>DicomStore</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -764,25 +658,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L21" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L21">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L41" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L41">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -792,22 +682,16 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L48" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L48">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L21" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L21">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -816,52 +700,34 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L49" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L49">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L50" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L50">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L51" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L51">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DicomStoreNotificationConfig'>outputs.healthcare.DicomStoreNotificationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L52" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L52">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStore-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L21" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L21">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -871,25 +737,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L12" >}}">class <b>DicomStoreIamBinding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L12">class <b>DicomStoreIamBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_binding.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L56" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DicomStoreIamBinding(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DicomStoreIamBindingArgs'>DicomStoreIamBindingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -902,13 +764,11 @@ Create a DicomStoreIamBinding resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DicomStoreIamBindingState'>DicomStoreIamBindingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DicomStoreIamBinding'>DicomStoreIamBinding</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -918,25 +778,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -946,12 +802,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L45" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L45">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -962,12 +816,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L49" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L49">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the DICOM store's IAM policy.
@@ -975,12 +827,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -989,22 +839,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L50" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L50">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L56" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L56">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1014,12 +858,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBinding-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1029,25 +871,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L12" >}}">class <b>DicomStoreIamMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L12">class <b>DicomStoreIamMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_member.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L56" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DicomStoreIamMember(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DicomStoreIamMemberArgs'>DicomStoreIamMemberArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1060,13 +898,11 @@ Create a DicomStoreIamMember resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DicomStoreIamMemberState'>DicomStoreIamMemberState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DicomStoreIamMember'>DicomStoreIamMember</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1076,25 +912,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1104,12 +936,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L45" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L45">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -1120,12 +950,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L49" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L49">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the DICOM store's IAM policy.
@@ -1133,12 +961,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1147,22 +973,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L50" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L50">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L56" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L56">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1172,12 +992,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMember-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1187,25 +1005,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L12" >}}">class <b>DicomStoreIamPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L12">class <b>DicomStoreIamPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_dicom_store_iam_policy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L54"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DicomStoreIamPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DicomStoreIamPolicyArgs'>DicomStoreIamPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1218,13 +1032,11 @@ Create a DicomStoreIamPolicy resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DicomStoreIamPolicyState'>DicomStoreIamPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DicomStoreIamPolicy'>DicomStoreIamPolicy</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1234,25 +1046,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1262,12 +1070,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L45" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L45">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -1278,12 +1084,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L49" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L49">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the DICOM store's IAM policy.
@@ -1291,12 +1095,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1305,12 +1107,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L54" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L54">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -1319,12 +1119,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1334,12 +1132,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStore">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L21" >}}">class <b>FhirStore</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L21">class <b>FhirStore</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A FhirStore is a datastore inside a Healthcare dataset that conforms to the FHIR (https://www.hl7.org/fhir/STU3/)
@@ -1355,13 +1151,11 @@ To get more information about FhirStore, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStore-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L56" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FhirStore(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FhirStoreArgs'>FhirStoreArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1374,13 +1168,11 @@ Create a FhirStore resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L30" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L30">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FhirStoreState'>FhirStoreState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FhirStore'>FhirStore</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1390,25 +1182,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L21" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L21">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L41" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L41">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1418,62 +1206,40 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L48" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L48">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-disableReferentialIntegrity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L49" >}}">property <b>disableReferentialIntegrity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L49">property <b>disableReferentialIntegrity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>disableReferentialIntegrity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-disableResourceVersioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L50" >}}">property <b>disableResourceVersioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L50">property <b>disableResourceVersioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>disableResourceVersioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-enableHistoryImport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L51" >}}">property <b>enableHistoryImport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L51">property <b>enableHistoryImport</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableHistoryImport: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-enableUpdateCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L52" >}}">property <b>enableUpdateCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L52">property <b>enableUpdateCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableUpdateCreate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L21" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L21">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1482,52 +1248,34 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L53" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L53">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L54" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L54">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L55" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L55">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#FhirStoreNotificationConfig'>outputs.healthcare.FhirStoreNotificationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L56" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L56">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStore-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L21" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L21">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1537,25 +1285,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L12" >}}">class <b>FhirStoreIamBinding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L12">class <b>FhirStoreIamBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_binding.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L56" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FhirStoreIamBinding(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FhirStoreIamBindingArgs'>FhirStoreIamBindingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1568,13 +1312,11 @@ Create a FhirStoreIamBinding resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FhirStoreIamBindingState'>FhirStoreIamBindingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FhirStoreIamBinding'>FhirStoreIamBinding</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1584,25 +1326,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1612,12 +1350,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L42" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L42">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the FHIR store's IAM policy.
@@ -1625,12 +1361,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L49" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L49">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -1641,12 +1375,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1655,22 +1387,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L50" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L50">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L56" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L56">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1680,12 +1406,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBinding-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1695,25 +1419,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L12" >}}">class <b>FhirStoreIamMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L12">class <b>FhirStoreIamMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_member.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L56" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FhirStoreIamMember(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FhirStoreIamMemberArgs'>FhirStoreIamMemberArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1726,13 +1446,11 @@ Create a FhirStoreIamMember resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FhirStoreIamMemberState'>FhirStoreIamMemberState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FhirStoreIamMember'>FhirStoreIamMember</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1742,25 +1460,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1770,12 +1484,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L42" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L42">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the FHIR store's IAM policy.
@@ -1783,12 +1495,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L49" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L49">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -1799,12 +1509,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1813,22 +1521,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L50" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L50">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L56" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L56">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -1838,12 +1540,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMember-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1853,25 +1553,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L12" >}}">class <b>FhirStoreIamPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L12">class <b>FhirStoreIamPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam_policy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L54"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FhirStoreIamPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FhirStoreIamPolicyArgs'>FhirStoreIamPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1884,13 +1580,11 @@ Create a FhirStoreIamPolicy resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FhirStoreIamPolicyState'>FhirStoreIamPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FhirStoreIamPolicy'>FhirStoreIamPolicy</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1900,25 +1594,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1928,12 +1618,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L42" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L42">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the FHIR store's IAM policy.
@@ -1941,12 +1629,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L49" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L49">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -1957,12 +1643,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1971,12 +1655,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L54" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L54">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -1985,12 +1667,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2000,12 +1680,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7Store">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L21" >}}">class <b>Hl7Store</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L21">class <b>Hl7Store</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A Hl7V2Store is a datastore inside a Healthcare dataset that conforms to the FHIR (https://www.hl7.org/hl7V2/STU3/)
@@ -2021,13 +1699,11 @@ To get more information about Hl7V2Store, see:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7Store-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L53" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L53"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Hl7Store(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#Hl7StoreArgs'>Hl7StoreArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2040,13 +1716,11 @@ Create a Hl7Store resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L30" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L30">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#Hl7StoreState'>Hl7StoreState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Hl7Store'>Hl7Store</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2056,25 +1730,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L21" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L21">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L41" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L41">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2084,22 +1754,16 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L48" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L48">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L21" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L21">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2108,62 +1772,40 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L49" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L49">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L50" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L50">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L51" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L51">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notificationConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#Hl7StoreNotificationConfig'>outputs.healthcare.Hl7StoreNotificationConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-parserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L52" >}}">property <b>parserConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L52">property <b>parserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>parserConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#Hl7StoreParserConfig'>outputs.healthcare.Hl7StoreParserConfig</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L53" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L53">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>selfLink: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7Store-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L21" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L21">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2173,25 +1815,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamBinding">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L12" >}}">class <b>Hl7StoreIamBinding</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L12">class <b>Hl7StoreIamBinding</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_binding.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L56" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Hl7StoreIamBinding(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#Hl7StoreIamBindingArgs'>Hl7StoreIamBindingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2204,13 +1842,11 @@ Create a Hl7StoreIamBinding resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#Hl7StoreIamBindingState'>Hl7StoreIamBindingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Hl7StoreIamBinding'>Hl7StoreIamBinding</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2220,25 +1856,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2248,12 +1880,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L42" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L42">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the HL7v2 store's IAM policy.
@@ -2261,12 +1891,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L49" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L49">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -2277,12 +1905,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2291,22 +1917,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L50" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L50">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L56" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L56">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2316,12 +1936,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBinding-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2331,25 +1949,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamMember">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L12" >}}">class <b>Hl7StoreIamMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L12">class <b>Hl7StoreIamMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_member.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L56" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L56"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Hl7StoreIamMember(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#Hl7StoreIamMemberArgs'>Hl7StoreIamMemberArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2362,13 +1976,11 @@ Create a Hl7StoreIamMember resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#Hl7StoreIamMemberState'>Hl7StoreIamMemberState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Hl7StoreIamMember'>Hl7StoreIamMember</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2378,25 +1990,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2406,12 +2014,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L42" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L42">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the HL7v2 store's IAM policy.
@@ -2419,12 +2025,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L49" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L49">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -2435,12 +2039,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2449,22 +2051,16 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L50" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L50">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L56" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L56">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2474,12 +2070,10 @@ The role that should be applied. Only one
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMember-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2489,25 +2083,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamPolicy">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L12" >}}">class <b>Hl7StoreIamPolicy</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L12">class <b>Hl7StoreIamPolicy</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_hl7_v2_store_iam_policy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L54" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L54"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Hl7StoreIamPolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#Hl7StoreIamPolicyArgs'>Hl7StoreIamPolicyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2520,13 +2110,11 @@ Create a Hl7StoreIamPolicy resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L21" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#Hl7StoreIamPolicyState'>Hl7StoreIamPolicyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Hl7StoreIamPolicy'>Hl7StoreIamPolicy</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2536,25 +2124,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L12" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L32" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -2564,12 +2148,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L42" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L42">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>etag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the HL7v2 store's IAM policy.
@@ -2577,12 +2159,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L49" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L49">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -2593,12 +2173,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L12" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2607,12 +2185,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L54" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L54">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -2621,12 +2197,10 @@ a `gcp.organizations.getIAMPolicy` data source.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicy-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L12" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2636,7 +2210,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L112" >}}">interface <b>DatasetArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L112">interface <b>DatasetArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2645,32 +2219,22 @@ The set of arguments for constructing a Dataset resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L113" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L113">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L114" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L114">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetArgs-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L119" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L119">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -2679,18 +2243,14 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetArgs-timeZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L120" >}}">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L120">property <b>timeZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L126" >}}">interface <b>DatasetIamBindingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L126">interface <b>DatasetIamBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2699,12 +2259,10 @@ The set of arguments for constructing a DatasetIamBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamBindingArgs-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L133" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L133">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -2715,22 +2273,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L134" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L134">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L140" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L140">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2741,7 +2293,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L102" >}}">interface <b>DatasetIamBindingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L102">interface <b>DatasetIamBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2750,12 +2302,10 @@ Input properties used for looking up and filtering DatasetIamBinding resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamBindingState-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L109" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L109">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>datasetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -2766,12 +2316,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L113" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L113">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the dataset's IAM policy.
@@ -2779,22 +2327,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L114" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L114">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamBinding.ts#L120" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamBinding.ts#L120">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2805,7 +2347,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L126" >}}">interface <b>DatasetIamMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L126">interface <b>DatasetIamMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2814,12 +2356,10 @@ The set of arguments for constructing a DatasetIamMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamMemberArgs-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L133" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L133">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -2830,22 +2370,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L134" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L134">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L140" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L140">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2856,7 +2390,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L102" >}}">interface <b>DatasetIamMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L102">interface <b>DatasetIamMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2865,12 +2399,10 @@ Input properties used for looking up and filtering DatasetIamMember resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamMemberState-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L109" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L109">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>datasetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -2881,12 +2413,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L113" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L113">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the dataset's IAM policy.
@@ -2894,22 +2424,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L114" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L114">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamMember.ts#L120" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamMember.ts#L120">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -2920,7 +2444,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L117" >}}">interface <b>DatasetIamPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L117">interface <b>DatasetIamPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2929,12 +2453,10 @@ The set of arguments for constructing a DatasetIamPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamPolicyArgs-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L124" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L124">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>datasetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -2945,12 +2467,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L129" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L129">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -2960,7 +2480,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetIamPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L95" >}}">interface <b>DatasetIamPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L95">interface <b>DatasetIamPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2969,12 +2489,10 @@ Input properties used for looking up and filtering DatasetIamPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetIamPolicyState-datasetId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L102" >}}">property <b>datasetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L102">property <b>datasetId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>datasetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The dataset ID, in the form
@@ -2985,12 +2503,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L106" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L106">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the dataset's IAM policy.
@@ -2998,12 +2514,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetIamPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/datasetIamPolicy.ts#L111" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/datasetIamPolicy.ts#L111">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -3013,7 +2527,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatasetState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L97" >}}">interface <b>DatasetState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L97">interface <b>DatasetState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3022,32 +2536,22 @@ Input properties used for looking up and filtering Dataset resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatasetState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L98" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L98">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L99" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L99">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetState-project">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L104" >}}">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L104">property <b>project</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the project in which the resource belongs.
@@ -3056,28 +2560,20 @@ If it is not provided, the provider project is used.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetState-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L105" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L105">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatasetState-timeZone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dataset.ts#L106" >}}">property <b>timeZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dataset.ts#L106">property <b>timeZone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>timeZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L107" >}}">interface <b>DicomStoreArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L107">interface <b>DicomStoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3086,48 +2582,32 @@ The set of arguments for constructing a DicomStore resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreArgs-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L108" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L108">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L109" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L109">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L110" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L110">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreArgs-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L111" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L111">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DicomStoreNotificationConfig'>inputs.healthcare.DicomStoreNotificationConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L128" >}}">interface <b>DicomStoreIamBindingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L128">interface <b>DicomStoreIamBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3136,12 +2616,10 @@ The set of arguments for constructing a DicomStoreIamBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingArgs-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L135" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L135">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -3152,22 +2630,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L136" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L136">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L142" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L142">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3178,7 +2650,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L104" >}}">interface <b>DicomStoreIamBindingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L104">interface <b>DicomStoreIamBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3187,12 +2659,10 @@ Input properties used for looking up and filtering DicomStoreIamBinding resource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingState-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L111" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L111">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dicomStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -3203,12 +2673,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L115" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L115">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the DICOM store's IAM policy.
@@ -3216,22 +2684,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L116" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L116">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamBinding.ts#L122" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamBinding.ts#L122">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3242,7 +2704,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L128" >}}">interface <b>DicomStoreIamMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L128">interface <b>DicomStoreIamMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3251,12 +2713,10 @@ The set of arguments for constructing a DicomStoreIamMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberArgs-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L135" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L135">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -3267,22 +2727,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L136" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L136">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L142" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L142">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3293,7 +2747,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L104" >}}">interface <b>DicomStoreIamMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L104">interface <b>DicomStoreIamMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3302,12 +2756,10 @@ Input properties used for looking up and filtering DicomStoreIamMember resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberState-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L111" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L111">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dicomStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -3318,12 +2770,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L115" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L115">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the DICOM store's IAM policy.
@@ -3331,22 +2781,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L116" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L116">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamMember.ts#L122" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamMember.ts#L122">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3357,7 +2801,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L119" >}}">interface <b>DicomStoreIamPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L119">interface <b>DicomStoreIamPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3366,12 +2810,10 @@ The set of arguments for constructing a DicomStoreIamPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyArgs-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L126" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L126">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dicomStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -3382,12 +2824,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L131" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L131">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -3397,7 +2837,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreIamPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L97" >}}">interface <b>DicomStoreIamPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L97">interface <b>DicomStoreIamPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3406,12 +2846,10 @@ Input properties used for looking up and filtering DicomStoreIamPolicy resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyState-dicomStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L104" >}}">property <b>dicomStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L104">property <b>dicomStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dicomStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The DICOM store ID, in the form
@@ -3422,12 +2860,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L108" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L108">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the DICOM store's IAM policy.
@@ -3435,12 +2871,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreIamPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStoreIamPolicy.ts#L113" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStoreIamPolicy.ts#L113">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -3450,7 +2884,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DicomStoreState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L96" >}}">interface <b>DicomStoreState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L96">interface <b>DicomStoreState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3459,58 +2893,38 @@ Input properties used for looking up and filtering DicomStore resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DicomStoreState-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L97" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L97">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dataset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L98" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L98">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L99" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L99">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreState-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L100" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L100">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DicomStoreNotificationConfig'>inputs.healthcare.DicomStoreNotificationConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DicomStoreState-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/dicomStore.ts#L101" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/dicomStore.ts#L101">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L123" >}}">interface <b>FhirStoreArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L123">interface <b>FhirStoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3519,88 +2933,56 @@ The set of arguments for constructing a FhirStore resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreArgs-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L124" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L124">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-disableReferentialIntegrity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L125" >}}">property <b>disableReferentialIntegrity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L125">property <b>disableReferentialIntegrity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disableReferentialIntegrity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-disableResourceVersioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L126" >}}">property <b>disableResourceVersioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L126">property <b>disableResourceVersioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disableResourceVersioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-enableHistoryImport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L127" >}}">property <b>enableHistoryImport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L127">property <b>enableHistoryImport</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableHistoryImport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-enableUpdateCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L128" >}}">property <b>enableUpdateCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L128">property <b>enableUpdateCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableUpdateCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L129" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L129">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L130" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L130">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreArgs-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L131" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L131">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreNotificationConfig'>inputs.healthcare.FhirStoreNotificationConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L128" >}}">interface <b>FhirStoreIamBindingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L128">interface <b>FhirStoreIamBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3609,12 +2991,10 @@ The set of arguments for constructing a FhirStoreIamBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingArgs-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L135" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L135">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -3625,22 +3005,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L136" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L136">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L142" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L142">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3651,7 +3025,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L104" >}}">interface <b>FhirStoreIamBindingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L104">interface <b>FhirStoreIamBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3660,12 +3034,10 @@ Input properties used for looking up and filtering FhirStoreIamBinding resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L108" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L108">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the FHIR store's IAM policy.
@@ -3673,12 +3045,10 @@ Input properties used for looking up and filtering FhirStoreIamBinding resources
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingState-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L115" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L115">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fhirStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -3689,22 +3059,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L116" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L116">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamBinding.ts#L122" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamBinding.ts#L122">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3715,7 +3079,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L128" >}}">interface <b>FhirStoreIamMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L128">interface <b>FhirStoreIamMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3724,12 +3088,10 @@ The set of arguments for constructing a FhirStoreIamMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberArgs-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L135" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L135">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -3740,22 +3102,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L136" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L136">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L142" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L142">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3766,7 +3122,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L104" >}}">interface <b>FhirStoreIamMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L104">interface <b>FhirStoreIamMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3775,12 +3131,10 @@ Input properties used for looking up and filtering FhirStoreIamMember resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L108" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L108">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the FHIR store's IAM policy.
@@ -3788,12 +3142,10 @@ Input properties used for looking up and filtering FhirStoreIamMember resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberState-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L115" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L115">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fhirStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -3804,22 +3156,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L116" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L116">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamMember.ts#L122" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamMember.ts#L122">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -3830,7 +3176,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L119" >}}">interface <b>FhirStoreIamPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L119">interface <b>FhirStoreIamPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3839,12 +3185,10 @@ The set of arguments for constructing a FhirStoreIamPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyArgs-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L126" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L126">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fhirStoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -3855,12 +3199,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L131" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L131">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -3870,7 +3212,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreIamPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L97" >}}">interface <b>FhirStoreIamPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L97">interface <b>FhirStoreIamPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3879,12 +3221,10 @@ Input properties used for looking up and filtering FhirStoreIamPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L101" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L101">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the FHIR store's IAM policy.
@@ -3892,12 +3232,10 @@ Input properties used for looking up and filtering FhirStoreIamPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyState-fhirStoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L108" >}}">property <b>fhirStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L108">property <b>fhirStoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fhirStoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The FHIR store ID, in the form
@@ -3908,12 +3246,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreIamPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStoreIamPolicy.ts#L113" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStoreIamPolicy.ts#L113">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -3923,7 +3259,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FhirStoreState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L108" >}}">interface <b>FhirStoreState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L108">interface <b>FhirStoreState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3932,98 +3268,62 @@ Input properties used for looking up and filtering FhirStore resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FhirStoreState-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L109" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L109">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dataset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-disableReferentialIntegrity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L110" >}}">property <b>disableReferentialIntegrity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L110">property <b>disableReferentialIntegrity</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disableReferentialIntegrity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-disableResourceVersioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L111" >}}">property <b>disableResourceVersioning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L111">property <b>disableResourceVersioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disableResourceVersioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-enableHistoryImport">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L112" >}}">property <b>enableHistoryImport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L112">property <b>enableHistoryImport</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableHistoryImport?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-enableUpdateCreate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L113" >}}">property <b>enableUpdateCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L113">property <b>enableUpdateCreate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableUpdateCreate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L114" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L114">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L115" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L115">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L116" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L116">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#FhirStoreNotificationConfig'>inputs.healthcare.FhirStoreNotificationConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FhirStoreState-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/fhirStore.ts#L117" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/fhirStore.ts#L117">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L111" >}}">interface <b>Hl7StoreArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L111">interface <b>Hl7StoreArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4032,58 +3332,38 @@ The set of arguments for constructing a Hl7Store resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L112" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L112">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dataset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L113" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L113">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L114" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L114">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L115" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L115">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#Hl7StoreNotificationConfig'>inputs.healthcare.Hl7StoreNotificationConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreArgs-parserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L116" >}}">property <b>parserConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L116">property <b>parserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#Hl7StoreParserConfig'>inputs.healthcare.Hl7StoreParserConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamBindingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L128" >}}">interface <b>Hl7StoreIamBindingArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L128">interface <b>Hl7StoreIamBindingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4092,12 +3372,10 @@ The set of arguments for constructing a Hl7StoreIamBinding resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingArgs-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L135" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L135">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -4108,22 +3386,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingArgs-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L136" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L136">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L142" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L142">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -4134,7 +3406,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamBindingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L104" >}}">interface <b>Hl7StoreIamBindingState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L104">interface <b>Hl7StoreIamBindingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4143,12 +3415,10 @@ Input properties used for looking up and filtering Hl7StoreIamBinding resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L108" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L108">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the HL7v2 store's IAM policy.
@@ -4156,12 +3426,10 @@ Input properties used for looking up and filtering Hl7StoreIamBinding resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingState-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L115" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L115">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -4172,22 +3440,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingState-members">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L116" >}}">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L116">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamBindingState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamBinding.ts#L122" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamBinding.ts#L122">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -4198,7 +3460,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamMemberArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L128" >}}">interface <b>Hl7StoreIamMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L128">interface <b>Hl7StoreIamMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4207,12 +3469,10 @@ The set of arguments for constructing a Hl7StoreIamMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberArgs-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L135" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L135">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -4223,22 +3483,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberArgs-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L136" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L136">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberArgs-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L142" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L142">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -4249,7 +3503,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamMemberState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L104" >}}">interface <b>Hl7StoreIamMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L104">interface <b>Hl7StoreIamMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4258,12 +3512,10 @@ Input properties used for looking up and filtering Hl7StoreIamMember resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L108" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L108">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the HL7v2 store's IAM policy.
@@ -4271,12 +3523,10 @@ Input properties used for looking up and filtering Hl7StoreIamMember resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberState-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L115" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L115">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -4287,22 +3537,16 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberState-member">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L116" >}}">property <b>member</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L116">property <b>member</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>member?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamMemberState-role">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamMember.ts#L122" >}}">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamMember.ts#L122">property <b>role</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>role?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The role that should be applied. Only one
@@ -4313,7 +3557,7 @@ The role that should be applied. Only one
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamPolicyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L119" >}}">interface <b>Hl7StoreIamPolicyArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L119">interface <b>Hl7StoreIamPolicyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4322,12 +3566,10 @@ The set of arguments for constructing a Hl7StoreIamPolicy resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyArgs-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L126" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L126">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -4338,12 +3580,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyArgs-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L131" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L131">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -4353,7 +3593,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreIamPolicyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L97" >}}">interface <b>Hl7StoreIamPolicyState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L97">interface <b>Hl7StoreIamPolicyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4362,12 +3602,10 @@ Input properties used for looking up and filtering Hl7StoreIamPolicy resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyState-etag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L101" >}}">property <b>etag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L101">property <b>etag</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>etag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 (Computed) The etag of the HL7v2 store's IAM policy.
@@ -4375,12 +3613,10 @@ Input properties used for looking up and filtering Hl7StoreIamPolicy resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyState-hl7V2StoreId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L108" >}}">property <b>hl7V2StoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L108">property <b>hl7V2StoreId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hl7V2StoreId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The HL7v2 store ID, in the form
@@ -4391,12 +3627,10 @@ project setting will be used as a fallback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreIamPolicyState-policyData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7StoreIamPolicy.ts#L113" >}}">property <b>policyData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7StoreIamPolicy.ts#L113">property <b>policyData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>policyData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The policy data generated by
@@ -4406,7 +3640,7 @@ a `gcp.organizations.getIAMPolicy` data source.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Hl7StoreState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L99" >}}">interface <b>Hl7StoreState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L99">interface <b>Hl7StoreState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4415,63 +3649,39 @@ Input properties used for looking up and filtering Hl7Store resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Hl7StoreState-dataset">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L100" >}}">property <b>dataset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L100">property <b>dataset</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dataset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L101" >}}">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L101">property <b>labels</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L102" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L102">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-notificationConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L103" >}}">property <b>notificationConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L103">property <b>notificationConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notificationConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#Hl7StoreNotificationConfig'>inputs.healthcare.Hl7StoreNotificationConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-parserConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L104" >}}">property <b>parserConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L104">property <b>parserConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>parserConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#Hl7StoreParserConfig'>inputs.healthcare.Hl7StoreParserConfig</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Hl7StoreState-selfLink">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gcp" path="healthcare/hl7Store.ts#L105" >}}">property <b>selfLink</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/127a243a2b6ea890bb8cbc91ce51440776b27215/sdk/nodejs/healthcare/hl7Store.ts#L105">property <b>selfLink</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>selfLink?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>

@@ -36,19 +36,17 @@ title: Module config
 <li><a href="#vsphereServer">let vsphereServer</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="vsphere" path="config/vars.ts" >}}">config/vars.ts</a> 
+<a href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts">config/vars.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="allowUnverifiedSsl">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L12" >}}">let <b>allowUnverifiedSsl</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L12">let <b>allowUnverifiedSsl</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> allowUnverifiedSsl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;allowUnverifiedSsl&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 If set, VMware vSphere client will permit unverifiable SSL certificates.
@@ -56,12 +54,10 @@ If set, VMware vSphere client will permit unverifiable SSL certificates.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="clientDebug">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L16" >}}">let <b>clientDebug</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L16">let <b>clientDebug</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> clientDebug: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;clientDebug&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 govmomi debug
@@ -69,12 +65,10 @@ govmomi debug
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="clientDebugPath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L20" >}}">let <b>clientDebugPath</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L20">let <b>clientDebugPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> clientDebugPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientDebugPath&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 govmomi debug path for debug
@@ -82,12 +76,10 @@ govmomi debug path for debug
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="clientDebugPathRun">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L24" >}}">let <b>clientDebugPathRun</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L24">let <b>clientDebugPathRun</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> clientDebugPathRun: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;clientDebugPathRun&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 govmomi debug path for a single run
@@ -95,12 +87,10 @@ govmomi debug path for a single run
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="password">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L28" >}}">let <b>password</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L28">let <b>password</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The user password for vSphere API operations.
@@ -108,12 +98,10 @@ The user password for vSphere API operations.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="persistSession">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L32" >}}">let <b>persistSession</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L32">let <b>persistSession</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> persistSession: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;persistSession&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Persist vSphere client sessions to disk
@@ -121,12 +109,10 @@ Persist vSphere client sessions to disk
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="restSessionPath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L36" >}}">let <b>restSessionPath</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L36">let <b>restSessionPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> restSessionPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;restSessionPath&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The directory to save vSphere REST API sessions to
@@ -134,12 +120,10 @@ The directory to save vSphere REST API sessions to
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="user">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L40" >}}">let <b>user</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L40">let <b>user</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;user&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The user name for vSphere API operations.
@@ -147,20 +131,16 @@ The user name for vSphere API operations.
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="vcenterServer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L41" >}}">let <b>vcenterServer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L41">let <b>vcenterServer</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> vcenterServer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;vcenterServer&#34;)</span>;</pre>
-{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="vimKeepAlive">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L45" >}}">let <b>vimKeepAlive</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L45">let <b>vimKeepAlive</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> vimKeepAlive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;number&gt;(&#34;vimKeepAlive&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Keep alive interval for the VIM session in minutes
@@ -168,12 +148,10 @@ Keep alive interval for the VIM session in minutes
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="vimSessionPath">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L49" >}}">let <b>vimSessionPath</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L49">let <b>vimSessionPath</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> vimSessionPath: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;vimSessionPath&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The directory to save vSphere SOAP API sessions to
@@ -181,12 +159,10 @@ The directory to save vSphere SOAP API sessions to
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="vsphereServer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="vsphere" path="config/vars.ts#L53" >}}">let <b>vsphereServer</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-vsphere/blob/a0e9f3f394ad39c7a129cd597da7a4271e4a9cfd/sdk/nodejs/config/vars.ts#L53">let <b>vsphereServer</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>let</span> vsphereServer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;vsphereServer&#34;)</span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The vSphere Server name for vSphere API operations.

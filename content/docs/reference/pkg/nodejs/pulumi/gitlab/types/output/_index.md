@@ -19,23 +19,21 @@ title: Module types/output
 <li><a href="#ProjectSharedWithGroup">interface ProjectSharedWithGroup</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="gitlab" path="types/output.ts" >}}">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts">types/output.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="GetUsersUser">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L7" >}}">interface <b>GetUsersUser</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L7">interface <b>GetUsersUser</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetUsersUser-avatarUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L11" >}}">property <b>avatarUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L11">property <b>avatarUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>avatarUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The avatar URL of the user.
@@ -43,12 +41,10 @@ The avatar URL of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-bio">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L15" >}}">property <b>bio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L15">property <b>bio</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bio: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The bio of the user.
@@ -56,12 +52,10 @@ The bio of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-canCreateGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L19" >}}">property <b>canCreateGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L19">property <b>canCreateGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>canCreateGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether the user can create groups.
@@ -69,12 +63,10 @@ Whether the user can create groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-canCreateProject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L23" >}}">property <b>canCreateProject</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L23">property <b>canCreateProject</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>canCreateProject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether the user can create projects.
@@ -82,12 +74,10 @@ Whether the user can create projects.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-colorSchemeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L27" >}}">property <b>colorSchemeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L27">property <b>colorSchemeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>colorSchemeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 User's color scheme ID.
@@ -95,12 +85,10 @@ User's color scheme ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L31" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L31">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Date the user was created at.
@@ -108,12 +96,10 @@ Date the user was created at.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-currentSignInAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L35" >}}">property <b>currentSignInAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L35">property <b>currentSignInAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>currentSignInAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Current user's sign-in date.
@@ -121,12 +107,10 @@ Current user's sign-in date.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-email">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L39" >}}">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L39">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The e-mail address of the user.
@@ -134,12 +118,10 @@ The e-mail address of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-externUid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L43" >}}">property <b>externUid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L43">property <b>externUid</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>externUid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Lookup users by external UID. (Requires administrator privileges)
@@ -147,12 +129,10 @@ Lookup users by external UID. (Requires administrator privileges)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-external">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L47" >}}">property <b>external</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L47">property <b>external</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>external: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether the user is external.
@@ -160,12 +140,10 @@ Whether the user is external.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L51" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L51">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The unique id assigned to the user by the gitlab server.
@@ -173,12 +151,10 @@ The unique id assigned to the user by the gitlab server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-isAdmin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L55" >}}">property <b>isAdmin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L55">property <b>isAdmin</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>isAdmin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether the user is an admin.
@@ -186,12 +162,10 @@ Whether the user is an admin.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-lastSignInAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L59" >}}">property <b>lastSignInAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L59">property <b>lastSignInAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lastSignInAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Last user's sign-in date.
@@ -199,12 +173,10 @@ Last user's sign-in date.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-linkedin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L63" >}}">property <b>linkedin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L63">property <b>linkedin</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>linkedin: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Linkedin profile of the user.
@@ -212,12 +184,10 @@ Linkedin profile of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L67" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L67">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The location of the user.
@@ -225,12 +195,10 @@ The location of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L71">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the user.
@@ -238,12 +206,10 @@ The name of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-organization">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L75" >}}">property <b>organization</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L75">property <b>organization</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>organization: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The organization of the user.
@@ -251,12 +217,10 @@ The organization of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-projectsLimit">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L79" >}}">property <b>projectsLimit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L79">property <b>projectsLimit</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>projectsLimit: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Number of projects the user can create.
@@ -264,12 +228,10 @@ Number of projects the user can create.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-provider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L83" >}}">property <b>provider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L83">property <b>provider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>provider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The UID provider of the user.
@@ -277,12 +239,10 @@ The UID provider of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-skype">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L87" >}}">property <b>skype</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L87">property <b>skype</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skype: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Skype username of the user.
@@ -290,12 +250,10 @@ Skype username of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L91" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L91">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether the user is active or blocked.
@@ -303,12 +261,10 @@ Whether the user is active or blocked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-themeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L95" >}}">property <b>themeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L95">property <b>themeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>themeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 User's theme ID.
@@ -316,12 +272,10 @@ User's theme ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-twitter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L99" >}}">property <b>twitter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L99">property <b>twitter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>twitter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Twitter username of the user.
@@ -329,12 +283,10 @@ Twitter username of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-twoFactorEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L103" >}}">property <b>twoFactorEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L103">property <b>twoFactorEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>twoFactorEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Whether user's two factor auth is enabled.
@@ -342,12 +294,10 @@ Whether user's two factor auth is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-username">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L107" >}}">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L107">property <b>username</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The username of the user.
@@ -355,12 +305,10 @@ The username of the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersUser-websiteUrl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L111" >}}">property <b>websiteUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L111">property <b>websiteUrl</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>websiteUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 User's website URL.
@@ -369,16 +317,14 @@ User's website URL.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectSharedWithGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L114" >}}">interface <b>ProjectSharedWithGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L114">interface <b>ProjectSharedWithGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ProjectSharedWithGroup-groupAccessLevel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L119" >}}">property <b>groupAccessLevel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L119">property <b>groupAccessLevel</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupAccessLevel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Group's sharing permissions. See [group members permission][groupMembersPermissions] for more info.
@@ -387,12 +333,10 @@ Valid values are `guest`, `reporter`, `developer`, `master`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectSharedWithGroup-groupId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L123" >}}">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L123">property <b>groupId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Group id of the group you want to share the project with.
@@ -400,12 +344,10 @@ Group id of the group you want to share the project with.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectSharedWithGroup-groupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="gitlab" path="types/output.ts#L127" >}}">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gitlab/blob/028b061a7ff4237d00706de80d79c333ab5cf8eb/sdk/nodejs/types/output.ts#L127">property <b>groupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>groupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Group's name.

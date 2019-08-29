@@ -45,19 +45,17 @@ title: Module batch
 <li><a href="#PoolState">interface PoolState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="batch/account.ts" >}}">batch/account.ts</a> <a href="{{< pkg-url pkg="azure" path="batch/application.ts" >}}">batch/application.ts</a> <a href="{{< pkg-url pkg="azure" path="batch/certificate.ts" >}}">batch/certificate.ts</a> <a href="{{< pkg-url pkg="azure" path="batch/getAccount.ts" >}}">batch/getAccount.ts</a> <a href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts" >}}">batch/getCertificate.ts</a> <a href="{{< pkg-url pkg="azure" path="batch/getPool.ts" >}}">batch/getPool.ts</a> <a href="{{< pkg-url pkg="azure" path="batch/pool.ts" >}}">batch/pool.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts">batch/account.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts">batch/application.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts">batch/certificate.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts">batch/getAccount.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts">batch/getCertificate.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts">batch/getPool.ts</a> <a href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts">batch/pool.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="Account">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L43" >}}">class <b>Account</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L43">class <b>Account</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages an Azure Batch account.
@@ -95,13 +93,11 @@ const testAccount = new azure.batch.Account("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L109" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L109"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Account(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AccountArgs'>AccountArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -114,13 +110,11 @@ Create a Account resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L52">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AccountState'>AccountState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Account'>Account</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -130,25 +124,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L43" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L43">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L63">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -158,12 +148,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-accountEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L73" >}}">property <b>accountEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L73">property <b>accountEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The account endpoint used to interact with the Batch service.
@@ -171,12 +159,10 @@ The account endpoint used to interact with the Batch service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L43" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L43">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -185,12 +171,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-keyVaultReference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L77" >}}">property <b>keyVaultReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L77">property <b>keyVaultReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>keyVaultReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountKeyVaultReference'>outputs.batch.AccountKeyVaultReference</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `keyVaultReference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode.
@@ -198,12 +182,10 @@ A `keyVaultReference` block that describes the Azure KeyVault reference to use w
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L81" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L81">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -211,12 +193,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L85" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L85">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account. Changing this forces a new resource to be created.
@@ -224,12 +204,10 @@ Specifies the name of the Batch account. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-poolAllocationMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L89" >}}">property <b>poolAllocationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L89">property <b>poolAllocationMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>poolAllocationMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the mode to use for pool allocation. Possible values are `BatchService` or `UserSubscription`. Defaults to `BatchService`.
@@ -237,12 +215,10 @@ Specifies the mode to use for pool allocation. Possible values are `BatchService
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L93" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L93">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Batch account primary access key.
@@ -250,12 +226,10 @@ The Batch account primary access key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L97" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L97">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch account. Changing this forces a new resource to be created.
@@ -263,12 +237,10 @@ The name of the resource group in which to create the Batch account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L101" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L101">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Batch account secondary access key.
@@ -276,12 +248,10 @@ The Batch account secondary access key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L105" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L105">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the storage account to use for the Batch account. If not specified, Azure Batch will manage the storage.
@@ -289,12 +259,10 @@ Specifies the storage account to use for the Batch account. If not specified, Az
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L109" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L109">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -302,12 +270,10 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L43" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L43">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -317,12 +283,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Application">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L45" >}}">class <b>Application</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L45">class <b>Application</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manage Azure Batch Application instance.
@@ -362,13 +326,11 @@ const exampleApplication = new azure.batch.Application("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L95" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L95"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Application(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ApplicationArgs'>ApplicationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -381,13 +343,11 @@ Create a Application resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L54">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ApplicationState'>ApplicationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Application'>Application</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -397,25 +357,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L45" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L45">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L65">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -425,12 +381,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L75" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L75">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Batch account. Changing this forces a new resource to be created.
@@ -438,12 +392,10 @@ The name of the Batch account. Changing this forces a new resource to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-allowUpdates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L79" >}}">property <b>allowUpdates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L79">property <b>allowUpdates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>allowUpdates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A value indicating whether packages within the application may be overwritten using the same version string. Defaults to `true`.
@@ -451,12 +403,10 @@ A value indicating whether packages within the application may be overwritten us
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-defaultVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L83" >}}">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L83">property <b>defaultVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
@@ -464,12 +414,10 @@ The package to use if a client requests the application but does not specify a v
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L87" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L87">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name for the application.
@@ -477,12 +425,10 @@ The display name for the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L45" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L45">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -491,12 +437,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L91" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L91">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the application. This must be unique within the account. Changing this forces a new resource to be created.
@@ -504,12 +448,10 @@ The name of the application. This must be unique within the account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L95" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L95">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group that contains the Batch account. Changing this forces a new resource to be created.
@@ -517,12 +459,10 @@ The name of the resource group that contains the Batch account. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L45" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L45">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -532,12 +472,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Certificate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L14" >}}">class <b>Certificate</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L14">class <b>Certificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages a certificate in an Azure Batch account.
@@ -546,13 +484,11 @@ Manages a certificate in an Azure Batch account.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L73" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L73"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Certificate(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CertificateArgs'>CertificateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -565,13 +501,11 @@ Create a Certificate resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L23" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L23">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CertificateState'>CertificateState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Certificate'>Certificate</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -581,25 +515,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L14" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L34" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L34">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -609,12 +539,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L44" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L44">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account. Changing this forces a new resource to be created.
@@ -622,12 +550,10 @@ Specifies the name of the Batch account. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-certificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L48" >}}">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L48">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The base64-encoded contents of the certificate.
@@ -635,12 +561,10 @@ The base64-encoded contents of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L52" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L52">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the certificate. Possible values are `Cer` or `Pfx`.
@@ -648,12 +572,10 @@ The format of the certificate. Possible values are `Cer` or `Pfx`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L14" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L14">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -662,12 +584,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L56" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L56">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The generated name of the certificate.
@@ -675,12 +595,10 @@ The generated name of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L60" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L60">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
@@ -688,12 +606,10 @@ The password to access the certificate's private key. This must and can only be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-publicData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L64" >}}">property <b>publicData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L64">property <b>publicData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>publicData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The public key of the certificate.
@@ -701,12 +617,10 @@ The public key of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L68" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L68">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch account. Changing this forces a new resource to be created.
@@ -714,12 +628,10 @@ The name of the resource group in which to create the Batch account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-thumbprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L72" >}}">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L72">property <b>thumbprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>thumbprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The thumbprint of the certificate. At this time the only supported value is 'SHA1'.
@@ -727,22 +639,16 @@ The thumbprint of the certificate. At this time the only supported value is 'SHA
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-thumbprintAlgorithm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L73" >}}">property <b>thumbprintAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L73">property <b>thumbprintAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>thumbprintAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L14" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L14">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -752,12 +658,10 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Pool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L14" >}}">class <b>Pool</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L14">class <b>Pool</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Manages an Azure Batch pool.
@@ -766,13 +670,11 @@ Manages an Azure Batch pool.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Pool-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L93" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L93"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Pool(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PoolArgs'>PoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -785,13 +687,11 @@ Create a Pool resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L23" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L23">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PoolState'>PoolState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Pool'>Pool</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -801,25 +701,21 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L14" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L34" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L34">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -829,12 +725,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L44" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L44">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.
@@ -842,12 +736,10 @@ Specifies the name of the Batch account in which the pool will be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-autoScale">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L48" >}}">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L48">property <b>autoScale</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolAutoScale'>outputs.batch.PoolAutoScale</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `autoScale` block that describes the scale settings when using auto scale.
@@ -855,12 +747,10 @@ A `autoScale` block that describes the scale settings when using auto scale.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-certificates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L52" >}}">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L52">property <b>certificates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolCertificate'>outputs.batch.PoolCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
@@ -868,12 +758,10 @@ One or more `certificate` blocks that describe the certificates to be installed 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-containerConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L56" >}}">property <b>containerConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L56">property <b>containerConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>containerConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolContainerConfiguration'>outputs.batch.PoolContainerConfiguration</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The container configuration used in the pool's VMs.
@@ -881,12 +769,10 @@ The container configuration used in the pool's VMs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L60" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L60">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the display name of the Batch pool.
@@ -894,12 +780,10 @@ Specifies the display name of the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-fixedScale">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L64" >}}">property <b>fixedScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L64">property <b>fixedScale</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fixedScale: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolFixedScale'>outputs.batch.PoolFixedScale</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `fixedScale` block that describes the scale settings when using fixed scale.
@@ -907,12 +791,10 @@ A `fixedScale` block that describes the scale settings when using fixed scale.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L14" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L14">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -921,12 +803,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-maxTasksPerNode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L68" >}}">property <b>maxTasksPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L68">property <b>maxTasksPerNode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxTasksPerNode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to `1`. Changing this forces a new resource to be created.
@@ -934,12 +814,10 @@ Specifies the maximum number of tasks that can run concurrently on a single comp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L72" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L72">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch pool. Changing this forces a new resource to be created.
@@ -947,12 +825,10 @@ Specifies the name of the Batch pool. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-nodeAgentSkuId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L76" >}}">property <b>nodeAgentSkuId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L76">property <b>nodeAgentSkuId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>nodeAgentSkuId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Sku of the node agents that will be created in the Batch pool.
@@ -960,12 +836,10 @@ Specifies the Sku of the node agents that will be created in the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L80" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L80">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch pool. Changing this forces a new resource to be created.
@@ -973,12 +847,10 @@ The name of the resource group in which to create the Batch pool. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-startTask">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L84" >}}">property <b>startTask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L84">property <b>startTask</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>startTask: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStartTask'>outputs.batch.PoolStartTask</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `startTask` block that describes the start task settings for the Batch pool.
@@ -986,22 +858,16 @@ A `startTask` block that describes the start task settings for the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-stopPendingResizeOperation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L85" >}}">property <b>stopPendingResizeOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L85">property <b>stopPendingResizeOperation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>stopPendingResizeOperation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-storageImageReference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L89" >}}">property <b>storageImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L89">property <b>storageImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>storageImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStorageImageReference'>outputs.batch.PoolStorageImageReference</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `storageImageReference` for the virtual machines that will compose the Batch pool.
@@ -1009,12 +875,10 @@ A `storageImageReference` for the virtual machines that will compose the Batch p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L14" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L14">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1023,12 +887,10 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Pool-vmSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L93" >}}">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L93">property <b>vmSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vmSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the size of the VM created in the Batch pool.
@@ -1037,13 +899,11 @@ Specifies the size of the VM created in the Batch pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getAccount">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L28" >}}">function <b>getAccount</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L28">function <b>getAccount</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getAccount(args: <a href='#GetAccountArgs'>GetAccountArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetAccountResult'>GetAccountResult</a>&gt; &amp; <a href='#GetAccountResult'>GetAccountResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1068,13 +928,11 @@ export const poolAllocationMode = test.poolAllocationMode;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getCertificate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L29" >}}">function <b>getCertificate</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L29">function <b>getCertificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getCertificate(args: <a href='#GetCertificateArgs'>GetCertificateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetCertificateResult'>GetCertificateResult</a>&gt; &amp; <a href='#GetCertificateResult'>GetCertificateResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1100,13 +958,11 @@ export const thumbprint = example.thumbprint;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getPool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L27" >}}">function <b>getPool</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L27">function <b>getPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getPool(args: <a href='#GetPoolArgs'>GetPoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetPoolResult'>GetPoolResult</a>&gt; &amp; <a href='#GetPoolResult'>GetPoolResult</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -1130,7 +986,7 @@ const test = azure.batch.getPool({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="AccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L209" >}}">interface <b>AccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L209">interface <b>AccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1139,12 +995,10 @@ The set of arguments for constructing a Account resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountArgs-keyVaultReference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L213" >}}">property <b>keyVaultReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L213">property <b>keyVaultReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyVaultReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountKeyVaultReference'>inputs.batch.AccountKeyVaultReference</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `keyVaultReference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode.
@@ -1152,12 +1006,10 @@ A `keyVaultReference` block that describes the Azure KeyVault reference to use w
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L217" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L217">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -1165,12 +1017,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L221" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L221">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account. Changing this forces a new resource to be created.
@@ -1178,12 +1028,10 @@ Specifies the name of the Batch account. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-poolAllocationMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L225" >}}">property <b>poolAllocationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L225">property <b>poolAllocationMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>poolAllocationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the mode to use for pool allocation. Possible values are `BatchService` or `UserSubscription`. Defaults to `BatchService`.
@@ -1191,12 +1039,10 @@ Specifies the mode to use for pool allocation. Possible values are `BatchService
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L229" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L229">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch account. Changing this forces a new resource to be created.
@@ -1204,12 +1050,10 @@ The name of the resource group in which to create the Batch account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L233" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L233">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the storage account to use for the Batch account. If not specified, Azure Batch will manage the storage.
@@ -1217,12 +1061,10 @@ Specifies the storage account to use for the Batch account. If not specified, Az
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L237" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L237">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1231,7 +1073,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AccountState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L163" >}}">interface <b>AccountState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L163">interface <b>AccountState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1240,12 +1082,10 @@ Input properties used for looking up and filtering Account resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AccountState-accountEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L167" >}}">property <b>accountEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L167">property <b>accountEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The account endpoint used to interact with the Batch service.
@@ -1253,12 +1093,10 @@ The account endpoint used to interact with the Batch service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-keyVaultReference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L171" >}}">property <b>keyVaultReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L171">property <b>keyVaultReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyVaultReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountKeyVaultReference'>inputs.batch.AccountKeyVaultReference</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `keyVaultReference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode.
@@ -1266,12 +1104,10 @@ A `keyVaultReference` block that describes the Azure KeyVault reference to use w
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L175" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L175">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -1279,12 +1115,10 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L179" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L179">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account. Changing this forces a new resource to be created.
@@ -1292,12 +1126,10 @@ Specifies the name of the Batch account. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-poolAllocationMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L183" >}}">property <b>poolAllocationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L183">property <b>poolAllocationMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>poolAllocationMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the mode to use for pool allocation. Possible values are `BatchService` or `UserSubscription`. Defaults to `BatchService`.
@@ -1305,12 +1137,10 @@ Specifies the mode to use for pool allocation. Possible values are `BatchService
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L187" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L187">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Batch account primary access key.
@@ -1318,12 +1148,10 @@ The Batch account primary access key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L191" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L191">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch account. Changing this forces a new resource to be created.
@@ -1331,12 +1159,10 @@ The name of the resource group in which to create the Batch account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L195" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L195">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Batch account secondary access key.
@@ -1344,12 +1170,10 @@ The Batch account secondary access key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L199" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L199">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the storage account to use for the Batch account. If not specified, Azure Batch will manage the storage.
@@ -1357,12 +1181,10 @@ Specifies the storage account to use for the Batch account. If not specified, Az
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/account.ts#L203" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/account.ts#L203">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1371,7 +1193,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L174" >}}">interface <b>ApplicationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L174">interface <b>ApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1380,12 +1202,10 @@ The set of arguments for constructing a Application resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L178" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L178">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Batch account. Changing this forces a new resource to be created.
@@ -1393,12 +1213,10 @@ The name of the Batch account. Changing this forces a new resource to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-allowUpdates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L182" >}}">property <b>allowUpdates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L182">property <b>allowUpdates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowUpdates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A value indicating whether packages within the application may be overwritten using the same version string. Defaults to `true`.
@@ -1406,12 +1224,10 @@ A value indicating whether packages within the application may be overwritten us
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-defaultVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L186" >}}">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L186">property <b>defaultVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
@@ -1419,12 +1235,10 @@ The package to use if a client requests the application but does not specify a v
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L190" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L190">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name for the application.
@@ -1432,12 +1246,10 @@ The display name for the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L194" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L194">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the application. This must be unique within the account. Changing this forces a new resource to be created.
@@ -1445,12 +1257,10 @@ The name of the application. This must be unique within the account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L198" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L198">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group that contains the Batch account. Changing this forces a new resource to be created.
@@ -1459,7 +1269,7 @@ The name of the resource group that contains the Batch account. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L144" >}}">interface <b>ApplicationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L144">interface <b>ApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1468,12 +1278,10 @@ Input properties used for looking up and filtering Application resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L148" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L148">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Batch account. Changing this forces a new resource to be created.
@@ -1481,12 +1289,10 @@ The name of the Batch account. Changing this forces a new resource to be created
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-allowUpdates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L152" >}}">property <b>allowUpdates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L152">property <b>allowUpdates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>allowUpdates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A value indicating whether packages within the application may be overwritten using the same version string. Defaults to `true`.
@@ -1494,12 +1300,10 @@ A value indicating whether packages within the application may be overwritten us
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-defaultVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L156" >}}">property <b>defaultVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L156">property <b>defaultVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
@@ -1507,12 +1311,10 @@ The package to use if a client requests the application but does not specify a v
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L160" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L160">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The display name for the application.
@@ -1520,12 +1322,10 @@ The display name for the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L164" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L164">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the application. This must be unique within the account. Changing this forces a new resource to be created.
@@ -1533,12 +1333,10 @@ The name of the application. This must be unique within the account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/application.ts#L168" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/application.ts#L168">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group that contains the Batch account. Changing this forces a new resource to be created.
@@ -1547,7 +1345,7 @@ The name of the resource group that contains the Batch account. Changing this fo
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L179" >}}">interface <b>CertificateArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L179">interface <b>CertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1556,12 +1354,10 @@ The set of arguments for constructing a Certificate resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L183" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L183">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account. Changing this forces a new resource to be created.
@@ -1569,12 +1365,10 @@ Specifies the name of the Batch account. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-certificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L187" >}}">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L187">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The base64-encoded contents of the certificate.
@@ -1582,12 +1376,10 @@ The base64-encoded contents of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L191" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L191">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the certificate. Possible values are `Cer` or `Pfx`.
@@ -1595,12 +1387,10 @@ The format of the certificate. Possible values are `Cer` or `Pfx`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L195" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L195">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
@@ -1608,12 +1398,10 @@ The password to access the certificate's private key. This must and can only be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L199" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L199">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch account. Changing this forces a new resource to be created.
@@ -1621,12 +1409,10 @@ The name of the resource group in which to create the Batch account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-thumbprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L203" >}}">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L203">property <b>thumbprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>thumbprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The thumbprint of the certificate. At this time the only supported value is 'SHA1'.
@@ -1634,18 +1420,14 @@ The thumbprint of the certificate. At this time the only supported value is 'SHA
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateArgs-thumbprintAlgorithm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L204" >}}">property <b>thumbprintAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L204">property <b>thumbprintAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>thumbprintAlgorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CertificateState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L140" >}}">interface <b>CertificateState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L140">interface <b>CertificateState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1654,12 +1436,10 @@ Input properties used for looking up and filtering Certificate resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CertificateState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L144" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L144">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account. Changing this forces a new resource to be created.
@@ -1667,12 +1447,10 @@ Specifies the name of the Batch account. Changing this forces a new resource to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-certificate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L148" >}}">property <b>certificate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L148">property <b>certificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The base64-encoded contents of the certificate.
@@ -1680,12 +1458,10 @@ The base64-encoded contents of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L152" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L152">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the certificate. Possible values are `Cer` or `Pfx`.
@@ -1693,12 +1469,10 @@ The format of the certificate. Possible values are `Cer` or `Pfx`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L156">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The generated name of the certificate.
@@ -1706,12 +1480,10 @@ The generated name of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L160" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L160">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The password to access the certificate's private key. This must and can only be specified when `format` is `Pfx`.
@@ -1719,12 +1491,10 @@ The password to access the certificate's private key. This must and can only be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-publicData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L164" >}}">property <b>publicData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L164">property <b>publicData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>publicData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The public key of the certificate.
@@ -1732,12 +1502,10 @@ The public key of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L168" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L168">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch account. Changing this forces a new resource to be created.
@@ -1745,12 +1513,10 @@ The name of the resource group in which to create the Batch account. Changing th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-thumbprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L172" >}}">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L172">property <b>thumbprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>thumbprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The thumbprint of the certificate. At this time the only supported value is 'SHA1'.
@@ -1758,18 +1524,14 @@ The thumbprint of the certificate. At this time the only supported value is 'SHA
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CertificateState-thumbprintAlgorithm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/certificate.ts#L173" >}}">property <b>thumbprintAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/certificate.ts#L173">property <b>thumbprintAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>thumbprintAlgorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L47" >}}">interface <b>GetAccountArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L47">interface <b>GetAccountArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1778,12 +1540,10 @@ A collection of arguments for invoking getAccount.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L51" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L51">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Batch account.
@@ -1791,12 +1551,10 @@ The name of the Batch account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L55" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L55">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Name of the Resource Group where this Batch account exists.
@@ -1805,7 +1563,7 @@ The Name of the Resource Group where this Batch account exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetAccountResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L61" >}}">interface <b>GetAccountResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L61">interface <b>GetAccountResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1814,12 +1572,10 @@ A collection of values returned by getAccount.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetAccountResult-accountEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L65" >}}">property <b>accountEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L65">property <b>accountEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The account endpoint used to interact with the Batch service.
@@ -1827,12 +1583,10 @@ The account endpoint used to interact with the Batch service.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L102" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L102">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -1840,12 +1594,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-keyVaultReferences">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L69" >}}">property <b>keyVaultReferences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L69">property <b>keyVaultReferences</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>keyVaultReferences: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountKeyVaultReference'>outputs.batch.GetAccountKeyVaultReference</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The `keyVaultReference` block that describes the Azure KeyVault reference to use when deploying the Azure Batch account using the `UserSubscription` pool allocation mode.
@@ -1853,12 +1605,10 @@ The `keyVaultReference` block that describes the Azure KeyVault reference to use
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L73" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L73">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Azure Region in which this Batch account exists.
@@ -1866,12 +1616,10 @@ The Azure Region in which this Batch account exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L77" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L77">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Batch account name.
@@ -1879,12 +1627,10 @@ The Batch account name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-poolAllocationMode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L81" >}}">property <b>poolAllocationMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L81">property <b>poolAllocationMode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>poolAllocationMode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The pool allocation mode configured for this Batch account.
@@ -1892,12 +1638,10 @@ The pool allocation mode configured for this Batch account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L85" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L85">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Batch account primary access key.
@@ -1905,22 +1649,16 @@ The Batch account primary access key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L86" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L86">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L90" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L90">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Batch account secondary access key.
@@ -1928,12 +1666,10 @@ The Batch account secondary access key.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L94" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L94">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Storage Account used for this Batch account.
@@ -1941,12 +1677,10 @@ The ID of the Storage Account used for this Batch account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetAccountResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getAccount.ts#L98" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getAccount.ts#L98">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A map of tags assigned to the Batch account.
@@ -1955,7 +1689,7 @@ A map of tags assigned to the Batch account.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCertificateArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L49" >}}">interface <b>GetCertificateArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L49">interface <b>GetCertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1964,12 +1698,10 @@ A collection of arguments for invoking getCertificate.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetCertificateArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L53" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L53">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Batch account.
@@ -1977,12 +1709,10 @@ The name of the Batch account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L57" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L57">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Batch certificate.
@@ -1990,12 +1720,10 @@ The name of the Batch certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L61" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L61">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Name of the Resource Group where this Batch account exists.
@@ -2004,7 +1732,7 @@ The Name of the Resource Group where this Batch account exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCertificateResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L67" >}}">interface <b>GetCertificateResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L67">interface <b>GetCertificateResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2013,22 +1741,16 @@ A collection of values returned by getCertificate.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetCertificateResult-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L68" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L68">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-format">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L72" >}}">property <b>format</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L72">property <b>format</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>format: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The format of the certificate, such as `Cer` or `Pfx`.
@@ -2036,12 +1758,10 @@ The format of the certificate, such as `Cer` or `Pfx`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L90" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L90">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2049,22 +1769,16 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L73" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L73">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-publicData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L77" >}}">property <b>publicData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L77">property <b>publicData</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>publicData: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The public key of the certificate.
@@ -2072,22 +1786,16 @@ The public key of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L78" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L78">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-thumbprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L82" >}}">property <b>thumbprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L82">property <b>thumbprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>thumbprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The thumbprint of the certificate.
@@ -2095,12 +1803,10 @@ The thumbprint of the certificate.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-thumbprintAlgorithm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getCertificate.ts#L86" >}}">property <b>thumbprintAlgorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getCertificate.ts#L86">property <b>thumbprintAlgorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>thumbprintAlgorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The algorithm of the certificate thumbprint.
@@ -2109,7 +1815,7 @@ The algorithm of the certificate thumbprint.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L49" >}}">interface <b>GetPoolArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L49">interface <b>GetPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2118,58 +1824,38 @@ A collection of arguments for invoking getPool.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPoolArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L50" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L50">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolArgs-certificates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L51" >}}">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L51">property <b>certificates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolCertificate'>inputs.batch.GetPoolCertificate</a>[];</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L52" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L52">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L53">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolArgs-startTask">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L54" >}}">property <b>startTask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L54">property <b>startTask</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startTask?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetPoolStartTask'>inputs.batch.GetPoolStartTask</a>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetPoolResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L60" >}}">interface <b>GetPoolResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L60">interface <b>GetPoolResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2178,12 +1864,10 @@ A collection of values returned by getPool.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetPoolResult-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L64" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L64">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Batch account.
@@ -2191,12 +1875,10 @@ The name of the Batch account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-autoScales">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L68" >}}">property <b>autoScales</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L68">property <b>autoScales</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoScales: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolAutoScale'>outputs.batch.GetPoolAutoScale</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `autoScale` block that describes the scale settings when using auto scale.
@@ -2204,12 +1886,10 @@ A `autoScale` block that describes the scale settings when using auto scale.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-certificates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L72" >}}">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L72">property <b>certificates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolCertificate'>outputs.batch.GetPoolCertificate</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `certificate` blocks that describe the certificates installed on each compute node in the pool.
@@ -2217,12 +1897,10 @@ One or more `certificate` blocks that describe the certificates installed on eac
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-containerConfigurations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L76" >}}">property <b>containerConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L76">property <b>containerConfigurations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>containerConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolContainerConfiguration'>outputs.batch.GetPoolContainerConfiguration</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The container configuration used in the pool's VMs.
@@ -2230,22 +1908,16 @@ The container configuration used in the pool's VMs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L77" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L77">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-fixedScales">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L81" >}}">property <b>fixedScales</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L81">property <b>fixedScales</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedScales: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolFixedScale'>outputs.batch.GetPoolFixedScale</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `fixedScale` block that describes the scale settings when using fixed scale.
@@ -2253,12 +1925,10 @@ A `fixedScale` block that describes the scale settings when using fixed scale.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L110" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L110">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2266,12 +1936,10 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-maxTasksPerNode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L85" >}}">property <b>maxTasksPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L85">property <b>maxTasksPerNode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxTasksPerNode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of tasks that can run concurrently on a single compute node in the pool.
@@ -2279,12 +1947,10 @@ The maximum number of tasks that can run concurrently on a single compute node i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L89" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L89">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the Batch pool.
@@ -2292,12 +1958,10 @@ The name of the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-nodeAgentSkuId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L93" >}}">property <b>nodeAgentSkuId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L93">property <b>nodeAgentSkuId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeAgentSkuId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The Sku of the node agents in the Batch pool.
@@ -2305,22 +1969,16 @@ The Sku of the node agents in the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L94" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L94">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-startTask">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L98" >}}">property <b>startTask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L98">property <b>startTask</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startTask?: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStartTask'>outputs.batch.GetPoolStartTask</a>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `startTask` block that describes the start task settings for the Batch pool.
@@ -2328,12 +1986,10 @@ A `startTask` block that describes the start task settings for the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-storageImageReferences">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L102" >}}">property <b>storageImageReferences</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L102">property <b>storageImageReferences</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageImageReferences: <a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPoolStorageImageReference'>outputs.batch.GetPoolStorageImageReference</a>[];</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The reference of the storage image used by the nodes in the Batch pool.
@@ -2341,12 +1997,10 @@ The reference of the storage image used by the nodes in the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetPoolResult-vmSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/getPool.ts#L106" >}}">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/getPool.ts#L106">property <b>vmSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vmSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The size of the VM created in the Batch pool.
@@ -2355,7 +2009,7 @@ The size of the VM created in the Batch pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L226" >}}">interface <b>PoolArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L226">interface <b>PoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2364,12 +2018,10 @@ The set of arguments for constructing a Pool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolArgs-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L230" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L230">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.
@@ -2377,12 +2029,10 @@ Specifies the name of the Batch account in which the pool will be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-autoScale">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L234" >}}">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L234">property <b>autoScale</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolAutoScale'>inputs.batch.PoolAutoScale</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `autoScale` block that describes the scale settings when using auto scale.
@@ -2390,12 +2040,10 @@ A `autoScale` block that describes the scale settings when using auto scale.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-certificates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L238" >}}">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L238">property <b>certificates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolCertificate'>inputs.batch.PoolCertificate</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
@@ -2403,12 +2051,10 @@ One or more `certificate` blocks that describe the certificates to be installed 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-containerConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L242" >}}">property <b>containerConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L242">property <b>containerConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>containerConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolContainerConfiguration'>inputs.batch.PoolContainerConfiguration</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The container configuration used in the pool's VMs.
@@ -2416,12 +2062,10 @@ The container configuration used in the pool's VMs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L246" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L246">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the display name of the Batch pool.
@@ -2429,12 +2073,10 @@ Specifies the display name of the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-fixedScale">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L250" >}}">property <b>fixedScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L250">property <b>fixedScale</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolFixedScale'>inputs.batch.PoolFixedScale</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `fixedScale` block that describes the scale settings when using fixed scale.
@@ -2442,12 +2084,10 @@ A `fixedScale` block that describes the scale settings when using fixed scale.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-maxTasksPerNode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L254" >}}">property <b>maxTasksPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L254">property <b>maxTasksPerNode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxTasksPerNode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to `1`. Changing this forces a new resource to be created.
@@ -2455,12 +2095,10 @@ Specifies the maximum number of tasks that can run concurrently on a single comp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L258" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L258">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch pool. Changing this forces a new resource to be created.
@@ -2468,12 +2106,10 @@ Specifies the name of the Batch pool. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-nodeAgentSkuId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L262" >}}">property <b>nodeAgentSkuId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L262">property <b>nodeAgentSkuId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeAgentSkuId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Sku of the node agents that will be created in the Batch pool.
@@ -2481,12 +2117,10 @@ Specifies the Sku of the node agents that will be created in the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L266" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L266">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch pool. Changing this forces a new resource to be created.
@@ -2494,12 +2128,10 @@ The name of the resource group in which to create the Batch pool. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-startTask">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L270" >}}">property <b>startTask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L270">property <b>startTask</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startTask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStartTask'>inputs.batch.PoolStartTask</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `startTask` block that describes the start task settings for the Batch pool.
@@ -2507,22 +2139,16 @@ A `startTask` block that describes the start task settings for the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-stopPendingResizeOperation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L271" >}}">property <b>stopPendingResizeOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L271">property <b>stopPendingResizeOperation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stopPendingResizeOperation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-storageImageReference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L275" >}}">property <b>storageImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L275">property <b>storageImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageImageReference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStorageImageReference'>inputs.batch.PoolStorageImageReference</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `storageImageReference` for the virtual machines that will compose the Batch pool.
@@ -2530,12 +2156,10 @@ A `storageImageReference` for the virtual machines that will compose the Batch p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolArgs-vmSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L279" >}}">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L279">property <b>vmSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vmSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the size of the VM created in the Batch pool.
@@ -2544,7 +2168,7 @@ Specifies the size of the VM created in the Batch pool.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PoolState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L167" >}}">interface <b>PoolState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L167">interface <b>PoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2553,12 +2177,10 @@ Input properties used for looking up and filtering Pool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PoolState-accountName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L171" >}}">property <b>accountName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L171">property <b>accountName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>accountName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch account in which the pool will be created. Changing this forces a new resource to be created.
@@ -2566,12 +2188,10 @@ Specifies the name of the Batch account in which the pool will be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-autoScale">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L175" >}}">property <b>autoScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L175">property <b>autoScale</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolAutoScale'>inputs.batch.PoolAutoScale</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `autoScale` block that describes the scale settings when using auto scale.
@@ -2579,12 +2199,10 @@ A `autoScale` block that describes the scale settings when using auto scale.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-certificates">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L179" >}}">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L179">property <b>certificates</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolCertificate'>inputs.batch.PoolCertificate</a>&gt;[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 One or more `certificate` blocks that describe the certificates to be installed on each compute node in the pool.
@@ -2592,12 +2210,10 @@ One or more `certificate` blocks that describe the certificates to be installed 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-containerConfiguration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L183" >}}">property <b>containerConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L183">property <b>containerConfiguration</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>containerConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolContainerConfiguration'>inputs.batch.PoolContainerConfiguration</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The container configuration used in the pool's VMs.
@@ -2605,12 +2221,10 @@ The container configuration used in the pool's VMs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-displayName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L187" >}}">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L187">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the display name of the Batch pool.
@@ -2618,12 +2232,10 @@ Specifies the display name of the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-fixedScale">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L191" >}}">property <b>fixedScale</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L191">property <b>fixedScale</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fixedScale?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolFixedScale'>inputs.batch.PoolFixedScale</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `fixedScale` block that describes the scale settings when using fixed scale.
@@ -2631,12 +2243,10 @@ A `fixedScale` block that describes the scale settings when using fixed scale.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-maxTasksPerNode">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L195" >}}">property <b>maxTasksPerNode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L195">property <b>maxTasksPerNode</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxTasksPerNode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum number of tasks that can run concurrently on a single compute node in the pool. Defaults to `1`. Changing this forces a new resource to be created.
@@ -2644,12 +2254,10 @@ Specifies the maximum number of tasks that can run concurrently on a single comp
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L199" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L199">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Batch pool. Changing this forces a new resource to be created.
@@ -2657,12 +2265,10 @@ Specifies the name of the Batch pool. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-nodeAgentSkuId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L203" >}}">property <b>nodeAgentSkuId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L203">property <b>nodeAgentSkuId</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeAgentSkuId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Sku of the node agents that will be created in the Batch pool.
@@ -2670,12 +2276,10 @@ Specifies the Sku of the node agents that will be created in the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L207" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L207">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Batch pool. Changing this forces a new resource to be created.
@@ -2683,12 +2287,10 @@ The name of the resource group in which to create the Batch pool. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-startTask">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L211" >}}">property <b>startTask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L211">property <b>startTask</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startTask?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStartTask'>inputs.batch.PoolStartTask</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `startTask` block that describes the start task settings for the Batch pool.
@@ -2696,22 +2298,16 @@ A `startTask` block that describes the start task settings for the Batch pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-stopPendingResizeOperation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L212" >}}">property <b>stopPendingResizeOperation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L212">property <b>stopPendingResizeOperation</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>stopPendingResizeOperation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-storageImageReference">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L216" >}}">property <b>storageImageReference</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L216">property <b>storageImageReference</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageImageReference?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStorageImageReference'>inputs.batch.PoolStorageImageReference</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 A `storageImageReference` for the virtual machines that will compose the Batch pool.
@@ -2719,12 +2315,10 @@ A `storageImageReference` for the virtual machines that will compose the Batch p
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PoolState-vmSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="batch/pool.ts#L220" >}}">property <b>vmSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/864ed91accb1f4f050abbb968cf0aae95f222f36/sdk/nodejs/batch/pool.ts#L220">property <b>vmSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vmSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Specifies the size of the VM created in the Batch pool.

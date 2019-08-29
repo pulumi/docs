@@ -20,7 +20,7 @@ title: Module tests
 <li><a href="#MochaFunc">type MochaFunc</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="pulumi" path="tests/util.ts" >}}">tests/util.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/809c91c0045ddeeeadf50bafcbeb57cadac30226/sdk/nodejs/tests/util.ts">tests/util.ts</a> 
 </div>
 </div>
 </div>
@@ -41,34 +41,28 @@ title: Module tests
 </div>
 
 <h2 class="pdoc-module-header" id="assertAsyncThrows">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="tests/util.ts#L40" >}}">function <b>assertAsyncThrows</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/809c91c0045ddeeeadf50bafcbeb57cadac30226/sdk/nodejs/tests/util.ts#L40">function <b>assertAsyncThrows</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>assertAsyncThrows(test: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="asyncTest">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="tests/util.ts#L21" >}}">function <b>asyncTest</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/809c91c0045ddeeeadf50bafcbeb57cadac30226/sdk/nodejs/tests/util.ts#L21">function <b>asyncTest</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>asyncTest(test: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;): (func: <a href='#MochaFunc'>MochaFunc</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="MochaFunc">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="pulumi" path="tests/util.ts#L17" >}}">type <b>MochaFunc</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/809c91c0045ddeeeadf50bafcbeb57cadac30226/sdk/nodejs/tests/util.ts#L17">type <b>MochaFunc</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> MochaFunc = (err: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>;</pre>
-{{< /md-disable >}}
 </div>

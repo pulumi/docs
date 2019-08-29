@@ -19,19 +19,17 @@ title: Module apiextensions/v1beta1
 <li><a href="#CustomResourceDefinitionList">class CustomResourceDefinitionList</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts" >}}">apiextensions/v1beta1/CustomResourceDefinition.ts</a> <a href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts" >}}">apiextensions/v1beta1/CustomResourceDefinitionList.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts">apiextensions/v1beta1/CustomResourceDefinition.ts</a> <a href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts">apiextensions/v1beta1/CustomResourceDefinitionList.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="CustomResourceDefinition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L14" >}}">class <b>CustomResourceDefinition</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L14">class <b>CustomResourceDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 CustomResourceDefinition represents a resource that should be exposed on the API server.  Its
@@ -39,13 +37,11 @@ name MUST be in the format &lt;.spec.name&gt;.&lt;.spec.group&gt;.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L72" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L72"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CustomResourceDefinition(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceDefinition'>inputs.apiextensions.v1beta1.CustomResourceDefinition</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -58,13 +54,11 @@ Create a apiextensions.v1beta1.CustomResourceDefinition resource with the given 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L55" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L55">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CustomResourceDefinition'>CustomResourceDefinition</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -77,25 +71,21 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L14" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L14">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L66" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L66">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -105,12 +95,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L21" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L21">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"apiextensions.k8s.io/v1beta1"</span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -121,12 +109,10 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L14" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L14">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -135,12 +121,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L29" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L29">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CustomResourceDefinition"</span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Kind is a string value representing the REST resource this object represents. Servers may
@@ -151,22 +135,16 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L32" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L32">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-spec">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L37" >}}">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L37">property <b>spec</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionSpec'>outputs.apiextensions.v1beta1.CustomResourceDefinitionSpec</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Spec describes how the user wants the resources to appear
@@ -174,12 +152,10 @@ Spec describes how the user wants the resources to appear
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L42" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L42">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionStatus'>outputs.apiextensions.v1beta1.CustomResourceDefinitionStatus</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Status indicates the actual state of the CustomResourceDefinition
@@ -187,12 +163,10 @@ Status indicates the actual state of the CustomResourceDefinition
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinition-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinition.ts#L14" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinition.ts#L14">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -202,25 +176,21 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CustomResourceDefinitionList">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L13" >}}">class <b>CustomResourceDefinitionList</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L13">class <b>CustomResourceDefinitionList</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{< /md-disable >}}
 {{% md %}}
 
 CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L66" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L66"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CustomResourceDefinitionList(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceDefinitionList'>inputs.apiextensions.v1beta1.CustomResourceDefinitionList</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -233,13 +203,11 @@ Create a apiextensions.v1beta1.CustomResourceDefinitionList resource with the gi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L49" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L49">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CustomResourceDefinitionList'>CustomResourceDefinitionList</a></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -252,25 +220,21 @@ Pulumi will keep track of this resource using `name` as the Pulumi ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L13" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L13">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L60" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L60">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-{{< /md-disable >}}
 
 {{% md %}}
 
@@ -280,12 +244,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-apiVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L20" >}}">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L20">property <b>apiVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"apiextensions.k8s.io/v1beta1"</span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 APIVersion defines the versioned schema of this representation of an object. Servers should
@@ -296,12 +258,10 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L13" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L13">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -310,12 +270,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-items">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L25" >}}">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L25">property <b>items</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinition'>outputs.apiextensions.v1beta1.CustomResourceDefinition</a>[]&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Items individual CustomResourceDefinitions
@@ -323,12 +281,10 @@ Items individual CustomResourceDefinitions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-kind">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L33" >}}">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L33">property <b>kind</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"CustomResourceDefinitionList"</span>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 Kind is a string value representing the REST resource this object represents. Servers may
@@ -339,22 +295,16 @@ https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-metadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L36" >}}">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L36">property <b>metadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;;</pre>
-{{< /md-disable >}}
-{{% md %}}
-{{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CustomResourceDefinitionList-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="kubernetes" path="apiextensions/v1beta1/CustomResourceDefinitionList.ts#L13" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/apiextensions/v1beta1/CustomResourceDefinitionList.ts#L13">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
