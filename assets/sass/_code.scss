@@ -31,3 +31,22 @@ pre {
         @apply break-normal;
     }
 }
+
+.typed {
+    .char {
+        @apply opacity-0;
+    }
+
+    .cursor {
+        @extend .blink;
+
+        &:after{
+            @apply text-white;
+			content: "|";
+		}
+    }
+}
+
+.line[data-delay] {
+    @apply opacity-0;
+}

@@ -1,246 +1,222 @@
 {{ define "hero" }}
-    <header class="header-hero header-hero-glow">
-        <div class="header-hero-items container mx-auto">
-            <div class="header-hero-item">
-                <h1>Modern Infrastructure as Code</h1>
-                <p>
-                    Create, deploy, and manage infrastructure on any cloud using your
-                    favorite language.
-                </p>
-                <div class="header-hero-actions">
-                    <a class="btn btn-lg" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                </div>
-            </div>
-            <div class="header-hero-item">
-                <div class="max-w-xl text-center">
-                    {{ partial "chrome.html" . }}
-                    <div class="relative overflow-auto relative rounded-b">
-                        <img class="carousel-item opacity-1 transition-all-200" src="/images/home/carousel-code.png" alt="Pulumi code">
-                        <img class="carousel-item opacity-0 transition-all-200 absolute inset-0 z-10" src="/images/home/carousel-cli.png" alt="Pulumi CLI">
-                        <img class="carousel-item opacity-0 transition-all-200 absolute inset-0 z-10" src="/images/home/carousel-console.png" alt="Pulumi Console">
-                    </div>
-                    <div class="inline-flex text-sm font-bold my-6">
-                        <a class="carousel-item-label cursor-pointer pb-1 border-b-2 border-orange-500">Code</a>
-                        <a class="carousel-item-label cursor-pointer pb-1 mx-4 border-orange-500">CLI</a>
-                        <a class="carousel-item-label cursor-pointer pb-1 border-orange-500">Console</a>
-                    </ul>
-                </div>
+    <header class="header-hero-home text-center mb-16 relative px-4 md:px-0">
+        <div class="relative">
+            <h1 class="font-sans font-body font-normal">
+                {{ .Params.heading }}
+            </h1>
+            <p>
+                {{ .Params.subhead | markdownify }}
+            </p>
+            <div class="mt-5">
+                <a href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-400 border border-purple-400 shadow-xl px-6 transition-all py-3 text-sm hover:bg-purple-300 hover:border-purple-300 rounded-lg" title="Create your first project with Pulumi">
+                    GET STARTED
+                </a>
             </div>
         </div>
     </header>
 {{ end }}
 
 {{ define "main" }}
-    <nav class="bg-purple-700 text-white py-6 px-4 lg:px-0">
-        <div class="container mx-auto">
-            <div class="flex items-center justify-center">
-                <div class="hidden md:block text-sm text-white mx-8 whitespace-no-wrap">
-                    Any Cloud
-                </div>
-                <ul class="inline-flex list-none p-0 items-center mx-4 md:mx-8">
-                    <li class="mr-2">
-                        <a href="{{ relref . "/partner/aws" }}"><img class="w-8" src="/logos/tech/logo-aws_white.png" alt="aws"></a>
-                    </li>
-                    <li class="mr-2">
-                        <a href="{{ relref . "/partner/azure" }}"><img class="w-8" src="/logos/tech/logo-azure.png" alt="azure"></a>
-                    </li>
-                    <li class="mr-2">
-                        <a href="{{ relref . "/partner/gcp" }}"><img class="w-8" src="/logos/tech/logo-gd.png" alt="google cloud platform"></a>
-                    </li>
-                    <li class="mr-2">
-                        <a href="{{ relref . "/topics/kubernetes" }}"><img class="w-8" src="/logos/tech/logo-kubernetes.png" alt="kubernetes"></a>
-                    </li>
-                </ul>
-                <ul class="inline-flex list-none p-0 items-center mx-4 md:mx-8">
-                    <li class="mr-2">
-                        <img class="w-8" src="/logos/tech/logo-js.png" alt="js">
-                    </li>
-                    <li class="mr-2">
-                        <img class="w-8" src="/logos/tech/logo-python.png" alt="python">
-                    </li>
-                    <li class="mr-2">
-                        <img class="w-16" src="/logos/tech/logo-golang.png" alt="golang">
-                    </li>
-                    <li class="mr-2">
-                        <img class="w-8" src="/logos/tech/logo-ts.png" alt="typescript">
-                    </li>
-                </ul>
-                <div class="hidden md:block text-sm text-white mx-8 whitespace-no-wrap">
-                    Any Language
-                </div>
-            </div>
-        </div>
-    </nav>
+    <section class="pb-16 pt-8 px-4 md:px-0" style="background: linear-gradient(#ffffff 50%, #f5fbff 100%);">
+        <div class="container mx-auto text-center">
 
-    <section class="py-16">
-        <div class="container mx-auto text-center px-4 lg:px-0">
-            <h2 class="text-black">Companies Innovating with Pulumi</h2>
-            <div class="lg:flex items-center justify-center my-12">
-                <a href="https://www.tableau.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
-                </a>
-                <a href="https://mbrdna.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
-                </a>
-                <a href="https://www.mindbodyonline.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
-                </a>
-                <a href="https://www.nih.gov/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
-                </a>
-            </div>
-            <blockquote class="border-orange-500 italic text-gray-800 mb-8 max-w-5xl mx-auto">
-                We have hundreds of microservices on-premises, and we are in the process
-                of migrating them to the cloud. Pulumi is solving the multi-cloud problem
-                exactly the way I was looking for. We want to empower our teams to think
-                and act for themselves and Pulumi helps development teams build cloud
-                infrastructure using a language of their choice and allows infrastructure
-                engineering teams to build scalable reusable modules that can be leveraged
-                by other teams. So far, it’s proving to be much easier to develop and I
-                like the ability for different teams to collaborate on infrastructure
-                code. Our team really enjoys working with the Pulumi team and working on
-                the actual Pulumi product.
-            </blockquote>
-            <div class="text-sm">
-                <div class="text-black font-bold">Dinesh Ramamurthy, Engineering Manager</div>
-                <a class="link" href="http://mbrdna.com/">Mercedes-Benz Research & Development North America</a>
+            <!-- Carousel -->
+            {{ partial "carousel" . }}
+
+            <!-- CTA 0 -->
+            <div class="mt-24 mx-auto max-w-3xl md:flex items-center bg-white px-8 py-6 rounded-lg border border-gray-300 shadow-md">
+                <div>
+                    <i class="text-green-600 fas fa-check text-4xl"></i>
+                </div>
+                <div class="md:ml-8 md:mr-6 text-left pt-3 pb-6 md:py-0">
+                    {{ (index .Params.ctas 0) | markdownify }}
+                </div>
+                <div class="inline-flex items-center">
+                    <a class="btn group w-40 md:ml-4 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
+                        <span>Get Started</span>
+                        <span class="pl-1 group-hover:pl-2 transition-all">&rarr;</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="pt-16 pb-4 bg-purple-800">
-        <div class="container mx-auto text-center px-4 md:px-0">
-            <h2 class="text-white">Go Multi-Cloud</h2>
-            <p class="text-xl leading-relaxed text-purple-100 max-w-3xl mx-auto">
-                Use the best of your chosen cloud &mdash; containers, serverless, and managed
-                infrastructure &mdash; while also unleashing one consistent approach to
-                software delivery no matter your cloud provider.
-            </p>
-            <div class="md:flex flex-wrap justify-center mt-8 mb-12 mb-4">
-                <div class="w-10/12 mx-auto mb-4 md:w-1/3 md:mx-3 lg:w-1/5 bg-purple-700 text-white text-sm p-8 shadow-lg rounded">
-                    <div class="flex flex-col justify-between h-full">
-                        <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-containers.svg">
-                        <h3 class="text-white">Containers</h3>
-                        <p class="mb-auto">
-                            Rapidly deploy container-based apps into any cloud or cloud-native
-                            infrastructure from AWS Fargate to Kubernetes.
-                        </p>
-                        <a class="btn btn-sm btn-orange-translucent mt-8" href="{{ relref . "/topics/containers.md" }}">More Containers</a>
-                    </div>
-                </div>
-                <div class="w-10/12 mx-auto mb-4 md:w-1/3 md:mx-3 lg:w-1/5 bg-purple-700 text-white text-sm p-8 shadow-lg rounded">
-                    <div class="flex flex-col justify-between h-full">
-                        <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-serverless.svg">
-                        <h3 class="text-white">Serverless</h3>
-                        <p class="mb-auto">
-                            Flexibly solve a wide variety of tasks including scalable websites
-                            and APIs, event streaming and processing, all through multi-cloud
-                            and multi-language microservices.
-                        </p>
-                        <a class="btn btn-sm btn-orange-translucent mt-8" href="{{ relref . "/topics/serverless.md" }}">More Serverless</a>
-                    </div>
-                </div>
-                <div class="w-10/12 mx-auto mb-4 md:w-1/3 md:mx-3 lg:w-1/5 bg-purple-700 text-white text-sm p-8 shadow-lg rounded">
-                    <div class="flex flex-col justify-between h-full">
-                        <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-data.svg">
-                        <h3 class="text-white">Infrastructure</h3>
-                        <p class="mb-auto">
-                            Define cloud services and infrastructure in code, then
-                            continuously deploy. Correct issues in infrastructure
-                            automatically to return to the desired state.
-                        </p>
-                        <a class="btn btn-sm btn-orange-translucent mt-8" href="{{ relref . "/docs/tutorials/aws/ec2-webserver" }}">More Infrastructure</a>
-                    </div>
-                </div>
-                <div class="w-10/12 mx-auto mb-4 md:w-1/3 md:mx-3 lg:w-1/5 bg-purple-700 text-white text-sm p-8 shadow-lg rounded">
-                    <div class="flex flex-col justify-between h-full">
-                        <img class="inline-block w-24 mx-auto" src="/icons/icon-feature-kubernetes.svg">
-                        <h3 class="text-white">Kubernetes</h3>
-                        <p class="mb-auto">
-                            Deploy and orchestrate cloud native container-based apps on
-                            Kubernetes, either on-premises or in the cloud. Use real code to
-                            define and deploy Kubernetes services.
-                        </p>
-                        <a class="btn btn-sm btn-orange-translucent mt-8" href="{{ relref . "/topics/kubernetes.md" }}">More Kubernetes</a>
-                    </div>
-                </div>
-            </div>
-            <a class="btn btn-lg btn-blue" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-        </div>
-    </section>
-
-    <img class="w-full" src="/images/waves.svg">
-
-    <section class="py-16">
-        <div class="container mx-auto px-4 lg:px-0">
-            <h2 class="text-black text-center mb-8">What They're Saying About Pulumi</h2>
-            <div class="lg:flex max-w-3xl mx-auto">
-                {{ range $.Site.Data.testimonials.testimonial }}
-                    <div class="lg:mx-4 my-8 lg:my-0">
-                        <blockquote class="border-orange-500 italic text-gray-800 mb-4">
-                            {{ .content }}
-                        </blockquote>
-                        <div class="text-sm">
-                            <div class="text-black">{{ .attr }}</div>
-                            <a class="link" href="{{ .link }}" target="_blank">{{ .company }}</a>
+    <!-- Testimonials -->
+    <section class="py-16 px-4 md:px-0" style="background: url(/images/home/waves-blue.svg) repeat-x; background-position: top left;">
+        <div>
+            <div class="container mx-auto md:flex items-start">
+                <div class="md:w-1/3 mx-auto bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
+                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
+                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
+                        {{ (index .Params.quotes 0).body }}
+                    </p>
+                    <div class="leading-relaxed flex items-start">
+                        {{ if (index .Params.quotes 0).avatar }}
+                            <div class="rounded-full bg-gray-300 inline-block p-1 mr-4">
+                                <img class="w-8 h-8 rounded-full" src="{{ (index .Params.quotes 0).avatar }}">
+                            </div>
+                        {{ end }}
+                        <div>
+                            <div class="text-blue-700 font-semibold">
+                                {{ (index .Params.quotes 0).name }}
+                            </div>
+                            <div class="text-blue-500">
+                                {{ (index .Params.quotes 0).title }}
+                            </div>
                         </div>
                     </div>
-                {{ end }}
+                </div>
+                <div class="md:w-1/3 md:mx-8 my-8 md:my-0 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative">
+                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
+                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
+                        {{ (index .Params.quotes 1).body }}
+                    </p>
+                    <div class="leading-relaxed flex items-start">
+                        {{ if (index .Params.quotes 1).avatar }}
+                            <div class="rounded-full bg-gray-300 inline-block p-1 mr-4">
+                                <img class="w-8 h-8 rounded-full" src="{{ (index .Params.quotes 0).avatar }}">
+                            </div>
+                        {{ end }}
+                        <div>
+                            <div class="text-blue-700 font-semibold">
+                                {{ (index .Params.quotes 1).name }}
+                            </div>
+                            <div class="text-blue-500">
+                                {{ (index .Params.quotes 1).title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/3 bg-white py-8 px-10 text-sm rounded rounded-lg shadow-lg border border-gray-300 relative shadow-lg">
+                    <i class="fa fa-quote-left text-gray-200 absolute top-0 left-0 ml-4 mt-4 text-5xl z-0"></i>
+                    <p class="leading-loose mt-0 z-10 relative text-gray-800">
+                        {{ (index .Params.quotes 2).body }}
+                    </p>
+                    <div class="leading-relaxed flex items-start">
+                        {{ if (index .Params.quotes 2).avatar }}
+                            <div class="rounded-full bg-gray-300 inline-block p-1 mr-4">
+                                <img class="w-8 h-8 rounded-full" src="{{ (index .Params.quotes 0).avatar }}">
+                            </div>
+                        {{ end }}
+                        <div>
+                            <div class="text-blue-700 font-semibold">
+                                {{ (index .Params.quotes 2).name }}
+                            </div>
+                            <div class="text-blue-500">
+                                {{ (index .Params.quotes 2).title }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray-200 py-16">
-        <div class="container mx-auto px-4 lg:px-0 max-w-4xl">
-            <h2 class="text-black">Any Code. Any Cloud. Any Team.</h2>
+    <!-- Customer logos -->
+    <section class="mb-16 px-4 md:px-0">
+        <div class="container mx-auto flex justify-center items-center">
+            <div class="lg:flex items-center justify-center my-4">
+                <a href="https://www.tableau.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-8 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                </a>
+                <a href="https://mbrdna.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-8 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                </a>
+                <a href="https://www.mindbodyonline.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                </a>
+                <a href="https://www.nih.gov/" target="_blank">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                </a>
+            </div>
+        </div>
+    </section>
 
-            <p class="text-xl">
-                Unify development and devops practices to define, deploy, and manage cloud
-                apps and infrastructure.
+    <div class="max-w-3xl border-b border-gray-200 mx-4 md:mx-auto"></div>
+
+    <!-- Articles -->
+    <section class="bg-white py-16 md:py-24 px-4 md:px-0">
+        <div class="container mx-auto md:flex items-start">
+            <article class="md:w-1/3">
+                <div class="text-gray-600 uppercase text-sm">
+                    {{ (index .Params.articles 0).label }}
+                </div>
+                <h3 class="mt-2">
+                    <a class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 0).url }}">
+                        {{ (index .Params.articles 0).title }}
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    {{ (index .Params.articles 0).summary | markdownify }}
+                </p>
+                <p class="text-blue-500">
+                    <a href="{{ relref . (index .Params.articles 0).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
+                </p>
+            </article>
+            <article class="md:w-1/3 md:mx-8 my-12 md:my-0 py-12 md:py-0 border-t border-b border-gray-200 md:border-none">
+                <div class="text-gray-600 uppercase text-sm">
+                    {{ (index .Params.articles 1).label }}
+                </div>
+                <h3 class="mt-2">
+                    <a class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 1).url }}">
+                        {{ (index .Params.articles 1).title }}
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    {{ (index .Params.articles 1).summary | markdownify }}
+                </p>
+                <p class="text-blue-500">
+                    <a href="{{ relref . (index .Params.articles 1).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
+                </p>
+            </article>
+            <article class="md:w-1/3">
+                <div class="text-gray-600 uppercase text-sm">
+                    {{ (index .Params.articles 2).label }}
+                </div>
+                <h3 class="mt-2">
+                    <a class="text-blue-700 hover:text-blue-500" href="{{ relref . (index .Params.articles 2).url }}">
+                        {{ (index .Params.articles 2).title }}
+                    </a>
+                </h3>
+                <p class="text-gray-600">
+                    {{ (index .Params.articles 2).summary | markdownify }}
+                </p>
+                <p class="text-blue-500">
+                    <a href="{{ relref . (index .Params.articles 2).url }}" class="hover:mr-1 transition-all">Read on</a> &rarr;
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <div class="max-w-3xl border-b border-gray-200 mx-4 md:mx-auto"></div>
+
+    <div class="max-w-3xl my-24 mx-auto px-4 md:px-0">
+        <div class="text-center mb-8">
+            <h3>{{ .Params.video.heading }}</h3>
+            <p class="my-0">
+                {{ .Params.video.subhead }}
             </p>
-
-            <div class="lg:flex mt-12">
-                <div class="max-w-sm md:w-auto text-center md:text-left mx-auto md:mx-0 md:w-1/3">
-                    <img class="mx-auto md:mx-0 h-20 mb-4" src="/icons/icon-audience-dev.svg">
-                    <div class="text-xs text-purple-800">FOR DEVELOPERS</div>
-                    <div class="text-2xl text-black">Any Code.</div>
-                    <p class="text-sm">
-                        Maximize your productivity by defining cloud apps and resources as code in
-                        familiar languages.
-                    </p>
-                    <a class="text-orange-500 text-sm" href="{{ relref . "/why-pulumi#for-developers" }}">
-                        Learn More &rarr;
-                    </a>
-                </div>
-                <div class="max-w-sm md:w-auto text-center md:text-left mx-auto md:mx-0 md:w-1/3 lg:mx-8 my-12 lg:my-0">
-                    <img class="mx-auto md:mx-0 h-20 mb-4" src="/icons/icon-audience-devops.svg">
-                    <div class="text-xs text-purple-800">FOR DEVOPS</div>
-                    <div class="text-2xl text-black">Any Cloud.</div>
-                    <p class="text-sm">
-                        Deploy cloud apps and infrastructure anywhere. Eliminate cloud specific
-                        DSLs to simplify multi cloud management.
-                    </p>
-                    <a class="text-orange-500 text-sm" href="{{ relref . "/why-pulumi#for-devops" }}">
-                        Learn More &rarr;
-                    </a>
-                </div>
-                <div class="max-w-sm md:w-auto text-center md:text-left mx-auto md:mx-0 md:w-1/3">
-                    <img class="mx-auto md:mx-0 h-20 mb-4" src="/icons/icon-audience-enterprise.svg">
-                    <div class="text-xs text-purple-800">FOR ENTERPRISES</div>
-                    <div class="text-2xl text-black">Any Team.</div>
-                    <p class="text-sm">
-                        Make use of preferred practices to deliver cloud native apps and
-                        infrastructure with enterprise-grade workflows.
-                    </p>
-                    <a class="text-orange-500 text-sm" href="{{ relref . "/why-pulumi#for-enterprise" }}">
-                        Learn More &rarr;
-                    </a>
-                </div>
+        </div>
+        <div class="bg-gray-200 py-48 mx-auto rounded justify-center items-center text-center">
+            <div class="bg-gray-500 rounded-full h-16 w-16 inline-flex items-center justify-center opacity-25">
+                <i class="fas text-5xl fa-caret-right ml-2"></i>
             </div>
         </div>
-    </section>
+    </div>
 
-    {{ partial "social.html" . }}
-
-    {{ partial "learnmore-contactus.html" . }}
+    <div class="text-center pb-24 text-lg px-4 md:px-0" style="background: linear-gradient(#ffffff, #f7fafc);">
+        <div class="md:inline-flex items-center shadow-lg bg-white rounded px-4 md:px-12 py-6 mx-auto border border-gray-400">
+            <div class="text-left">
+                <p class="text-gray-700 leading-relaxed mt-0 md:mt-4">
+                    {{ (index .Params.ctas 1) | markdownify }}
+                </p>
+            </div>
+            <div class="inline-flex items-center md:ml-10">
+                <a class="btn group w-40 text-left pl-6 py-3 rounded-lg" href="{{ relref . "/docs/get-started" }}" title="Create your first project with Pulumi">
+                    <span>Get Started</span>
+                    <span class="pl-1 group-hover:pl-2 transition-all">&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </div>
 {{ end }}

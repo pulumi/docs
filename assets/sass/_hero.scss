@@ -7,6 +7,19 @@
         @apply bg-purple-800;
     }
 
+    &-home {
+        background: url(/images/home/waves-purple.svg);
+        @apply pt-24 pb-40 bg-bottom bg-cover;
+
+        h1 {
+            @apply text-white font-bold;
+        }
+
+        p {
+            @apply text-purple-100 text-xl max-w-2xl inline-block leading-relaxed;
+        }
+    }
+
     &-glow {
 
         @mixin hero-glow($center-x, $center-y) {

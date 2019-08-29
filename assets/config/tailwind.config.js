@@ -106,6 +106,11 @@ module.exports = {
         margin: [
             "responsive",
             "hover",
-        ]
+        ],
+        padding: [
+            "responsive",
+            "group-hover",
+            "hover",
+        ],
     }
 }
