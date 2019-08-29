@@ -40,10 +40,12 @@ title: Module trafficmanager
 
 
 <h2 class="pdoc-module-header" id="Endpoint">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L56" >}}">class <b>Endpoint</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L61" >}}">class <b>Endpoint</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Traffic Manager Endpoint.
@@ -65,15 +67,18 @@ const server = new random.RandomId("server", {
         azi_id: 1,
     },
 });
-const testProfile = new azure.trafficmanager.Profile("test", {
+const testTrafficManagerProfile = new azure.network.TrafficManagerProfile("test", {
     dnsConfigs: [{
         relativeName: server.hex,
         ttl: 100,
     }],
     monitorConfigs: [{
+        intervalInSeconds: 30,
         path: "/",
         port: 80,
         protocol: "http",
+        timeoutInSeconds: 9,
+        toleratedNumberOfFailures: 3,
     }],
     name: server.hex,
     resourceGroupName: testResourceGroup.name,
@@ -82,9 +87,9 @@ const testProfile = new azure.trafficmanager.Profile("test", {
     },
     trafficRoutingMethod: "Weighted",
 });
-const testEndpoint = new azure.trafficmanager.Endpoint("test", {
+const testTrafficManagerEndpoint = new azure.network.TrafficManagerEndpoint("test", {
     name: server.hex,
-    profileName: testProfile.name,
+    profileName: testTrafficManagerProfile.name,
     resourceGroupName: testResourceGroup.name,
     target: "example.com",
     type: "externalEndpoints",
@@ -92,17 +97,19 @@ const testEndpoint = new azure.trafficmanager.Endpoint("test", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/traffic_manager_endpoint.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/traffic_manager_endpoint_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Endpoint-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L155" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L168" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Endpoint(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EndpointArgs'>EndpointArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Endpoint resource with the given unique name, arguments, and options.
 
@@ -113,13 +120,15 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L65" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L70" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EndpointState'>EndpointState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Endpoint'>Endpoint</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Endpoint resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -127,34 +136,53 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L61" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L76" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L81" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Endpoint.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Endpoint-endpointLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L90" >}}">property <b>endpointLocation</b></a>
+<h3 class="pdoc-member-header" id="Endpoint-customHeaders">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L91" >}}">property <b>customHeaders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>customHeaders: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EndpointCustomHeader'>EndpointCustomHeader</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+One or more `customHeader` blocks as defined below
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Endpoint-endpointLocation">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L99" >}}">property <b>endpointLocation</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpointLocation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Azure location of the Endpoint,
@@ -166,18 +194,22 @@ location of the Azure target resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-endpointMonitorStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L91" >}}">property <b>endpointMonitorStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L100" >}}">property <b>endpointMonitorStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpointMonitorStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-endpointStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L96" >}}">property <b>endpointStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L105" >}}">property <b>endpointStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpointStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the Endpoint, can be set to
@@ -186,10 +218,12 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-geoMappings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L100" >}}">property <b>geoMappings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L109" >}}">property <b>geoMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>geoMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
@@ -197,10 +231,12 @@ A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L61" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -209,10 +245,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-minChildEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L108" >}}">property <b>minChildEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L117" >}}">property <b>minChildEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minChildEndpoints: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This argument specifies the minimum number
@@ -224,10 +262,12 @@ and defaults to `1`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L113" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L122" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Traffic Manager endpoint. Changing this forces a
@@ -236,10 +276,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L120" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L129" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the priority of this Endpoint, this must be
@@ -250,10 +292,12 @@ omitted the value will be computed in order of creation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-profileName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L125" >}}">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L134" >}}">property <b>profileName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>profileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Traffic Manager Profile to attach
@@ -262,10 +306,12 @@ create the Traffic Manager endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L130" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L139" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -273,11 +319,26 @@ create the Traffic Manager endpoint.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Endpoint-target">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L136" >}}">property <b>target</b></a>
+<h3 class="pdoc-member-header" id="Endpoint-subnets">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L143" >}}">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>subnets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EndpointSubnet'>EndpointSubnet</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+One or more `subnet` blocks as defined below
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Endpoint-target">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L149" >}}">property <b>target</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN DNS name of the target. This argument must be
@@ -287,10 +348,12 @@ will be computed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L142" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L155" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource id of an Azure resource to
@@ -300,10 +363,12 @@ target. This argument must be provided for an endpoint of type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L149" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L162" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Endpoint type, must be one of:
@@ -314,10 +379,12 @@ The Endpoint type, must be one of:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L61" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -326,10 +393,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Endpoint-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L155" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L168" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how much traffic should be distributed to this
@@ -340,10 +409,12 @@ routing method. Supports values between 1 and 1000.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Profile">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L53" >}}">class <b>Profile</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L58" >}}">class <b>Profile</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Traffic Manager Profile to which multiple endpoints can be attached.
@@ -366,15 +437,18 @@ const server = new random.RandomId("server", {
         azi_id: 1,
     },
 });
-const testProfile = new azure.trafficmanager.Profile("test", {
+const testTrafficManagerProfile = new azure.network.TrafficManagerProfile("test", {
     dnsConfigs: [{
         relativeName: server.hex,
         ttl: 100,
     }],
     monitorConfigs: [{
+        intervalInSeconds: 30,
         path: "/",
         port: 80,
         protocol: "http",
+        timeoutInSeconds: 9,
+        toleratedNumberOfFailures: 3,
     }],
     name: server.hex,
     resourceGroupName: testResourceGroup.name,
@@ -389,17 +463,19 @@ const testProfile = new azure.trafficmanager.Profile("test", {
 
 The Traffic Manager is created with the location `global`.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/traffic_manager_profile.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/traffic_manager_profile_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Profile-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L122" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L127" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Profile(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ProfileArgs'>ProfileArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Profile resource with the given unique name, arguments, and options.
 
@@ -410,13 +486,15 @@ Create a Profile resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L62" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L67" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ProfileState'>ProfileState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Profile'>Profile</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Profile resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -424,23 +502,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L58" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L73" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L78" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Profile.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -448,13 +530,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-dnsConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L84" >}}">property <b>dnsConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L89" >}}">property <b>dnsConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>dnsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    relativeName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>dnsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ProfileDnsConfig'>ProfileDnsConfig</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This block specifies the DNS configuration of the
@@ -463,10 +544,12 @@ Profile, it supports the fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L88" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L93" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the created Profile.
@@ -474,10 +557,12 @@ The FQDN of the created Profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L58" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -486,14 +571,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-monitorConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L93" >}}">property <b>monitorConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L98" >}}">property <b>monitorConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>monitorConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>monitorConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ProfileMonitorConfig'>ProfileMonitorConfig</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This block specifies the Endpoint monitoring
@@ -502,10 +585,12 @@ configuration for the Profile, it supports the fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L98" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L103" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the virtual network. Changing this forces a
@@ -514,10 +599,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-profileStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L103" >}}">property <b>profileStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L108" >}}">property <b>profileStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>profileStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the profile, can be set to either
@@ -526,10 +613,12 @@ The status of the profile, can be set to either
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L108" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L113" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -538,10 +627,12 @@ create the virtual network.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L112" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L117" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -549,10 +640,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-trafficRoutingMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L122" >}}">property <b>trafficRoutingMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L127" >}}">property <b>trafficRoutingMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>trafficRoutingMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the algorithm used to route traffic, possible values are:
@@ -566,10 +659,12 @@ Specifies the algorithm used to route traffic, possible values are:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Profile-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L58" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -579,13 +674,15 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getGeographicalLocation">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L25" >}}">function <b>getGeographicalLocation</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L27" >}}">function <b>getGeographicalLocation</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getGeographicalLocation(args: <a href='#GetGeographicalLocationArgs'>GetGeographicalLocationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetGeographicalLocationResult'>GetGeographicalLocationResult</a>&gt; &amp; <a href='#GetGeographicalLocationResult'>GetGeographicalLocationResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to access the ID of a specified Traffic Manager Geographical Location within the Geographical Hierarchy.
 
@@ -595,19 +692,19 @@ Use this data source to access the ID of a specified Traffic Manager Geographica
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = azure.trafficmanager.getGeographicalLocation({
+const test = azure.network.getTrafficManager({
     name: "World",
 });
 
 export const locationCode = test.id;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/traffic_manager_geographical_location.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/traffic_manager_geographical_location_legacy.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="EndpointArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L300" >}}">interface <b>EndpointArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L325" >}}">interface <b>EndpointArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -615,11 +712,26 @@ export const locationCode = test.id;
 The set of arguments for constructing a Endpoint resource.
 
 {{% /md %}}
-<h3 class="pdoc-member-header" id="EndpointArgs-endpointLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L308" >}}">property <b>endpointLocation</b></a>
+<h3 class="pdoc-member-header" id="EndpointArgs-customHeaders">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L329" >}}">property <b>customHeaders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EndpointCustomHeader'>EndpointCustomHeader</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+One or more `customHeader` blocks as defined below
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EndpointArgs-endpointLocation">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L337" >}}">property <b>endpointLocation</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Azure location of the Endpoint,
@@ -631,10 +743,12 @@ location of the Azure target resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-endpointStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L313" >}}">property <b>endpointStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L342" >}}">property <b>endpointStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the Endpoint, can be set to
@@ -643,10 +757,12 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-geoMappings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L317" >}}">property <b>geoMappings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L346" >}}">property <b>geoMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>geoMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
@@ -654,10 +770,12 @@ A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-minChildEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L325" >}}">property <b>minChildEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L354" >}}">property <b>minChildEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minChildEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This argument specifies the minimum number
@@ -669,10 +787,12 @@ and defaults to `1`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L330" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L359" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Traffic Manager endpoint. Changing this forces a
@@ -681,10 +801,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L337" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L366" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the priority of this Endpoint, this must be
@@ -695,10 +817,12 @@ omitted the value will be computed in order of creation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-profileName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L342" >}}">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L371" >}}">property <b>profileName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>profileName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Traffic Manager Profile to attach
@@ -707,10 +831,12 @@ create the Traffic Manager endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L347" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L376" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -718,11 +844,26 @@ create the Traffic Manager endpoint.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EndpointArgs-target">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L353" >}}">property <b>target</b></a>
+<h3 class="pdoc-member-header" id="EndpointArgs-subnets">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L380" >}}">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EndpointSubnet'>EndpointSubnet</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+One or more `subnet` blocks as defined below
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EndpointArgs-target">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L386" >}}">property <b>target</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN DNS name of the target. This argument must be
@@ -732,10 +873,12 @@ will be computed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L359" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L392" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource id of an Azure resource to
@@ -745,10 +888,12 @@ target. This argument must be provided for an endpoint of type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L366" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L399" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Endpoint type, must be one of:
@@ -759,10 +904,12 @@ The Endpoint type, must be one of:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointArgs-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L372" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L405" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how much traffic should be distributed to this
@@ -773,7 +920,7 @@ routing method. Supports values between 1 and 1000.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EndpointState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L221" >}}">interface <b>EndpointState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L238" >}}">interface <b>EndpointState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -781,11 +928,26 @@ routing method. Supports values between 1 and 1000.
 Input properties used for looking up and filtering Endpoint resources.
 
 {{% /md %}}
-<h3 class="pdoc-member-header" id="EndpointState-endpointLocation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L229" >}}">property <b>endpointLocation</b></a>
+<h3 class="pdoc-member-header" id="EndpointState-customHeaders">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L242" >}}">property <b>customHeaders</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>customHeaders?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EndpointCustomHeader'>EndpointCustomHeader</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+One or more `customHeader` blocks as defined below
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EndpointState-endpointLocation">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L250" >}}">property <b>endpointLocation</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointLocation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Azure location of the Endpoint,
@@ -797,18 +959,22 @@ location of the Azure target resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-endpointMonitorStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L230" >}}">property <b>endpointMonitorStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L251" >}}">property <b>endpointMonitorStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointMonitorStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-endpointStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L235" >}}">property <b>endpointStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L256" >}}">property <b>endpointStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpointStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the Endpoint, can be set to
@@ -817,10 +983,12 @@ either `Enabled` or `Disabled`. Defaults to `Enabled`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-geoMappings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L239" >}}">property <b>geoMappings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L260" >}}">property <b>geoMappings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>geoMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` or `DE`. The same location can't be specified in two endpoints. [See the Geographic Hierarchies documentation for more information](https://docs.microsoft.com/en-us/rest/api/trafficmanager/geographichierarchies/getdefault).
@@ -828,10 +996,12 @@ A list of Geographic Regions used to distribute traffic, such as `WORLD`, `UK` o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-minChildEndpoints">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L247" >}}">property <b>minChildEndpoints</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L268" >}}">property <b>minChildEndpoints</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minChildEndpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This argument specifies the minimum number
@@ -843,10 +1013,12 @@ and defaults to `1`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L252" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L273" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Traffic Manager endpoint. Changing this forces a
@@ -855,10 +1027,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L259" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L280" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the priority of this Endpoint, this must be
@@ -869,10 +1043,12 @@ omitted the value will be computed in order of creation.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-profileName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L264" >}}">property <b>profileName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L285" >}}">property <b>profileName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>profileName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Traffic Manager Profile to attach
@@ -881,10 +1057,12 @@ create the Traffic Manager endpoint.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L269" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L290" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -892,11 +1070,26 @@ create the Traffic Manager endpoint.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EndpointState-target">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L275" >}}">property <b>target</b></a>
+<h3 class="pdoc-member-header" id="EndpointState-subnets">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L294" >}}">property <b>subnets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subnets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EndpointSubnet'>EndpointSubnet</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+One or more `subnet` blocks as defined below
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EndpointState-target">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L300" >}}">property <b>target</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN DNS name of the target. This argument must be
@@ -906,10 +1099,12 @@ will be computed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L281" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L306" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource id of an Azure resource to
@@ -919,10 +1114,12 @@ target. This argument must be provided for an endpoint of type
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L288" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L313" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Endpoint type, must be one of:
@@ -933,10 +1130,12 @@ The Endpoint type, must be one of:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EndpointState-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L294" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/endpoint.ts#L319" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies how much traffic should be distributed to this
@@ -947,7 +1146,7 @@ routing method. Supports values between 1 and 1000.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGeographicalLocationArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L43" >}}">interface <b>GetGeographicalLocationArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L45" >}}">interface <b>GetGeographicalLocationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -956,10 +1155,12 @@ A collection of arguments for invoking getGeographicalLocation.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGeographicalLocationArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L47" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L49" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Location, for example `World`, `Europe` or `Germany`.
@@ -968,7 +1169,7 @@ Specifies the name of the Location, for example `World`, `Europe` or `Germany`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGeographicalLocationResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L53" >}}">interface <b>GetGeographicalLocationResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L55" >}}">interface <b>GetGeographicalLocationResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -977,10 +1178,12 @@ A collection of values returned by getGeographicalLocation.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGeographicalLocationResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L58" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L60" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -988,16 +1191,18 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGeographicalLocationResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L54" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/getGeographicalLocation.ts#L56" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProfileArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L230" >}}">interface <b>ProfileArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L235" >}}">interface <b>ProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1006,13 +1211,12 @@ The set of arguments for constructing a Profile resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProfileArgs-dnsConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L235" >}}">property <b>dnsConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L240" >}}">property <b>dnsConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dnsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    relativeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>dnsConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProfileDnsConfig'>ProfileDnsConfig</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This block specifies the DNS configuration of the
@@ -1021,14 +1225,12 @@ Profile, it supports the fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileArgs-monitorConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L240" >}}">property <b>monitorConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L245" >}}">property <b>monitorConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>monitorConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>monitorConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProfileMonitorConfig'>ProfileMonitorConfig</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This block specifies the Endpoint monitoring
@@ -1037,10 +1239,12 @@ configuration for the Profile, it supports the fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L245" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L250" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the virtual network. Changing this forces a
@@ -1049,10 +1253,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileArgs-profileStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L250" >}}">property <b>profileStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L255" >}}">property <b>profileStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>profileStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the profile, can be set to either
@@ -1061,10 +1267,12 @@ The status of the profile, can be set to either
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L255" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L260" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -1073,10 +1281,12 @@ create the virtual network.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L259" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L264" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1084,10 +1294,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileArgs-trafficRoutingMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L269" >}}">property <b>trafficRoutingMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L274" >}}">property <b>trafficRoutingMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>trafficRoutingMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the algorithm used to route traffic, possible values are:
@@ -1102,7 +1314,7 @@ Specifies the algorithm used to route traffic, possible values are:
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProfileState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L181" >}}">interface <b>ProfileState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L186" >}}">interface <b>ProfileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1111,13 +1323,12 @@ Input properties used for looking up and filtering Profile resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProfileState-dnsConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L186" >}}">property <b>dnsConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L191" >}}">property <b>dnsConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dnsConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    relativeName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>dnsConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProfileDnsConfig'>ProfileDnsConfig</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This block specifies the DNS configuration of the
@@ -1126,10 +1337,12 @@ Profile, it supports the fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileState-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L190" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L195" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the created Profile.
@@ -1137,14 +1350,12 @@ The FQDN of the created Profile.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileState-monitorConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L195" >}}">property <b>monitorConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L200" >}}">property <b>monitorConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>monitorConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>monitorConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ProfileMonitorConfig'>ProfileMonitorConfig</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This block specifies the Endpoint monitoring
@@ -1153,10 +1364,12 @@ configuration for the Profile, it supports the fields documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L200" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L205" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the virtual network. Changing this forces a
@@ -1165,10 +1378,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileState-profileStatus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L205" >}}">property <b>profileStatus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L210" >}}">property <b>profileStatus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>profileStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the profile, can be set to either
@@ -1177,10 +1392,12 @@ The status of the profile, can be set to either
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L210" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L215" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -1189,10 +1406,12 @@ create the virtual network.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L214" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L219" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1200,10 +1419,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProfileState-trafficRoutingMethod">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L224" >}}">property <b>trafficRoutingMethod</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="trafficmanager/profile.ts#L229" >}}">property <b>trafficRoutingMethod</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>trafficRoutingMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the algorithm used to route traffic, possible values are:

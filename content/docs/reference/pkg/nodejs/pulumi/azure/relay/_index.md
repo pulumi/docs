@@ -34,10 +34,12 @@ title: Module relay
 
 
 <h2 class="pdoc-module-header" id="Namespace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L33" >}}">class <b>Namespace</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L35" >}}">class <b>Namespace</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages an Azure Relay Namespace.
@@ -67,13 +69,15 @@ const testNamespace = new azure.relay.Namespace("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L103" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L105" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Namespace(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NamespaceArgs'>NamespaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Namespace resource with the given unique name, arguments, and options.
 
@@ -84,13 +88,15 @@ Create a Namespace resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NamespaceState'>NamespaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Namespace'>Namespace</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Namespace resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -98,23 +104,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Namespace.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -122,10 +132,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -134,10 +146,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L63" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L65" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the Azure Relay Namespace exists. Changing this forces a new resource to be created.
@@ -145,10 +159,12 @@ Specifies the supported Azure location where the Azure Relay Namespace exists. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-metricId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L67" >}}">property <b>metricId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L69" >}}">property <b>metricId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metricId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Identifier for Azure Insights metrics.
@@ -156,10 +172,12 @@ The Identifier for Azure Insights metrics.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Azure Relay Namespace. Changing this forces a new resource to be created.
@@ -167,10 +185,12 @@ Specifies the name of the Azure Relay Namespace. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L75" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L77" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary connection string for the authorization rule `RootManageSharedAccessKey`.
@@ -178,10 +198,12 @@ The primary connection string for the authorization rule `RootManageSharedAccess
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L79" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L81" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -189,10 +211,12 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L83" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L85" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Azure Relay Namespace.
@@ -200,10 +224,12 @@ The name of the resource group in which to create the Azure Relay Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L87" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L89" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary connection string for the authorization rule `RootManageSharedAccessKey`.
@@ -211,10 +237,12 @@ The secondary connection string for the authorization rule `RootManageSharedAcce
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L91" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L93" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -222,12 +250,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L95" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L97" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ) A `sku` block as described below.
@@ -235,10 +263,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L99" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L101" >}}">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SKU to use. At this time the only supported value is `Standard`.
@@ -246,10 +276,12 @@ The name of the SKU to use. At this time the only supported value is `Standard`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L103" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L105" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -257,10 +289,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -270,7 +304,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L209" >}}">interface <b>NamespaceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L211" >}}">interface <b>NamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -279,10 +313,12 @@ The set of arguments for constructing a Namespace resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L213" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L215" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the Azure Relay Namespace exists. Changing this forces a new resource to be created.
@@ -290,10 +326,12 @@ Specifies the supported Azure location where the Azure Relay Namespace exists. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L217" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L219" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Azure Relay Namespace. Changing this forces a new resource to be created.
@@ -301,10 +339,12 @@ Specifies the name of the Azure Relay Namespace. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L221" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L223" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Azure Relay Namespace.
@@ -312,12 +352,12 @@ The name of the resource group in which to create the Azure Relay Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L225" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L227" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ) A `sku` block as described below.
@@ -325,10 +365,12 @@ The name of the resource group in which to create the Azure Relay Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L229" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L231" >}}">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SKU to use. At this time the only supported value is `Standard`.
@@ -336,10 +378,12 @@ The name of the SKU to use. At this time the only supported value is `Standard`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L233" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L235" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -348,7 +392,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L159" >}}">interface <b>NamespaceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L161" >}}">interface <b>NamespaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -357,10 +401,12 @@ Input properties used for looking up and filtering Namespace resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L163" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L165" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the Azure Relay Namespace exists. Changing this forces a new resource to be created.
@@ -368,10 +414,12 @@ Specifies the supported Azure location where the Azure Relay Namespace exists. C
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-metricId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L167" >}}">property <b>metricId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L169" >}}">property <b>metricId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Identifier for Azure Insights metrics.
@@ -379,10 +427,12 @@ The Identifier for Azure Insights metrics.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L171" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L173" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Azure Relay Namespace. Changing this forces a new resource to be created.
@@ -390,10 +440,12 @@ Specifies the name of the Azure Relay Namespace. Changing this forces a new reso
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L175" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L177" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary connection string for the authorization rule `RootManageSharedAccessKey`.
@@ -401,10 +453,12 @@ The primary connection string for the authorization rule `RootManageSharedAccess
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L179" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L181" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -412,10 +466,12 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L183" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L185" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Azure Relay Namespace.
@@ -423,10 +479,12 @@ The name of the resource group in which to create the Azure Relay Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L187" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L189" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary connection string for the authorization rule `RootManageSharedAccessKey`.
@@ -434,10 +492,12 @@ The secondary connection string for the authorization rule `RootManageSharedAcce
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L191" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L193" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -445,12 +505,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L195" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L197" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NamespaceSku'>NamespaceSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ) A `sku` block as described below.
@@ -458,10 +518,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-skuName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L199" >}}">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L201" >}}">property <b>skuName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SKU to use. At this time the only supported value is `Standard`.
@@ -469,10 +531,12 @@ The name of the SKU to use. At this time the only supported value is `Standard`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L203" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="relay/namespace.ts#L205" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.

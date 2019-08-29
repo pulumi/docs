@@ -22,10 +22,9 @@ title: Module eventhub
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents">
 <ul>
-<li><a href="#EventGridCallbackSubscription">class EventGridCallbackSubscription</a></li>
-<li><a href="#EventGridDomain">class EventGridDomain</a></li>
-<li><a href="#EventGridEventSubscription">class EventGridEventSubscription</a></li>
-<li><a href="#EventGridFunction">class EventGridFunction</a></li>
+<li><a href="#AuthorizationRule">class AuthorizationRule</a></li>
+<li><a href="#ConsumerGroup">class ConsumerGroup</a></li>
+<li><a href="#Domain">class Domain</a></li>
 <li><a href="#EventGridTopic">class EventGridTopic</a></li>
 <li><a href="#EventHub">class EventHub</a></li>
 <li><a href="#EventHubAuthorizationRule">class EventHubAuthorizationRule</a></li>
@@ -34,29 +33,25 @@ title: Module eventhub
 <li><a href="#EventHubNamespace">class EventHubNamespace</a></li>
 <li><a href="#EventHubNamespaceAuthorizationRule">class EventHubNamespaceAuthorizationRule</a></li>
 <li><a href="#EventHubSubscription">class EventHubSubscription</a></li>
+<li><a href="#EventSubscription">class EventSubscription</a></li>
 <li><a href="#Namespace">class Namespace</a></li>
 <li><a href="#NamespaceAuthorizationRule">class NamespaceAuthorizationRule</a></li>
 <li><a href="#Queue">class Queue</a></li>
 <li><a href="#QueueAuthorizationRule">class QueueAuthorizationRule</a></li>
-<li><a href="#QueueEventSubscription">class QueueEventSubscription</a></li>
-<li><a href="#ServiceBusFunction">class ServiceBusFunction</a></li>
 <li><a href="#Subscription">class Subscription</a></li>
 <li><a href="#SubscriptionRule">class SubscriptionRule</a></li>
 <li><a href="#Topic">class Topic</a></li>
 <li><a href="#TopicAuthorizationRule">class TopicAuthorizationRule</a></li>
-<li><a href="#TopicEventSubscription">class TopicEventSubscription</a></li>
 <li><a href="#DefaultConsumerGroup">const DefaultConsumerGroup</a></li>
 <li><a href="#getEventhubNamespace">function getEventhubNamespace</a></li>
+<li><a href="#getNamespace">function getNamespace</a></li>
 <li><a href="#getServiceBusNamespace">function getServiceBusNamespace</a></li>
-<li><a href="#EventGridCallbackSubscriptionArgs">interface EventGridCallbackSubscriptionArgs</a></li>
-<li><a href="#EventGridContext">interface EventGridContext</a></li>
-<li><a href="#EventGridDomainArgs">interface EventGridDomainArgs</a></li>
-<li><a href="#EventGridDomainState">interface EventGridDomainState</a></li>
-<li><a href="#EventGridEvent">interface EventGridEvent</a></li>
-<li><a href="#EventGridEventSubscriptionArgs">interface EventGridEventSubscriptionArgs</a></li>
-<li><a href="#EventGridEventSubscriptionState">interface EventGridEventSubscriptionState</a></li>
-<li><a href="#EventGridFunctionArgs">interface EventGridFunctionArgs</a></li>
-<li><a href="#EventGridScope">interface EventGridScope</a></li>
+<li><a href="#AuthorizationRuleArgs">interface AuthorizationRuleArgs</a></li>
+<li><a href="#AuthorizationRuleState">interface AuthorizationRuleState</a></li>
+<li><a href="#ConsumerGroupArgs">interface ConsumerGroupArgs</a></li>
+<li><a href="#ConsumerGroupState">interface ConsumerGroupState</a></li>
+<li><a href="#DomainArgs">interface DomainArgs</a></li>
+<li><a href="#DomainState">interface DomainState</a></li>
 <li><a href="#EventGridTopicArgs">interface EventGridTopicArgs</a></li>
 <li><a href="#EventGridTopicState">interface EventGridTopicState</a></li>
 <li><a href="#EventHubArgs">interface EventHubArgs</a></li>
@@ -73,12 +68,15 @@ title: Module eventhub
 <li><a href="#EventHubNamespaceState">interface EventHubNamespaceState</a></li>
 <li><a href="#EventHubState">interface EventHubState</a></li>
 <li><a href="#EventHubSubscriptionArgs">interface EventHubSubscriptionArgs</a></li>
+<li><a href="#EventSubscriptionArgs">interface EventSubscriptionArgs</a></li>
+<li><a href="#EventSubscriptionState">interface EventSubscriptionState</a></li>
 <li><a href="#GetEventHubFunctionArgs">interface GetEventHubFunctionArgs</a></li>
 <li><a href="#GetEventhubNamespaceArgs">interface GetEventhubNamespaceArgs</a></li>
 <li><a href="#GetEventhubNamespaceResult">interface GetEventhubNamespaceResult</a></li>
+<li><a href="#GetNamespaceArgs">interface GetNamespaceArgs</a></li>
+<li><a href="#GetNamespaceResult">interface GetNamespaceResult</a></li>
 <li><a href="#GetServiceBusNamespaceArgs">interface GetServiceBusNamespaceArgs</a></li>
 <li><a href="#GetServiceBusNamespaceResult">interface GetServiceBusNamespaceResult</a></li>
-<li><a href="#GetTopicFunctionArgs">interface GetTopicFunctionArgs</a></li>
 <li><a href="#NamespaceArgs">interface NamespaceArgs</a></li>
 <li><a href="#NamespaceAuthorizationRuleArgs">interface NamespaceAuthorizationRuleArgs</a></li>
 <li><a href="#NamespaceAuthorizationRuleState">interface NamespaceAuthorizationRuleState</a></li>
@@ -86,14 +84,7 @@ title: Module eventhub
 <li><a href="#QueueArgs">interface QueueArgs</a></li>
 <li><a href="#QueueAuthorizationRuleArgs">interface QueueAuthorizationRuleArgs</a></li>
 <li><a href="#QueueAuthorizationRuleState">interface QueueAuthorizationRuleState</a></li>
-<li><a href="#QueueEventSubscriptionArgs">interface QueueEventSubscriptionArgs</a></li>
 <li><a href="#QueueState">interface QueueState</a></li>
-<li><a href="#ResourceGroupEventGridCallbackSubscriptionArgs">interface ResourceGroupEventGridCallbackSubscriptionArgs</a></li>
-<li><a href="#ServiceBusContext">interface ServiceBusContext</a></li>
-<li><a href="#ServiceBusFunctionArgs">interface ServiceBusFunctionArgs</a></li>
-<li><a href="#ServiceBusHostExtensions">interface ServiceBusHostExtensions</a></li>
-<li><a href="#ServiceBusHostSettings">interface ServiceBusHostSettings</a></li>
-<li><a href="#StorageAccountEventGridCallbackSubscriptionArgs">interface StorageAccountEventGridCallbackSubscriptionArgs</a></li>
 <li><a href="#SubscriptionArgs">interface SubscriptionArgs</a></li>
 <li><a href="#SubscriptionRuleArgs">interface SubscriptionRuleArgs</a></li>
 <li><a href="#SubscriptionRuleState">interface SubscriptionRuleState</a></li>
@@ -101,95 +92,306 @@ title: Module eventhub
 <li><a href="#TopicArgs">interface TopicArgs</a></li>
 <li><a href="#TopicAuthorizationRuleArgs">interface TopicAuthorizationRuleArgs</a></li>
 <li><a href="#TopicAuthorizationRuleState">interface TopicAuthorizationRuleState</a></li>
-<li><a href="#TopicEventSubscriptionArgs">interface TopicEventSubscriptionArgs</a></li>
 <li><a href="#TopicState">interface TopicState</a></li>
 <li><a href="#events">module events</a></li>
 <li><a href="#EventHubCallback">type EventHubCallback</a></li>
-<li><a href="#ServiceBusCallback">type ServiceBusCallback</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts" >}}">eventhub/eventGridDomain.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts" >}}">eventhub/eventGridEventSubscription.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts" >}}">eventhub/eventGridTopic.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts" >}}">eventhub/eventHub.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts" >}}">eventhub/eventHubAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts" >}}">eventhub/eventHubConsumerGroup.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts" >}}">eventhub/eventHubNamespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts" >}}">eventhub/eventHubNamespaceAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts" >}}">eventhub/getEventhubNamespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts" >}}">eventhub/getServiceBusNamespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts" >}}">eventhub/namespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts" >}}">eventhub/namespaceAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/queue.ts" >}}">eventhub/queue.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts" >}}">eventhub/queueAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts" >}}">eventhub/subscription.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts" >}}">eventhub/subscriptionRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/topic.ts" >}}">eventhub/topic.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts" >}}">eventhub/topicAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts" >}}">eventhub/zMixins.ts</a> 
+<a href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts" >}}">eventhub/authorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts" >}}">eventhub/consumerGroup.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/domain.ts" >}}">eventhub/domain.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts" >}}">eventhub/eventGridTopic.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts" >}}">eventhub/eventHub.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts" >}}">eventhub/eventHubAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts" >}}">eventhub/eventHubConsumerGroup.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts" >}}">eventhub/eventHubNamespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts" >}}">eventhub/eventHubNamespaceAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts" >}}">eventhub/eventSubscription.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts" >}}">eventhub/getEventhubNamespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts" >}}">eventhub/getNamespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts" >}}">eventhub/getServiceBusNamespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts" >}}">eventhub/namespace.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts" >}}">eventhub/namespaceAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/queue.ts" >}}">eventhub/queue.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts" >}}">eventhub/queueAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts" >}}">eventhub/subscription.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts" >}}">eventhub/subscriptionRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/topic.ts" >}}">eventhub/topic.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts" >}}">eventhub/topicAuthorizationRule.ts</a> <a href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts" >}}">eventhub/zMixins.ts</a> 
 </div>
 </div>
 </div>
 
 
-<h2 class="pdoc-module-header" id="EventGridCallbackSubscription">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L652" >}}">class <b>EventGridCallbackSubscription</b></a>
+<h2 class="pdoc-module-header" id="AuthorizationRule">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L52" >}}">class <b>AuthorizationRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
-A callback-based subscription to events coming from Event Grid. Creates an Azure Function and
-an Event Grid Event Subscription with the webhook URL pointing to the Azure Function.
+Manages a Event Hubs authorization Rule within an Event Hub.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("test", {
+    location: "West US",
+    name: "resourceGroup1",
+});
+const testEventHubNamespace = new azure.eventhub.EventHubNamespace("test", {
+    capacity: 2,
+    location: "West US",
+    name: "acceptanceTestEventHubNamespace",
+    resourceGroupName: testResourceGroup.name,
+    sku: "Basic",
+    tags: {
+        environment: "Production",
+    },
+});
+const testEventHub = new azure.eventhub.EventHub("test", {
+    messageRetention: 2,
+    name: "acceptanceTestEventHub",
+    namespaceName: testEventHubNamespace.name,
+    partitionCount: 2,
+    resourceGroupName: testResourceGroup.name,
+});
+const testAuthorizationRule = new azure.eventhub.AuthorizationRule("test", {
+    eventhubName: testEventHub.name,
+    listen: true,
+    manage: false,
+    name: "navi",
+    namespaceName: testEventHubNamespace.name,
+    resourceGroupName: testResourceGroup.name,
+    send: false,
+});
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_authorization_rule.html.markdown.
 
 {{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscription-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L653" >}}"> <b>constructor</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRule-constructor">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L123" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AuthorizationRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AuthorizationRuleArgs'>AuthorizationRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
+
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventGridCallbackSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, scope: <a href='#EventGridScope'>EventGridScope</a>, args: <a href='#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;T&gt;, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
+Create a AuthorizationRule resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRule-get">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AuthorizationRuleState'>AuthorizationRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AuthorizationRule'>AuthorizationRule</a></pre>
+{{< /md-disable >}}
+
 {{% md %}}
 
+Get an existing AuthorizationRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-getProvider">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L52" >}}">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscription-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscription-functionApp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L739" >}}">property <b>functionApp</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
 {{% md %}}
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscription-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L653" >}}">property <b>subscription</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRule-isInstance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>subscription: <a href='#EventGridEventSubscription'>EventGridEventSubscription</a>;</pre>
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Returns true if the given object is an instance of AuthorizationRule.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-eventhubName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L82" >}}">property <b>eventhubName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-id">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L52" >}}">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-listen">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L86" >}}">property <b>listen</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Does this Authorization Rule have permissions to Listen to the Event Hub? Defaults to `false`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L87" >}}">property <b>location</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRule-manage">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L91" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Does this Authorization Rule have permissions to Manage to the Event Hub? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L95" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub Authorization Rule resource. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-namespaceName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L99" >}}">property <b>namespaceName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-primaryConnectionString">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L103" >}}">property <b>primaryConnectionString</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Primary Connection String for the Event Hubs authorization Rule.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-primaryKey">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L107" >}}">property <b>primaryKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Primary Key for the Event Hubs authorization Rule.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L111" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-secondaryConnectionString">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L115" >}}">property <b>secondaryConnectionString</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Secondary Connection String for the Event Hubs authorization Rule.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-secondaryKey">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L119" >}}">property <b>secondaryKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Secondary Key for the Event Hubs authorization Rule.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-send">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L123" >}}">property <b>send</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Does this Authorization Rule have permissions to Send to the Event Hub? Defaults to `false`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRule-urn">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L52" >}}">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -198,11 +400,230 @@ deployments.
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="EventGridDomain">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L32" >}}">class <b>EventGridDomain</b></a>
+<h2 class="pdoc-module-header" id="ConsumerGroup">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L50" >}}">class <b>ConsumerGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("test", {
+    location: "West US",
+    name: "resourceGroup1",
+});
+const testEventHubNamespace = new azure.eventhub.EventHubNamespace("test", {
+    capacity: 2,
+    location: "West US",
+    name: "acceptanceTestEventHubNamespace",
+    resourceGroupName: testResourceGroup.name,
+    sku: "Basic",
+    tags: {
+        environment: "Production",
+    },
+});
+const testEventHub = new azure.eventhub.EventHub("test", {
+    messageRetention: 2,
+    name: "acceptanceTestEventHub",
+    namespaceName: testEventHubNamespace.name,
+    partitionCount: 2,
+    resourceGroupName: testResourceGroup.name,
+});
+const testConsumerGroup = new azure.eventhub.ConsumerGroup("test", {
+    eventhubName: testEventHub.name,
+    name: "acceptanceTestEventHubConsumerGroup",
+    namespaceName: testEventHubNamespace.name,
+    resourceGroupName: testResourceGroup.name,
+    userMetadata: "some-meta-data",
+});
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_consumer_group.html.markdown.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="ConsumerGroup-constructor">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L97" >}}"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ConsumerGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ConsumerGroupArgs'>ConsumerGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Create a ConsumerGroup resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-get">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L59" >}}">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConsumerGroupState'>ConsumerGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ConsumerGroup'>ConsumerGroup</a></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Get an existing ConsumerGroup resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-getProvider">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L50" >}}">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-isInstance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L70" >}}">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Returns true if the given object is an instance of ConsumerGroup.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-eventhubName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L80" >}}">property <b>eventhubName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-id">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L50" >}}">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L81" >}}">property <b>location</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L85" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub Consumer Group resource. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-namespaceName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L89" >}}">property <b>namespaceName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L93" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group in which the EventHub Consumer Group's grandparent Namespace exists. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-urn">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L50" >}}">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroup-userMetadata">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L97" >}}">property <b>userMetadata</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>userMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the user metadata.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="Domain">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L34" >}}">class <b>Domain</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages an EventGrid Domain
@@ -217,7 +638,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West US 2",
     name: "resourceGroup1",
 });
-const testEventGridDomain = new azure.eventhub.EventGridDomain("test", {
+const testDomain = new azure.eventgrid.Domain("test", {
     location: testResourceGroup.location,
     name: "my-eventgrid-domain",
     resourceGroupName: testResourceGroup.name,
@@ -227,19 +648,21 @@ const testEventGridDomain = new azure.eventhub.EventGridDomain("test", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_domain.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_domain_legacy.html.markdown.
 
 {{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridDomain-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L90" >}}"> <b>constructor</b></a>
+<h3 class="pdoc-member-header" id="Domain-constructor">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L92" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Domain(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DomainArgs'>DomainArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
+
 {{% md %}}
 
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventGridDomain(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventGridDomainArgs'>EventGridDomainArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-
-
-Create a EventGridDomain resource with the given unique name, arguments, and options.
+Create a Domain resource with the given unique name, arguments, and options.
 
 * `name` The _unique_ name of the resource.
 * `args` The arguments to use to populate this resource&#39;s properties.
@@ -247,60 +670,70 @@ Create a EventGridDomain resource with the given unique name, arguments, and opt
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L41" >}}">method <b>get</b></a>
+<h3 class="pdoc-member-header" id="Domain-get">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DomainState'>DomainState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Domain'>Domain</a></pre>
+{{< /md-disable >}}
+
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventGridDomainState'>EventGridDomainState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventGridDomain'>EventGridDomain</a></pre>
-
-
-Get an existing EventGridDomain resource's state with the given name, ID, and optional extra
+Get an existing Domain resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<h3 class="pdoc-member-header" id="Domain-getProvider">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L34" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L52" >}}">method <b>isInstance</b></a>
+<h3 class="pdoc-member-header" id="Domain-isInstance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
 {{% md %}}
 
-<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-
-Returns true if the given object is an instance of EventGridDomain.  This is designed to work even
+Returns true if the given object is an instance of Domain.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L62" >}}">property <b>endpoint</b></a>
+<h3 class="pdoc-member-header" id="Domain-endpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L64" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Endpoint associated with the EventGrid Domain.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<h3 class="pdoc-member-header" id="Domain-id">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L34" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -308,466 +741,119 @@ deployments and may be missing (undefined) during planning phases.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L66" >}}">property <b>inputMappingDefaultValues</b></a>
+<h3 class="pdoc-member-header" id="Domain-inputMappingDefaultValues">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L68" >}}">property <b>inputMappingDefaultValues</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>inputMappingDefaultValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    dataVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    eventType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>inputMappingDefaultValues: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `inputMappingDefaultValues` block as defined below.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-inputMappingFields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L70" >}}">property <b>inputMappingFields</b></a>
+<h3 class="pdoc-member-header" id="Domain-inputMappingFields">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L72" >}}">property <b>inputMappingFields</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>inputMappingFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    dataVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    eventTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    eventType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    topic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>inputMappingFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DomainInputMappingFields'>DomainInputMappingFields</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `inputMappingFields` block as defined below.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-inputSchema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L74" >}}">property <b>inputSchema</b></a>
+<h3 class="pdoc-member-header" id="Domain-inputSchema">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L76" >}}">property <b>inputSchema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>inputSchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `cloudeventv01schema`, `customeventschema`, or `eventgridschema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L78" >}}">property <b>location</b></a>
+<h3 class="pdoc-member-header" id="Domain-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L80" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L82" >}}">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="Domain-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L84" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L86" >}}">property <b>resourceGroupName</b></a>
+<h3 class="pdoc-member-header" id="Domain-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L88" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L90" >}}">property <b>tags</b></a>
+<h3 class="pdoc-member-header" id="Domain-tags">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L92" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomain-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<h3 class="pdoc-member-header" id="Domain-urn">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L34" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EventGridEventSubscription">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L47" >}}">class <b>EventGridEventSubscription</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
-{{% md %}}
-
-Manages an EventGrid Event Subscription
-
-## Example Usage
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as azure from "@pulumi/azure";
-
-const defaultResourceGroup = new azure.core.ResourceGroup("default", {
-    location: "West US 2",
-    name: "defaultResourceGroup",
-});
-const defaultAccount = new azure.storage.Account("default", {
-    accountReplicationType: "LRS",
-    accountTier: "Standard",
-    location: defaultResourceGroup.location,
-    name: "defaultStorageAccount",
-    resourceGroupName: defaultResourceGroup.name,
-    tags: {
-        environment: "staging",
-    },
-});
-const defaultQueue = new azure.storage.Queue("default", {
-    name: "defaultStorageQueue",
-    resourceGroupName: defaultResourceGroup.name,
-    storageAccountName: defaultAccount.name,
-});
-const defaultEventGridEventSubscription = new azure.eventhub.EventGridEventSubscription("default", {
-    name: "defaultEventSubscription",
-    scope: defaultResourceGroup.id,
-    storageQueueEndpoint: {
-        queueName: defaultQueue.name,
-        storageAccountId: defaultAccount.id,
-    },
-});
-```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_event_subscription.html.markdown.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L125" >}}"> <b>constructor</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventGridEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventGridEventSubscriptionArgs'>EventGridEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
-
-
-Create a EventGridEventSubscription resource with the given unique name, arguments, and options.
-
-* `name` The _unique_ name of the resource.
-* `args` The arguments to use to populate this resource&#39;s properties.
-* `opts` A bag of options that control this resource&#39;s behavior.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L56" >}}">method <b>get</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventGridEventSubscriptionState'>EventGridEventSubscriptionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventGridEventSubscription'>EventGridEventSubscription</a></pre>
-
-
-Get an existing EventGridEventSubscription resource's state with the given name, ID, and optional extra
-properties used to qualify the lookup.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L67" >}}">method <b>isInstance</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-
-Returns true if the given object is an instance of EventGridEventSubscription.  This is designed to work even
-when multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-eventDeliverySchema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L77" >}}">property <b>eventDeliverySchema</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>eventDeliverySchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-eventhubEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L81" >}}">property <b>eventhubEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>eventhubEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    eventhubId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{% md %}}
-
-A `eventhubEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-hybridConnectionEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L85" >}}">property <b>hybridConnectionEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>hybridConnectionEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    hybridConnectionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{% md %}}
-
-A `hybridConnectionEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
-{{% md %}}
-
-id is the provider-assigned unique ID for this managed resource.  It is set during
-deployments and may be missing (undefined) during planning phases.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-includedEventTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L89" >}}">property <b>includedEventTypes</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>includedEventTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
-{{% md %}}
-
-A list of applicable event types that need to be part of the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L93" >}}">property <b>labels</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{% md %}}
-
-A list of labels to assign to the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L97" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-retryPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L101" >}}">property <b>retryPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>retryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    eventTimeToLive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    maxDeliveryAttempts: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
-{{% md %}}
-
-A `retryPolicy` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L105" >}}">property <b>scope</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-storageBlobDeadLetterDestination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L109" >}}">property <b>storageBlobDeadLetterDestination</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>storageBlobDeadLetterDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    storageBlobContainerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{% md %}}
-
-A `storageBlobDeadLetterDestination` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-storageQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L113" >}}">property <b>storageQueueEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>storageQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    queueName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{% md %}}
-
-A `storageQueueEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-subjectFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L117" >}}">property <b>subjectFilter</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>subjectFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    caseSensitive: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    subjectBeginsWith: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subjectEndsWith: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{% md %}}
-
-A `subjectFilter` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L121" >}}">property <b>topicName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the name of the topic to associate with the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{% md %}}
-
-urn is the stable logical URN used to distinctly address a resource, both before and after
-deployments.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscription-webhookEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L125" >}}">property <b>webhookEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>webhookEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
-{{% md %}}
-
-A `webhookEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EventGridFunction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L596" >}}">class <b>EventGridFunction</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;</pre>
-{{% md %}}
-
-Azure Function triggered by a Event Grid Topic.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridFunction-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L596" >}}"> <b>constructor</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventGridFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventGridFunctionArgs'>EventGridFunctionArgs</a>&lt;T&gt;)</pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridFunction-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L476" >}}">property <b>appSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</pre>
-{{% md %}}
-
-Application settings required by the function.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridFunction-bindings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L466" >}}">property <b>bindings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</pre>
-{{% md %}}
-
-An array of function binding definitions.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridFunction-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L471" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-Function callback.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridFunction-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L461" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-
-Function name.
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventGridTopic">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L34" >}}">class <b>EventGridTopic</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L36" >}}">class <b>EventGridTopic</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages an EventGrid Topic
@@ -784,7 +870,7 @@ const testResourceGroup = new azure.core.ResourceGroup("test", {
     location: "West US 2",
     name: "resourceGroup1",
 });
-const testEventGridTopic = new azure.eventhub.EventGridTopic("test", {
+const testTopic = new azure.eventgrid.Topic("test", {
     location: testResourceGroup.location,
     name: "my-eventgrid-topic",
     resourceGroupName: testResourceGroup.name,
@@ -794,17 +880,19 @@ const testEventGridTopic = new azure.eventhub.EventGridTopic("test", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_topic.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_topic_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridTopic-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L88" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L90" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventGridTopic(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventGridTopicArgs'>EventGridTopicArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a EventGridTopic resource with the given unique name, arguments, and options.
 
@@ -815,13 +903,15 @@ Create a EventGridTopic resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventGridTopicState'>EventGridTopicState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventGridTopic'>EventGridTopic</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing EventGridTopic resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -829,23 +919,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of EventGridTopic.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -853,10 +947,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L64" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L66" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Endpoint associated with the EventGrid Topic.
@@ -864,10 +960,12 @@ The Endpoint associated with the EventGrid Topic.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -876,10 +974,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L68" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L70" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -887,10 +987,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L72" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L74" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventGrid Topic resource. Changing this forces a new resource to be created.
@@ -898,10 +1000,12 @@ Specifies the name of the EventGrid Topic resource. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L76" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L78" >}}">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Shared Access Key associated with the EventGrid Topic.
@@ -909,10 +1013,12 @@ The Primary Shared Access Key associated with the EventGrid Topic.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L80" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L82" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
@@ -920,10 +1026,12 @@ The name of the resource group in which the EventGrid Topic exists. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L84" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L86" >}}">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Shared Access Key associated with the EventGrid Topic.
@@ -931,10 +1039,12 @@ The Secondary Shared Access Key associated with the EventGrid Topic.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L88" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L90" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -942,10 +1052,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopic-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -955,10 +1067,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHub">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L42" >}}">class <b>EventHub</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L44" >}}">class <b>EventHub</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Event Hubs as a nested resource within a Event Hubs namespace.
@@ -997,13 +1111,15 @@ const testEventHub = new azure.eventhub.EventHub("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHub-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L97" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L99" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventHub(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubArgs'>EventHubArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a EventHub resource with the given unique name, arguments, and options.
 
@@ -1014,13 +1130,15 @@ Create a EventHub resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L51" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventHubState'>EventHubState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): EventHub</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing EventHub resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1028,13 +1146,15 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-getEventFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L465" >}}">method <b>getEventFunction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L150" >}}">method <b>getEventFunction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubCallback'>EventHubCallback</a> | <a href='#GetEventHubFunctionArgs'>GetEventHubFunctionArgs</a>): <a href='#EventHubFunction'>EventHubFunction</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Creates a new Function triggered by events in the given Event Hub using the callback provided.
 [getEventFunction] creates no Azure resources automatically: the returned Function should be used as part of
@@ -1043,23 +1163,27 @@ a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L44" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L62" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of EventHub.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1067,13 +1191,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L457" >}}">method <b>onEvent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L142" >}}">method <b>onEvent</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubCallback'>EventHubCallback</a> | <a href='#EventHubSubscriptionArgs'>EventHubSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventHubSubscription'>EventHubSubscription</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Subscribes to events logged to this Event Hub to the handler provided, along
 with options to control the behavior of the subscription.
@@ -1083,22 +1209,12 @@ Use [getEventFunction] if you want to compose multiple Functions into the same A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-captureDescription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L72" >}}">property <b>captureDescription</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L74" >}}">property <b>captureDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>captureDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    destination: {
-        archiveNameFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        blobContainerName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    encoding: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    intervalInSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    sizeLimitInBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    skipEmptyArchives: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>captureDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventHubCaptureDescription'>EventHubCaptureDescription</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `captureDescription` block as defined below.
@@ -1106,10 +1222,12 @@ A `captureDescription` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L44" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1118,18 +1236,22 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L73" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L75" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-messageRetention">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L77" >}}">property <b>messageRetention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L79" >}}">property <b>messageRetention</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>messageRetention: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the number of days to retain the events for this Event Hub. Needs to be between 1 and 7 days; or 1 day when using a Basic SKU for the parent EventHub Namespace.
@@ -1137,10 +1259,12 @@ Specifies the number of days to retain the events for this Event Hub. Needs to b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L81" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L83" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.
@@ -1148,10 +1272,12 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L85" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L87" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
@@ -1159,10 +1285,12 @@ Specifies the name of the EventHub Namespace. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-partitionCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L89" >}}">property <b>partitionCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L91" >}}">property <b>partitionCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>partitionCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the current number of shards on the Event Hub. Changing this forces a new resource to be created.
@@ -1170,10 +1298,12 @@ Specifies the current number of shards on the Event Hub. Changing this forces a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-partitionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L93" >}}">property <b>partitionIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L95" >}}">property <b>partitionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>partitionIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The identifiers for partitions created for Event Hubs.
@@ -1181,10 +1311,12 @@ The identifiers for partitions created for Event Hubs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L97" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L99" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub's parent Namespace exists. Changing this forces a new resource to be created.
@@ -1192,10 +1324,12 @@ The name of the resource group in which the EventHub's parent Namespace exists. 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHub-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L44" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1205,10 +1339,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubAuthorizationRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L50" >}}">class <b>EventHubAuthorizationRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L52" >}}">class <b>EventHubAuthorizationRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Event Hubs authorization Rule within an Event Hub.
@@ -1240,7 +1376,7 @@ const testEventHub = new azure.eventhub.EventHub("test", {
     partitionCount: 2,
     resourceGroupName: testResourceGroup.name,
 });
-const testEventHubAuthorizationRule = new azure.eventhub.EventHubAuthorizationRule("test", {
+const testAuthorizationRule = new azure.eventhub.AuthorizationRule("test", {
     eventhubName: testEventHub.name,
     listen: true,
     manage: false,
@@ -1251,17 +1387,19 @@ const testEventHubAuthorizationRule = new azure.eventhub.EventHubAuthorizationRu
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_authorization_rule.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_authorization_rule_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L121" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L123" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventHubAuthorizationRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubAuthorizationRuleArgs'>EventHubAuthorizationRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a EventHubAuthorizationRule resource with the given unique name, arguments, and options.
 
@@ -1272,13 +1410,15 @@ Create a EventHubAuthorizationRule resource with the given unique name, argument
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L59" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventHubAuthorizationRuleState'>EventHubAuthorizationRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventHubAuthorizationRule'>EventHubAuthorizationRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing EventHubAuthorizationRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1286,23 +1426,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L52" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L70" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of EventHubAuthorizationRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1310,10 +1454,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L80" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L82" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub. Changing this forces a new resource to be created.
@@ -1321,10 +1467,12 @@ Specifies the name of the EventHub. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L52" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1333,10 +1481,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L84" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L86" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Listen to the Event Hub? Defaults to `false`.
@@ -1344,18 +1494,22 @@ Does this Authorization Rule have permissions to Listen to the Event Hub? Defaul
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L85" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L87" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L89" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L91" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Manage to the Event Hub? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -1363,10 +1517,12 @@ Does this Authorization Rule have permissions to Manage to the Event Hub? When t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L93" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L95" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Authorization Rule resource. Changing this forces a new resource to be created.
@@ -1374,10 +1530,12 @@ Specifies the name of the EventHub Authorization Rule resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L97" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L99" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
@@ -1385,10 +1543,12 @@ Specifies the name of the grandparent EventHub Namespace. Changing this forces a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L101" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L103" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the Event Hubs authorization Rule.
@@ -1396,10 +1556,12 @@ The Primary Connection String for the Event Hubs authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L105" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L107" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the Event Hubs authorization Rule.
@@ -1407,10 +1569,12 @@ The Primary Key for the Event Hubs authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L109" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L111" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
@@ -1418,10 +1582,12 @@ The name of the resource group in which the EventHub Namespace exists. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L113" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L115" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the Event Hubs authorization Rule.
@@ -1429,10 +1595,12 @@ The Secondary Connection String for the Event Hubs authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L117" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L119" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the Event Hubs authorization Rule.
@@ -1440,10 +1608,12 @@ The Secondary Key for the Event Hubs authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L121" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L123" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Send to the Event Hub? Defaults to `false`.
@@ -1451,10 +1621,12 @@ Does this Authorization Rule have permissions to Send to the Event Hub? Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L52" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1464,10 +1636,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubConsumerGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L48" >}}">class <b>EventHubConsumerGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L50" >}}">class <b>EventHubConsumerGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Event Hubs Consumer Group as a nested resource within an Event Hub.
@@ -1499,7 +1673,7 @@ const testEventHub = new azure.eventhub.EventHub("test", {
     partitionCount: 2,
     resourceGroupName: testResourceGroup.name,
 });
-const testEventHubConsumerGroup = new azure.eventhub.EventHubConsumerGroup("test", {
+const testConsumerGroup = new azure.eventhub.ConsumerGroup("test", {
     eventhubName: testEventHub.name,
     name: "acceptanceTestEventHubConsumerGroup",
     namespaceName: testEventHubNamespace.name,
@@ -1508,17 +1682,19 @@ const testEventHubConsumerGroup = new azure.eventhub.EventHubConsumerGroup("test
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_consumer_group.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventhub_consumer_group_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L95" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L97" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventHubConsumerGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubConsumerGroupArgs'>EventHubConsumerGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a EventHubConsumerGroup resource with the given unique name, arguments, and options.
 
@@ -1529,13 +1705,15 @@ Create a EventHubConsumerGroup resource with the given unique name, arguments, a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L57" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L59" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventHubConsumerGroupState'>EventHubConsumerGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventHubConsumerGroup'>EventHubConsumerGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing EventHubConsumerGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1543,23 +1721,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L50" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L70" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of EventHubConsumerGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1567,10 +1749,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L78" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L80" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub. Changing this forces a new resource to be created.
@@ -1578,10 +1762,12 @@ Specifies the name of the EventHub. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L50" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1590,18 +1776,22 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L79" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L81" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L83" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L85" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Consumer Group resource. Changing this forces a new resource to be created.
@@ -1609,10 +1799,12 @@ Specifies the name of the EventHub Consumer Group resource. Changing this forces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L87" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L89" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
@@ -1620,10 +1812,12 @@ Specifies the name of the grandparent EventHub Namespace. Changing this forces a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L91" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L93" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Consumer Group's grandparent Namespace exists. Changing this forces a new resource to be created.
@@ -1631,10 +1825,12 @@ The name of the resource group in which the EventHub Consumer Group's grandparen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L50" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1643,10 +1839,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroup-userMetadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L95" >}}">property <b>userMetadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L97" >}}">property <b>userMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>userMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the user metadata.
@@ -1655,30 +1853,36 @@ Specifies the user metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubFunction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L515" >}}">class <b>EventHubFunction</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L200" >}}">class <b>EventHubFunction</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Azure Function triggered by an Event Hub.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubFunction-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L515" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L200" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventHubFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubFunctionArgs'>EventHubFunctionArgs</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubFunction-appSettings">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L476" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Application settings required by the function.
@@ -1689,7 +1893,9 @@ Application settings required by the function.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L466" >}}">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An array of function binding definitions.
@@ -1700,7 +1906,9 @@ An array of function binding definitions.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L471" >}}">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Function callback.
@@ -1711,7 +1919,9 @@ Function callback.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L461" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Function name.
@@ -1720,10 +1930,12 @@ Function name.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubNamespace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L34" >}}">class <b>EventHubNamespace</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L36" >}}">class <b>EventHubNamespace</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manage an EventHub Namespace.
@@ -1754,13 +1966,15 @@ const testEventHubNamespace = new azure.eventhub.EventHubNamespace("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespace-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L114" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L116" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventHubNamespace(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubNamespaceArgs'>EventHubNamespaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a EventHubNamespace resource with the given unique name, arguments, and options.
 
@@ -1771,13 +1985,15 @@ Create a EventHubNamespace resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventHubNamespaceState'>EventHubNamespaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventHubNamespace'>EventHubNamespace</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing EventHubNamespace resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1785,23 +2001,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of EventHubNamespace.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1809,10 +2029,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-autoInflateEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L64" >}}">property <b>autoInflateEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L66" >}}">property <b>autoInflateEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoInflateEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is Auto Inflate enabled for the EventHub Namespace?
@@ -1820,10 +2042,12 @@ Is Auto Inflate enabled for the EventHub Namespace?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L68" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L70" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from 1 - 20.
@@ -1831,10 +2055,12 @@ Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L73" >}}">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L75" >}}">property <b>defaultPrimaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultPrimaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary connection string for the authorization
@@ -1843,10 +2069,12 @@ rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-defaultPrimaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L77" >}}">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L79" >}}">property <b>defaultPrimaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultPrimaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -1854,10 +2082,12 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L82" >}}">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L84" >}}">property <b>defaultSecondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultSecondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary connection string for the
@@ -1866,10 +2096,12 @@ authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-defaultSecondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L86" >}}">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L88" >}}">property <b>defaultSecondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultSecondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -1877,10 +2109,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1889,10 +2123,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-kafkaEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L90" >}}">property <b>kafkaEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L92" >}}">property <b>kafkaEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>kafkaEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is Kafka enabled for the EventHub Namespace? Defaults to `false`.
@@ -1900,10 +2136,12 @@ Is Kafka enabled for the EventHub Namespace? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L94" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L96" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -1911,10 +2149,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-maximumThroughputUnits">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L98" >}}">property <b>maximumThroughputUnits</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L100" >}}">property <b>maximumThroughputUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maximumThroughputUnits: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.
@@ -1922,10 +2162,12 @@ Specifies the maximum number of throughput units when Auto Inflate is Enabled. V
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L102" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L104" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.
@@ -1933,10 +2175,12 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L106" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L108" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
@@ -1944,10 +2188,12 @@ The name of the resource group in which to create the namespace. Changing this f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L110" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L112" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines which tier to use. Valid options are `Basic` and `Standard`.
@@ -1955,10 +2201,12 @@ Defines which tier to use. Valid options are `Basic` and `Standard`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L114" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L116" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1966,10 +2214,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespace-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1979,10 +2229,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubNamespaceAuthorizationRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L42" >}}">class <b>EventHubNamespaceAuthorizationRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L44" >}}">class <b>EventHubNamespaceAuthorizationRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages an Authorization Rule for an Event Hub Namespace.
@@ -2021,13 +2273,15 @@ const testEventHubNamespaceAuthorizationRule = new azure.eventhub.EventHubNamesp
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L109" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L111" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventHubNamespaceAuthorizationRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventHubNamespaceAuthorizationRuleArgs'>EventHubNamespaceAuthorizationRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a EventHubNamespaceAuthorizationRule resource with the given unique name, arguments, and options.
 
@@ -2038,13 +2292,15 @@ Create a EventHubNamespaceAuthorizationRule resource with the given unique name,
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L51" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L53" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventHubNamespaceAuthorizationRuleState'>EventHubNamespaceAuthorizationRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventHubNamespaceAuthorizationRule'>EventHubNamespaceAuthorizationRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing EventHubNamespaceAuthorizationRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2052,23 +2308,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L44" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L62" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L64" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of EventHubNamespaceAuthorizationRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2076,10 +2336,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L44" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2088,10 +2350,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L72" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L74" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -2099,18 +2363,22 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L73" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L75" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L77" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L79" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -2118,10 +2386,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L81" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L83" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
@@ -2129,10 +2399,12 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L85" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L87" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
@@ -2140,10 +2412,12 @@ Specifies the name of the EventHub Namespace. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L89" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L91" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the Authorization Rule.
@@ -2151,10 +2425,12 @@ The Primary Connection String for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L93" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L95" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the Authorization Rule.
@@ -2162,10 +2438,12 @@ The Primary Key for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L97" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L99" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
@@ -2173,10 +2451,12 @@ The name of the resource group in which the EventHub Namespace exists. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L101" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L103" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the Authorization Rule.
@@ -2184,10 +2464,12 @@ The Secondary Connection String for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L105" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L107" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the Authorization Rule.
@@ -2195,10 +2477,12 @@ The Secondary Key for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L109" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L111" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -2206,10 +2490,12 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L44" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2219,38 +2505,46 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubSubscription">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L485" >}}">class <b>EventHubSubscription</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L170" >}}">class <b>EventHubSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="EventHubSubscription-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L487" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L172" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventHubSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, eventHub: EventHub, args: <a href='#EventHubSubscriptionArgs'>EventHubSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>ComponentResourceOptions</a>)</pre>
+{{< /md-disable >}}
+
 {{% md %}}
-
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventHubSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, eventHub: EventHub, args: <a href='#EventHubSubscriptionArgs'>EventHubSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
-
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L170" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L170" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CustomResource.  This is designed to work even when
 multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2258,28 +2552,34 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscription-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L170" >}}">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscription-consumerGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L487" >}}">property <b>consumerGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L172" >}}">property <b>consumerGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumerGroup?: <a href='#EventHubConsumerGroup'>EventHubConsumerGroup</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscription-eventHub">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L486" >}}">property <b>eventHub</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L171" >}}">property <b>eventHub</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventHub: EventHub;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2287,15 +2587,19 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L739" >}}">property <b>functionApp</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L170" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2304,11 +2608,323 @@ deployments.
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="Namespace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L33" >}}">class <b>Namespace</b></a>
+<h2 class="pdoc-module-header" id="EventSubscription">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L49" >}}">class <b>EventSubscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Manages an EventGrid Event Subscription
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const defaultResourceGroup = new azure.core.ResourceGroup("default", {
+    location: "West US 2",
+    name: "defaultResourceGroup",
+});
+const defaultAccount = new azure.storage.Account("default", {
+    accountReplicationType: "LRS",
+    accountTier: "Standard",
+    location: defaultResourceGroup.location,
+    name: "defaultStorageAccount",
+    resourceGroupName: defaultResourceGroup.name,
+    tags: {
+        environment: "staging",
+    },
+});
+const defaultQueue = new azure.storage.Queue("default", {
+    name: "defaultStorageQueue",
+    resourceGroupName: defaultResourceGroup.name,
+    storageAccountName: defaultAccount.name,
+});
+const defaultEventSubscription = new azure.eventgrid.EventSubscription("default", {
+    name: "defaultEventSubscription",
+    scope: defaultResourceGroup.id,
+    storageQueueEndpoint: {
+        queueName: defaultQueue.name,
+        storageAccountId: defaultAccount.id,
+    },
+});
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/eventgrid_event_subscription_legacy.html.markdown.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="EventSubscription-constructor">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L127" >}}"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> EventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#EventSubscriptionArgs'>EventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Create a EventSubscription resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-get">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L58" >}}">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#EventSubscriptionState'>EventSubscriptionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#EventSubscription'>EventSubscription</a></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Get an existing EventSubscription resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-getProvider">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L49" >}}">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-isInstance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L69" >}}">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Returns true if the given object is an instance of EventSubscription.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-eventDeliverySchema">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L79" >}}">property <b>eventDeliverySchema</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>eventDeliverySchema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-eventhubEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L83" >}}">property <b>eventhubEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>eventhubEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `eventhubEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-hybridConnectionEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L87" >}}">property <b>hybridConnectionEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>hybridConnectionEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `hybridConnectionEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-id">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L49" >}}">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-includedEventTypes">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L91" >}}">property <b>includedEventTypes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>includedEventTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A list of applicable event types that need to be part of the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-labels">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L95" >}}">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A list of labels to assign to the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L99" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-retryPolicy">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L103" >}}">property <b>retryPolicy</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>retryPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `retryPolicy` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-scope">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L107" >}}">property <b>scope</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-storageBlobDeadLetterDestination">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L111" >}}">property <b>storageBlobDeadLetterDestination</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>storageBlobDeadLetterDestination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `storageBlobDeadLetterDestination` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-storageQueueEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L115" >}}">property <b>storageQueueEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>storageQueueEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `storageQueueEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-subjectFilter">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L119" >}}">property <b>subjectFilter</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>subjectFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `subjectFilter` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-topicName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L123" >}}">property <b>topicName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the topic to associate with the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-urn">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L49" >}}">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscription-webhookEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L127" >}}">property <b>webhookEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>webhookEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `webhookEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="Namespace">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L35" >}}">class <b>Namespace</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manage a ServiceBus Namespace.
@@ -2323,7 +2939,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
     name: "my-servicebus",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexSevicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -2334,17 +2950,19 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_namespace.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_namespace_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Namespace-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L103" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L105" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Namespace(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NamespaceArgs'>NamespaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Namespace resource with the given unique name, arguments, and options.
 
@@ -2355,13 +2973,15 @@ Create a Namespace resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NamespaceState'>NamespaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Namespace'>Namespace</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Namespace resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2369,23 +2989,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Namespace.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2393,10 +3017,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L63" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L65" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the capacity. When `sku` is `Premium` can be `1`, `2` or `4`. When `sku` is `Basic` or `Standard` can be `0` only.
@@ -2404,10 +3030,12 @@ Specifies the capacity. When `sku` is `Premium` can be `1`, `2` or `4`. When `sk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L68" >}}">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L70" >}}">property <b>defaultPrimaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultPrimaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary connection string for the authorization
@@ -2416,10 +3044,12 @@ rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-defaultPrimaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L72" >}}">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L74" >}}">property <b>defaultPrimaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultPrimaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -2427,10 +3057,12 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L77" >}}">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L79" >}}">property <b>defaultSecondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultSecondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary connection string for the
@@ -2439,10 +3071,12 @@ authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-defaultSecondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L81" >}}">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L83" >}}">property <b>defaultSecondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultSecondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -2450,10 +3084,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2462,10 +3098,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L85" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L87" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -2473,10 +3111,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L90" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L92" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace resource . Changing this forces a
@@ -2485,10 +3125,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L95" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L97" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -2497,10 +3139,12 @@ create the namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L99" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L101" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines which tier to use. Options are basic, standard or premium.
@@ -2508,10 +3152,12 @@ Defines which tier to use. Options are basic, standard or premium.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L103" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L105" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2519,10 +3165,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Namespace-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2532,10 +3180,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceAuthorizationRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L41" >}}">class <b>NamespaceAuthorizationRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L43" >}}">class <b>NamespaceAuthorizationRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a ServiceBus Namespace authorization Rule within a ServiceBus.
@@ -2550,7 +3200,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
     name: "my-servicebus",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexSevicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -2559,7 +3209,7 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
         source: "example",
     },
 });
-const exampleNamespaceAuthorizationRule = new azure.eventhub.NamespaceAuthorizationRule("example", {
+const exampleNamespaceAuthorizationRule = new azure.servicebus.NamespaceAuthorizationRule("example", {
     listen: true,
     manage: false,
     name: "examplerule",
@@ -2569,17 +3219,19 @@ const exampleNamespaceAuthorizationRule = new azure.eventhub.NamespaceAuthorizat
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_namespace_authorization_rule.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_namespace_authorization_rule_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L107" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L109" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NamespaceAuthorizationRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NamespaceAuthorizationRuleArgs'>NamespaceAuthorizationRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a NamespaceAuthorizationRule resource with the given unique name, arguments, and options.
 
@@ -2590,13 +3242,15 @@ Create a NamespaceAuthorizationRule resource with the given unique name, argumen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L50" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NamespaceAuthorizationRuleState'>NamespaceAuthorizationRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#NamespaceAuthorizationRule'>NamespaceAuthorizationRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing NamespaceAuthorizationRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2604,23 +3258,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L43" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L61" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of NamespaceAuthorizationRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2628,10 +3286,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L43" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2640,10 +3300,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L71" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L73" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -2651,10 +3313,12 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L75" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L77" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -2662,10 +3326,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L79" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L81" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
@@ -2673,10 +3339,12 @@ Specifies the name of the ServiceBus Namespace Authorization Rule resource. Chan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L83" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L85" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
@@ -2684,10 +3352,12 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L87" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L89" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the ServiceBus Namespace authorization Rule.
@@ -2695,10 +3365,12 @@ The Primary Connection String for the ServiceBus Namespace authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L91" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L93" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the ServiceBus Namespace authorization Rule.
@@ -2706,10 +3378,12 @@ The Primary Key for the ServiceBus Namespace authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L95" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L97" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -2717,10 +3391,12 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L99" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L101" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the ServiceBus Namespace authorization Rule.
@@ -2728,10 +3404,12 @@ The Secondary Connection String for the ServiceBus Namespace authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L103" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L105" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the ServiceBus Namespace authorization Rule.
@@ -2739,10 +3417,12 @@ The Secondary Key for the ServiceBus Namespace authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L107" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L109" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -2750,10 +3430,12 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L43" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2763,10 +3445,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Queue">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L39" >}}">class <b>Queue</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L41" >}}">class <b>Queue</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manage a ServiceBus Queue.
@@ -2781,7 +3465,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
     name: "my-servicebus",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexSevicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -2790,7 +3474,7 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
         source: "example",
     },
 });
-const exampleQueue = new azure.eventhub.Queue("example", {
+const exampleQueue = new azure.servicebus.Queue("example", {
     enablePartitioning: true,
     name: "tfexServicebusQueue",
     namespaceName: exampleNamespace.name,
@@ -2798,17 +3482,19 @@ const exampleQueue = new azure.eventhub.Queue("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Queue-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L147" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L149" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Queue(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueArgs'>QueueArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Queue resource with the given unique name, arguments, and options.
 
@@ -2819,79 +3505,56 @@ Create a Queue resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L48" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L50" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#QueueState'>QueueState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): Queue</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Queue resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Queue-getEventFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L172" >}}">method <b>getEventFunction</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | appservice.CallbackFunctionArgs&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;): <a href='#ServiceBusFunction'>ServiceBusFunction</a></pre>
-
-
-Creates a new Function triggered by messages in the given Queue using the callback provided.
-[getEventFunction] creates no Azure resources automatically: the returned Function should be used as part of
-a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Queue-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L41" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L59" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L61" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Queue.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Queue-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L164" >}}">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#QueueEventSubscription'>QueueEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Queue to the handler provided, along
-with options to control the behavior of the subscription.
-A dedicated Function App is created behind the scenes with a single Azure Function in it.
-Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Queue-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L70" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L72" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoDeleteOnIdle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the idle interval after which the
@@ -2900,10 +3563,12 @@ Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L74" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L76" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>deadLetteringOnMessageExpiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
@@ -2911,10 +3576,12 @@ Boolean flag which controls whether the Queue has dead letter support when a mes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L79" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L81" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultMessageTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the TTL of messages sent to this
@@ -2923,10 +3590,12 @@ queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L84" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L86" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>duplicateDetectionHistoryTimeWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration during which
@@ -2935,18 +3604,22 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L85" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L87" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableBatchedOperations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-enableExpress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L92" >}}">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L94" >}}">property <b>enableExpress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableExpress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether Express Entities
@@ -2957,10 +3630,12 @@ be set to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-enablePartitioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L99" >}}">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L101" >}}">property <b>enablePartitioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enablePartitioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether to enable
@@ -2971,10 +3646,12 @@ be set to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L41" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2983,10 +3660,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L104" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L106" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -2995,10 +3674,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-lockDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L108" >}}">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L110" >}}">property <b>lockDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lockDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
@@ -3006,10 +3687,12 @@ The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-maxDeliveryCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L112" >}}">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L114" >}}">property <b>maxDeliveryCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxDeliveryCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
@@ -3017,10 +3700,12 @@ Integer value which controls when a message is automatically deadlettered. Defau
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L118" >}}">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L120" >}}">property <b>maxSizeInMegabytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxSizeInMegabytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls the size of
@@ -3030,10 +3715,12 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L123" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L125" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Queue resource. Changing this forces a
@@ -3042,10 +3729,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L128" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L130" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -3054,10 +3743,12 @@ this queue in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L134" >}}">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L136" >}}">property <b>requiresDuplicateDetection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requiresDuplicateDetection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether
@@ -3067,10 +3758,12 @@ a new resource to be created. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-requiresSession">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L141" >}}">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L143" >}}">property <b>requiresSession</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requiresSession: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Queue requires sessions.
@@ -3081,10 +3774,12 @@ Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L146" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L148" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -3093,18 +3788,22 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-supportOrdering">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L147" >}}">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L149" >}}">property <b>supportOrdering</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>supportOrdering: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Queue-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L41" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3114,10 +3813,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueAuthorizationRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L48" >}}">class <b>QueueAuthorizationRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L50" >}}">class <b>QueueAuthorizationRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages an Authorization Rule for a ServiceBus Queue.
@@ -3132,7 +3833,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
     name: "my-servicebus",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexSevicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -3141,13 +3842,13 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
         source: "example",
     },
 });
-const exampleQueue = new azure.eventhub.Queue("example", {
+const exampleQueue = new azure.servicebus.Queue("example", {
     enablePartitioning: true,
     name: "tfexServicebusQueue",
     namespaceName: exampleNamespace.name,
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleQueueAuthorizationRule = new azure.eventhub.QueueAuthorizationRule("example", {
+const exampleQueueAuthorizationRule = new azure.servicebus.QueueAuthorizationRule("example", {
     listen: true,
     manage: false,
     name: "examplerule",
@@ -3158,17 +3859,19 @@ const exampleQueueAuthorizationRule = new azure.eventhub.QueueAuthorizationRule(
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue_authorization_rule.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_queue_authorization_rule_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L118" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L120" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QueueAuthorizationRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#QueueAuthorizationRuleArgs'>QueueAuthorizationRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a QueueAuthorizationRule resource with the given unique name, arguments, and options.
 
@@ -3179,13 +3882,15 @@ Create a QueueAuthorizationRule resource with the given unique name, arguments, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L57" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L59" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#QueueAuthorizationRuleState'>QueueAuthorizationRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#QueueAuthorizationRule'>QueueAuthorizationRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing QueueAuthorizationRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3193,23 +3898,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L50" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L70" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of QueueAuthorizationRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3217,10 +3926,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L50" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3229,10 +3940,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L78" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L80" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
@@ -3240,10 +3953,12 @@ Does this Authorization Rule have Listen permissions to the ServiceBus Queue? De
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L82" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L84" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -3251,10 +3966,12 @@ Does this Authorization Rule have Manage permissions to the ServiceBus Queue? Wh
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L86" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L88" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
@@ -3262,10 +3979,12 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L90" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L92" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
@@ -3273,10 +3992,12 @@ Specifies the name of the ServiceBus Namespace in which the Queue exists. Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L94" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L96" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the Authorization Rule.
@@ -3284,10 +4005,12 @@ The Primary Connection String for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L98" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L100" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the Authorization Rule.
@@ -3295,10 +4018,12 @@ The Primary Key for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-queueName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L102" >}}">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L104" >}}">property <b>queueName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>queueName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
@@ -3306,10 +4031,12 @@ Specifies the name of the ServiceBus Queue. Changing this forces a new resource 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L106" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L108" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -3317,10 +4044,12 @@ The name of the Resource Group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L110" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L112" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the Authorization Rule.
@@ -3328,10 +4057,12 @@ The Secondary Connection String for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L114" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L116" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the Authorization Rule.
@@ -3339,10 +4070,12 @@ The Secondary Key for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L118" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L120" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
@@ -3350,166 +4083,27 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L50" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="QueueEventSubscription">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L192" >}}">class <b>QueueEventSubscription</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
-<h3 class="pdoc-member-header" id="QueueEventSubscription-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L193" >}}"> <b>constructor</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> QueueEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, queue: Queue, args: <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscription-functionApp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L739" >}}">property <b>functionApp</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscription-queue">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L193" >}}">property <b>queue</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>queue: Queue;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{% md %}}
-
-urn is the stable logical URN used to distinctly address a resource, both before and after
-deployments.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ServiceBusFunction">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L292" >}}">class <b>ServiceBusFunction</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Function'>Function</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
-{{% md %}}
-
-Azure Function triggered by a ServiceBus Topic.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="ServiceBusFunction-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L292" >}}"> <b>constructor</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ServiceBusFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusFunctionArgs'>ServiceBusFunctionArgs</a>)</pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunction-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L476" >}}">property <b>appSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</pre>
-{{% md %}}
-
-Application settings required by the function.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunction-bindings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L466" >}}">property <b>bindings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>bindings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;BindingDefinition[]&gt;;</pre>
-{{% md %}}
-
-An array of function binding definitions.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunction-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L471" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>callback: <a href='#CallbackArgs'>CallbackArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-Function callback.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunction-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L461" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-
-Function name.
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Subscription">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L46" >}}">class <b>Subscription</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L48" >}}">class <b>Subscription</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manage a ServiceBus Subscription.
@@ -3524,7 +4118,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
     name: "tfex-servicebus-subscription",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexSevicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -3533,13 +4127,13 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
         source: "example",
     },
 });
-const exampleTopic = new azure.eventhub.Topic("example", {
+const exampleTopic = new azure.servicebus.Topic("example", {
     enablePartitioning: true,
     name: "tfexSevicebusTopic",
     namespaceName: exampleNamespace.name,
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleSubscription = new azure.eventhub.Subscription("example", {
+const exampleSubscription = new azure.servicebus.Subscription("example", {
     maxDeliveryCount: 1,
     name: "tfexSevicebusSubscription",
     namespaceName: exampleNamespace.name,
@@ -3548,17 +4142,19 @@ const exampleSubscription = new azure.eventhub.Subscription("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Subscription-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L141" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L143" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Subscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubscriptionArgs'>SubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Subscription resource with the given unique name, arguments, and options.
 
@@ -3569,13 +4165,15 @@ Create a Subscription resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L55" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubscriptionState'>SubscriptionState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Subscription'>Subscription</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Subscription resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3583,23 +4181,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L48" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L66" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L68" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Subscription.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3607,10 +4209,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L78" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L80" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoDeleteOnIdle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The idle interval after which the
@@ -3620,18 +4224,22 @@ TimeSpan format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-deadLetteringOnFilterEvaluationExceptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L79" >}}">property <b>deadLetteringOnFilterEvaluationExceptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L81" >}}">property <b>deadLetteringOnFilterEvaluationExceptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>deadLetteringOnFilterEvaluationExceptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L85" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L87" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>deadLetteringOnMessageExpiration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls
@@ -3641,10 +4249,12 @@ to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L91" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L93" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultMessageTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of messages sent to this Subscription
@@ -3654,10 +4264,12 @@ format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L96" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L98" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableBatchedOperations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the
@@ -3666,10 +4278,12 @@ Subscription supports batched operations. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-forwardTo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L101" >}}">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L103" >}}">property <b>forwardTo</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>forwardTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a Queue or Topic to automatically forward
@@ -3678,10 +4292,12 @@ messages to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L48" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3690,10 +4306,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L106" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L108" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -3702,10 +4320,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-lockDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L111" >}}">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L113" >}}">property <b>lockDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>lockDuration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The lock duration for the subscription, maximum
@@ -3714,10 +4334,12 @@ supported value is 5 minutes. Defaults to 1 minute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-maxDeliveryCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L115" >}}">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L117" >}}">property <b>maxDeliveryCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxDeliveryCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of deliveries.
@@ -3725,10 +4347,12 @@ The maximum number of deliveries.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L120" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L122" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Subscription resource.
@@ -3737,10 +4361,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L125" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L127" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -3749,10 +4375,12 @@ this Subscription in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-requiresSession">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L131" >}}">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L133" >}}">property <b>requiresSession</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requiresSession: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether this Subscription
@@ -3762,10 +4390,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L136" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L138" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -3774,10 +4404,12 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L141" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L143" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Topic to create
@@ -3786,10 +4418,12 @@ this Subscription in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Subscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L48" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3799,10 +4433,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L101" >}}">class <b>SubscriptionRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L103" >}}">class <b>SubscriptionRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manage a ServiceBus Subscription Rule.
@@ -3817,7 +4453,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
     name: "tfex-servicebus-subscription-rule-sql",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexSevicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -3826,20 +4462,20 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
         source: "example",
     },
 });
-const exampleTopic = new azure.eventhub.Topic("example", {
+const exampleTopic = new azure.servicebus.Topic("example", {
     enablePartitioning: true,
     name: "tfexSevicebusTopic",
     namespaceName: exampleNamespace.name,
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleSubscription = new azure.eventhub.Subscription("example", {
+const exampleSubscription = new azure.servicebus.Subscription("example", {
     maxDeliveryCount: 1,
     name: "tfexSevicebusSubscription",
     namespaceName: exampleNamespace.name,
     resourceGroupName: exampleResourceGroup.name,
     topicName: exampleTopic.name,
 });
-const exampleSubscriptionRule = new azure.eventhub.SubscriptionRule("example", {
+const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("example", {
     filterType: "SqlFilter",
     name: "tfexSevicebusRule",
     namespaceName: exampleNamespace.name,
@@ -3860,7 +4496,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
     name: "tfex-servicebus-subscription-rule-cor",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexSevicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -3869,20 +4505,20 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
         source: "example",
     },
 });
-const exampleTopic = new azure.eventhub.Topic("example", {
+const exampleTopic = new azure.servicebus.Topic("example", {
     enablePartitioning: true,
     name: "tfexSevicebusTopic",
     namespaceName: exampleNamespace.name,
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleSubscription = new azure.eventhub.Subscription("example", {
+const exampleSubscription = new azure.servicebus.Subscription("example", {
     maxDeliveryCount: 1,
     name: "tfexSevicebusSubscription",
     namespaceName: exampleNamespace.name,
     resourceGroupName: exampleResourceGroup.name,
     topicName: exampleTopic.name,
 });
-const exampleSubscriptionRule = new azure.eventhub.SubscriptionRule("example", {
+const exampleSubscriptionRule = new azure.servicebus.SubscriptionRule("example", {
     correlationFilter: {
         correlationId: "high",
         label: "red",
@@ -3896,17 +4532,19 @@ const exampleSubscriptionRule = new azure.eventhub.SubscriptionRule("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription_rule.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_subscription_rule_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L163" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L165" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SubscriptionRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubscriptionRuleArgs'>SubscriptionRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SubscriptionRule resource with the given unique name, arguments, and options.
 
@@ -3917,13 +4555,15 @@ Create a SubscriptionRule resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L110" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L112" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubscriptionRuleState'>SubscriptionRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SubscriptionRule'>SubscriptionRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SubscriptionRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3931,23 +4571,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L103" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L121" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L123" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SubscriptionRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3955,10 +4599,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L131" >}}">property <b>action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L133" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Represents set of actions written in SQL language-based syntax that is performed against a BrokeredMessage.
@@ -3966,19 +4612,12 @@ Represents set of actions written in SQL language-based syntax that is performed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-correlationFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L135" >}}">property <b>correlationFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L137" >}}">property <b>correlationFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    contentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    correlationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    messageId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    replyTo: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    replyToSessionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    sessionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    to: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>correlationFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
@@ -3986,10 +4625,12 @@ A `correlationFilter` block as documented below to be evaluated against a Broker
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-filterType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L139" >}}">property <b>filterType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L141" >}}">property <b>filterType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>filterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilter` and `CorrelationFilter`.
@@ -3997,10 +4638,12 @@ Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilte
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L103" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4009,10 +4652,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L143" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L145" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Subscription Rule. Changing this forces a new resource to be created.
@@ -4020,10 +4665,12 @@ Specifies the name of the ServiceBus Subscription Rule. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L147" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L149" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Changing this forces a new resource to be created.
@@ -4031,10 +4678,12 @@ The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L151" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L153" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -4042,10 +4691,12 @@ The name of the resource group in the ServiceBus Namespace exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-sqlFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L155" >}}">property <b>sqlFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L157" >}}">property <b>sqlFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sqlFilter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Represents a filter written in SQL language-based syntax that to be evaluated against a BrokeredMessage. Required when `filterType` is set to `SqlFilter`.
@@ -4053,10 +4704,12 @@ Represents a filter written in SQL language-based syntax that to be evaluated ag
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-subscriptionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L159" >}}">property <b>subscriptionName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L161" >}}">property <b>subscriptionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>subscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Subscription in which this Rule should be created. Changing this forces a new resource to be created.
@@ -4064,10 +4717,12 @@ The name of the ServiceBus Subscription in which this Rule should be created. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L163" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L165" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Changing this forces a new resource to be created.
@@ -4075,10 +4730,12 @@ The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L103" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4088,10 +4745,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Topic">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L41" >}}">class <b>Topic</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L43" >}}">class <b>Topic</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manage a ServiceBus Topic.
@@ -4108,7 +4767,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West Europe",
     name: "tfex-servicebus-topic",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexSevicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -4117,7 +4776,7 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
         source: "example",
     },
 });
-const exampleTopic = new azure.eventhub.Topic("example", {
+const exampleTopic = new azure.servicebus.Topic("example", {
     enablePartitioning: true,
     name: "tfexSevicebusTopic",
     namespaceName: exampleNamespace.name,
@@ -4125,17 +4784,19 @@ const exampleTopic = new azure.eventhub.Topic("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Topic-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L141" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L143" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Topic(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TopicArgs'>TopicArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Topic resource with the given unique name, arguments, and options.
 
@@ -4146,79 +4807,56 @@ Create a Topic resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L50" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TopicState'>TopicState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): Topic</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Topic resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Topic-getEventFunction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L241" >}}">method <b>getEventFunction</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>getEventFunction(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#GetTopicFunctionArgs'>GetTopicFunctionArgs</a>): <a href='#ServiceBusFunction'>ServiceBusFunction</a></pre>
-
-
-Creates a new Function triggered by messages in the given Topic using the callback provided.
-[getEventFunction] creates no Azure resources automatically: the returned Function should be used as part of
-a [MultiCallbackFunctionApp]. Use [onEvent] if you want to create a Function App with a single Function.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Topic-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L43" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L61" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Topic.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Topic-onEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L233" >}}">method <b>onEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServiceBusCallback'>ServiceBusCallback</a> | <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#TopicEventSubscription'>TopicEventSubscription</a></pre>
-
-
-Creates a new subscription to events fired from this Topic to the handler provided, along
-with options to control the behavior of the subscription.
-A dedicated Function App is created behind the scenes with a single Azure Function in it.
-Use [getEventFunction] if you want to compose multiple Functions into the same App manually.
-
-{{% /md %}}
-</div>
 <h3 class="pdoc-member-header" id="Topic-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L72" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L74" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoDeleteOnIdle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the idle interval after which the
@@ -4227,10 +4865,12 @@ Topic is automatically deleted, minimum of 5 minutes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L77" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L79" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>defaultMessageTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of TTL of messages sent to this topic if no
@@ -4239,10 +4879,12 @@ TTL value is set on the message itself.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L82" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L84" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>duplicateDetectionHistoryTimeWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration during which
@@ -4251,10 +4893,12 @@ duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L87" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L89" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableBatchedOperations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls if server-side
@@ -4263,10 +4907,12 @@ batched operations are enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-enableExpress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L93" >}}">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L95" >}}">property <b>enableExpress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableExpress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether Express Entities
@@ -4276,18 +4922,22 @@ it to persistent storage. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-enableFilteringMessagesBeforePublishing">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L94" >}}">property <b>enableFilteringMessagesBeforePublishing</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L96" >}}">property <b>enableFilteringMessagesBeforePublishing</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableFilteringMessagesBeforePublishing: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-enablePartitioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L100" >}}">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L102" >}}">property <b>enablePartitioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enablePartitioning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether to enable
@@ -4297,10 +4947,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L43" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4309,10 +4961,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L105" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L107" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -4321,10 +4975,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L111" >}}">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L113" >}}">property <b>maxSizeInMegabytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxSizeInMegabytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls the size of
@@ -4334,10 +4990,12 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L116" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L118" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic resource. Changing this forces a
@@ -4346,10 +5004,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L121" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L123" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -4358,10 +5018,12 @@ this topic in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L127" >}}">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L129" >}}">property <b>requiresDuplicateDetection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>requiresDuplicateDetection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether
@@ -4371,10 +5033,12 @@ a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L132" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L134" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -4383,10 +5047,12 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L136" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L138" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
@@ -4394,10 +5060,12 @@ The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-supportOrdering">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L141" >}}">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L143" >}}">property <b>supportOrdering</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>supportOrdering: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Topic
@@ -4406,10 +5074,12 @@ supports ordering. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Topic-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L43" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4419,10 +5089,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicAuthorizationRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L47" >}}">class <b>TopicAuthorizationRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L49" >}}">class <b>TopicAuthorizationRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a ServiceBus Topic authorization Rule within a ServiceBus Topic.
@@ -4437,7 +5109,7 @@ const exampleResourceGroup = new azure.core.ResourceGroup("example", {
     location: "West US",
     name: "tfex-servicebus",
 });
-const exampleNamespace = new azure.eventhub.Namespace("example", {
+const exampleNamespace = new azure.servicebus.Namespace("example", {
     location: exampleResourceGroup.location,
     name: "tfexServicebusNamespace",
     resourceGroupName: exampleResourceGroup.name,
@@ -4446,12 +5118,12 @@ const exampleNamespace = new azure.eventhub.Namespace("example", {
         source: "example",
     },
 });
-const exampleTopic = new azure.eventhub.Topic("example", {
+const exampleTopic = new azure.servicebus.Topic("example", {
     name: "tfexServicebusTopic",
     namespaceName: exampleNamespace.name,
     resourceGroupName: exampleResourceGroup.name,
 });
-const exampleTopicAuthorizationRule = new azure.eventhub.TopicAuthorizationRule("example", {
+const exampleTopicAuthorizationRule = new azure.servicebus.TopicAuthorizationRule("example", {
     listen: true,
     manage: false,
     name: "tfex_servicebus_topic_sasPolicy",
@@ -4462,17 +5134,19 @@ const exampleTopicAuthorizationRule = new azure.eventhub.TopicAuthorizationRule(
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic_authorization_rule.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/servicebus_topic_authorization_rule_legacy.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L117" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L119" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TopicAuthorizationRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TopicAuthorizationRuleArgs'>TopicAuthorizationRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a TopicAuthorizationRule resource with the given unique name, arguments, and options.
 
@@ -4483,13 +5157,15 @@ Create a TopicAuthorizationRule resource with the given unique name, arguments, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TopicAuthorizationRuleState'>TopicAuthorizationRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TopicAuthorizationRule'>TopicAuthorizationRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing TopicAuthorizationRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4497,23 +5173,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L49" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of TopicAuthorizationRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4521,10 +5201,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L49" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4533,10 +5215,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L77" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L79" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>listen: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -4544,10 +5228,12 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L81" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L83" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>manage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -4555,10 +5241,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L85" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L87" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
@@ -4566,10 +5254,12 @@ Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L89" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L91" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
@@ -4577,10 +5267,12 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L93" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L95" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the ServiceBus Topic authorization Rule.
@@ -4588,10 +5280,12 @@ The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L97" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L99" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>primaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the ServiceBus Topic authorization Rule.
@@ -4599,10 +5293,12 @@ The Primary Key for the ServiceBus Topic authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L101" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L103" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -4610,10 +5306,12 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L105" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L107" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the ServiceBus Topic authorization Rule.
@@ -4621,10 +5319,12 @@ The Secondary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L109" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L111" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>secondaryKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the ServiceBus Topic authorization Rule.
@@ -4632,10 +5332,12 @@ The Secondary Key for the ServiceBus Topic authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L113" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L115" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>send: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -4643,10 +5345,12 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L117" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L119" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic. Changing this forces a new resource to be created.
@@ -4654,96 +5358,12 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L49" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
-{{% md %}}
-
-urn is the stable logical URN used to distinctly address a resource, both before and after
-deployments.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="TopicEventSubscription">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L257" >}}">class <b>TopicEventSubscription</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventSubscription'>EventSubscription</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
-<h3 class="pdoc-member-header" id="TopicEventSubscription-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L259" >}}"> <b>constructor</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TopicEventSubscription(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, topic: Topic, args: <a href='#TopicEventSubscriptionArgs'>TopicEventSubscriptionArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscription-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscription-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L258" >}}">method <b>isInstance</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
-
-
-Returns true if the given object is an instance of CustomResource.  This is designed to work even when
-multiple copies of the Pulumi SDK have been loaded into the same process.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscription-registerOutputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L273" >}}">method <b>registerOutputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'>protected </span>registerOutputs(outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Inputs'>Inputs</a>&gt;): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscription-functionApp">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L739" >}}">property <b>functionApp</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>functionApp: <a href='#CallbackFunctionApp'>CallbackFunctionApp</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscription-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L259" >}}">property <b>subscription</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subscription: <a href='#Subscription'>Subscription</a>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscription-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L258" >}}">property <b>topic</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>topic: Topic;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscription-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4753,19 +5373,23 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DefaultConsumerGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L510" >}}">const <b>DefaultConsumerGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L195" >}}">const <b>DefaultConsumerGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DefaultConsumerGroup: <span class='s2'>"$Default"</span> = <span class='s2'>&#34;$Default&#34;</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="getEventhubNamespace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L26" >}}">function <b>getEventhubNamespace</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L28" >}}">function <b>getEventhubNamespace</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEventhubNamespace(args: <a href='#GetEventhubNamespaceArgs'>GetEventhubNamespaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetEventhubNamespaceResult'>GetEventhubNamespaceResult</a>&gt; &amp; <a href='#GetEventhubNamespaceResult'>GetEventhubNamespaceResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to access information about an existing EventHub Namespace.
 
@@ -4775,7 +5399,38 @@ Use this data source to access information about an existing EventHub Namespace.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = azure.eventhub.getEventhubNamespace({
+const test = azure.eventhub.getNamespace({
+    name: "search-eventhubns",
+    resourceGroupName: "search-service",
+});
+
+export const eventhubNamespaceId = test.id;
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/eventhub_namespace_legacy.html.markdown.
+
+{{% /md %}}
+</div>
+<h2 class="pdoc-module-header" id="getNamespace">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L28" >}}">function <b>getNamespace</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>getNamespace(args: <a href='#GetNamespaceArgs'>GetNamespaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetNamespaceResult'>GetNamespaceResult</a>&gt; &amp; <a href='#GetNamespaceResult'>GetNamespaceResult</a></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Use this data source to access information about an existing EventHub Namespace.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const test = azure.eventhub.getNamespace({
     name: "search-eventhubns",
     resourceGroupName: "search-service",
 });
@@ -4788,13 +5443,15 @@ export const eventhubNamespaceId = test.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getServiceBusNamespace">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L26" >}}">function <b>getServiceBusNamespace</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L28" >}}">function <b>getServiceBusNamespace</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getServiceBusNamespace(args: <a href='#GetServiceBusNamespaceArgs'>GetServiceBusNamespaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetServiceBusNamespaceResult'>GetServiceBusNamespaceResult</a>&gt; &amp; <a href='#GetServiceBusNamespaceResult'>GetServiceBusNamespaceResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to access information about an existing ServiceBus Namespace.
 
@@ -4804,7 +5461,7 @@ Use this data source to access information about an existing ServiceBus Namespac
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const test = azure.eventhub.getServiceBusNamespace({
+const test = azure.servicebus.getNamespace({
     name: "examplenamespace",
     resourceGroupName: "example-resources",
 });
@@ -4812,558 +5469,548 @@ const test = azure.eventhub.getServiceBusNamespace({
 export const location = test.location;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace.html.markdown.
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/servicebus_namespace_legacy.html.markdown.
 
 {{% /md %}}
 </div>
-<h2 class="pdoc-module-header" id="EventGridCallbackSubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L608" >}}">interface <b>EventGridCallbackSubscriptionArgs</b></a>
+<h2 class="pdoc-module-header" id="AuthorizationRuleArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L240" >}}">interface <b>AuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;</pre>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-account">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
 {{% md %}}
 
-The storage account to use where the zip-file blob for the FunctionApp will be located. If
-not provided, a new storage account will create. It will be a 'Standard', 'LRS', 'StorageV2'
-account.
+The set of arguments for constructing a AuthorizationRule resource.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="AuthorizationRuleArgs-eventhubName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L244" >}}">property <b>eventhubName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L107" >}}">property <b>appSettings</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleArgs-listen">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L248" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-A key-value pair of App Settings.
+Does this Authorization Rule have permissions to Listen to the Event Hub? Defaults to `false`.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleArgs-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L249" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
-[callback] or [callbackFactory] must be provided.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance that will be called to produce the function that is the
-entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
-provided.
-
-This form is useful when there is expensive initialization work that should only be executed
-once.  The factory-function will be invoked once when the final Azure FunctionApp module is
-loaded. It can run whatever code it needs, and will end by returning the actual function that
-the Azure will call into each time the FunctionApp it is is invoked.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L112" >}}">property <b>clientAffinityEnabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L117" >}}">property <b>codePathOptions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
-{{% md %}}
-
-Options to control which files and packages are included with the serialized FunctionApp code.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L122" >}}">property <b>connectionStrings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{% md %}}
-
-An `connection_string` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-container">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L128" >}}">property <b>container</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
-{{% md %}}
-
-The container to use where the zip-file blob for the FunctionApp will be located. If not
-provided, the root container of the storage account will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L133" >}}">property <b>enableBuiltinLogging</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the built-in logging of this Function App be enabled? Defaults to `true`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L138" >}}">property <b>enabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Is the Function App enabled?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L143" >}}">property <b>hostSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
-{{% md %}}
-
-Host configuration options.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L148" >}}">property <b>httpsOnly</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Can the Function App only be accessed via HTTPS? Defaults to `false`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L153" >}}">property <b>identity</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-An `identity` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-includedEventTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L618" >}}">property <b>includedEventTypes</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{% md %}}
-
-A list of applicable event types that need to be part of the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Input bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L158" >}}">property <b>location</b></a>
-</h3>
-<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRuleArgs-manage">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L253" >}}">property <b>manage</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
+Does this Authorization Rule have permissions to Manage to the Event Hub? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L163" >}}">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleArgs-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L257" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-The name of the Function App.
+Specifies the name of the EventHub Authorization Rule resource. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L169" >}}">property <b>nodeVersion</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleArgs-namespaceName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L261" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not provided,
-defaults to `8.11.1`.
+Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleArgs-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L265" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-Output bindings.
+The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L179" >}}">property <b>plan</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleArgs-send">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L269" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-The App Service Plan within which to create this Function App. Changing this forces a new
-resource to be created.
-
-If not provided, a default "Consumption" plan will be created.  See:
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumption-plan for
-more details.
+Does this Authorization Rule have permissions to Send to the Event Hub? Defaults to `false`.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L184" >}}">property <b>resourceGroup</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
+</div>
+<h2 class="pdoc-module-header" id="AuthorizationRuleState">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L189" >}}">interface <b>AuthorizationRuleState</b></a>
+</h2>
+<div class="pdoc-module-contents">
 {{% md %}}
 
-The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
+Input properties used for looking up and filtering AuthorizationRule resources.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-eventhubName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L193" >}}">property <b>eventhubName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L613" >}}">property <b>resourceGroupName</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-listen">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L197" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Does this Authorization Rule have permissions to Listen to the Event Hub? Defaults to `false`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L198" >}}">property <b>location</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-manage">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L202" >}}">property <b>manage</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Does this Authorization Rule have permissions to Manage to the Event Hub? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L206" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub Authorization Rule resource. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-namespaceName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L210" >}}">property <b>namespaceName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-primaryConnectionString">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L214" >}}">property <b>primaryConnectionString</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Primary Connection String for the Event Hubs authorization Rule.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-primaryKey">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L218" >}}">property <b>primaryKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Primary Key for the Event Hubs authorization Rule.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L222" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-The name of the resource group in which to create the event subscription. [resourceGroup] takes precedence
-over [resourceGroupName]. If none of the two is supplied, the Queue's resource group will be used.
+The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-retryPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L623" >}}">property <b>retryPolicy</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-secondaryConnectionString">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L226" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventTimeToLive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxDeliveryAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-A retry policy block as defined below.
+The Secondary Connection String for the Event Hubs authorization Rule.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L195" >}}">property <b>siteConfig</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-secondaryKey">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L230" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-A `site_config` object as defined below.
+The Secondary Key for the Event Hubs authorization Rule.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-subjectFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L628" >}}">property <b>subjectFilter</b></a>
+<h3 class="pdoc-member-header" id="AuthorizationRuleState-send">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/authorizationRule.ts#L234" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caseSensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    subjectBeginsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subjectEndsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-A subject filter block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L200" >}}">property <b>tags</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A mapping of tags to assign to the resource.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridCallbackSubscriptionArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L205" >}}">property <b>version</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The runtime version associated with the Function App. Defaults to `~2`.
+Does this Authorization Rule have permissions to Send to the Event Hub? Defaults to `false`.
 
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="EventGridContext">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L572" >}}">interface <b>EventGridContext</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</pre>
-{{% md %}}
-
-Data that will be passed along in the context object to the EventGridCallback.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridContext-done">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L47" >}}">method <b>done</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-
-A callback function that signals to the runtime that your code has completed. If your
-function is synchronous, you must call context.done at the end of execution. If your function
-is asynchronous, you should not use this callback.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridContext-bindingData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L580" >}}">property <b>bindingData</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>bindingData: {
-    data: T;
-    invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    sys: {
-        methodName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        utcNow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-};</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridContext-bindingDefinitions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L43" >}}">property <b>bindingDefinitions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>bindingDefinitions: BindingDefinition[];</pre>
-{{% md %}}
-
-Bindings your function uses, as defined in function.json.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridContext-bindings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L579" >}}">property <b>bindings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>bindings: {
-    message: <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;;
-};</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridContext-executionContext">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L574" >}}">property <b>executionContext</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>executionContext: {
-    functionDirectory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridContext-invocationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L573" >}}">property <b>invocationId</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridContext-log">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L48" >}}">property <b>log</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>log: Logger;</pre>
-{{% md %}}
-
-Allows you to write streaming function logs. Calling directly allows you to write streaming function logs
-at the default trace level.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridContext-req">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L62" >}}">property <b>req</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</pre>
-{{% md %}}
-
-HTTP request object. Provided to your function when using HTTP Bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridContext-res">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L66" >}}">property <b>res</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>res?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{% md %}}
-
-HTTP response object. Provided to your function when using HTTP Bindings.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EventGridDomainArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L178" >}}">interface <b>EventGridDomainArgs</b></a>
+<h2 class="pdoc-module-header" id="ConsumerGroupArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L178" >}}">interface <b>ConsumerGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-The set of arguments for constructing a EventGridDomain resource.
+The set of arguments for constructing a ConsumerGroup resource.
 
 {{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridDomainArgs-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L182" >}}">property <b>inputMappingDefaultValues</b></a>
+<h3 class="pdoc-member-header" id="ConsumerGroupArgs-eventhubName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L182" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dataVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    eventType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupArgs-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L183" >}}">property <b>location</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupArgs-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L187" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub Consumer Group resource. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupArgs-namespaceName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L191" >}}">property <b>namespaceName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupArgs-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L195" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group in which the EventHub Consumer Group's grandparent Namespace exists. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupArgs-userMetadata">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L199" >}}">property <b>userMetadata</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>userMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the user metadata.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="ConsumerGroupState">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L151" >}}">interface <b>ConsumerGroupState</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Input properties used for looking up and filtering ConsumerGroup resources.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="ConsumerGroupState-eventhubName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L155" >}}">property <b>eventhubName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupState-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L156" >}}">property <b>location</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupState-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L160" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventHub Consumer Group resource. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupState-namespaceName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L164" >}}">property <b>namespaceName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupState-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L168" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group in which the EventHub Consumer Group's grandparent Namespace exists. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConsumerGroupState-userMetadata">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/consumerGroup.ts#L172" >}}">property <b>userMetadata</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>userMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the user metadata.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="DomainArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L180" >}}">interface <b>DomainArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+The set of arguments for constructing a Domain resource.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="DomainArgs-inputMappingDefaultValues">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L184" >}}">property <b>inputMappingDefaultValues</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `inputMappingDefaultValues` block as defined below.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainArgs-inputMappingFields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L186" >}}">property <b>inputMappingFields</b></a>
+<h3 class="pdoc-member-header" id="DomainArgs-inputMappingFields">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L188" >}}">property <b>inputMappingFields</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dataVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    eventTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    eventType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DomainInputMappingFields'>DomainInputMappingFields</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `inputMappingFields` block as defined below.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainArgs-inputSchema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L190" >}}">property <b>inputSchema</b></a>
+<h3 class="pdoc-member-header" id="DomainArgs-inputSchema">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L192" >}}">property <b>inputSchema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inputSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `cloudeventv01schema`, `customeventschema`, or `eventgridschema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L194" >}}">property <b>location</b></a>
+<h3 class="pdoc-member-header" id="DomainArgs-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L196" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L198" >}}">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="DomainArgs-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L200" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L202" >}}">property <b>resourceGroupName</b></a>
+<h3 class="pdoc-member-header" id="DomainArgs-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L204" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L206" >}}">property <b>tags</b></a>
+<h3 class="pdoc-member-header" id="DomainArgs-tags">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L208" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -5371,108 +6018,113 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="EventGridDomainState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L140" >}}">interface <b>EventGridDomainState</b></a>
+<h2 class="pdoc-module-header" id="DomainState">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L142" >}}">interface <b>DomainState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
 
-Input properties used for looking up and filtering EventGridDomain resources.
+Input properties used for looking up and filtering Domain resources.
 
 {{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridDomainState-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L144" >}}">property <b>endpoint</b></a>
+<h3 class="pdoc-member-header" id="DomainState-endpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L146" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Endpoint associated with the EventGrid Domain.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainState-inputMappingDefaultValues">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L148" >}}">property <b>inputMappingDefaultValues</b></a>
+<h3 class="pdoc-member-header" id="DomainState-inputMappingDefaultValues">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L150" >}}">property <b>inputMappingDefaultValues</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dataVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    eventType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>inputMappingDefaultValues?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DomainInputMappingDefaultValues'>DomainInputMappingDefaultValues</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `inputMappingDefaultValues` block as defined below.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainState-inputMappingFields">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L152" >}}">property <b>inputMappingFields</b></a>
+<h3 class="pdoc-member-header" id="DomainState-inputMappingFields">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L154" >}}">property <b>inputMappingFields</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dataVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    eventTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    eventType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subject: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    topic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>inputMappingFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DomainInputMappingFields'>DomainInputMappingFields</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `inputMappingFields` block as defined below.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainState-inputSchema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L156" >}}">property <b>inputSchema</b></a>
+<h3 class="pdoc-member-header" id="DomainState-inputSchema">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L158" >}}">property <b>inputSchema</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inputSchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the schema in which incoming events will be published to this domain. Allowed values are `cloudeventv01schema`, `customeventschema`, or `eventgridschema`. Defaults to `eventgridschema`. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L160" >}}">property <b>location</b></a>
+<h3 class="pdoc-member-header" id="DomainState-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L162" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L164" >}}">property <b>name</b></a>
+<h3 class="pdoc-member-header" id="DomainState-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L166" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventGrid Domain resource. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L168" >}}">property <b>resourceGroupName</b></a>
+<h3 class="pdoc-member-header" id="DomainState-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L170" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventGrid Domain exists. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="EventGridDomainState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridDomain.ts#L172" >}}">property <b>tags</b></a>
+<h3 class="pdoc-member-header" id="DomainState-tags">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/domain.ts#L174" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -5480,519 +6132,8 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="EventGridEvent">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L565" >}}">interface <b>EventGridEvent</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> EventGridEvent</pre>
-{{% md %}}
-
-Event that will be passed along to the EventGridCallback.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridEvent-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L566" >}}">property <b>data</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>data: T;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEvent-dataVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/azure-eventgrid/lib/models/index.d.ts#L475" >}}">property <b>dataVersion</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>dataVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEvent-eventTime">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/azure-eventgrid/lib/models/index.d.ts#L473" >}}">property <b>eventTime</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventTime: Date;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEvent-eventType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/azure-eventgrid/lib/models/index.d.ts#L472" >}}">property <b>eventType</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEvent-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/azure-eventgrid/lib/models/index.d.ts#L468" >}}">property <b>id</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEvent-metadataVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/azure-eventgrid/lib/models/index.d.ts#L474" >}}">property <b>metadataVersion</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>metadataVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEvent-subject">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/azure-eventgrid/lib/models/index.d.ts#L470" >}}">property <b>subject</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEvent-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/azure-eventgrid/lib/models/index.d.ts#L469" >}}">property <b>topic</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>topic?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EventGridEventSubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L243" >}}">interface <b>EventGridEventSubscriptionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-{{% md %}}
-
-The set of arguments for constructing a EventGridEventSubscription resource.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-eventDeliverySchema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L247" >}}">property <b>eventDeliverySchema</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventDeliverySchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-eventhubEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L251" >}}">property <b>eventhubEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventhubId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `eventhubEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-hybridConnectionEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L255" >}}">property <b>hybridConnectionEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    hybridConnectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `hybridConnectionEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-includedEventTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L259" >}}">property <b>includedEventTypes</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{% md %}}
-
-A list of applicable event types that need to be part of the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L263" >}}">property <b>labels</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{% md %}}
-
-A list of labels to assign to the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L267" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-retryPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L271" >}}">property <b>retryPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventTimeToLive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxDeliveryAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `retryPolicy` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L275" >}}">property <b>scope</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-storageBlobDeadLetterDestination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L279" >}}">property <b>storageBlobDeadLetterDestination</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    storageBlobContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `storageBlobDeadLetterDestination` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-storageQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L283" >}}">property <b>storageQueueEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    queueName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `storageQueueEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-subjectFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L287" >}}">property <b>subjectFilter</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caseSensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    subjectBeginsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subjectEndsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `subjectFilter` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L291" >}}">property <b>topicName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the name of the topic to associate with the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionArgs-webhookEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L295" >}}">property <b>webhookEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `webhookEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EventGridEventSubscriptionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L185" >}}">interface <b>EventGridEventSubscriptionState</b></a>
-</h2>
-<div class="pdoc-module-contents">
-{{% md %}}
-
-Input properties used for looking up and filtering EventGridEventSubscription resources.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-eventDeliverySchema">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L189" >}}">property <b>eventDeliverySchema</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventDeliverySchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-eventhubEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L193" >}}">property <b>eventhubEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventhubId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `eventhubEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-hybridConnectionEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L197" >}}">property <b>hybridConnectionEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    hybridConnectionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `hybridConnectionEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-includedEventTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L201" >}}">property <b>includedEventTypes</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{% md %}}
-
-A list of applicable event types that need to be part of the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-labels">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L205" >}}">property <b>labels</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{% md %}}
-
-A list of labels to assign to the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L209" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-retryPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L213" >}}">property <b>retryPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventTimeToLive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxDeliveryAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `retryPolicy` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-scope">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L217" >}}">property <b>scope</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-storageBlobDeadLetterDestination">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L221" >}}">property <b>storageBlobDeadLetterDestination</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    storageBlobContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `storageBlobDeadLetterDestination` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-storageQueueEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L225" >}}">property <b>storageQueueEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    queueName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `storageQueueEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-subjectFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L229" >}}">property <b>subjectFilter</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caseSensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    subjectBeginsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subjectEndsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `subjectFilter` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L233" >}}">property <b>topicName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the name of the topic to associate with the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridEventSubscriptionState-webhookEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridEventSubscription.ts#L237" >}}">property <b>webhookEndpoint</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    url: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `webhookEndpoint` block as defined below.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EventGridFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L590" >}}">interface <b>EventGridFunctionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;</pre>
-<h3 class="pdoc-member-header" id="EventGridFunctionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
-[callback] or [callbackFactory] must be provided.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance that will be called to produce the function that is the
-entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
-provided.
-
-This form is useful when there is expensive initialization work that should only be executed
-once.  The factory-function will be invoked once when the final Azure FunctionApp module is
-loaded. It can run whatever code it needs, and will end by returning the actual function that
-the Azure will call into each time the FunctionApp it is is invoked.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridFunctionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Input bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridFunctionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Output bindings.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="EventGridScope">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L635" >}}">interface <b>EventGridScope</b></a>
-</h2>
-<div class="pdoc-module-contents">
-{{% md %}}
-
-Resource properties to scope an Event Grid subscription to. The shape fits most Azure resources,
-so they can be passed directly.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="EventGridScope-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L645" >}}">property <b>id</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Azure Resource ID.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="EventGridScope-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L640" >}}">property <b>resourceGroupName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Resource group name to create subscription at, if another resource group is not explicitly
-passed in subscription arguments.
-
-{{% /md %}}
-</div>
-</div>
 <h2 class="pdoc-module-header" id="EventGridTopicArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L170" >}}">interface <b>EventGridTopicArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L172" >}}">interface <b>EventGridTopicArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6001,10 +6142,12 @@ The set of arguments for constructing a EventGridTopic resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridTopicArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L174" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L176" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -6012,10 +6155,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L178" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L180" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventGrid Topic resource. Changing this forces a new resource to be created.
@@ -6023,10 +6168,12 @@ Specifies the name of the EventGrid Topic resource. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L182" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L184" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
@@ -6034,10 +6181,12 @@ The name of the resource group in which the EventGrid Topic exists. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L186" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L188" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -6046,7 +6195,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventGridTopicState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L136" >}}">interface <b>EventGridTopicState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L138" >}}">interface <b>EventGridTopicState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6055,10 +6204,12 @@ Input properties used for looking up and filtering EventGridTopic resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventGridTopicState-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L140" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L142" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Endpoint associated with the EventGrid Topic.
@@ -6066,10 +6217,12 @@ The Endpoint associated with the EventGrid Topic.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L144" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L146" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -6077,10 +6230,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L148" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L150" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventGrid Topic resource. Changing this forces a new resource to be created.
@@ -6088,10 +6243,12 @@ Specifies the name of the EventGrid Topic resource. Changing this forces a new r
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicState-primaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L152" >}}">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L154" >}}">property <b>primaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Shared Access Key associated with the EventGrid Topic.
@@ -6099,10 +6256,12 @@ The Primary Shared Access Key associated with the EventGrid Topic.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L156" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L158" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventGrid Topic exists. Changing this forces a new resource to be created.
@@ -6110,10 +6269,12 @@ The name of the resource group in which the EventGrid Topic exists. Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicState-secondaryAccessKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L160" >}}">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L162" >}}">property <b>secondaryAccessKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Shared Access Key associated with the EventGrid Topic.
@@ -6121,10 +6282,12 @@ The Secondary Shared Access Key associated with the EventGrid Topic.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventGridTopicState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L164" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventGridTopic.ts#L166" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -6133,7 +6296,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L191" >}}">interface <b>EventHubArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L193" >}}">interface <b>EventHubArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6142,22 +6305,12 @@ The set of arguments for constructing a EventHub resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubArgs-captureDescription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L195" >}}">property <b>captureDescription</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L197" >}}">property <b>captureDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>captureDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        archiveNameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        blobContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    intervalInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    sizeLimitInBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    skipEmptyArchives: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>captureDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventHubCaptureDescription'>EventHubCaptureDescription</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `captureDescription` block as defined below.
@@ -6165,18 +6318,22 @@ A `captureDescription` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L196" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L198" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubArgs-messageRetention">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L200" >}}">property <b>messageRetention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L202" >}}">property <b>messageRetention</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>messageRetention: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the number of days to retain the events for this Event Hub. Needs to be between 1 and 7 days; or 1 day when using a Basic SKU for the parent EventHub Namespace.
@@ -6184,10 +6341,12 @@ Specifies the number of days to retain the events for this Event Hub. Needs to b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L204" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L206" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.
@@ -6195,10 +6354,12 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L208" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L210" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
@@ -6206,10 +6367,12 @@ Specifies the name of the EventHub Namespace. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubArgs-partitionCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L212" >}}">property <b>partitionCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L214" >}}">property <b>partitionCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>partitionCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the current number of shards on the Event Hub. Changing this forces a new resource to be created.
@@ -6217,10 +6380,12 @@ Specifies the current number of shards on the Event Hub. Changing this forces a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L216" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L218" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub's parent Namespace exists. Changing this forces a new resource to be created.
@@ -6229,7 +6394,7 @@ The name of the resource group in which the EventHub's parent Namespace exists. 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubAuthorizationRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L236" >}}">interface <b>EventHubAuthorizationRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L238" >}}">interface <b>EventHubAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6238,10 +6403,12 @@ The set of arguments for constructing a EventHubAuthorizationRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L240" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L242" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub. Changing this forces a new resource to be created.
@@ -6249,10 +6416,12 @@ Specifies the name of the EventHub. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L244" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L246" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Listen to the Event Hub? Defaults to `false`.
@@ -6260,18 +6429,22 @@ Does this Authorization Rule have permissions to Listen to the Event Hub? Defaul
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L245" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L247" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L249" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L251" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Manage to the Event Hub? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -6279,10 +6452,12 @@ Does this Authorization Rule have permissions to Manage to the Event Hub? When t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L253" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L255" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Authorization Rule resource. Changing this forces a new resource to be created.
@@ -6290,10 +6465,12 @@ Specifies the name of the EventHub Authorization Rule resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L257" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L259" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
@@ -6301,10 +6478,12 @@ Specifies the name of the grandparent EventHub Namespace. Changing this forces a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L261" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L263" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
@@ -6312,10 +6491,12 @@ The name of the resource group in which the EventHub Namespace exists. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L265" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L267" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Send to the Event Hub? Defaults to `false`.
@@ -6324,7 +6505,7 @@ Does this Authorization Rule have permissions to Send to the Event Hub? Defaults
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubAuthorizationRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L185" >}}">interface <b>EventHubAuthorizationRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L187" >}}">interface <b>EventHubAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6333,10 +6514,12 @@ Input properties used for looking up and filtering EventHubAuthorizationRule res
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L189" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L191" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub. Changing this forces a new resource to be created.
@@ -6344,10 +6527,12 @@ Specifies the name of the EventHub. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L193" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L195" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Listen to the Event Hub? Defaults to `false`.
@@ -6355,18 +6540,22 @@ Does this Authorization Rule have permissions to Listen to the Event Hub? Defaul
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L194" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L196" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L198" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L200" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Manage to the Event Hub? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -6374,10 +6563,12 @@ Does this Authorization Rule have permissions to Manage to the Event Hub? When t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L202" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L204" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Authorization Rule resource. Changing this forces a new resource to be created.
@@ -6385,10 +6576,12 @@ Specifies the name of the EventHub Authorization Rule resource. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L206" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L208" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
@@ -6396,10 +6589,12 @@ Specifies the name of the grandparent EventHub Namespace. Changing this forces a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L210" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L212" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the Event Hubs authorization Rule.
@@ -6407,10 +6602,12 @@ The Primary Connection String for the Event Hubs authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L214" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L216" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the Event Hubs authorization Rule.
@@ -6418,10 +6615,12 @@ The Primary Key for the Event Hubs authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L218" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L220" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
@@ -6429,10 +6628,12 @@ The name of the resource group in which the EventHub Namespace exists. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L222" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L224" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the Event Hubs authorization Rule.
@@ -6440,10 +6641,12 @@ The Secondary Connection String for the Event Hubs authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L226" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L228" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the Event Hubs authorization Rule.
@@ -6451,10 +6654,12 @@ The Secondary Key for the Event Hubs authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubAuthorizationRuleState-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L230" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubAuthorizationRule.ts#L232" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have permissions to Send to the Event Hub? Defaults to `false`.
@@ -6463,20 +6668,24 @@ Does this Authorization Rule have permissions to Send to the Event Hub? Defaults
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubBindingDefinition">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L341" >}}">interface <b>EventHubBindingDefinition</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L26" >}}">interface <b>EventHubBindingDefinition</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> BindingDefinition</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 This is only exported to be used internally by the /iot/zMixins.ts file
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubBindingDefinition-cardinality">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L371" >}}">property <b>cardinality</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L56" >}}">property <b>cardinality</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cardinality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"many"</span> | <span class='s2'>"one"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to 'many' in order to enable batching. If omitted or set to 'one', single message passed to function.
@@ -6484,10 +6693,12 @@ Set to 'many' in order to enable batching. If omitted or set to 'one', single me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubBindingDefinition-connection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L376" >}}">property <b>connection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L61" >}}">property <b>connection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of an app setting that contains the Event Hub connection string to use for this binding.
@@ -6495,10 +6706,12 @@ The name of an app setting that contains the Event Hub connection string to use 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubBindingDefinition-consumerGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L366" >}}">property <b>consumerGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L51" >}}">property <b>consumerGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumerGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An optional property that sets the consumer group used to subscribe to events in the hub.
@@ -6507,10 +6720,12 @@ If not present, a new Consumer Group resource will be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubBindingDefinition-direction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L355" >}}">property <b>direction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L40" >}}">property <b>direction</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>direction: <span class='s2'>"in"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The direction of the binding.  We only support events being inputs to functions.
@@ -6518,10 +6733,12 @@ The direction of the binding.  We only support events being inputs to functions.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubBindingDefinition-eventHubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L360" >}}">property <b>eventHubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L45" >}}">property <b>eventHubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventHubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the event hub we are subscribing to.
@@ -6529,10 +6746,12 @@ The name of the event hub we are subscribing to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubBindingDefinition-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L345" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L30" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the property in the context object to bind the actual event to.
@@ -6540,10 +6759,12 @@ The name of the property in the context object to bind the actual event to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubBindingDefinition-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L350" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L35" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <span class='s2'>"eventHubTrigger"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of an event hub binding.  Must be 'eventHubTrigger'.
@@ -6552,7 +6773,7 @@ The type of an event hub binding.  Must be 'eventHubTrigger'.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubConsumerGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L174" >}}">interface <b>EventHubConsumerGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L176" >}}">interface <b>EventHubConsumerGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6561,10 +6782,12 @@ The set of arguments for constructing a EventHubConsumerGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupArgs-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L178" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L180" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub. Changing this forces a new resource to be created.
@@ -6572,18 +6795,22 @@ Specifies the name of the EventHub. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L179" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L181" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L183" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L185" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Consumer Group resource. Changing this forces a new resource to be created.
@@ -6591,10 +6818,12 @@ Specifies the name of the EventHub Consumer Group resource. Changing this forces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L187" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L189" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
@@ -6602,10 +6831,12 @@ Specifies the name of the grandparent EventHub Namespace. Changing this forces a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L191" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L193" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Consumer Group's grandparent Namespace exists. Changing this forces a new resource to be created.
@@ -6613,10 +6844,12 @@ The name of the resource group in which the EventHub Consumer Group's grandparen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupArgs-userMetadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L195" >}}">property <b>userMetadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L197" >}}">property <b>userMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the user metadata.
@@ -6625,7 +6858,7 @@ Specifies the user metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubConsumerGroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L147" >}}">interface <b>EventHubConsumerGroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L149" >}}">interface <b>EventHubConsumerGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6634,10 +6867,12 @@ Input properties used for looking up and filtering EventHubConsumerGroup resourc
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupState-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L151" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L153" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub. Changing this forces a new resource to be created.
@@ -6645,18 +6880,22 @@ Specifies the name of the EventHub. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L152" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L154" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L158" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Consumer Group resource. Changing this forces a new resource to be created.
@@ -6664,10 +6903,12 @@ Specifies the name of the EventHub Consumer Group resource. Changing this forces
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L160" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L162" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the grandparent EventHub Namespace. Changing this forces a new resource to be created.
@@ -6675,10 +6916,12 @@ Specifies the name of the grandparent EventHub Namespace. Changing this forces a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L164" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L166" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Consumer Group's grandparent Namespace exists. Changing this forces a new resource to be created.
@@ -6686,10 +6929,12 @@ The name of the resource group in which the EventHub Consumer Group's grandparen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubConsumerGroupState-userMetadata">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L168" >}}">property <b>userMetadata</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubConsumerGroup.ts#L170" >}}">property <b>userMetadata</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the user metadata.
@@ -6698,10 +6943,12 @@ Specifies the user metadata.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubContext">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L382" >}}">interface <b>EventHubContext</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L67" >}}">interface <b>EventHubContext</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Data that will be passed along in the context object to the EventHubCallback.
@@ -6711,10 +6958,12 @@ Data that will be passed along in the context object to the EventHubCallback.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L47" >}}">method <b>done</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 A callback function that signals to the runtime that your code has completed. If your
 function is synchronous, you must call context.done at the end of execution. If your function
@@ -6723,9 +6972,10 @@ is asynchronous, you should not use this callback.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubContext-bindingData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L390" >}}">property <b>bindingData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L75" >}}">property <b>bindingData</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bindingData: {
     enqueuedTimeUtc: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
@@ -6751,14 +7001,17 @@ is asynchronous, you should not use this callback.
     };
     systemProperties: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;
 };</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubContext-bindingDefinitions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L43" >}}">property <b>bindingDefinitions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L67" >}}">property <b>bindingDefinitions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bindingDefinitions: BindingDefinition[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Bindings your function uses, as defined in function.json.
@@ -6766,40 +7019,48 @@ Bindings your function uses, as defined in function.json.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubContext-bindings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L389" >}}">property <b>bindings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L74" >}}">property <b>bindings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bindings: {
     eventHub: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubContext-executionContext">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L384" >}}">property <b>executionContext</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L69" >}}">property <b>executionContext</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>executionContext: {
     functionDirectory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
     invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
 };</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubContext-invocationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L383" >}}">property <b>invocationId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L68" >}}">property <b>invocationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubContext-log">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L48" >}}">property <b>log</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L67" >}}">property <b>log</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>log: Logger;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows you to write streaming function logs. Calling directly allows you to write streaming function logs
@@ -6808,10 +7069,12 @@ at the default trace level.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubContext-req">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L62" >}}">property <b>req</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L67" >}}">property <b>req</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 HTTP request object. Provided to your function when using HTTP Bindings.
@@ -6819,10 +7082,12 @@ HTTP request object. Provided to your function when using HTTP Bindings.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubContext-res">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L66" >}}">property <b>res</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L67" >}}">property <b>res</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>res?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 HTTP response object. Provided to your function when using HTTP Bindings.
@@ -6831,15 +7096,19 @@ HTTP response object. Provided to your function when using HTTP Bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L434" >}}">interface <b>EventHubFunctionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L119" >}}">interface <b>EventHubFunctionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#GetEventHubFunctionArgs'>GetEventHubFunctionArgs</a></pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="EventHubFunctionArgs-callback">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -6851,7 +7120,9 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -6866,10 +7137,12 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubFunctionArgs-cardinality">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L431" >}}">property <b>cardinality</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L116" >}}">property <b>cardinality</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cardinality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"many"</span> | <span class='s2'>"one"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to 'many' in order to enable batching. If omitted or set to 'one', single message passed to function.
@@ -6877,10 +7150,12 @@ Set to 'many' in order to enable batching. If omitted or set to 'one', single me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubFunctionArgs-consumerGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L426" >}}">property <b>consumerGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L111" >}}">property <b>consumerGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumerGroup?: <a href='#EventHubConsumerGroup'>EventHubConsumerGroup</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional Consumer Group to subscribe the FunctionApp to. If not present, the default consumer group will be used.
@@ -6888,10 +7163,12 @@ Optional Consumer Group to subscribe the FunctionApp to. If not present, the def
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubFunctionArgs-eventHub">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L438" >}}">property <b>eventHub</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L123" >}}">property <b>eventHub</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventHub: EventHub;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Event Hub to subscribe the Function to.
@@ -6902,7 +7179,9 @@ Event Hub to subscribe the Function to.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Input bindings.
@@ -6913,7 +7192,9 @@ Input bindings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Output bindings.
@@ -6922,7 +7203,7 @@ Output bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubNamespaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L237" >}}">interface <b>EventHubNamespaceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L239" >}}">interface <b>EventHubNamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6931,10 +7212,12 @@ The set of arguments for constructing a EventHubNamespace resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-autoInflateEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L241" >}}">property <b>autoInflateEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L243" >}}">property <b>autoInflateEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoInflateEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is Auto Inflate enabled for the EventHub Namespace?
@@ -6942,10 +7225,12 @@ Is Auto Inflate enabled for the EventHub Namespace?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L245" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L247" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from 1 - 20.
@@ -6953,10 +7238,12 @@ Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-kafkaEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L249" >}}">property <b>kafkaEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L251" >}}">property <b>kafkaEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kafkaEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is Kafka enabled for the EventHub Namespace? Defaults to `false`.
@@ -6964,10 +7251,12 @@ Is Kafka enabled for the EventHub Namespace? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L253" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L255" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -6975,10 +7264,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-maximumThroughputUnits">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L257" >}}">property <b>maximumThroughputUnits</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L259" >}}">property <b>maximumThroughputUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maximumThroughputUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.
@@ -6986,10 +7277,12 @@ Specifies the maximum number of throughput units when Auto Inflate is Enabled. V
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L261" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L263" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.
@@ -6997,10 +7290,12 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L265" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L267" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
@@ -7008,10 +7303,12 @@ The name of the resource group in which to create the namespace. Changing this f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L269" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L271" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines which tier to use. Valid options are `Basic` and `Standard`.
@@ -7019,10 +7316,12 @@ Defines which tier to use. Valid options are `Basic` and `Standard`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L273" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L275" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -7031,7 +7330,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubNamespaceAuthorizationRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L215" >}}">interface <b>EventHubNamespaceAuthorizationRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L217" >}}">interface <b>EventHubNamespaceAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7040,10 +7339,12 @@ The set of arguments for constructing a EventHubNamespaceAuthorizationRule resou
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L219" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L221" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -7051,18 +7352,22 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L220" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L222" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L224" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L226" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -7070,10 +7375,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L228" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L230" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
@@ -7081,10 +7388,12 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L232" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L234" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
@@ -7092,10 +7401,12 @@ Specifies the name of the EventHub Namespace. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L236" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L238" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
@@ -7103,10 +7414,12 @@ The name of the resource group in which the EventHub Namespace exists. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L240" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L242" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -7115,7 +7428,7 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubNamespaceAuthorizationRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L168" >}}">interface <b>EventHubNamespaceAuthorizationRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L170" >}}">interface <b>EventHubNamespaceAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7124,10 +7437,12 @@ Input properties used for looking up and filtering EventHubNamespaceAuthorizatio
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L172" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L174" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -7135,18 +7450,22 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L173" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L175" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L177" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L179" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -7154,10 +7473,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L181" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L183" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
@@ -7165,10 +7486,12 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L185" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L187" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
@@ -7176,10 +7499,12 @@ Specifies the name of the EventHub Namespace. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L189" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L191" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the Authorization Rule.
@@ -7187,10 +7512,12 @@ The Primary Connection String for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L193" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L195" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the Authorization Rule.
@@ -7198,10 +7525,12 @@ The Primary Key for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L197" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L199" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub Namespace exists. Changing this forces a new resource to be created.
@@ -7209,10 +7538,12 @@ The name of the resource group in which the EventHub Namespace exists. Changing 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L201" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L203" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the Authorization Rule.
@@ -7220,10 +7551,12 @@ The Secondary Connection String for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L205" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L207" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the Authorization Rule.
@@ -7231,10 +7564,12 @@ The Secondary Key for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceAuthorizationRuleState-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L209" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespaceAuthorizationRule.ts#L211" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -7243,7 +7578,7 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubNamespaceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L177" >}}">interface <b>EventHubNamespaceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L179" >}}">interface <b>EventHubNamespaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7252,10 +7587,12 @@ Input properties used for looking up and filtering EventHubNamespace resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-autoInflateEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L181" >}}">property <b>autoInflateEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L183" >}}">property <b>autoInflateEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoInflateEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is Auto Inflate enabled for the EventHub Namespace?
@@ -7263,10 +7600,12 @@ Is Auto Inflate enabled for the EventHub Namespace?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L185" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L187" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid values range from 1 - 20.
@@ -7274,10 +7613,12 @@ Specifies the Capacity / Throughput Units for a `Standard` SKU namespace. Valid 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L190" >}}">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L192" >}}">property <b>defaultPrimaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrimaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary connection string for the authorization
@@ -7286,10 +7627,12 @@ rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-defaultPrimaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L194" >}}">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L196" >}}">property <b>defaultPrimaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrimaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -7297,10 +7640,12 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L199" >}}">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L201" >}}">property <b>defaultSecondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultSecondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary connection string for the
@@ -7309,10 +7654,12 @@ authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-defaultSecondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L203" >}}">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L205" >}}">property <b>defaultSecondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultSecondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -7320,10 +7667,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-kafkaEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L207" >}}">property <b>kafkaEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L209" >}}">property <b>kafkaEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kafkaEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is Kafka enabled for the EventHub Namespace? Defaults to `false`.
@@ -7331,10 +7680,12 @@ Is Kafka enabled for the EventHub Namespace? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L211" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L213" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -7342,10 +7693,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-maximumThroughputUnits">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L215" >}}">property <b>maximumThroughputUnits</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L217" >}}">property <b>maximumThroughputUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maximumThroughputUnits?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum number of throughput units when Auto Inflate is Enabled. Valid values range from 1 - 20.
@@ -7353,10 +7706,12 @@ Specifies the maximum number of throughput units when Auto Inflate is Enabled. V
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L219" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L221" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.
@@ -7364,10 +7719,12 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L223" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L225" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the namespace. Changing this forces a new resource to be created.
@@ -7375,10 +7732,12 @@ The name of the resource group in which to create the namespace. Changing this f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L227" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L229" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines which tier to use. Valid options are `Basic` and `Standard`.
@@ -7386,10 +7745,12 @@ Defines which tier to use. Valid options are `Basic` and `Standard`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubNamespaceState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L231" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHubNamespace.ts#L233" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -7398,7 +7759,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L156" >}}">interface <b>EventHubState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L158" >}}">interface <b>EventHubState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7407,22 +7768,12 @@ Input properties used for looking up and filtering EventHub resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="EventHubState-captureDescription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L160" >}}">property <b>captureDescription</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L162" >}}">property <b>captureDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>captureDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    destination: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        archiveNameFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        blobContainerName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    encoding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    intervalInSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    sizeLimitInBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    skipEmptyArchives: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>captureDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventHubCaptureDescription'>EventHubCaptureDescription</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `captureDescription` block as defined below.
@@ -7430,18 +7781,22 @@ A `captureDescription` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L161" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L163" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubState-messageRetention">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L165" >}}">property <b>messageRetention</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L167" >}}">property <b>messageRetention</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>messageRetention?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the number of days to retain the events for this Event Hub. Needs to be between 1 and 7 days; or 1 day when using a Basic SKU for the parent EventHub Namespace.
@@ -7449,10 +7804,12 @@ Specifies the number of days to retain the events for this Event Hub. Needs to b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L169" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L171" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace resource. Changing this forces a new resource to be created.
@@ -7460,10 +7817,12 @@ Specifies the name of the EventHub Namespace resource. Changing this forces a ne
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L173" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L175" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the EventHub Namespace. Changing this forces a new resource to be created.
@@ -7471,10 +7830,12 @@ Specifies the name of the EventHub Namespace. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubState-partitionCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L177" >}}">property <b>partitionCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L179" >}}">property <b>partitionCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>partitionCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the current number of shards on the Event Hub. Changing this forces a new resource to be created.
@@ -7482,10 +7843,12 @@ Specifies the current number of shards on the Event Hub. Changing this forces a 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubState-partitionIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L181" >}}">property <b>partitionIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L183" >}}">property <b>partitionIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>partitionIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The identifiers for partitions created for Event Hubs.
@@ -7493,10 +7856,12 @@ The identifiers for partitions created for Event Hubs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L185" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventHub.ts#L187" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the EventHub's parent Namespace exists. Changing this forces a new resource to be created.
@@ -7505,15 +7870,19 @@ The name of the resource group in which the EventHub's parent Namespace exists. 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubSubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L441" >}}">interface <b>EventHubSubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L126" >}}">interface <b>EventHubSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#GetEventHubFunctionArgs'>GetEventHubFunctionArgs</a>, <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="EventHubSubscriptionArgs-account">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The storage account to use where the zip-file blob for the FunctionApp will be located. If
@@ -7526,7 +7895,9 @@ account.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L107" >}}">property <b>appSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A key-value pair of App Settings.
@@ -7537,7 +7908,9 @@ A key-value pair of App Settings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -7549,7 +7922,9 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -7564,10 +7939,12 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscriptionArgs-cardinality">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L431" >}}">property <b>cardinality</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L116" >}}">property <b>cardinality</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cardinality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"many"</span> | <span class='s2'>"one"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to 'many' in order to enable batching. If omitted or set to 'one', single message passed to function.
@@ -7578,7 +7955,9 @@ Set to 'many' in order to enable batching. If omitted or set to 'one', single me
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L112" >}}">property <b>clientAffinityEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
@@ -7589,7 +7968,9 @@ Should the Function App send session affinity cookies, which route client reques
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L117" >}}">property <b>codePathOptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Options to control which files and packages are included with the serialized FunctionApp code.
@@ -7600,11 +7981,13 @@ Options to control which files and packages are included with the serialized Fun
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L122" >}}">property <b>connectionStrings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An `connection_string` block as defined below.
@@ -7612,10 +7995,12 @@ An `connection_string` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscriptionArgs-consumerGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L426" >}}">property <b>consumerGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L111" >}}">property <b>consumerGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumerGroup?: <a href='#EventHubConsumerGroup'>EventHubConsumerGroup</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional Consumer Group to subscribe the FunctionApp to. If not present, the default consumer group will be used.
@@ -7626,7 +8011,9 @@ Optional Consumer Group to subscribe the FunctionApp to. If not present, the def
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L128" >}}">property <b>container</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The container to use where the zip-file blob for the FunctionApp will be located. If not
@@ -7638,7 +8025,9 @@ provided, the root container of the storage account will be used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L133" >}}">property <b>enableBuiltinLogging</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should the built-in logging of this Function App be enabled? Defaults to `true`.
@@ -7649,7 +8038,9 @@ Should the built-in logging of this Function App be enabled? Defaults to `true`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L138" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is the Function App enabled?
@@ -7660,7 +8051,9 @@ Is the Function App enabled?
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L143" >}}">property <b>hostSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Host configuration options.
@@ -7671,7 +8064,9 @@ Host configuration options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L148" >}}">property <b>httpsOnly</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Can the Function App only be accessed via HTTPS? Defaults to `false`.
@@ -7682,11 +8077,13 @@ Can the Function App only be accessed via HTTPS? Defaults to `false`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L153" >}}">property <b>identity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An `identity` block as defined below.
@@ -7697,7 +8094,9 @@ An `identity` block as defined below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Input bindings.
@@ -7708,7 +8107,9 @@ Input bindings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L158" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -7719,7 +8120,9 @@ Specifies the supported Azure location where the resource exists. Changing this 
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L163" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Function App.
@@ -7730,7 +8133,9 @@ The name of the Function App.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L169" >}}">property <b>nodeVersion</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not provided,
@@ -7742,7 +8147,9 @@ defaults to `8.11.1`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Output bindings.
@@ -7753,7 +8160,9 @@ Output bindings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L179" >}}">property <b>plan</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The App Service Plan within which to create this Function App. Changing this forces a new
@@ -7769,7 +8178,9 @@ more details.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L184" >}}">property <b>resourceGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
@@ -7777,10 +8188,12 @@ The resource group in which to create the event subscription. [resourceGroup] ta
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="EventHubSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L446" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L131" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
@@ -7792,12 +8205,14 @@ If none of the two is supplied, the Event Hub's resource group will be used.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L195" >}}">property <b>siteConfig</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
     alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
     linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
     use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
     websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
 }&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `site_config` object as defined below.
@@ -7808,7 +8223,9 @@ A `site_config` object as defined below.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L200" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -7819,7 +8236,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L205" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The runtime version associated with the Function App. Defaults to `~2`.
@@ -7827,16 +8246,378 @@ The runtime version associated with the Function App. Defaults to `~2`.
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="GetEventHubFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L422" >}}">interface <b>GetEventHubFunctionArgs</b></a>
+<h2 class="pdoc-module-header" id="EventSubscriptionArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L245" >}}">interface <b>EventSubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{% md %}}
+
+The set of arguments for constructing a EventSubscription resource.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-eventDeliverySchema">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L249" >}}">property <b>eventDeliverySchema</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>eventDeliverySchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-eventhubEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L253" >}}">property <b>eventhubEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `eventhubEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-hybridConnectionEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L257" >}}">property <b>hybridConnectionEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `hybridConnectionEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-includedEventTypes">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L261" >}}">property <b>includedEventTypes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A list of applicable event types that need to be part of the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-labels">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L265" >}}">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A list of labels to assign to the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L269" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-retryPolicy">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L273" >}}">property <b>retryPolicy</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `retryPolicy` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-scope">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L277" >}}">property <b>scope</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-storageBlobDeadLetterDestination">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L281" >}}">property <b>storageBlobDeadLetterDestination</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `storageBlobDeadLetterDestination` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-storageQueueEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L285" >}}">property <b>storageQueueEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `storageQueueEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-subjectFilter">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L289" >}}">property <b>subjectFilter</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `subjectFilter` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-topicName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L293" >}}">property <b>topicName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the topic to associate with the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionArgs-webhookEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L297" >}}">property <b>webhookEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `webhookEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="EventSubscriptionState">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L187" >}}">interface <b>EventSubscriptionState</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Input properties used for looking up and filtering EventSubscription resources.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="EventSubscriptionState-eventDeliverySchema">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L191" >}}">property <b>eventDeliverySchema</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>eventDeliverySchema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the event delivery schema for the event subscription. Possible values include: `EventGridSchema`, `CloudEventV01Schema`, `CustomInputSchema`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-eventhubEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L195" >}}">property <b>eventhubEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>eventhubEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionEventhubEndpoint'>EventSubscriptionEventhubEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `eventhubEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-hybridConnectionEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L199" >}}">property <b>hybridConnectionEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>hybridConnectionEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionHybridConnectionEndpoint'>EventSubscriptionHybridConnectionEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `hybridConnectionEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-includedEventTypes">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L203" >}}">property <b>includedEventTypes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A list of applicable event types that need to be part of the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-labels">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L207" >}}">property <b>labels</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A list of labels to assign to the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L211" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the EventGrid Event Subscription resource. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-retryPolicy">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L215" >}}">property <b>retryPolicy</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionRetryPolicy'>EventSubscriptionRetryPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `retryPolicy` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-scope">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L219" >}}">property <b>scope</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the scope at which the EventGrid Event Subscription should be created. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-storageBlobDeadLetterDestination">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L223" >}}">property <b>storageBlobDeadLetterDestination</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>storageBlobDeadLetterDestination?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionStorageBlobDeadLetterDestination'>EventSubscriptionStorageBlobDeadLetterDestination</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `storageBlobDeadLetterDestination` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-storageQueueEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L227" >}}">property <b>storageQueueEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>storageQueueEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionStorageQueueEndpoint'>EventSubscriptionStorageQueueEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `storageQueueEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-subjectFilter">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L231" >}}">property <b>subjectFilter</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionSubjectFilter'>EventSubscriptionSubjectFilter</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `subjectFilter` block as defined below.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-topicName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L235" >}}">property <b>topicName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the topic to associate with the event subscription.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="EventSubscriptionState-webhookEndpoint">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/eventSubscription.ts#L239" >}}">property <b>webhookEndpoint</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#EventSubscriptionWebhookEndpoint'>EventSubscriptionWebhookEndpoint</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A `webhookEndpoint` block as defined below.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetEventHubFunctionArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L107" >}}">interface <b>GetEventHubFunctionArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
+{{< /md-disable >}}
 <h3 class="pdoc-member-header" id="GetEventHubFunctionArgs-callback">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
@@ -7848,7 +8629,9 @@ The Javascript function instance to use as the entrypoint for the Azure Function
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Javascript function instance that will be called to produce the function that is the
@@ -7863,10 +8646,12 @@ the Azure will call into each time the FunctionApp it is is invoked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventHubFunctionArgs-cardinality">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L431" >}}">property <b>cardinality</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L116" >}}">property <b>cardinality</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>cardinality?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"many"</span> | <span class='s2'>"one"</span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Set to 'many' in order to enable batching. If omitted or set to 'one', single message passed to function.
@@ -7874,10 +8659,12 @@ Set to 'many' in order to enable batching. If omitted or set to 'one', single me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventHubFunctionArgs-consumerGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L426" >}}">property <b>consumerGroup</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L111" >}}">property <b>consumerGroup</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>consumerGroup?: <a href='#EventHubConsumerGroup'>EventHubConsumerGroup</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Optional Consumer Group to subscribe the FunctionApp to. If not present, the default consumer group will be used.
@@ -7888,7 +8675,9 @@ Optional Consumer Group to subscribe the FunctionApp to. If not present, the def
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Input bindings.
@@ -7899,7 +8688,9 @@ Input bindings.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Output bindings.
@@ -7908,7 +8699,7 @@ Output bindings.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetEventhubNamespaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L45" >}}">interface <b>GetEventhubNamespaceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L47" >}}">interface <b>GetEventhubNamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7917,10 +8708,12 @@ A collection of arguments for invoking getEventhubNamespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the EventHub Namespace.
@@ -7928,10 +8721,12 @@ The name of the EventHub Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Name of the Resource Group where the EventHub Namespace exists.
@@ -7940,7 +8735,7 @@ The Name of the Resource Group where the EventHub Namespace exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetEventhubNamespaceResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L59" >}}">interface <b>GetEventhubNamespaceResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L61" >}}">interface <b>GetEventhubNamespaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7949,10 +8744,12 @@ A collection of values returned by getEventhubNamespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-autoInflateEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L63" >}}">property <b>autoInflateEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L65" >}}">property <b>autoInflateEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoInflateEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is Auto Inflate enabled for the EventHub Namespace?
@@ -7960,10 +8757,12 @@ Is Auto Inflate enabled for the EventHub Namespace?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L67" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L69" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Capacity / Throughput Units for a `Standard` SKU namespace.
@@ -7971,10 +8770,12 @@ The Capacity / Throughput Units for a `Standard` SKU namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L72" >}}">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L74" >}}">property <b>defaultPrimaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrimaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary connection string for the authorization
@@ -7983,10 +8784,12 @@ rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-defaultPrimaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L76" >}}">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L78" >}}">property <b>defaultPrimaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrimaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -7994,10 +8797,12 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L81" >}}">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L83" >}}">property <b>defaultSecondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultSecondaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary connection string for the
@@ -8006,10 +8811,12 @@ authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-defaultSecondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L85" >}}">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L87" >}}">property <b>defaultSecondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultSecondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -8017,10 +8824,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L108" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L110" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8028,18 +8837,22 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-kafkaEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L86" >}}">property <b>kafkaEnabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L88" >}}">property <b>kafkaEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>kafkaEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L90" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L92" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Azure location where the EventHub Namespace exists
@@ -8047,10 +8860,12 @@ The Azure location where the EventHub Namespace exists
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-maximumThroughputUnits">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L94" >}}">property <b>maximumThroughputUnits</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L96" >}}">property <b>maximumThroughputUnits</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maximumThroughputUnits: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the maximum number of throughput units when Auto Inflate is Enabled.
@@ -8058,26 +8873,32 @@ Specifies the maximum number of throughput units when Auto Inflate is Enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L95" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L97" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L96" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L98" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L100" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L102" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines which tier to use.
@@ -8085,10 +8906,233 @@ Defines which tier to use.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetEventhubNamespaceResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L104" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getEventhubNamespace.ts#L106" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A mapping of tags to assign to the EventHub Namespace.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetNamespaceArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L47" >}}">interface <b>GetNamespaceArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+A collection of arguments for invoking getNamespace.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="GetNamespaceArgs-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L51" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the EventHub Namespace.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceArgs-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L55" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Name of the Resource Group where the EventHub Namespace exists.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetNamespaceResult">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L61" >}}">interface <b>GetNamespaceResult</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+A collection of values returned by getNamespace.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="GetNamespaceResult-autoInflateEnabled">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L65" >}}">property <b>autoInflateEnabled</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>autoInflateEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Is Auto Inflate enabled for the EventHub Namespace?
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-capacity">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L69" >}}">property <b>capacity</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Capacity / Throughput Units for a `Standard` SKU namespace.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-defaultPrimaryConnectionString">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L74" >}}">property <b>defaultPrimaryConnectionString</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>defaultPrimaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The primary connection string for the authorization
+rule `RootManageSharedAccessKey`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-defaultPrimaryKey">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L78" >}}">property <b>defaultPrimaryKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>defaultPrimaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The primary access key for the authorization rule `RootManageSharedAccessKey`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-defaultSecondaryConnectionString">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L83" >}}">property <b>defaultSecondaryConnectionString</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>defaultSecondaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The secondary connection string for the
+authorization rule `RootManageSharedAccessKey`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-defaultSecondaryKey">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L87" >}}">property <b>defaultSecondaryKey</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>defaultSecondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The secondary access key for the authorization rule `RootManageSharedAccessKey`.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-id">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L110" >}}">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+id is the provider-assigned unique ID for this managed resource.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-kafkaEnabled">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L88" >}}">property <b>kafkaEnabled</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>kafkaEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L92" >}}">property <b>location</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The Azure location where the EventHub Namespace exists
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-maximumThroughputUnits">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L96" >}}">property <b>maximumThroughputUnits</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>maximumThroughputUnits: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the maximum number of throughput units when Auto Inflate is Enabled.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L97" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L98" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-sku">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L102" >}}">property <b>sku</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Defines which tier to use.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetNamespaceResult-tags">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getNamespace.ts#L106" >}}">property <b>tags</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the EventHub Namespace.
@@ -8097,7 +9141,7 @@ A mapping of tags to assign to the EventHub Namespace.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServiceBusNamespaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L45" >}}">interface <b>GetServiceBusNamespaceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L47" >}}">interface <b>GetServiceBusNamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8106,10 +9150,12 @@ A collection of arguments for invoking getServiceBusNamespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace.
@@ -8117,10 +9163,12 @@ Specifies the name of the ServiceBus Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Resource Group where the ServiceBus Namespace exists.
@@ -8129,7 +9177,7 @@ Specifies the name of the Resource Group where the ServiceBus Namespace exists.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServiceBusNamespaceResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L59" >}}">interface <b>GetServiceBusNamespaceResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L61" >}}">interface <b>GetServiceBusNamespaceResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8138,10 +9186,12 @@ A collection of values returned by getServiceBusNamespace.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L63" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L65" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The capacity of the ServiceBus Namespace.
@@ -8149,10 +9199,12 @@ The capacity of the ServiceBus Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L68" >}}">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L70" >}}">property <b>defaultPrimaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrimaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary connection string for the authorization
@@ -8161,10 +9213,12 @@ rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-defaultPrimaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L72" >}}">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L74" >}}">property <b>defaultPrimaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrimaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -8172,10 +9226,12 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L77" >}}">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L79" >}}">property <b>defaultSecondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultSecondaryConnectionString: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary connection string for the
@@ -8184,10 +9240,12 @@ authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-defaultSecondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L81" >}}">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L83" >}}">property <b>defaultSecondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultSecondaryKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -8195,10 +9253,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L99" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L101" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8206,10 +9266,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L85" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L87" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The location of the Resource Group in which the ServiceBus Namespace exists.
@@ -8217,26 +9279,32 @@ The location of the Resource Group in which the ServiceBus Namespace exists.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L86" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L88" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L87" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L89" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L91" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L93" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Tier used for the ServiceBus Namespace.
@@ -8244,10 +9312,12 @@ The Tier used for the ServiceBus Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServiceBusNamespaceResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L95" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/getServiceBusNamespace.ts#L97" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags assigned to the resource.
@@ -8255,77 +9325,8 @@ A mapping of tags assigned to the resource.
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="GetTopicFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L211" >}}">interface <b>GetTopicFunctionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
-<h3 class="pdoc-member-header" id="GetTopicFunctionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
-[callback] or [callbackFactory] must be provided.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="GetTopicFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance that will be called to produce the function that is the
-entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
-provided.
-
-This form is useful when there is expensive initialization work that should only be executed
-once.  The factory-function will be invoked once when the final Azure FunctionApp module is
-loaded. It can run whatever code it needs, and will end by returning the actual function that
-the Azure will call into each time the FunctionApp it is is invoked.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="GetTopicFunctionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Input bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="GetTopicFunctionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Output bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="GetTopicFunctionArgs-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L215" >}}">property <b>subscription</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subscription?: <a href='#Subscription'>Subscription</a>;</pre>
-{{% md %}}
-
-The ServiceBus Subscription to subscribe the Function to.
-
-{{% /md %}}
-</div>
-</div>
 <h2 class="pdoc-module-header" id="NamespaceArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L210" >}}">interface <b>NamespaceArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L212" >}}">interface <b>NamespaceArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8334,10 +9335,12 @@ The set of arguments for constructing a Namespace resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceArgs-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L214" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L216" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the capacity. When `sku` is `Premium` can be `1`, `2` or `4`. When `sku` is `Basic` or `Standard` can be `0` only.
@@ -8345,10 +9348,12 @@ Specifies the capacity. When `sku` is `Premium` can be `1`, `2` or `4`. When `sk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L218" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L220" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -8356,10 +9361,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L223" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L225" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace resource . Changing this forces a
@@ -8368,10 +9375,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L228" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L230" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -8380,10 +9389,12 @@ create the namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L232" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L234" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines which tier to use. Options are basic, standard or premium.
@@ -8391,10 +9402,12 @@ Defines which tier to use. Options are basic, standard or premium.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L236" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L238" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -8403,7 +9416,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceAuthorizationRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L210" >}}">interface <b>NamespaceAuthorizationRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L212" >}}">interface <b>NamespaceAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8412,10 +9425,12 @@ The set of arguments for constructing a NamespaceAuthorizationRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L214" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L216" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -8423,10 +9438,12 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L218" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L220" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -8434,10 +9451,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L222" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L224" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
@@ -8445,10 +9464,12 @@ Specifies the name of the ServiceBus Namespace Authorization Rule resource. Chan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L226" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L228" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
@@ -8456,10 +9477,12 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L230" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L232" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -8467,10 +9490,12 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L234" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L236" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -8479,7 +9504,7 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceAuthorizationRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L164" >}}">interface <b>NamespaceAuthorizationRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L166" >}}">interface <b>NamespaceAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8488,10 +9513,12 @@ Input properties used for looking up and filtering NamespaceAuthorizationRule re
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L168" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L170" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -8499,10 +9526,12 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L172" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L174" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -8510,10 +9539,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L176" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L178" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace Authorization Rule resource. Changing this forces a new resource to be created.
@@ -8521,10 +9552,12 @@ Specifies the name of the ServiceBus Namespace Authorization Rule resource. Chan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L180" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L182" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
@@ -8532,10 +9565,12 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L184" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L186" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the ServiceBus Namespace authorization Rule.
@@ -8543,10 +9578,12 @@ The Primary Connection String for the ServiceBus Namespace authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L188" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L190" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the ServiceBus Namespace authorization Rule.
@@ -8554,10 +9591,12 @@ The Primary Key for the ServiceBus Namespace authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L192" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L194" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -8565,10 +9604,12 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L196" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L198" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the ServiceBus Namespace authorization Rule.
@@ -8576,10 +9617,12 @@ The Secondary Connection String for the ServiceBus Namespace authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L200" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L202" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the ServiceBus Namespace authorization Rule.
@@ -8587,10 +9630,12 @@ The Secondary Key for the ServiceBus Namespace authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceAuthorizationRuleState-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L204" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespaceAuthorizationRule.ts#L206" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -8599,7 +9644,7 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NamespaceState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L160" >}}">interface <b>NamespaceState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L162" >}}">interface <b>NamespaceState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8608,10 +9653,12 @@ Input properties used for looking up and filtering Namespace resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NamespaceState-capacity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L164" >}}">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L166" >}}">property <b>capacity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the capacity. When `sku` is `Premium` can be `1`, `2` or `4`. When `sku` is `Basic` or `Standard` can be `0` only.
@@ -8619,10 +9666,12 @@ Specifies the capacity. When `sku` is `Premium` can be `1`, `2` or `4`. When `sk
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-defaultPrimaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L169" >}}">property <b>defaultPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L171" >}}">property <b>defaultPrimaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrimaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary connection string for the authorization
@@ -8631,10 +9680,12 @@ rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-defaultPrimaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L173" >}}">property <b>defaultPrimaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L175" >}}">property <b>defaultPrimaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultPrimaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The primary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -8642,10 +9693,12 @@ The primary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-defaultSecondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L178" >}}">property <b>defaultSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L180" >}}">property <b>defaultSecondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultSecondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary connection string for the
@@ -8654,10 +9707,12 @@ authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-defaultSecondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L182" >}}">property <b>defaultSecondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L184" >}}">property <b>defaultSecondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultSecondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secondary access key for the authorization rule `RootManageSharedAccessKey`.
@@ -8665,10 +9720,12 @@ The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L186" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L188" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -8676,10 +9733,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L191" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L193" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace resource . Changing this forces a
@@ -8688,10 +9747,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L196" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L198" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -8700,10 +9761,12 @@ create the namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L200" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L202" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines which tier to use. Options are basic, standard or premium.
@@ -8711,10 +9774,12 @@ Defines which tier to use. Options are basic, standard or premium.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NamespaceState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L204" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/namespace.ts#L206" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -8723,7 +9788,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L306" >}}">interface <b>QueueArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L308" >}}">interface <b>QueueArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8732,10 +9797,12 @@ The set of arguments for constructing a Queue resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueArgs-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L311" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L313" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the idle interval after which the
@@ -8744,10 +9811,12 @@ Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L315" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L317" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadLetteringOnMessageExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
@@ -8755,10 +9824,12 @@ Boolean flag which controls whether the Queue has dead letter support when a mes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L320" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L322" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the TTL of messages sent to this
@@ -8767,10 +9838,12 @@ queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L325" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L327" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duplicateDetectionHistoryTimeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration during which
@@ -8779,18 +9852,22 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L326" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L328" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-enableExpress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L333" >}}">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L335" >}}">property <b>enableExpress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableExpress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether Express Entities
@@ -8801,10 +9878,12 @@ be set to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-enablePartitioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L340" >}}">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L342" >}}">property <b>enablePartitioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enablePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether to enable
@@ -8815,10 +9894,12 @@ be set to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L345" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L347" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -8827,10 +9908,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-lockDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L349" >}}">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L351" >}}">property <b>lockDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lockDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
@@ -8838,10 +9921,12 @@ The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-maxDeliveryCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L353" >}}">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L355" >}}">property <b>maxDeliveryCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxDeliveryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
@@ -8849,10 +9934,12 @@ Integer value which controls when a message is automatically deadlettered. Defau
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L359" >}}">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L361" >}}">property <b>maxSizeInMegabytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSizeInMegabytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls the size of
@@ -8862,10 +9949,12 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L364" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L366" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Queue resource. Changing this forces a
@@ -8874,10 +9963,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L369" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L371" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -8886,10 +9977,12 @@ this queue in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L375" >}}">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L377" >}}">property <b>requiresDuplicateDetection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requiresDuplicateDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether
@@ -8899,10 +9992,12 @@ a new resource to be created. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-requiresSession">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L382" >}}">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L384" >}}">property <b>requiresSession</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requiresSession?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Queue requires sessions.
@@ -8913,10 +10008,12 @@ Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L387" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L389" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -8925,16 +10022,18 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueArgs-supportOrdering">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L388" >}}">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L390" >}}">property <b>supportOrdering</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>supportOrdering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueAuthorizationRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L230" >}}">interface <b>QueueAuthorizationRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L232" >}}">interface <b>QueueAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8943,10 +10042,12 @@ The set of arguments for constructing a QueueAuthorizationRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L234" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L236" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
@@ -8954,10 +10055,12 @@ Does this Authorization Rule have Listen permissions to the ServiceBus Queue? De
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L238" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L240" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -8965,10 +10068,12 @@ Does this Authorization Rule have Manage permissions to the ServiceBus Queue? Wh
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L242" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L244" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
@@ -8976,10 +10081,12 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L246" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L248" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
@@ -8987,10 +10094,12 @@ Specifies the name of the ServiceBus Namespace in which the Queue exists. Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-queueName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L250" >}}">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L252" >}}">property <b>queueName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>queueName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
@@ -8998,10 +10107,12 @@ Specifies the name of the ServiceBus Queue. Changing this forces a new resource 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L254" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L256" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -9009,10 +10120,12 @@ The name of the Resource Group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L258" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L260" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
@@ -9021,7 +10134,7 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
 </div>
 </div>
 <h2 class="pdoc-module-header" id="QueueAuthorizationRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L180" >}}">interface <b>QueueAuthorizationRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L182" >}}">interface <b>QueueAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9030,10 +10143,12 @@ Input properties used for looking up and filtering QueueAuthorizationRule resour
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L184" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L186" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Listen permissions to the ServiceBus Queue? Defaults to `false`.
@@ -9041,10 +10156,12 @@ Does this Authorization Rule have Listen permissions to the ServiceBus Queue? De
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L188" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L190" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Manage permissions to the ServiceBus Queue? When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -9052,10 +10169,12 @@ Does this Authorization Rule have Manage permissions to the ServiceBus Queue? Wh
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L192" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L194" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Authorization Rule. Changing this forces a new resource to be created.
@@ -9063,10 +10182,12 @@ Specifies the name of the Authorization Rule. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L196" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L198" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace in which the Queue exists. Changing this forces a new resource to be created.
@@ -9074,10 +10195,12 @@ Specifies the name of the ServiceBus Namespace in which the Queue exists. Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L200" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L202" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the Authorization Rule.
@@ -9085,10 +10208,12 @@ The Primary Connection String for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L204" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L206" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the Authorization Rule.
@@ -9096,10 +10221,12 @@ The Primary Key for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-queueName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L208" >}}">property <b>queueName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L210" >}}">property <b>queueName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>queueName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Queue. Changing this forces a new resource to be created.
@@ -9107,10 +10234,12 @@ Specifies the name of the ServiceBus Queue. Changing this forces a new resource 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L212" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L214" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -9118,10 +10247,12 @@ The name of the Resource Group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L216" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L218" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the Authorization Rule.
@@ -9129,10 +10260,12 @@ The Secondary Connection String for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L220" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L222" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the Authorization Rule.
@@ -9140,10 +10273,12 @@ The Secondary Key for the Authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueAuthorizationRuleState-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L224" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queueAuthorizationRule.ts#L226" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defaults to `false`.
@@ -9151,310 +10286,8 @@ Does this Authorization Rule have Send permissions to the ServiceBus Queue? Defa
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="QueueEventSubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L142" >}}">interface <b>QueueEventSubscriptionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionAppArgs'>CallbackFunctionAppArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-account">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
-{{% md %}}
-
-The storage account to use where the zip-file blob for the FunctionApp will be located. If
-not provided, a new storage account will create. It will be a 'Standard', 'LRS', 'StorageV2'
-account.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L107" >}}">property <b>appSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A key-value pair of App Settings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
-[callback] or [callbackFactory] must be provided.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance that will be called to produce the function that is the
-entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
-provided.
-
-This form is useful when there is expensive initialization work that should only be executed
-once.  The factory-function will be invoked once when the final Azure FunctionApp module is
-loaded. It can run whatever code it needs, and will end by returning the actual function that
-the Azure will call into each time the FunctionApp it is is invoked.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L112" >}}">property <b>clientAffinityEnabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L117" >}}">property <b>codePathOptions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
-{{% md %}}
-
-Options to control which files and packages are included with the serialized FunctionApp code.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L122" >}}">property <b>connectionStrings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{% md %}}
-
-An `connection_string` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-container">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L128" >}}">property <b>container</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
-{{% md %}}
-
-The container to use where the zip-file blob for the FunctionApp will be located. If not
-provided, the root container of the storage account will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L133" >}}">property <b>enableBuiltinLogging</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the built-in logging of this Function App be enabled? Defaults to `true`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L138" >}}">property <b>enabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Is the Function App enabled?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L153" >}}">property <b>hostSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#ServiceBusHostSettings'>ServiceBusHostSettings</a>;</pre>
-{{% md %}}
-
-Host settings specific to the Service Bus Topic/Subscription plugin. These values can be provided here, or defaults will
-be used in their place.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L148" >}}">property <b>httpsOnly</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Can the Function App only be accessed via HTTPS? Defaults to `false`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L153" >}}">property <b>identity</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-An `identity` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Input bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L158" >}}">property <b>location</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L163" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The name of the Function App.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L169" >}}">property <b>nodeVersion</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not provided,
-defaults to `8.11.1`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Output bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L179" >}}">property <b>plan</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
-{{% md %}}
-
-The App Service Plan within which to create this Function App. Changing this forces a new
-resource to be created.
-
-If not provided, a default "Consumption" plan will be created.  See:
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumption-plan for
-more details.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L184" >}}">property <b>resourceGroup</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
-{{% md %}}
-
-The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L147" >}}">property <b>resourceGroupName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The name of the resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
-If none of the two is supplied, the Queue's resource group will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L195" >}}">property <b>siteConfig</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `site_config` object as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L200" >}}">property <b>tags</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A mapping of tags to assign to the resource.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="QueueEventSubscriptionArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L205" >}}">property <b>version</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The runtime version associated with the Function App. Defaults to `~2`.
-
-{{% /md %}}
-</div>
-</div>
 <h2 class="pdoc-module-header" id="QueueState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L218" >}}">interface <b>QueueState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L220" >}}">interface <b>QueueState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9463,10 +10296,12 @@ Input properties used for looking up and filtering Queue resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="QueueState-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L223" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L225" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the idle interval after which the
@@ -9475,10 +10310,12 @@ Queue is automatically deleted, minimum of 5 minutes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L227" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L229" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadLetteringOnMessageExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Queue has dead letter support when a message expires. Defaults to `false`.
@@ -9486,10 +10323,12 @@ Boolean flag which controls whether the Queue has dead letter support when a mes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L232" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L234" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the TTL of messages sent to this
@@ -9498,10 +10337,12 @@ queue. This is the default value used when TTL is not set on message itself.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L237" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L239" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duplicateDetectionHistoryTimeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration during which
@@ -9510,18 +10351,22 @@ duplicates can be detected. Default value is 10 minutes. (`PT10M`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L238" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L240" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-enableExpress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L245" >}}">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L247" >}}">property <b>enableExpress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableExpress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether Express Entities
@@ -9532,10 +10377,12 @@ be set to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-enablePartitioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L252" >}}">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L254" >}}">property <b>enablePartitioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enablePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether to enable
@@ -9546,10 +10393,12 @@ be set to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L257" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L259" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -9558,10 +10407,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-lockDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L261" >}}">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L263" >}}">property <b>lockDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lockDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. Maximum value is 5 minutes. Defaults to 1 minute. (`PT1M`)
@@ -9569,10 +10420,12 @@ The ISO 8601 timespan duration of a peek-lock; that is, the amount of time that 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-maxDeliveryCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L265" >}}">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L267" >}}">property <b>maxDeliveryCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxDeliveryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls when a message is automatically deadlettered. Defaults to `10`.
@@ -9580,10 +10433,12 @@ Integer value which controls when a message is automatically deadlettered. Defau
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L271" >}}">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L273" >}}">property <b>maxSizeInMegabytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSizeInMegabytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls the size of
@@ -9593,10 +10448,12 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L276" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L278" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Queue resource. Changing this forces a
@@ -9605,10 +10462,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L281" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L283" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -9617,10 +10476,12 @@ this queue in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L287" >}}">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L289" >}}">property <b>requiresDuplicateDetection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requiresDuplicateDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether
@@ -9630,10 +10491,12 @@ a new resource to be created. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-requiresSession">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L294" >}}">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L296" >}}">property <b>requiresSession</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requiresSession?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Queue requires sessions.
@@ -9644,10 +10507,12 @@ Changing this forces a new resource to be created. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L299" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L301" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -9656,1173 +10521,18 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="QueueState-supportOrdering">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L300" >}}">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/queue.ts#L302" >}}">property <b>supportOrdering</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>supportOrdering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ResourceGroupEventGridCallbackSubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L704" >}}">interface <b>ResourceGroupEventGridCallbackSubscriptionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;<a href='#ResourceGroupEvent'>ResourceGroupEvent</a>&gt;</pre>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-account">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
-{{% md %}}
-
-The storage account to use where the zip-file blob for the FunctionApp will be located. If
-not provided, a new storage account will create. It will be a 'Standard', 'LRS', 'StorageV2'
-account.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L107" >}}">property <b>appSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A key-value pair of App Settings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;<a href='#ResourceGroupEvent'>ResourceGroupEvent</a>&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;<a href='#ResourceGroupEvent'>ResourceGroupEvent</a>&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
-[callback] or [callbackFactory] must be provided.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;<a href='#ResourceGroupEvent'>ResourceGroupEvent</a>&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;<a href='#ResourceGroupEvent'>ResourceGroupEvent</a>&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance that will be called to produce the function that is the
-entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
-provided.
-
-This form is useful when there is expensive initialization work that should only be executed
-once.  The factory-function will be invoked once when the final Azure FunctionApp module is
-loaded. It can run whatever code it needs, and will end by returning the actual function that
-the Azure will call into each time the FunctionApp it is is invoked.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L112" >}}">property <b>clientAffinityEnabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L117" >}}">property <b>codePathOptions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
-{{% md %}}
-
-Options to control which files and packages are included with the serialized FunctionApp code.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L122" >}}">property <b>connectionStrings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{% md %}}
-
-An `connection_string` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-container">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L128" >}}">property <b>container</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
-{{% md %}}
-
-The container to use where the zip-file blob for the FunctionApp will be located. If not
-provided, the root container of the storage account will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L133" >}}">property <b>enableBuiltinLogging</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the built-in logging of this Function App be enabled? Defaults to `true`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L138" >}}">property <b>enabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Is the Function App enabled?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L143" >}}">property <b>hostSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
-{{% md %}}
-
-Host configuration options.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L148" >}}">property <b>httpsOnly</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Can the Function App only be accessed via HTTPS? Defaults to `false`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L153" >}}">property <b>identity</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-An `identity` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-includedEventTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L618" >}}">property <b>includedEventTypes</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{% md %}}
-
-A list of applicable event types that need to be part of the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Input bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L158" >}}">property <b>location</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L163" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The name of the Function App.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L169" >}}">property <b>nodeVersion</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not provided,
-defaults to `8.11.1`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Output bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L179" >}}">property <b>plan</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
-{{% md %}}
-
-The App Service Plan within which to create this Function App. Changing this forces a new
-resource to be created.
-
-If not provided, a default "Consumption" plan will be created.  See:
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumption-plan for
-more details.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L708" >}}">property <b>resourceGroup</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroup: <a href='#ResourceGroup'>ResourceGroup</a>;</pre>
-{{% md %}}
-
-Resource Group to subscribe to. Event Grid events for this resource group trigger the callback execution.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L613" >}}">property <b>resourceGroupName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The name of the resource group in which to create the event subscription. [resourceGroup] takes precedence
-over [resourceGroupName]. If none of the two is supplied, the Queue's resource group will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-retryPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L623" >}}">property <b>retryPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventTimeToLive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxDeliveryAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A retry policy block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L195" >}}">property <b>siteConfig</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `site_config` object as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-subjectFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L628" >}}">property <b>subjectFilter</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caseSensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    subjectBeginsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subjectEndsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A subject filter block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L200" >}}">property <b>tags</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A mapping of tags to assign to the resource.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ResourceGroupEventGridCallbackSubscriptionArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L205" >}}">property <b>version</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The runtime version associated with the Function App. Defaults to `~2`.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ServiceBusContext">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L65" >}}">interface <b>ServiceBusContext</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#Context'>Context</a>&lt;appservice.FunctionDefaultResponse&gt;</pre>
-{{% md %}}
-
-Data that will be passed along in the context object to the ServiceBusCallback.
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="ServiceBusContext-done">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L47" >}}">method <b>done</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>done(err?: <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error'>Error</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'>null</span>, result?: <a href='#R'>R</a>): <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></pre>
-
-
-A callback function that signals to the runtime that your code has completed. If your
-function is synchronous, you must call context.done at the end of execution. If your function
-is asynchronous, you should not use this callback.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusContext-bindingData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L73" >}}">property <b>bindingData</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>bindingData: {
-    contentType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    correlationId: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;
-    deadLetterSource: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;
-    invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    label: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;
-    message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    messageId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    properties: Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;;
-    replyTo: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;
-    sys: {
-        methodName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        utcNow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    to: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;
-};</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusContext-bindingDefinitions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L43" >}}">property <b>bindingDefinitions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>bindingDefinitions: BindingDefinition[];</pre>
-{{% md %}}
-
-Bindings your function uses, as defined in function.json.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusContext-bindings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L72" >}}">property <b>bindings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>bindings: {
-    message: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusContext-executionContext">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L67" >}}">property <b>executionContext</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>executionContext: {
-    functionDirectory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    functionName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusContext-invocationId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L66" >}}">property <b>invocationId</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>invocationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusContext-log">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L48" >}}">property <b>log</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>log: Logger;</pre>
-{{% md %}}
-
-Allows you to write streaming function logs. Calling directly allows you to write streaming function logs
-at the default trace level.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusContext-req">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L62" >}}">property <b>req</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>req?: <a href='#HttpRequest'>HttpRequest</a>;</pre>
-{{% md %}}
-
-HTTP request object. Provided to your function when using HTTP Bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusContext-res">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@azure/functions/Interfaces.d.ts#L66" >}}">property <b>res</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>res?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
-{{% md %}}
-
-HTTP response object. Provided to your function when using HTTP Bindings.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ServiceBusFunctionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L125" >}}">interface <b>ServiceBusFunctionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#CallbackFunctionArgs'>CallbackFunctionArgs</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;</pre>
-<h3 class="pdoc-member-header" id="ServiceBusFunctionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
-[callback] or [callbackFactory] must be provided.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunctionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance that will be called to produce the function that is the
-entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
-provided.
-
-This form is useful when there is expensive initialization work that should only be executed
-once.  The factory-function will be invoked once when the final Azure FunctionApp module is
-loaded. It can run whatever code it needs, and will end by returning the actual function that
-the Azure will call into each time the FunctionApp it is is invoked.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunctionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Input bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunctionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Output bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunctionArgs-queue">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L129" >}}">property <b>queue</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>queue?: <a href='#Queue'>Queue</a>;</pre>
-{{% md %}}
-
-The ServiceBus Queue to subscribe to.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunctionArgs-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L139" >}}">property <b>subscription</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subscription?: <a href='#Subscription'>Subscription</a>;</pre>
-{{% md %}}
-
-The ServiceBus Subscription to subscribe the Function to.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusFunctionArgs-topic">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L134" >}}">property <b>topic</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>topic?: <a href='#Topic'>Topic</a>;</pre>
-{{% md %}}
-
-The ServiceBus Topic to subscribe to.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ServiceBusHostExtensions">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L96" >}}">interface <b>ServiceBusHostExtensions</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#HostSettings'>HostSettings</a></pre>
-{{% md %}}
-
-Host settings specific to the Service Bus Queue/Topic/Subscription plugin.
-
-For more details see https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-service-bus#host-json
-
-{{% /md %}}
-<h3 class="pdoc-member-header" id="ServiceBusHostExtensions-aggregator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L234" >}}">property <b>aggregator</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>aggregator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    batchSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    flushTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-
-Specifies how many function invocations are aggregated when calculating metrics for
-Application Insights.
-
-See https://docs.microsoft.com/en-us/azure/azure-functions/functions-host-json#aggregator for
-more details.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostExtensions-extensions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L307" >}}">property <b>extensions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>extensions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    http: appservice.HttpHostExtensions;
-    queues: storageForTypesOnly.QueueHostExtensions;
-    serviceBus: eventhubForTypesOnly.ServiceBusHostExtensions;
-};</pre>
-{{% md %}}
-
-Extension-specific configuration options.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostExtensions-functionTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L246" >}}">property <b>functionTimeout</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>functionTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-
-Indicates the timeout duration for all functions. In a serverless Consumption plan, the valid
-range is from 1 second to 10 minutes, and the default value is 5 minutes. In an App Service
-plan, there is no overall limit and the default depends on the runtime version. In version
-2.x, the default value for an App Service plan is 30 minutes.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostExtensions-healthMonitor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L252" >}}">property <b>healthMonitor</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthMonitor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    counterThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    healthCheckInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    healthCheckThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    healthCheckWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-
-Configuration settings for
-[host-health-monitor](https://github.com/Azure/azure-webjobs-sdk-script/wiki/Host-Health-Monitor).
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostExtensions-logging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L272" >}}">property <b>logging</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>logging?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    applicationInsights: {
-        samplingSettings: {
-            isEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-            maxTelemetryItemsPerSecond: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        };
-    };
-    fileLoggingMode: <span class='s2'>"never"</span> | <span class='s2'>"only"</span> | <span class='s2'>"debugOnly"</span>;
-    logLevel: {
-        default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-};</pre>
-{{% md %}}
-
-Controls the logging behaviors of the function app, including Application Insights.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostExtensions-messageHandlerOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L100" >}}">property <b>messageHandlerOptions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>messageHandlerOptions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    autoComplete: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    maxAutoRenewDuration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    maxConcurrentCalls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-};</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostExtensions-prefetchCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L98" >}}">property <b>prefetchCount</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>prefetchCount?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
-{{% md %}}
-
-The default PrefetchCount that will be used by the underlying MessageReceiver.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostExtensions-singleton">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L293" >}}">property <b>singleton</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>singleton?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    listenerLockPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    listenerLockRecoveryPollingInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lockAcquisitionPollingInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lockAcquisitionTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lockPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-
-Configuration settings for Singleton lock behavior. For more information, see
-[GitHub-issue](https://github.com/Azure/azure-webjobs-sdk-script/issues/912) about singleton
-support.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="ServiceBusHostSettings">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L114" >}}">interface <b>ServiceBusHostSettings</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#HostSettings'>HostSettings</a></pre>
-<h3 class="pdoc-member-header" id="ServiceBusHostSettings-aggregator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L234" >}}">property <b>aggregator</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>aggregator?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    batchSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    flushTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-
-Specifies how many function invocations are aggregated when calculating metrics for
-Application Insights.
-
-See https://docs.microsoft.com/en-us/azure/azure-functions/functions-host-json#aggregator for
-more details.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostSettings-extensions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L115" >}}">property <b>extensions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>extensions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    serviceBus: <a href='#ServiceBusHostExtensions'>ServiceBusHostExtensions</a>;
-};</pre>
-{{% md %}}
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostSettings-functionTimeout">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L246" >}}">property <b>functionTimeout</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>functionTimeout?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
-{{% md %}}
-
-Indicates the timeout duration for all functions. In a serverless Consumption plan, the valid
-range is from 1 second to 10 minutes, and the default value is 5 minutes. In an App Service
-plan, there is no overall limit and the default depends on the runtime version. In version
-2.x, the default value for an App Service plan is 30 minutes.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostSettings-healthMonitor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L252" >}}">property <b>healthMonitor</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthMonitor?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    counterThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    healthCheckInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    healthCheckThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    healthCheckWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-
-Configuration settings for
-[host-health-monitor](https://github.com/Azure/azure-webjobs-sdk-script/wiki/Host-Health-Monitor).
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostSettings-logging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L272" >}}">property <b>logging</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>logging?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    applicationInsights: {
-        samplingSettings: {
-            isEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-            maxTelemetryItemsPerSecond: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        };
-    };
-    fileLoggingMode: <span class='s2'>"never"</span> | <span class='s2'>"only"</span> | <span class='s2'>"debugOnly"</span>;
-    logLevel: {
-        default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-};</pre>
-{{% md %}}
-
-Controls the logging behaviors of the function app, including Application Insights.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="ServiceBusHostSettings-singleton">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L293" >}}">property <b>singleton</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>singleton?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-    listenerLockPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    listenerLockRecoveryPollingInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lockAcquisitionPollingInterval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lockAcquisitionTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    lockPeriod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
-{{% md %}}
-
-Configuration settings for Singleton lock behavior. For more information, see
-[GitHub-issue](https://github.com/Azure/azure-webjobs-sdk-script/issues/912) about singleton
-support.
-
-{{% /md %}}
-</div>
-</div>
-<h2 class="pdoc-module-header" id="StorageAccountEventGridCallbackSubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L683" >}}">interface <b>StorageAccountEventGridCallbackSubscriptionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#EventGridCallbackSubscriptionArgs'>EventGridCallbackSubscriptionArgs</a>&lt;T&gt;</pre>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-account">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
-{{% md %}}
-
-The storage account to use where the zip-file blob for the FunctionApp will be located. If
-not provided, a new storage account will create. It will be a 'Standard', 'LRS', 'StorageV2'
-account.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L107" >}}">property <b>appSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A key-value pair of App Settings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
-[callback] or [callbackFactory] must be provided.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#EventGridContext'>EventGridContext</a>&lt;T&gt;, <a href='#EventGridEvent'>EventGridEvent</a>&lt;T&gt;, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance that will be called to produce the function that is the
-entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
-provided.
-
-This form is useful when there is expensive initialization work that should only be executed
-once.  The factory-function will be invoked once when the final Azure FunctionApp module is
-loaded. It can run whatever code it needs, and will end by returning the actual function that
-the Azure will call into each time the FunctionApp it is is invoked.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L112" >}}">property <b>clientAffinityEnabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L117" >}}">property <b>codePathOptions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
-{{% md %}}
-
-Options to control which files and packages are included with the serialized FunctionApp code.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L122" >}}">property <b>connectionStrings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{% md %}}
-
-An `connection_string` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-container">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L128" >}}">property <b>container</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
-{{% md %}}
-
-The container to use where the zip-file blob for the FunctionApp will be located. If not
-provided, the root container of the storage account will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L133" >}}">property <b>enableBuiltinLogging</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the built-in logging of this Function App be enabled? Defaults to `true`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L138" >}}">property <b>enabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Is the Function App enabled?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L143" >}}">property <b>hostSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#HostSettings'>HostSettings</a>;</pre>
-{{% md %}}
-
-Host configuration options.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L148" >}}">property <b>httpsOnly</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Can the Function App only be accessed via HTTPS? Defaults to `false`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L153" >}}">property <b>identity</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-An `identity` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-includedEventTypes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L618" >}}">property <b>includedEventTypes</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>includedEventTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
-{{% md %}}
-
-A list of applicable event types that need to be part of the event subscription.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Input bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L158" >}}">property <b>location</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L163" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The name of the Function App.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L169" >}}">property <b>nodeVersion</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not provided,
-defaults to `8.11.1`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Output bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L179" >}}">property <b>plan</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
-{{% md %}}
-
-The App Service Plan within which to create this Function App. Changing this forces a new
-resource to be created.
-
-If not provided, a default "Consumption" plan will be created.  See:
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumption-plan for
-more details.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L184" >}}">property <b>resourceGroup</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
-{{% md %}}
-
-The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L613" >}}">property <b>resourceGroupName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The name of the resource group in which to create the event subscription. [resourceGroup] takes precedence
-over [resourceGroupName]. If none of the two is supplied, the Queue's resource group will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-retryPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L623" >}}">property <b>retryPolicy</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>retryPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    eventTimeToLive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    maxDeliveryAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A retry policy block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L195" >}}">property <b>siteConfig</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `site_config` object as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-storageAccount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L687" >}}">property <b>storageAccount</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageAccount: <a href='#Account'>Account</a>;</pre>
-{{% md %}}
-
-Storage Account to subscribe to. Event Grid events for this account trigger the callback execution.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-subjectFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L628" >}}">property <b>subjectFilter</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subjectFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caseSensitive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    subjectBeginsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subjectEndsWith: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A subject filter block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L200" >}}">property <b>tags</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A mapping of tags to assign to the resource.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="StorageAccountEventGridCallbackSubscriptionArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L205" >}}">property <b>version</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The runtime version associated with the Function App. Defaults to `~2`.
-
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L287" >}}">interface <b>SubscriptionArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L289" >}}">interface <b>SubscriptionArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -10831,10 +10541,12 @@ The set of arguments for constructing a Subscription resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionArgs-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L293" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L295" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The idle interval after which the
@@ -10844,18 +10556,22 @@ TimeSpan format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-deadLetteringOnFilterEvaluationExceptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L294" >}}">property <b>deadLetteringOnFilterEvaluationExceptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L296" >}}">property <b>deadLetteringOnFilterEvaluationExceptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadLetteringOnFilterEvaluationExceptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L300" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L302" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadLetteringOnMessageExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls
@@ -10865,10 +10581,12 @@ to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L306" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L308" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of messages sent to this Subscription
@@ -10878,10 +10596,12 @@ format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L311" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L313" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the
@@ -10890,10 +10610,12 @@ Subscription supports batched operations. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-forwardTo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L316" >}}">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L318" >}}">property <b>forwardTo</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forwardTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a Queue or Topic to automatically forward
@@ -10902,10 +10624,12 @@ messages to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L321" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L323" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -10914,10 +10638,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-lockDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L326" >}}">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L328" >}}">property <b>lockDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lockDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The lock duration for the subscription, maximum
@@ -10926,10 +10652,12 @@ supported value is 5 minutes. Defaults to 1 minute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-maxDeliveryCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L330" >}}">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L332" >}}">property <b>maxDeliveryCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxDeliveryCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of deliveries.
@@ -10937,10 +10665,12 @@ The maximum number of deliveries.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L335" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L337" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Subscription resource.
@@ -10949,10 +10679,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L340" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L342" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -10961,10 +10693,12 @@ this Subscription in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-requiresSession">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L346" >}}">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L348" >}}">property <b>requiresSession</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requiresSession?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether this Subscription
@@ -10974,10 +10708,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L351" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L353" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -10986,10 +10722,12 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionArgs-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L356" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L358" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Topic to create
@@ -10999,7 +10737,7 @@ this Subscription in. Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L269" >}}">interface <b>SubscriptionRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L271" >}}">interface <b>SubscriptionRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11008,10 +10746,12 @@ The set of arguments for constructing a SubscriptionRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L273" >}}">property <b>action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L275" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Represents set of actions written in SQL language-based syntax that is performed against a BrokeredMessage.
@@ -11019,19 +10759,12 @@ Represents set of actions written in SQL language-based syntax that is performed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-correlationFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L277" >}}">property <b>correlationFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L279" >}}">property <b>correlationFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    correlationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    messageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    replyTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    replyToSessionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sessionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    to: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
@@ -11039,10 +10772,12 @@ A `correlationFilter` block as documented below to be evaluated against a Broker
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-filterType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L281" >}}">property <b>filterType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L283" >}}">property <b>filterType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilter` and `CorrelationFilter`.
@@ -11050,10 +10785,12 @@ Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilte
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L285" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L287" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Subscription Rule. Changing this forces a new resource to be created.
@@ -11061,10 +10798,12 @@ Specifies the name of the ServiceBus Subscription Rule. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L289" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L291" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Changing this forces a new resource to be created.
@@ -11072,10 +10811,12 @@ The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L293" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L295" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -11083,10 +10824,12 @@ The name of the resource group in the ServiceBus Namespace exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-sqlFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L297" >}}">property <b>sqlFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L299" >}}">property <b>sqlFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sqlFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Represents a filter written in SQL language-based syntax that to be evaluated against a BrokeredMessage. Required when `filterType` is set to `SqlFilter`.
@@ -11094,10 +10837,12 @@ Represents a filter written in SQL language-based syntax that to be evaluated ag
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-subscriptionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L301" >}}">property <b>subscriptionName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L303" >}}">property <b>subscriptionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Subscription in which this Rule should be created. Changing this forces a new resource to be created.
@@ -11105,10 +10850,12 @@ The name of the ServiceBus Subscription in which this Rule should be created. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleArgs-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L305" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L307" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Changing this forces a new resource to be created.
@@ -11117,7 +10864,7 @@ The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Ch
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L227" >}}">interface <b>SubscriptionRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L229" >}}">interface <b>SubscriptionRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11126,10 +10873,12 @@ Input properties used for looking up and filtering SubscriptionRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-action">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L231" >}}">property <b>action</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L233" >}}">property <b>action</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Represents set of actions written in SQL language-based syntax that is performed against a BrokeredMessage.
@@ -11137,19 +10886,12 @@ Represents set of actions written in SQL language-based syntax that is performed
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-correlationFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L235" >}}">property <b>correlationFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L237" >}}">property <b>correlationFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    contentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    correlationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    messageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    replyTo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    replyToSessionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sessionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    to: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>correlationFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SubscriptionRuleCorrelationFilter'>SubscriptionRuleCorrelationFilter</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `correlationFilter` block as documented below to be evaluated against a BrokeredMessage. Required when `filterType` is set to `CorrelationFilter`.
@@ -11157,10 +10899,12 @@ A `correlationFilter` block as documented below to be evaluated against a Broker
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-filterType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L239" >}}">property <b>filterType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L241" >}}">property <b>filterType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilter` and `CorrelationFilter`.
@@ -11168,10 +10912,12 @@ Type of filter to be applied to a BrokeredMessage. Possible values are `SqlFilte
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L243" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L245" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Subscription Rule. Changing this forces a new resource to be created.
@@ -11179,10 +10925,12 @@ Specifies the name of the ServiceBus Subscription Rule. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L247" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L249" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Changing this forces a new resource to be created.
@@ -11190,10 +10938,12 @@ The name of the ServiceBus Namespace in which the ServiceBus Topic exists. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L251" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L253" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -11201,10 +10951,12 @@ The name of the resource group in the ServiceBus Namespace exists. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-sqlFilter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L255" >}}">property <b>sqlFilter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L257" >}}">property <b>sqlFilter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sqlFilter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Represents a filter written in SQL language-based syntax that to be evaluated against a BrokeredMessage. Required when `filterType` is set to `SqlFilter`.
@@ -11212,10 +10964,12 @@ Represents a filter written in SQL language-based syntax that to be evaluated ag
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-subscriptionName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L259" >}}">property <b>subscriptionName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L261" >}}">property <b>subscriptionName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>subscriptionName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Subscription in which this Rule should be created. Changing this forces a new resource to be created.
@@ -11223,10 +10977,12 @@ The name of the ServiceBus Subscription in which this Rule should be created. Ch
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionRuleState-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L263" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscriptionRule.ts#L265" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Changing this forces a new resource to be created.
@@ -11235,7 +10991,7 @@ The name of the ServiceBus Topic in which the ServiceBus Subscription exists. Ch
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SubscriptionState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L212" >}}">interface <b>SubscriptionState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L214" >}}">interface <b>SubscriptionState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11244,10 +11000,12 @@ Input properties used for looking up and filtering Subscription resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SubscriptionState-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L218" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L220" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The idle interval after which the
@@ -11257,18 +11015,22 @@ TimeSpan format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-deadLetteringOnFilterEvaluationExceptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L219" >}}">property <b>deadLetteringOnFilterEvaluationExceptions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L221" >}}">property <b>deadLetteringOnFilterEvaluationExceptions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadLetteringOnFilterEvaluationExceptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-deadLetteringOnMessageExpiration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L225" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L227" >}}">property <b>deadLetteringOnMessageExpiration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>deadLetteringOnMessageExpiration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls
@@ -11278,10 +11040,12 @@ to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L231" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L233" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The TTL of messages sent to this Subscription
@@ -11291,10 +11055,12 @@ format.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L236" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L238" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the
@@ -11303,10 +11069,12 @@ Subscription supports batched operations. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-forwardTo">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L241" >}}">property <b>forwardTo</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L243" >}}">property <b>forwardTo</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forwardTo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a Queue or Topic to automatically forward
@@ -11315,10 +11083,12 @@ messages to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L246" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L248" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -11327,10 +11097,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-lockDuration">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L251" >}}">property <b>lockDuration</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L253" >}}">property <b>lockDuration</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>lockDuration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The lock duration for the subscription, maximum
@@ -11339,10 +11111,12 @@ supported value is 5 minutes. Defaults to 1 minute.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-maxDeliveryCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L255" >}}">property <b>maxDeliveryCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L257" >}}">property <b>maxDeliveryCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxDeliveryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The maximum number of deliveries.
@@ -11350,10 +11124,12 @@ The maximum number of deliveries.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L260" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L262" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Subscription resource.
@@ -11362,10 +11138,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L265" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L267" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -11374,10 +11152,12 @@ this Subscription in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-requiresSession">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L271" >}}">property <b>requiresSession</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L273" >}}">property <b>requiresSession</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requiresSession?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether this Subscription
@@ -11387,10 +11167,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L276" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L278" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -11399,10 +11181,12 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionState-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L281" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/subscription.ts#L283" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Topic to create
@@ -11412,7 +11196,7 @@ this Subscription in. Changing this forces a new resource to be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L288" >}}">interface <b>TopicArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L290" >}}">interface <b>TopicArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11421,10 +11205,12 @@ The set of arguments for constructing a Topic resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicArgs-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L293" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L295" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the idle interval after which the
@@ -11433,10 +11219,12 @@ Topic is automatically deleted, minimum of 5 minutes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L298" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L300" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of TTL of messages sent to this topic if no
@@ -11445,10 +11233,12 @@ TTL value is set on the message itself.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L303" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L305" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duplicateDetectionHistoryTimeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration during which
@@ -11457,10 +11247,12 @@ duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L308" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L310" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls if server-side
@@ -11469,10 +11261,12 @@ batched operations are enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-enableExpress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L314" >}}">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L316" >}}">property <b>enableExpress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableExpress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether Express Entities
@@ -11482,18 +11276,22 @@ it to persistent storage. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-enableFilteringMessagesBeforePublishing">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L315" >}}">property <b>enableFilteringMessagesBeforePublishing</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L317" >}}">property <b>enableFilteringMessagesBeforePublishing</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableFilteringMessagesBeforePublishing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-enablePartitioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L321" >}}">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L323" >}}">property <b>enablePartitioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enablePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether to enable
@@ -11503,10 +11301,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L326" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L328" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -11515,10 +11315,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L332" >}}">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L334" >}}">property <b>maxSizeInMegabytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSizeInMegabytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls the size of
@@ -11528,10 +11330,12 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L337" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L339" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic resource. Changing this forces a
@@ -11540,10 +11344,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L342" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L344" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -11552,10 +11358,12 @@ this topic in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L348" >}}">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L350" >}}">property <b>requiresDuplicateDetection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requiresDuplicateDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether
@@ -11565,10 +11373,12 @@ a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L353" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L355" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -11577,10 +11387,12 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L357" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L359" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
@@ -11588,10 +11400,12 @@ The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicArgs-supportOrdering">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L362" >}}">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L364" >}}">property <b>supportOrdering</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>supportOrdering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Topic
@@ -11601,7 +11415,7 @@ supports ordering. Defaults to false.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicAuthorizationRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L229" >}}">interface <b>TopicAuthorizationRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L231" >}}">interface <b>TopicAuthorizationRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11610,10 +11424,12 @@ The set of arguments for constructing a TopicAuthorizationRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L233" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L235" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -11621,10 +11437,12 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L237" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L239" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -11632,10 +11450,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L241" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L243" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
@@ -11643,10 +11463,12 @@ Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L245" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L247" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
@@ -11654,10 +11476,12 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L249" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L251" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -11665,10 +11489,12 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L253" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L255" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -11676,10 +11502,12 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleArgs-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L257" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L259" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topicName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic. Changing this forces a new resource to be created.
@@ -11688,7 +11516,7 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TopicAuthorizationRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L179" >}}">interface <b>TopicAuthorizationRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L181" >}}">interface <b>TopicAuthorizationRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -11697,10 +11525,12 @@ Input properties used for looking up and filtering TopicAuthorizationRule resour
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-listen">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L183" >}}">property <b>listen</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L185" >}}">property <b>listen</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>listen?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants listen access to this this Authorization Rule. Defaults to `false`.
@@ -11708,10 +11538,12 @@ Grants listen access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-manage">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L187" >}}">property <b>manage</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L189" >}}">property <b>manage</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>manage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants manage access to this this Authorization Rule. When this property is `true` - both `listen` and `send` must be too. Defaults to `false`.
@@ -11719,10 +11551,12 @@ Grants manage access to this this Authorization Rule. When this property is `tru
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L191" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L193" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing this forces a new resource to be created.
@@ -11730,10 +11564,12 @@ Specifies the name of the ServiceBus Topic Authorization Rule resource. Changing
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L195" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L197" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Namespace. Changing this forces a new resource to be created.
@@ -11741,10 +11577,12 @@ Specifies the name of the ServiceBus Namespace. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-primaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L199" >}}">property <b>primaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L201" >}}">property <b>primaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Connection String for the ServiceBus Topic authorization Rule.
@@ -11752,10 +11590,12 @@ The Primary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-primaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L203" >}}">property <b>primaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L205" >}}">property <b>primaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>primaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Primary Key for the ServiceBus Topic authorization Rule.
@@ -11763,10 +11603,12 @@ The Primary Key for the ServiceBus Topic authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L207" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L209" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the ServiceBus Namespace exists. Changing this forces a new resource to be created.
@@ -11774,10 +11616,12 @@ The name of the resource group in which the ServiceBus Namespace exists. Changin
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-secondaryConnectionString">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L211" >}}">property <b>secondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L213" >}}">property <b>secondaryConnectionString</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Connection String for the ServiceBus Topic authorization Rule.
@@ -11785,10 +11629,12 @@ The Secondary Connection String for the ServiceBus Topic authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-secondaryKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L215" >}}">property <b>secondaryKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L217" >}}">property <b>secondaryKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>secondaryKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Secondary Key for the ServiceBus Topic authorization Rule.
@@ -11796,10 +11642,12 @@ The Secondary Key for the ServiceBus Topic authorization Rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-send">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L219" >}}">property <b>send</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L221" >}}">property <b>send</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>send?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Grants send access to this this Authorization Rule. Defaults to `false`.
@@ -11807,10 +11655,12 @@ Grants send access to this this Authorization Rule. Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicAuthorizationRuleState-topicName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L223" >}}">property <b>topicName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topicAuthorizationRule.ts#L225" >}}">property <b>topicName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>topicName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic. Changing this forces a new resource to be created.
@@ -11818,332 +11668,8 @@ Specifies the name of the ServiceBus Topic. Changing this forces a new resource 
 {{% /md %}}
 </div>
 </div>
-<h2 class="pdoc-module-header" id="TopicEventSubscriptionArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L218" >}}">interface <b>TopicEventSubscriptionArgs</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>extends</span> <a href='#GetTopicFunctionArgs'>GetTopicFunctionArgs</a>, <a href='#QueueEventSubscriptionArgs'>QueueEventSubscriptionArgs</a></pre>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-account">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L102" >}}">property <b>account</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>account?: storageForTypesOnly.Account;</pre>
-{{% md %}}
-
-The storage account to use where the zip-file blob for the FunctionApp will be located. If
-not provided, a new storage account will create. It will be a 'Standard', 'LRS', 'StorageV2'
-account.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-appSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L107" >}}">property <b>appSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A key-value pair of App Settings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-callback">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L81" >}}">property <b>callback</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callback?: <a href='#Callback'>Callback</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance to use as the entrypoint for the Azure FunctionApp.  Either
-[callback] or [callbackFactory] must be provided.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-callbackFactory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L93" >}}">property <b>callbackFactory</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>callbackFactory?: <a href='#CallbackFactory'>CallbackFactory</a>&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-The Javascript function instance that will be called to produce the function that is the
-entrypoint for the Azure FunctionApp. Either [callback] or [callbackFactory] must be
-provided.
-
-This form is useful when there is expensive initialization work that should only be executed
-once.  The factory-function will be invoked once when the final Azure FunctionApp module is
-loaded. It can run whatever code it needs, and will end by returning the actual function that
-the Azure will call into each time the FunctionApp it is is invoked.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-clientAffinityEnabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L112" >}}">property <b>clientAffinityEnabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>clientAffinityEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the Function App send session affinity cookies, which route client requests in the same session to the same instance?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-codePathOptions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L117" >}}">property <b>codePathOptions</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>codePathOptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/runtime/#CodePathOptions'>pulumi.runtime.CodePathOptions</a>;</pre>
-{{% md %}}
-
-Options to control which files and packages are included with the serialized FunctionApp code.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-connectionStrings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L122" >}}">property <b>connectionStrings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>connectionStrings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
-{{% md %}}
-
-An `connection_string` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-container">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L128" >}}">property <b>container</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>container?: storageForTypesOnly.Container;</pre>
-{{% md %}}
-
-The container to use where the zip-file blob for the FunctionApp will be located. If not
-provided, the root container of the storage account will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-enableBuiltinLogging">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L133" >}}">property <b>enableBuiltinLogging</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enableBuiltinLogging?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Should the built-in logging of this Function App be enabled? Defaults to `true`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L138" >}}">property <b>enabled</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Is the Function App enabled?
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-hostSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L153" >}}">property <b>hostSettings</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>hostSettings?: <a href='#ServiceBusHostSettings'>ServiceBusHostSettings</a>;</pre>
-{{% md %}}
-
-Host settings specific to the Service Bus Topic/Subscription plugin. These values can be provided here, or defaults will
-be used in their place.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-httpsOnly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L148" >}}">property <b>httpsOnly</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>httpsOnly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
-{{% md %}}
-
-Can the Function App only be accessed via HTTPS? Defaults to `false`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-identity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L153" >}}">property <b>identity</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-An `identity` block as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-inputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L436" >}}">property <b>inputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inputs?: <a href='#InputBindingSettings'>InputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Input bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L158" >}}">property <b>location</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-maxDeliveryCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L222" >}}">property <b>maxDeliveryCount</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>maxDeliveryCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
-{{% md %}}
-
-The maximum number of deliveries.  Will default to 10 if not specified.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L163" >}}">property <b>name</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The name of the Function App.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-nodeVersion">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L169" >}}">property <b>nodeVersion</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodeVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-Controls the value of WEBSITE_NODE_DEFAULT_VERSION in `appSettings`.  If not provided,
-defaults to `8.11.1`.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-outputs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L441" >}}">property <b>outputs</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outputs?: <a href='#OutputBindingSettings'>OutputBindingSettings</a>[];</pre>
-{{% md %}}
-
-Output bindings.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-plan">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L179" >}}">property <b>plan</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>plan?: appservice.Plan;</pre>
-{{% md %}}
-
-The App Service Plan within which to create this Function App. Changing this forces a new
-resource to be created.
-
-If not provided, a default "Consumption" plan will be created.  See:
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#consumption-plan for
-more details.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-resourceGroup">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L184" >}}">property <b>resourceGroup</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroup?: core.ResourceGroup;</pre>
-{{% md %}}
-
-The resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L147" >}}">property <b>resourceGroupName</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The name of the resource group in which to create the event subscription. [resourceGroup] takes precedence over [resourceGroupName].
-If none of the two is supplied, the Queue's resource group will be used.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-siteConfig">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L195" >}}">property <b>siteConfig</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>siteConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    alwaysOn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    linuxFxVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    use32BitWorkerProcess: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    websocketsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
-{{% md %}}
-
-A `site_config` object as defined below.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-subscription">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L215" >}}">property <b>subscription</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>subscription?: <a href='#Subscription'>Subscription</a>;</pre>
-{{% md %}}
-
-The ServiceBus Subscription to subscribe the Function to.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L200" >}}">property <b>tags</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
-{{% md %}}
-
-A mapping of tags to assign to the resource.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="TopicEventSubscriptionArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="appservice/zMixins.ts#L205" >}}">property <b>version</b></a>
-</h3>
-<div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
-{{% md %}}
-
-The runtime version associated with the Function App. Defaults to `~2`.
-
-{{% /md %}}
-</div>
-</div>
 <h2 class="pdoc-module-header" id="TopicState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L208" >}}">interface <b>TopicState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L210" >}}">interface <b>TopicState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -12152,10 +11678,12 @@ Input properties used for looking up and filtering Topic resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TopicState-autoDeleteOnIdle">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L213" >}}">property <b>autoDeleteOnIdle</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L215" >}}">property <b>autoDeleteOnIdle</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoDeleteOnIdle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of the idle interval after which the
@@ -12164,10 +11692,12 @@ Topic is automatically deleted, minimum of 5 minutes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-defaultMessageTtl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L218" >}}">property <b>defaultMessageTtl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L220" >}}">property <b>defaultMessageTtl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>defaultMessageTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration of TTL of messages sent to this topic if no
@@ -12176,10 +11706,12 @@ TTL value is set on the message itself.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-duplicateDetectionHistoryTimeWindow">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L223" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L225" >}}">property <b>duplicateDetectionHistoryTimeWindow</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>duplicateDetectionHistoryTimeWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ISO 8601 timespan duration during which
@@ -12188,10 +11720,12 @@ duplicates can be detected. Defaults to 10 minutes. (`PT10M`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-enableBatchedOperations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L228" >}}">property <b>enableBatchedOperations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L230" >}}">property <b>enableBatchedOperations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableBatchedOperations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls if server-side
@@ -12200,10 +11734,12 @@ batched operations are enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-enableExpress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L234" >}}">property <b>enableExpress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L236" >}}">property <b>enableExpress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableExpress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether Express Entities
@@ -12213,18 +11749,22 @@ it to persistent storage. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-enableFilteringMessagesBeforePublishing">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L235" >}}">property <b>enableFilteringMessagesBeforePublishing</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L237" >}}">property <b>enableFilteringMessagesBeforePublishing</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableFilteringMessagesBeforePublishing?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-enablePartitioning">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L241" >}}">property <b>enablePartitioning</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L243" >}}">property <b>enablePartitioning</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enablePartitioning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether to enable
@@ -12234,10 +11774,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L246" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L248" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists.
@@ -12246,10 +11788,12 @@ Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-maxSizeInMegabytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L252" >}}">property <b>maxSizeInMegabytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L254" >}}">property <b>maxSizeInMegabytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSizeInMegabytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Integer value which controls the size of
@@ -12259,10 +11803,12 @@ section of [this document](https://docs.microsoft.com/en-us/azure/service-bus-me
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L257" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L259" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the ServiceBus Topic resource. Changing this forces a
@@ -12271,10 +11817,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-namespaceName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L262" >}}">property <b>namespaceName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L264" >}}">property <b>namespaceName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>namespaceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ServiceBus Namespace to create
@@ -12283,10 +11831,12 @@ this topic in. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-requiresDuplicateDetection">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L268" >}}">property <b>requiresDuplicateDetection</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L270" >}}">property <b>requiresDuplicateDetection</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>requiresDuplicateDetection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether
@@ -12296,10 +11846,12 @@ a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L273" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L275" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to
@@ -12308,10 +11860,12 @@ create the namespace. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L277" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L279" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled`. Defaults to `Active`.
@@ -12319,10 +11873,12 @@ The Status of the Service Bus Topic. Acceptable values are `Active` or `Disabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TopicState-supportOrdering">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L282" >}}">property <b>supportOrdering</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/topic.ts#L284" >}}">property <b>supportOrdering</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>supportOrdering?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean flag which controls whether the Topic
@@ -12332,7 +11888,7 @@ supports ordering. Defaults to false.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="events">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L714" >}}">module <b>events</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L355" >}}">module <b>events</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -12340,68 +11896,17 @@ supports ordering. Defaults to false.
 Contains hooks to subscribe to different kinds of Event Grid events.
 
 {{% /md %}}
-<h3 class="pdoc-member-header" id="onGridBlobCreated">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L719" >}}">function <b>onGridBlobCreated</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onGridBlobCreated(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;eventgrid.StorageBlobCreatedEventData&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;eventgrid.StorageBlobCreatedEventData&gt;</pre>
-
-
-Creates a new subscription to events fired from Event Grid. The callback is executed whenever
-a new Blob is created in a container of the Storage Account.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="onGridBlobDeleted">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L732" >}}">function <b>onGridBlobDeleted</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onGridBlobDeleted(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#StorageAccountEventGridCallbackSubscriptionArgs'>StorageAccountEventGridCallbackSubscriptionArgs</a>&lt;eventgrid.StorageBlobDeletedEventData&gt;, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;eventgrid.StorageBlobDeletedEventData&gt;</pre>
-
-
-Creates a new subscription to events fired from Event Grid. The callback is executed whenever
-a Blob is deleted from a container of the Storage Account.
-
-{{% /md %}}
-</div>
-<h3 class="pdoc-member-header" id="onResourceGroupEvent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L744" >}}">function <b>onResourceGroupEvent</b></a>
-</h3>
-<div class="pdoc-member-contents">
-{{% md %}}
-
-<pre class="highlight"><span class='kd'></span>onResourceGroupEvent(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ResourceGroupEventGridCallbackSubscriptionArgs'>ResourceGroupEventGridCallbackSubscriptionArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>): <a href='#EventGridCallbackSubscription'>EventGridCallbackSubscription</a>&lt;<a href='#ResourceGroupEvent'>ResourceGroupEvent</a>&gt;</pre>
-
-
-Creates a new subscription to events fired from Event Grid. The callback is executed whenever
-an event associated with the Resource Group fires.
-
-{{% /md %}}
-</div>
 </div>
 <h2 class="pdoc-module-header" id="EventHubCallback">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L420" >}}">type <b>EventHubCallback</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L105" >}}">type <b>EventHubCallback</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> EventHubCallback = appservice.Callback&lt;<a href='#EventHubContext'>EventHubContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Signature of the callback that can receive event hub notifications.
-
-{{% /md %}}
-</div>
-<h2 class="pdoc-module-header" id="ServiceBusCallback">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="eventhub/zMixins.ts#L123" >}}">type <b>ServiceBusCallback</b></a>
-</h2>
-<div class="pdoc-module-contents">
-<pre class="highlight"><span class='kd'>type</span> ServiceBusCallback = appservice.Callback&lt;<a href='#ServiceBusContext'>ServiceBusContext</a>, <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, appservice.FunctionDefaultResponse&gt;;</pre>
-{{% md %}}
-
-Signature of the callback that can receive queue and topic notifications.
 
 {{% /md %}}
 </div>
