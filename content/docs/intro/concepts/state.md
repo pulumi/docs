@@ -60,7 +60,7 @@ To use the [cloud storage or remote](#cloud-storage-or-remote) option, run
 your _checkpoint_ files at your specified URL
 for your cloud storage object, also in a `.pulumi` directory. For
 example,
-`http s://s3.console.aws.amazon.com/s3/buckets/<my-pulumi-state-bucket>/.pulumi`
+`https://s3.console.aws.amazon.com/s3/buckets/<my-pulumi-state-bucket>/.pulumi`
 where `<my-pulumi-state-bucket>` is the name
 of your S3 bucket.
 
