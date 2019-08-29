@@ -113,7 +113,7 @@ aws:region: (us-east-1)
     server = ec2.Instance('webserver-www',
         instance_type=size,
         security_groups=[group.name], # reference security group from above
-        ami=get_linux_ami(size))
+        ami='ami-0ff8a91507f77f867')
 
     pulumi.export('publicIp', server.public_ip)
     pulumi.export('publicHostName', server.public_dns)
