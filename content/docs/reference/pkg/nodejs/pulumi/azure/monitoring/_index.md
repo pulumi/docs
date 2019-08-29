@@ -64,10 +64,12 @@ title: Module monitoring
 
 
 <h2 class="pdoc-module-header" id="ActionGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L48" >}}">class <b>ActionGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L50" >}}">class <b>ActionGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages an Action Group within Azure Monitor.
@@ -112,13 +114,15 @@ const testActionGroup = new azure.monitoring.ActionGroup("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActionGroup-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L106" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L108" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ActionGroup(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ActionGroupArgs'>ActionGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ActionGroup resource with the given unique name, arguments, and options.
 
@@ -129,13 +133,15 @@ Create a ActionGroup resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L57" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L59" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ActionGroupState'>ActionGroupState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ActionGroup'>ActionGroup</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ActionGroup resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -143,23 +149,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L50" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L68" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L70" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ActionGroup.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -167,13 +177,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-emailReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L78" >}}">property <b>emailReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L80" >}}">property <b>emailReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    emailAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>emailReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `emailReceiver` blocks as defined below.
@@ -181,10 +190,12 @@ One or more `emailReceiver` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L82" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L84" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
@@ -192,10 +203,12 @@ Whether this action group is enabled. If an action group is not enabled, then no
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L50" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -204,10 +217,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L86" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L88" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
@@ -215,10 +230,12 @@ The name of the webhook receiver. Names must be unique (case-insensitive) across
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L90" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L92" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Action Group instance.
@@ -226,10 +243,12 @@ The name of the resource group in which to create the Action Group instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-shortName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L94" >}}">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L96" >}}">property <b>shortName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>shortName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The short name of the action group. This will be used in SMS messages.
@@ -237,14 +256,12 @@ The short name of the action group. This will be used in SMS messages.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-smsReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L98" >}}">property <b>smsReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L100" >}}">property <b>smsReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    countryCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    phoneNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>smsReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `smsReceiver ` blocks as defined below.
@@ -252,10 +269,12 @@ One or more `smsReceiver ` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L102" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L104" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -263,10 +282,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L50" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -275,13 +296,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroup-webhookReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L106" >}}">property <b>webhookReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L108" >}}">property <b>webhookReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    serviceUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>webhookReceivers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `webhookReceiver ` blocks as defined below.
@@ -290,10 +310,12 @@ One or more `webhookReceiver ` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ActivityLogAlert">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L57" >}}">class <b>ActivityLogAlert</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L59" >}}">class <b>ActivityLogAlert</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages an Activity Log Alert within Azure Monitor.
@@ -347,13 +369,15 @@ const mainActivityLogAlert = new azure.monitoring.ActivityLogAlert("main", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActivityLogAlert-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L115" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L117" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ActivityLogAlert(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ActivityLogAlertArgs'>ActivityLogAlertArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ActivityLogAlert resource with the given unique name, arguments, and options.
 
@@ -364,13 +388,15 @@ Create a ActivityLogAlert resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L66" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L68" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ActivityLogAlertState'>ActivityLogAlertState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ActivityLogAlert'>ActivityLogAlert</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ActivityLogAlert resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -378,23 +404,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L59" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L77" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L79" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ActivityLogAlert.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -402,13 +432,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L87" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L89" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    actionGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    webhookProperties: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActivityLogAlertAction'>ActivityLogAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `action` blocks as defined below.
@@ -416,21 +445,12 @@ One or more `action` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-criteria">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L91" >}}">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L93" >}}">property <b>criteria</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    caller: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    category: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    level: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    operationName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    resourceGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    resourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    resourceProvider: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    resourceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    subStatus: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `criteria` block as defined below.
@@ -438,10 +458,12 @@ A `criteria` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L95" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L97" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of this activity log alert.
@@ -449,10 +471,12 @@ The description of this activity log alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L99" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L101" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this Activity Log Alert be enabled? Defaults to `true`.
@@ -460,10 +484,12 @@ Should this Activity Log Alert be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L59" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -472,10 +498,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L103" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L105" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the activity log alert. Changing this forces a new resource to be created.
@@ -483,10 +511,12 @@ The name of the activity log alert. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L107" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L109" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the activity log alert instance.
@@ -494,10 +524,12 @@ The name of the resource group in which to create the activity log alert instanc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L111" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L113" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Scope at which the Activity Log should be applied, for example a the Resource ID of a Subscription or a Resource (such as a Storage Account).
@@ -505,10 +537,12 @@ The Scope at which the Activity Log should be applied, for example a the Resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L115" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L117" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -516,10 +550,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlert-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L59" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -529,10 +565,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AlertRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L78" >}}">class <b>AlertRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L80" >}}">class <b>AlertRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a [metric-based alert rule](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal) in Azure Monitor.
@@ -607,13 +645,15 @@ const test = new azure.monitoring.AlertRule("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AlertRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L160" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L162" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AlertRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AlertRuleArgs'>AlertRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a AlertRule resource with the given unique name, arguments, and options.
 
@@ -624,13 +664,15 @@ Create a AlertRule resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L87" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L89" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AlertRuleState'>AlertRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AlertRule'>AlertRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing AlertRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -638,23 +680,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L80" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L98" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L100" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of AlertRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -662,10 +708,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-aggregation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L108" >}}">property <b>aggregation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L110" >}}">property <b>aggregation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>aggregation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines how the metric data is combined over time. Possible values are `Average`, `Minimum`, `Maximum`, `Total`, and `Last`.
@@ -673,10 +721,12 @@ Defines how the metric data is combined over time. Possible values are `Average`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L112" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L114" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A verbose description of the alert rule that will be included in the alert email.
@@ -684,13 +734,12 @@ A verbose description of the alert rule that will be included in the alert email
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-emailAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L116" >}}">property <b>emailAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L118" >}}">property <b>emailAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    customEmails: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    sendToServiceOwners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `emailAction` block as defined below.
@@ -698,10 +747,12 @@ A `emailAction` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L120" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L122" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, the alert rule is enabled. Defaults to `true`.
@@ -709,10 +760,12 @@ If `true`, the alert rule is enabled. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L80" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -721,10 +774,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L124" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L126" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -732,10 +787,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L128" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L130" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric that defines what the rule monitors.
@@ -743,10 +800,12 @@ The metric that defines what the rule monitors.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L132" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L134" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the alert rule. Changing this forces a new resource to be created.
@@ -754,10 +813,12 @@ Specifies the name of the alert rule. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L136" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L138" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The operator used to compare the metric data and the threshold. Possible values are `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, and `LessThanOrEqual`.
@@ -765,10 +826,12 @@ The operator used to compare the metric data and the threshold. Possible values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L140" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L142" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.
@@ -776,10 +839,12 @@ The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L144" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L146" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.
@@ -787,10 +852,12 @@ The name of the resource group in which to create the alert rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L148" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L150" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the resource monitored by the alert rule.
@@ -798,10 +865,12 @@ The ID of the resource monitored by the alert rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L152" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L154" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
@@ -809,10 +878,12 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-threshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L156" >}}">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L158" >}}">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The threshold value that activates the alert.
@@ -820,10 +891,12 @@ The threshold value that activates the alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L80" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -832,13 +905,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRule-webhookAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L160" >}}">property <b>webhookAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L162" >}}">property <b>webhookAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    properties: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-    serviceUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `webhookAction` block as defined below.
@@ -847,10 +919,12 @@ A `webhookAction` block as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AutoscaleSetting">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L244" >}}">class <b>AutoscaleSetting</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L246" >}}">class <b>AutoscaleSetting</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.
@@ -1091,13 +1165,15 @@ const testAutoscaleSetting = new azure.monitoring.AutoscaleSetting("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AutoscaleSetting-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L302" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L304" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AutoscaleSetting(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AutoscaleSettingArgs'>AutoscaleSettingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a AutoscaleSetting resource with the given unique name, arguments, and options.
 
@@ -1108,13 +1184,15 @@ Create a AutoscaleSetting resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L253" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L255" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AutoscaleSettingState'>AutoscaleSettingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AutoscaleSetting'>AutoscaleSetting</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing AutoscaleSetting resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1122,23 +1200,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L246" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L264" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L266" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of AutoscaleSetting.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1146,10 +1228,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L274" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L276" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
@@ -1157,10 +1241,12 @@ Specifies whether automatic scaling is enabled for the target resource. Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L246" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1169,10 +1255,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L278" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L280" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
@@ -1180,10 +1268,12 @@ Specifies the supported Azure location where the AutoScale Setting should exist.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L282" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L284" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the AutoScale Setting. Changing this forces a new resource to be created.
@@ -1191,20 +1281,12 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-notification">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L286" >}}">property <b>notification</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L288" >}}">property <b>notification</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        customEmails: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        sendToSubscriptionAdministrator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-        sendToSubscriptionCoAdministrator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    };
-    webhooks: {
-        properties: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};
-        serviceUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>notification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AutoscaleSettingNotification'>AutoscaleSettingNotification</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `notification` block as defined below.
@@ -1212,46 +1294,12 @@ Specifies a `notification` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-profiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L290" >}}">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L292" >}}">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    capacity: {
-        default: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        maximum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        minimum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    };
-    fixedDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        end: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        timezone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    recurrence: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {
-        days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-        hours: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        minutes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        timezone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    };
-    rules: {
-        metricTrigger: {
-            metricName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            metricResourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            statistic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            threshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-            timeAggregation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            timeGrain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            timeWindow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        };
-        scaleAction: {
-            cooldown: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            direction: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-            value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        };
-    }[];
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
@@ -1259,10 +1307,12 @@ Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L294" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L296" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
@@ -1270,10 +1320,12 @@ The name of the Resource Group in the AutoScale Setting should be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L298" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L300" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1281,10 +1333,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L302" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L304" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource ID of the resource that the autoscale setting should be added to.
@@ -1292,10 +1346,12 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSetting-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L246" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1305,10 +1361,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DiagnosticSetting">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L50" >}}">class <b>DiagnosticSetting</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L52" >}}">class <b>DiagnosticSetting</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Diagnostic Setting for an existing Resource.
@@ -1355,13 +1413,15 @@ const testDiagnosticSetting = new azure.monitoring.DiagnosticSetting("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DiagnosticSetting-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L108" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L114" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DiagnosticSetting(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DiagnosticSettingArgs'>DiagnosticSettingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DiagnosticSetting resource with the given unique name, arguments, and options.
 
@@ -1372,13 +1432,15 @@ Create a DiagnosticSetting resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L59" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L61" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DiagnosticSettingState'>DiagnosticSettingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DiagnosticSetting'>DiagnosticSetting</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DiagnosticSetting resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1386,23 +1448,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L52" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L70" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L72" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DiagnosticSetting.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1410,10 +1476,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-eventhubAuthorizationRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L80" >}}">property <b>eventhubAuthorizationRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L82" >}}">property <b>eventhubAuthorizationRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>eventhubAuthorizationRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
@@ -1421,10 +1489,12 @@ Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagn
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L84" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L86" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>eventhubName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
@@ -1432,10 +1502,12 @@ Specifies the name of the Event Hub where Diagnostics Data should be sent. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L52" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1443,11 +1515,26 @@ deployments and may be missing (undefined) during planning phases.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="DiagnosticSetting-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L92" >}}">property <b>logAnalyticsWorkspaceId</b></a>
+<h3 class="pdoc-member-header" id="DiagnosticSetting-logAnalyticsDestinationType">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L94" >}}">property <b>logAnalyticsDestinationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>logAnalyticsDestinationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="DiagnosticSetting-logAnalyticsWorkspaceId">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L98" >}}">property <b>logAnalyticsWorkspaceId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>logAnalyticsWorkspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
@@ -1455,17 +1542,12 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-logs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L88" >}}">property <b>logs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L90" >}}">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    category: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    retentionPolicy: {
-        days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    };
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>logs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DiagnosticSettingLog'>DiagnosticSettingLog</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `log` blocks as defined below.
@@ -1473,17 +1555,12 @@ One or more `log` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-metrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L96" >}}">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L102" >}}">property <b>metrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>metrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    category: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    retentionPolicy: {
-        days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-        enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-    };
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>metrics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `metric` blocks as defined below.
@@ -1491,10 +1568,12 @@ One or more `metric` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L100" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L106" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
@@ -1502,10 +1581,12 @@ Specifies the name of the Diagnostic Setting. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L104" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L110" >}}">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
@@ -1513,10 +1594,12 @@ With this parameter you can specify a storage account which should be used to se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L108" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L114" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
@@ -1524,10 +1607,12 @@ The ID of an existing Resource on which to configure Diagnostic Settings. Changi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSetting-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L52" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1537,10 +1622,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogProfile">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L58" >}}">class <b>LogProfile</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L60" >}}">class <b>LogProfile</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a [Log Profile](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-overview-activity-logs#export-the-activity-log-with-a-log-profile). A Log Profile configures how Activity Logs are exported.
@@ -1595,13 +1682,15 @@ const testLogProfile = new azure.monitoring.LogProfile("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LogProfile-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L109" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L111" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LogProfile(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LogProfileArgs'>LogProfileArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a LogProfile resource with the given unique name, arguments, and options.
 
@@ -1612,13 +1701,15 @@ Create a LogProfile resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L67" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L69" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#LogProfileState'>LogProfileState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#LogProfile'>LogProfile</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing LogProfile resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1626,23 +1717,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L60" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L78" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L80" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of LogProfile.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1650,10 +1745,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-categories">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L88" >}}">property <b>categories</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L90" >}}">property <b>categories</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of categories of the logs.
@@ -1661,10 +1758,12 @@ List of categories of the logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L60" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1673,10 +1772,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-locations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L92" >}}">property <b>locations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L94" >}}">property <b>locations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of regions for which Activity Log events are stored or streamed.
@@ -1684,10 +1785,12 @@ List of regions for which Activity Log events are stored or streamed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L97" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L99" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Log Profile. Changing this forces a
@@ -1696,13 +1799,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-retentionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L101" >}}">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L103" >}}">property <b>retentionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
@@ -1710,10 +1812,12 @@ A `retentionPolicy` block as documented below. A retention policy for how long A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-servicebusRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L105" >}}">property <b>servicebusRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L107" >}}">property <b>servicebusRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>servicebusRuleId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storageAccountId` or `servicebusRuleId` must be set.
@@ -1721,10 +1825,12 @@ The service bus (or event hub) rule ID of the service bus (or event hub) namespa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L109" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L111" >}}">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>storageAccountId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource ID of the storage account in which the Activity Log is stored. At least one of `storageAccountId` or `servicebusRuleId` must be set.
@@ -1732,10 +1838,12 @@ The resource ID of the storage account in which the Activity Log is stored. At l
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfile-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L60" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1745,10 +1853,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricAlert">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L61" >}}">class <b>MetricAlert</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L63" >}}">class <b>MetricAlert</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Metric Alert within Azure Monitor.
@@ -1806,13 +1916,15 @@ const test = new azure.monitoring.MetricAlert("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlert-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L135" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L137" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MetricAlert(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MetricAlertArgs'>MetricAlertArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MetricAlert resource with the given unique name, arguments, and options.
 
@@ -1823,13 +1935,15 @@ Create a MetricAlert resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L70" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L72" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MetricAlertState'>MetricAlertState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MetricAlert'>MetricAlert</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MetricAlert resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1837,23 +1951,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L63" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L81" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L83" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MetricAlert.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1861,13 +1979,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L91" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L93" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    actionGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    webhookProperties: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>actions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricAlertAction'>MetricAlertAction</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `action` blocks as defined below.
@@ -1875,10 +1992,12 @@ One or more `action` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-autoMitigate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L95" >}}">property <b>autoMitigate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L97" >}}">property <b>autoMitigate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>autoMitigate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
@@ -1886,21 +2005,12 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-criterias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L99" >}}">property <b>criterias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L101" >}}">property <b>criterias</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    aggregation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    dimensions: {
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        values: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    }[];
-    metricName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    metricNamespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    operator: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    threshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricAlertCriteria'>MetricAlertCriteria</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `criteria` blocks as defined below.
@@ -1908,10 +2018,12 @@ One or more `criteria` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L103" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L105" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of this Metric Alert.
@@ -1919,10 +2031,12 @@ The description of this Metric Alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L107" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L109" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this Metric Alert be enabled? Defaults to `true`.
@@ -1930,10 +2044,12 @@ Should this Metric Alert be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-frequency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L111" >}}">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L113" >}}">property <b>frequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>frequency: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
@@ -1941,10 +2057,12 @@ The evaluation frequency of this Metric Alert, represented in ISO 8601 duration 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L63" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1953,10 +2071,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L115" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L117" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Metric Alert. Changing this forces a new resource to be created.
@@ -1964,10 +2084,12 @@ The name of the Metric Alert. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L119" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L121" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Metric Alert instance.
@@ -1975,10 +2097,12 @@ The name of the resource group in which to create the Metric Alert instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L123" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L125" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource ID at which the metric criteria should be applied.
@@ -1986,10 +2110,12 @@ The resource ID at which the metric criteria should be applied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-severity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L127" >}}">property <b>severity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L129" >}}">property <b>severity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>severity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
@@ -1997,10 +2123,12 @@ The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L131" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L133" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2008,10 +2136,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L63" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2020,10 +2150,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlert-windowSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L135" >}}">property <b>windowSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L137" >}}">property <b>windowSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>windowSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
@@ -2032,10 +2164,12 @@ The period of time that is used to monitor alert activity, represented in ISO 86
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricAlertRule">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L76" >}}">class <b>MetricAlertRule</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L78" >}}">class <b>MetricAlertRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a [metric-based alert rule](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitor-quick-resource-metric-alert-portal) in Azure Monitor.
@@ -2108,13 +2242,15 @@ const test = new azure.monitoring.MetricAlertRule("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertRule-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L158" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L160" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MetricAlertRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MetricAlertRuleArgs'>MetricAlertRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MetricAlertRule resource with the given unique name, arguments, and options.
 
@@ -2125,13 +2261,15 @@ Create a MetricAlertRule resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L85" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L87" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MetricAlertRuleState'>MetricAlertRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MetricAlertRule'>MetricAlertRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MetricAlertRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2139,23 +2277,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L78" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L96" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L98" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MetricAlertRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2163,10 +2305,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-aggregation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L106" >}}">property <b>aggregation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L108" >}}">property <b>aggregation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>aggregation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines how the metric data is combined over time. Possible values are `Average`, `Minimum`, `Maximum`, `Total`, and `Last`.
@@ -2174,10 +2318,12 @@ Defines how the metric data is combined over time. Possible values are `Average`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L110" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L112" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A verbose description of the alert rule that will be included in the alert email.
@@ -2185,13 +2331,12 @@ A verbose description of the alert rule that will be included in the alert email
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-emailAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L114" >}}">property <b>emailAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L116" >}}">property <b>emailAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    customEmails: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    sendToServiceOwners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>emailAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `emailAction` block as defined below.
@@ -2199,10 +2344,12 @@ A `emailAction` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L118" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L120" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, the alert rule is enabled. Defaults to `true`.
@@ -2210,10 +2357,12 @@ If `true`, the alert rule is enabled. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L78" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2222,10 +2371,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L122" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L124" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -2233,10 +2384,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L126" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L128" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric that defines what the rule monitors.
@@ -2244,10 +2397,12 @@ The metric that defines what the rule monitors.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L130" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L132" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the alert rule. Changing this forces a new resource to be created.
@@ -2255,10 +2410,12 @@ Specifies the name of the alert rule. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L134" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L136" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The operator used to compare the metric data and the threshold. Possible values are `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, and `LessThanOrEqual`.
@@ -2266,10 +2423,12 @@ The operator used to compare the metric data and the threshold. Possible values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L138" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L140" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.
@@ -2277,10 +2436,12 @@ The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L142" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L144" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.
@@ -2288,10 +2449,12 @@ The name of the resource group in which to create the alert rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L146" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L148" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the resource monitored by the alert rule.
@@ -2299,10 +2462,12 @@ The ID of the resource monitored by the alert rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L150" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L152" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
@@ -2310,10 +2475,12 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-threshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L154" >}}">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L156" >}}">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The threshold value that activates the alert.
@@ -2321,10 +2488,12 @@ The threshold value that activates the alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L78" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2333,13 +2502,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRule-webhookAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L158" >}}">property <b>webhookAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L160" >}}">property <b>webhookAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    properties: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};
-    serviceUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>webhookAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `webhookAction` block as defined below.
@@ -2348,13 +2516,15 @@ A `webhookAction` block as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getActionGroup">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L26" >}}">function <b>getActionGroup</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L28" >}}">function <b>getActionGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getActionGroup(args: <a href='#GetActionGroupArgs'>GetActionGroupArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetActionGroupResult'>GetActionGroupResult</a>&gt; &amp; <a href='#GetActionGroupResult'>GetActionGroupResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to access the properties of an Action Group.
 
@@ -2377,13 +2547,15 @@ export const actionGroupId = example.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getDiagnosticCategories">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L27" >}}">function <b>getDiagnosticCategories</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L29" >}}">function <b>getDiagnosticCategories</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getDiagnosticCategories(args: <a href='#GetDiagnosticCategoriesArgs'>GetDiagnosticCategoriesArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDiagnosticCategoriesResult'>GetDiagnosticCategoriesResult</a>&gt; &amp; <a href='#GetDiagnosticCategoriesResult'>GetDiagnosticCategoriesResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to access information about the Monitor Diagnostics Categories supported by an existing Resource.
 
@@ -2407,13 +2579,15 @@ const testDiagnosticCategories = testKeyVault.apply(testKeyVault => azure.monito
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getLogProfile">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L25" >}}">function <b>getLogProfile</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L27" >}}">function <b>getLogProfile</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getLogProfile(args: <a href='#GetLogProfileArgs'>GetLogProfileArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetLogProfileResult'>GetLogProfileResult</a>&gt; &amp; <a href='#GetLogProfileResult'>GetLogProfileResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to access the properties of a Log Profile.
 
@@ -2435,7 +2609,7 @@ export const logProfileStorageAccountId = test.storageAccountId;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ActionGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L197" >}}">interface <b>ActionGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L199" >}}">interface <b>ActionGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2444,13 +2618,12 @@ The set of arguments for constructing a ActionGroup resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActionGroupArgs-emailReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L201" >}}">property <b>emailReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L203" >}}">property <b>emailReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    emailAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `emailReceiver` blocks as defined below.
@@ -2458,10 +2631,12 @@ One or more `emailReceiver` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L205" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L207" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
@@ -2469,10 +2644,12 @@ Whether this action group is enabled. If an action group is not enabled, then no
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L209" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L211" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
@@ -2480,10 +2657,12 @@ The name of the webhook receiver. Names must be unique (case-insensitive) across
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L213" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L215" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Action Group instance.
@@ -2491,10 +2670,12 @@ The name of the resource group in which to create the Action Group instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupArgs-shortName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L217" >}}">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L219" >}}">property <b>shortName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shortName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The short name of the action group. This will be used in SMS messages.
@@ -2502,14 +2683,12 @@ The short name of the action group. This will be used in SMS messages.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupArgs-smsReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L221" >}}">property <b>smsReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L223" >}}">property <b>smsReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    countryCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    phoneNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `smsReceiver ` blocks as defined below.
@@ -2517,10 +2696,12 @@ One or more `smsReceiver ` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L225" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L227" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2528,13 +2709,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupArgs-webhookReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L229" >}}">property <b>webhookReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L231" >}}">property <b>webhookReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `webhookReceiver ` blocks as defined below.
@@ -2543,7 +2723,7 @@ One or more `webhookReceiver ` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ActionGroupState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L159" >}}">interface <b>ActionGroupState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L161" >}}">interface <b>ActionGroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2552,13 +2732,12 @@ Input properties used for looking up and filtering ActionGroup resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActionGroupState-emailReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L163" >}}">property <b>emailReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L165" >}}">property <b>emailReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    emailAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupEmailReceiver'>ActionGroupEmailReceiver</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `emailReceiver` blocks as defined below.
@@ -2566,10 +2745,12 @@ One or more `emailReceiver` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L167" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L169" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications. Defaults to `true`.
@@ -2577,10 +2758,12 @@ Whether this action group is enabled. If an action group is not enabled, then no
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L171" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L173" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the webhook receiver. Names must be unique (case-insensitive) across all receivers within an action group.
@@ -2588,10 +2771,12 @@ The name of the webhook receiver. Names must be unique (case-insensitive) across
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L175" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L177" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Action Group instance.
@@ -2599,10 +2784,12 @@ The name of the resource group in which to create the Action Group instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupState-shortName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L179" >}}">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L181" >}}">property <b>shortName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shortName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The short name of the action group. This will be used in SMS messages.
@@ -2610,14 +2797,12 @@ The short name of the action group. This will be used in SMS messages.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupState-smsReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L183" >}}">property <b>smsReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L185" >}}">property <b>smsReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    countryCode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    phoneNumber: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>smsReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupSmsReceiver'>ActionGroupSmsReceiver</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `smsReceiver ` blocks as defined below.
@@ -2625,10 +2810,12 @@ One or more `smsReceiver ` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L187" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L189" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2636,13 +2823,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActionGroupState-webhookReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L191" >}}">property <b>webhookReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/actionGroup.ts#L193" >}}">property <b>webhookReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookReceivers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActionGroupWebhookReceiver'>ActionGroupWebhookReceiver</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `webhookReceiver ` blocks as defined below.
@@ -2651,7 +2837,7 @@ One or more `webhookReceiver ` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ActivityLogAlertArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L209" >}}">interface <b>ActivityLogAlertArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L211" >}}">interface <b>ActivityLogAlertArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2660,13 +2846,12 @@ The set of arguments for constructing a ActivityLogAlert resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L213" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L215" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    actionGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    webhookProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActivityLogAlertAction'>ActivityLogAlertAction</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `action` blocks as defined below.
@@ -2674,21 +2859,12 @@ One or more `action` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-criteria">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L217" >}}">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L219" >}}">property <b>criteria</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caller: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    category: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    level: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    operationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>criteria: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `criteria` block as defined below.
@@ -2696,10 +2872,12 @@ A `criteria` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L221" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L223" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of this activity log alert.
@@ -2707,10 +2885,12 @@ The description of this activity log alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L225" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L227" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this Activity Log Alert be enabled? Defaults to `true`.
@@ -2718,10 +2898,12 @@ Should this Activity Log Alert be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L229" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L231" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the activity log alert. Changing this forces a new resource to be created.
@@ -2729,10 +2911,12 @@ The name of the activity log alert. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L233" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L235" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the activity log alert instance.
@@ -2740,10 +2924,12 @@ The name of the resource group in which to create the activity log alert instanc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L237" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L239" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Scope at which the Activity Log should be applied, for example a the Resource ID of a Subscription or a Resource (such as a Storage Account).
@@ -2751,10 +2937,12 @@ The Scope at which the Activity Log should be applied, for example a the Resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L241" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L243" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2763,7 +2951,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ActivityLogAlertState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L171" >}}">interface <b>ActivityLogAlertState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L173" >}}">interface <b>ActivityLogAlertState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2772,13 +2960,12 @@ Input properties used for looking up and filtering ActivityLogAlert resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L175" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L177" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    actionGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    webhookProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActivityLogAlertAction'>ActivityLogAlertAction</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `action` blocks as defined below.
@@ -2786,21 +2973,12 @@ One or more `action` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-criteria">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L179" >}}">property <b>criteria</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L181" >}}">property <b>criteria</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>criteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    caller: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    category: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    level: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    operationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceProvider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    resourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    subStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>criteria?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ActivityLogAlertCriteria'>ActivityLogAlertCriteria</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `criteria` block as defined below.
@@ -2808,10 +2986,12 @@ A `criteria` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L183" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L185" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of this activity log alert.
@@ -2819,10 +2999,12 @@ The description of this activity log alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L187" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L189" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this Activity Log Alert be enabled? Defaults to `true`.
@@ -2830,10 +3012,12 @@ Should this Activity Log Alert be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L191" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L193" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the activity log alert. Changing this forces a new resource to be created.
@@ -2841,10 +3025,12 @@ The name of the activity log alert. Changing this forces a new resource to be cr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L195" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L197" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the activity log alert instance.
@@ -2852,10 +3038,12 @@ The name of the resource group in which to create the activity log alert instanc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L199" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L201" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Scope at which the Activity Log should be applied, for example a the Resource ID of a Subscription or a Resource (such as a Storage Account).
@@ -2863,10 +3051,12 @@ The Scope at which the Activity Log should be applied, for example a the Resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ActivityLogAlertState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L203" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/activityLogAlert.ts#L205" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2875,7 +3065,7 @@ A mapping of tags to assign to the resource.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AlertRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L302" >}}">interface <b>AlertRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L304" >}}">interface <b>AlertRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2884,10 +3074,12 @@ The set of arguments for constructing a AlertRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AlertRuleArgs-aggregation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L306" >}}">property <b>aggregation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L308" >}}">property <b>aggregation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aggregation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines how the metric data is combined over time. Possible values are `Average`, `Minimum`, `Maximum`, `Total`, and `Last`.
@@ -2895,10 +3087,12 @@ Defines how the metric data is combined over time. Possible values are `Average`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L310" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L312" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A verbose description of the alert rule that will be included in the alert email.
@@ -2906,13 +3100,12 @@ A verbose description of the alert rule that will be included in the alert email
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-emailAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L314" >}}">property <b>emailAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L316" >}}">property <b>emailAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    customEmails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    sendToServiceOwners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `emailAction` block as defined below.
@@ -2920,10 +3113,12 @@ A `emailAction` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L318" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L320" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, the alert rule is enabled. Defaults to `true`.
@@ -2931,10 +3126,12 @@ If `true`, the alert rule is enabled. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L322" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L324" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -2942,10 +3139,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L326" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L328" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric that defines what the rule monitors.
@@ -2953,10 +3152,12 @@ The metric that defines what the rule monitors.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L330" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L332" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the alert rule. Changing this forces a new resource to be created.
@@ -2964,10 +3165,12 @@ Specifies the name of the alert rule. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L334" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L336" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The operator used to compare the metric data and the threshold. Possible values are `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, and `LessThanOrEqual`.
@@ -2975,10 +3178,12 @@ The operator used to compare the metric data and the threshold. Possible values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L338" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L340" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.
@@ -2986,10 +3191,12 @@ The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L342" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L344" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.
@@ -2997,10 +3204,12 @@ The name of the resource group in which to create the alert rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L346" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L348" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the resource monitored by the alert rule.
@@ -3008,10 +3217,12 @@ The ID of the resource monitored by the alert rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L350" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L352" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
@@ -3019,10 +3230,12 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-threshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L354" >}}">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L356" >}}">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The threshold value that activates the alert.
@@ -3030,13 +3243,12 @@ The threshold value that activates the alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleArgs-webhookAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L358" >}}">property <b>webhookAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L360" >}}">property <b>webhookAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `webhookAction` block as defined below.
@@ -3045,7 +3257,7 @@ A `webhookAction` block as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AlertRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L240" >}}">interface <b>AlertRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L242" >}}">interface <b>AlertRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3054,10 +3266,12 @@ Input properties used for looking up and filtering AlertRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AlertRuleState-aggregation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L244" >}}">property <b>aggregation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L246" >}}">property <b>aggregation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aggregation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines how the metric data is combined over time. Possible values are `Average`, `Minimum`, `Maximum`, `Total`, and `Last`.
@@ -3065,10 +3279,12 @@ Defines how the metric data is combined over time. Possible values are `Average`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L248" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L250" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A verbose description of the alert rule that will be included in the alert email.
@@ -3076,13 +3292,12 @@ A verbose description of the alert rule that will be included in the alert email
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-emailAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L252" >}}">property <b>emailAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L254" >}}">property <b>emailAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    customEmails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    sendToServiceOwners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertRuleEmailAction'>AlertRuleEmailAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `emailAction` block as defined below.
@@ -3090,10 +3305,12 @@ A `emailAction` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L256" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L258" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, the alert rule is enabled. Defaults to `true`.
@@ -3101,10 +3318,12 @@ If `true`, the alert rule is enabled. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L260" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L262" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -3112,10 +3331,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L264" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L266" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric that defines what the rule monitors.
@@ -3123,10 +3344,12 @@ The metric that defines what the rule monitors.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L268" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L270" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the alert rule. Changing this forces a new resource to be created.
@@ -3134,10 +3357,12 @@ Specifies the name of the alert rule. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L272" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L274" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The operator used to compare the metric data and the threshold. Possible values are `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, and `LessThanOrEqual`.
@@ -3145,10 +3370,12 @@ The operator used to compare the metric data and the threshold. Possible values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L276" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L278" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.
@@ -3156,10 +3383,12 @@ The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L280" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L282" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.
@@ -3167,10 +3396,12 @@ The name of the resource group in which to create the alert rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L284" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L286" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the resource monitored by the alert rule.
@@ -3178,10 +3409,12 @@ The ID of the resource monitored by the alert rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L288" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L290" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
@@ -3189,10 +3422,12 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-threshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L292" >}}">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L294" >}}">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>threshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The threshold value that activates the alert.
@@ -3200,13 +3435,12 @@ The threshold value that activates the alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AlertRuleState-webhookAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L296" >}}">property <b>webhookAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/alertRule.ts#L298" >}}">property <b>webhookAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AlertRuleWebhookAction'>AlertRuleWebhookAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `webhookAction` block as defined below.
@@ -3215,7 +3449,7 @@ A `webhookAction` block as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AutoscaleSettingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L396" >}}">interface <b>AutoscaleSettingArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L398" >}}">interface <b>AutoscaleSettingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3224,10 +3458,12 @@ The set of arguments for constructing a AutoscaleSetting resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L400" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L402" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
@@ -3235,10 +3471,12 @@ Specifies whether automatic scaling is enabled for the target resource. Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L404" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L406" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
@@ -3246,10 +3484,12 @@ Specifies the supported Azure location where the AutoScale Setting should exist.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L408" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L410" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the AutoScale Setting. Changing this forces a new resource to be created.
@@ -3257,20 +3497,12 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-notification">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L412" >}}">property <b>notification</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L414" >}}">property <b>notification</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        customEmails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        sendToSubscriptionAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        sendToSubscriptionCoAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    webhooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AutoscaleSettingNotification'>AutoscaleSettingNotification</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `notification` block as defined below.
@@ -3278,46 +3510,12 @@ Specifies a `notification` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-profiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L416" >}}">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L418" >}}">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        default: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        maximum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        minimum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;;
-    fixedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        end: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        start: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        hours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        minutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        metricTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            metricResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            timeAggregation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            timeGrain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            timeWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        scaleAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            cooldown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-    }&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>profiles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
@@ -3325,10 +3523,12 @@ Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L420" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L422" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
@@ -3336,10 +3536,12 @@ The name of the Resource Group in the AutoScale Setting should be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L424" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L426" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3347,10 +3549,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingArgs-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L428" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L430" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource ID of the resource that the autoscale setting should be added to.
@@ -3359,7 +3563,7 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="AutoscaleSettingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L358" >}}">interface <b>AutoscaleSettingState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L360" >}}">interface <b>AutoscaleSettingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3368,10 +3572,12 @@ Input properties used for looking up and filtering AutoscaleSetting resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L362" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L364" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
@@ -3379,10 +3585,12 @@ Specifies whether automatic scaling is enabled for the target resource. Defaults
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L366" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L368" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
@@ -3390,10 +3598,12 @@ Specifies the supported Azure location where the AutoScale Setting should exist.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L370" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L372" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the AutoScale Setting. Changing this forces a new resource to be created.
@@ -3401,20 +3611,12 @@ The name of the AutoScale Setting. Changing this forces a new resource to be cre
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-notification">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L374" >}}">property <b>notification</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L376" >}}">property <b>notification</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        customEmails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        sendToSubscriptionAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-        sendToSubscriptionCoAdministrator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-    webhooks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;
-        serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>notification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AutoscaleSettingNotification'>AutoscaleSettingNotification</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies a `notification` block as defined below.
@@ -3422,46 +3624,12 @@ Specifies a `notification` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-profiles">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L378" >}}">property <b>profiles</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L380" >}}">property <b>profiles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        default: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        maximum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        minimum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    }&gt;;
-    fixedDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        end: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        start: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    recurrence: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-        hours: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        minutes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        timezone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;;
-    rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        metricTrigger: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            metricResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            statistic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-            timeAggregation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            timeGrain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            timeWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        }&gt;;
-        scaleAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-            cooldown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            direction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-            value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        }&gt;;
-    }&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>profiles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#AutoscaleSettingProfile'>AutoscaleSettingProfile</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies one or more (up to 20) `profile` blocks as defined below.
@@ -3469,10 +3637,12 @@ Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L382" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L384" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
@@ -3480,10 +3650,12 @@ The name of the Resource Group in the AutoScale Setting should be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L386" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L388" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3491,10 +3663,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AutoscaleSettingState-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L390" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/autoscaleSetting.ts#L392" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource ID of the resource that the autoscale setting should be added to.
@@ -3503,7 +3677,7 @@ Specifies the resource ID of the resource that the autoscale setting should be a
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DiagnosticSettingArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L196" >}}">interface <b>DiagnosticSettingArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L208" >}}">interface <b>DiagnosticSettingArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3512,10 +3686,12 @@ The set of arguments for constructing a DiagnosticSetting resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DiagnosticSettingArgs-eventhubAuthorizationRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L200" >}}">property <b>eventhubAuthorizationRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L212" >}}">property <b>eventhubAuthorizationRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventhubAuthorizationRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
@@ -3523,21 +3699,38 @@ Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagn
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingArgs-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L204" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L216" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="DiagnosticSettingArgs-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L212" >}}">property <b>logAnalyticsWorkspaceId</b></a>
+<h3 class="pdoc-member-header" id="DiagnosticSettingArgs-logAnalyticsDestinationType">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L224" >}}">property <b>logAnalyticsDestinationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>logAnalyticsDestinationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="DiagnosticSettingArgs-logAnalyticsWorkspaceId">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L228" >}}">property <b>logAnalyticsWorkspaceId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logAnalyticsWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
@@ -3545,17 +3738,12 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingArgs-logs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L208" >}}">property <b>logs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L220" >}}">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    category: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DiagnosticSettingLog'>DiagnosticSettingLog</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `log` blocks as defined below.
@@ -3563,17 +3751,12 @@ One or more `log` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingArgs-metrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L216" >}}">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L232" >}}">property <b>metrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    category: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `metric` blocks as defined below.
@@ -3581,10 +3764,12 @@ One or more `metric` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L220" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L236" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
@@ -3592,10 +3777,12 @@ Specifies the name of the Diagnostic Setting. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingArgs-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L224" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L240" >}}">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
@@ -3603,10 +3790,12 @@ With this parameter you can specify a storage account which should be used to se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingArgs-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L228" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L244" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetResourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
@@ -3615,7 +3804,7 @@ The ID of an existing Resource on which to configure Diagnostic Settings. Changi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DiagnosticSettingState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L158" >}}">interface <b>DiagnosticSettingState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L166" >}}">interface <b>DiagnosticSettingState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3624,10 +3813,12 @@ Input properties used for looking up and filtering DiagnosticSetting resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DiagnosticSettingState-eventhubAuthorizationRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L162" >}}">property <b>eventhubAuthorizationRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L170" >}}">property <b>eventhubAuthorizationRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventhubAuthorizationRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagnostics Data. Changing this forces a new resource to be created.
@@ -3635,21 +3826,38 @@ Specifies the ID of an Event Hub Namespace Authorization Rule used to send Diagn
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingState-eventhubName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L166" >}}">property <b>eventhubName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L174" >}}">property <b>eventhubName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>eventhubName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Event Hub where Diagnostics Data should be sent. Changing this forces a new resource to be created.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="DiagnosticSettingState-logAnalyticsWorkspaceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L174" >}}">property <b>logAnalyticsWorkspaceId</b></a>
+<h3 class="pdoc-member-header" id="DiagnosticSettingState-logAnalyticsDestinationType">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L182" >}}">property <b>logAnalyticsDestinationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>logAnalyticsDestinationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+When set to 'Dedicated' logs sent to a Log Analytics workspace will go into resource specific tables, instead of the legacy AzureDiagnostics table.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="DiagnosticSettingState-logAnalyticsWorkspaceId">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L186" >}}">property <b>logAnalyticsWorkspaceId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logAnalyticsWorkspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be sent. Changing this forces a new resource to be created.
@@ -3657,17 +3865,12 @@ Specifies the ID of a Log Analytics Workspace where Diagnostics Data should be s
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingState-logs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L170" >}}">property <b>logs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L178" >}}">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    category: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>logs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DiagnosticSettingLog'>DiagnosticSettingLog</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `log` blocks as defined below.
@@ -3675,17 +3878,12 @@ One or more `log` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingState-metrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L178" >}}">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L190" >}}">property <b>metrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    category: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-        enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    }&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>metrics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DiagnosticSettingMetric'>DiagnosticSettingMetric</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `metric` blocks as defined below.
@@ -3693,10 +3891,12 @@ One or more `metric` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L182" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L194" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Diagnostic Setting. Changing this forces a new resource to be created.
@@ -3704,10 +3904,12 @@ Specifies the name of the Diagnostic Setting. Changing this forces a new resourc
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingState-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L186" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L198" >}}">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 With this parameter you can specify a storage account which should be used to send the logs to. Parameter must be a valid Azure Resource ID. Changing this forces a new resource to be created.
@@ -3715,10 +3917,12 @@ With this parameter you can specify a storage account which should be used to se
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DiagnosticSettingState-targetResourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L190" >}}">property <b>targetResourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/diagnosticSetting.ts#L202" >}}">property <b>targetResourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>targetResourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of an existing Resource on which to configure Diagnostic Settings. Changing this forces a new resource to be created.
@@ -3727,7 +3931,7 @@ The ID of an existing Resource on which to configure Diagnostic Settings. Changi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetActionGroupArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L45" >}}">interface <b>GetActionGroupArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L47" >}}">interface <b>GetActionGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3736,10 +3940,12 @@ A collection of arguments for invoking getActionGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetActionGroupArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the Action Group.
@@ -3747,10 +3953,12 @@ Specifies the name of the Action Group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetActionGroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L53" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L55" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the resource group the Action Group is located in.
@@ -3759,7 +3967,7 @@ Specifies the name of the resource group the Action Group is located in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetActionGroupResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L59" >}}">interface <b>GetActionGroupResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L61" >}}">interface <b>GetActionGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3768,13 +3976,12 @@ A collection of values returned by getActionGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetActionGroupResult-emailReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L63" >}}">property <b>emailReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L65" >}}">property <b>emailReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailReceivers: {
-    emailAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailReceivers: <a href='#GetActionGroupEmailReceiver'>GetActionGroupEmailReceiver</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `emailReceiver` blocks as defined below.
@@ -3782,10 +3989,12 @@ One or more `emailReceiver` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetActionGroupResult-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L67" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L69" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether this action group is enabled.
@@ -3793,10 +4002,12 @@ Whether this action group is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetActionGroupResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L88" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L90" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -3804,10 +4015,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetActionGroupResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the webhook receiver.
@@ -3815,18 +4028,22 @@ The name of the webhook receiver.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetActionGroupResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L72" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L74" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetActionGroupResult-shortName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L76" >}}">property <b>shortName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L78" >}}">property <b>shortName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>shortName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The short name of the action group.
@@ -3834,14 +4051,12 @@ The short name of the action group.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetActionGroupResult-smsReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L80" >}}">property <b>smsReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L82" >}}">property <b>smsReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>smsReceivers: {
-    countryCode: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    phoneNumber: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>smsReceivers: <a href='#GetActionGroupSmsReceiver'>GetActionGroupSmsReceiver</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `smsReceiver ` blocks as defined below.
@@ -3849,13 +4064,12 @@ One or more `smsReceiver ` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetActionGroupResult-webhookReceivers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L84" >}}">property <b>webhookReceivers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getActionGroup.ts#L86" >}}">property <b>webhookReceivers</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookReceivers: {
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    serviceUri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookReceivers: <a href='#GetActionGroupWebhookReceiver'>GetActionGroupWebhookReceiver</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `webhookReceiver ` blocks as defined below.
@@ -3864,7 +4078,7 @@ One or more `webhookReceiver ` blocks as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDiagnosticCategoriesArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L45" >}}">interface <b>GetDiagnosticCategoriesArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L47" >}}">interface <b>GetDiagnosticCategoriesArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3873,10 +4087,12 @@ A collection of arguments for invoking getDiagnosticCategories.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDiagnosticCategoriesArgs-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L49" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L51" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of an existing Resource which Monitor Diagnostics Categories should be retrieved for.
@@ -3885,7 +4101,7 @@ The ID of an existing Resource which Monitor Diagnostics Categories should be re
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDiagnosticCategoriesResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L55" >}}">interface <b>GetDiagnosticCategoriesResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L57" >}}">interface <b>GetDiagnosticCategoriesResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3894,10 +4110,12 @@ A collection of values returned by getDiagnosticCategories.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L68" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L70" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -3905,10 +4123,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-logs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L59" >}}">property <b>logs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L61" >}}">property <b>logs</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>logs: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the Log Categories supported for this Resource.
@@ -3916,10 +4136,12 @@ A list of the Log Categories supported for this Resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-metrics">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L63" >}}">property <b>metrics</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L65" >}}">property <b>metrics</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metrics: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the Metric Categories supported for this Resource.
@@ -3927,16 +4149,18 @@ A list of the Metric Categories supported for this Resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDiagnosticCategoriesResult-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L64" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getDiagnosticCategories.ts#L66" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetLogProfileArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L43" >}}">interface <b>GetLogProfileArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L45" >}}">interface <b>GetLogProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3945,10 +4169,12 @@ A collection of arguments for invoking getLogProfile.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetLogProfileArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L47" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L49" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Name of the Log Profile.
@@ -3957,7 +4183,7 @@ Specifies the Name of the Log Profile.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetLogProfileResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L53" >}}">interface <b>GetLogProfileResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L55" >}}">interface <b>GetLogProfileResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3966,10 +4192,12 @@ A collection of values returned by getLogProfile.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetLogProfileResult-categories">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L57" >}}">property <b>categories</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L59" >}}">property <b>categories</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>categories: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of categories of the logs.
@@ -3977,10 +4205,12 @@ List of categories of the logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLogProfileResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L75" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L77" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -3988,10 +4218,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLogProfileResult-locations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L61" >}}">property <b>locations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L63" >}}">property <b>locations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locations: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of regions for which Activity Log events are stored or streamed.
@@ -3999,29 +4231,32 @@ List of regions for which Activity Log events are stored or streamed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLogProfileResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L62" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L64" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLogProfileResult-retentionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L63" >}}">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L65" >}}">property <b>retentionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>retentionPolicy: {
-    days: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    enabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-};</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>retentionPolicy: <a href='#GetLogProfileRetentionPolicy'>GetLogProfileRetentionPolicy</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLogProfileResult-servicebusRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L67" >}}">property <b>servicebusRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L69" >}}">property <b>servicebusRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>servicebusRuleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to.
@@ -4029,10 +4264,12 @@ The service bus (or event hub) rule ID of the service bus (or event hub) namespa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLogProfileResult-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L71" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/getLogProfile.ts#L73" >}}">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource id of the storage account in which the Activity Log is stored.
@@ -4041,7 +4278,7 @@ The resource id of the storage account in which the Activity Log is stored.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogProfileArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L192" >}}">interface <b>LogProfileArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L194" >}}">interface <b>LogProfileArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4050,10 +4287,12 @@ The set of arguments for constructing a LogProfile resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LogProfileArgs-categories">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L196" >}}">property <b>categories</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L198" >}}">property <b>categories</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>categories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of categories of the logs.
@@ -4061,10 +4300,12 @@ List of categories of the logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileArgs-locations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L200" >}}">property <b>locations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L202" >}}">property <b>locations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of regions for which Activity Log events are stored or streamed.
@@ -4072,10 +4313,12 @@ List of regions for which Activity Log events are stored or streamed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L205" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L207" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Log Profile. Changing this forces a
@@ -4084,13 +4327,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileArgs-retentionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L209" >}}">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L211" >}}">property <b>retentionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>retentionPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
@@ -4098,10 +4340,12 @@ A `retentionPolicy` block as documented below. A retention policy for how long A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileArgs-servicebusRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L213" >}}">property <b>servicebusRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L215" >}}">property <b>servicebusRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>servicebusRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storageAccountId` or `servicebusRuleId` must be set.
@@ -4109,10 +4353,12 @@ The service bus (or event hub) rule ID of the service bus (or event hub) namespa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileArgs-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L217" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L219" >}}">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource ID of the storage account in which the Activity Log is stored. At least one of `storageAccountId` or `servicebusRuleId` must be set.
@@ -4121,7 +4367,7 @@ The resource ID of the storage account in which the Activity Log is stored. At l
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LogProfileState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L161" >}}">interface <b>LogProfileState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L163" >}}">interface <b>LogProfileState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4130,10 +4376,12 @@ Input properties used for looking up and filtering LogProfile resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LogProfileState-categories">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L165" >}}">property <b>categories</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L167" >}}">property <b>categories</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>categories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of categories of the logs.
@@ -4141,10 +4389,12 @@ List of categories of the logs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileState-locations">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L169" >}}">property <b>locations</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L171" >}}">property <b>locations</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of regions for which Activity Log events are stored or streamed.
@@ -4152,10 +4402,12 @@ List of regions for which Activity Log events are stored or streamed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L174" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L176" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Log Profile. Changing this forces a
@@ -4164,13 +4416,12 @@ new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileState-retentionPolicy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L178" >}}">property <b>retentionPolicy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L180" >}}">property <b>retentionPolicy</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    days: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>retentionPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LogProfileRetentionPolicy'>LogProfileRetentionPolicy</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `retentionPolicy` block as documented below. A retention policy for how long Activity Logs are retained in the storage account.
@@ -4178,10 +4429,12 @@ A `retentionPolicy` block as documented below. A retention policy for how long A
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileState-servicebusRuleId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L182" >}}">property <b>servicebusRuleId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L184" >}}">property <b>servicebusRuleId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>servicebusRuleId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The service bus (or event hub) rule ID of the service bus (or event hub) namespace in which the Activity Log is streamed to. At least one of `storageAccountId` or `servicebusRuleId` must be set.
@@ -4189,10 +4442,12 @@ The service bus (or event hub) rule ID of the service bus (or event hub) namespa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LogProfileState-storageAccountId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L186" >}}">property <b>storageAccountId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/logProfile.ts#L188" >}}">property <b>storageAccountId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>storageAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource ID of the storage account in which the Activity Log is stored. At least one of `storageAccountId` or `servicebusRuleId` must be set.
@@ -4201,7 +4456,7 @@ The resource ID of the storage account in which the Activity Log is stored. At l
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricAlertArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L253" >}}">interface <b>MetricAlertArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L255" >}}">interface <b>MetricAlertArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4210,13 +4465,12 @@ The set of arguments for constructing a MetricAlert resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertArgs-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L257" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L259" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    actionGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    webhookProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertAction'>MetricAlertAction</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `action` blocks as defined below.
@@ -4224,10 +4478,12 @@ One or more `action` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-autoMitigate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L261" >}}">property <b>autoMitigate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L263" >}}">property <b>autoMitigate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoMitigate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
@@ -4235,21 +4491,12 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-criterias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L265" >}}">property <b>criterias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L267" >}}">property <b>criterias</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    aggregation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    dimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;[]&gt;;
-    metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>criterias: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertCriteria'>MetricAlertCriteria</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `criteria` blocks as defined below.
@@ -4257,10 +4504,12 @@ One or more `criteria` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L269" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L271" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of this Metric Alert.
@@ -4268,10 +4517,12 @@ The description of this Metric Alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L273" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L275" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this Metric Alert be enabled? Defaults to `true`.
@@ -4279,10 +4530,12 @@ Should this Metric Alert be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-frequency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L277" >}}">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L279" >}}">property <b>frequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
@@ -4290,10 +4543,12 @@ The evaluation frequency of this Metric Alert, represented in ISO 8601 duration 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L281" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L283" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Metric Alert. Changing this forces a new resource to be created.
@@ -4301,10 +4556,12 @@ The name of the Metric Alert. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L285" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L287" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Metric Alert instance.
@@ -4312,10 +4569,12 @@ The name of the resource group in which to create the Metric Alert instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L289" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L291" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource ID at which the metric criteria should be applied.
@@ -4323,10 +4582,12 @@ The resource ID at which the metric criteria should be applied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-severity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L293" >}}">property <b>severity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L295" >}}">property <b>severity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
@@ -4334,10 +4595,12 @@ The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L297" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L299" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4345,10 +4608,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertArgs-windowSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L301" >}}">property <b>windowSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L303" >}}">property <b>windowSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>windowSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.
@@ -4357,7 +4622,7 @@ The period of time that is used to monitor alert activity, represented in ISO 86
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricAlertRuleArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L300" >}}">interface <b>MetricAlertRuleArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L302" >}}">interface <b>MetricAlertRuleArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4366,10 +4631,12 @@ The set of arguments for constructing a MetricAlertRule resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-aggregation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L304" >}}">property <b>aggregation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L306" >}}">property <b>aggregation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aggregation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines how the metric data is combined over time. Possible values are `Average`, `Minimum`, `Maximum`, `Total`, and `Last`.
@@ -4377,10 +4644,12 @@ Defines how the metric data is combined over time. Possible values are `Average`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L308" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L310" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A verbose description of the alert rule that will be included in the alert email.
@@ -4388,13 +4657,12 @@ A verbose description of the alert rule that will be included in the alert email
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-emailAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L312" >}}">property <b>emailAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L314" >}}">property <b>emailAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    customEmails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    sendToServiceOwners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `emailAction` block as defined below.
@@ -4402,10 +4670,12 @@ A `emailAction` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L316" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L318" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, the alert rule is enabled. Defaults to `true`.
@@ -4413,10 +4683,12 @@ If `true`, the alert rule is enabled. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L320" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L322" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -4424,10 +4696,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L324" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L326" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric that defines what the rule monitors.
@@ -4435,10 +4709,12 @@ The metric that defines what the rule monitors.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L328" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L330" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the alert rule. Changing this forces a new resource to be created.
@@ -4446,10 +4722,12 @@ Specifies the name of the alert rule. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L332" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L334" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The operator used to compare the metric data and the threshold. Possible values are `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, and `LessThanOrEqual`.
@@ -4457,10 +4735,12 @@ The operator used to compare the metric data and the threshold. Possible values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L336" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L338" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.
@@ -4468,10 +4748,12 @@ The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L340" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L342" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.
@@ -4479,10 +4761,12 @@ The name of the resource group in which to create the alert rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L344" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L346" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the resource monitored by the alert rule.
@@ -4490,10 +4774,12 @@ The ID of the resource monitored by the alert rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L348" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L350" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
@@ -4501,10 +4787,12 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-threshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L352" >}}">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L354" >}}">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The threshold value that activates the alert.
@@ -4512,13 +4800,12 @@ The threshold value that activates the alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleArgs-webhookAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L356" >}}">property <b>webhookAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L358" >}}">property <b>webhookAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `webhookAction` block as defined below.
@@ -4527,7 +4814,7 @@ A `webhookAction` block as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricAlertRuleState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L238" >}}">interface <b>MetricAlertRuleState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L240" >}}">interface <b>MetricAlertRuleState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4536,10 +4823,12 @@ Input properties used for looking up and filtering MetricAlertRule resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-aggregation">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L242" >}}">property <b>aggregation</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L244" >}}">property <b>aggregation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>aggregation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines how the metric data is combined over time. Possible values are `Average`, `Minimum`, `Maximum`, `Total`, and `Last`.
@@ -4547,10 +4836,12 @@ Defines how the metric data is combined over time. Possible values are `Average`
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L246" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L248" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A verbose description of the alert rule that will be included in the alert email.
@@ -4558,13 +4849,12 @@ A verbose description of the alert rule that will be included in the alert email
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-emailAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L250" >}}">property <b>emailAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L252" >}}">property <b>emailAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    customEmails: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    sendToServiceOwners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>emailAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertRuleEmailAction'>MetricAlertRuleEmailAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `emailAction` block as defined below.
@@ -4572,10 +4862,12 @@ A `emailAction` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L254" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L256" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If `true`, the alert rule is enabled. Defaults to `true`.
@@ -4583,10 +4875,12 @@ If `true`, the alert rule is enabled. Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L258" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L260" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -4594,10 +4888,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-metricName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L262" >}}">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L264" >}}">property <b>metricName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The metric that defines what the rule monitors.
@@ -4605,10 +4901,12 @@ The metric that defines what the rule monitors.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L266" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L268" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the alert rule. Changing this forces a new resource to be created.
@@ -4616,10 +4914,12 @@ Specifies the name of the alert rule. Changing this forces a new resource to be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-operator">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L270" >}}">property <b>operator</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L272" >}}">property <b>operator</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>operator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The operator used to compare the metric data and the threshold. Possible values are `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, and `LessThanOrEqual`.
@@ -4627,10 +4927,12 @@ The operator used to compare the metric data and the threshold. Possible values 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-period">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L274" >}}">property <b>period</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L276" >}}">property <b>period</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations) that is used to monitor the alert activity based on the threshold. The period must be between 5 minutes and 1 day.
@@ -4638,10 +4940,12 @@ The period of time formatted in [ISO 8601 duration format](https://en.wikipedia.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L278" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L280" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the alert rule. Changing this forces a new resource to be created.
@@ -4649,10 +4953,12 @@ The name of the resource group in which to create the alert rule. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-resourceId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L282" >}}">property <b>resourceId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L284" >}}">property <b>resourceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the resource monitored by the alert rule.
@@ -4660,10 +4966,12 @@ The ID of the resource monitored by the alert rule.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L286" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L288" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
@@ -4671,10 +4979,12 @@ A mapping of tags to assign to the resource. Changing this forces a new resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-threshold">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L290" >}}">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L292" >}}">property <b>threshold</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>threshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The threshold value that activates the alert.
@@ -4682,13 +4992,12 @@ The threshold value that activates the alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertRuleState-webhookAction">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L294" >}}">property <b>webhookAction</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlertRule.ts#L296" >}}">property <b>webhookAction</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-    serviceUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>webhookAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertRuleWebhookAction'>MetricAlertRuleWebhookAction</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `webhookAction` block as defined below.
@@ -4697,7 +5006,7 @@ A `webhookAction` block as defined below.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MetricAlertState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L199" >}}">interface <b>MetricAlertState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L201" >}}">interface <b>MetricAlertState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4706,13 +5015,12 @@ Input properties used for looking up and filtering MetricAlert resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MetricAlertState-actions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L203" >}}">property <b>actions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L205" >}}">property <b>actions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    actionGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    webhookProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>actions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertAction'>MetricAlertAction</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `action` blocks as defined below.
@@ -4720,10 +5028,12 @@ One or more `action` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-autoMitigate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L207" >}}">property <b>autoMitigate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L209" >}}">property <b>autoMitigate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>autoMitigate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
@@ -4731,21 +5041,12 @@ Should the alerts in this Metric Alert be auto resolved? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-criterias">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L211" >}}">property <b>criterias</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L213" >}}">property <b>criterias</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    aggregation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    dimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    }&gt;[]&gt;;
-    metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    metricNamespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    operator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>criterias?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricAlertCriteria'>MetricAlertCriteria</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 One or more `criteria` blocks as defined below.
@@ -4753,10 +5054,12 @@ One or more `criteria` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L215" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L217" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The description of this Metric Alert.
@@ -4764,10 +5067,12 @@ The description of this Metric Alert.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-enabled">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L219" >}}">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L221" >}}">property <b>enabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Should this Metric Alert be enabled? Defaults to `true`.
@@ -4775,10 +5080,12 @@ Should this Metric Alert be enabled? Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-frequency">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L223" >}}">property <b>frequency</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L225" >}}">property <b>frequency</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>frequency?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The evaluation frequency of this Metric Alert, represented in ISO 8601 duration format. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M` and `PT1H`. Defaults to `PT1M`.
@@ -4786,10 +5093,12 @@ The evaluation frequency of this Metric Alert, represented in ISO 8601 duration 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L227" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L229" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Metric Alert. Changing this forces a new resource to be created.
@@ -4797,10 +5106,12 @@ The name of the Metric Alert. Changing this forces a new resource to be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L231" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L233" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the Metric Alert instance.
@@ -4808,10 +5119,12 @@ The name of the resource group in which to create the Metric Alert instance.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-scopes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L235" >}}">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L237" >}}">property <b>scopes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The resource ID at which the metric criteria should be applied.
@@ -4819,10 +5132,12 @@ The resource ID at which the metric criteria should be applied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-severity">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L239" >}}">property <b>severity</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L241" >}}">property <b>severity</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>severity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4`. Defaults to `3`.
@@ -4830,10 +5145,12 @@ The severity of this Metric Alert. Possible values are `0`, `1`, `2`, `3` and `4
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L243" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L245" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -4841,10 +5158,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MetricAlertState-windowSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L247" >}}">property <b>windowSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="monitoring/metricAlert.ts#L249" >}}">property <b>windowSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>windowSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The period of time that is used to monitor alert activity, represented in ISO 8601 duration format. This value must be greater than `frequency`. Possible values are `PT1M`, `PT5M`, `PT15M`, `PT30M`, `PT1H`, `PT6H`, `PT12H` and `P1D`. Defaults to `PT5M`.

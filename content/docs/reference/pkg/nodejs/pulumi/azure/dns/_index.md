@@ -67,7 +67,9 @@ title: Module dns
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L35" >}}">class <b>ARecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS A Records within Azure DNS.
@@ -102,10 +104,12 @@ const testARecord = new azure.dns.ARecord("test", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ARecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ARecordArgs'>ARecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ARecord resource with the given unique name, arguments, and options.
 
@@ -119,10 +123,12 @@ Create a ARecord resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ARecordState'>ARecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ARecord'>ARecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ARecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -130,23 +136,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ARecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ARecord-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ARecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -154,10 +164,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ARecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -169,7 +181,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS A Record.
@@ -180,7 +194,9 @@ The name of the DNS A Record.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L69" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv4 Addresses.
@@ -191,7 +207,9 @@ List of IPv4 Addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L73" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -202,7 +220,9 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L77" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -213,15 +233,19 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L78" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ARecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -233,7 +257,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L82" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -245,7 +271,9 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L35" >}}">class <b>AaaaRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS AAAA Records within Azure DNS.
@@ -280,10 +308,12 @@ const testAaaaRecord = new azure.dns.AaaaRecord("test", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> AaaaRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AaaaRecordArgs'>AaaaRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a AaaaRecord resource with the given unique name, arguments, and options.
 
@@ -297,10 +327,12 @@ Create a AaaaRecord resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#AaaaRecordState'>AaaaRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#AaaaRecord'>AaaaRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing AaaaRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -308,23 +340,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AaaaRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AaaaRecord-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of AaaaRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -332,10 +368,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AaaaRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -347,7 +385,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L65" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS AAAA Record.
@@ -358,7 +398,9 @@ The name of the DNS AAAA Record.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L69" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv6 Addresses.
@@ -369,7 +411,9 @@ List of IPv6 Addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L73" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -380,7 +424,9 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L77" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -391,15 +437,19 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L78" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="AaaaRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L35" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -411,7 +461,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L82" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -420,10 +472,12 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CNameRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L35" >}}">class <b>CNameRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L37" >}}">class <b>CNameRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS CNAME Records within Azure DNS.
@@ -455,13 +509,15 @@ const testCNameRecord = new azure.dns.CNameRecord("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CNameRecord-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L82" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L84" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CNameRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CNameRecordArgs'>CNameRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a CNameRecord resource with the given unique name, arguments, and options.
 
@@ -472,13 +528,15 @@ Create a CNameRecord resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L44" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L46" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CNameRecordState'>CNameRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CNameRecord'>CNameRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing CNameRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -486,23 +544,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L37" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L55" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L57" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CNameRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -510,10 +572,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L37" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -522,10 +586,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L67" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS CNAME Record.
@@ -533,10 +599,12 @@ The name of the DNS CNAME Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-record">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L69" >}}">property <b>record</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L71" >}}">property <b>record</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>record: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The target of the CNAME.
@@ -544,10 +612,12 @@ The target of the CNAME.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L73" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L75" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -555,10 +625,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L77" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L79" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -566,18 +638,22 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L78" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L80" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L37" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -586,10 +662,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecord-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L82" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L84" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -598,10 +676,12 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CaaRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L59" >}}">class <b>CaaRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L61" >}}">class <b>CaaRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS CAA Records within Azure DNS.
@@ -657,13 +737,15 @@ const testCaaRecord = new azure.dns.CaaRecord("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CaaRecord-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L109" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L111" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> CaaRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CaaRecordArgs'>CaaRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a CaaRecord resource with the given unique name, arguments, and options.
 
@@ -674,13 +756,15 @@ Create a CaaRecord resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L68" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L70" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CaaRecordState'>CaaRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#CaaRecord'>CaaRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing CaaRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -688,23 +772,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L61" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L79" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L81" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of CaaRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -712,10 +800,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L61" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -724,10 +814,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L89" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L91" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS CAA Record.
@@ -735,14 +827,12 @@ The name of the DNS CAA Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L93" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L95" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    flags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    tag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CaaRecordRecord'>CaaRecordRecord</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the CAA record. Each `record` block supports fields documented below.
@@ -750,10 +840,12 @@ A list of values that make up the CAA record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L97" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L99" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -761,10 +853,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L101" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L103" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -772,10 +866,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L105" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L107" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -783,10 +879,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L61" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -795,10 +893,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecord-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L109" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L111" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -807,10 +907,12 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MxRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L47" >}}">class <b>MxRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L49" >}}">class <b>MxRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS MX Records within Azure DNS.
@@ -854,13 +956,15 @@ const testMxRecord = new azure.dns.MxRecord("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MxRecord-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L97" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L99" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> MxRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#MxRecordArgs'>MxRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a MxRecord resource with the given unique name, arguments, and options.
 
@@ -871,13 +975,15 @@ Create a MxRecord resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#MxRecordState'>MxRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#MxRecord'>MxRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing MxRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -885,23 +991,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L49" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of MxRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -909,10 +1019,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L49" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -921,10 +1033,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L77" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L79" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS MX Record.
@@ -932,13 +1046,12 @@ The name of the DNS MX Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L81" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L83" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    exchange: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    preference: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MxRecordRecord'>MxRecordRecord</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the MX record. Each `record` block supports fields documented below.
@@ -946,10 +1059,12 @@ A list of values that make up the MX record. Each `record` block supports fields
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L85" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L87" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -957,10 +1072,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L89" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L91" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -968,10 +1085,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L93" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L95" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -979,10 +1098,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L49" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -991,10 +1112,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecord-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L97" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L99" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -1003,10 +1126,12 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NsRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L41" >}}">class <b>NsRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L43" >}}">class <b>NsRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS NS Records within Azure DNS.
@@ -1044,13 +1169,15 @@ const testNsRecord = new azure.dns.NsRecord("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NsRecord-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L95" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L97" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> NsRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#NsRecordArgs'>NsRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a NsRecord resource with the given unique name, arguments, and options.
 
@@ -1061,13 +1188,15 @@ Create a NsRecord resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L50" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L52" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#NsRecordState'>NsRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#NsRecord'>NsRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing NsRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1075,23 +1204,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L43" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L61" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L63" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of NsRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1099,10 +1232,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L43" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1111,10 +1246,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS NS Record.
@@ -1122,12 +1259,12 @@ The name of the DNS NS Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-record">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L75" >}}">property <b>record</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L77" >}}">property <b>record</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>record: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    nsdname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>record: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#NsRecordRecord'>NsRecordRecord</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the NS record. Each `record` block supports fields documented below. This field has been deprecated and will be removed in a future release.
@@ -1135,10 +1272,12 @@ A list of values that make up the NS record. Each `record` block supports fields
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L79" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L81" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the NS record. *WARNING*: Either `records` or `record` is required.
@@ -1146,10 +1285,12 @@ A list of values that make up the NS record. *WARNING*: Either `records` or `rec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L83" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L85" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -1157,10 +1298,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L87" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L89" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1168,10 +1311,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L91" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L93" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -1179,10 +1324,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L43" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1191,10 +1338,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecord-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L95" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L97" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -1203,10 +1352,12 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PtrRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L35" >}}">class <b>PtrRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L37" >}}">class <b>PtrRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS PTR Records within Azure DNS.
@@ -1238,13 +1389,15 @@ const testPtrRecord = new azure.dns.PtrRecord("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PtrRecord-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L85" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L87" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> PtrRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#PtrRecordArgs'>PtrRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a PtrRecord resource with the given unique name, arguments, and options.
 
@@ -1255,13 +1408,15 @@ Create a PtrRecord resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L44" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L46" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#PtrRecordState'>PtrRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#PtrRecord'>PtrRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing PtrRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1269,23 +1424,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L37" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L55" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L57" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of PtrRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1293,10 +1452,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L37" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1305,10 +1466,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L65" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L67" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS PTR Record.
@@ -1316,10 +1479,12 @@ The name of the DNS PTR Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L69" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L71" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of Fully Qualified Domain Names.
@@ -1327,10 +1492,12 @@ List of Fully Qualified Domain Names.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L73" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L75" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -1338,10 +1505,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L77" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L79" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1349,10 +1518,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L81" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L83" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -1360,10 +1531,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L37" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1372,10 +1545,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecord-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L85" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L87" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -1384,10 +1559,12 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SrvRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L43" >}}">class <b>SrvRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L45" >}}">class <b>SrvRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS SRV Records within Azure DNS.
@@ -1427,13 +1604,15 @@ const testSrvRecord = new azure.dns.SrvRecord("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SrvRecord-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L93" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L95" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SrvRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SrvRecordArgs'>SrvRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SrvRecord resource with the given unique name, arguments, and options.
 
@@ -1444,13 +1623,15 @@ Create a SrvRecord resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L52" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L54" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SrvRecordState'>SrvRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SrvRecord'>SrvRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SrvRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1458,23 +1639,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L45" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L63" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L65" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SrvRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1482,10 +1667,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L45" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1494,10 +1681,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L73" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L75" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS SRV Record.
@@ -1505,15 +1694,12 @@ The name of the DNS SRV Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L77" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L79" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    target: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#SrvRecordRecord'>SrvRecordRecord</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the SRV record. Each `record` block supports fields documented below.
@@ -1521,10 +1707,12 @@ A list of values that make up the SRV record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L81" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L83" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -1532,10 +1720,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L85" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L87" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1543,10 +1733,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L89" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L91" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -1554,10 +1746,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L45" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1566,10 +1760,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecord-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L93" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L95" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -1578,10 +1774,12 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TxtRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L45" >}}">class <b>TxtRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L47" >}}">class <b>TxtRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS TXT Records within Azure DNS.
@@ -1623,13 +1821,15 @@ const testTxtRecord = new azure.dns.TxtRecord("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TxtRecord-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L95" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L97" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> TxtRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#TxtRecordArgs'>TxtRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a TxtRecord resource with the given unique name, arguments, and options.
 
@@ -1640,13 +1840,15 @@ Create a TxtRecord resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L54" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L56" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TxtRecordState'>TxtRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#TxtRecord'>TxtRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing TxtRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1654,23 +1856,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L47" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L65" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L67" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of TxtRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1678,10 +1884,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L47" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1690,10 +1898,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L75" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L77" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS TXT Record.
@@ -1701,12 +1911,12 @@ The name of the DNS TXT Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L79" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L81" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#TxtRecordRecord'>TxtRecordRecord</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the txt record. Each `record` block supports fields documented below.
@@ -1714,10 +1924,12 @@ A list of values that make up the txt record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L83" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L85" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -1725,10 +1937,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L87" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L89" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1736,10 +1950,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L91" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L93" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -1747,10 +1963,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L47" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1759,10 +1977,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecord-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L95" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L97" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -1771,10 +1991,12 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Zone">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L34" >}}">class <b>Zone</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L36" >}}">class <b>Zone</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Enables you to manage DNS zones within Azure DNS. These zones are hosted on Azure's name servers to which you can delegate the zone from the parent domain.
@@ -1805,13 +2027,15 @@ const testPrivate = new azure.dns.Zone("testPrivate", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L96" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L98" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Zone(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ZoneArgs'>ZoneArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Zone resource with the given unique name, arguments, and options.
 
@@ -1822,13 +2046,15 @@ Create a Zone resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L43" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L45" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ZoneState'>ZoneState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Zone'>Zone</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Zone resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1836,23 +2062,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L36" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L54" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L56" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Zone.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1860,10 +2090,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L36" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1872,10 +2104,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-maxNumberOfRecordSets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L64" >}}">property <b>maxNumberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L66" >}}">property <b>maxNumberOfRecordSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxNumberOfRecordSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Optional) Maximum number of Records in the zone. Defaults to `1000`.
@@ -1883,10 +2117,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L68" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS Zone. Must be a valid domain name.
@@ -1894,10 +2130,12 @@ The name of the DNS Zone. Must be a valid domain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L72" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L74" >}}">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>nameServers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Optional) A list of values that make up the NS record for the zone.
@@ -1905,10 +2143,12 @@ The name of the DNS Zone. Must be a valid domain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-numberOfRecordSets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L76" >}}">property <b>numberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L78" >}}">property <b>numberOfRecordSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>numberOfRecordSets: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Optional) The number of records already in the zone.
@@ -1916,10 +2156,12 @@ The name of the DNS Zone. Must be a valid domain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-registrationVirtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L80" >}}">property <b>registrationVirtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L82" >}}">property <b>registrationVirtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>registrationVirtualNetworkIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Virtual Network ID's that register hostnames in this DNS zone. This field can only be set when `zoneType` is set to `Private`.
@@ -1927,10 +2169,12 @@ A list of Virtual Network ID's that register hostnames in this DNS zone. This fi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-resolutionVirtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L84" >}}">property <b>resolutionVirtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L86" >}}">property <b>resolutionVirtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resolutionVirtualNetworkIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Virtual Network ID's that resolve records in this DNS zone. This field can only be set when `zoneType` is set to `Private`.
@@ -1938,10 +2182,12 @@ A list of Virtual Network ID's that resolve records in this DNS zone. This field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L88" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L90" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -1949,10 +2195,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L92" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L94" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1960,10 +2208,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L36" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1972,10 +2222,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Zone-zoneType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L96" >}}">property <b>zoneType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L98" >}}">property <b>zoneType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the type of this DNS zone. Possible values are `Public` or `Private` (Defaults to `Public`).
@@ -1984,13 +2236,15 @@ Specifies the type of this DNS zone. Possible values are `Public` or `Private` (
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getZone">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L26" >}}">function <b>getZone</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L28" >}}">function <b>getZone</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getZone(args: <a href='#GetZoneArgs'>GetZoneArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetZoneResult'>GetZoneResult</a>&gt; &amp; <a href='#GetZoneResult'>GetZoneResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Use this data source to access information about an existing DNS Zone.
 
@@ -2025,7 +2279,9 @@ The set of arguments for constructing a ARecord resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L168" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS A Record.
@@ -2036,7 +2292,9 @@ The name of the DNS A Record.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L172" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv4 Addresses.
@@ -2047,7 +2305,9 @@ List of IPv4 Addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L176" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2058,7 +2318,9 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L180" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2069,7 +2331,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L181" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2077,7 +2341,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L185" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2098,7 +2364,9 @@ Input properties used for looking up and filtering ARecord resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L141" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS A Record.
@@ -2109,7 +2377,9 @@ The name of the DNS A Record.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L145" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv4 Addresses.
@@ -2120,7 +2390,9 @@ List of IPv4 Addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L149" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2131,7 +2403,9 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L153" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2142,7 +2416,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L154" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2150,7 +2426,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aRecord.ts#L158" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2171,7 +2449,9 @@ The set of arguments for constructing a AaaaRecord resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L168" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS AAAA Record.
@@ -2182,7 +2462,9 @@ The name of the DNS AAAA Record.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L172" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv6 Addresses.
@@ -2193,7 +2475,9 @@ List of IPv6 Addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L176" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2204,7 +2488,9 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L180" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2215,7 +2501,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L181" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2223,7 +2511,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L185" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2244,7 +2534,9 @@ Input properties used for looking up and filtering AaaaRecord resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L141" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS AAAA Record.
@@ -2255,7 +2547,9 @@ The name of the DNS AAAA Record.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L145" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of IPv6 Addresses.
@@ -2266,7 +2560,9 @@ List of IPv6 Addresses.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L149" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2277,7 +2573,9 @@ Specifies the resource group where the resource exists. Changing this forces a n
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L153" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2288,7 +2586,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L154" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -2296,7 +2596,9 @@ A mapping of tags to assign to the resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/aaaaRecord.ts#L158" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2305,7 +2607,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CNameRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L164" >}}">interface <b>CNameRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L166" >}}">interface <b>CNameRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2314,10 +2616,12 @@ The set of arguments for constructing a CNameRecord resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CNameRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L168" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L170" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS CNAME Record.
@@ -2325,10 +2629,12 @@ The name of the DNS CNAME Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordArgs-record">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L172" >}}">property <b>record</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L174" >}}">property <b>record</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>record: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The target of the CNAME.
@@ -2336,10 +2642,12 @@ The target of the CNAME.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L176" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L178" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2347,10 +2655,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L180" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L182" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2358,18 +2668,22 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L181" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L183" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordArgs-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L185" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L187" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2378,7 +2692,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CNameRecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L137" >}}">interface <b>CNameRecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L139" >}}">interface <b>CNameRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2387,10 +2701,12 @@ Input properties used for looking up and filtering CNameRecord resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CNameRecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L141" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L143" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS CNAME Record.
@@ -2398,10 +2714,12 @@ The name of the DNS CNAME Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordState-record">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L145" >}}">property <b>record</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L147" >}}">property <b>record</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The target of the CNAME.
@@ -2409,10 +2727,12 @@ The target of the CNAME.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L149" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L151" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2420,10 +2740,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L153" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L155" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2431,18 +2753,22 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L154" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L156" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CNameRecordState-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L158" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/cNameRecord.ts#L160" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2451,7 +2777,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CaaRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L194" >}}">interface <b>CaaRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L196" >}}">interface <b>CaaRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2460,10 +2786,12 @@ The set of arguments for constructing a CaaRecord resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CaaRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L198" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L200" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS CAA Record.
@@ -2471,14 +2799,12 @@ The name of the DNS CAA Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordArgs-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L202" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L204" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    flags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    tag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CaaRecordRecord'>CaaRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the CAA record. Each `record` block supports fields documented below.
@@ -2486,10 +2812,12 @@ A list of values that make up the CAA record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L206" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L208" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2497,10 +2825,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L210" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L212" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2508,10 +2838,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L214" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L216" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -2519,10 +2851,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordArgs-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L218" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L220" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2531,7 +2865,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="CaaRecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L164" >}}">interface <b>CaaRecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L166" >}}">interface <b>CaaRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2540,10 +2874,12 @@ Input properties used for looking up and filtering CaaRecord resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="CaaRecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L168" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L170" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS CAA Record.
@@ -2551,14 +2887,12 @@ The name of the DNS CAA Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordState-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L172" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L174" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    flags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    tag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CaaRecordRecord'>CaaRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the CAA record. Each `record` block supports fields documented below.
@@ -2566,10 +2900,12 @@ A list of values that make up the CAA record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L176" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L178" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2577,10 +2913,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L180" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L182" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2588,10 +2926,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L184" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L186" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -2599,10 +2939,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CaaRecordState-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L188" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/caaRecord.ts#L190" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2611,7 +2953,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetZoneArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L45" >}}">interface <b>GetZoneArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L47" >}}">interface <b>GetZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2620,10 +2962,12 @@ A collection of arguments for invoking getZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetZoneArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L49" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L51" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS Zone.
@@ -2631,10 +2975,12 @@ The name of the DNS Zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L55" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L57" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Name of the Resource Group where the DNS Zone exists.
@@ -2645,7 +2991,7 @@ in your subscription that matches `name` will be returned.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetZoneResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L61" >}}">interface <b>GetZoneResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L63" >}}">interface <b>GetZoneResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2654,10 +3000,12 @@ A collection of values returned by getZone.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetZoneResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L95" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L97" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -2665,10 +3013,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-maxNumberOfRecordSets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L65" >}}">property <b>maxNumberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L67" >}}">property <b>maxNumberOfRecordSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxNumberOfRecordSets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Maximum number of Records in the zone.
@@ -2676,18 +3026,22 @@ Maximum number of Records in the zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L66" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L68" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L70" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L72" >}}">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameServers: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the NS record for the zone.
@@ -2695,10 +3049,12 @@ A list of values that make up the NS record for the zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-numberOfRecordSets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L74" >}}">property <b>numberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L76" >}}">property <b>numberOfRecordSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfRecordSets: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of records already in the zone.
@@ -2706,10 +3062,12 @@ The number of records already in the zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-registrationVirtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L78" >}}">property <b>registrationVirtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L80" >}}">property <b>registrationVirtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registrationVirtualNetworkIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Virtual Network ID's that register hostnames in this DNS zone.
@@ -2717,10 +3075,12 @@ A list of Virtual Network ID's that register hostnames in this DNS zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-resolutionVirtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L82" >}}">property <b>resolutionVirtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L84" >}}">property <b>resolutionVirtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resolutionVirtualNetworkIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Virtual Network ID's that resolve records in this DNS zone.
@@ -2728,18 +3088,22 @@ A list of Virtual Network ID's that resolve records in this DNS zone.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L83" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L85" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L87" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L89" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the EventHub Namespace.
@@ -2747,19 +3111,21 @@ A mapping of tags to assign to the EventHub Namespace.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetZoneResult-zoneType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L91" >}}">property <b>zoneType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/getZone.ts#L93" >}}">property <b>zoneType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-The type of this DNS zone, such as `Public` or `Private`.
+(**Deprecated**) The type of this DNS zone, such as `Public` or `Private`.
 
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MxRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L182" >}}">interface <b>MxRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L184" >}}">interface <b>MxRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2768,10 +3134,12 @@ The set of arguments for constructing a MxRecord resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MxRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L186" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L188" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS MX Record.
@@ -2779,13 +3147,12 @@ The name of the DNS MX Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordArgs-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L190" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L192" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    exchange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    preference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MxRecordRecord'>MxRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the MX record. Each `record` block supports fields documented below.
@@ -2793,10 +3160,12 @@ A list of values that make up the MX record. Each `record` block supports fields
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L194" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L196" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2804,10 +3173,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L198" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L200" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2815,10 +3186,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L202" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L204" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -2826,10 +3199,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordArgs-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L206" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L208" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2838,7 +3213,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="MxRecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L152" >}}">interface <b>MxRecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L154" >}}">interface <b>MxRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2847,10 +3222,12 @@ Input properties used for looking up and filtering MxRecord resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="MxRecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L158" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS MX Record.
@@ -2858,13 +3235,12 @@ The name of the DNS MX Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordState-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L160" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L162" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    exchange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    preference: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MxRecordRecord'>MxRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the MX record. Each `record` block supports fields documented below.
@@ -2872,10 +3248,12 @@ A list of values that make up the MX record. Each `record` block supports fields
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L164" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L166" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2883,10 +3261,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L168" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L170" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2894,10 +3274,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L172" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L174" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -2905,10 +3287,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="MxRecordState-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L176" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/mxRecord.ts#L178" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -2917,7 +3301,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NsRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L183" >}}">interface <b>NsRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L185" >}}">interface <b>NsRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2926,10 +3310,12 @@ The set of arguments for constructing a NsRecord resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NsRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L187" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L189" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS NS Record.
@@ -2937,12 +3323,12 @@ The name of the DNS NS Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordArgs-record">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L191" >}}">property <b>record</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L193" >}}">property <b>record</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    nsdname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NsRecordRecord'>NsRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the NS record. Each `record` block supports fields documented below. This field has been deprecated and will be removed in a future release.
@@ -2950,10 +3336,12 @@ A list of values that make up the NS record. Each `record` block supports fields
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordArgs-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L195" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L197" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the NS record. *WARNING*: Either `records` or `record` is required.
@@ -2961,10 +3349,12 @@ A list of values that make up the NS record. *WARNING*: Either `records` or `rec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L199" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L201" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -2972,10 +3362,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L203" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L205" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -2983,10 +3375,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L207" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L209" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -2994,10 +3388,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordArgs-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L211" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L213" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -3006,7 +3402,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="NsRecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L149" >}}">interface <b>NsRecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L151" >}}">interface <b>NsRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3015,10 +3411,12 @@ Input properties used for looking up and filtering NsRecord resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="NsRecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L153" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L155" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS NS Record.
@@ -3026,12 +3424,12 @@ The name of the DNS NS Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordState-record">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L157" >}}">property <b>record</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L159" >}}">property <b>record</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    nsdname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>record?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#NsRecordRecord'>NsRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the NS record. Each `record` block supports fields documented below. This field has been deprecated and will be removed in a future release.
@@ -3039,10 +3437,12 @@ A list of values that make up the NS record. Each `record` block supports fields
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordState-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L161" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L163" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the NS record. *WARNING*: Either `records` or `record` is required.
@@ -3050,10 +3450,12 @@ A list of values that make up the NS record. *WARNING*: Either `records` or `rec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L165" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L167" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3061,10 +3463,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L169" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L171" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3072,10 +3476,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L173" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L175" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -3083,10 +3489,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="NsRecordState-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L177" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/nsRecord.ts#L179" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -3095,7 +3503,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PtrRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L170" >}}">interface <b>PtrRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L172" >}}">interface <b>PtrRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3104,10 +3512,12 @@ The set of arguments for constructing a PtrRecord resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PtrRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L174" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L176" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS PTR Record.
@@ -3115,10 +3525,12 @@ The name of the DNS PTR Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordArgs-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L178" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L180" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of Fully Qualified Domain Names.
@@ -3126,10 +3538,12 @@ List of Fully Qualified Domain Names.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L182" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L184" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3137,10 +3551,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L186" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L188" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3148,10 +3564,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L190" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L192" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -3159,10 +3577,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordArgs-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L194" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L196" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -3171,7 +3591,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="PtrRecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L140" >}}">interface <b>PtrRecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L142" >}}">interface <b>PtrRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3180,10 +3600,12 @@ Input properties used for looking up and filtering PtrRecord resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="PtrRecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L144" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L146" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS PTR Record.
@@ -3191,10 +3613,12 @@ The name of the DNS PTR Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordState-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L148" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L150" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of Fully Qualified Domain Names.
@@ -3202,10 +3626,12 @@ List of Fully Qualified Domain Names.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L152" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L154" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3213,10 +3639,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L156" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L158" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3224,10 +3652,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L160" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L162" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -3235,10 +3665,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="PtrRecordState-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L164" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/ptrRecord.ts#L166" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -3247,7 +3679,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SrvRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L178" >}}">interface <b>SrvRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L180" >}}">interface <b>SrvRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3256,10 +3688,12 @@ The set of arguments for constructing a SrvRecord resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SrvRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L182" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L184" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS SRV Record.
@@ -3267,15 +3701,12 @@ The name of the DNS SRV Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordArgs-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L186" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L188" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SrvRecordRecord'>SrvRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the SRV record. Each `record` block supports fields documented below.
@@ -3283,10 +3714,12 @@ A list of values that make up the SRV record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L190" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L192" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3294,10 +3727,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L194" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L196" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3305,10 +3740,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L198" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L200" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -3316,10 +3753,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordArgs-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L202" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L204" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -3328,7 +3767,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SrvRecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L148" >}}">interface <b>SrvRecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L150" >}}">interface <b>SrvRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3337,10 +3776,12 @@ Input properties used for looking up and filtering SrvRecord resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SrvRecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L152" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L154" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS SRV Record.
@@ -3348,15 +3789,12 @@ The name of the DNS SRV Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordState-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L156" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L158" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#SrvRecordRecord'>SrvRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the SRV record. Each `record` block supports fields documented below.
@@ -3364,10 +3802,12 @@ A list of values that make up the SRV record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L160" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L162" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3375,10 +3815,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L164" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L166" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3386,10 +3828,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L168" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L170" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -3397,10 +3841,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SrvRecordState-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L172" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/srvRecord.ts#L174" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -3409,7 +3855,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TxtRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L180" >}}">interface <b>TxtRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L182" >}}">interface <b>TxtRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3418,10 +3864,12 @@ The set of arguments for constructing a TxtRecord resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TxtRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L184" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L186" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS TXT Record.
@@ -3429,12 +3877,12 @@ The name of the DNS TXT Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordArgs-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L188" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L190" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TxtRecordRecord'>TxtRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the txt record. Each `record` block supports fields documented below.
@@ -3442,10 +3890,12 @@ A list of values that make up the txt record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L192" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L194" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3453,10 +3903,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L196" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L198" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3464,10 +3916,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L200" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L202" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -3475,10 +3929,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordArgs-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L204" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L206" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -3487,7 +3943,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TxtRecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L150" >}}">interface <b>TxtRecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L152" >}}">interface <b>TxtRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3496,10 +3952,12 @@ Input properties used for looking up and filtering TxtRecord resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TxtRecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L154" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L156" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS TXT Record.
@@ -3507,12 +3965,12 @@ The name of the DNS TXT Record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordState-records">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L158" >}}">property <b>records</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L160" >}}">property <b>records</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>records?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#TxtRecordRecord'>TxtRecordRecord</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of values that make up the txt record. Each `record` block supports fields documented below.
@@ -3520,10 +3978,12 @@ A list of values that make up the txt record. Each `record` block supports field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L162" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L164" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3531,10 +3991,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L166" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L168" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3542,10 +4004,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L170" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L172" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Time To Live (TTL) of the DNS record in seconds.
@@ -3553,10 +4017,12 @@ The Time To Live (TTL) of the DNS record in seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="TxtRecordState-zoneName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L174" >}}">property <b>zoneName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/txtRecord.ts#L176" >}}">property <b>zoneName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the DNS Zone where the resource exists. Changing this forces a new resource to be created.
@@ -3565,7 +4031,7 @@ Specifies the DNS Zone where the resource exists. Changing this forces a new res
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L190" >}}">interface <b>ZoneArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L192" >}}">interface <b>ZoneArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3574,10 +4040,12 @@ The set of arguments for constructing a Zone resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L194" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L196" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS Zone. Must be a valid domain name.
@@ -3585,10 +4053,12 @@ The name of the DNS Zone. Must be a valid domain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-registrationVirtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L198" >}}">property <b>registrationVirtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L200" >}}">property <b>registrationVirtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registrationVirtualNetworkIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Virtual Network ID's that register hostnames in this DNS zone. This field can only be set when `zoneType` is set to `Private`.
@@ -3596,10 +4066,12 @@ A list of Virtual Network ID's that register hostnames in this DNS zone. This fi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-resolutionVirtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L202" >}}">property <b>resolutionVirtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L204" >}}">property <b>resolutionVirtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resolutionVirtualNetworkIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Virtual Network ID's that resolve records in this DNS zone. This field can only be set when `zoneType` is set to `Private`.
@@ -3607,10 +4079,12 @@ A list of Virtual Network ID's that resolve records in this DNS zone. This field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L206" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L208" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3618,10 +4092,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L210" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L212" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3629,10 +4105,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneArgs-zoneType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L214" >}}">property <b>zoneType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L216" >}}">property <b>zoneType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the type of this DNS zone. Possible values are `Public` or `Private` (Defaults to `Public`).
@@ -3641,7 +4119,7 @@ Specifies the type of this DNS zone. Possible values are `Public` or `Private` (
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ZoneState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L148" >}}">interface <b>ZoneState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L150" >}}">interface <b>ZoneState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3650,10 +4128,12 @@ Input properties used for looking up and filtering Zone resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ZoneState-maxNumberOfRecordSets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L152" >}}">property <b>maxNumberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L154" >}}">property <b>maxNumberOfRecordSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxNumberOfRecordSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Optional) Maximum number of Records in the zone. Defaults to `1000`.
@@ -3661,10 +4141,12 @@ Input properties used for looking up and filtering Zone resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L158" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the DNS Zone. Must be a valid domain name.
@@ -3672,10 +4154,12 @@ The name of the DNS Zone. Must be a valid domain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-nameServers">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L160" >}}">property <b>nameServers</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L162" >}}">property <b>nameServers</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameServers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Optional) A list of values that make up the NS record for the zone.
@@ -3683,10 +4167,12 @@ The name of the DNS Zone. Must be a valid domain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-numberOfRecordSets">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L164" >}}">property <b>numberOfRecordSets</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L166" >}}">property <b>numberOfRecordSets</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>numberOfRecordSets?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 (Optional) The number of records already in the zone.
@@ -3694,10 +4180,12 @@ The name of the DNS Zone. Must be a valid domain name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-registrationVirtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L168" >}}">property <b>registrationVirtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L170" >}}">property <b>registrationVirtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>registrationVirtualNetworkIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Virtual Network ID's that register hostnames in this DNS zone. This field can only be set when `zoneType` is set to `Private`.
@@ -3705,10 +4193,12 @@ A list of Virtual Network ID's that register hostnames in this DNS zone. This fi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-resolutionVirtualNetworkIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L172" >}}">property <b>resolutionVirtualNetworkIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L174" >}}">property <b>resolutionVirtualNetworkIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resolutionVirtualNetworkIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of Virtual Network ID's that resolve records in this DNS zone. This field can only be set when `zoneType` is set to `Private`.
@@ -3716,10 +4206,12 @@ A list of Virtual Network ID's that resolve records in this DNS zone. This field
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L176" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L178" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the resource group where the resource exists. Changing this forces a new resource to be created.
@@ -3727,10 +4219,12 @@ Specifies the resource group where the resource exists. Changing this forces a n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L180" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L182" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -3738,10 +4232,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ZoneState-zoneType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L184" >}}">property <b>zoneType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="dns/zone.ts#L186" >}}">property <b>zoneType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the type of this DNS zone. Possible values are `Public` or `Private` (Defaults to `Public`).

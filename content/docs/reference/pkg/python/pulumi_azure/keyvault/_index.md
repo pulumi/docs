@@ -129,19 +129,17 @@ forces a new resource to be created.</p>
 <dt id="pulumi_azure.keyvault.AccessPolicy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">certificate_permissions=None</em>, <em class="sig-param">key_permissions=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">object_id=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">secret_permissions=None</em>, <em class="sig-param">storage_permissions=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">vault_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.AccessPolicy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AccessPolicy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_id: The object ID of an Application in Azure Active Directory.
-:param pulumi.Input[list] certificate_permissions: List of certificate permissions, must be one or more from</p>
-<blockquote>
-<div><p>the following: <code class="docutils literal notranslate"><span class="pre">backup</span></code>, <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">deleteissuers</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">getissuers</span></code>, <code class="docutils literal notranslate"><span class="pre">import</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">listissuers</span></code>,
-<code class="docutils literal notranslate"><span class="pre">managecontacts</span></code>, <code class="docutils literal notranslate"><span class="pre">manageissuers</span></code>, <code class="docutils literal notranslate"><span class="pre">purge</span></code>, <code class="docutils literal notranslate"><span class="pre">recover</span></code>, <code class="docutils literal notranslate"><span class="pre">restore</span></code>, <code class="docutils literal notranslate"><span class="pre">setissuers</span></code> and <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object ID of an Application in Azure Active Directory.</p></li>
+<li><p><strong>certificate_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of certificate permissions, must be one or more from
+the following: <code class="docutils literal notranslate"><span class="pre">backup</span></code>, <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">deleteissuers</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">getissuers</span></code>, <code class="docutils literal notranslate"><span class="pre">import</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">listissuers</span></code>,
+<code class="docutils literal notranslate"><span class="pre">managecontacts</span></code>, <code class="docutils literal notranslate"><span class="pre">manageissuers</span></code>, <code class="docutils literal notranslate"><span class="pre">purge</span></code>, <code class="docutils literal notranslate"><span class="pre">recover</span></code>, <code class="docutils literal notranslate"><span class="pre">restore</span></code>, <code class="docutils literal notranslate"><span class="pre">setissuers</span></code> and <code class="docutils literal notranslate"><span class="pre">update</span></code>.</p></li>
 <li><p><strong>key_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – List of key permissions, must be one or more from
 the following: <code class="docutils literal notranslate"><span class="pre">backup</span></code>, <code class="docutils literal notranslate"><span class="pre">create</span></code>, <code class="docutils literal notranslate"><span class="pre">decrypt</span></code>, <code class="docutils literal notranslate"><span class="pre">delete</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypt</span></code>, <code class="docutils literal notranslate"><span class="pre">get</span></code>, <code class="docutils literal notranslate"><span class="pre">import</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">purge</span></code>,
 <code class="docutils literal notranslate"><span class="pre">recover</span></code>, <code class="docutils literal notranslate"><span class="pre">restore</span></code>, <code class="docutils literal notranslate"><span class="pre">sign</span></code>, <code class="docutils literal notranslate"><span class="pre">unwrapKey</span></code>, <code class="docutils literal notranslate"><span class="pre">update</span></code>, <code class="docutils literal notranslate"><span class="pre">verify</span></code> and <code class="docutils literal notranslate"><span class="pre">wrapKey</span></code>.</p></li>
@@ -244,13 +242,73 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>certificate</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">contents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base64-encoded certificate contents. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+<p>The <strong>certificate_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">issuer_parameters</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Certificate Exportable? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Key used in the Certificate. Possible values include <code class="docutils literal notranslate"><span class="pre">2048</span></code> and <code class="docutils literal notranslate"><span class="pre">4096</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Type of Key, such as <code class="docutils literal notranslate"><span class="pre">RSA</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reuseKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the key reusable? Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimeActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">lifetime_action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of action to be performed when the lifetime trigger is triggerec. Possible values include <code class="docutils literal notranslate"><span class="pre">AutoRenew</span></code> and <code class="docutils literal notranslate"><span class="pre">EmailContacts</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">trigger</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">daysBeforeExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">lifetime_percentage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">days_before_expiry</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">secret_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content-Type of the Certificate, such as <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code> for a PFX or <code class="docutils literal notranslate"><span class="pre">application/x-pem-file</span></code> for a PEM. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509CertificateProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">x509_certificate_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">extendedKeyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of uses associated with this Key. Possible values include <code class="docutils literal notranslate"><span class="pre">cRLSign</span></code>, <code class="docutils literal notranslate"><span class="pre">dataEncipherment</span></code>, <code class="docutils literal notranslate"><span class="pre">decipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">digitalSignature</span></code>, <code class="docutils literal notranslate"><span class="pre">encipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">keyAgreement</span></code>, <code class="docutils literal notranslate"><span class="pre">keyCertSign</span></code>, <code class="docutils literal notranslate"><span class="pre">keyEncipherment</span></code> and <code class="docutils literal notranslate"><span class="pre">nonRepudiation</span></code> and are case-sensitive. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Certificate’s Subject. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subjectAlternativeNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">subject_alternative_names</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validityInMonths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Certificates Validity Period in Months. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate_legacy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="attribute">
 <dt id="pulumi_azure.keyvault.Certifiate.certificate">
 <code class="sig-name descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certifiate.certificate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below, used to Import an existing certificate.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">contents</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The base64-encoded certificate contents. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password associated with the certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -263,6 +321,56 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.Certifiate.certificate_policy">
 <code class="sig-name descname">certificate_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certifiate.certificate_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate_policy</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">issuer_parameters</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Certificate Exportable? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the Key used in the Certificate. Possible values include <code class="docutils literal notranslate"><span class="pre">2048</span></code> and <code class="docutils literal notranslate"><span class="pre">4096</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Type of Key, such as <code class="docutils literal notranslate"><span class="pre">RSA</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reuseKey</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the key reusable? Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimeActions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">lifetime_action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of action to be performed when the lifetime trigger is triggerec. Possible values include <code class="docutils literal notranslate"><span class="pre">AutoRenew</span></code> and <code class="docutils literal notranslate"><span class="pre">EmailContacts</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trigger</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">trigger</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">daysBeforeExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">lifetime_percentage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">days_before_expiry</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">secret_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Content-Type of the Certificate, such as <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code> for a PFX or <code class="docutils literal notranslate"><span class="pre">application/x-pem-file</span></code> for a PEM. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509CertificateProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">x509_certificate_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">extendedKeyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of uses associated with this Key. Possible values include <code class="docutils literal notranslate"><span class="pre">cRLSign</span></code>, <code class="docutils literal notranslate"><span class="pre">dataEncipherment</span></code>, <code class="docutils literal notranslate"><span class="pre">decipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">digitalSignature</span></code>, <code class="docutils literal notranslate"><span class="pre">encipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">keyAgreement</span></code>, <code class="docutils literal notranslate"><span class="pre">keyCertSign</span></code>, <code class="docutils literal notranslate"><span class="pre">keyEncipherment</span></code> and <code class="docutils literal notranslate"><span class="pre">nonRepudiation</span></code> and are case-sensitive. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Certificate’s Subject. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subjectAlternativeNames</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">subject_alternative_names</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validityInMonths</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Certificates Validity Period in Months. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -305,21 +413,83 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.Certifiate.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_data=None</em>, <em class="sig-param">certificate_policy=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">vault_uri=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Certifiate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Certifiate resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] certificate: A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below, used to Import an existing certificate.
-:param pulumi.Input[str] certificate_data: The raw Key Vault Certificate.
-:param pulumi.Input[dict] certificate_policy: A <code class="docutils literal notranslate"><span class="pre">certificate_policy</span></code> block as defined below.
-:param pulumi.Input[str] key_vault_id: The ID of the Key Vault where the Certificate should be created.
-:param pulumi.Input[str] name: The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.
-:param pulumi.Input[str] secret_id: The ID of the associated Key Vault Secret.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] thumbprint: The X509 Thumbprint of the Key Vault Certificate returned as hex string.
-:param pulumi.Input[str] version: The current version of the Key Vault Certificate.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below, used to Import an existing certificate.</p></li>
+<li><p><strong>certificate_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The raw Key Vault Certificate.</p></li>
+<li><p><strong>certificate_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate_policy</span></code> block as defined below.</p></li>
+<li><p><strong>key_vault_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault where the Certificate should be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated Key Vault Secret.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The X509 Thumbprint of the Key Vault Certificate returned as hex string.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the Key Vault Certificate.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>certificate</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">contents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base64-encoded certificate contents. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+<p>The <strong>certificate_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">issuer_parameters</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Certificate Exportable? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Key used in the Certificate. Possible values include <code class="docutils literal notranslate"><span class="pre">2048</span></code> and <code class="docutils literal notranslate"><span class="pre">4096</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Type of Key, such as <code class="docutils literal notranslate"><span class="pre">RSA</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reuseKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the key reusable? Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimeActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">lifetime_action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of action to be performed when the lifetime trigger is triggerec. Possible values include <code class="docutils literal notranslate"><span class="pre">AutoRenew</span></code> and <code class="docutils literal notranslate"><span class="pre">EmailContacts</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">trigger</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">daysBeforeExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">lifetime_percentage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">days_before_expiry</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">secret_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content-Type of the Certificate, such as <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code> for a PFX or <code class="docutils literal notranslate"><span class="pre">application/x-pem-file</span></code> for a PEM. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509CertificateProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">x509_certificate_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">extendedKeyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of uses associated with this Key. Possible values include <code class="docutils literal notranslate"><span class="pre">cRLSign</span></code>, <code class="docutils literal notranslate"><span class="pre">dataEncipherment</span></code>, <code class="docutils literal notranslate"><span class="pre">decipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">digitalSignature</span></code>, <code class="docutils literal notranslate"><span class="pre">encipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">keyAgreement</span></code>, <code class="docutils literal notranslate"><span class="pre">keyCertSign</span></code>, <code class="docutils literal notranslate"><span class="pre">keyEncipherment</span></code> and <code class="docutils literal notranslate"><span class="pre">nonRepudiation</span></code> and are case-sensitive. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Certificate’s Subject. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subjectAlternativeNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">subject_alternative_names</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validityInMonths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Certificates Validity Period in Months. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate_legacy.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -344,6 +514,312 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_azure.keyvault.Certifiate.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Certifiate.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.keyvault.Certificate">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">Certificate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_policy=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vault_uri=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a Key Vault Certificate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below, used to Import an existing certificate.</p></li>
+<li><p><strong>certificate_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate_policy</span></code> block as defined below.</p></li>
+<li><p><strong>key_vault_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault where the Certificate should be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>certificate</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">contents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base64-encoded certificate contents. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+<p>The <strong>certificate_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">issuer_parameters</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Certificate Exportable? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Key used in the Certificate. Possible values include <code class="docutils literal notranslate"><span class="pre">2048</span></code> and <code class="docutils literal notranslate"><span class="pre">4096</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Type of Key, such as <code class="docutils literal notranslate"><span class="pre">RSA</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reuseKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the key reusable? Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimeActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">lifetime_action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of action to be performed when the lifetime trigger is triggerec. Possible values include <code class="docutils literal notranslate"><span class="pre">AutoRenew</span></code> and <code class="docutils literal notranslate"><span class="pre">EmailContacts</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">trigger</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">daysBeforeExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">lifetime_percentage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">days_before_expiry</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">secret_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content-Type of the Certificate, such as <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code> for a PFX or <code class="docutils literal notranslate"><span class="pre">application/x-pem-file</span></code> for a PEM. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509CertificateProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">x509_certificate_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">extendedKeyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of uses associated with this Key. Possible values include <code class="docutils literal notranslate"><span class="pre">cRLSign</span></code>, <code class="docutils literal notranslate"><span class="pre">dataEncipherment</span></code>, <code class="docutils literal notranslate"><span class="pre">decipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">digitalSignature</span></code>, <code class="docutils literal notranslate"><span class="pre">encipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">keyAgreement</span></code>, <code class="docutils literal notranslate"><span class="pre">keyCertSign</span></code>, <code class="docutils literal notranslate"><span class="pre">keyEncipherment</span></code> and <code class="docutils literal notranslate"><span class="pre">nonRepudiation</span></code> and are case-sensitive. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Certificate’s Subject. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subjectAlternativeNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">subject_alternative_names</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validityInMonths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Certificates Validity Period in Months. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.certificate">
+<code class="sig-name descname">certificate</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.certificate" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below, used to Import an existing certificate.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">contents</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The base64-encoded certificate contents. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The password associated with the certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.certificate_data">
+<code class="sig-name descname">certificate_data</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.certificate_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>The raw Key Vault Certificate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.certificate_policy">
+<code class="sig-name descname">certificate_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.certificate_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">certificate_policy</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">issuer_parameters</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportable</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is this Certificate Exportable? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the Key used in the Certificate. Possible values include <code class="docutils literal notranslate"><span class="pre">2048</span></code> and <code class="docutils literal notranslate"><span class="pre">4096</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the Type of Key, such as <code class="docutils literal notranslate"><span class="pre">RSA</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reuseKey</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Is the key reusable? Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimeActions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A <code class="docutils literal notranslate"><span class="pre">lifetime_action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Type of action to be performed when the lifetime trigger is triggerec. Possible values include <code class="docutils literal notranslate"><span class="pre">AutoRenew</span></code> and <code class="docutils literal notranslate"><span class="pre">EmailContacts</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trigger</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">trigger</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">daysBeforeExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">lifetime_percentage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">days_before_expiry</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">secret_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Content-Type of the Certificate, such as <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code> for a PFX or <code class="docutils literal notranslate"><span class="pre">application/x-pem-file</span></code> for a PEM. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509CertificateProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">x509_certificate_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">extendedKeyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of uses associated with this Key. Possible values include <code class="docutils literal notranslate"><span class="pre">cRLSign</span></code>, <code class="docutils literal notranslate"><span class="pre">dataEncipherment</span></code>, <code class="docutils literal notranslate"><span class="pre">decipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">digitalSignature</span></code>, <code class="docutils literal notranslate"><span class="pre">encipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">keyAgreement</span></code>, <code class="docutils literal notranslate"><span class="pre">keyCertSign</span></code>, <code class="docutils literal notranslate"><span class="pre">keyEncipherment</span></code> and <code class="docutils literal notranslate"><span class="pre">nonRepudiation</span></code> and are case-sensitive. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Certificate’s Subject. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subjectAlternativeNames</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A <code class="docutils literal notranslate"><span class="pre">subject_alternative_names</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsNames</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upns</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validityInMonths</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The Certificates Validity Period in Months. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.key_vault_id">
+<code class="sig-name descname">key_vault_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.key_vault_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the Key Vault where the Certificate should be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.secret_id">
+<code class="sig-name descname">secret_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.secret_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the associated Key Vault Secret.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.thumbprint">
+<code class="sig-name descname">thumbprint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.thumbprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>The X509 Thumbprint of the Key Vault Certificate returned as hex string.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.keyvault.Certificate.version">
+<code class="sig-name descname">version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current version of the Key Vault Certificate.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.keyvault.Certificate.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">certificate_data=None</em>, <em class="sig-param">certificate_policy=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">secret_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">thumbprint=None</em>, <em class="sig-param">vault_uri=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Certificate resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>certificate</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate</span></code> block as defined below, used to Import an existing certificate.</p></li>
+<li><p><strong>certificate_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The raw Key Vault Certificate.</p></li>
+<li><p><strong>certificate_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">certificate_policy</span></code> block as defined below.</p></li>
+<li><p><strong>key_vault_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault where the Certificate should be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>secret_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the associated Key Vault Secret.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>thumbprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The X509 Thumbprint of the Key Vault Certificate returned as hex string.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the Key Vault Certificate.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>certificate</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">contents</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base64-encoded certificate contents. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The password associated with the certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+<p>The <strong>certificate_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">issuerParameters</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">issuer_parameters</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the Certificate Issuer. Possible values include <code class="docutils literal notranslate"><span class="pre">Self</span></code>, or the name of a certificate issuing authority supported by Azure. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">key_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">exportable</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is this Certificate Exportable? Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the Key used in the Certificate. Possible values include <code class="docutils literal notranslate"><span class="pre">2048</span></code> and <code class="docutils literal notranslate"><span class="pre">4096</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the Type of Key, such as <code class="docutils literal notranslate"><span class="pre">RSA</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reuseKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Is the key reusable? Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimeActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">lifetime_action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">action</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">action</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">actionType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Type of action to be performed when the lifetime trigger is triggerec. Possible values include <code class="docutils literal notranslate"><span class="pre">AutoRenew</span></code> and <code class="docutils literal notranslate"><span class="pre">EmailContacts</span></code>. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trigger</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">trigger</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">daysBeforeExpiry</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of days before the Certificate expires that the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">lifetime_percentage</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifetimePercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The percentage at which during the Certificates Lifetime the action associated with this Trigger should run. Changing this forces a new resource to be created. Conflicts with <code class="docutils literal notranslate"><span class="pre">days_before_expiry</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secretProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">secret_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">content_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Content-Type of the Certificate, such as <code class="docutils literal notranslate"><span class="pre">application/x-pkcs12</span></code> for a PFX or <code class="docutils literal notranslate"><span class="pre">application/x-pem-file</span></code> for a PEM. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x509CertificateProperties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">x509_certificate_properties</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">extendedKeyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of Extended/Enhanced Key Usages. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keyUsages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of uses associated with this Key. Possible values include <code class="docutils literal notranslate"><span class="pre">cRLSign</span></code>, <code class="docutils literal notranslate"><span class="pre">dataEncipherment</span></code>, <code class="docutils literal notranslate"><span class="pre">decipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">digitalSignature</span></code>, <code class="docutils literal notranslate"><span class="pre">encipherOnly</span></code>, <code class="docutils literal notranslate"><span class="pre">keyAgreement</span></code>, <code class="docutils literal notranslate"><span class="pre">keyCertSign</span></code>, <code class="docutils literal notranslate"><span class="pre">keyEncipherment</span></code> and <code class="docutils literal notranslate"><span class="pre">nonRepudiation</span></code> and are case-sensitive. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subject</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Certificate’s Subject. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">subjectAlternativeNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A <code class="docutils literal notranslate"><span class="pre">subject_alternative_names</span></code> block as defined below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsNames</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of alternative DNS names (FQDNs) identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">emails</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of email addresses identified by this Certificate. Changing this forces a new resource to be created.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">upns</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of User Principal Names identified by the Certificate. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">validityInMonths</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The Certificates Validity Period in Months. Changing this forces a new resource to be created.</p></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_certificate.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.keyvault.Certificate.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_azure.keyvault.Certificate.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Certificate.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -651,22 +1127,28 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.Key.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">curve=None</em>, <em class="sig-param">e=None</em>, <em class="sig-param">key_opts=None</em>, <em class="sig-param">key_size=None</em>, <em class="sig-param">key_type=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">n=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vault_uri=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">x=None</em>, <em class="sig-param">y=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Key.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Key resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] curve: Specifies the curve to use when creating an <code class="docutils literal notranslate"><span class="pre">EC</span></code> key. Possible values are <code class="docutils literal notranslate"><span class="pre">P-256</span></code>, <code class="docutils literal notranslate"><span class="pre">P-384</span></code>, <code class="docutils literal notranslate"><span class="pre">P-521</span></code>, and <code class="docutils literal notranslate"><span class="pre">SECP256K1</span></code>. This field will be required in a future release if <code class="docutils literal notranslate"><span class="pre">key_type</span></code> is <code class="docutils literal notranslate"><span class="pre">EC</span></code> or <code class="docutils literal notranslate"><span class="pre">EC-HSM</span></code>. The API will default to <code class="docutils literal notranslate"><span class="pre">P-256</span></code> if nothing is specified. Changing this forces a new resource to be created.
-:param pulumi.Input[str] e: The RSA public exponent of this Key Vault Key.
-:param pulumi.Input[list] key_opts: A list of JSON web key operations. Possible values include: <code class="docutils literal notranslate"><span class="pre">decrypt</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypt</span></code>, <code class="docutils literal notranslate"><span class="pre">sign</span></code>, <code class="docutils literal notranslate"><span class="pre">unwrapKey</span></code>, <code class="docutils literal notranslate"><span class="pre">verify</span></code> and <code class="docutils literal notranslate"><span class="pre">wrapKey</span></code>. Please note these values are case sensitive.
-:param pulumi.Input[float] key_size: Specifies the Size of the RSA key to create in bytes. For example, 1024 or 2048. <em>Note</em>: This field is required if <code class="docutils literal notranslate"><span class="pre">key_type</span></code> is <code class="docutils literal notranslate"><span class="pre">RSA</span></code> or <code class="docutils literal notranslate"><span class="pre">RSA-HSM</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] key_type: Specifies the Key Type to use for this Key Vault Key. Possible values are <code class="docutils literal notranslate"><span class="pre">EC</span></code> (Elliptic Curve), <code class="docutils literal notranslate"><span class="pre">EC-HSM</span></code>, <code class="docutils literal notranslate"><span class="pre">Oct</span></code> (Octet), <code class="docutils literal notranslate"><span class="pre">RSA</span></code> and <code class="docutils literal notranslate"><span class="pre">RSA-HSM</span></code>. Changing this forces a new resource to be created.
-:param pulumi.Input[str] key_vault_id: The ID of the Key Vault where the Key should be created. Changing this forces a new resource to be created.
-:param pulumi.Input[str] n: The RSA modulus of this Key Vault Key.
-:param pulumi.Input[str] name: Specifies the name of the Key Vault Key. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] version: The current version of the Key Vault Key.
-:param pulumi.Input[str] x: The EC X component of this Key Vault Key.
-:param pulumi.Input[str] y: The EC Y component of this Key Vault Key.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>curve</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the curve to use when creating an <code class="docutils literal notranslate"><span class="pre">EC</span></code> key. Possible values are <code class="docutils literal notranslate"><span class="pre">P-256</span></code>, <code class="docutils literal notranslate"><span class="pre">P-384</span></code>, <code class="docutils literal notranslate"><span class="pre">P-521</span></code>, and <code class="docutils literal notranslate"><span class="pre">SECP256K1</span></code>. This field will be required in a future release if <code class="docutils literal notranslate"><span class="pre">key_type</span></code> is <code class="docutils literal notranslate"><span class="pre">EC</span></code> or <code class="docutils literal notranslate"><span class="pre">EC-HSM</span></code>. The API will default to <code class="docutils literal notranslate"><span class="pre">P-256</span></code> if nothing is specified. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>e</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RSA public exponent of this Key Vault Key.</p></li>
+<li><p><strong>key_opts</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of JSON web key operations. Possible values include: <code class="docutils literal notranslate"><span class="pre">decrypt</span></code>, <code class="docutils literal notranslate"><span class="pre">encrypt</span></code>, <code class="docutils literal notranslate"><span class="pre">sign</span></code>, <code class="docutils literal notranslate"><span class="pre">unwrapKey</span></code>, <code class="docutils literal notranslate"><span class="pre">verify</span></code> and <code class="docutils literal notranslate"><span class="pre">wrapKey</span></code>. Please note these values are case sensitive.</p></li>
+<li><p><strong>key_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Specifies the Size of the RSA key to create in bytes. For example, 1024 or 2048. <em>Note</em>: This field is required if <code class="docutils literal notranslate"><span class="pre">key_type</span></code> is <code class="docutils literal notranslate"><span class="pre">RSA</span></code> or <code class="docutils literal notranslate"><span class="pre">RSA-HSM</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>key_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Key Type to use for this Key Vault Key. Possible values are <code class="docutils literal notranslate"><span class="pre">EC</span></code> (Elliptic Curve), <code class="docutils literal notranslate"><span class="pre">EC-HSM</span></code>, <code class="docutils literal notranslate"><span class="pre">Oct</span></code> (Octet), <code class="docutils literal notranslate"><span class="pre">RSA</span></code> and <code class="docutils literal notranslate"><span class="pre">RSA-HSM</span></code>. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>key_vault_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault where the Key should be created. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>n</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The RSA modulus of this Key Vault Key.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Key Vault Key. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the Key Vault Key.</p></li>
+<li><p><strong>x</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC X component of this Key Vault Key.</p></li>
+<li><p><strong>y</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The EC Y component of this Key Vault Key.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_key.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_key.html.markdown</a>.</p>
 </div></blockquote>
@@ -737,6 +1219,27 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>access_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">application_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">object_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.</p></li>
+</ul>
+<p>The <strong>network_acls</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bypass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+<p>The <strong>sku</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Key Vault. Changing this forces a new resource to be created.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault.html.markdown</a>.</p>
 </div></blockquote>
@@ -744,6 +1247,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.KeyVault.access_policies">
 <code class="sig-name descname">access_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.KeyVault.access_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p><a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">A list</a> of up to 16 objects describing access policies, as described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">application_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">object_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -780,6 +1292,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.KeyVault.network_acls">
 <code class="sig-name descname">network_acls</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.KeyVault.network_acls" title="Permalink to this definition">¶</a></dt>
 <dd><p>A <code class="docutils literal notranslate"><span class="pre">network_acls</span></code> block as defined below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bypass</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -792,6 +1310,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.KeyVault.sku">
 <code class="sig-name descname">sku</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.keyvault.KeyVault.sku" title="Permalink to this definition">¶</a></dt>
 <dd><p>) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the name of the Key Vault. Changing this forces a new resource to be created.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -822,23 +1343,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.KeyVault.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policies=None</em>, <em class="sig-param">enabled_for_deployment=None</em>, <em class="sig-param">enabled_for_disk_encryption=None</em>, <em class="sig-param">enabled_for_template_deployment=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_acls=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">sku=None</em>, <em class="sig-param">sku_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">vault_uri=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.KeyVault.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KeyVault resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] access_policies: <a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">A list</a> of up to 16 objects describing access policies, as described below.
-:param pulumi.Input[bool] enabled_for_deployment: Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[bool] enabled_for_disk_encryption: Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[bool] enabled_for_template_deployment: Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Key Vault. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] network_acls: A <code class="docutils literal notranslate"><span class="pre">network_acls</span></code> block as defined below.
-:param pulumi.Input[str] resource_group_name: The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] sku: ) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.
-:param pulumi.Input[str] sku_name: The Name of the SKU used for this Key Vault. Possible values are <code class="docutils literal notranslate"><span class="pre">standard</span></code> and <code class="docutils literal notranslate"><span class="pre">premium</span></code>.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] tenant_id: The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
-:param pulumi.Input[str] vault_uri: The URI of the Key Vault, used for performing operations on keys and secrets.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p><a class="reference external" href="https://www.terraform.io/docs/configuration/attr-as-blocks.html">A list</a> of up to 16 objects describing access policies, as described below.</p>
+</p></li>
+<li><p><strong>enabled_for_deployment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to specify whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>enabled_for_disk_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to specify whether Azure Disk Encryption is permitted to retrieve secrets from the vault and unwrap keys. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>enabled_for_template_deployment</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to specify whether Azure Resource Manager is permitted to retrieve secrets from the key vault. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Key Vault. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>network_acls</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">network_acls</span></code> block as defined below.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to create the Key Vault. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>sku</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – ) A <code class="docutils literal notranslate"><span class="pre">sku</span></code> block as described below.</p></li>
+<li><p><strong>sku_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Name of the SKU used for this Key Vault. Possible values are <code class="docutils literal notranslate"><span class="pre">standard</span></code> and <code class="docutils literal notranslate"><span class="pre">premium</span></code>.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.</p></li>
+<li><p><strong>vault_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URI of the Key Vault, used for performing operations on keys and secrets.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>access_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">application_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">object_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secret_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storage_permissions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tenant_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.</p></li>
+</ul>
+<p>The <strong>network_acls</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bypass</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultAction</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipRules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">virtualNetworkSubnetIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+<p>The <strong>sku</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the name of the Key Vault. Changing this forces a new resource to be created.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault.html.markdown</a>.</p>
 </div></blockquote>
@@ -946,16 +1495,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.Secret.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">key_vault_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">vault_uri=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.Secret.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Secret resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] content_type: Specifies the content type for the Key Vault Secret.
-:param pulumi.Input[str] key_vault_id: The ID of the Key Vault where the Secret should be created.
-:param pulumi.Input[str] name: Specifies the name of the Key Vault Secret. Changing this forces a new resource to be created.
-:param pulumi.Input[dict] tags: A mapping of tags to assign to the resource.
-:param pulumi.Input[str] value: Specifies the value of the Key Vault Secret.
-:param pulumi.Input[str] version: The current version of the Key Vault Secret.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the content type for the Key Vault Secret.</p></li>
+<li><p><strong>key_vault_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Key Vault where the Secret should be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Key Vault Secret. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
+<li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the value of the Key Vault Secret.</p></li>
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The current version of the Key Vault Secret.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/key_vault_secret.html.markdown</a>.</p>
 </div></blockquote>
@@ -1003,6 +1558,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.get_access_policy">
 <code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">get_access_policy</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_access_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about the permissions from the Management Key Vault Templates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Management Template. Possible values are: <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">Management</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Secret</span> <span class="pre">Management</span></code>, <code class="docutils literal notranslate"><span class="pre">Certificate</span> <span class="pre">Management</span></code>, <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">&amp;</span> <span class="pre">Secret</span> <span class="pre">Management</span></code>, <code class="docutils literal notranslate"><span class="pre">Key</span> <span class="pre">&amp;</span> <span class="pre">Certificate</span> <span class="pre">Management</span></code>,
+<code class="docutils literal notranslate"><span class="pre">Secret</span> <span class="pre">&amp;</span> <span class="pre">Certificate</span> <span class="pre">Management</span></code>,  <code class="docutils literal notranslate"><span class="pre">Key,</span> <span class="pre">Secret,</span> <span class="pre">&amp;</span> <span class="pre">Certificate</span> <span class="pre">Management</span></code></p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_access_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_access_policy.html.markdown</a>.</p>
 </div></blockquote>
@@ -1015,7 +1577,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the secret value will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_key.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_key.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Key Vault Key.</p></li>
+<li><p><strong>vault_uri</strong> (<em>str</em>) – Specifies the ID of the Key Vault Key Vault instance where the Key resides, available on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> Data Source / Resource.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_key.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_key.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1023,6 +1595,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.keyvault.get_key_vault">
 <code class="sig-prename descclassname">pulumi_azure.keyvault.</code><code class="sig-name descname">get_key_vault</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.keyvault.get_key_vault" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Key Vault.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Key Vault.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the Resource Group in which the Key Vault exists.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault.html.markdown</a>.</p>
 </div></blockquote>
@@ -1035,7 +1615,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the secret value will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_secret.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key_vault_id</strong> (<em>str</em>) – Specifies the ID of the Key Vault Key Vault instance where the Secret resides, available on the <code class="docutils literal notranslate"><span class="pre">keyvault.KeyVault</span></code> Data Source / Resource.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Key Vault Secret.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/key_vault_secret.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

@@ -23,21 +23,26 @@ title: Module mssql
 <div class="pdoc-module-contents">
 <ul>
 <li><a href="#ElasticPool">class ElasticPool</a></li>
+<li><a href="#getElasticPool">function getElasticPool</a></li>
 <li><a href="#ElasticPoolArgs">interface ElasticPoolArgs</a></li>
 <li><a href="#ElasticPoolState">interface ElasticPoolState</a></li>
+<li><a href="#GetElasticPoolArgs">interface GetElasticPoolArgs</a></li>
+<li><a href="#GetElasticPoolResult">interface GetElasticPoolResult</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts" >}}">mssql/elasticPool.ts</a> 
+<a href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts" >}}">mssql/elasticPool.ts</a> <a href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts" >}}">mssql/getElasticPool.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ElasticPool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L49" >}}">class <b>ElasticPool</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L51" >}}">class <b>ElasticPool</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Allows you to manage an Azure SQL Elastic Pool via the `2017-10-01-preview` API which allows for `vCore` and `DTU` based configurations.
@@ -83,13 +88,15 @@ const testElasticPool = new azure.mssql.ElasticPool("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPool-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L116" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L118" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> ElasticPool(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ElasticPoolArgs'>ElasticPoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a ElasticPool resource with the given unique name, arguments, and options.
 
@@ -100,13 +107,15 @@ Create a ElasticPool resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L58" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L60" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ElasticPoolState'>ElasticPoolState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#ElasticPool'>ElasticPool</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing ElasticPool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -114,23 +123,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L51" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L69" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L71" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of ElasticPool.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -138,24 +151,22 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-elasticPoolProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L76" >}}">property <b>elasticPoolProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L78" >}}">property <b>elasticPoolProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>elasticPoolProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    creationDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    licenseType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    maxSizeBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    zoneRedundant: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>elasticPoolProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ElasticPoolElasticPoolProperties'>ElasticPoolElasticPoolProperties</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L51" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -164,10 +175,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L80" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L82" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -175,10 +188,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-maxSizeBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L84" >}}">property <b>maxSizeBytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L86" >}}">property <b>maxSizeBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxSizeBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
@@ -186,10 +201,12 @@ The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-maxSizeGb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L88" >}}">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L90" >}}">property <b>maxSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>maxSizeGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes`.
@@ -197,10 +214,12 @@ The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L92" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L94" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either `vCore` based `tier` + `family` pattern (e.g. GP_Gen4, BC_Gen5) or the `DTU` based `BasicPool`, `StandardPool`, or `PremiumPool` pattern.
@@ -208,13 +227,12 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-perDatabaseSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L96" >}}">property <b>perDatabaseSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L98" >}}">property <b>perDatabaseSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    maxCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    minCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `perDatabaseSettings` block as defined below.
@@ -222,10 +240,12 @@ A `perDatabaseSettings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L100" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L102" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
@@ -233,10 +253,12 @@ The name of the resource group in which to create the elastic pool. This must be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-serverName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L104" >}}">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L106" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
@@ -244,15 +266,12 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L108" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L110" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    family: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `sku` block as defined below.
@@ -260,10 +279,12 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L112" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L114" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -271,10 +292,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L51" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -283,10 +306,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPool-zoneRedundant">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L116" >}}">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L118" >}}">property <b>zoneRedundant</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>zoneRedundant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium` for `DTU` based  or `BusinessCritical` for `vCore` based `sku`. Defaults to `false`.
@@ -294,8 +319,40 @@ Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium`
 {{% /md %}}
 </div>
 </div>
+<h2 class="pdoc-module-header" id="getElasticPool">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L29" >}}">function <b>getElasticPool</b></a>
+</h2>
+<div class="pdoc-module-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>getElasticPool(args: <a href='#GetElasticPoolArgs'>GetElasticPoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetElasticPoolResult'>GetElasticPoolResult</a>&gt; &amp; <a href='#GetElasticPoolResult'>GetElasticPoolResult</a></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Use this data source to access information about an existing SQL elastic pool.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const example = azure.mssql.getElasticPool({
+    name: "mssqlelasticpoolname",
+    resourceGroupName: "example-resources",
+    serverName: "example-sql-server",
+});
+
+export const elasticpoolId = example.id;
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/mssql_elasticpool.html.markdown.
+
+{{% /md %}}
+</div>
 <h2 class="pdoc-module-header" id="ElasticPoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L228" >}}">interface <b>ElasticPoolArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L230" >}}">interface <b>ElasticPoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -304,10 +361,12 @@ The set of arguments for constructing a ElasticPool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L232" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L234" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -315,10 +374,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-maxSizeBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L236" >}}">property <b>maxSizeBytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L238" >}}">property <b>maxSizeBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSizeBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
@@ -326,10 +387,12 @@ The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-maxSizeGb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L240" >}}">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L242" >}}">property <b>maxSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes`.
@@ -337,10 +400,12 @@ The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L244" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L246" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either `vCore` based `tier` + `family` pattern (e.g. GP_Gen4, BC_Gen5) or the `DTU` based `BasicPool`, `StandardPool`, or `PremiumPool` pattern.
@@ -348,13 +413,12 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-perDatabaseSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L248" >}}">property <b>perDatabaseSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L250" >}}">property <b>perDatabaseSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    maxCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    minCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>perDatabaseSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `perDatabaseSettings` block as defined below.
@@ -362,10 +426,12 @@ A `perDatabaseSettings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L252" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L254" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
@@ -373,10 +439,12 @@ The name of the resource group in which to create the elastic pool. This must be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-serverName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L256" >}}">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L258" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
@@ -384,15 +452,12 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L260" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L262" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `sku` block as defined below.
@@ -400,10 +465,12 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L264" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L266" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -411,10 +478,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolArgs-zoneRedundant">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L268" >}}">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L270" >}}">property <b>zoneRedundant</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneRedundant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium` for `DTU` based  or `BusinessCritical` for `vCore` based `sku`. Defaults to `false`.
@@ -423,7 +492,7 @@ Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium`
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ElasticPoolState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L181" >}}">interface <b>ElasticPoolState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L183" >}}">interface <b>ElasticPoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -432,24 +501,22 @@ Input properties used for looking up and filtering ElasticPool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ElasticPoolState-elasticPoolProperties">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L182" >}}">property <b>elasticPoolProperties</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L184" >}}">property <b>elasticPoolProperties</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>elasticPoolProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    creationDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    licenseType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    maxSizeBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    zoneRedundant: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>elasticPoolProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolElasticPoolProperties'>ElasticPoolElasticPoolProperties</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L186" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L188" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -457,10 +524,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-maxSizeBytes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L190" >}}">property <b>maxSizeBytes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L192" >}}">property <b>maxSizeBytes</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSizeBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
@@ -468,10 +537,12 @@ The max data size of the elastic pool in bytes. Conflicts with `maxSizeGb`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-maxSizeGb">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L194" >}}">property <b>maxSizeGb</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L196" >}}">property <b>maxSizeGb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>maxSizeGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes`.
@@ -479,10 +550,12 @@ The max data size of the elastic pool in gigabytes. Conflicts with `maxSizeBytes
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L198" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L200" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either `vCore` based `tier` + `family` pattern (e.g. GP_Gen4, BC_Gen5) or the `DTU` based `BasicPool`, `StandardPool`, or `PremiumPool` pattern.
@@ -490,13 +563,12 @@ Specifies the SKU Name for this Elasticpool. The name of the SKU, will be either
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-perDatabaseSettings">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L202" >}}">property <b>perDatabaseSettings</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L204" >}}">property <b>perDatabaseSettings</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>perDatabaseSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    maxCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    minCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>perDatabaseSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolPerDatabaseSettings'>ElasticPoolPerDatabaseSettings</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `perDatabaseSettings` block as defined below.
@@ -504,10 +576,12 @@ A `perDatabaseSettings` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L206" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L208" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the elastic pool. This must be the same as the resource group of the underlying SQL server.
@@ -515,10 +589,12 @@ The name of the resource group in which to create the elastic pool. This must be
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-serverName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L210" >}}">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L212" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SQL Server on which to create the elastic pool. Changing this forces a new resource to be created.
@@ -526,15 +602,12 @@ The name of the SQL Server on which to create the elastic pool. Changing this fo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L214" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L216" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ElasticPoolSku'>ElasticPoolSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `sku` block as defined below.
@@ -542,10 +615,12 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L218" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L220" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -553,13 +628,208 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ElasticPoolState-zoneRedundant">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L222" >}}">property <b>zoneRedundant</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/elasticPool.ts#L224" >}}">property <b>zoneRedundant</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneRedundant?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether or not this elastic pool is zone redundant. `tier` needs to be `Premium` for `DTU` based  or `BusinessCritical` for `vCore` based `sku`. Defaults to `false`.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetElasticPoolArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L49" >}}">interface <b>GetElasticPoolArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+A collection of arguments for invoking getElasticPool.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="GetElasticPoolArgs-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L53" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the elastic pool.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolArgs-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L57" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group which contains the elastic pool.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolArgs-serverName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L61" >}}">property <b>serverName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>serverName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the SQL Server which contains the elastic pool.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="GetElasticPoolResult">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L67" >}}">interface <b>GetElasticPoolResult</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+A collection of values returned by getElasticPool.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-id">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L102" >}}">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+id is the provider-assigned unique ID for this managed resource.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-location">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L71" >}}">property <b>location</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the supported Azure location where the resource exists.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-maxSizeBytes">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L75" >}}">property <b>maxSizeBytes</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>maxSizeBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The max data size of the elastic pool in bytes.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-maxSizeGb">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L79" >}}">property <b>maxSizeGb</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>maxSizeGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The max data size of the elastic pool in gigabytes.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L80" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-perDbMaxCapacity">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L84" >}}">property <b>perDbMaxCapacity</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>perDbMaxCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The maximum capacity any one database can consume.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-perDbMinCapacity">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L88" >}}">property <b>perDbMinCapacity</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>perDbMinCapacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The minimum capacity all databases are guaranteed.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L89" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-serverName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L90" >}}">property <b>serverName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>serverName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-tags">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L94" >}}">property <b>tags</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+A mapping of tags to assign to the resource.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetElasticPoolResult-zoneRedundant">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mssql/getElasticPool.ts#L98" >}}">property <b>zoneRedundant</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>zoneRedundant: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Whether or not this elastic pool is zone redundant.
 
 {{% /md %}}
 </div>

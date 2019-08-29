@@ -65,19 +65,17 @@ new resource to be created.</p>
 <dt id="pulumi_azure.appinsights.ApiKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_key=None</em>, <em class="sig-param">application_insights_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">read_permissions=None</em>, <em class="sig-param">write_permissions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.ApiKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApiKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_key: The API Key secret (Sensitive).
-:param pulumi.Input[str] application_insights_id: The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Application Insights API key. Changing this forces a</p>
-<blockquote>
-<div><p>new resource to be created.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API Key secret (Sensitive).</p></li>
+<li><p><strong>application_insights_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Application Insights component on which the API key operates. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights API key. Changing this forces a
+new resource to be created.</p></li>
 <li><p><strong>read_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the list of read permissions granted to the API key. Valid values are <code class="docutils literal notranslate"><span class="pre">agentconfig</span></code>, <code class="docutils literal notranslate"><span class="pre">aggregate</span></code>, <code class="docutils literal notranslate"><span class="pre">api</span></code>, <code class="docutils literal notranslate"><span class="pre">draft</span></code>, <code class="docutils literal notranslate"><span class="pre">extendqueries</span></code>, <code class="docutils literal notranslate"><span class="pre">search</span></code>. Please note these values are case sensitive. Changing this forces a new resource to be created.</p></li>
 <li><p><strong>write_permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the list of write permissions granted to the API key. Valid values are <code class="docutils literal notranslate"><span class="pre">annotations</span></code>. Please note these values are case sensitive. Changing this forces a new resource to be created.</p></li>
 </ul>
@@ -243,21 +241,19 @@ create the Application Insights component.</p>
 <dt id="pulumi_azure.appinsights.Insights.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">app_id=None</em>, <em class="sig-param">application_type=None</em>, <em class="sig-param">instrumentation_key=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.Insights.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Insights resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] app_id: The App ID associated with this Application Insights component.
-:param pulumi.Input[str] application_type: Specifies the type of Application Insights to create. Valid values are <code class="docutils literal notranslate"><span class="pre">ios</span></code> for <em>iOS</em>, <code class="docutils literal notranslate"><span class="pre">java</span></code> for <em>Java web</em>, <code class="docutils literal notranslate"><span class="pre">MobileCenter</span></code> for <em>App Center</em>, <code class="docutils literal notranslate"><span class="pre">Node.JS</span></code> for <em>Node.js</em>, <code class="docutils literal notranslate"><span class="pre">other</span></code> for <em>General</em>, <code class="docutils literal notranslate"><span class="pre">phone</span></code> for <em>Windows Phone</em>, <code class="docutils literal notranslate"><span class="pre">store</span></code> for <em>Windows Store</em> and <code class="docutils literal notranslate"><span class="pre">web</span></code> for <em>ASP.NET</em>. Please note these values are case sensitive; unmatched values are treated as <em>ASP.NET</em> by Azure. Changing this forces a new resource to be created.
-:param pulumi.Input[str] instrumentation_key: The Instrumentation Key for this Application Insights component.
-:param pulumi.Input[str] location: Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
-:param pulumi.Input[str] name: Specifies the name of the Application Insights component. Changing this forces a</p>
-<blockquote>
-<div><p>new resource to be created.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>app_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The App ID associated with this Application Insights component.</p></li>
+<li><p><strong>application_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of Application Insights to create. Valid values are <code class="docutils literal notranslate"><span class="pre">ios</span></code> for <em>iOS</em>, <code class="docutils literal notranslate"><span class="pre">java</span></code> for <em>Java web</em>, <code class="docutils literal notranslate"><span class="pre">MobileCenter</span></code> for <em>App Center</em>, <code class="docutils literal notranslate"><span class="pre">Node.JS</span></code> for <em>Node.js</em>, <code class="docutils literal notranslate"><span class="pre">other</span></code> for <em>General</em>, <code class="docutils literal notranslate"><span class="pre">phone</span></code> for <em>Windows Phone</em>, <code class="docutils literal notranslate"><span class="pre">store</span></code> for <em>Windows Store</em> and <code class="docutils literal notranslate"><span class="pre">web</span></code> for <em>ASP.NET</em>. Please note these values are case sensitive; unmatched values are treated as <em>ASP.NET</em> by Azure. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>instrumentation_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Instrumentation Key for this Application Insights component.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights component. Changing this forces a
+new resource to be created.</p></li>
 <li><p><strong>resource_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group in which to
 create the Application Insights component.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -405,24 +401,22 @@ new resource to be created.</p>
 <dt id="pulumi_azure.appinsights.WebTest.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_insights_id=None</em>, <em class="sig-param">configuration=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">frequency=None</em>, <em class="sig-param">geo_locations=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">retry_enabled=None</em>, <em class="sig-param">synthetic_monitor_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.WebTest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing WebTest resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] application_insights_id: The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.
-:param pulumi.Input[str] configuration: An XML configuration specification for a WebTest.
-:param pulumi.Input[str] description: Purpose/user defined descriptive test for this WebTest.
-:param pulumi.Input[bool] enabled: Is the test actively being monitored.
-:param pulumi.Input[float] frequency: Interval in seconds between test runs for this WebTest. Default is <code class="docutils literal notranslate"><span class="pre">300</span></code>.
-:param pulumi.Input[list] geo_locations: A list of where to physically run the tests from to give global coverage for accessibility of your application.
-:param pulumi.Input[str] location: The location of the resource group.
-:param pulumi.Input[str] name: Specifies the name of the Application Insights WebTest. Changing this forces a</p>
-<blockquote>
-<div><p>new resource to be created.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>application_insights_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the Application Insights component on which the WebTest operates. Changing this forces a new resource to be created.</p></li>
+<li><p><strong>configuration</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An XML configuration specification for a WebTest.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Purpose/user defined descriptive test for this WebTest.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the test actively being monitored.</p></li>
+<li><p><strong>frequency</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Interval in seconds between test runs for this WebTest. Default is <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
+<li><p><strong>geo_locations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of where to physically run the tests from to give global coverage for accessibility of your application.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The location of the resource group.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the Application Insights WebTest. Changing this forces a
+new resource to be created.</p></li>
 <li><p><strong>retry_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow for retries should this WebTest fail.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Resource tags.</p></li>
 <li><p><strong>timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Seconds until this WebTest will timeout and fail. Default is <code class="docutils literal notranslate"><span class="pre">30</span></code>.</p></li>
@@ -476,6 +470,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.appinsights.get_insights">
 <code class="sig-prename descclassname">pulumi_azure.appinsights.</code><code class="sig-name descname">get_insights</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appinsights.get_insights" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Application Insights component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Application Insights component.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the resource group the Application Insights component is located in.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/application_insights.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/application_insights.html.markdown</a>.</p>
 </div></blockquote>

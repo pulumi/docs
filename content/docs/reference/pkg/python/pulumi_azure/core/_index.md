@@ -22,7 +22,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.core.AwaitableGetSubscriptionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">AwaitableGetSubscriptionResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">location_placement_id=None</em>, <em class="sig-param">quota_id=None</em>, <em class="sig-param">spending_limit=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetSubscriptionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">AwaitableGetSubscriptionResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">location_placement_id=None</em>, <em class="sig-param">quota_id=None</em>, <em class="sig-param">spending_limit=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.AwaitableGetSubscriptionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -73,7 +73,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_azure.core.GetSubscriptionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">GetSubscriptionResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">location_placement_id=None</em>, <em class="sig-param">quota_id=None</em>, <em class="sig-param">spending_limit=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">GetSubscriptionResult</code><span class="sig-paren">(</span><em class="sig-param">display_name=None</em>, <em class="sig-param">location_placement_id=None</em>, <em class="sig-param">quota_id=None</em>, <em class="sig-param">spending_limit=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">subscription_id=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getSubscription.</p>
 <dl class="attribute">
 <dt id="pulumi_azure.core.GetSubscriptionResult.display_name">
@@ -109,6 +109,12 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_azure.core.GetSubscriptionResult.subscription_id">
 <code class="sig-name descname">subscription_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionResult.subscription_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subscription GUID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.core.GetSubscriptionResult.tenant_id">
+<code class="sig-name descname">tenant_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.core.GetSubscriptionResult.tenant_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The subscription tenant ID.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -217,17 +223,16 @@ Azure subscription.</p>
 <dt id="pulumi_azure.core.ResourceGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.ResourceGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResourceGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] location: The location where the resource group should be created.</p>
-<blockquote>
-<div><p>For a list of all Azure locations, please consult <a class="reference external" href="http://azure.microsoft.com/en-us/regions/">this link</a> or run <code class="docutils literal notranslate"><span class="pre">az</span> <span class="pre">account</span> <span class="pre">list-locations</span> <span class="pre">--output</span> <span class="pre">table</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>location</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The location where the resource group should be created.
+For a list of all Azure locations, please consult <a class="reference external" href="http://azure.microsoft.com/en-us/regions/">this link</a> or run <code class="docutils literal notranslate"><span class="pre">az</span> <span class="pre">account</span> <span class="pre">list-locations</span> <span class="pre">--output</span> <span class="pre">table</span></code>.</p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the resource group. Must be unique on your
 Azure subscription.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
@@ -358,18 +363,16 @@ create the template deployment.</p>
 <dt id="pulumi_azure.core.TemplateDeployment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deployment_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">outputs=None</em>, <em class="sig-param">parameters=None</em>, <em class="sig-param">parameters_body=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">template_body=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.TemplateDeployment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TemplateDeployment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] deployment_mode: Specifies the mode that is used to deploy resources. This value could be either <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> or <code class="docutils literal notranslate"><span class="pre">Complete</span></code>.</p>
-<blockquote>
-<div><p>Note that you will almost <em>always</em> want this to be set to <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> otherwise the deployment will destroy all infrastructure not
-specified within the template, and this provider will not be aware of this.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>deployment_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the mode that is used to deploy resources. This value could be either <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> or <code class="docutils literal notranslate"><span class="pre">Complete</span></code>.
+Note that you will almost <em>always</em> want this to be set to <code class="docutils literal notranslate"><span class="pre">Incremental</span></code> otherwise the deployment will destroy all infrastructure not
+specified within the template, and this provider will not be aware of this.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the name of the template deployment. Changing this forces a
 new resource to be created.</p></li>
 <li><p><strong>outputs</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of supported scalar output types returned from the deployment (currently, Azure Template Deployment outputs of type String, Int and Bool are supported, and are converted to strings - others will be ignored) and can be accessed using <code class="docutils literal notranslate"><span class="pre">.outputs[&quot;name&quot;]</span></code>.</p></li>
@@ -437,6 +440,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_resource_group">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_resource_group</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_resource_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Resource Group.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – Specifies the name of the resource group.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/resource_group.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/resource_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -446,6 +454,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_subscription">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_subscription</code><span class="sig-paren">(</span><em class="sig-param">subscription_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing Subscription.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>subscription_id</strong> (<em>str</em>) – Specifies the ID of the subscription. If this argument is omitted, the subscription ID of the current Azure Resource Manager provider is used.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/subscription.html.markdown</a>.</p>
 </div></blockquote>
@@ -455,6 +468,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_subscriptions">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_subscriptions</code><span class="sig-paren">(</span><em class="sig-param">display_name_contains=None</em>, <em class="sig-param">display_name_prefix=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_subscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about all the Subscriptions currently available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>display_name_contains</strong> (<em>str</em>) – A case-insensitive value which must be contained within the <code class="docutils literal notranslate"><span class="pre">display_name</span></code> field, used to filter the results</p></li>
+<li><p><strong>display_name_prefix</strong> (<em>str</em>) – A case-insensitive prefix which can be used to filter on the <code class="docutils literal notranslate"><span class="pre">display_name</span></code> field</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/subscriptions.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/subscriptions.html.markdown</a>.</p>
 </div></blockquote>
@@ -464,8 +485,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.core.get_user_assigned_identity">
 <code class="sig-prename descclassname">pulumi_azure.core.</code><code class="sig-name descname">get_user_assigned_identity</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.core.get_user_assigned_identity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing User Assigned Identity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the User Assigned Identity.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – The name of the Resource Group in which the User Assigned Identity exists.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity.html.markdown</a>.</p>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity_legacy.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/user_assigned_identity_legacy.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

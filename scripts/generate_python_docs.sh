@@ -6,7 +6,7 @@ set -x
 PACKAGES=(
   "pulumi==1.0.0rc1"
   "pulumi_aws==1.0.0rc1"
-  "pulumi_azure"
+  "pulumi_azure==1.0.0rc1"
   "pulumi_azuread==1.0.0rc1"
   "pulumi_cloudflare"
   "pulumi_datadog"

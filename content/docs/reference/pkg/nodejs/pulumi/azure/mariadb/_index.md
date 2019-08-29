@@ -22,28 +22,234 @@ title: Module mariadb
 <h2 class="pdoc-module-header toggleButton" title="Click to hide Index">Index ▾</h2>
 <div class="pdoc-module-contents">
 <ul>
+<li><a href="#Configuration">class Configuration</a></li>
 <li><a href="#Database">class Database</a></li>
 <li><a href="#FirewallRule">class FirewallRule</a></li>
 <li><a href="#Server">class Server</a></li>
+<li><a href="#VirtualNetworkRule">class VirtualNetworkRule</a></li>
+<li><a href="#ConfigurationArgs">interface ConfigurationArgs</a></li>
+<li><a href="#ConfigurationState">interface ConfigurationState</a></li>
 <li><a href="#DatabaseArgs">interface DatabaseArgs</a></li>
 <li><a href="#DatabaseState">interface DatabaseState</a></li>
 <li><a href="#FirewallRuleArgs">interface FirewallRuleArgs</a></li>
 <li><a href="#FirewallRuleState">interface FirewallRuleState</a></li>
 <li><a href="#ServerArgs">interface ServerArgs</a></li>
 <li><a href="#ServerState">interface ServerState</a></li>
+<li><a href="#VirtualNetworkRuleArgs">interface VirtualNetworkRuleArgs</a></li>
+<li><a href="#VirtualNetworkRuleState">interface VirtualNetworkRuleState</a></li>
 </ul>
 
-<a href="{{< pkg-url pkg="azure" path="mariadb/database.ts" >}}">mariadb/database.ts</a> <a href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts" >}}">mariadb/firewallRule.ts</a> <a href="{{< pkg-url pkg="azure" path="mariadb/server.ts" >}}">mariadb/server.ts</a> 
+<a href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts" >}}">mariadb/configuration.ts</a> <a href="{{< pkg-url pkg="azure" path="mariadb/database.ts" >}}">mariadb/database.ts</a> <a href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts" >}}">mariadb/firewallRule.ts</a> <a href="{{< pkg-url pkg="azure" path="mariadb/server.ts" >}}">mariadb/server.ts</a> <a href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts" >}}">mariadb/virtualNetworkRule.ts</a> 
 </div>
 </div>
 </div>
 
 
+<h2 class="pdoc-module-header" id="Configuration">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L52" >}}">class <b>Configuration</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Sets a MariaDB Configuration value on a MariaDB Server.
+
+> **NOTE** MariaDB Server is currently in Public Preview. You can find more information, including [how to register for the Public Preview here](https://azure.microsoft.com/en-us/updates/mariadb-public-preview/).
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const exampleResourceGroup = new azure.core.ResourceGroup("example", {
+    location: "West Europe",
+    name: "api-rg-pro",
+});
+const exampleServer = new azure.mariadb.Server("example", {
+    administratorLogin: "mariadbadmin",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    location: exampleResourceGroup.location,
+    name: "mariadb-server-1",
+    resourceGroupName: exampleResourceGroup.name,
+    sku: {
+        capacity: 2,
+        family: "Gen5",
+        name: "B_Gen5_2",
+        tier: "Basic",
+    },
+    sslEnforcement: "Enabled",
+    storageProfile: {
+        backupRetentionDays: 7,
+        geoRedundantBackup: "Disabled",
+        storageMb: 5120,
+    },
+    version: "10.2",
+});
+const exampleConfiguration = new azure.mariadb.Configuration("example", {
+    name: "interactiveTimeout",
+    resourceGroupName: exampleResourceGroup.name,
+    serverName: exampleServer.name,
+    value: "600",
+});
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/mariadb_configuration.html.markdown.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="Configuration-constructor">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L94" >}}"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Configuration(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ConfigurationArgs'>ConfigurationArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Create a Configuration resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-get">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L61" >}}">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ConfigurationState'>ConfigurationState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Configuration'>Configuration</a></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Get an existing Configuration resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-getProvider">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L52" >}}">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-isInstance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L72" >}}">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Returns true if the given object is an instance of Configuration.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-id">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L52" >}}">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L82" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L86" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-serverName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L90" >}}">property <b>serverName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-urn">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L52" >}}">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Configuration-value">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L94" >}}">property <b>value</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the value of the MariaDB Configuration. See the MariaDB documentation for valid values.
+
+{{% /md %}}
+</div>
+</div>
 <h2 class="pdoc-module-header" id="Database">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L51" >}}">class <b>Database</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a MariaDB Database within a MariaDB Server
@@ -94,10 +300,12 @@ const exampleDatabase = new azure.mariadb.Database("example", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L98" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Database(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DatabaseArgs'>DatabaseArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Database resource with the given unique name, arguments, and options.
 
@@ -111,10 +319,12 @@ Create a Database resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L60" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatabaseState'>DatabaseState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Database'>Database</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Database resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -122,23 +332,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L51" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L71" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Database.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -149,7 +363,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L81" >}}">property <b>charset</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Charset for the MariaDB Database, which needs [to be a valid MariaDB Charset](https://mariadb.com/kb/en/library/setting-character-sets-and-collations). Changing this forces a new resource to be created.
@@ -160,7 +376,9 @@ Specifies the Charset for the MariaDB Database, which needs [to be a valid Maria
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L85" >}}">property <b>collation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Collation for the MariaDB Database, which needs [to be a valid MariaDB Collation](https://mariadb.com/kb/en/library/setting-character-sets-and-collations). Changing this forces a new resource to be created.
@@ -168,10 +386,12 @@ Specifies the Collation for the MariaDB Database, which needs [to be a valid Mar
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L51" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -183,7 +403,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L90" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Database, which needs [to be a valid MariaDB identifier](https://mariadb.com/kb/en/library/identifier-names/). Changing this forces a
@@ -195,7 +417,9 @@ new resource to be created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L94" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
@@ -206,7 +430,9 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L98" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -214,10 +440,12 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Database-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L51" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -230,7 +458,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L42" >}}">class <b>FirewallRule</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a Firewall Rule for a MariaDB Server
@@ -272,10 +502,12 @@ const test = new azure.mariadb.FirewallRule("test", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L88" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FirewallRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FirewallRuleArgs'>FirewallRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a FirewallRule resource with the given unique name, arguments, and options.
 
@@ -289,10 +521,12 @@ Create a FirewallRule resource with the given unique name, arguments, and option
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L51" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FirewallRuleState'>FirewallRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FirewallRule'>FirewallRule</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing FirewallRule resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -300,23 +534,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L42" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L62" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of FirewallRule.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -327,7 +565,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L72" >}}">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
@@ -335,10 +575,12 @@ Specifies the End IP Address associated with this Firewall Rule. Changing this f
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L42" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -350,7 +592,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L76" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Firewall Rule. Changing this forces a new resource to be created.
@@ -361,7 +605,9 @@ Specifies the name of the MariaDB Firewall Rule. Changing this forces a new reso
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L80" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
@@ -372,7 +618,9 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L84" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -383,7 +631,9 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L88" >}}">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
@@ -391,10 +641,12 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallRule-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L42" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -404,10 +656,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Server">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L46" >}}">class <b>Server</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L48" >}}">class <b>Server</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages a MariaDB Server.
@@ -450,13 +704,15 @@ const testServer = new azure.mariadb.Server("test", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Server-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L116" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L118" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Server(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ServerArgs'>ServerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Server resource with the given unique name, arguments, and options.
 
@@ -467,13 +723,15 @@ Create a Server resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L55" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L57" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ServerState'>ServerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Server'>Server</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Server resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -481,23 +739,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L48" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L66" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L68" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Server.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -505,10 +767,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-administratorLogin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L76" >}}">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L78" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Administrator Login for the MariaDB Server. Changing this forces a new resource to be created.
@@ -516,10 +780,12 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-administratorLoginPassword">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L80" >}}">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L82" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Password associated with the `administratorLogin` for the MariaDB Server.
@@ -527,10 +793,12 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L84" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L86" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the MariaDB Server.
@@ -538,10 +806,12 @@ The FQDN of the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L48" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -550,10 +820,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L88" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L90" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -561,10 +833,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L92" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L94" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -572,10 +846,12 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L96" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L98" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the MariaDB Server. Changing this forces a new resource to be created.
@@ -583,15 +859,12 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L100" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L102" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    capacity: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    family: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tier: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `sku` block as defined below.
@@ -599,10 +872,12 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-sslEnforcement">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L104" >}}">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L106" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sslEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
@@ -610,14 +885,12 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-storageProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L108" >}}">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L110" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    backupRetentionDays: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    geoRedundantBackup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    storageMb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `storageProfile` block as defined below.
@@ -625,10 +898,12 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L112" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L114" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -636,10 +911,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L48" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -648,13 +925,350 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Server-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L116" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L118" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the version of MariaDB to use. The valid value is `10.2`. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="VirtualNetworkRule">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L67" >}}">class <b>VirtualNetworkRule</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Manages a MariaDB Virtual Network Rule.
+
+> **NOTE:** MariaDB Virtual Network Rules [can only be used with SKU Tiers of `GeneralPurpose` or `MemoryOptimized`](https://docs.microsoft.com/en-us/azure/mariadb/concepts-data-access-security-vnet)
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const testResourceGroup = new azure.core.ResourceGroup("test", {
+    location: "West Europe",
+    name: "example-resources",
+});
+const testServer = new azure.mariadb.Server("test", {
+    administratorLogin: "mariadbadminun",
+    administratorLoginPassword: "H@Sh1CoR3!",
+    location: testResourceGroup.location,
+    name: "mariadb-server-1",
+    resourceGroupName: testResourceGroup.name,
+    sku: {
+        capacity: 2,
+        family: "Gen5",
+        name: "GP_Gen5_2",
+        tier: "GeneralPurpose",
+    },
+    sslEnforcement: "Enabled",
+    storageProfile: {
+        backupRetentionDays: 7,
+        geoRedundantBackup: "Disabled",
+        storageMb: 5120,
+    },
+    version: "5.7",
+});
+const testVirtualNetwork = new azure.network.VirtualNetwork("test", {
+    addressSpaces: ["10.7.29.0/29"],
+    location: testResourceGroup.location,
+    name: "example-vnet",
+    resourceGroupName: testResourceGroup.name,
+});
+const internal = new azure.network.Subnet("internal", {
+    addressPrefix: "10.7.29.0/29",
+    name: "internal",
+    resourceGroupName: testResourceGroup.name,
+    serviceEndpoints: ["Microsoft.Sql"],
+    virtualNetworkName: testVirtualNetwork.name,
+});
+const testVirtualNetworkRule = new azure.mariadb.VirtualNetworkRule("test", {
+    name: "mariadb-vnet-rule",
+    resourceGroupName: testResourceGroup.name,
+    serverName: testServer.name,
+    subnetId: internal.id,
+});
+```
+
+> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/mariadb_virtual_network_rule.html.markdown.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-constructor">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L109" >}}"> <b>constructor</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VirtualNetworkRule(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VirtualNetworkRuleArgs'>VirtualNetworkRuleArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Create a VirtualNetworkRule resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-get">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L76" >}}">method <b>get</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VirtualNetworkRuleState'>VirtualNetworkRuleState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VirtualNetworkRule'>VirtualNetworkRule</a></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Get an existing VirtualNetworkRule resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-getProvider">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L67" >}}">method <b>getProvider</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-isInstance">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L87" >}}">method <b>isInstance</b></a>
+</h3>
+<div class="pdoc-member-contents">
+
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
+
+{{% md %}}
+
+Returns true if the given object is an instance of VirtualNetworkRule.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-id">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L67" >}}">property <b>id</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L97" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the MariaDB Virtual Network Rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L101" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group where the MariaDB server resides. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-serverName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L105" >}}">property <b>serverName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the SQL Server to which this MariaDB virtual network rule will be applied to. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-subnetId">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L109" >}}">property <b>subnetId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The ID of the subnet that the MariaDB server will be connected to.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRule-urn">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L67" >}}">property <b>urn</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="ConfigurationArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L164" >}}">interface <b>ConfigurationArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+The set of arguments for constructing a Configuration resource.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="ConfigurationArgs-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L168" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConfigurationArgs-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L172" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConfigurationArgs-serverName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L176" >}}">property <b>serverName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConfigurationArgs-value">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L180" >}}">property <b>value</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the value of the MariaDB Configuration. See the MariaDB documentation for valid values.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="ConfigurationState">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L142" >}}">interface <b>ConfigurationState</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Input properties used for looking up and filtering Configuration resources.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="ConfigurationState-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L146" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the MariaDB Configuration, which needs [to be a valid MariaDB configuration name](https://mariadb.com/kb/en/library/server-system-variables/). Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConfigurationState-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L150" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConfigurationState-serverName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L154" >}}">property <b>serverName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="ConfigurationState-value">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/configuration.ts#L158" >}}">property <b>value</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+Specifies the value of the MariaDB Configuration. See the MariaDB documentation for valid values.
 
 {{% /md %}}
 </div>
@@ -672,7 +1286,9 @@ The set of arguments for constructing a Database resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L182" >}}">property <b>charset</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>charset: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Charset for the MariaDB Database, which needs [to be a valid MariaDB Charset](https://mariadb.com/kb/en/library/setting-character-sets-and-collations). Changing this forces a new resource to be created.
@@ -683,7 +1299,9 @@ Specifies the Charset for the MariaDB Database, which needs [to be a valid Maria
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L186" >}}">property <b>collation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>collation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Collation for the MariaDB Database, which needs [to be a valid MariaDB Collation](https://mariadb.com/kb/en/library/setting-character-sets-and-collations). Changing this forces a new resource to be created.
@@ -694,7 +1312,9 @@ Specifies the Collation for the MariaDB Database, which needs [to be a valid Mar
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L191" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Database, which needs [to be a valid MariaDB identifier](https://mariadb.com/kb/en/library/identifier-names/). Changing this forces a
@@ -706,7 +1326,9 @@ new resource to be created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L195" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
@@ -717,7 +1339,9 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L199" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -738,7 +1362,9 @@ Input properties used for looking up and filtering Database resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L155" >}}">property <b>charset</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>charset?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Charset for the MariaDB Database, which needs [to be a valid MariaDB Charset](https://mariadb.com/kb/en/library/setting-character-sets-and-collations). Changing this forces a new resource to be created.
@@ -749,7 +1375,9 @@ Specifies the Charset for the MariaDB Database, which needs [to be a valid Maria
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L159" >}}">property <b>collation</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>collation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Collation for the MariaDB Database, which needs [to be a valid MariaDB Collation](https://mariadb.com/kb/en/library/setting-character-sets-and-collations). Changing this forces a new resource to be created.
@@ -760,7 +1388,9 @@ Specifies the Collation for the MariaDB Database, which needs [to be a valid Mar
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L164" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Database, which needs [to be a valid MariaDB identifier](https://mariadb.com/kb/en/library/identifier-names/). Changing this forces a
@@ -772,7 +1402,9 @@ new resource to be created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L168" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
@@ -783,7 +1415,9 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/database.ts#L172" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -804,7 +1438,9 @@ The set of arguments for constructing a FirewallRule resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L171" >}}">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
@@ -815,7 +1451,9 @@ Specifies the End IP Address associated with this Firewall Rule. Changing this f
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L175" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Firewall Rule. Changing this forces a new resource to be created.
@@ -826,7 +1464,9 @@ Specifies the name of the MariaDB Firewall Rule. Changing this forces a new reso
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L179" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
@@ -837,7 +1477,9 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L183" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -848,7 +1490,9 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L187" >}}">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
@@ -869,7 +1513,9 @@ Input properties used for looking up and filtering FirewallRule resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L145" >}}">property <b>endIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the End IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
@@ -880,7 +1526,9 @@ Specifies the End IP Address associated with this Firewall Rule. Changing this f
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L149" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Firewall Rule. Changing this forces a new resource to be created.
@@ -891,7 +1539,9 @@ Specifies the name of the MariaDB Firewall Rule. Changing this forces a new reso
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L153" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which the MariaDB Server exists. Changing this forces a new resource to be created.
@@ -902,7 +1552,9 @@ The name of the resource group in which the MariaDB Server exists. Changing this
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L157" >}}">property <b>serverName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -913,7 +1565,9 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/firewallRule.ts#L161" >}}">property <b>startIpAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>startIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the Start IP Address associated with this Firewall Rule. Changing this forces a new resource to be created.
@@ -922,7 +1576,7 @@ Specifies the Start IP Address associated with this Firewall Rule. Changing this
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L240" >}}">interface <b>ServerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L242" >}}">interface <b>ServerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -931,10 +1585,12 @@ The set of arguments for constructing a Server resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLogin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L244" >}}">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L246" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>administratorLogin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Administrator Login for the MariaDB Server. Changing this forces a new resource to be created.
@@ -942,10 +1598,12 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-administratorLoginPassword">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L248" >}}">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L250" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>administratorLoginPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Password associated with the `administratorLogin` for the MariaDB Server.
@@ -953,10 +1611,12 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L252" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L254" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -964,10 +1624,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L256" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L258" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -975,10 +1637,12 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L260" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L262" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the MariaDB Server. Changing this forces a new resource to be created.
@@ -986,15 +1650,12 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L264" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L266" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>sku: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `sku` block as defined below.
@@ -1002,10 +1663,12 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-sslEnforcement">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L268" >}}">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L270" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslEnforcement: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
@@ -1013,14 +1676,12 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-storageProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L272" >}}">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L274" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    backupRetentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    geoRedundantBackup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    storageMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>storageProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `storageProfile` block as defined below.
@@ -1028,10 +1689,12 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L276" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L278" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1039,10 +1702,12 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L280" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L282" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the version of MariaDB to use. The valid value is `10.2`. Changing this forces a new resource to be created.
@@ -1051,7 +1716,7 @@ Specifies the version of MariaDB to use. The valid value is `10.2`. Changing thi
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L190" >}}">interface <b>ServerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L192" >}}">interface <b>ServerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1060,10 +1725,12 @@ Input properties used for looking up and filtering Server resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServerState-administratorLogin">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L194" >}}">property <b>administratorLogin</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L196" >}}">property <b>administratorLogin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>administratorLogin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Administrator Login for the MariaDB Server. Changing this forces a new resource to be created.
@@ -1071,10 +1738,12 @@ The Administrator Login for the MariaDB Server. Changing this forces a new resou
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-administratorLoginPassword">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L198" >}}">property <b>administratorLoginPassword</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L200" >}}">property <b>administratorLoginPassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>administratorLoginPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Password associated with the `administratorLogin` for the MariaDB Server.
@@ -1082,10 +1751,12 @@ The Password associated with the `administratorLogin` for the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L202" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L204" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the MariaDB Server.
@@ -1093,10 +1764,12 @@ The FQDN of the MariaDB Server.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-location">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L206" >}}">property <b>location</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L208" >}}">property <b>location</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
@@ -1104,10 +1777,12 @@ Specifies the supported Azure location where the resource exists. Changing this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L210" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L212" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the name of the MariaDB Server. Changing this forces a new resource to be created.
@@ -1115,10 +1790,12 @@ Specifies the name of the MariaDB Server. Changing this forces a new resource to
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-resourceGroupName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L214" >}}">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L216" >}}">property <b>resourceGroupName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the resource group in which to create the MariaDB Server. Changing this forces a new resource to be created.
@@ -1126,15 +1803,12 @@ The name of the resource group in which to create the MariaDB Server. Changing t
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-sku">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L218" >}}">property <b>sku</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L220" >}}">property <b>sku</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    family: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>sku?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerSku'>ServerSku</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `sku` block as defined below.
@@ -1142,10 +1816,12 @@ A `sku` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-sslEnforcement">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L222" >}}">property <b>sslEnforcement</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L224" >}}">property <b>sslEnforcement</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sslEnforcement?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies if SSL should be enforced on connections. Possible values are `Enabled` and `Disabled`.
@@ -1153,14 +1829,12 @@ Specifies if SSL should be enforced on connections. Possible values are `Enabled
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-storageProfile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L226" >}}">property <b>storageProfile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L228" >}}">property <b>storageProfile</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    backupRetentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    geoRedundantBackup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    storageMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>storageProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServerStorageProfile'>ServerStorageProfile</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `storageProfile` block as defined below.
@@ -1168,10 +1842,12 @@ A `storageProfile` block as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L230" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L232" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A mapping of tags to assign to the resource.
@@ -1179,13 +1855,139 @@ A mapping of tags to assign to the resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServerState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L234" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/server.ts#L236" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Specifies the version of MariaDB to use. The valid value is `10.2`. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="VirtualNetworkRuleArgs">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L179" >}}">interface <b>VirtualNetworkRuleArgs</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+The set of arguments for constructing a VirtualNetworkRule resource.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="VirtualNetworkRuleArgs-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L183" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the MariaDB Virtual Network Rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRuleArgs-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L187" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group where the MariaDB server resides. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRuleArgs-serverName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L191" >}}">property <b>serverName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the SQL Server to which this MariaDB virtual network rule will be applied to. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRuleArgs-subnetId">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L195" >}}">property <b>subnetId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subnetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The ID of the subnet that the MariaDB server will be connected to.
+
+{{% /md %}}
+</div>
+</div>
+<h2 class="pdoc-module-header" id="VirtualNetworkRuleState">
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L157" >}}">interface <b>VirtualNetworkRuleState</b></a>
+</h2>
+<div class="pdoc-module-contents">
+{{% md %}}
+
+Input properties used for looking up and filtering VirtualNetworkRule resources.
+
+{{% /md %}}
+<h3 class="pdoc-member-header" id="VirtualNetworkRuleState-name">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L161" >}}">property <b>name</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the MariaDB Virtual Network Rule. Cannot be empty and must only contain alphanumeric characters and hyphens. Cannot start with a number, and cannot start or end with a hyphen. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRuleState-resourceGroupName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L165" >}}">property <b>resourceGroupName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the resource group where the MariaDB server resides. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRuleState-serverName">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L169" >}}">property <b>serverName</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The name of the SQL Server to which this MariaDB virtual network rule will be applied to. Changing this forces a new resource to be created.
+
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="VirtualNetworkRuleState-subnetId">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="mariadb/virtualNetworkRule.ts#L173" >}}">property <b>subnetId</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>subnetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+
+The ID of the subnet that the MariaDB server will be connected to.
 
 {{% /md %}}
 </div>

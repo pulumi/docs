@@ -43,7 +43,9 @@ title: Module securitycenter
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L28" >}}">class <b>Contact</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages the subscription's Security Center Contact.
@@ -71,10 +73,12 @@ const example = new azure.securitycenter.Contact("example", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L70" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Contact(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#ContactArgs'>ContactArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Contact resource with the given unique name, arguments, and options.
 
@@ -88,10 +92,12 @@ Create a Contact resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L37" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ContactState'>ContactState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Contact'>Contact</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Contact resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -99,23 +105,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Contact-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L28" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Contact-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L48" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Contact.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -126,7 +136,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L58" >}}">property <b>alertNotifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>alertNotifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to send security alerts notifications to the security contact.
@@ -137,7 +149,9 @@ Whether to send security alerts notifications to the security contact.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L62" >}}">property <b>alertsToAdmins</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>alertsToAdmins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to send security alerts notifications to subscription admins.
@@ -148,7 +162,9 @@ Whether to send security alerts notifications to subscription admins.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L66" >}}">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The email of the Security Center Contact.
@@ -156,10 +172,12 @@ The email of the Security Center Contact.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Contact-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L28" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -171,7 +189,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L70" >}}">property <b>phone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>phone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>phone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The phone number of the Security Center Contact.
@@ -179,10 +199,12 @@ The phone number of the Security Center Contact.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Contact-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L28" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -195,7 +217,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L27" >}}">class <b>SubscriptionPricing</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages the Pricing Tier for Azure Security Center in the current subscription.
@@ -222,10 +246,12 @@ const example = new azure.securitycenter.SubscriptionPricing("example", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L57" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SubscriptionPricing(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SubscriptionPricingArgs'>SubscriptionPricingArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SubscriptionPricing resource with the given unique name, arguments, and options.
 
@@ -239,10 +265,12 @@ Create a SubscriptionPricing resource with the given unique name, arguments, and
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SubscriptionPricingState'>SubscriptionPricingState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SubscriptionPricing'>SubscriptionPricing</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SubscriptionPricing resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -250,23 +278,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionPricing-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionPricing-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SubscriptionPricing.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -274,10 +306,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionPricing-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -289,7 +323,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L57" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The pricing tier to use. Possible values are `Free` and `Standard`.
@@ -297,10 +333,12 @@ The pricing tier to use. Possible values are `Free` and `Standard`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SubscriptionPricing-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L27" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -313,7 +351,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L38" >}}">class <b>Workspace</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages the subscription's Security Center Workspace.
@@ -351,10 +391,12 @@ const exampleWorkspace = new azure.securitycenter.Workspace("example", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Workspace(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#WorkspaceArgs'>WorkspaceArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Workspace resource with the given unique name, arguments, and options.
 
@@ -368,10 +410,12 @@ Create a Workspace resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L47" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#WorkspaceState'>WorkspaceState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Workspace'>Workspace</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Workspace resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -379,23 +423,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Workspace-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L38" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Workspace-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L58" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Workspace.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -403,10 +451,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Workspace-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L38" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -418,7 +468,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L68" >}}">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.
@@ -426,10 +478,12 @@ The scope of VMs to send their security data to the desired workspace, unless ov
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Workspace-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L38" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -441,7 +495,9 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L72" >}}">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>workspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Log Analytics Workspace to save the data in.
@@ -450,7 +506,7 @@ The ID of the Log Analytics Workspace to save the data in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContactArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L143" >}}">interface <b>ContactArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L140" >}}">interface <b>ContactArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -459,10 +515,12 @@ The set of arguments for constructing a Contact resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContactArgs-alertNotifications">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L147" >}}">property <b>alertNotifications</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L144" >}}">property <b>alertNotifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alertNotifications: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to send security alerts notifications to the security contact.
@@ -470,10 +528,12 @@ Whether to send security alerts notifications to the security contact.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContactArgs-alertsToAdmins">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L151" >}}">property <b>alertsToAdmins</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L148" >}}">property <b>alertsToAdmins</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alertsToAdmins: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to send security alerts notifications to subscription admins.
@@ -481,10 +541,12 @@ Whether to send security alerts notifications to subscription admins.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContactArgs-email">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L155" >}}">property <b>email</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L152" >}}">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>email: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The email of the Security Center Contact.
@@ -492,10 +554,12 @@ The email of the Security Center Contact.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContactArgs-phone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L159" >}}">property <b>phone</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L156" >}}">property <b>phone</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>phone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>phone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The phone number of the Security Center Contact.
@@ -504,7 +568,7 @@ The phone number of the Security Center Contact.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ContactState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L121" >}}">interface <b>ContactState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L118" >}}">interface <b>ContactState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -513,10 +577,12 @@ Input properties used for looking up and filtering Contact resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ContactState-alertNotifications">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L125" >}}">property <b>alertNotifications</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L122" >}}">property <b>alertNotifications</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alertNotifications?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to send security alerts notifications to the security contact.
@@ -524,10 +590,12 @@ Whether to send security alerts notifications to the security contact.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContactState-alertsToAdmins">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L129" >}}">property <b>alertsToAdmins</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L126" >}}">property <b>alertsToAdmins</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>alertsToAdmins?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether to send security alerts notifications to subscription admins.
@@ -535,10 +603,12 @@ Whether to send security alerts notifications to subscription admins.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContactState-email">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L133" >}}">property <b>email</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L130" >}}">property <b>email</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>email?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The email of the Security Center Contact.
@@ -546,10 +616,12 @@ The email of the Security Center Contact.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ContactState-phone">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L137" >}}">property <b>phone</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/contact.ts#L134" >}}">property <b>phone</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>phone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The phone number of the Security Center Contact.
@@ -570,7 +642,9 @@ The set of arguments for constructing a SubscriptionPricing resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L107" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tier: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The pricing tier to use. Possible values are `Free` and `Standard`.
@@ -591,7 +665,9 @@ Input properties used for looking up and filtering SubscriptionPricing resources
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/subscriptionPricing.ts#L97" >}}">property <b>tier</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tier?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The pricing tier to use. Possible values are `Free` and `Standard`.
@@ -612,7 +688,9 @@ The set of arguments for constructing a Workspace resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L131" >}}">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scope: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.
@@ -623,7 +701,9 @@ The scope of VMs to send their security data to the desired workspace, unless ov
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L135" >}}">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Log Analytics Workspace to save the data in.
@@ -644,7 +724,9 @@ Input properties used for looking up and filtering Workspace resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L117" >}}">property <b>scope</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>scope?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The scope of VMs to send their security data to the desired workspace, unless overridden by a setting with more specific scope.
@@ -655,7 +737,9 @@ The scope of VMs to send their security data to the desired workspace, unless ov
 <a class="pdoc-child-name" href="{{< pkg-url pkg="azure" path="securitycenter/workspace.ts#L121" >}}">property <b>workspaceId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>workspaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Log Analytics Workspace to save the data in.
