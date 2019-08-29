@@ -172,6 +172,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 <div class="pdoc-module-contents">
 <ul>
 <li><a href="config">config</a></li>
+<li><a href="types">types</a></li>
 </ul>
 </div>
 </div>
@@ -181,7 +182,9 @@ import * as digitalocean from "@pulumi/digitalocean";
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L58" >}}">class <b>Cdn</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
@@ -239,10 +242,12 @@ const mycdn = new digitalocean.Cdn("mycdn", {
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L109" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Cdn(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#CdnArgs'>CdnArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Cdn resource with the given unique name, arguments, and options.
 
@@ -256,10 +261,12 @@ Create a Cdn resource with the given unique name, arguments, and options.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L67" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CdnState'>CdnState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Cdn'>Cdn</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Cdn resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -267,23 +274,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cdn-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L58" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cdn-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L78" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Cdn.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -294,7 +305,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L88" >}}">property <b>certificateId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of a DigitalOcean managed TLS certificate for use with custom domains
@@ -305,7 +318,9 @@ ID of a DigitalOcean managed TLS certificate for use with custom domains
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L92" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time when the CDN Endpoint was created.
@@ -316,7 +331,9 @@ The date and time when the CDN Endpoint was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L96" >}}">property <b>customDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>customDomain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
@@ -327,7 +344,9 @@ The fully qualified domain name (FQDN) of the custom subdomain used with the CDN
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L100" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name (FQDN) from which the CDN-backed content is served.
@@ -335,10 +354,12 @@ The fully qualified domain name (FQDN) from which the CDN-backed content is serv
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cdn-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L58" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -350,7 +371,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L104" >}}">property <b>origin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name, (FQDN) for a Space.
@@ -361,7 +384,9 @@ The fully qualified domain name, (FQDN) for a Space.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L109" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
@@ -370,10 +395,12 @@ The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Cdn-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L58" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -386,7 +413,9 @@ deployments.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L12" >}}">class <b>Certificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/certificate.html.markdown.
@@ -396,10 +425,12 @@ deployments.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L78" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Certificate(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#CertificateArgs'>CertificateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Certificate resource with the given unique name, arguments, and options.
 
@@ -413,10 +444,12 @@ Create a Certificate resource with the given unique name, arguments, and options
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#CertificateState'>CertificateState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Certificate'>Certificate</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Certificate resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -424,23 +457,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L12" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-isInstance">
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Certificate.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -451,7 +488,9 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L44" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>certificateChain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full PEM-formatted trust chain
@@ -464,7 +503,9 @@ certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L50" >}}">property <b>domains</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of fully qualified domain names (FQDNs) for
@@ -474,10 +515,12 @@ DigitalOcean's DNS. Only valid when type is `letsEncrypt`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L12" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -489,7 +532,9 @@ deployments and may be missing (undefined) during planning phases.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L55" >}}">property <b>leafCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>leafCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The contents of a PEM-formatted public
@@ -501,7 +546,9 @@ TLS certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L59" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the certificate for identification.
@@ -512,7 +559,9 @@ The name of the certificate for identification.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L63" >}}">property <b>notAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>notAfter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The expiration date of the certificate
@@ -523,7 +572,9 @@ The expiration date of the certificate
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L68" >}}">property <b>privateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privateKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The contents of a PEM-formatted private-key
@@ -535,7 +586,9 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L72" >}}">property <b>sha1Fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sha1Fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The SHA-1 fingerprint of the certificate
@@ -546,7 +599,9 @@ The SHA-1 fingerprint of the certificate
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L73" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -554,7 +609,9 @@ The SHA-1 fingerprint of the certificate
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L78" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CertificateType'>CertificateType</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of certificate to provision. Can be either
@@ -563,10 +620,12 @@ The type of certificate to provision. Can be either
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L12" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -576,22 +635,24 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseCluster">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L30" >}}">class <b>DatabaseCluster</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L58" >}}">class <b>DatabaseCluster</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean database cluster resource.
 
 ## Example Usage
 
+### Create a new PostgreSQL database cluster
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-// Create a new database cluster
-const example = new digitalocean.DatabaseCluster("example", {
+const postgresExample = new digitalocean.DatabaseCluster("postgres-example", {
     engine: "pg",
     nodeCount: 1,
     region: "nyc1",
@@ -600,17 +661,45 @@ const example = new digitalocean.DatabaseCluster("example", {
 });
 ```
 
+### Create a new MySQL database cluster
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const mysqlExample = new digitalocean.DatabaseCluster("mysql-example", {
+    engine: "mysql",
+    nodeCount: 1,
+    region: "nyc1",
+    size: "db-s-1vcpu-1gb",
+});
+```
+
+### Create a new Redis database cluster
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as digitalocean from "@pulumi/digitalocean";
+
+const redisExample = new digitalocean.DatabaseCluster("redis-example", {
+    engine: "redis",
+    nodeCount: 1,
+    region: "nyc1",
+    size: "db-s-1vcpu-1gb",
+});
+```
+
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/database_cluster.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseCluster-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L112" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L140" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DatabaseCluster(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DatabaseClusterArgs'>DatabaseClusterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DatabaseCluster resource with the given unique name, arguments, and options.
 
@@ -621,13 +710,15 @@ Create a DatabaseCluster resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L67" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DatabaseClusterState'>DatabaseClusterState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DatabaseCluster'>DatabaseCluster</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DatabaseCluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -635,23 +726,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L58" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L78" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DatabaseCluster.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -659,10 +754,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-database">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L60" >}}">property <b>database</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L88" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>database: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the cluster's default database.
@@ -670,21 +767,25 @@ Name of the cluster's default database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-engine">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L64" >}}">property <b>engine</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L92" >}}">property <b>engine</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-Database engine used by the cluster (ex. `pg` for PostreSQL).
+Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, or `redis` for Redis).
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L68" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L96" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database cluster's hostname.
@@ -692,10 +793,12 @@ Database cluster's hostname.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L58" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -704,13 +807,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-maintenanceWindows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L72" >}}">property <b>maintenanceWindows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L100" >}}">property <b>maintenanceWindows</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>maintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    day: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    hour: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>maintenanceWindows: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseClusterMaintenanceWindow'>DatabaseClusterMaintenanceWindow</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines when the automatic maintenance should be performed for the database cluster.
@@ -718,10 +820,12 @@ Defines when the automatic maintenance should be performed for the database clus
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L76" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L104" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database cluster.
@@ -729,10 +833,12 @@ The name of the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-nodeCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L80" >}}">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L108" >}}">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Number of nodes that will be included in the cluster.
@@ -740,10 +846,12 @@ Number of nodes that will be included in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L84" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L112" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Password for the cluster's default user.
@@ -751,10 +859,12 @@ Password for the cluster's default user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L88" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L116" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Network port that the database cluster is listening on.
@@ -762,10 +872,12 @@ Network port that the database cluster is listening on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L92" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L120" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 DigitalOcean region where the cluster will reside.
@@ -773,10 +885,12 @@ DigitalOcean region where the cluster will reside.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L96" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L124" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
@@ -784,10 +898,12 @@ Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-uri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L100" >}}">property <b>uri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L128" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>uri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full URI for connecting to the database cluster.
@@ -795,10 +911,12 @@ The full URI for connecting to the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L104" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L132" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the database cluster.
@@ -806,10 +924,12 @@ The uniform resource name of the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L108" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L136" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>user: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Username for the cluster's default user.
@@ -817,10 +937,12 @@ Username for the cluster's default user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseCluster-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L112" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L140" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Engine version used by the cluster (ex. `11` for PostgreSQL 11).
@@ -829,10 +951,12 @@ Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DnsRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L35" >}}">class <b>DnsRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L37" >}}">class <b>DnsRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean DNS record resource.
@@ -862,13 +986,15 @@ export const fqdn = www.fqdn;
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DnsRecord-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L105" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L107" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DnsRecord(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DnsRecordArgs'>DnsRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DnsRecord resource with the given unique name, arguments, and options.
 
@@ -879,13 +1005,15 @@ Create a DnsRecord resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L44" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L46" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DnsRecordState'>DnsRecordState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DnsRecord'>DnsRecord</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DnsRecord resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -893,23 +1021,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L37" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L55" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L57" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DnsRecord.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -917,10 +1049,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-domain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L65" >}}">property <b>domain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L67" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to add the record to.
@@ -928,10 +1062,12 @@ The domain to add the record to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-flags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L69" >}}">property <b>flags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L71" >}}">property <b>flags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>flags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
@@ -939,10 +1075,12 @@ The flags of the record. Only valid when type is `CAA`. Must be between 0 and 25
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L73" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L75" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fqdn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the record
@@ -950,10 +1088,12 @@ The FQDN of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L37" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -962,10 +1102,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L77" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L79" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the record.
@@ -973,10 +1115,12 @@ The name of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L81" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L83" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
@@ -984,10 +1128,12 @@ The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L85" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L87" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
@@ -995,10 +1141,12 @@ The priority of the record. Only valid when type is `MX` or `SRV`. Must be betwe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-tag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L89" >}}">property <b>tag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L91" >}}">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
@@ -1006,10 +1154,12 @@ The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L93" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L95" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time to live for the record, in seconds. Must be at least 0.
@@ -1017,10 +1167,12 @@ The time to live for the record, in seconds. Must be at least 0.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L97" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L99" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
@@ -1028,10 +1180,12 @@ The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L37" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1040,10 +1194,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L101" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L103" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the record.
@@ -1051,10 +1207,12 @@ The value of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecord-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L105" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L107" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
@@ -1063,10 +1221,12 @@ The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Domain">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L25" >}}">class <b>Domain</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L27" >}}">class <b>Domain</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean domain resource.
@@ -1088,13 +1248,15 @@ const defaultDomain = new digitalocean.Domain("default", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L64" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L66" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Domain(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DomainArgs'>DomainArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Domain resource with the given unique name, arguments, and options.
 
@@ -1105,13 +1267,15 @@ Create a Domain resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L34" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L36" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DomainState'>DomainState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Domain'>Domain</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Domain resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1119,23 +1283,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L27" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L45" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L47" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Domain.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1143,10 +1311,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L27" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1155,10 +1325,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L56" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L58" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the domain. If specified, this IP
@@ -1167,10 +1339,12 @@ is used to created an initial A record for the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L60" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L62" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the domain
@@ -1178,10 +1352,12 @@ The name of the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L64" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L66" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the domain
@@ -1190,10 +1366,12 @@ The uniform resource name of the domain
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Droplet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L30" >}}">class <b>Droplet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L32" >}}">class <b>Droplet</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Droplet resource. This can be used to create,
@@ -1218,13 +1396,15 @@ const web = new digitalocean.Droplet("web", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Droplet-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L159" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L162" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Droplet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DropletArgs'>DropletArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Droplet resource with the given unique name, arguments, and options.
 
@@ -1235,13 +1415,15 @@ Create a Droplet resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DropletState'>DropletState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Droplet'>Droplet</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Droplet resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1249,23 +1431,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Droplet.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1273,10 +1459,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-backups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L61" >}}">property <b>backups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L63" >}}">property <b>backups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>backups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if backups are made. Defaults to
@@ -1284,11 +1472,23 @@ false.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="Droplet-disk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L65" >}}">property <b>disk</b></a>
+<h3 class="pdoc-member-header" id="Droplet-createdAt">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L64" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="Droplet-disk">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L68" >}}">property <b>disk</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>disk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the instance's disk in GB
@@ -1296,10 +1496,12 @@ The size of the instance's disk in GB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1308,10 +1510,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L69" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L72" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplet image ID or slug.
@@ -1319,10 +1523,12 @@ The Droplet image ID or slug.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-ipv4Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L73" >}}">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L76" >}}">property <b>ipv4Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipv4Address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 address
@@ -1330,10 +1536,12 @@ The IPv4 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-ipv4AddressPrivate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L77" >}}">property <b>ipv4AddressPrivate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L80" >}}">property <b>ipv4AddressPrivate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipv4AddressPrivate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The private networking IPv4 address
@@ -1341,10 +1549,12 @@ The private networking IPv4 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-ipv6">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L81" >}}">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L84" >}}">property <b>ipv6</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipv6: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if IPv6 is enabled. Defaults to false.
@@ -1352,10 +1562,12 @@ Boolean controlling if IPv6 is enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-ipv6Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L85" >}}">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L88" >}}">property <b>ipv6Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipv6Address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 address
@@ -1363,10 +1575,12 @@ The IPv6 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-locked">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L89" >}}">property <b>locked</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L92" >}}">property <b>locked</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>locked: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is the Droplet locked
@@ -1374,18 +1588,22 @@ Is the Droplet locked
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-memory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L90" >}}">property <b>memory</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L93" >}}">property <b>memory</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>memory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-monitoring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L95" >}}">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L98" >}}">property <b>monitoring</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>monitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling whether monitoring agent is installed.
@@ -1394,10 +1612,12 @@ Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L99" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L102" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplet name.
@@ -1405,10 +1625,12 @@ The Droplet name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-priceHourly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L103" >}}">property <b>priceHourly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L106" >}}">property <b>priceHourly</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>priceHourly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Droplet hourly price
@@ -1416,10 +1638,12 @@ Droplet hourly price
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-priceMonthly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L107" >}}">property <b>priceMonthly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L110" >}}">property <b>priceMonthly</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>priceMonthly: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Droplet monthly price
@@ -1427,10 +1651,12 @@ Droplet monthly price
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-privateNetworking">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L112" >}}">property <b>privateNetworking</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L115" >}}">property <b>privateNetworking</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>privateNetworking: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if private networks are
@@ -1439,10 +1665,12 @@ enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L116" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L119" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region to start in.
@@ -1450,10 +1678,12 @@ The region to start in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-resizeDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L123" >}}">property <b>resizeDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L126" >}}">property <b>resizeDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resizeDisk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling whether to increase the disk
@@ -1464,10 +1694,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L127" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L130" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
@@ -1475,10 +1707,12 @@ The unique slug that indentifies the type of Droplet. You can find a list of ava
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-sshKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L134" >}}">property <b>sshKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L137" >}}">property <b>sshKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>sshKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of SSH IDs or fingerprints to enable in
@@ -1489,10 +1723,12 @@ to retrieve them.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L138" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L141" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the Droplet
@@ -1500,10 +1736,12 @@ The status of the Droplet
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L142" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L145" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the tags to be applied to this Droplet.
@@ -1511,10 +1749,12 @@ A list of the tags to be applied to this Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L147" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L150" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the Droplet
@@ -1523,10 +1763,12 @@ The uniform resource name of the Droplet
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-userData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L151" >}}">property <b>userData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L154" >}}">property <b>userData</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string of the desired User Data for the Droplet.
@@ -1534,10 +1776,12 @@ A string of the desired User Data for the Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-vcpus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L155" >}}">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L158" >}}">property <b>vcpus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>vcpus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of the instance's virtual CPUs
@@ -1545,10 +1789,12 @@ The number of the instance's virtual CPUs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Droplet-volumeIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L159" >}}">property <b>volumeIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L162" >}}">property <b>volumeIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>volumeIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
@@ -1557,10 +1803,12 @@ A list of the IDs of each [block storage volume](https://www.terraform.io/docs/p
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DropletSnapshot">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L30" >}}">class <b>DropletSnapshot</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L32" >}}">class <b>DropletSnapshot</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource which can be used to create a snapshot from an existing DigitalOcean Droplet.
@@ -1585,13 +1833,15 @@ const webSnapshot = new digitalocean.DropletSnapshot("web-snapshot", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DropletSnapshot-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L80" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> DropletSnapshot(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#DropletSnapshotArgs'>DropletSnapshotArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a DropletSnapshot resource with the given unique name, arguments, and options.
 
@@ -1602,13 +1852,15 @@ Create a DropletSnapshot resource with the given unique name, arguments, and opt
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#DropletSnapshotState'>DropletSnapshotState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#DropletSnapshot'>DropletSnapshot</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing DropletSnapshot resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1616,23 +1868,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of DropletSnapshot.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1640,10 +1896,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L60" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L62" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time the Droplet snapshot was created.
@@ -1651,10 +1909,12 @@ The date and time the Droplet snapshot was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L64" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L66" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Droplet from which the snapshot will be taken.
@@ -1662,10 +1922,12 @@ The ID of the Droplet from which the snapshot will be taken.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1674,10 +1936,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-minDiskSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L68" >}}">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L70" >}}">property <b>minDiskSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size in gigabytes required for a Droplet to be created based on this snapshot.
@@ -1685,10 +1949,12 @@ The minimum size in gigabytes required for a Droplet to be created based on this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L72" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L74" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the Droplet snapshot.
@@ -1696,10 +1962,12 @@ A name for the Droplet snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-regions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L76" >}}">property <b>regions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L78" >}}">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of DigitalOcean region "slugs" indicating where the droplet snapshot is available.
@@ -1707,10 +1975,12 @@ A list of DigitalOcean region "slugs" indicating where the droplet snapshot is a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L80" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L82" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The billable size of the Droplet snapshot in gigabytes.
@@ -1718,10 +1988,12 @@ The billable size of the Droplet snapshot in gigabytes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshot-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L32" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -1731,10 +2003,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Firewall">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L87" >}}">class <b>Firewall</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L89" >}}">class <b>Firewall</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Cloud Firewall resource. This can be used to create,
@@ -1818,13 +2092,15 @@ const webFirewall = new digitalocean.Firewall("web", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Firewall-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L153" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L155" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Firewall(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#FirewallArgs'>FirewallArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Firewall resource with the given unique name, arguments, and options.
 
@@ -1835,13 +2111,15 @@ Create a Firewall resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L96" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L98" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FirewallState'>FirewallState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Firewall'>Firewall</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Firewall resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -1849,23 +2127,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L89" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L107" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L109" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Firewall.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -1873,10 +2155,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L118" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L120" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A time value given in ISO8601 combined date and time format
@@ -1885,10 +2169,12 @@ that represents when the Firewall was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L123" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L125" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of the IDs of the Droplets assigned
@@ -1897,10 +2183,12 @@ to the Firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L89" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -1909,17 +2197,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-inboundRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L128" >}}">property <b>inboundRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L130" >}}">property <b>inboundRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>inboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    portRange: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    sourceAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    sourceDropletIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];
-    sourceLoadBalancerUids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    sourceTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>inboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FirewallInboundRule'>FirewallInboundRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The inbound access rule block for the Firewall.
@@ -1928,10 +2211,12 @@ The `inboundRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L132" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L134" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Firewall name
@@ -1939,17 +2224,12 @@ The Firewall name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-outboundRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L137" >}}">property <b>outboundRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L139" >}}">property <b>outboundRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>outboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    destinationAddresses: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    destinationDropletIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];
-    destinationLoadBalancerUids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    destinationTags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-    portRange: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>outboundRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FirewallOutboundRule'>FirewallOutboundRule</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The outbound access rule block for the Firewall.
@@ -1958,14 +2238,12 @@ The `outboundRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-pendingChanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L144" >}}">property <b>pendingChanges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L146" >}}">property <b>pendingChanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>pendingChanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    dropletId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    removing: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-    status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>pendingChanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FirewallPendingChange'>FirewallPendingChange</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An list of object containing the fields, "dropletId",
@@ -1976,10 +2254,12 @@ have been successfully applied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L149" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L151" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A status string indicating the current state of the Firewall.
@@ -1988,10 +2268,12 @@ This can be "waiting", "succeeded", or "failed".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L153" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L155" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The names of the Tags assigned to the Firewall.
@@ -1999,10 +2281,12 @@ The names of the Tags assigned to the Firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Firewall-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L89" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2012,10 +2296,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FloatingIp">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L33" >}}">class <b>FloatingIp</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L35" >}}">class <b>FloatingIp</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Floating IP to represent a publicly-accessible static IP addresses that can be mapped to one of your Droplets.
@@ -2045,13 +2331,15 @@ const foobarFloatingIp = new digitalocean.FloatingIp("foobar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FloatingIp-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L75" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L77" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FloatingIp(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FloatingIpArgs'>FloatingIpArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a FloatingIp resource with the given unique name, arguments, and options.
 
@@ -2062,13 +2350,15 @@ Create a FloatingIp resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L42" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L44" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FloatingIpState'>FloatingIpState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FloatingIp'>FloatingIp</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing FloatingIp resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2076,23 +2366,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L35" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L53" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L55" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of FloatingIp.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2100,10 +2394,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L63" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L65" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of Droplet that the Floating IP will be assigned to.
@@ -2111,10 +2407,12 @@ The ID of Droplet that the Floating IP will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L35" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2123,10 +2421,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L67" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L69" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP Address of the resource
@@ -2134,10 +2434,12 @@ The IP Address of the resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L71" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L73" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region that the Floating IP is reserved to.
@@ -2145,10 +2447,12 @@ The region that the Floating IP is reserved to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIp-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L75" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L77" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the floating ip
@@ -2157,10 +2461,12 @@ The uniform resource name of the floating ip
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FloatingIpAssignment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L36" >}}">class <b>FloatingIpAssignment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L38" >}}">class <b>FloatingIpAssignment</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a resource for assigning an existing DigitalOcean Floating IP to a Droplet. This
@@ -2193,13 +2499,15 @@ const foobarFloatingIpAssignment = new digitalocean.FloatingIpAssignment("foobar
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FloatingIpAssignment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L70" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L72" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> FloatingIpAssignment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#FloatingIpAssignmentArgs'>FloatingIpAssignmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a FloatingIpAssignment resource with the given unique name, arguments, and options.
 
@@ -2210,13 +2518,15 @@ Create a FloatingIpAssignment resource with the given unique name, arguments, an
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L45" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L47" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#FloatingIpAssignmentState'>FloatingIpAssignmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#FloatingIpAssignment'>FloatingIpAssignment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing FloatingIpAssignment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2224,23 +2534,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L38" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L56" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L58" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of FloatingIpAssignment.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2248,10 +2562,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignment-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L66" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L68" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of Droplet that the Floating IP will be assigned to.
@@ -2259,10 +2575,12 @@ The ID of Droplet that the Floating IP will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L38" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2271,10 +2589,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignment-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L70" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L72" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Floating IP to assign to the Droplet.
@@ -2282,10 +2602,12 @@ The Floating IP to assign to the Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L38" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2295,10 +2617,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KubernetesCluster">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L14" >}}">class <b>KubernetesCluster</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L16" >}}">class <b>KubernetesCluster</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the [official documentation](https://www.digitalocean.com/docs/kubernetes/).
@@ -2307,13 +2631,15 @@ Provides a DigitalOcean Kubernetes cluster resource. This can be used to create,
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="KubernetesCluster-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L99" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L101" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> KubernetesCluster(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#KubernetesClusterArgs'>KubernetesClusterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a KubernetesCluster resource with the given unique name, arguments, and options.
 
@@ -2324,13 +2650,15 @@ Create a KubernetesCluster resource with the given unique name, arguments, and o
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L23" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L25" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#KubernetesClusterState'>KubernetesClusterState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#KubernetesCluster'>KubernetesCluster</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing KubernetesCluster resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2338,23 +2666,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L16" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L34" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L36" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of KubernetesCluster.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2362,10 +2694,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-clusterSubnet">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L44" >}}">property <b>clusterSubnet</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L46" >}}">property <b>clusterSubnet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>clusterSubnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The range of IP addresses in the overlay network of the Kubernetes cluster.
@@ -2373,10 +2707,12 @@ The range of IP addresses in the overlay network of the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L48" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L50" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time when the Kubernetes cluster was created.
@@ -2384,10 +2720,12 @@ The date and time when the Kubernetes cluster was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L52" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L54" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>endpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The base URL of the API server on the Kubernetes master node.
@@ -2395,10 +2733,12 @@ The base URL of the API server on the Kubernetes master node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L16" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2407,10 +2747,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-ipv4Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L56" >}}">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L58" >}}">property <b>ipv4Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ipv4Address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The public IPv4 address of the Kubernetes master node.
@@ -2418,24 +2760,22 @@ The public IPv4 address of the Kubernetes master node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-kubeConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L57" >}}">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L59" >}}">property <b>kubeConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    clientCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    clientKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    clusterCaCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    rawConfig: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>kubeConfigs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L61" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L63" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the Kubernetes cluster.
@@ -2443,23 +2783,12 @@ A name for the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-nodePool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L69" >}}">property <b>nodePool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L71" >}}">property <b>nodePool</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    nodeCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    nodes: {
-        createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesClusterNodePool'>KubernetesClusterNodePool</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block representing the cluster's default node pool. Additional node pools may be added to the cluster using the `digitalocean..KubernetesNodePool` resource. The following arguments may be specified:
@@ -2471,10 +2800,12 @@ A block representing the cluster's default node pool. Additional node pools may 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L73" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L75" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the region where the Kubernetes cluster will be created.
@@ -2482,10 +2813,12 @@ The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-serviceSubnet">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L77" >}}">property <b>serviceSubnet</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L79" >}}">property <b>serviceSubnet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>serviceSubnet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The range of assignable IP addresses for services running in the Kubernetes cluster.
@@ -2493,10 +2826,12 @@ The range of assignable IP addresses for services running in the Kubernetes clus
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L81" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L83" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
@@ -2504,10 +2839,12 @@ A string indicating the current status of the cluster. Potential values include 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L85" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L87" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag names to be applied to the Kubernetes cluster.
@@ -2515,10 +2852,12 @@ A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-updatedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L95" >}}">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L97" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time when the Kubernetes cluster was last updated.
@@ -2532,10 +2871,12 @@ The date and time when the Kubernetes cluster was last updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L16" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2544,10 +2885,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesCluster-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L99" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L101" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the version of Kubernetes used for the cluster.
@@ -2556,10 +2899,12 @@ The slug identifier for the version of Kubernetes used for the cluster.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KubernetesNodePool">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L37" >}}">class <b>KubernetesNodePool</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L39" >}}">class <b>KubernetesNodePool</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Kubernetes node pool resource. While the default node pool must be defined in the `digitalocean..KubernetesCluster` resource, this resource can be used to add additional ones to a cluster.
@@ -2591,13 +2936,15 @@ const bar = new digitalocean.KubernetesNodePool("bar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="KubernetesNodePool-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L92" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L94" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> KubernetesNodePool(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#KubernetesNodePoolArgs'>KubernetesNodePoolArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a KubernetesNodePool resource with the given unique name, arguments, and options.
 
@@ -2608,13 +2955,15 @@ Create a KubernetesNodePool resource with the given unique name, arguments, and 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L46" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L48" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#KubernetesNodePoolState'>KubernetesNodePoolState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#KubernetesNodePool'>KubernetesNodePool</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing KubernetesNodePool resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2622,23 +2971,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L39" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L57" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L59" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of KubernetesNodePool.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2646,10 +2999,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-clusterId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L67" >}}">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L69" >}}">property <b>clusterId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Kubernetes cluster to which the node pool is associated.
@@ -2657,10 +3012,12 @@ The ID of the Kubernetes cluster to which the node pool is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L39" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2669,10 +3026,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L71" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L73" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the node pool.
@@ -2680,10 +3039,12 @@ A name for the node pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-nodeCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L75" >}}">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L77" >}}">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of Droplet instances in the node pool.
@@ -2691,16 +3052,12 @@ The number of Droplet instances in the node pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-nodes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L84" >}}">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L86" >}}">property <b>nodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#KubernetesNodePoolNode'>KubernetesNodePoolNode</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of nodes in the pool. Each node exports the following attributes:
@@ -2713,10 +3070,12 @@ A list of nodes in the pool. Each node exports the following attributes:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L88" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L90" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the type of Droplet to be used as workers in the node pool.
@@ -2724,10 +3083,12 @@ The slug identifier for the type of Droplet to be used as workers in the node po
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L92" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L94" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag names to be applied to the Kubernetes cluster.
@@ -2735,10 +3096,12 @@ A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePool-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L39" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -2748,10 +3111,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L79" >}}">class <b>LoadBalancer</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L81" >}}">class <b>LoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Load Balancer resource. This can be used to create,
@@ -2825,13 +3190,15 @@ const publicLoadBalancer = new digitalocean.LoadBalancer("public", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancer-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L160" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L162" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> LoadBalancer(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#LoadBalancerArgs'>LoadBalancerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a LoadBalancer resource with the given unique name, arguments, and options.
 
@@ -2842,13 +3209,15 @@ Create a LoadBalancer resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L88" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L90" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#LoadBalancerState'>LoadBalancerState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#LoadBalancer'>LoadBalancer</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing LoadBalancer resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -2856,23 +3225,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L81" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L99" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L101" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of LoadBalancer.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -2880,10 +3253,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-algorithm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L111" >}}">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L113" >}}">property <b>algorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Algorithm'>Algorithm</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The load balancing algorithm used to determine
@@ -2893,10 +3268,12 @@ or `leastConnections`. The default value is `roundRobin`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L115" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L117" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the IDs of each droplet to be attached to the Load Balancer.
@@ -2904,10 +3281,12 @@ A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-dropletTag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L119" >}}">property <b>dropletTag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L121" >}}">property <b>dropletTag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dropletTag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
@@ -2915,10 +3294,12 @@ The name of a Droplet tag corresponding to Droplets to be assigned to the Load B
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-enableProxyProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L125" >}}">property <b>enableProxyProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L127" >}}">property <b>enableProxyProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>enableProxyProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean value indicating whether PROXY
@@ -2928,17 +3309,12 @@ the backend service. Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-forwardingRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L130" >}}">property <b>forwardingRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L132" >}}">property <b>forwardingRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    certificateId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    entryPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    entryProtocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    targetPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    targetProtocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tlsPassthrough: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;
-}[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LoadBalancerForwardingRule'>LoadBalancerForwardingRule</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of `forwardingRule` to be assigned to the
@@ -2947,18 +3323,12 @@ Load Balancer. The `forwardingRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-healthcheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L135" >}}">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L137" >}}">property <b>healthcheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>healthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    checkIntervalSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    healthyThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    responseTimeoutSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    unhealthyThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>healthcheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LoadBalancerHealthcheck'>LoadBalancerHealthcheck</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `healthcheck` block to be assigned to the
@@ -2967,10 +3337,12 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L81" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -2979,18 +3351,22 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-ip">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L136" >}}">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L138" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L140" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L142" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Load Balancer name
@@ -2998,10 +3374,12 @@ The Load Balancer name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-redirectHttpToHttps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L146" >}}">property <b>redirectHttpToHttps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L148" >}}">property <b>redirectHttpToHttps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>redirectHttpToHttps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean value indicating whether
@@ -3011,10 +3389,12 @@ Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L150" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L152" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region to start in
@@ -3022,22 +3402,22 @@ The region to start in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L151" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L153" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-stickySessions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L156" >}}">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L158" >}}">property <b>stickySessions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>stickySessions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{
-    cookieName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    cookieTtlSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'>public </span>stickySessions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#LoadBalancerStickySessions'>LoadBalancerStickySessions</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `stickySessions` block to be assigned to the
@@ -3046,10 +3426,12 @@ Load Balancer. The `stickySessions` block is documented below. Only 1 stickySess
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancer-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L160" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L162" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name for the Load Balancer
@@ -3058,10 +3440,12 @@ The uniform resource name for the Load Balancer
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Project">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L61" >}}">class <b>Project</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L63" >}}">class <b>Project</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Project resource.
@@ -3119,13 +3503,15 @@ const playground = new digitalocean.Project("playground", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Project-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L123" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L125" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Project(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ProjectArgs'>ProjectArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Project resource with the given unique name, arguments, and options.
 
@@ -3136,13 +3522,15 @@ Create a Project resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L70" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L72" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#ProjectState'>ProjectState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Project'>Project</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Project resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3150,23 +3538,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L63" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L81" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L83" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Project.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3174,10 +3566,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L91" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L93" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the date and time when the project was created, (ISO8601)
@@ -3185,10 +3579,12 @@ the date and time when the project was created, (ISO8601)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L95" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L97" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the description of the project
@@ -3196,10 +3592,12 @@ the description of the project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-environment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L99" >}}">property <b>environment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L101" >}}">property <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`)
@@ -3207,10 +3605,12 @@ the environment of the project's resources. The possible values are: `Developmen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L63" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3219,10 +3619,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L103" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L105" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Project
@@ -3230,10 +3632,12 @@ The name of the Project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-ownerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L107" >}}">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L109" >}}">property <b>ownerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the id of the project owner.
@@ -3241,10 +3645,12 @@ the id of the project owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-ownerUuid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L111" >}}">property <b>ownerUuid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L113" >}}">property <b>ownerUuid</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>ownerUuid: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the unique universal identifier of the project owner.
@@ -3252,10 +3658,12 @@ the unique universal identifier of the project owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-purpose">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L115" >}}">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L117" >}}">property <b>purpose</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>purpose: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the purpose of the project, (Default: "Web Application")
@@ -3263,10 +3671,12 @@ the purpose of the project, (Default: "Web Application")
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L119" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L121" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 a list of uniform resource names (URNs) for the resources associated with the project
@@ -3274,10 +3684,12 @@ a list of uniform resource names (URNs) for the resources associated with the pr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-updatedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L123" >}}">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L125" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the date and time when the project was last updated, (ISO8601)
@@ -3285,10 +3697,12 @@ the date and time when the project was last updated, (ISO8601)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Project-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L63" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3298,28 +3712,32 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L15" >}}">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L17" >}}">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The provider type for the digitalocean package. By default, resources use package-wide configuration
 settings, however an explicit `Provider` instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
-[documentation](https://www.pulumi.com/docs/intro/concepts/programming-model/#providers) for more information.
+[documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/index.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L28" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L30" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Provider(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#ProviderArgs'>ProviderArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ResourceOptions'>pulumi.ResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Provider resource with the given unique name, arguments, and options.
 
@@ -3330,23 +3748,27 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L17" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L23" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L25" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Provider.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3354,10 +3776,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L17" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3366,10 +3790,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L17" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3379,10 +3805,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SpacesBucket">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L47" >}}">class <b>SpacesBucket</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L49" >}}">class <b>SpacesBucket</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a bucket resource for Spaces, DigitalOcean's object storage product.
@@ -3424,13 +3852,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SpacesBucket-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L97" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L99" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SpacesBucket(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#SpacesBucketArgs'>SpacesBucketArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SpacesBucket resource with the given unique name, arguments, and options.
 
@@ -3441,13 +3871,15 @@ Create a SpacesBucket resource with the given unique name, arguments, and option
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L56" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L58" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SpacesBucketState'>SpacesBucketState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SpacesBucket'>SpacesBucket</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SpacesBucket resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3455,23 +3887,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L49" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L67" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L69" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SpacesBucket.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3479,10 +3915,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L77" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L79" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>acl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Canned ACL applied on bucket creation (`private` or `public-read`)
@@ -3490,10 +3928,12 @@ Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-bucketDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L81" >}}">property <b>bucketDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L83" >}}">property <b>bucketDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>bucketDomainName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
@@ -3501,10 +3941,12 @@ The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L85" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L87" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>forceDestroy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
@@ -3512,10 +3954,12 @@ Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L49" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3524,10 +3968,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L89" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L91" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket
@@ -3535,10 +3981,12 @@ The name of the bucket
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L93" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L95" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region where the bucket resides (Defaults to `nyc3`)
@@ -3546,10 +3994,12 @@ The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucket-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L97" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L99" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name for the bucket
@@ -3558,23 +4008,27 @@ The uniform resource name for the bucket
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SshKey">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L10" >}}">class <b>SshKey</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L12" >}}">class <b>SshKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/r/ssh_key.html.markdown.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SshKey-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L49" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L51" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> SshKey(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#SshKeyArgs'>SshKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a SshKey resource with the given unique name, arguments, and options.
 
@@ -3585,13 +4039,15 @@ Create a SshKey resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L19" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L21" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#SshKeyState'>SshKeyState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#SshKey'>SshKey</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing SshKey resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3599,23 +4055,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L12" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L30" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L32" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of SshKey.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3623,10 +4083,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-fingerprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L40" >}}">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L42" >}}">property <b>fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>fingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fingerprint of the SSH key
@@ -3634,10 +4096,12 @@ The fingerprint of the SSH key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L12" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3646,10 +4110,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L44" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L46" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSH key for identification
@@ -3657,10 +4123,12 @@ The name of the SSH key for identification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-publicKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L49" >}}">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L51" >}}">property <b>publicKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The public key. If this is a file, it
@@ -3669,10 +4137,12 @@ can be read using the file interpolation function
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKey-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L12" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3682,10 +4152,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Tag">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L32" >}}">class <b>Tag</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L34" >}}">class <b>Tag</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Tag resource. A Tag is a label that can be applied to a
@@ -3714,13 +4186,15 @@ const web = new digitalocean.Droplet("web", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Tag-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L62" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L64" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Tag(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args?: <a href='#TagArgs'>TagArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Tag resource with the given unique name, arguments, and options.
 
@@ -3731,13 +4205,15 @@ Create a Tag resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L41" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L43" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#TagState'>TagState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Tag'>Tag</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Tag resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3745,23 +4221,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L34" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L52" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L54" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Tag.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3769,10 +4249,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L34" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3781,10 +4263,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L62" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L64" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the tag
@@ -3792,10 +4276,12 @@ The name of the tag
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Tag-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L34" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -3805,10 +4291,12 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Volume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L53" >}}">class <b>Volume</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L55" >}}">class <b>Volume</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Block Storage volume which can be attached to a Droplet in order to provide expanded storage.
@@ -3856,13 +4344,15 @@ const foobarVolume = new digitalocean.Volume("foobar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Volume-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L123" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L125" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> Volume(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VolumeArgs'>VolumeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a Volume resource with the given unique name, arguments, and options.
 
@@ -3873,13 +4363,15 @@ Create a Volume resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L62" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L64" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeState'>VolumeState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#Volume'>Volume</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing Volume resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -3887,23 +4379,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L55" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L73" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L75" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of Volume.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -3911,10 +4407,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L83" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L85" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
@@ -3922,10 +4420,12 @@ A free-form text field up to a limit of 1024 bytes to describe a block storage v
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L87" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L89" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of associated droplet ids.
@@ -3933,10 +4433,12 @@ A list of associated droplet ids.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-filesystemLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L91" >}}">property <b>filesystemLabel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L93" >}}">property <b>filesystemLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>filesystemLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filesystem label for the block storage volume.
@@ -3944,10 +4446,12 @@ Filesystem label for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-filesystemType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L95" >}}">property <b>filesystemType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L97" >}}">property <b>filesystemType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>filesystemType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filesystem type (`xfs` or `ext4`) for the block storage volume.
@@ -3955,10 +4459,12 @@ Filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L55" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -3967,10 +4473,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-initialFilesystemLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L99" >}}">property <b>initialFilesystemLabel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L101" >}}">property <b>initialFilesystemLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>initialFilesystemLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Initial filesystem label for the block storage volume.
@@ -3978,10 +4486,12 @@ Initial filesystem label for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-initialFilesystemType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L103" >}}">property <b>initialFilesystemType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L105" >}}">property <b>initialFilesystemType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>initialFilesystemType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#FilesystemType'>FilesystemType</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
@@ -3989,10 +4499,12 @@ Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L107" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L109" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
@@ -4000,10 +4512,12 @@ A name for the block storage volume. Must be lowercase and be composed only of n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L111" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L113" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region that the block storage volume will be created in.
@@ -4011,10 +4525,12 @@ The region that the block storage volume will be created in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L115" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L117" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the block storage volume in GiB. If updated, can only be expanded.
@@ -4022,10 +4538,12 @@ The size of the block storage volume in GiB. If updated, can only be expanded.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L119" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L121" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>snapshotId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
@@ -4033,10 +4551,12 @@ The ID of an existing volume snapshot from which the new volume will be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Volume-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L123" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L125" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the uniform resource name for the volume.
@@ -4045,10 +4565,12 @@ the uniform resource name for the volume.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachment">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L38" >}}">class <b>VolumeAttachment</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L40" >}}">class <b>VolumeAttachment</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Manages attaching a Volume to a Droplet.
@@ -4083,13 +4605,15 @@ const foobarVolumeAttachment = new digitalocean.VolumeAttachment("foobar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachment-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L72" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L74" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VolumeAttachmentArgs'>VolumeAttachmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a VolumeAttachment resource with the given unique name, arguments, and options.
 
@@ -4100,13 +4624,15 @@ Create a VolumeAttachment resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L47" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L49" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeAttachmentState'>VolumeAttachmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VolumeAttachment'>VolumeAttachment</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing VolumeAttachment resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4114,23 +4640,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L40" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L58" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L60" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of VolumeAttachment.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4138,10 +4668,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L68" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L70" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the Droplet to attach the volume to.
@@ -4149,10 +4681,12 @@ ID of the Droplet to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L40" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4161,10 +4695,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L40" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4173,10 +4709,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachment-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L72" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L74" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the Volume to be attached to the Droplet.
@@ -4185,10 +4723,12 @@ ID of the Volume to be attached to the Droplet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeSnapshot">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L30" >}}">class <b>VolumeSnapshot</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L32" >}}">class <b>VolumeSnapshot</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Provides a DigitalOcean Volume Snapshot which can be used to create a snapshot from an existing volume.
@@ -4213,13 +4753,15 @@ const foobarVolumeSnapshot = new digitalocean.VolumeSnapshot("foobar", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeSnapshot-constructor">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L80" >}}"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L82" >}}"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span><span class='kd'>new</span> VolumeSnapshot(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#VolumeSnapshotArgs'>VolumeSnapshotArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Create a VolumeSnapshot resource with the given unique name, arguments, and options.
 
@@ -4230,13 +4772,15 @@ Create a VolumeSnapshot resource with the given unique name, arguments, and opti
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-get">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L39" >}}">method <b>get</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L41" >}}">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#VolumeSnapshotState'>VolumeSnapshotState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#VolumeSnapshot'>VolumeSnapshot</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Get an existing VolumeSnapshot resource's state with the given name, ID, and optional extra
 properties used to qualify the lookup.
@@ -4244,23 +4788,27 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-getProvider">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L19" >}}">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L32" >}}">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): ProviderResource | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-isInstance">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L50" >}}">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L52" >}}">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Returns true if the given object is an instance of VolumeSnapshot.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
@@ -4268,10 +4816,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L60" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L62" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time the volume snapshot was created.
@@ -4279,10 +4829,12 @@ The date and time the volume snapshot was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L212" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L32" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.  It is set during
@@ -4291,10 +4843,12 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-minDiskSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L64" >}}">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L66" >}}">property <b>minDiskSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>minDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
@@ -4302,10 +4856,12 @@ The minimum size in gigabytes required for a volume to be created based on this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L68" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L70" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the volume snapshot.
@@ -4313,10 +4869,12 @@ A name for the volume snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-regions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L72" >}}">property <b>regions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L74" >}}">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>regions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#Region'>Region</a>[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
@@ -4324,10 +4882,12 @@ A list of DigitalOcean region "slugs" indicating where the volume snapshot is av
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L76" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L78" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The billable size of the volume snapshot in gigabytes.
@@ -4335,10 +4895,12 @@ The billable size of the volume snapshot in gigabytes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="node_modules/@pulumi/pulumi/resource.d.ts#L17" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L32" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 urn is the stable logical URN used to distinctly address a resource, both before and after
@@ -4347,10 +4909,12 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshot-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L80" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L82" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>public </span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the volume from which the volume snapshot originated.
@@ -4359,26 +4923,30 @@ The ID of the volume from which the volume snapshot originated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getCertificate">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L10" >}}">function <b>getCertificate</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L12" >}}">function <b>getCertificate</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getCertificate(args: <a href='#GetCertificateArgs'>GetCertificateArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetCertificateResult'>GetCertificateResult</a>&gt; &amp; <a href='#GetCertificateResult'>GetCertificateResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/certificate.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getDatabaseCluster">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L24" >}}">function <b>getDatabaseCluster</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L26" >}}">function <b>getDatabaseCluster</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getDatabaseCluster(args: <a href='#GetDatabaseClusterArgs'>GetDatabaseClusterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDatabaseClusterResult'>GetDatabaseClusterResult</a>&gt; &amp; <a href='#GetDatabaseClusterResult'>GetDatabaseClusterResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Provides information on a DigitalOcean database cluster resource.
 
@@ -4399,39 +4967,45 @@ const example = digitalocean.getDatabaseCluster({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getDomain">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L10" >}}">function <b>getDomain</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L12" >}}">function <b>getDomain</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getDomain(args: <a href='#GetDomainArgs'>GetDomainArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDomainResult'>GetDomainResult</a>&gt; &amp; <a href='#GetDomainResult'>GetDomainResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/domain.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getDroplet">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L10" >}}">function <b>getDroplet</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L12" >}}">function <b>getDroplet</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getDroplet(args: <a href='#GetDropletArgs'>GetDropletArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDropletResult'>GetDropletResult</a>&gt; &amp; <a href='#GetDropletResult'>GetDropletResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/droplet.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getDropletSnapshot">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L29" >}}">function <b>getDropletSnapshot</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L31" >}}">function <b>getDropletSnapshot</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getDropletSnapshot(args?: <a href='#GetDropletSnapshotArgs'>GetDropletSnapshotArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetDropletSnapshotResult'>GetDropletSnapshotResult</a>&gt; &amp; <a href='#GetDropletSnapshotResult'>GetDropletSnapshotResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Droplet snapshots are saved instances of a Droplet. Use this data
 source to retrieve the ID of a DigitalOcean Droplet snapshot for use in other
@@ -4460,118 +5034,138 @@ const webSnapshot = digitalocean.getDropletSnapshot({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="utilities.ts#L5" >}}">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="utilities.ts#L15" >}}">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="utilities.ts#L30" >}}">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getFloatingIp">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L10" >}}">function <b>getFloatingIp</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L12" >}}">function <b>getFloatingIp</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getFloatingIp(args: <a href='#GetFloatingIpArgs'>GetFloatingIpArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetFloatingIpResult'>GetFloatingIpResult</a>&gt; &amp; <a href='#GetFloatingIpResult'>GetFloatingIpResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/floating_ip.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getImage">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L10" >}}">function <b>getImage</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L12" >}}">function <b>getImage</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getImage(args?: <a href='#GetImageArgs'>GetImageArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetImageResult'>GetImageResult</a>&gt; &amp; <a href='#GetImageResult'>GetImageResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/image.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getKubernetesCluster">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L10" >}}">function <b>getKubernetesCluster</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L12" >}}">function <b>getKubernetesCluster</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getKubernetesCluster(args: <a href='#GetKubernetesClusterArgs'>GetKubernetesClusterArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetKubernetesClusterResult'>GetKubernetesClusterResult</a>&gt; &amp; <a href='#GetKubernetesClusterResult'>GetKubernetesClusterResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/kubernetes_cluster.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getLoadBalancer">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L10" >}}">function <b>getLoadBalancer</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L12" >}}">function <b>getLoadBalancer</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getLoadBalancer(args: <a href='#GetLoadBalancerArgs'>GetLoadBalancerArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetLoadBalancerResult'>GetLoadBalancerResult</a>&gt; &amp; <a href='#GetLoadBalancerResult'>GetLoadBalancerResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/loadbalancer.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getRecord">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L10" >}}">function <b>getRecord</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L12" >}}">function <b>getRecord</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getRecord(args: <a href='#GetRecordArgs'>GetRecordArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetRecordResult'>GetRecordResult</a>&gt; &amp; <a href='#GetRecordResult'>GetRecordResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/record.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getSshKey">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L10" >}}">function <b>getSshKey</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L12" >}}">function <b>getSshKey</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getSshKey(args: <a href='#GetSshKeyArgs'>GetSshKeyArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetSshKeyResult'>GetSshKeyResult</a>&gt; &amp; <a href='#GetSshKeyResult'>GetSshKeyResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/ssh_key.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getTag">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L10" >}}">function <b>getTag</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L12" >}}">function <b>getTag</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getTag(args: <a href='#GetTagArgs'>GetTagArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetTagResult'>GetTagResult</a>&gt; &amp; <a href='#GetTagResult'>GetTagResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/tag.html.markdown.
 
@@ -4581,33 +5175,39 @@ const webSnapshot = digitalocean.getDropletSnapshot({
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="utilities.ts#L41" >}}">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVolume">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L10" >}}">function <b>getVolume</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L12" >}}">function <b>getVolume</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getVolume(args: <a href='#GetVolumeArgs'>GetVolumeArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetVolumeResult'>GetVolumeResult</a>&gt; &amp; <a href='#GetVolumeResult'>GetVolumeResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-digitalocean/blob/master/website/docs/d/volume.html.markdown.
 
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVolumeSnapshot">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L47" >}}">function <b>getVolumeSnapshot</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L49" >}}">function <b>getVolumeSnapshot</b></a>
 </h2>
 <div class="pdoc-module-contents">
-{{% md %}}
 
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>getVolumeSnapshot(args?: <a href='#GetVolumeSnapshotArgs'>GetVolumeSnapshotArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetVolumeSnapshotResult'>GetVolumeSnapshotResult</a>&gt; &amp; <a href='#GetVolumeSnapshotResult'>GetVolumeSnapshotResult</a></pre>
+{{< /md-disable >}}
 
+{{% md %}}
 
 Volume snapshots are saved instances of a block storage volume. Use this data
 source to retrieve the ID of a DigitalOcean volume snapshot for use in other
@@ -4663,7 +5263,9 @@ The set of arguments for constructing a Cdn resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L190" >}}">property <b>certificateId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of a DigitalOcean managed TLS certificate for use with custom domains
@@ -4674,7 +5276,9 @@ ID of a DigitalOcean managed TLS certificate for use with custom domains
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L194" >}}">property <b>customDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
@@ -4685,7 +5289,9 @@ The fully qualified domain name (FQDN) of the custom subdomain used with the CDN
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L198" >}}">property <b>origin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>origin: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name, (FQDN) for a Space.
@@ -4696,7 +5302,9 @@ The fully qualified domain name, (FQDN) for a Space.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L203" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
@@ -4718,7 +5326,9 @@ Input properties used for looking up and filtering Cdn resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L159" >}}">property <b>certificateId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of a DigitalOcean managed TLS certificate for use with custom domains
@@ -4729,7 +5339,9 @@ ID of a DigitalOcean managed TLS certificate for use with custom domains
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L163" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time when the CDN Endpoint was created.
@@ -4740,7 +5352,9 @@ The date and time when the CDN Endpoint was created.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L167" >}}">property <b>customDomain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>customDomain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
@@ -4751,7 +5365,9 @@ The fully qualified domain name (FQDN) of the custom subdomain used with the CDN
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L171" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name (FQDN) from which the CDN-backed content is served.
@@ -4762,7 +5378,9 @@ The fully qualified domain name (FQDN) from which the CDN-backed content is serv
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L175" >}}">property <b>origin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>origin?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fully qualified domain name, (FQDN) for a Space.
@@ -4773,7 +5391,9 @@ The fully qualified domain name, (FQDN) for a Space.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="cdn.ts#L180" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
@@ -4795,7 +5415,9 @@ The set of arguments for constructing a Certificate resource.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L179" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full PEM-formatted trust chain
@@ -4808,7 +5430,9 @@ certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L185" >}}">property <b>domains</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of fully qualified domain names (FQDNs) for
@@ -4821,7 +5445,9 @@ DigitalOcean's DNS. Only valid when type is `letsEncrypt`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L190" >}}">property <b>leafCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>leafCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The contents of a PEM-formatted public
@@ -4833,7 +5459,9 @@ TLS certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L194" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the certificate for identification.
@@ -4844,7 +5472,9 @@ The name of the certificate for identification.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L199" >}}">property <b>privateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The contents of a PEM-formatted private-key
@@ -4856,7 +5486,9 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L204" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateType'>CertificateType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of certificate to provision. Can be either
@@ -4878,7 +5510,9 @@ Input properties used for looking up and filtering Certificate resources.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L133" >}}">property <b>certificateChain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>certificateChain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full PEM-formatted trust chain
@@ -4891,7 +5525,9 @@ certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L139" >}}">property <b>domains</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domains?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of fully qualified domain names (FQDNs) for
@@ -4904,7 +5540,9 @@ DigitalOcean's DNS. Only valid when type is `letsEncrypt`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L144" >}}">property <b>leafCertificate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>leafCertificate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The contents of a PEM-formatted public
@@ -4916,7 +5554,9 @@ TLS certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L148" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the certificate for identification.
@@ -4927,7 +5567,9 @@ The name of the certificate for identification.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L152" >}}">property <b>notAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notAfter?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The expiration date of the certificate
@@ -4938,7 +5580,9 @@ The expiration date of the certificate
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L157" >}}">property <b>privateKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The contents of a PEM-formatted private-key
@@ -4950,7 +5594,9 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L161" >}}">property <b>sha1Fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sha1Fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The SHA-1 fingerprint of the certificate
@@ -4961,7 +5607,9 @@ The SHA-1 fingerprint of the certificate
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L162" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -4969,7 +5617,9 @@ The SHA-1 fingerprint of the certificate
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificate.ts#L167" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#CertificateType'>CertificateType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of certificate to provision. Can be either
@@ -4979,7 +5629,7 @@ The type of certificate to provision. Can be either
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseClusterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L248" >}}">interface <b>DatabaseClusterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L273" >}}">interface <b>DatabaseClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -4988,24 +5638,25 @@ The set of arguments for constructing a DatabaseCluster resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseClusterArgs-engine">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L252" >}}">property <b>engine</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L277" >}}">property <b>engine</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>engine: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-Database engine used by the cluster (ex. `pg` for PostreSQL).
+Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, or `redis` for Redis).
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterArgs-maintenanceWindows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L256" >}}">property <b>maintenanceWindows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L281" >}}">property <b>maintenanceWindows</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    day: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    hour: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseClusterMaintenanceWindow'>DatabaseClusterMaintenanceWindow</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines when the automatic maintenance should be performed for the database cluster.
@@ -5013,10 +5664,12 @@ Defines when the automatic maintenance should be performed for the database clus
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L260" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L285" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database cluster.
@@ -5024,10 +5677,12 @@ The name of the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterArgs-nodeCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L264" >}}">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L289" >}}">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Number of nodes that will be included in the cluster.
@@ -5035,10 +5690,12 @@ Number of nodes that will be included in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L268" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L293" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 DigitalOcean region where the cluster will reside.
@@ -5046,10 +5703,12 @@ DigitalOcean region where the cluster will reside.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L272" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L297" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
@@ -5057,10 +5716,12 @@ Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L276" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L301" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Engine version used by the cluster (ex. `11` for PostgreSQL 11).
@@ -5069,7 +5730,7 @@ Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DatabaseClusterState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L186" >}}">interface <b>DatabaseClusterState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L211" >}}">interface <b>DatabaseClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5078,10 +5739,12 @@ Input properties used for looking up and filtering DatabaseCluster resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DatabaseClusterState-database">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L190" >}}">property <b>database</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L215" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the cluster's default database.
@@ -5089,21 +5752,25 @@ Name of the cluster's default database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-engine">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L194" >}}">property <b>engine</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L219" >}}">property <b>engine</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>engine?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
-Database engine used by the cluster (ex. `pg` for PostreSQL).
+Database engine used by the cluster (ex. `pg` for PostreSQL, `mysql` for MySQL, or `redis` for Redis).
 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L198" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L223" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database cluster's hostname.
@@ -5111,13 +5778,12 @@ Database cluster's hostname.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-maintenanceWindows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L202" >}}">property <b>maintenanceWindows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L227" >}}">property <b>maintenanceWindows</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    day: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    hour: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>maintenanceWindows?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseClusterMaintenanceWindow'>DatabaseClusterMaintenanceWindow</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines when the automatic maintenance should be performed for the database cluster.
@@ -5125,10 +5791,12 @@ Defines when the automatic maintenance should be performed for the database clus
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L206" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L231" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database cluster.
@@ -5136,10 +5804,12 @@ The name of the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-nodeCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L210" >}}">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L235" >}}">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Number of nodes that will be included in the cluster.
@@ -5147,10 +5817,12 @@ Number of nodes that will be included in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-password">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L214" >}}">property <b>password</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L239" >}}">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Password for the cluster's default user.
@@ -5158,10 +5830,12 @@ Password for the cluster's default user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L218" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L243" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Network port that the database cluster is listening on.
@@ -5169,10 +5843,12 @@ Network port that the database cluster is listening on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L222" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L247" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 DigitalOcean region where the cluster will reside.
@@ -5180,10 +5856,12 @@ DigitalOcean region where the cluster will reside.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L226" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L251" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DatabaseSlug'>DatabaseSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
@@ -5191,10 +5869,12 @@ Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-uri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L230" >}}">property <b>uri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L255" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>uri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full URI for connecting to the database cluster.
@@ -5202,10 +5882,12 @@ The full URI for connecting to the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L234" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L259" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the database cluster.
@@ -5213,10 +5895,12 @@ The uniform resource name of the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L238" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L263" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Username for the cluster's default user.
@@ -5224,10 +5908,12 @@ Username for the cluster's default user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DatabaseClusterState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L242" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseCluster.ts#L267" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Engine version used by the cluster (ex. `11` for PostgreSQL 11).
@@ -5236,7 +5922,7 @@ Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DnsRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L217" >}}">interface <b>DnsRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L219" >}}">interface <b>DnsRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5245,10 +5931,12 @@ The set of arguments for constructing a DnsRecord resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DnsRecordArgs-domain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L221" >}}">property <b>domain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L223" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to add the record to.
@@ -5256,10 +5944,12 @@ The domain to add the record to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-flags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L225" >}}">property <b>flags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L227" >}}">property <b>flags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>flags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
@@ -5267,10 +5957,12 @@ The flags of the record. Only valid when type is `CAA`. Must be between 0 and 25
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L229" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L231" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the record.
@@ -5278,10 +5970,12 @@ The name of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L233" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L235" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
@@ -5289,10 +5983,12 @@ The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L237" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L239" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
@@ -5300,10 +5996,12 @@ The priority of the record. Only valid when type is `MX` or `SRV`. Must be betwe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-tag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L241" >}}">property <b>tag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L243" >}}">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
@@ -5311,10 +6009,12 @@ The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L245" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L247" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time to live for the record, in seconds. Must be at least 0.
@@ -5322,10 +6022,12 @@ The time to live for the record, in seconds. Must be at least 0.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L249" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L251" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
@@ -5333,10 +6035,12 @@ The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L253" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L255" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the record.
@@ -5344,10 +6048,12 @@ The value of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordArgs-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L257" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L259" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
@@ -5356,7 +6062,7 @@ The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DnsRecordState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L167" >}}">interface <b>DnsRecordState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L169" >}}">interface <b>DnsRecordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5365,10 +6071,12 @@ Input properties used for looking up and filtering DnsRecord resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DnsRecordState-domain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L171" >}}">property <b>domain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L173" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain to add the record to.
@@ -5376,10 +6084,12 @@ The domain to add the record to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-flags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L175" >}}">property <b>flags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L177" >}}">property <b>flags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>flags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The flags of the record. Only valid when type is `CAA`. Must be between 0 and 255.
@@ -5387,10 +6097,12 @@ The flags of the record. Only valid when type is `CAA`. Must be between 0 and 25
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-fqdn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L179" >}}">property <b>fqdn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L181" >}}">property <b>fqdn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fqdn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the record
@@ -5398,10 +6110,12 @@ The FQDN of the record
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L183" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L185" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the record.
@@ -5409,10 +6123,12 @@ The name of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L187" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L189" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65535.
@@ -5420,10 +6136,12 @@ The port of the record. Only valid when type is `SRV`.  Must be between 1 and 65
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L191" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L193" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The priority of the record. Only valid when type is `MX` or `SRV`. Must be between 0 and 65535.
@@ -5431,10 +6149,12 @@ The priority of the record. Only valid when type is `MX` or `SRV`. Must be betwe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-tag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L195" >}}">property <b>tag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L197" >}}">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `issuewild`, or `iodef`.
@@ -5442,10 +6162,12 @@ The tag of the record. Only valid when type is `CAA`. Must be one of `issue`, `i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L199" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L201" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The time to live for the record, in seconds. Must be at least 0.
@@ -5453,10 +6175,12 @@ The time to live for the record, in seconds. Must be at least 0.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L203" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L205" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#RecordType'>RecordType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT`, or `SRV`.
@@ -5464,10 +6188,12 @@ The type of record. Must be one of `A`, `AAAA`, `CAA`, `CNAME`, `MX`, `NS`, `TXT
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-value">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L207" >}}">property <b>value</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L209" >}}">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The value of the record.
@@ -5475,10 +6201,12 @@ The value of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DnsRecordState-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L211" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dnsRecord.ts#L213" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 65535.
@@ -5487,7 +6215,7 @@ The weight of the record. Only valid when type is `SRV`.  Must be between 0 and 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L123" >}}">interface <b>DomainArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L125" >}}">interface <b>DomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5496,10 +6224,12 @@ The set of arguments for constructing a Domain resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainArgs-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L128" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L130" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the domain. If specified, this IP
@@ -5508,10 +6238,12 @@ is used to created an initial A record for the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L132" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L134" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the domain
@@ -5520,7 +6252,7 @@ The name of the domain
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DomainState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L104" >}}">interface <b>DomainState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L106" >}}">interface <b>DomainState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5529,10 +6261,12 @@ Input properties used for looking up and filtering Domain resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DomainState-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L109" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L111" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP address of the domain. If specified, this IP
@@ -5541,10 +6275,12 @@ is used to created an initial A record for the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L113" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L115" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the domain
@@ -5552,10 +6288,12 @@ The name of the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DomainState-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L117" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="domain.ts#L119" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the domain
@@ -5564,7 +6302,7 @@ The uniform resource name of the domain
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DropletArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L356" >}}">interface <b>DropletArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L362" >}}">interface <b>DropletArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5573,10 +6311,12 @@ The set of arguments for constructing a Droplet resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DropletArgs-backups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L361" >}}">property <b>backups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L367" >}}">property <b>backups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if backups are made. Defaults to
@@ -5585,10 +6325,12 @@ false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L365" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L371" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplet image ID or slug.
@@ -5596,10 +6338,12 @@ The Droplet image ID or slug.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-ipv6">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L369" >}}">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L375" >}}">property <b>ipv6</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if IPv6 is enabled. Defaults to false.
@@ -5607,10 +6351,12 @@ Boolean controlling if IPv6 is enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-monitoring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L374" >}}">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L380" >}}">property <b>monitoring</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling whether monitoring agent is installed.
@@ -5619,10 +6365,12 @@ Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L378" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L384" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplet name.
@@ -5630,10 +6378,12 @@ The Droplet name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-privateNetworking">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L383" >}}">property <b>privateNetworking</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L389" >}}">property <b>privateNetworking</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateNetworking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if private networks are
@@ -5642,10 +6392,12 @@ enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L387" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L393" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region to start in.
@@ -5653,10 +6405,12 @@ The region to start in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-resizeDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L394" >}}">property <b>resizeDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L400" >}}">property <b>resizeDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resizeDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling whether to increase the disk
@@ -5667,10 +6421,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L398" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L404" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
@@ -5678,10 +6434,12 @@ The unique slug that indentifies the type of Droplet. You can find a list of ava
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-sshKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L405" >}}">property <b>sshKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L411" >}}">property <b>sshKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sshKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of SSH IDs or fingerprints to enable in
@@ -5692,10 +6450,12 @@ to retrieve them.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L409" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L415" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the tags to be applied to this Droplet.
@@ -5703,10 +6463,12 @@ A list of the tags to be applied to this Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-userData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L413" >}}">property <b>userData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L419" >}}">property <b>userData</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string of the desired User Data for the Droplet.
@@ -5714,10 +6476,12 @@ A string of the desired User Data for the Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletArgs-volumeIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L417" >}}">property <b>volumeIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L423" >}}">property <b>volumeIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
@@ -5726,7 +6490,7 @@ A list of the IDs of each [block storage volume](https://www.terraform.io/docs/p
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DropletSnapshotArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L156" >}}">interface <b>DropletSnapshotArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L158" >}}">interface <b>DropletSnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5735,10 +6499,12 @@ The set of arguments for constructing a DropletSnapshot resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DropletSnapshotArgs-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L160" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L162" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Droplet from which the snapshot will be taken.
@@ -5746,10 +6512,12 @@ The ID of the Droplet from which the snapshot will be taken.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshotArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L164" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L166" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the Droplet snapshot.
@@ -5758,7 +6526,7 @@ A name for the Droplet snapshot.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DropletSnapshotState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L126" >}}">interface <b>DropletSnapshotState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L128" >}}">interface <b>DropletSnapshotState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5767,10 +6535,12 @@ Input properties used for looking up and filtering DropletSnapshot resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DropletSnapshotState-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L130" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L132" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time the Droplet snapshot was created.
@@ -5778,10 +6548,12 @@ The date and time the Droplet snapshot was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshotState-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L134" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L136" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Droplet from which the snapshot will be taken.
@@ -5789,10 +6561,12 @@ The ID of the Droplet from which the snapshot will be taken.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshotState-minDiskSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L138" >}}">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L140" >}}">property <b>minDiskSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size in gigabytes required for a Droplet to be created based on this snapshot.
@@ -5800,10 +6574,12 @@ The minimum size in gigabytes required for a Droplet to be created based on this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshotState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L142" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L144" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the Droplet snapshot.
@@ -5811,10 +6587,12 @@ A name for the Droplet snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshotState-regions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L146" >}}">property <b>regions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L148" >}}">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of DigitalOcean region "slugs" indicating where the droplet snapshot is available.
@@ -5822,10 +6600,12 @@ A list of DigitalOcean region "slugs" indicating where the droplet snapshot is a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletSnapshotState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L150" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSnapshot.ts#L152" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The billable size of the Droplet snapshot in gigabytes.
@@ -5834,7 +6614,7 @@ The billable size of the Droplet snapshot in gigabytes.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="DropletState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L247" >}}">interface <b>DropletState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L252" >}}">interface <b>DropletState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -5843,10 +6623,12 @@ Input properties used for looking up and filtering Droplet resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="DropletState-backups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L252" >}}">property <b>backups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L257" >}}">property <b>backups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if backups are made. Defaults to
@@ -5854,11 +6636,23 @@ false.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="DropletState-disk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L256" >}}">property <b>disk</b></a>
+<h3 class="pdoc-member-header" id="DropletState-createdAt">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L258" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="DropletState-disk">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L262" >}}">property <b>disk</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the instance's disk in GB
@@ -5866,10 +6660,12 @@ The size of the instance's disk in GB
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L260" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L266" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>image?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplet image ID or slug.
@@ -5877,10 +6673,12 @@ The Droplet image ID or slug.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-ipv4Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L264" >}}">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L270" >}}">property <b>ipv4Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv4Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv4 address
@@ -5888,10 +6686,12 @@ The IPv4 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-ipv4AddressPrivate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L268" >}}">property <b>ipv4AddressPrivate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L274" >}}">property <b>ipv4AddressPrivate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv4AddressPrivate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The private networking IPv4 address
@@ -5899,10 +6699,12 @@ The private networking IPv4 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-ipv6">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L272" >}}">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L278" >}}">property <b>ipv6</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if IPv6 is enabled. Defaults to false.
@@ -5910,10 +6712,12 @@ Boolean controlling if IPv6 is enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-ipv6Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L276" >}}">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L282" >}}">property <b>ipv6Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IPv6 address
@@ -5921,10 +6725,12 @@ The IPv6 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-locked">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L280" >}}">property <b>locked</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L286" >}}">property <b>locked</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locked?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is the Droplet locked
@@ -5932,18 +6738,22 @@ Is the Droplet locked
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-memory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L281" >}}">property <b>memory</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L287" >}}">property <b>memory</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>memory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-monitoring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L286" >}}">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L292" >}}">property <b>monitoring</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling whether monitoring agent is installed.
@@ -5952,10 +6762,12 @@ Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L290" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L296" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplet name.
@@ -5963,10 +6775,12 @@ The Droplet name.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-priceHourly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L294" >}}">property <b>priceHourly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L300" >}}">property <b>priceHourly</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priceHourly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Droplet hourly price
@@ -5974,10 +6788,12 @@ Droplet hourly price
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-priceMonthly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L298" >}}">property <b>priceMonthly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L304" >}}">property <b>priceMonthly</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priceMonthly?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Droplet monthly price
@@ -5985,10 +6801,12 @@ Droplet monthly price
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-privateNetworking">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L303" >}}">property <b>privateNetworking</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L309" >}}">property <b>privateNetworking</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateNetworking?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling if private networks are
@@ -5997,10 +6815,12 @@ enabled. Defaults to false.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L307" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L313" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region to start in.
@@ -6008,10 +6828,12 @@ The region to start in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-resizeDisk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L314" >}}">property <b>resizeDisk</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L320" >}}">property <b>resizeDisk</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resizeDisk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Boolean controlling whether to increase the disk
@@ -6022,10 +6844,12 @@ size is a permanent change**. Increasing only RAM and CPU is reversible.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L318" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L324" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique slug that indentifies the type of Droplet. You can find a list of available slugs on [DigitalOcean API documentation](https://developers.digitalocean.com/documentation/v2/#list-all-sizes).
@@ -6033,10 +6857,12 @@ The unique slug that indentifies the type of Droplet. You can find a list of ava
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-sshKeys">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L325" >}}">property <b>sshKeys</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L331" >}}">property <b>sshKeys</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sshKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of SSH IDs or fingerprints to enable in
@@ -6047,10 +6873,12 @@ to retrieve them.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L329" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L335" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the Droplet
@@ -6058,10 +6886,12 @@ The status of the Droplet
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L333" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L339" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the tags to be applied to this Droplet.
@@ -6069,10 +6899,12 @@ A list of the tags to be applied to this Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L338" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L344" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the Droplet
@@ -6081,10 +6913,12 @@ The uniform resource name of the Droplet
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-userData">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L342" >}}">property <b>userData</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L348" >}}">property <b>userData</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string of the desired User Data for the Droplet.
@@ -6092,10 +6926,12 @@ A string of the desired User Data for the Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-vcpus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L346" >}}">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L352" >}}">property <b>vcpus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vcpus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of the instance's virtual CPUs
@@ -6103,10 +6939,12 @@ The number of the instance's virtual CPUs
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="DropletState-volumeIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L350" >}}">property <b>volumeIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="droplet.ts#L356" >}}">property <b>volumeIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
@@ -6115,7 +6953,7 @@ A list of the IDs of each [block storage volume](https://www.terraform.io/docs/p
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L246" >}}">interface <b>FirewallArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L248" >}}">interface <b>FirewallArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6124,10 +6962,12 @@ The set of arguments for constructing a Firewall resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallArgs-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L251" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L253" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of the IDs of the Droplets assigned
@@ -6136,17 +6976,12 @@ to the Firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-inboundRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L256" >}}">property <b>inboundRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L258" >}}">property <b>inboundRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    portRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sourceAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    sourceDropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;
-    sourceLoadBalancerUids: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    sourceTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FirewallInboundRule'>FirewallInboundRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The inbound access rule block for the Firewall.
@@ -6155,10 +6990,12 @@ The `inboundRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L260" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L262" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Firewall name
@@ -6166,17 +7003,12 @@ The Firewall name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-outboundRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L265" >}}">property <b>outboundRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L267" >}}">property <b>outboundRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    destinationAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    destinationDropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;
-    destinationLoadBalancerUids: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    destinationTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    portRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FirewallOutboundRule'>FirewallOutboundRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The outbound access rule block for the Firewall.
@@ -6185,10 +7017,12 @@ The `outboundRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L269" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L271" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The names of the Tags assigned to the Firewall.
@@ -6197,7 +7031,7 @@ The names of the Tags assigned to the Firewall.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FirewallState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L200" >}}">interface <b>FirewallState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L202" >}}">interface <b>FirewallState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6206,10 +7040,12 @@ Input properties used for looking up and filtering Firewall resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FirewallState-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L205" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L207" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A time value given in ISO8601 combined date and time format
@@ -6218,10 +7054,12 @@ that represents when the Firewall was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L210" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L212" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The list of the IDs of the Droplets assigned
@@ -6230,17 +7068,12 @@ to the Firewall.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-inboundRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L215" >}}">property <b>inboundRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L217" >}}">property <b>inboundRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    portRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    sourceAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    sourceDropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;
-    sourceLoadBalancerUids: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    sourceTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>inboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FirewallInboundRule'>FirewallInboundRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The inbound access rule block for the Firewall.
@@ -6249,10 +7082,12 @@ The `inboundRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L219" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L221" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Firewall name
@@ -6260,17 +7095,12 @@ The Firewall name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-outboundRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L224" >}}">property <b>outboundRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L226" >}}">property <b>outboundRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    destinationAddresses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    destinationDropletIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;
-    destinationLoadBalancerUids: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    destinationTags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-    portRange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>outboundRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FirewallOutboundRule'>FirewallOutboundRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The outbound access rule block for the Firewall.
@@ -6279,14 +7109,12 @@ The `outboundRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-pendingChanges">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L231" >}}">property <b>pendingChanges</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L233" >}}">property <b>pendingChanges</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>pendingChanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    removing: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-    status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>pendingChanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FirewallPendingChange'>FirewallPendingChange</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 An list of object containing the fields, "dropletId",
@@ -6297,10 +7125,12 @@ have been successfully applied.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L236" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L238" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A status string indicating the current state of the Firewall.
@@ -6309,10 +7139,12 @@ This can be "waiting", "succeeded", or "failed".
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FirewallState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L240" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="firewall.ts#L242" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The names of the Tags assigned to the Firewall.
@@ -6321,7 +7153,7 @@ The names of the Tags assigned to the Firewall.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FloatingIpArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L139" >}}">interface <b>FloatingIpArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L141" >}}">interface <b>FloatingIpArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6330,10 +7162,12 @@ The set of arguments for constructing a FloatingIp resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FloatingIpArgs-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L143" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L145" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of Droplet that the Floating IP will be assigned to.
@@ -6341,10 +7175,12 @@ The ID of Droplet that the Floating IP will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpArgs-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L147" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L149" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP Address of the resource
@@ -6352,10 +7188,12 @@ The IP Address of the resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L151" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L153" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region that the Floating IP is reserved to.
@@ -6364,7 +7202,7 @@ The region that the Floating IP is reserved to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FloatingIpAssignmentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L125" >}}">interface <b>FloatingIpAssignmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L127" >}}">interface <b>FloatingIpAssignmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6373,10 +7211,12 @@ The set of arguments for constructing a FloatingIpAssignment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FloatingIpAssignmentArgs-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L129" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L131" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of Droplet that the Floating IP will be assigned to.
@@ -6384,10 +7224,12 @@ The ID of Droplet that the Floating IP will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignmentArgs-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L133" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L135" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Floating IP to assign to the Droplet.
@@ -6396,7 +7238,7 @@ The Floating IP to assign to the Droplet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FloatingIpAssignmentState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L111" >}}">interface <b>FloatingIpAssignmentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L113" >}}">interface <b>FloatingIpAssignmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6405,10 +7247,12 @@ Input properties used for looking up and filtering FloatingIpAssignment resource
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FloatingIpAssignmentState-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L115" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L117" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of Droplet that the Floating IP will be assigned to.
@@ -6416,10 +7260,12 @@ The ID of Droplet that the Floating IP will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpAssignmentState-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L119" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIpAssignment.ts#L121" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Floating IP to assign to the Droplet.
@@ -6428,7 +7274,7 @@ The Floating IP to assign to the Droplet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="FloatingIpState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L117" >}}">interface <b>FloatingIpState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L119" >}}">interface <b>FloatingIpState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6437,10 +7283,12 @@ Input properties used for looking up and filtering FloatingIp resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="FloatingIpState-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L121" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L123" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of Droplet that the Floating IP will be assigned to.
@@ -6448,10 +7296,12 @@ The ID of Droplet that the Floating IP will be assigned to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpState-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L125" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L127" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The IP Address of the resource
@@ -6459,10 +7309,12 @@ The IP Address of the resource
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L129" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L131" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region that the Floating IP is reserved to.
@@ -6470,10 +7322,12 @@ The region that the Floating IP is reserved to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="FloatingIpState-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L133" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="floatingIp.ts#L135" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the floating ip
@@ -6482,7 +7336,7 @@ The uniform resource name of the floating ip
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCertificateArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L28" >}}">interface <b>GetCertificateArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L30" >}}">interface <b>GetCertificateArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6491,10 +7345,12 @@ A collection of arguments for invoking getCertificate.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetCertificateArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L32" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L34" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of certificate.
@@ -6503,7 +7359,7 @@ The name of certificate.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetCertificateResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L38" >}}">interface <b>GetCertificateResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L40" >}}">interface <b>GetCertificateResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6512,18 +7368,22 @@ A collection of values returned by getCertificate.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetCertificateResult-domains">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L39" >}}">property <b>domains</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L41" >}}">property <b>domains</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domains: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L48" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L50" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -6531,48 +7391,58 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L40" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L42" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-notAfter">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L41" >}}">property <b>notAfter</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L43" >}}">property <b>notAfter</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>notAfter: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-sha1Fingerprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L42" >}}">property <b>sha1Fingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L44" >}}">property <b>sha1Fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>sha1Fingerprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-state">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L43" >}}">property <b>state</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L45" >}}">property <b>state</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetCertificateResult-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L44" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getCertificate.ts#L46" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDatabaseClusterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L42" >}}">interface <b>GetDatabaseClusterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L44" >}}">interface <b>GetDatabaseClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6581,10 +7451,12 @@ A collection of arguments for invoking getDatabaseCluster.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDatabaseClusterArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L46" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L48" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the database cluster.
@@ -6593,7 +7465,7 @@ The name of the database cluster.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDatabaseClusterResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L52" >}}">interface <b>GetDatabaseClusterResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L54" >}}">interface <b>GetDatabaseClusterResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6602,10 +7474,12 @@ A collection of values returned by getDatabaseCluster.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-database">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L56" >}}">property <b>database</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L58" >}}">property <b>database</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>database: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Name of the cluster's default database.
@@ -6613,10 +7487,12 @@ Name of the cluster's default database.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-engine">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L60" >}}">property <b>engine</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L62" >}}">property <b>engine</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>engine: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database engine used by the cluster (ex. `pg` for PostreSQL).
@@ -6624,10 +7500,12 @@ Database engine used by the cluster (ex. `pg` for PostreSQL).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-host">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L64" >}}">property <b>host</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L66" >}}">property <b>host</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database cluster's hostname.
@@ -6635,10 +7513,12 @@ Database cluster's hostname.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L105" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L107" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -6646,13 +7526,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-maintenanceWindows">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L68" >}}">property <b>maintenanceWindows</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L70" >}}">property <b>maintenanceWindows</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>maintenanceWindows: {
-    day: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    hour: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>maintenanceWindows: <a href='#GetDatabaseClusterMaintenanceWindow'>GetDatabaseClusterMaintenanceWindow</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Defines when the automatic maintenance should be performed for the database cluster.
@@ -6660,18 +7539,22 @@ Defines when the automatic maintenance should be performed for the database clus
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L69" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L71" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-nodeCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L73" >}}">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L75" >}}">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Number of nodes that will be included in the cluster.
@@ -6679,10 +7562,12 @@ Number of nodes that will be included in the cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L77" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L79" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Network port that the database cluster is listening on.
@@ -6690,10 +7575,12 @@ Network port that the database cluster is listening on.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L81" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L83" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 DigitalOcean region where the cluster will reside.
@@ -6701,10 +7588,12 @@ DigitalOcean region where the cluster will reside.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L85" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L87" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
@@ -6712,10 +7601,12 @@ Database droplet size associated with the cluster (ex. `db-s-1vcpu-1gb`).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-uri">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L89" >}}">property <b>uri</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L91" >}}">property <b>uri</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>uri: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The full URI for connecting to the database cluster.
@@ -6723,10 +7614,12 @@ The full URI for connecting to the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L93" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L95" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the database cluster.
@@ -6734,10 +7627,12 @@ The uniform resource name of the database cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-user">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L97" >}}">property <b>user</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L99" >}}">property <b>user</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>user: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Username for the cluster's default user.
@@ -6745,10 +7640,12 @@ Username for the cluster's default user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDatabaseClusterResult-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L101" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDatabaseCluster.ts#L103" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Engine version used by the cluster (ex. `11` for PostgreSQL 11).
@@ -6757,7 +7654,7 @@ Engine version used by the cluster (ex. `11` for PostgreSQL 11).
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDomainArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L28" >}}">interface <b>GetDomainArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L30" >}}">interface <b>GetDomainArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6766,10 +7663,12 @@ A collection of arguments for invoking getDomain.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDomainArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L32" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L34" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the domain.
@@ -6778,7 +7677,7 @@ The name of the domain.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDomainResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L38" >}}">interface <b>GetDomainResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L40" >}}">interface <b>GetDomainResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6787,10 +7686,12 @@ A collection of values returned by getDomain.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDomainResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L50" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L52" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -6798,26 +7699,32 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L39" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L41" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainResult-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L40" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L42" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainResult-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L45" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L47" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the domain
@@ -6826,16 +7733,18 @@ The uniform resource name of the domain
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainResult-zoneFile">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L46" >}}">property <b>zoneFile</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDomain.ts#L48" >}}">property <b>zoneFile</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>zoneFile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDropletArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L28" >}}">interface <b>GetDropletArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L30" >}}">interface <b>GetDropletArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6844,10 +7753,12 @@ A collection of arguments for invoking getDroplet.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDropletArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L32" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L34" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of Droplet.
@@ -6856,7 +7767,7 @@ The name of Droplet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDropletResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L38" >}}">interface <b>GetDropletResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L40" >}}">interface <b>GetDropletResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -6865,21 +7776,35 @@ A collection of values returned by getDroplet.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDropletResult-backups">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L42" >}}">property <b>backups</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L44" >}}">property <b>backups</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>backups: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether backups are enabled.
 
 {{% /md %}}
 </div>
-<h3 class="pdoc-member-header" id="GetDropletResult-disk">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L46" >}}">property <b>disk</b></a>
+<h3 class="pdoc-member-header" id="GetDropletResult-createdAt">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L45" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
+{{% md %}}
+{{% /md %}}
+</div>
+<h3 class="pdoc-member-header" id="GetDropletResult-disk">
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L49" >}}">property <b>disk</b></a>
+</h3>
+<div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>disk: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the Droplets disk in GB.
@@ -6887,10 +7812,12 @@ The size of the Droplets disk in GB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L127" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L130" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -6898,10 +7825,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L50" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L53" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplet image ID or slug.
@@ -6909,10 +7838,12 @@ The Droplet image ID or slug.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-ipv4Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L54" >}}">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L57" >}}">property <b>ipv4Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv4Address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplets public IPv4 address
@@ -6920,10 +7851,12 @@ The Droplets public IPv4 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-ipv4AddressPrivate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L58" >}}">property <b>ipv4AddressPrivate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L61" >}}">property <b>ipv4AddressPrivate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv4AddressPrivate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplets private IPv4 address
@@ -6931,10 +7864,12 @@ The Droplets private IPv4 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-ipv6">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L62" >}}">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L65" >}}">property <b>ipv6</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether IPv6 is enabled.
@@ -6942,10 +7877,12 @@ Whether IPv6 is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-ipv6Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L66" >}}">property <b>ipv6Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L69" >}}">property <b>ipv6Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6Address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplets public IPv6 address
@@ -6953,10 +7890,12 @@ The Droplets public IPv6 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-ipv6AddressPrivate">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L70" >}}">property <b>ipv6AddressPrivate</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L73" >}}">property <b>ipv6AddressPrivate</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv6AddressPrivate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Droplets private IPv6 address
@@ -6964,10 +7903,12 @@ The Droplets private IPv6 address
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-locked">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L74" >}}">property <b>locked</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L77" >}}">property <b>locked</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>locked: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether the Droplet is locked.
@@ -6975,10 +7916,12 @@ Whether the Droplet is locked.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-memory">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L78" >}}">property <b>memory</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L81" >}}">property <b>memory</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>memory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The amount of the Droplets memory in MB.
@@ -6986,10 +7929,12 @@ The amount of the Droplets memory in MB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-monitoring">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L82" >}}">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L85" >}}">property <b>monitoring</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>monitoring: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether monitoring agent is installed.
@@ -6997,18 +7942,22 @@ Whether monitoring agent is installed.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L83" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L86" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-priceHourly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L87" >}}">property <b>priceHourly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L90" >}}">property <b>priceHourly</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priceHourly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Droplet hourly price.
@@ -7016,10 +7965,12 @@ Droplet hourly price.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-priceMonthly">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L91" >}}">property <b>priceMonthly</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L94" >}}">property <b>priceMonthly</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priceMonthly: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Droplet monthly price.
@@ -7027,10 +7978,12 @@ Droplet monthly price.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-privateNetworking">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L95" >}}">property <b>privateNetworking</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L98" >}}">property <b>privateNetworking</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>privateNetworking: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Whether private networks are enabled.
@@ -7038,10 +7991,12 @@ Whether private networks are enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L99" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L102" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region the Droplet is running in.
@@ -7049,10 +8004,12 @@ The region the Droplet is running in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L103" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L106" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The unique slug that indentifies the type of Droplet.
@@ -7060,10 +8017,12 @@ The unique slug that indentifies the type of Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L107" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L110" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The status of the Droplet.
@@ -7071,10 +8030,12 @@ The status of the Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L111" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L114" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the tags associated to the Droplet.
@@ -7082,10 +8043,12 @@ A list of the tags associated to the Droplet.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L115" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L118" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name of the Droplet
@@ -7093,10 +8056,12 @@ The uniform resource name of the Droplet
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-vcpus">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L119" >}}">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L122" >}}">property <b>vcpus</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>vcpus: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of the Droplets virtual CPUs.
@@ -7104,10 +8069,12 @@ The number of the Droplets virtual CPUs.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletResult-volumeIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L123" >}}">property <b>volumeIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDroplet.ts#L126" >}}">property <b>volumeIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 List of the IDs of each volumes attached to the Droplet.
@@ -7116,7 +8083,7 @@ List of the IDs of each volumes attached to the Droplet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDropletSnapshotArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L51" >}}">interface <b>GetDropletSnapshotArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L53" >}}">interface <b>GetDropletSnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7125,10 +8092,12 @@ A collection of arguments for invoking getDropletSnapshot.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDropletSnapshotArgs-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L55" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L57" >}}">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If more than one result is returned, use the most recent Droplet snapshot.
@@ -7136,10 +8105,12 @@ If more than one result is returned, use the most recent Droplet snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L59" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L61" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Droplet snapshot.
@@ -7147,10 +8118,12 @@ The name of the Droplet snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotArgs-nameRegex">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L63" >}}">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L65" >}}">property <b>nameRegex</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A regex string to apply to the Droplet snapshot list returned by DigitalOcean. This allows more advanced filtering not supported from the DigitalOcean API. This filtering is done locally on what DigitalOcean returns.
@@ -7158,10 +8131,12 @@ A regex string to apply to the Droplet snapshot list returned by DigitalOcean. T
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L67" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L69" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A "slug" representing a DigitalOcean region (e.g. `nyc1`). If set, only Droplet snapshots available in the region will be returned.
@@ -7170,7 +8145,7 @@ A "slug" representing a DigitalOcean region (e.g. `nyc1`). If set, only Droplet 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDropletSnapshotResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L73" >}}">interface <b>GetDropletSnapshotResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L75" >}}">interface <b>GetDropletSnapshotResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7179,10 +8154,12 @@ A collection of values returned by getDropletSnapshot.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L77" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L79" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time the Droplet snapshot was created.
@@ -7190,10 +8167,12 @@ The date and time the Droplet snapshot was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L81" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L83" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Droplet from which the Droplet snapshot originated.
@@ -7201,10 +8180,12 @@ The ID of the Droplet from which the Droplet snapshot originated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L101" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L103" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7212,10 +8193,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-minDiskSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L85" >}}">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L87" >}}">property <b>minDiskSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minDiskSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size in gigabytes required for a Droplet to be created based on this Droplet snapshot.
@@ -7223,42 +8206,52 @@ The minimum size in gigabytes required for a Droplet to be created based on this
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L86" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L88" >}}">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L87" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L89" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-nameRegex">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L88" >}}">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L90" >}}">property <b>nameRegex</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L89" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L91" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-regions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L93" >}}">property <b>regions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L95" >}}">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of DigitalOcean region "slugs" indicating where the Droplet snapshot is available.
@@ -7266,10 +8259,12 @@ A list of DigitalOcean region "slugs" indicating where the Droplet snapshot is a
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDropletSnapshotResult-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L97" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getDropletSnapshot.ts#L99" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The billable size of the Droplet snapshot in gigabytes.
@@ -7278,7 +8273,7 @@ The billable size of the Droplet snapshot in gigabytes.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetFloatingIpArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L28" >}}">interface <b>GetFloatingIpArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L30" >}}">interface <b>GetFloatingIpArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7287,10 +8282,12 @@ A collection of arguments for invoking getFloatingIp.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetFloatingIpArgs-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L32" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L34" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The allocated IP address of the specific floating IP to retrieve.
@@ -7299,7 +8296,7 @@ The allocated IP address of the specific floating IP to retrieve.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetFloatingIpResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L38" >}}">interface <b>GetFloatingIpResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L40" >}}">interface <b>GetFloatingIpResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7308,18 +8305,22 @@ A collection of values returned by getFloatingIp.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetFloatingIpResult-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L39" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L41" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFloatingIpResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L46" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L48" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7327,32 +8328,38 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFloatingIpResult-ipAddress">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L40" >}}">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L42" >}}">property <b>ipAddress</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFloatingIpResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L41" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L43" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetFloatingIpResult-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L42" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getFloatingIp.ts#L44" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetImageArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L30" >}}">interface <b>GetImageArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L32" >}}">interface <b>GetImageArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7361,10 +8368,12 @@ A collection of arguments for invoking getImage.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetImageArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L34" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L36" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the private image.
@@ -7372,10 +8381,12 @@ The name of the private image.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageArgs-slug">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L38" >}}">property <b>slug</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L40" >}}">property <b>slug</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>slug?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug of the official image.
@@ -7384,7 +8395,7 @@ The slug of the official image.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetImageResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L44" >}}">interface <b>GetImageResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L46" >}}">interface <b>GetImageResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7393,10 +8404,12 @@ A collection of values returned by getImage.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetImageResult-distribution">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L49" >}}">property <b>distribution</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L51" >}}">property <b>distribution</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>distribution: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the distribution of the OS of the image.
@@ -7405,10 +8418,12 @@ The name of the distribution of the OS of the image.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L70" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L72" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7416,10 +8431,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-image">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L53" >}}">property <b>image</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L55" >}}">property <b>image</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>image: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The id of the image.
@@ -7427,26 +8444,32 @@ The id of the image.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-minDiskSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L54" >}}">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L56" >}}">property <b>minDiskSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minDiskSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L55" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L57" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-private">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L63" >}}">property <b>private</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L65" >}}">property <b>private</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>private: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Is image a public image or not. Public images represent
@@ -7458,32 +8481,38 @@ snapshots and backups and are only available within your account.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-regions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L64" >}}">property <b>regions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L66" >}}">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-slug">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L65" >}}">property <b>slug</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L67" >}}">property <b>slug</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>slug?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetImageResult-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L66" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getImage.ts#L68" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetKubernetesClusterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L29" >}}">interface <b>GetKubernetesClusterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L31" >}}">interface <b>GetKubernetesClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7492,10 +8521,12 @@ A collection of arguments for invoking getKubernetesCluster.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetKubernetesClusterArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L33" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L35" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of Kubernetes cluster.
@@ -7503,16 +8534,18 @@ The name of Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L34" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L36" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetKubernetesClusterResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L40" >}}">interface <b>GetKubernetesClusterResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L42" >}}">interface <b>GetKubernetesClusterResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7521,10 +8554,12 @@ A collection of values returned by getKubernetesCluster.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-clusterSubnet">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L44" >}}">property <b>clusterSubnet</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L46" >}}">property <b>clusterSubnet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clusterSubnet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The range of IP addresses in the overlay network of the Kubernetes cluster.
@@ -7532,10 +8567,12 @@ The range of IP addresses in the overlay network of the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L48" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L50" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time when the Kubernetes cluster was created.
@@ -7543,10 +8580,12 @@ The date and time when the Kubernetes cluster was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L52" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L54" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The base URL of the API server on the Kubernetes master node.
@@ -7554,10 +8593,12 @@ The base URL of the API server on the Kubernetes master node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L107" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L109" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7565,10 +8606,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-ipv4Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L56" >}}">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L58" >}}">property <b>ipv4Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv4Address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The public IPv4 address of the Kubernetes master node.
@@ -7576,45 +8619,32 @@ The public IPv4 address of the Kubernetes master node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-kubeConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L57" >}}">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L59" >}}">property <b>kubeConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>kubeConfigs: {
-    clientCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    clientKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    clusterCaCertificate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    host: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    rawConfig: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>kubeConfigs: <a href='#GetKubernetesClusterKubeConfig'>GetKubernetesClusterKubeConfig</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L58" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L60" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-nodePools">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L73" >}}">property <b>nodePools</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L75" >}}">property <b>nodePools</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodePools: {
-    id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    nodeCount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    nodes: {
-        createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-        updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    }[];
-    size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>nodePools: <a href='#GetKubernetesClusterNodePool'>GetKubernetesClusterNodePool</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of node pools associated with the cluster. Each node pool exports the following attributes:
@@ -7633,10 +8663,12 @@ A list of node pools associated with the cluster. Each node pool exports the fol
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L77" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L79" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the region where the Kubernetes cluster is located.
@@ -7644,10 +8676,12 @@ The slug identifier for the region where the Kubernetes cluster is located.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-serviceSubnet">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L81" >}}">property <b>serviceSubnet</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L83" >}}">property <b>serviceSubnet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serviceSubnet: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The range of assignable IP addresses for services running in the Kubernetes cluster.
@@ -7655,10 +8689,12 @@ The range of assignable IP addresses for services running in the Kubernetes clus
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L85" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L87" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
@@ -7666,10 +8702,12 @@ A string indicating the current status of the cluster. Potential values include 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L89" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L91" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag names to be applied to the Kubernetes cluster.
@@ -7677,10 +8715,12 @@ A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-updatedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L99" >}}">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L101" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time when the Kubernetes cluster was last updated.
@@ -7694,10 +8734,12 @@ The date and time when the Kubernetes cluster was last updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetKubernetesClusterResult-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L103" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getKubernetesCluster.ts#L105" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the version of Kubernetes used for the cluster.
@@ -7706,7 +8748,7 @@ The slug identifier for the version of Kubernetes used for the cluster.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetLoadBalancerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L28" >}}">interface <b>GetLoadBalancerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L30" >}}">interface <b>GetLoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7715,10 +8757,12 @@ A collection of arguments for invoking getLoadBalancer.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetLoadBalancerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L32" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L34" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of load balancer.
@@ -7727,7 +8771,7 @@ The name of load balancer.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetLoadBalancerResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L38" >}}">interface <b>GetLoadBalancerResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L40" >}}">interface <b>GetLoadBalancerResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7736,73 +8780,72 @@ A collection of values returned by getLoadBalancer.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-algorithm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L39" >}}">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L41" >}}">property <b>algorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>algorithm: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L40" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L42" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-dropletTag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L41" >}}">property <b>dropletTag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L43" >}}">property <b>dropletTag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletTag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-enableProxyProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L42" >}}">property <b>enableProxyProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L44" >}}">property <b>enableProxyProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableProxyProtocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-forwardingRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L43" >}}">property <b>forwardingRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L45" >}}">property <b>forwardingRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>forwardingRules: {
-    certificateId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    entryPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    entryProtocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    targetPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    targetProtocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    tlsPassthrough: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;
-}[];</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>forwardingRules: <a href='#GetLoadBalancerForwardingRule'>GetLoadBalancerForwardingRule</a>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-healthcheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L44" >}}">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L46" >}}">property <b>healthcheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthcheck: {
-    checkIntervalSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    healthyThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    protocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    responseTimeoutSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    unhealthyThreshold: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-};</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>healthcheck: <a href='#GetLoadBalancerHealthcheck'>GetLoadBalancerHealthcheck</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L55" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L57" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7810,68 +8853,78 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-ip">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L45" >}}">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L47" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L46" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L48" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-redirectHttpToHttps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L47" >}}">property <b>redirectHttpToHttps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L49" >}}">property <b>redirectHttpToHttps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redirectHttpToHttps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L48" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L50" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L49" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L51" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-stickySessions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L50" >}}">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L52" >}}">property <b>stickySessions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>stickySessions: {
-    cookieName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-    cookieTtlSeconds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;
-    type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;
-};</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>stickySessions: <a href='#GetLoadBalancerStickySessions'>GetLoadBalancerStickySessions</a>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetLoadBalancerResult-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L51" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getLoadBalancer.ts#L53" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRecordArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L29" >}}">interface <b>GetRecordArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L31" >}}">interface <b>GetRecordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7880,10 +8933,12 @@ A collection of arguments for invoking getRecord.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRecordArgs-domain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L33" >}}">property <b>domain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L35" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The domain name of the record.
@@ -7891,10 +8946,12 @@ The domain name of the record.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L37" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L39" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the record.
@@ -7903,7 +8960,7 @@ The name of the record.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetRecordResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L43" >}}">interface <b>GetRecordResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L45" >}}">interface <b>GetRecordResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -7912,34 +8969,42 @@ A collection of values returned by getRecord.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetRecordResult-data">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L44" >}}">property <b>data</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L46" >}}">property <b>data</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>data: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-domain">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L45" >}}">property <b>domain</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L47" >}}">property <b>domain</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-flags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L46" >}}">property <b>flags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L48" >}}">property <b>flags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>flags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L57" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L59" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -7947,64 +9012,78 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L47" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L49" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-port">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L48" >}}">property <b>port</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L50" >}}">property <b>port</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-priority">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L49" >}}">property <b>priority</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L51" >}}">property <b>priority</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>priority: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-tag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L50" >}}">property <b>tag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L52" >}}">property <b>tag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tag: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-ttl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L51" >}}">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L53" >}}">property <b>ttl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ttl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-type">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L52" >}}">property <b>type</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L54" >}}">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetRecordResult-weight">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L53" >}}">property <b>weight</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getRecord.ts#L55" >}}">property <b>weight</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>weight: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSshKeyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L28" >}}">interface <b>GetSshKeyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L30" >}}">interface <b>GetSshKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8013,10 +9092,12 @@ A collection of arguments for invoking getSshKey.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSshKeyArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L32" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L34" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the ssh key.
@@ -8025,7 +9106,7 @@ The name of the ssh key.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetSshKeyResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L38" >}}">interface <b>GetSshKeyResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L40" >}}">interface <b>GetSshKeyResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8034,18 +9115,22 @@ A collection of values returned by getSshKey.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetSshKeyResult-fingerprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L39" >}}">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L41" >}}">property <b>fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fingerprint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSshKeyResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L45" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L47" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8053,24 +9138,28 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSshKeyResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L40" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L42" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetSshKeyResult-publicKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L41" >}}">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getSshKey.ts#L43" >}}">property <b>publicKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>publicKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetTagArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L28" >}}">interface <b>GetTagArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L30" >}}">interface <b>GetTagArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8079,10 +9168,12 @@ A collection of arguments for invoking getTag.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetTagArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L32" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L34" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the tag.
@@ -8091,7 +9182,7 @@ The name of the tag.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetTagResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L38" >}}">interface <b>GetTagResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L40" >}}">interface <b>GetTagResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8100,10 +9191,12 @@ A collection of values returned by getTag.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetTagResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L43" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L45" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8111,16 +9204,18 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetTagResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L39" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getTag.ts#L41" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVolumeArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L30" >}}">interface <b>GetVolumeArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L32" >}}">interface <b>GetVolumeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8129,18 +9224,22 @@ A collection of arguments for invoking getVolume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVolumeArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L31" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L33" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L35" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L37" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of block storage volume.
@@ -8148,10 +9247,12 @@ The name of block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L39" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L41" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region the block storage volume is provisioned in.
@@ -8160,7 +9261,7 @@ The region the block storage volume is provisioned in.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVolumeResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L45" >}}">interface <b>GetVolumeResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L47" >}}">interface <b>GetVolumeResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8169,10 +9270,12 @@ A collection of values returned by getVolume.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVolumeResult-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L49" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L51" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Text describing a block storage volume.
@@ -8180,10 +9283,12 @@ Text describing a block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L53" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L55" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of associated Droplet ids.
@@ -8191,10 +9296,12 @@ A list of associated Droplet ids.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-filesystemLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L57" >}}">property <b>filesystemLabel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L59" >}}">property <b>filesystemLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filesystemLabel: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filesystem label currently in-use on the block storage volume.
@@ -8202,10 +9309,12 @@ Filesystem label currently in-use on the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-filesystemType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L61" >}}">property <b>filesystemType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L63" >}}">property <b>filesystemType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filesystemType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filesystem type currently in-use on the block storage volume.
@@ -8213,10 +9322,12 @@ Filesystem type currently in-use on the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L72" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L74" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8224,26 +9335,32 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L62" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L64" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L63" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L65" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L67" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L69" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the block storage volume in GiB.
@@ -8251,16 +9368,18 @@ The size of the block storage volume in GiB.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeResult-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L68" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolume.ts#L70" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVolumeSnapshotArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L69" >}}">interface <b>GetVolumeSnapshotArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L71" >}}">interface <b>GetVolumeSnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8269,10 +9388,12 @@ A collection of arguments for invoking getVolumeSnapshot.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotArgs-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L73" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L75" >}}">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 If more than one result is returned, use the most recent volume snapshot.
@@ -8280,10 +9401,12 @@ If more than one result is returned, use the most recent volume snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L77" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L79" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the volume snapshot.
@@ -8291,10 +9414,12 @@ The name of the volume snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotArgs-nameRegex">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L81" >}}">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L83" >}}">property <b>nameRegex</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A regex string to apply to the volume snapshot list returned by DigitalOcean. This allows more advanced filtering not supported from the DigitalOcean API. This filtering is done locally on what DigitalOcean returns.
@@ -8302,10 +9427,12 @@ A regex string to apply to the volume snapshot list returned by DigitalOcean. Th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L85" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L87" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A "slug" representing a DigitalOcean region (e.g. `nyc1`). If set, only volume snapshots available in the region will be returned.
@@ -8314,7 +9441,7 @@ A "slug" representing a DigitalOcean region (e.g. `nyc1`). If set, only volume s
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetVolumeSnapshotResult">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L91" >}}">interface <b>GetVolumeSnapshotResult</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L93" >}}">interface <b>GetVolumeSnapshotResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8323,10 +9450,12 @@ A collection of values returned by getVolumeSnapshot.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L95" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L97" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time the volume snapshot was created.
@@ -8334,10 +9463,12 @@ The date and time the volume snapshot was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-id">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L119" >}}">property <b>id</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L121" >}}">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 id is the provider-assigned unique ID for this managed resource.
@@ -8345,10 +9476,12 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-minDiskSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L99" >}}">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L101" >}}">property <b>minDiskSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minDiskSize: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
@@ -8356,42 +9489,52 @@ The minimum size in gigabytes required for a volume to be created based on this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-mostRecent">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L100" >}}">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L102" >}}">property <b>mostRecent</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L101" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L103" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-nameRegex">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L102" >}}">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L104" >}}">property <b>nameRegex</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L103" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L105" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-regions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L107" >}}">property <b>regions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L109" >}}">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regions: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
@@ -8399,10 +9542,12 @@ A list of DigitalOcean region "slugs" indicating where the volume snapshot is av
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L111" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L113" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The billable size of the volume snapshot in gigabytes.
@@ -8410,10 +9555,12 @@ The billable size of the volume snapshot in gigabytes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetVolumeSnapshotResult-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L115" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="getVolumeSnapshot.ts#L117" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the volume from which the volume snapshot originated.
@@ -8422,7 +9569,7 @@ The ID of the volume from which the volume snapshot originated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KubernetesClusterArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L230" >}}">interface <b>KubernetesClusterArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L232" >}}">interface <b>KubernetesClusterArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8431,10 +9578,12 @@ The set of arguments for constructing a KubernetesCluster resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="KubernetesClusterArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L234" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L236" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the Kubernetes cluster.
@@ -8442,23 +9591,12 @@ A name for the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterArgs-nodePool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L242" >}}">property <b>nodePool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L244" >}}">property <b>nodePool</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>nodePool: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterNodePool'>KubernetesClusterNodePool</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block representing the cluster's default node pool. Additional node pools may be added to the cluster using the `digitalocean..KubernetesNodePool` resource. The following arguments may be specified:
@@ -8470,10 +9608,12 @@ A block representing the cluster's default node pool. Additional node pools may 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L246" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L248" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the region where the Kubernetes cluster will be created.
@@ -8481,10 +9621,12 @@ The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L250" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L252" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag names to be applied to the Kubernetes cluster.
@@ -8492,10 +9634,12 @@ A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterArgs-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L254" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L256" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the version of Kubernetes used for the cluster.
@@ -8504,7 +9648,7 @@ The slug identifier for the version of Kubernetes used for the cluster.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KubernetesClusterState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L165" >}}">interface <b>KubernetesClusterState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L167" >}}">interface <b>KubernetesClusterState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8513,10 +9657,12 @@ Input properties used for looking up and filtering KubernetesCluster resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="KubernetesClusterState-clusterSubnet">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L169" >}}">property <b>clusterSubnet</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L171" >}}">property <b>clusterSubnet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clusterSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The range of IP addresses in the overlay network of the Kubernetes cluster.
@@ -8524,10 +9670,12 @@ The range of IP addresses in the overlay network of the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L173" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L175" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time when the Kubernetes cluster was created.
@@ -8535,10 +9683,12 @@ The date and time when the Kubernetes cluster was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-endpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L177" >}}">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L179" >}}">property <b>endpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>endpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The base URL of the API server on the Kubernetes master node.
@@ -8546,10 +9696,12 @@ The base URL of the API server on the Kubernetes master node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-ipv4Address">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L181" >}}">property <b>ipv4Address</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L183" >}}">property <b>ipv4Address</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ipv4Address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The public IPv4 address of the Kubernetes master node.
@@ -8557,24 +9709,22 @@ The public IPv4 address of the Kubernetes master node.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-kubeConfigs">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L182" >}}">property <b>kubeConfigs</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L184" >}}">property <b>kubeConfigs</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>kubeConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    clientCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    clientKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    clusterCaCertificate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    rawConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>kubeConfigs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterKubeConfig'>KubernetesClusterKubeConfig</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L186" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L188" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the Kubernetes cluster.
@@ -8582,23 +9732,12 @@ A name for the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-nodePool">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L194" >}}">property <b>nodePool</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L196" >}}">property <b>nodePool</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    nodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-        createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-        updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    }&gt;[]&gt;;
-    size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>nodePool?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesClusterNodePool'>KubernetesClusterNodePool</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A block representing the cluster's default node pool. Additional node pools may be added to the cluster using the `digitalocean..KubernetesNodePool` resource. The following arguments may be specified:
@@ -8610,10 +9749,12 @@ A block representing the cluster's default node pool. Additional node pools may 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L198" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L200" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the region where the Kubernetes cluster will be created.
@@ -8621,10 +9762,12 @@ The slug identifier for the region where the Kubernetes cluster will be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-serviceSubnet">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L202" >}}">property <b>serviceSubnet</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L204" >}}">property <b>serviceSubnet</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>serviceSubnet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The range of assignable IP addresses for services running in the Kubernetes cluster.
@@ -8632,10 +9775,12 @@ The range of assignable IP addresses for services running in the Kubernetes clus
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L206" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L208" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A string indicating the current status of the cluster. Potential values include running, provisioning, and errored.
@@ -8643,10 +9788,12 @@ A string indicating the current status of the cluster. Potential values include 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L210" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L212" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag names to be applied to the Kubernetes cluster.
@@ -8654,10 +9801,12 @@ A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-updatedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L220" >}}">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L222" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time when the Kubernetes cluster was last updated.
@@ -8671,10 +9820,12 @@ The date and time when the Kubernetes cluster was last updated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesClusterState-version">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L224" >}}">property <b>version</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesCluster.ts#L226" >}}">property <b>version</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the version of Kubernetes used for the cluster.
@@ -8683,7 +9834,7 @@ The slug identifier for the version of Kubernetes used for the cluster.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KubernetesNodePoolArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L179" >}}">interface <b>KubernetesNodePoolArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L181" >}}">interface <b>KubernetesNodePoolArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8692,10 +9843,12 @@ The set of arguments for constructing a KubernetesNodePool resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="KubernetesNodePoolArgs-clusterId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L183" >}}">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L185" >}}">property <b>clusterId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Kubernetes cluster to which the node pool is associated.
@@ -8703,10 +9856,12 @@ The ID of the Kubernetes cluster to which the node pool is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L187" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L189" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the node pool.
@@ -8714,10 +9869,12 @@ A name for the node pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolArgs-nodeCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L191" >}}">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L193" >}}">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of Droplet instances in the node pool.
@@ -8725,10 +9882,12 @@ The number of Droplet instances in the node pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L195" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L197" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the type of Droplet to be used as workers in the node pool.
@@ -8736,10 +9895,12 @@ The slug identifier for the type of Droplet to be used as workers in the node po
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolArgs-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L199" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L201" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag names to be applied to the Kubernetes cluster.
@@ -8748,7 +9909,7 @@ A list of tag names to be applied to the Kubernetes cluster.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="KubernetesNodePoolState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L144" >}}">interface <b>KubernetesNodePoolState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L146" >}}">interface <b>KubernetesNodePoolState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8757,10 +9918,12 @@ Input properties used for looking up and filtering KubernetesNodePool resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="KubernetesNodePoolState-clusterId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L148" >}}">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L150" >}}">property <b>clusterId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the Kubernetes cluster to which the node pool is associated.
@@ -8768,10 +9931,12 @@ The ID of the Kubernetes cluster to which the node pool is associated.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L152" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L154" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the node pool.
@@ -8779,10 +9944,12 @@ A name for the node pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolState-nodeCount">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L156" >}}">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L158" >}}">property <b>nodeCount</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The number of Droplet instances in the node pool.
@@ -8790,16 +9957,12 @@ The number of Droplet instances in the node pool.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolState-nodes">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L165" >}}">property <b>nodes</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L167" >}}">property <b>nodes</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>nodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#KubernetesNodePoolNode'>KubernetesNodePoolNode</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of nodes in the pool. Each node exports the following attributes:
@@ -8812,10 +9975,12 @@ A list of nodes in the pool. Each node exports the following attributes:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L169" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L171" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#DropletSlug'>DropletSlug</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The slug identifier for the type of Droplet to be used as workers in the node pool.
@@ -8823,10 +9988,12 @@ The slug identifier for the type of Droplet to be used as workers in the node po
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="KubernetesNodePoolState-tags">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L173" >}}">property <b>tags</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="kubernetesNodePool.ts#L175" >}}">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of tag names to be applied to the Kubernetes cluster.
@@ -8835,7 +10002,7 @@ A list of tag names to be applied to the Kubernetes cluster.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L284" >}}">interface <b>LoadBalancerArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L286" >}}">interface <b>LoadBalancerArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8844,10 +10011,12 @@ The set of arguments for constructing a LoadBalancer resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-algorithm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L290" >}}">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L292" >}}">property <b>algorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Algorithm'>Algorithm</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The load balancing algorithm used to determine
@@ -8857,10 +10026,12 @@ or `leastConnections`. The default value is `roundRobin`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L294" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L296" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the IDs of each droplet to be attached to the Load Balancer.
@@ -8868,10 +10039,12 @@ A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-dropletTag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L298" >}}">property <b>dropletTag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L300" >}}">property <b>dropletTag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
@@ -8879,10 +10052,12 @@ The name of a Droplet tag corresponding to Droplets to be assigned to the Load B
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-enableProxyProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L304" >}}">property <b>enableProxyProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L306" >}}">property <b>enableProxyProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableProxyProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean value indicating whether PROXY
@@ -8892,17 +10067,12 @@ the backend service. Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-forwardingRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L309" >}}">property <b>forwardingRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L311" >}}">property <b>forwardingRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    certificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    entryPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    entryProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    targetPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    targetProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tlsPassthrough: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>forwardingRules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerForwardingRule'>LoadBalancerForwardingRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of `forwardingRule` to be assigned to the
@@ -8911,18 +10081,12 @@ Load Balancer. The `forwardingRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-healthcheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L314" >}}">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L316" >}}">property <b>healthcheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    checkIntervalSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    healthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    responseTimeoutSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    unhealthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerHealthcheck'>LoadBalancerHealthcheck</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `healthcheck` block to be assigned to the
@@ -8931,10 +10095,12 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L318" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L320" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Load Balancer name
@@ -8942,10 +10108,12 @@ The Load Balancer name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-redirectHttpToHttps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L324" >}}">property <b>redirectHttpToHttps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L326" >}}">property <b>redirectHttpToHttps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redirectHttpToHttps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean value indicating whether
@@ -8955,10 +10123,12 @@ Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L328" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L330" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region to start in
@@ -8966,14 +10136,12 @@ The region to start in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerArgs-stickySessions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L333" >}}">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L335" >}}">property <b>stickySessions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    cookieTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerStickySessions'>LoadBalancerStickySessions</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `stickySessions` block to be assigned to the
@@ -8983,7 +10151,7 @@ Load Balancer. The `stickySessions` block is documented below. Only 1 stickySess
 </div>
 </div>
 <h2 class="pdoc-module-header" id="LoadBalancerState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L223" >}}">interface <b>LoadBalancerState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L225" >}}">interface <b>LoadBalancerState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -8992,10 +10160,12 @@ Input properties used for looking up and filtering LoadBalancer resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="LoadBalancerState-algorithm">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L229" >}}">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L231" >}}">property <b>algorithm</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Algorithm'>Algorithm</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The load balancing algorithm used to determine
@@ -9005,10 +10175,12 @@ or `leastConnections`. The default value is `roundRobin`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L233" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L235" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of the IDs of each droplet to be attached to the Load Balancer.
@@ -9016,10 +10188,12 @@ A list of the IDs of each droplet to be attached to the Load Balancer.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-dropletTag">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L237" >}}">property <b>dropletTag</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L239" >}}">property <b>dropletTag</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletTag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of a Droplet tag corresponding to Droplets to be assigned to the Load Balancer.
@@ -9027,10 +10201,12 @@ The name of a Droplet tag corresponding to Droplets to be assigned to the Load B
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-enableProxyProtocol">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L243" >}}">property <b>enableProxyProtocol</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L245" >}}">property <b>enableProxyProtocol</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>enableProxyProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean value indicating whether PROXY
@@ -9040,17 +10216,12 @@ the backend service. Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-forwardingRules">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L248" >}}">property <b>forwardingRules</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L250" >}}">property <b>forwardingRules</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>forwardingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    certificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    entryPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    entryProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    targetPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    targetProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    tlsPassthrough: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;
-}&gt;[]&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>forwardingRules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerForwardingRule'>LoadBalancerForwardingRule</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of `forwardingRule` to be assigned to the
@@ -9059,18 +10230,12 @@ Load Balancer. The `forwardingRule` block is documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-healthcheck">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L253" >}}">property <b>healthcheck</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L255" >}}">property <b>healthcheck</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    checkIntervalSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    healthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    responseTimeoutSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    unhealthyThreshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>healthcheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerHealthcheck'>LoadBalancerHealthcheck</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `healthcheck` block to be assigned to the
@@ -9079,18 +10244,22 @@ Load Balancer. The `healthcheck` block is documented below. Only 1 healthcheck i
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-ip">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L254" >}}">property <b>ip</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L256" >}}">property <b>ip</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L258" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L260" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The Load Balancer name
@@ -9098,10 +10267,12 @@ The Load Balancer name
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-redirectHttpToHttps">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L264" >}}">property <b>redirectHttpToHttps</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L266" >}}">property <b>redirectHttpToHttps</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>redirectHttpToHttps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A boolean value indicating whether
@@ -9111,10 +10282,12 @@ Default value is `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L268" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L270" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region to start in
@@ -9122,22 +10295,22 @@ The region to start in
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-status">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L269" >}}">property <b>status</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L271" >}}">property <b>status</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-stickySessions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L274" >}}">property <b>stickySessions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L276" >}}">property <b>stickySessions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{
-    cookieName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-    cookieTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;
-    type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;
-}&gt;;</pre>
+{{< md-disable >}}
+<pre class="highlight"><span class='kd'></span>stickySessions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#LoadBalancerStickySessions'>LoadBalancerStickySessions</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A `stickySessions` block to be assigned to the
@@ -9146,10 +10319,12 @@ Load Balancer. The `stickySessions` block is documented below. Only 1 stickySess
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="LoadBalancerState-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L278" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadBalancer.ts#L280" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name for the Load Balancer
@@ -9158,7 +10333,7 @@ The uniform resource name for the Load Balancer
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L214" >}}">interface <b>ProjectArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L216" >}}">interface <b>ProjectArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9167,10 +10342,12 @@ The set of arguments for constructing a Project resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L218" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L220" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the description of the project
@@ -9178,10 +10355,12 @@ the description of the project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-environment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L222" >}}">property <b>environment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L224" >}}">property <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`)
@@ -9189,10 +10368,12 @@ the environment of the project's resources. The possible values are: `Developmen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L226" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L228" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Project
@@ -9200,10 +10381,12 @@ The name of the Project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-purpose">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L230" >}}">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L232" >}}">property <b>purpose</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>purpose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the purpose of the project, (Default: "Web Application")
@@ -9211,10 +10394,12 @@ the purpose of the project, (Default: "Web Application")
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectArgs-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L234" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L236" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 a list of uniform resource names (URNs) for the resources associated with the project
@@ -9223,7 +10408,7 @@ a list of uniform resource names (URNs) for the resources associated with the pr
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProjectState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L172" >}}">interface <b>ProjectState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L174" >}}">interface <b>ProjectState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9232,10 +10417,12 @@ Input properties used for looking up and filtering Project resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProjectState-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L176" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L178" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the date and time when the project was created, (ISO8601)
@@ -9243,10 +10430,12 @@ the date and time when the project was created, (ISO8601)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L180" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L182" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the description of the project
@@ -9254,10 +10443,12 @@ the description of the project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-environment">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L184" >}}">property <b>environment</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L186" >}}">property <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the environment of the project's resources. The possible values are: `Development`, `Staging`, `Production`)
@@ -9265,10 +10456,12 @@ the environment of the project's resources. The possible values are: `Developmen
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L188" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L190" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the Project
@@ -9276,10 +10469,12 @@ The name of the Project
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-ownerId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L192" >}}">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L194" >}}">property <b>ownerId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the id of the project owner.
@@ -9287,10 +10482,12 @@ the id of the project owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-ownerUuid">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L196" >}}">property <b>ownerUuid</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L198" >}}">property <b>ownerUuid</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>ownerUuid?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the unique universal identifier of the project owner.
@@ -9298,10 +10495,12 @@ the unique universal identifier of the project owner.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-purpose">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L200" >}}">property <b>purpose</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L202" >}}">property <b>purpose</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>purpose?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the purpose of the project, (Default: "Web Application")
@@ -9309,10 +10508,12 @@ the purpose of the project, (Default: "Web Application")
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-resources">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L204" >}}">property <b>resources</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L206" >}}">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>resources?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 a list of uniform resource names (URNs) for the resources associated with the project
@@ -9320,10 +10521,12 @@ a list of uniform resource names (URNs) for the resources associated with the pr
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProjectState-updatedAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L208" >}}">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="project.ts#L210" >}}">property <b>updatedAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the date and time when the project was last updated, (ISO8601)
@@ -9332,7 +10535,7 @@ the date and time when the project was last updated, (ISO8601)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L60" >}}">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L62" >}}">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9341,10 +10544,12 @@ The set of arguments for constructing a Provider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-apiEndpoint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L64" >}}">property <b>apiEndpoint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L66" >}}">property <b>apiEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>apiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The URL to use for the DigitalOcean API.
@@ -9352,10 +10557,12 @@ The URL to use for the DigitalOcean API.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-spacesAccessId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L68" >}}">property <b>spacesAccessId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L70" >}}">property <b>spacesAccessId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>spacesAccessId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The access key ID for Spaces API operations.
@@ -9363,10 +10570,12 @@ The access key ID for Spaces API operations.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-spacesSecretKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L72" >}}">property <b>spacesSecretKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L74" >}}">property <b>spacesSecretKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>spacesSecretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The secret access key for Spaces API operations.
@@ -9374,10 +10583,12 @@ The secret access key for Spaces API operations.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L76" >}}">property <b>token</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="provider.ts#L78" >}}">property <b>token</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The token key for API operations.
@@ -9386,7 +10597,7 @@ The token key for API operations.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SpacesBucketArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L170" >}}">interface <b>SpacesBucketArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L172" >}}">interface <b>SpacesBucketArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9395,10 +10606,12 @@ The set of arguments for constructing a SpacesBucket resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SpacesBucketArgs-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L174" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L176" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>acl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Canned ACL applied on bucket creation (`private` or `public-read`)
@@ -9406,10 +10619,12 @@ Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucketArgs-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L178" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L180" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
@@ -9417,10 +10632,12 @@ Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucketArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L182" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L184" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket
@@ -9428,10 +10645,12 @@ The name of the bucket
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucketArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L186" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L188" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region where the bucket resides (Defaults to `nyc3`)
@@ -9440,7 +10659,7 @@ The region where the bucket resides (Defaults to `nyc3`)
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SpacesBucketState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L140" >}}">interface <b>SpacesBucketState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L142" >}}">interface <b>SpacesBucketState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9449,10 +10668,12 @@ Input properties used for looking up and filtering SpacesBucket resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SpacesBucketState-acl">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L144" >}}">property <b>acl</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L146" >}}">property <b>acl</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>acl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Canned ACL applied on bucket creation (`private` or `public-read`)
@@ -9460,10 +10681,12 @@ Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucketState-bucketDomainName">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L148" >}}">property <b>bucketDomainName</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L150" >}}">property <b>bucketDomainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>bucketDomainName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
@@ -9471,10 +10694,12 @@ The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucketState-forceDestroy">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L152" >}}">property <b>forceDestroy</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L154" >}}">property <b>forceDestroy</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>forceDestroy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
@@ -9482,10 +10707,12 @@ Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucketState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L156" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L158" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the bucket
@@ -9493,10 +10720,12 @@ The name of the bucket
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucketState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L160" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L162" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region where the bucket resides (Defaults to `nyc3`)
@@ -9504,10 +10733,12 @@ The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SpacesBucketState-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L164" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="spacesBucket.ts#L166" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The uniform resource name for the bucket
@@ -9516,7 +10747,7 @@ The uniform resource name for the bucket
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SshKeyArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L108" >}}">interface <b>SshKeyArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L110" >}}">interface <b>SshKeyArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9525,10 +10756,12 @@ The set of arguments for constructing a SshKey resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SshKeyArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L112" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L114" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSH key for identification
@@ -9536,10 +10769,12 @@ The name of the SSH key for identification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyArgs-publicKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L117" >}}">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L119" >}}">property <b>publicKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>publicKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The public key. If this is a file, it
@@ -9549,7 +10784,7 @@ can be read using the file interpolation function
 </div>
 </div>
 <h2 class="pdoc-module-header" id="SshKeyState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L89" >}}">interface <b>SshKeyState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L91" >}}">interface <b>SshKeyState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9558,10 +10793,12 @@ Input properties used for looking up and filtering SshKey resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="SshKeyState-fingerprint">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L93" >}}">property <b>fingerprint</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L95" >}}">property <b>fingerprint</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>fingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The fingerprint of the SSH key
@@ -9569,10 +10806,12 @@ The fingerprint of the SSH key
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L97" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L99" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the SSH key for identification
@@ -9580,10 +10819,12 @@ The name of the SSH key for identification
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="SshKeyState-publicKey">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L102" >}}">property <b>publicKey</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="sshKey.ts#L104" >}}">property <b>publicKey</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>publicKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The public key. If this is a file, it
@@ -9593,7 +10834,7 @@ can be read using the file interpolation function
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TagArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L105" >}}">interface <b>TagArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L107" >}}">interface <b>TagArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9602,10 +10843,12 @@ The set of arguments for constructing a Tag resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TagArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L109" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L111" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the tag
@@ -9614,7 +10857,7 @@ The name of the tag
 </div>
 </div>
 <h2 class="pdoc-module-header" id="TagState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L95" >}}">interface <b>TagState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L97" >}}">interface <b>TagState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9623,10 +10866,12 @@ Input properties used for looking up and filtering Tag resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="TagState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L99" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="tag.ts#L101" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The name of the tag
@@ -9635,7 +10880,7 @@ The name of the tag
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L232" >}}">interface <b>VolumeArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L234" >}}">interface <b>VolumeArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9644,10 +10889,12 @@ The set of arguments for constructing a Volume resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeArgs-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L236" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L238" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
@@ -9655,10 +10902,12 @@ A free-form text field up to a limit of 1024 bytes to describe a block storage v
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-filesystemType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L240" >}}">property <b>filesystemType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L242" >}}">property <b>filesystemType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filesystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filesystem type (`xfs` or `ext4`) for the block storage volume.
@@ -9666,10 +10915,12 @@ Filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-initialFilesystemLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L244" >}}">property <b>initialFilesystemLabel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L246" >}}">property <b>initialFilesystemLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>initialFilesystemLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Initial filesystem label for the block storage volume.
@@ -9677,10 +10928,12 @@ Initial filesystem label for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-initialFilesystemType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L248" >}}">property <b>initialFilesystemType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L250" >}}">property <b>initialFilesystemType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>initialFilesystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FilesystemType'>FilesystemType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
@@ -9688,10 +10941,12 @@ Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L252" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L254" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
@@ -9699,10 +10954,12 @@ A name for the block storage volume. Must be lowercase and be composed only of n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L256" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L258" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region that the block storage volume will be created in.
@@ -9710,10 +10967,12 @@ The region that the block storage volume will be created in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L260" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L262" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the block storage volume in GiB. If updated, can only be expanded.
@@ -9721,10 +10980,12 @@ The size of the block storage volume in GiB. If updated, can only be expanded.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeArgs-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L264" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L266" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
@@ -9733,7 +10994,7 @@ The ID of an existing volume snapshot from which the new volume will be created.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L127" >}}">interface <b>VolumeAttachmentArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L129" >}}">interface <b>VolumeAttachmentArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9742,10 +11003,12 @@ The set of arguments for constructing a VolumeAttachment resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentArgs-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L131" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L133" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the Droplet to attach the volume to.
@@ -9753,10 +11016,12 @@ ID of the Droplet to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentArgs-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L135" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L137" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the Volume to be attached to the Droplet.
@@ -9765,7 +11030,7 @@ ID of the Volume to be attached to the Droplet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeAttachmentState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L113" >}}">interface <b>VolumeAttachmentState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L115" >}}">interface <b>VolumeAttachmentState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9774,10 +11039,12 @@ Input properties used for looking up and filtering VolumeAttachment resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeAttachmentState-dropletId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L117" >}}">property <b>dropletId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L119" >}}">property <b>dropletId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the Droplet to attach the volume to.
@@ -9785,10 +11052,12 @@ ID of the Droplet to attach the volume to.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeAttachmentState-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L121" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeAttachment.ts#L123" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 ID of the Volume to be attached to the Droplet.
@@ -9797,7 +11066,7 @@ ID of the Volume to be attached to the Droplet.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeSnapshotArgs">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L156" >}}">interface <b>VolumeSnapshotArgs</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L158" >}}">interface <b>VolumeSnapshotArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9806,10 +11075,12 @@ The set of arguments for constructing a VolumeSnapshot resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeSnapshotArgs-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L160" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L162" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the volume snapshot.
@@ -9817,10 +11088,12 @@ A name for the volume snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshotArgs-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L164" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L166" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the volume from which the volume snapshot originated.
@@ -9829,7 +11102,7 @@ The ID of the volume from which the volume snapshot originated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeSnapshotState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L126" >}}">interface <b>VolumeSnapshotState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L128" >}}">interface <b>VolumeSnapshotState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9838,10 +11111,12 @@ Input properties used for looking up and filtering VolumeSnapshot resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeSnapshotState-createdAt">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L130" >}}">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L132" >}}">property <b>createdAt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The date and time the volume snapshot was created.
@@ -9849,10 +11124,12 @@ The date and time the volume snapshot was created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshotState-minDiskSize">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L134" >}}">property <b>minDiskSize</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L136" >}}">property <b>minDiskSize</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>minDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The minimum size in gigabytes required for a volume to be created based on this volume snapshot.
@@ -9860,10 +11137,12 @@ The minimum size in gigabytes required for a volume to be created based on this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshotState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L138" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L140" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the volume snapshot.
@@ -9871,10 +11150,12 @@ A name for the volume snapshot.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshotState-regions">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L142" >}}">property <b>regions</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L144" >}}">property <b>regions</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>regions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of DigitalOcean region "slugs" indicating where the volume snapshot is available.
@@ -9882,10 +11163,12 @@ A list of DigitalOcean region "slugs" indicating where the volume snapshot is av
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshotState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L146" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L148" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The billable size of the volume snapshot in gigabytes.
@@ -9893,10 +11176,12 @@ The billable size of the volume snapshot in gigabytes.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeSnapshotState-volumeId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L150" >}}">property <b>volumeId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volumeSnapshot.ts#L152" >}}">property <b>volumeId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>volumeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of the volume from which the volume snapshot originated.
@@ -9905,7 +11190,7 @@ The ID of the volume from which the volume snapshot originated.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="VolumeState">
-<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L182" >}}">interface <b>VolumeState</b></a>
+<a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L184" >}}">interface <b>VolumeState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -9914,10 +11199,12 @@ Input properties used for looking up and filtering Volume resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="VolumeState-description">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L186" >}}">property <b>description</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L188" >}}">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
@@ -9925,10 +11212,12 @@ A free-form text field up to a limit of 1024 bytes to describe a block storage v
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-dropletIds">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L190" >}}">property <b>dropletIds</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L192" >}}">property <b>dropletIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>dropletIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A list of associated droplet ids.
@@ -9936,10 +11225,12 @@ A list of associated droplet ids.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-filesystemLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L194" >}}">property <b>filesystemLabel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L196" >}}">property <b>filesystemLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filesystemLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filesystem label for the block storage volume.
@@ -9947,10 +11238,12 @@ Filesystem label for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-filesystemType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L198" >}}">property <b>filesystemType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L200" >}}">property <b>filesystemType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>filesystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Filesystem type (`xfs` or `ext4`) for the block storage volume.
@@ -9958,10 +11251,12 @@ Filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-initialFilesystemLabel">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L202" >}}">property <b>initialFilesystemLabel</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L204" >}}">property <b>initialFilesystemLabel</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>initialFilesystemLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Initial filesystem label for the block storage volume.
@@ -9969,10 +11264,12 @@ Initial filesystem label for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-initialFilesystemType">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L206" >}}">property <b>initialFilesystemType</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L208" >}}">property <b>initialFilesystemType</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>initialFilesystemType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#FilesystemType'>FilesystemType</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
@@ -9980,10 +11277,12 @@ Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-name">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L210" >}}">property <b>name</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L212" >}}">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
@@ -9991,10 +11290,12 @@ A name for the block storage volume. Must be lowercase and be composed only of n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-region">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L214" >}}">property <b>region</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L216" >}}">property <b>region</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#Region'>Region</a>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The region that the block storage volume will be created in.
@@ -10002,10 +11303,12 @@ The region that the block storage volume will be created in.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-size">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L218" >}}">property <b>size</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L220" >}}">property <b>size</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The size of the block storage volume in GiB. If updated, can only be expanded.
@@ -10013,10 +11316,12 @@ The size of the block storage volume in GiB. If updated, can only be expanded.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-snapshotId">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L222" >}}">property <b>snapshotId</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L224" >}}">property <b>snapshotId</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>snapshotId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
@@ -10024,10 +11329,12 @@ The ID of an existing volume snapshot from which the new volume will be created.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="VolumeState-urn">
-<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L226" >}}">property <b>urn</b></a>
+<a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="volume.ts#L228" >}}">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'></span>urn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 the uniform resource name for the volume.
@@ -10043,7 +11350,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificateType.ts#L16" >}}">const <b>Custom</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Custom: <a href='#CertificateType'>CertificateType</a> = <span class='s2'>&#34;custom&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10051,7 +11360,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="certificateType.ts#L17" >}}">const <b>LetsEncrypt</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> LetsEncrypt: <a href='#CertificateType'>CertificateType</a> = <span class='s2'>&#34;lets_encrypt&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10064,7 +11375,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L22" >}}">const <b>DB_16VPCU64GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DB_16VPCU64GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-16vcpu-64gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10072,7 +11385,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L16" >}}">const <b>DB_1VPCU1GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DB_1VPCU1GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-1vcpu-1gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10080,7 +11395,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L17" >}}">const <b>DB_1VPCU2GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DB_1VPCU2GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-1vcpu-2gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10088,7 +11405,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L18" >}}">const <b>DB_2VPCU4GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DB_2VPCU4GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-2vcpu-4gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10096,7 +11415,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L19" >}}">const <b>DB_4VPCU8GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DB_4VPCU8GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-4vcpu-8gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10104,7 +11425,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L20" >}}">const <b>DB_6VPCU16GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DB_6VPCU16GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-6vcpu-16gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10112,7 +11435,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L21" >}}">const <b>DB_8VPCU32GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DB_8VPCU32GB: <a href='#DatabaseSlug'>DatabaseSlug</a> = <span class='s2'>&#34;db-s-8vcpu-32gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10125,7 +11450,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L21" >}}">const <b>Droplet16GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;16gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10133,7 +11460,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L17" >}}">const <b>Droplet1GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;1gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10141,7 +11470,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L18" >}}">const <b>Droplet2GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;2gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10149,7 +11480,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L22" >}}">const <b>Droplet32GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;32gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10157,7 +11490,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L23" >}}">const <b>Droplet48GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet48GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;48gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10165,7 +11500,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L19" >}}">const <b>Droplet4GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet4GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;4gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10173,7 +11510,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L16" >}}">const <b>Droplet512mb</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet512mb: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;512mb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10181,7 +11520,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L24" >}}">const <b>Droplet64GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;64gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10189,7 +11530,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L20" >}}">const <b>Droplet8GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> Droplet8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;8gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10197,7 +11540,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L28" >}}">const <b>DropletC16</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletC16: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-16&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10205,7 +11550,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L25" >}}">const <b>DropletC2</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletC2: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-2&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10213,7 +11560,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L29" >}}">const <b>DropletC32</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletC32: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-32&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10221,7 +11570,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L26" >}}">const <b>DropletC4</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletC4: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-4&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10229,7 +11580,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L27" >}}">const <b>DropletC8</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletC8: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;c-8&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10237,7 +11590,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L47" >}}">const <b>DropletG16VPCU64GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletG16VPCU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-16vcpu-64gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10245,7 +11600,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L44" >}}">const <b>DropletG2VPCU8GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletG2VPCU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-2vcpu-8gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10253,7 +11610,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L48" >}}">const <b>DropletG32VPCU128GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletG32VPCU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-32vcpu-128gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10261,7 +11620,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L49" >}}">const <b>DropletG40VPCU160GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletG40VPCU160GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-40vcpu-160gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10269,7 +11630,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L45" >}}">const <b>DropletG4VPCU16GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletG4VPCU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-4vcpu-16gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10277,7 +11640,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L46" >}}">const <b>DropletG8VPCU32GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletG8VPCU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;g-8vcpu-32gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10285,7 +11650,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L53" >}}">const <b>DropletGD16VPCU64GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletGD16VPCU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-16vcpu-64gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10293,7 +11660,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L50" >}}">const <b>DropletGD2VPCU8GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletGD2VPCU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-2vcpu-8gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10301,7 +11670,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L54" >}}">const <b>DropletGD32VPCU128GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletGD32VPCU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-32vcpu-128gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10309,7 +11680,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L55" >}}">const <b>DropletGD40VPCU160GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletGD40VPCU160GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-40vcpu-160gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10317,7 +11690,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L51" >}}">const <b>DropletGD4VPCU16GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletGD4VPCU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-4vcpu-16gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10325,7 +11700,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L52" >}}">const <b>DropletGD8VPCU32GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletGD8VPCU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;gd-8vcpu-32gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10333,7 +11710,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L39" >}}">const <b>DropletS12VPCU48GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS12VPCU48GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-12vcpu-48gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10341,7 +11720,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L40" >}}">const <b>DropletS16VPCU64GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS16VPCU64GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-16vcpu-64gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10349,7 +11730,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L30" >}}">const <b>DropletS1VPCU1GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS1VPCU1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-1gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10357,7 +11740,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L31" >}}">const <b>DropletS1VPCU2GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS1VPCU2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-2gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10365,7 +11750,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L32" >}}">const <b>DropletS1VPCU3GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS1VPCU3GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-1vcpu-3gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10373,7 +11760,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L41" >}}">const <b>DropletS20VPCU96GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS20VPCU96GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-20vcpu-96gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10381,7 +11770,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L42" >}}">const <b>DropletS24VPCU128GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS24VPCU128GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-24vcpu-128gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10389,7 +11780,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L33" >}}">const <b>DropletS2VPCU2GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS2VPCU2GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-2vcpu-2gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10397,7 +11790,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L34" >}}">const <b>DropletS2VPCU4GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS2VPCU4GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-2vcpu-4gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10405,7 +11800,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L43" >}}">const <b>DropletS32VPCU192GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS32VPCU192GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-32vcpu-192gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10413,7 +11810,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L35" >}}">const <b>DropletS3VPCU1GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS3VPCU1GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-3vcpu-1gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10421,7 +11820,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L36" >}}">const <b>DropletS4VPCU8GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS4VPCU8GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-4vcpu-8gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10429,7 +11830,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L37" >}}">const <b>DropletS6VPCU16GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS6VPCU16GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-6vcpu-16gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10437,7 +11840,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L38" >}}">const <b>DropletS8VPCU32GB</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> DropletS8VPCU32GB: <a href='#DropletSlug'>DropletSlug</a> = <span class='s2'>&#34;s-8vcpu-32gb&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10450,7 +11855,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="filesystemType.ts#L17" >}}">const <b>EXT4</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> EXT4: <a href='#FilesystemType'>FilesystemType</a> = <span class='s2'>&#34;ext4&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10458,7 +11865,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="filesystemType.ts#L16" >}}">const <b>XFS</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> XFS: <a href='#FilesystemType'>FilesystemType</a> = <span class='s2'>&#34;xfs&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10471,7 +11880,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadbalancerAlgorithm.ts#L17" >}}">const <b>LeastConnections</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> LeastConnections: <a href='#Algorithm'>Algorithm</a> = <span class='s2'>&#34;least_connections&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10479,7 +11890,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="loadbalancerAlgorithm.ts#L16" >}}">const <b>RoundRobin</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> RoundRobin: <a href='#Algorithm'>Algorithm</a> = <span class='s2'>&#34;round_robin&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10492,7 +11905,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L19" >}}">const <b>HTTP</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> HTTP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;http&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10500,7 +11915,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L20" >}}">const <b>HTTPS</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> HTTPS: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;https&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10508,7 +11925,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L18" >}}">const <b>ICMP</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> ICMP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;icmp&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10516,7 +11935,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L16" >}}">const <b>TCP</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> TCP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;tcp&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10524,7 +11945,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L17" >}}">const <b>UDP</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> UDP: <a href='#Protocol'>Protocol</a> = <span class='s2'>&#34;udp&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10537,7 +11960,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L16" >}}">const <b>A</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> A: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;A&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10545,7 +11970,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L17" >}}">const <b>AAAA</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> AAAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;AAAA&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10553,7 +11980,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L18" >}}">const <b>CAA</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> CAA: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CAA&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10561,7 +11990,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L19" >}}">const <b>CNAME</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> CNAME: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;CNAME&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10569,7 +12000,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L20" >}}">const <b>MX</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> MX: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;MX&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10577,7 +12010,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L21" >}}">const <b>NS</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> NS: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;NS&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10585,7 +12020,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L23" >}}">const <b>SRV</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> SRV: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;SRV&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10593,7 +12030,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L22" >}}">const <b>TXT</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> TXT: <a href='#RecordType'>RecordType</a> = <span class='s2'>&#34;TXT&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10606,7 +12045,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L21" >}}">const <b>AMS2</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> AMS2: <a href='#Region'>Region</a> = <span class='s2'>&#34;ams2&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10614,7 +12055,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L22" >}}">const <b>AMS3</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> AMS3: <a href='#Region'>Region</a> = <span class='s2'>&#34;ams3&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10622,7 +12065,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L27" >}}">const <b>BLR1</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> BLR1: <a href='#Region'>Region</a> = <span class='s2'>&#34;blr1&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10630,7 +12075,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L23" >}}">const <b>FRA1</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> FRA1: <a href='#Region'>Region</a> = <span class='s2'>&#34;fra1&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10638,7 +12085,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L20" >}}">const <b>LON1</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> LON1: <a href='#Region'>Region</a> = <span class='s2'>&#34;lon1&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10646,7 +12095,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L16" >}}">const <b>NYC1</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> NYC1: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc1&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10654,7 +12105,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L17" >}}">const <b>NYC2</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> NYC2: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc2&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10662,7 +12115,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L18" >}}">const <b>NYC3</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> NYC3: <a href='#Region'>Region</a> = <span class='s2'>&#34;nyc3&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10670,7 +12125,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L25" >}}">const <b>SFO1</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> SFO1: <a href='#Region'>Region</a> = <span class='s2'>&#34;sfo1&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10678,7 +12135,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L26" >}}">const <b>SFO2</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> SFO2: <a href='#Region'>Region</a> = <span class='s2'>&#34;sfo2&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10686,7 +12145,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L19" >}}">const <b>SGP1</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> SGP1: <a href='#Region'>Region</a> = <span class='s2'>&#34;sgp1&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10694,7 +12155,9 @@ the uniform resource name for the volume.
 <a class="pdoc-child-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L24" >}}">const <b>TOR1</b></a>
 </h3>
 <div class="pdoc-member-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>const</span> TOR1: <a href='#Region'>Region</a> = <span class='s2'>&#34;tor1&#34;</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 {{% /md %}}
 </div>
@@ -10703,19 +12166,25 @@ the uniform resource name for the volume.
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="loadbalancerAlgorithm.ts#L20" >}}">type <b>Algorithm</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Algorithm = <span class='s2'>"round_robin"</span> | <span class='s2'>"least_connections"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="CertificateType">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="certificateType.ts#L20" >}}">type <b>CertificateType</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> CertificateType = <span class='s2'>"custom"</span> | <span class='s2'>"lets_encrypt"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="DatabaseSlug">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="databaseSlug.ts#L29" >}}">type <b>DatabaseSlug</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> DatabaseSlug = <span class='s2'>"db-s-1vcpu-1gb"</span> | <span class='s2'>"db-s-1vcpu-2gb"</span> | <span class='s2'>"db-s-2vcpu-4gb"</span> | <span class='s2'>"db-s-4vcpu-8gb"</span> | <span class='s2'>"db-s-6vcpu-16gb"</span> | <span class='s2'>"db-s-8vcpu-32gb"</span> | <span class='s2'>"db-s-16vcpu-64gb"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A DatabaseSlug represents any valid DigitalOcean database slug size that may be targeted with database clusters.
@@ -10726,7 +12195,9 @@ A DatabaseSlug represents any valid DigitalOcean database slug size that may be 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="dropletSlug.ts#L61" >}}">type <b>DropletSlug</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> DropletSlug = <span class='s2'>"512mb"</span> | <span class='s2'>"1gb"</span> | <span class='s2'>"2gb"</span> | <span class='s2'>"4gb"</span> | <span class='s2'>"8gb"</span> | <span class='s2'>"16gb"</span> | <span class='s2'>"32gb"</span> | <span class='s2'>"48gb"</span> | <span class='s2'>"64gb"</span> | <span class='s2'>"c-2"</span> | <span class='s2'>"c-4"</span> | <span class='s2'>"c-8"</span> | <span class='s2'>"c-16"</span> | <span class='s2'>"c-32"</span> | <span class='s2'>"s-1vcpu-1gb"</span> | <span class='s2'>"s-1vcpu-2gb"</span> | <span class='s2'>"s-1vcpu-3gb"</span> | <span class='s2'>"s-2vcpu-2gb"</span> | <span class='s2'>"s-2vcpu-4gb"</span> | <span class='s2'>"s-3vcpu-1gb"</span> | <span class='s2'>"s-4vcpu-8gb"</span> | <span class='s2'>"s-6vcpu-16gb"</span> | <span class='s2'>"s-8vcpu-32gb"</span> | <span class='s2'>"s-12vcpu-48gb"</span> | <span class='s2'>"s-16vcpu-64gb"</span> | <span class='s2'>"s-20vcpu-96gb"</span> | <span class='s2'>"s-24vcpu-128gb"</span> | <span class='s2'>"s-32vcpu-192gb"</span> | <span class='s2'>"g-2vcpu-8gb"</span> | <span class='s2'>"g-4vcpu-16gb"</span> | <span class='s2'>"g-8vcpu-32gb"</span> | <span class='s2'>"g-16vcpu-64gb"</span> | <span class='s2'>"g-32vcpu-128gb"</span> | <span class='s2'>"g-40vcpu-160gb"</span> | <span class='s2'>"gd-2vcpu-8gb"</span> | <span class='s2'>"gd-4vcpu-16gb"</span> | <span class='s2'>"gd-8vcpu-32gb"</span> | <span class='s2'>"gd-16vcpu-64gb"</span> | <span class='s2'>"gd-32vcpu-128gb"</span> | <span class='s2'>"gd-40vcpu-160gb"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A DropletSlug represents any valid DigitalOcean dropconst slug size that may be targeted for deployment.
@@ -10737,25 +12208,33 @@ A DropletSlug represents any valid DigitalOcean dropconst slug size that may be 
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="filesystemType.ts#L20" >}}">type <b>FilesystemType</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> FilesystemType = <span class='s2'>"xfs"</span> | <span class='s2'>"ext4"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="Protocol">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="protocol.ts#L23" >}}">type <b>Protocol</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Protocol = <span class='s2'>"tcp"</span> | <span class='s2'>"icmp"</span> | <span class='s2'>"udp"</span> | <span class='s2'>"http"</span> | <span class='s2'>"https"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="RecordType">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="recordType.ts#L26" >}}">type <b>RecordType</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> RecordType = <span class='s2'>"A"</span> | <span class='s2'>"AAAA"</span> | <span class='s2'>"CAA"</span> | <span class='s2'>"CNAME"</span> | <span class='s2'>"MX"</span> | <span class='s2'>"NS"</span> | <span class='s2'>"TXT"</span> | <span class='s2'>"SRV"</span>;</pre>
+{{< /md-disable >}}
 </div>
 <h2 class="pdoc-module-header" id="Region">
 <a class="pdoc-member-name" href="{{< pkg-url pkg="digitalocean" path="region.ts#L33" >}}">type <b>Region</b></a>
 </h2>
 <div class="pdoc-module-contents">
+{{< md-disable >}}
 <pre class="highlight"><span class='kd'>type</span> Region = <span class='s2'>"nyc1"</span> | <span class='s2'>"nyc2"</span> | <span class='s2'>"nyc3"</span> | <span class='s2'>"sgp1"</span> | <span class='s2'>"lon1"</span> | <span class='s2'>"ams2"</span> | <span class='s2'>"ams3"</span> | <span class='s2'>"fra1"</span> | <span class='s2'>"tor1"</span> | <span class='s2'>"sfo1"</span> | <span class='s2'>"sfo2"</span> | <span class='s2'>"blr1"</span>;</pre>
+{{< /md-disable >}}
 {{% md %}}
 
 A Region represents any valid DigitalOcean region that may be targeted with deployments.

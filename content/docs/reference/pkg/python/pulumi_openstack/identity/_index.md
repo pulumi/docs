@@ -125,17 +125,15 @@ credentials or trusts. Changing this creates a new application credential.</p>
 <dt id="pulumi_openstack.identity.ApplicationCredential.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expires_at=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">unrestricted=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ApplicationCredential.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ApplicationCredential resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A description of the application credential.</p>
-<blockquote>
-<div><p>Changing this creates a new application credential.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the application credential.
+Changing this creates a new application credential.</p></li>
 <li><p><strong>expires_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The expiration time of the application credential
 in the RFC3339 timestamp format (e.g. <code class="docutils literal notranslate"><span class="pre">2019-03-09T12:58:49Z</span></code>). If omitted,
 an application credential will never expire. Changing this creates a new
@@ -619,19 +617,17 @@ creates a new User.</p>
 <dt id="pulumi_openstack.identity.Project.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">is_domain=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_id=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: A description of the project.
-:param pulumi.Input[str] domain_id: The domain this project belongs to.
-:param pulumi.Input[bool] enabled: Whether the project is enabled or disabled. Valid</p>
-<blockquote>
-<div><p>values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the project.</p></li>
+<li><p><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain this project belongs to.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the project is enabled or disabled. Valid
+values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>is_domain</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether this project is a domain. Valid values
 are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project.</p></li>
@@ -731,17 +727,21 @@ creates a new Role.</p>
 <dt id="pulumi_openstack.identity.Role.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.Role.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Role resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] domain_id: The domain the role belongs to.
-:param pulumi.Input[str] name: The name of the role.
-:param pulumi.Input[str] region: The region in which to obtain the V3 Keystone client.</p>
-<blockquote>
-<div><p>If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
-creates a new Role.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain the role belongs to.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new Role.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_role_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_role_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -841,15 +841,21 @@ this resource.</p>
 <dt id="pulumi_openstack.identity.RoleAssignment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">role_id=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.RoleAssignment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing RoleAssignment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] domain_id: The domain to assign the role in.
-:param pulumi.Input[str] group_id: The group to assign the role to.
-:param pulumi.Input[str] project_id: The project to assign the role in.
-:param pulumi.Input[str] role_id: The role to assign.
-:param pulumi.Input[str] user_id: The user to assign the role to.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain to assign the role in.</p></li>
+<li><p><strong>group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The group to assign the role to.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project to assign the role in.</p></li>
+<li><p><strong>role_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role to assign.</p></li>
+<li><p><strong>user_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The user to assign the role to.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_role_assignment_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_role_assignment_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -930,6 +936,10 @@ creates a new User.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>multi_factor_auth_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_user_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_user_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -999,6 +1009,9 @@ authentication. Valid values are <code class="docutils literal notranslate"><spa
 The structure is documented below. Please see the
 <a class="reference external" href="https://docs.openstack.org/releasenotes/keystone/ocata.html">Ocata release notes</a>
 for more information on how to use mulit-factor rules.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1025,20 +1038,18 @@ creates a new User.</p>
 <dt id="pulumi_openstack.identity.User.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">extra=None</em>, <em class="sig-param">ignore_change_password_upon_first_use=None</em>, <em class="sig-param">ignore_lockout_failure_attempts=None</em>, <em class="sig-param">ignore_password_expiry=None</em>, <em class="sig-param">multi_factor_auth_enabled=None</em>, <em class="sig-param">multi_factor_auth_rules=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">region=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] default_project_id: The default project this user belongs to.
-:param pulumi.Input[str] description: A description of the user.
-:param pulumi.Input[str] domain_id: The domain this user belongs to.
-:param pulumi.Input[bool] enabled: Whether the user is enabled or disabled. Valid</p>
-<blockquote>
-<div><p>values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default project this user belongs to.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the user.</p></li>
+<li><p><strong>domain_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain this user belongs to.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the user is enabled or disabled. Valid
+values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>extra</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Free-form key/value pairs of extra information.</p></li>
 <li><p><strong>ignore_change_password_upon_first_use</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – User will not have to
 change their password upon first use. Valid values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -1061,6 +1072,10 @@ creates a new User.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>multi_factor_auth_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rules</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_user_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_user_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -1110,6 +1125,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to get authentication information about the current
 auth scope in use. This can be used as self-discovery or introspection of
 the username or project name currently in use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the scope. This is an arbitrary name which is
+only used as a unique identifier so an actual token isn’t used as the ID.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V3 Identity client.
+A Identity client is needed to retrieve tokens IDs. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_auth_scope_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_auth_scope_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -1121,7 +1147,25 @@ the username or project name currently in use.</p>
 <dd><p>Use this data source to get the ID of an OpenStack endpoint.</p>
 <blockquote>
 <div><p><strong>Note:</strong> This usually requires admin privileges.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_endpoint_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_endpoint_v3.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>endpoint_region</strong> (<em>str</em>) – The region the endpoint is assigned to. The
+<code class="docutils literal notranslate"><span class="pre">region</span></code> and <code class="docutils literal notranslate"><span class="pre">endpoint_region</span></code> can be different.</p></li>
+<li><p><strong>interface</strong> (<em>str</em>) – The endpoint interface. Valid values are <code class="docutils literal notranslate"><span class="pre">public</span></code>,
+<code class="docutils literal notranslate"><span class="pre">internal</span></code>, and <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">public</span></code></p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the endpoint.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>service_id</strong> (<em>str</em>) – The service id this endpoint belongs to.</p></li>
+<li><p><strong>service_name</strong> (<em>str</em>) – The service name of the endpoint.</p></li>
+<li><p><strong>service_type</strong> (<em>str</em>) – The service type of the endpoint.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_endpoint_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_endpoint_v3.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -1130,6 +1174,16 @@ the username or project name currently in use.</p>
 <code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_group</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack group.</p>
 <p>Note: This usually requires admin privileges.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_id</strong> (<em>str</em>) – The domain the group belongs to.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the group.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_group_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_group_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -1139,6 +1193,19 @@ the username or project name currently in use.</p>
 <dt id="pulumi_openstack.identity.get_project">
 <code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_project</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">is_domain=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_id</strong> (<em>str</em>) – The domain this project belongs to.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – Whether the project is enabled or disabled. Valid
+values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>is_domain</strong> (<em>bool</em>) – Whether this project is a domain. Valid values
+are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the project.</p></li>
+<li><p><strong>parent_id</strong> (<em>str</em>) – The parent of this project.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_project_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_project_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -1148,6 +1215,16 @@ the username or project name currently in use.</p>
 <dt id="pulumi_openstack.identity.get_role">
 <code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_role</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack role.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_id</strong> (<em>str</em>) – The domain the role belongs to.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the role.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_role_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_role_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -1157,6 +1234,20 @@ the username or project name currently in use.</p>
 <dt id="pulumi_openstack.identity.get_user">
 <code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_expires_at=None</em>, <em class="sig-param">protocol_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an OpenStack user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_id</strong> (<em>str</em>) – The domain this user belongs to.</p></li>
+<li><p><strong>enabled</strong> (<em>bool</em>) – Whether the user is enabled or disabled. Valid
+values are <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>idp_id</strong> (<em>str</em>) – The identity provider ID of the user.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the user.</p></li>
+<li><p><strong>password_expires_at</strong> (<em>str</em>) – Query for expired passwords. See the <a class="reference external" href="https://developer.openstack.org/api-ref/identity/v3/#list-users">OpenStack API docs</a> for more information on the query format.</p></li>
+<li><p><strong>protocol_id</strong> (<em>str</em>) – The protocol ID of the user.</p></li>
+<li><p><strong>unique_id</strong> (<em>str</em>) – The unique ID of the user.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_user_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_user_v3.html.markdown</a>.</p>
 </div></blockquote>

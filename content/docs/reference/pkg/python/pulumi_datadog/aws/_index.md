@@ -71,16 +71,23 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_datadog.aws.Integration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">account_id=None</em>, <em class="sig-param">account_specific_namespace_rules=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">filter_tags=None</em>, <em class="sig-param">host_tags=None</em>, <em class="sig-param">role_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.aws.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] account_id: Your AWS Account ID without dashes.
-:param pulumi.Input[dict] account_specific_namespace_rules: Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the <a class="reference external" href="https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules">available namespace rules API endpoint</a>.
-:param pulumi.Input[str] external_id: AWS External ID
-:param pulumi.Input[list] filter_tags: Array of EC2 tags (in the form <code class="docutils literal notranslate"><span class="pre">key:value</span></code>) defines a filter that Datadog use when collecting metrics from EC2. Wildcards, such as <code class="docutils literal notranslate"><span class="pre">?</span></code> (for single characters) and <code class="docutils literal notranslate"><span class="pre">*</span></code> (for multiple characters) can also be used.
-:param pulumi.Input[list] host_tags: Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.
-:param pulumi.Input[str] role_name: Your Datadog role delegation name.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your AWS Account ID without dashes.</p></li>
+<li><p><strong>account_specific_namespace_rules</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Enables or disables metric collection for specific AWS namespaces for this AWS account only. A list of namespaces can be found at the <a class="reference external" href="https://api.datadoghq.com/api/v1/integration/aws/available_namespace_rules">available namespace rules API endpoint</a>.</p>
+</p></li>
+<li><p><strong>external_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – AWS External ID</p></li>
+<li><p><strong>filter_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of EC2 tags (in the form <code class="docutils literal notranslate"><span class="pre">key:value</span></code>) defines a filter that Datadog use when collecting metrics from EC2. Wildcards, such as <code class="docutils literal notranslate"><span class="pre">?</span></code> (for single characters) and <code class="docutils literal notranslate"><span class="pre">*</span></code> (for multiple characters) can also be used.</p></li>
+<li><p><strong>host_tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of tags (in the form key:value) to add to all hosts and metrics reporting through this integration.</p></li>
+<li><p><strong>role_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Datadog role delegation name.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_aws.html.markdown</a>.</p>
 </div></blockquote>

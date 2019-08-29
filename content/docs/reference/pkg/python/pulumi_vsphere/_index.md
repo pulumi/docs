@@ -698,19 +698,17 @@ set to <code class="docutils literal notranslate"><span class="pre">MaintenanceM
 <dt id="pulumi_vsphere.ComputeCluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">dpm_automation_level=None</em>, <em class="sig-param">dpm_enabled=None</em>, <em class="sig-param">dpm_threshold=None</em>, <em class="sig-param">drs_advanced_options=None</em>, <em class="sig-param">drs_automation_level=None</em>, <em class="sig-param">drs_enable_predictive_drs=None</em>, <em class="sig-param">drs_enable_vm_overrides=None</em>, <em class="sig-param">drs_enabled=None</em>, <em class="sig-param">drs_migration_threshold=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_evacuate_on_destroy=None</em>, <em class="sig-param">ha_admission_control_failover_host_system_ids=None</em>, <em class="sig-param">ha_admission_control_host_failure_tolerance=None</em>, <em class="sig-param">ha_admission_control_performance_tolerance=None</em>, <em class="sig-param">ha_admission_control_policy=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_auto_compute=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_cpu=None</em>, <em class="sig-param">ha_admission_control_resource_percentage_memory=None</em>, <em class="sig-param">ha_admission_control_slot_policy_explicit_cpu=None</em>, <em class="sig-param">ha_admission_control_slot_policy_explicit_memory=None</em>, <em class="sig-param">ha_admission_control_slot_policy_use_explicit_size=None</em>, <em class="sig-param">ha_advanced_options=None</em>, <em class="sig-param">ha_datastore_apd_recovery_action=None</em>, <em class="sig-param">ha_datastore_apd_response=None</em>, <em class="sig-param">ha_datastore_apd_response_delay=None</em>, <em class="sig-param">ha_datastore_pdl_response=None</em>, <em class="sig-param">ha_enabled=None</em>, <em class="sig-param">ha_heartbeat_datastore_ids=None</em>, <em class="sig-param">ha_heartbeat_datastore_policy=None</em>, <em class="sig-param">ha_host_isolation_response=None</em>, <em class="sig-param">ha_host_monitoring=None</em>, <em class="sig-param">ha_vm_component_protection=None</em>, <em class="sig-param">ha_vm_dependency_restart_condition=None</em>, <em class="sig-param">ha_vm_failure_interval=None</em>, <em class="sig-param">ha_vm_maximum_failure_window=None</em>, <em class="sig-param">ha_vm_maximum_resets=None</em>, <em class="sig-param">ha_vm_minimum_uptime=None</em>, <em class="sig-param">ha_vm_monitoring=None</em>, <em class="sig-param">ha_vm_restart_additional_delay=None</em>, <em class="sig-param">ha_vm_restart_priority=None</em>, <em class="sig-param">ha_vm_restart_timeout=None</em>, <em class="sig-param">host_cluster_exit_timeout=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">proactive_ha_automation_level=None</em>, <em class="sig-param">proactive_ha_enabled=None</em>, <em class="sig-param">proactive_ha_moderate_remediation=None</em>, <em class="sig-param">proactive_ha_provider_ids=None</em>, <em class="sig-param">proactive_ha_severe_remediation=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeCluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] custom_attributes: A map of custom attribute ids to attribute</p>
-<blockquote>
-<div><p>value strings to set for the datastore cluster. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of custom attribute ids to attribute
+value strings to set for the datastore cluster. See
+[here][docs-setting-custom-attributes] for a reference on how to set values
+for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the datacenter to create the cluster in. Forces a new resource if changed.</p></li>
 <li><p><strong>dpm_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The automation level for host power
@@ -985,18 +983,16 @@ cluster. Forces a new resource if changed.</p>
 <dt id="pulumi_vsphere.ComputeClusterHostGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterHostGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterHostGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] compute_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+resource if changed.</p></li>
 <li><p><strong>host_system_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The [managed object IDs][docs-about-morefs] of
 the hosts to put in the cluster.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the host group. This must be unique in the
@@ -1129,18 +1125,16 @@ on the same host together.</p>
 <dt id="pulumi_vsphere.ComputeClusterVmAffinityRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAffinityRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmAffinityRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] compute_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+resource if changed.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable this rule in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>mandatory</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, prevents any virtual
 machine operations that may violate this rule. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -1276,18 +1270,16 @@ on hosts different from each other.</p>
 <dt id="pulumi_vsphere.ComputeClusterVmAntiAffinityRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmAntiAffinityRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmAntiAffinityRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] compute_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+resource if changed.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable this rule in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>mandatory</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, prevents any virtual
 machine operations that may violate this rule. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -1433,18 +1425,16 @@ the group specified by
 <dt id="pulumi_vsphere.ComputeClusterVmDependencyRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">dependency_vm_group_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">vm_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmDependencyRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmDependencyRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] compute_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+resource if changed.</p></li>
 <li><p><strong>dependency_vm_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the VM group that this
 rule depends on. The VMs defined in the group specified by
 <code class="docutils literal notranslate"><span class="pre">vm_group_name</span></code> will not be started until the VMs in this
@@ -1565,18 +1555,16 @@ group.</p>
 <dt id="pulumi_vsphere.ComputeClusterVmGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] compute_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the cluster to put the group in.  Forces a new
+resource if changed.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the VM group. This must be unique in the
 cluster. Forces a new resource if changed.</p></li>
 <li><p><strong>virtual_machine_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The UUIDs of the virtual machines in this
@@ -1728,18 +1716,16 @@ with this rule.</p>
 <dt id="pulumi_vsphere.ComputeClusterVmHostRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">affinity_host_group_name=None</em>, <em class="sig-param">anti_affinity_host_group_name=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">vm_group_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ComputeClusterVmHostRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ComputeClusterVmHostRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] affinity_host_group_name: When this field is used, the virtual</p>
-<blockquote>
-<div><p>machines defined in <code class="docutils literal notranslate"><span class="pre">vm_group_name</span></code> will be run on the
-hosts defined in this host group.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>affinity_host_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When this field is used, the virtual
+machines defined in <code class="docutils literal notranslate"><span class="pre">vm_group_name</span></code> will be run on the
+hosts defined in this host group.</p></li>
 <li><p><strong>anti_affinity_host_group_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When this field is used, the
 virtual machines defined in <code class="docutils literal notranslate"><span class="pre">vm_group_name</span></code> will <em>not</em> be
 run on the hosts defined in this host group.</p></li>
@@ -1866,19 +1852,19 @@ resource if changed.</p>
 <dt id="pulumi_vsphere.CustomAttribute.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">managed_object_type=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.CustomAttribute.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing CustomAttribute resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] managed_object_type: The object type that this attribute may be</p>
-<blockquote>
-<div><p>applied to. If not set, the custom attribute may be applied to any object
-type. For a full list, click here. Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the custom attribute.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>managed_object_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object type that this attribute may be
+applied to. If not set, the custom attribute may be applied to any object
+type. For a full list, click here. Forces a new
+resource if changed.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the custom attribute.</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -1990,19 +1976,17 @@ within the folder. Forces a new resource if changed.</p>
 <dt id="pulumi_vsphere.Datacenter.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">moid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Datacenter.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Datacenter resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] custom_attributes: Map of custom attribute ids to value</p>
-<blockquote>
-<div><p>strings to set for datacenter resource. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to value 
+strings to set for datacenter resource. See
+[here][docs-setting-custom-attributes] for a reference on how to set values
+for custom attributes.</p></li>
 <li><p><strong>folder</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The folder where the datacenter should be created.
 Forces a new resource if changed.</p></li>
 <li><p><strong>moid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID][docs-about-morefs] of this datacenter.</p></li>
@@ -2304,19 +2288,17 @@ automation settings when generating recommendations for datastore evacuation.</p
 <dt id="pulumi_vsphere.DatastoreCluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">sdrs_advanced_options=None</em>, <em class="sig-param">sdrs_automation_level=None</em>, <em class="sig-param">sdrs_default_intra_vm_affinity=None</em>, <em class="sig-param">sdrs_enabled=None</em>, <em class="sig-param">sdrs_free_space_threshold=None</em>, <em class="sig-param">sdrs_free_space_threshold_mode=None</em>, <em class="sig-param">sdrs_free_space_utilization_difference=None</em>, <em class="sig-param">sdrs_io_balance_automation_level=None</em>, <em class="sig-param">sdrs_io_latency_threshold=None</em>, <em class="sig-param">sdrs_io_load_balance_enabled=None</em>, <em class="sig-param">sdrs_io_load_imbalance_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_iops_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_percent_threshold=None</em>, <em class="sig-param">sdrs_io_reservable_threshold_mode=None</em>, <em class="sig-param">sdrs_load_balance_interval=None</em>, <em class="sig-param">sdrs_policy_enforcement_automation_level=None</em>, <em class="sig-param">sdrs_rule_enforcement_automation_level=None</em>, <em class="sig-param">sdrs_space_balance_automation_level=None</em>, <em class="sig-param">sdrs_space_utilization_threshold=None</em>, <em class="sig-param">sdrs_vm_evacuation_automation_level=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatastoreCluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] custom_attributes: A map of custom attribute ids to attribute</p>
-<blockquote>
-<div><p>value strings to set for the datastore cluster. See
-[here][docs-setting-custom-attributes] for a reference on how to set values
-for custom attributes.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of custom attribute ids to attribute
+value strings to set for the datastore cluster. See
+[here][docs-setting-custom-attributes] for a reference on how to set values
+for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the datacenter to create the datastore cluster in. Forces a new resource if
 changed.</p></li>
@@ -2492,18 +2474,16 @@ on different datastores from each other.</p>
 <dt id="pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">mandatory=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">virtual_machine_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DatastoreClusterVmAntiAffinityRule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatastoreClusterVmAntiAffinityRule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] datastore_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
-a new resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the datastore cluster to put the group in.  Forces
+a new resource if changed.</p></li>
 <li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable this rule in the cluster. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>mandatory</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – When this value is <code class="docutils literal notranslate"><span class="pre">true</span></code>, prevents any virtual
 machine operations that may violate this rule. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -2624,6 +2604,11 @@ on this port group to be overridden on an individual port.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>vlan_ranges</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -2769,17 +2754,15 @@ on this port group to be overridden on an individual port.</p>
 <dt id="pulumi_vsphere.DistributedPortGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_uplinks=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">auto_expand=None</em>, <em class="sig-param">block_all_ports=None</em>, <em class="sig-param">block_override_allowed=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">config_version=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directpath_gen2_allowed=None</em>, <em class="sig-param">distributed_virtual_switch_uuid=None</em>, <em class="sig-param">egress_shaping_average_bandwidth=None</em>, <em class="sig-param">egress_shaping_burst_size=None</em>, <em class="sig-param">egress_shaping_enabled=None</em>, <em class="sig-param">egress_shaping_peak_bandwidth=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">ingress_shaping_average_bandwidth=None</em>, <em class="sig-param">ingress_shaping_burst_size=None</em>, <em class="sig-param">ingress_shaping_enabled=None</em>, <em class="sig-param">ingress_shaping_peak_bandwidth=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">lacp_enabled=None</em>, <em class="sig-param">lacp_mode=None</em>, <em class="sig-param">live_port_moving_allowed=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">netflow_enabled=None</em>, <em class="sig-param">netflow_override_allowed=None</em>, <em class="sig-param">network_resource_pool_key=None</em>, <em class="sig-param">network_resource_pool_override_allowed=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">number_of_ports=None</em>, <em class="sig-param">port_config_reset_at_disconnect=None</em>, <em class="sig-param">port_name_format=None</em>, <em class="sig-param">port_private_secondary_vlan_id=None</em>, <em class="sig-param">security_policy_override_allowed=None</em>, <em class="sig-param">shaping_override_allowed=None</em>, <em class="sig-param">standby_uplinks=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">traffic_filter_override_allowed=None</em>, <em class="sig-param">tx_uplink=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uplink_teaming_override_allowed=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">vlan_override_allowed=None</em>, <em class="sig-param">vlan_ranges=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedPortGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DistributedPortGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] auto_expand: Allows the port group to create additional ports</p>
-<blockquote>
-<div><p>past the limit specified in <code class="docutils literal notranslate"><span class="pre">number_of_ports</span></code> if necessary. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_expand</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allows the port group to create additional ports
+past the limit specified in <code class="docutils literal notranslate"><span class="pre">number_of_ports</span></code> if necessary. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><strong>block_override_allowed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the [port shutdown
 policy][port-shutdown-policy] to be overridden on an individual port.</p></li>
 <li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute
@@ -2824,6 +2807,11 @@ on this port group to be overridden on an individual port.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>vlan_ranges</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_port_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -3020,6 +3008,18 @@ below:</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>hosts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of NIC devices to map to uplinks on the DVS,
+added in order they are specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_system_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host system ID of the host to add to the
+DVS.</p></li>
+</ul>
+<p>The <strong>vlan_ranges</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown</a>.</p>
 </div></blockquote>
@@ -3159,6 +3159,12 @@ if changed.</p>
 <code class="sig-name descname">hosts</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.hosts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use the <code class="docutils literal notranslate"><span class="pre">host</span></code> block to declare a host specification. The
 options are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The list of NIC devices to map to uplinks on the DVS,
+added in order they are specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_system_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The host system ID of the host to add to the
+DVS.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -3401,25 +3407,27 @@ downgraded.</p></li>
 and <code class="docutils literal notranslate"><span class="pre">max_vlan</span></code> sub-arguments to define the tagged VLAN range. Multiple
 <code class="docutils literal notranslate"><span class="pre">vlan_range</span></code> definitions are allowed, but they must not overlap. Example
 below:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_vsphere.DistributedVirtualSwitch.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_uplinks=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">block_all_ports=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">config_version=None</em>, <em class="sig-param">contact_detail=None</em>, <em class="sig-param">contact_name=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">directpath_gen2_allowed=None</em>, <em class="sig-param">egress_shaping_average_bandwidth=None</em>, <em class="sig-param">egress_shaping_burst_size=None</em>, <em class="sig-param">egress_shaping_enabled=None</em>, <em class="sig-param">egress_shaping_peak_bandwidth=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">faulttolerance_maximum_mbit=None</em>, <em class="sig-param">faulttolerance_reservation_mbit=None</em>, <em class="sig-param">faulttolerance_share_count=None</em>, <em class="sig-param">faulttolerance_share_level=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">hbr_maximum_mbit=None</em>, <em class="sig-param">hbr_reservation_mbit=None</em>, <em class="sig-param">hbr_share_count=None</em>, <em class="sig-param">hbr_share_level=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">ingress_shaping_average_bandwidth=None</em>, <em class="sig-param">ingress_shaping_burst_size=None</em>, <em class="sig-param">ingress_shaping_enabled=None</em>, <em class="sig-param">ingress_shaping_peak_bandwidth=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">iscsi_maximum_mbit=None</em>, <em class="sig-param">iscsi_reservation_mbit=None</em>, <em class="sig-param">iscsi_share_count=None</em>, <em class="sig-param">iscsi_share_level=None</em>, <em class="sig-param">lacp_api_version=None</em>, <em class="sig-param">lacp_enabled=None</em>, <em class="sig-param">lacp_mode=None</em>, <em class="sig-param">link_discovery_operation=None</em>, <em class="sig-param">link_discovery_protocol=None</em>, <em class="sig-param">management_maximum_mbit=None</em>, <em class="sig-param">management_reservation_mbit=None</em>, <em class="sig-param">management_share_count=None</em>, <em class="sig-param">management_share_level=None</em>, <em class="sig-param">max_mtu=None</em>, <em class="sig-param">multicast_filtering_mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">netflow_active_flow_timeout=None</em>, <em class="sig-param">netflow_collector_ip_address=None</em>, <em class="sig-param">netflow_collector_port=None</em>, <em class="sig-param">netflow_enabled=None</em>, <em class="sig-param">netflow_idle_flow_timeout=None</em>, <em class="sig-param">netflow_internal_flows_only=None</em>, <em class="sig-param">netflow_observation_domain_id=None</em>, <em class="sig-param">netflow_sampling_rate=None</em>, <em class="sig-param">network_resource_control_enabled=None</em>, <em class="sig-param">network_resource_control_version=None</em>, <em class="sig-param">nfs_maximum_mbit=None</em>, <em class="sig-param">nfs_reservation_mbit=None</em>, <em class="sig-param">nfs_share_count=None</em>, <em class="sig-param">nfs_share_level=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">port_private_secondary_vlan_id=None</em>, <em class="sig-param">standby_uplinks=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">tx_uplink=None</em>, <em class="sig-param">uplinks=None</em>, <em class="sig-param">vdp_maximum_mbit=None</em>, <em class="sig-param">vdp_reservation_mbit=None</em>, <em class="sig-param">vdp_share_count=None</em>, <em class="sig-param">vdp_share_level=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">virtualmachine_maximum_mbit=None</em>, <em class="sig-param">virtualmachine_reservation_mbit=None</em>, <em class="sig-param">virtualmachine_share_count=None</em>, <em class="sig-param">virtualmachine_share_level=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">vlan_ranges=None</em>, <em class="sig-param">vmotion_maximum_mbit=None</em>, <em class="sig-param">vmotion_reservation_mbit=None</em>, <em class="sig-param">vmotion_share_count=None</em>, <em class="sig-param">vmotion_share_level=None</em>, <em class="sig-param">vsan_maximum_mbit=None</em>, <em class="sig-param">vsan_reservation_mbit=None</em>, <em class="sig-param">vsan_share_count=None</em>, <em class="sig-param">vsan_share_level=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DistributedVirtualSwitch.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DistributedVirtualSwitch resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] active_uplinks: A list of active uplinks to be used in load</p>
-<blockquote>
-<div><p>balancing. These uplinks need to match the definitions in the
-<code class="docutils literal notranslate"><span class="pre">uplinks</span></code> DVS argument. See
-here for more details.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active_uplinks</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of active uplinks to be used in load
+balancing. These uplinks need to match the definitions in the
+<code class="docutils literal notranslate"><span class="pre">uplinks</span></code> DVS argument. See
+here for more details.</p></li>
 <li><p><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not a virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own.</p></li>
@@ -3545,6 +3553,18 @@ below:</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>hosts</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">devices</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The list of NIC devices to map to uplinks on the DVS,
+added in order they are specified.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">host_system_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The host system ID of the host to add to the
+DVS.</p></li>
+</ul>
+<p>The <strong>vlan_ranges</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minVlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/distributed_virtual_switch.html.markdown</a>.</p>
 </div></blockquote>
@@ -3648,18 +3668,16 @@ operations on this host. Can be one of <code class="docutils literal notranslate
 <dt id="pulumi_vsphere.DpmHostOverride.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">dpm_automation_level=None</em>, <em class="sig-param">dpm_enabled=None</em>, <em class="sig-param">host_system_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DpmHostOverride.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DpmHostOverride resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] compute_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+resource if changed.</p></li>
 <li><p><strong>dpm_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The automation level for host power
 operations on this host. Can be one of <code class="docutils literal notranslate"><span class="pre">manual</span></code> or <code class="docutils literal notranslate"><span class="pre">automated</span></code>. Default:
 <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p></li>
@@ -3780,18 +3798,16 @@ the override for.  Forces a new resource if changed.</p>
 <dt id="pulumi_vsphere.DrsVmOverride.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">drs_automation_level=None</em>, <em class="sig-param">drs_enabled=None</em>, <em class="sig-param">virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.DrsVmOverride.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DrsVmOverride resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] compute_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+resource if changed.</p></li>
 <li><p><strong>drs_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides the automation level for this virtual
 machine in the cluster. Can be one of <code class="docutils literal notranslate"><span class="pre">manual</span></code>, <code class="docutils literal notranslate"><span class="pre">partiallyAutomated</span></code>, or
 <code class="docutils literal notranslate"><span class="pre">fullyAutomated</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">manual</span></code>.</p></li>
@@ -3918,17 +3934,15 @@ be copied from. Forces a new resource if changed.</p>
 <dt id="pulumi_vsphere.File.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">create_directories=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">datastore=None</em>, <em class="sig-param">destination_file=None</em>, <em class="sig-param">source_datacenter=None</em>, <em class="sig-param">source_datastore=None</em>, <em class="sig-param">source_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.File.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing File resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] create_directories: Create directories in <code class="docutils literal notranslate"><span class="pre">destination_file</span></code></p>
-<blockquote>
-<div><p>path parameter if any missing for copy operation.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>create_directories</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Create directories in <code class="docutils literal notranslate"><span class="pre">destination_file</span></code>
+path parameter if any missing for copy operation.</p></li>
 <li><p><strong>datacenter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of a datacenter in which the file will be
 uploaded to.</p></li>
 <li><p><strong>datastore</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the datastore in which to upload the
@@ -4055,18 +4069,16 @@ resource if changed.</p>
 <dt id="pulumi_vsphere.Folder.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datacenter_id=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Folder.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Folder resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] custom_attributes: Map of custom attribute ids to attribute</p>
-<blockquote>
-<div><p>value strings to set for folder. See [here][docs-setting-custom-attributes]
-for a reference on how to set values for custom attributes.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute 
+value strings to set for folder. See [here][docs-setting-custom-attributes]
+for a reference on how to set values for custom attributes.</p></li>
 <li><p><strong>datacenter_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the datacenter the folder will be created in.
 Required for all folder types except for datacenter folders. Forces a new
 resource if changed.</p></li>
@@ -4595,18 +4607,16 @@ the override for.  Forces a new resource if changed.</p>
 <dt id="pulumi_vsphere.HaVmOverride.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">compute_cluster_id=None</em>, <em class="sig-param">ha_datastore_apd_recovery_action=None</em>, <em class="sig-param">ha_datastore_apd_response=None</em>, <em class="sig-param">ha_datastore_apd_response_delay=None</em>, <em class="sig-param">ha_datastore_pdl_response=None</em>, <em class="sig-param">ha_host_isolation_response=None</em>, <em class="sig-param">ha_vm_failure_interval=None</em>, <em class="sig-param">ha_vm_maximum_failure_window=None</em>, <em class="sig-param">ha_vm_maximum_resets=None</em>, <em class="sig-param">ha_vm_minimum_uptime=None</em>, <em class="sig-param">ha_vm_monitoring=None</em>, <em class="sig-param">ha_vm_monitoring_use_cluster_defaults=None</em>, <em class="sig-param">ha_vm_restart_priority=None</em>, <em class="sig-param">ha_vm_restart_timeout=None</em>, <em class="sig-param">virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HaVmOverride.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HaVmOverride resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] compute_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
+resource if changed.</p></li>
 <li><p><strong>ha_datastore_apd_recovery_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Controls the action to take
 on this virtual machine if an APD status on an affected datastore clears in
 the middle of an APD event. Can be one of <code class="docutils literal notranslate"><span class="pre">useClusterDefault</span></code>, <code class="docutils literal notranslate"><span class="pre">none</span></code> or
@@ -4770,6 +4780,11 @@ changed.</p>
 <dt id="pulumi_vsphere.HostPortGroup.ports">
 <code class="sig-name descname">ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of ports that currently exist and are used on this port group.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The key for this port group as returned from the vSphere API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">macAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4792,18 +4807,16 @@ tagging. Default: <code class="docutils literal notranslate"><span class="pre">0
 <dt id="pulumi_vsphere.HostPortGroup.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_nics=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">computed_policy=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">shaping_average_bandwidth=None</em>, <em class="sig-param">shaping_burst_size=None</em>, <em class="sig-param">shaping_enabled=None</em>, <em class="sig-param">shaping_peak_bandwidth=None</em>, <em class="sig-param">standby_nics=None</em>, <em class="sig-param">teaming_policy=None</em>, <em class="sig-param">virtual_switch_name=None</em>, <em class="sig-param">vlan_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostPortGroup.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HostPortGroup resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] computed_policy: A map with a full set of the [policy</p>
-<blockquote>
-<div><p>options][host-vswitch-policy-options] computed from defaults and overrides,
-explaining the effective policy for this port group.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>computed_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map with a full set of the [policy
+options][host-vswitch-policy-options] computed from defaults and overrides,
+explaining the effective policy for this port group.</p></li>
 <li><p><strong>host_system_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object ID][docs-about-morefs] of
 the host to set the port group up on. Forces a new resource if changed.</p></li>
 <li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key for this port group as returned from the vSphere API.</p></li>
@@ -4819,6 +4832,12 @@ tagging. Default: <code class="docutils literal notranslate"><span class="pre">0
 </ul>
 </dd>
 </dl>
+<p>The <strong>ports</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The key for this port group as returned from the vSphere API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">macAddresses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/host_port_group.html.markdown</a>.</p>
 </div></blockquote>
@@ -5089,17 +5108,15 @@ of <code class="docutils literal notranslate"><span class="pre">loadbalance_ip</
 <dt id="pulumi_vsphere.HostVirtualSwitch.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active_nics=None</em>, <em class="sig-param">allow_forged_transmits=None</em>, <em class="sig-param">allow_mac_changes=None</em>, <em class="sig-param">allow_promiscuous=None</em>, <em class="sig-param">beacon_interval=None</em>, <em class="sig-param">check_beacon=None</em>, <em class="sig-param">failback=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">link_discovery_operation=None</em>, <em class="sig-param">link_discovery_protocol=None</em>, <em class="sig-param">mtu=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_adapters=None</em>, <em class="sig-param">notify_switches=None</em>, <em class="sig-param">number_of_ports=None</em>, <em class="sig-param">shaping_average_bandwidth=None</em>, <em class="sig-param">shaping_burst_size=None</em>, <em class="sig-param">shaping_enabled=None</em>, <em class="sig-param">shaping_peak_bandwidth=None</em>, <em class="sig-param">standby_nics=None</em>, <em class="sig-param">teaming_policy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.HostVirtualSwitch.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing HostVirtualSwitch resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] active_nics: The list of active network adapters used for load</p>
-<blockquote>
-<div><p>balancing.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>active_nics</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The list of active network adapters used for load
+balancing.</p></li>
 <li><p><strong>allow_forged_transmits</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Controls whether or not the virtual
 network adapter is allowed to send network traffic with a different MAC
 address than that of its own. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
@@ -5250,16 +5267,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vsphere.License.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">edition_key=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">license_key=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">total=None</em>, <em class="sig-param">used=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.License.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing License resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] edition_key: The product edition of the license key.
-:param pulumi.Input[dict] labels: A map of key/value pairs to be attached as labels (tags) to the license key.
-:param pulumi.Input[str] license_key: The license key to add.
-:param pulumi.Input[str] name: The display name for the license.
-:param pulumi.Input[float] total: Total number of units (example: CPUs) contained in the license.
-:param pulumi.Input[float] used: The number of units (example: CPUs) assigned to this license.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>edition_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The product edition of the license key.</p></li>
+<li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of key/value pairs to be attached as labels (tags) to the license key.</p></li>
+<li><p><strong>license_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The license key to add.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name for the license.</p></li>
+<li><p><strong>total</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Total number of units (example: CPUs) contained in the license.</p></li>
+<li><p><strong>used</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of units (example: CPUs) assigned to this license.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/license.html.markdown</a>.</p>
 </div></blockquote>
@@ -5488,19 +5511,17 @@ potentially used by all virtual machines on this datastore.</p>
 <dt id="pulumi_vsphere.NasDatastore.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">accessible=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">free_space=None</em>, <em class="sig-param">host_system_ids=None</em>, <em class="sig-param">maintenance_mode=None</em>, <em class="sig-param">multiple_host_access=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol_endpoint=None</em>, <em class="sig-param">remote_hosts=None</em>, <em class="sig-param">remote_path=None</em>, <em class="sig-param">security_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">uncommitted_space=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.NasDatastore.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NasDatastore resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] access_mode: Access mode for the mount point. Can be one of</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">readOnly</span></code> or <code class="docutils literal notranslate"><span class="pre">readWrite</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">readWrite</span></code> does not necessarily mean
-that the datastore will be read-write depending on the permissions of the
-actual share. Default: <code class="docutils literal notranslate"><span class="pre">readWrite</span></code>. Forces a new resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Access mode for the mount point. Can be one of
+<code class="docutils literal notranslate"><span class="pre">readOnly</span></code> or <code class="docutils literal notranslate"><span class="pre">readWrite</span></code>. Note that <code class="docutils literal notranslate"><span class="pre">readWrite</span></code> does not necessarily mean
+that the datastore will be read-write depending on the permissions of the
+actual share. Default: <code class="docutils literal notranslate"><span class="pre">readWrite</span></code>. Forces a new resource if changed.</p></li>
 <li><p><strong>accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The connectivity status of the datastore. If this is <code class="docutils literal notranslate"><span class="pre">false</span></code>,
 some other computed attributes may be out of date.</p></li>
 <li><p><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum capacity of the datastore, in megabytes.</p></li>
@@ -5605,10 +5626,16 @@ construction to achieve fine-grained programmatic control over provider settings
 <dt id="pulumi_vsphere.Provider.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Provider.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/index.html.markdown</a>.</p>
 </div></blockquote>
@@ -5819,18 +5846,16 @@ resource pool or the move will fail.</p>
 <dt id="pulumi_vsphere.ResourcePool.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_expandable=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">memory_expandable=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">memory_shares=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_resource_pool_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.ResourcePool.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ResourcePool resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] cpu_expandable: Determines if the reservation on a resource</p>
-<blockquote>
-<div><p>pool can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cpu_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a resource
+pool can grow beyond the specified value if the parent resource pool has
+unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
 <li><p><strong>cpu_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The CPU utilization of a resource pool will not exceed
 this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for unlimited.
 Default: <code class="docutils literal notranslate"><span class="pre">-1</span></code></p></li>
@@ -5998,18 +6023,16 @@ the override for.  Forces a new resource if changed.</p>
 <dt id="pulumi_vsphere.StorageDrsVmOverride.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">sdrs_automation_level=None</em>, <em class="sig-param">sdrs_enabled=None</em>, <em class="sig-param">sdrs_intra_vm_affinity=None</em>, <em class="sig-param">virtual_machine_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.StorageDrsVmOverride.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing StorageDrsVmOverride resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] datastore_cluster_id: The [managed object reference</p>
-<blockquote>
-<div><p>ID][docs-about-morefs] of the datastore cluster to put the override in.
-Forces a new resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>datastore_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The [managed object reference
+ID][docs-about-morefs] of the datastore cluster to put the override in.
+Forces a new resource if changed.</p></li>
 <li><p><strong>sdrs_automation_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of <code class="docutils literal notranslate"><span class="pre">automated</span></code> or <code class="docutils literal notranslate"><span class="pre">manual</span></code>. When
 not specified, the datastore cluster’s settings are used according to the
@@ -6121,17 +6144,15 @@ within its category.</p>
 <dt id="pulumi_vsphere.Tag.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">category_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.Tag.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Tag resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] category_id: The unique identifier of the parent category in</p>
-<blockquote>
-<div><p>which this tag will be created. Forces a new resource if changed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>category_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier of the parent category in
+which this tag will be created. Forces a new resource if changed.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the tag.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The display name of the tag. The name must be unique
 within its category.</p></li>
@@ -6247,18 +6268,16 @@ multiple tags in this category). Forces a new resource if changed.</p>
 <dt id="pulumi_vsphere.TagCategory.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associable_types=None</em>, <em class="sig-param">cardinality=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.TagCategory.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TagCategory resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] associable_types: A list object types that this category is</p>
-<blockquote>
-<div><p>valid to be assigned to. For a full list, click
-here.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>associable_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list object types that this category is
+valid to be assigned to. For a full list, click
+here.</p></li>
 <li><p><strong>cardinality</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The number of tags that can be assigned from this
 category to a single object at once. Can be one of <code class="docutils literal notranslate"><span class="pre">SINGLE</span></code> (object can only
 be assigned one tag in this category), to <code class="docutils literal notranslate"><span class="pre">MULTIPLE</span></code> (object can be assigned
@@ -6491,18 +6510,16 @@ resource pool or the move will fail.</p>
 <dt id="pulumi_vsphere.VappContainer.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cpu_expandable=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">cpu_shares=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">memory_expandable=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">memory_shares=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">parent_folder_id=None</em>, <em class="sig-param">parent_resource_pool_id=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappContainer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VappContainer resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] cpu_expandable: Determines if the reservation on a vApp</p>
-<blockquote>
-<div><p>container can grow beyond the specified value if the parent resource pool has
-unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cpu_expandable</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Determines if the reservation on a vApp
+container can grow beyond the specified value if the parent resource pool has
+unreserved resources. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
 <li><p><strong>cpu_limit</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The CPU utilization of a vApp container will not
 exceed this limit, even if there are available resources. Set to <code class="docutils literal notranslate"><span class="pre">-1</span></code> for
 unlimited.
@@ -6690,17 +6707,15 @@ property has no effect for vApps. Default: false</p>
 <dt id="pulumi_vsphere.VappEntity.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_id=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">start_action=None</em>, <em class="sig-param">start_delay=None</em>, <em class="sig-param">start_order=None</em>, <em class="sig-param">stop_action=None</em>, <em class="sig-param">stop_delay=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_id=None</em>, <em class="sig-param">wait_for_guest=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VappEntity.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VappEntity resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] container_id: [Managed object ID|docs-about-morefs] of the vApp</p>
-<blockquote>
-<div><p>container the entity is a member of.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>container_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – [Managed object ID|docs-about-morefs] of the vApp
+container the entity is a member of.</p></li>
 <li><p><strong>start_action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to start the entity. Valid settings are none
 or powerOn. If set to none, then the entity does not participate in auto-start.
 Default: powerOn</p></li>
@@ -6855,17 +6870,15 @@ be created.  This needs to end in <code class="docutils literal notranslate"><sp
 <dt id="pulumi_vsphere.VirtualDisk.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">adapter_type=None</em>, <em class="sig-param">create_directories=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">datastore=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">vmdk_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualDisk.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualDisk resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] adapter_type: The adapter type for this virtual disk. Can be</p>
-<blockquote>
-<div><p>one of <code class="docutils literal notranslate"><span class="pre">ide</span></code>, <code class="docutils literal notranslate"><span class="pre">lsiLogic</span></code>, or <code class="docutils literal notranslate"><span class="pre">busLogic</span></code>.  Default: <code class="docutils literal notranslate"><span class="pre">lsiLogic</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>adapter_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The adapter type for this virtual disk. Can be
+one of <code class="docutils literal notranslate"><span class="pre">ide</span></code>, <code class="docutils literal notranslate"><span class="pre">lsiLogic</span></code>, or <code class="docutils literal notranslate"><span class="pre">busLogic</span></code>.  Default: <code class="docutils literal notranslate"><span class="pre">lsiLogic</span></code>.</p></li>
 <li><p><strong>create_directories</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Tells the resource to create any
 directories that are a part of the <code class="docutils literal notranslate"><span class="pre">vmdk_path</span></code> parameter if they are missing.
 Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
@@ -7107,6 +7120,149 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>cdrom</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clientDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether the device should be backed by
+remote client device. Conflicts with <code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datastore ID that the ISO is located in.
+Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Requried for using a datastore
+ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+</ul>
+<p>The <strong>clone</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServerLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsSuffixLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linuxOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hwClockUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interfaces</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A specification for a virtual NIC on this
+virtual machine. See network interface options
+below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServerLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowsOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoLogon</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoLogonCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">computerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domainAdminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domainAdminUser</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fullName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">joinDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">productKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runOnceCommandLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workgroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowsSysprepText</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linkedClone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templateUuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>disks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attach</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Attach an external disk instead of creating a new one.
+Implies and conflicts with <code class="docutils literal notranslate"><span class="pre">keep_on_remove</span></code>. If set, you cannot set <code class="docutils literal notranslate"><span class="pre">size</span></code>,
+<code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code>, or <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code>. Must set <code class="docutils literal notranslate"><span class="pre">path</span></code> if used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datastore ID that the ISO is located in.
+Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode of this this virtual disk for purposes of
+writes and snapshotting. Can be one of <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">independent_nonpersistent</span></code>,
+<code class="docutils literal notranslate"><span class="pre">independent_persistent</span></code>, <code class="docutils literal notranslate"><span class="pre">nonpersistent</span></code>, <code class="docutils literal notranslate"><span class="pre">persistent</span></code>, or <code class="docutils literal notranslate"><span class="pre">undoable</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">persistent</span></code>. For an explanation of options, click
+[here][vmware-docs-disk-mode].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskSharing</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The sharing mode of this virtual disk. Can be one
+of <code class="docutils literal notranslate"><span class="pre">sharingMultiWriter</span></code> or <code class="docutils literal notranslate"><span class="pre">sharingNone</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">sharingNone</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eagerlyScrub</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the disk space is zeroed out
+on VM creation. This will delay the creation of the disk or virtual machine.
+Cannot be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.  See the section
+on picking a disk type.  Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The upper limit of IOPS that this disk can use. The
+default is no limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioReservation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The I/O reservation (guarantee) that this disk
+has, in IOPS.  The default is no reservation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioShareCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The share count for this disk when the share
+level is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The share allocation level for this disk. Can
+be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keepOnRemove</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Keep this disk when removing the device or
+destroying the virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A label for the disk. Forces a new disk if changed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
+using <code class="docutils literal notranslate"><span class="pre">attach</span></code>. Required if not using <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Requried for using a datastore
+ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the disk, in GiB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thinProvisioned</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this disk is thin provisioned,
+with space for the file being allocated on an as-needed basis. Cannot be set
+to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. See the section on picking a disk
+type. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unitNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The disk number on the SCSI bus. The maximum value
+for this setting is the value of
+<code class="docutils literal notranslate"><span class="pre">scsi_controller_count</span></code> times 15, minus 1 (so <code class="docutils literal notranslate"><span class="pre">14</span></code>,
+<code class="docutils literal notranslate"><span class="pre">29</span></code>, <code class="docutils literal notranslate"><span class="pre">44</span></code>, and <code class="docutils literal notranslate"><span class="pre">59</span></code>, for 1-4 controllers respectively). The default is <code class="docutils literal notranslate"><span class="pre">0</span></code>,
+for which one disk must be set to. Duplicate unit numbers are not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The UUID of the virtual disk’s VMDK file. This is used to track the
+virtual disk on the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeThrough</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, writes for this disk are sent
+directly to the filesystem immediately instead of being buffered. Default:
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adapter_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The network interface type. Can be one of
+<code class="docutils literal notranslate"><span class="pre">e1000</span></code>, <code class="docutils literal notranslate"><span class="pre">e1000e</span></code>, or <code class="docutils literal notranslate"><span class="pre">vmxnet3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vmxnet3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The upper bandwidth limit of this network
+interface, in Mbits/sec. The default is no limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthReservation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The bandwidth reservation of this
+network interface, in Mbits/sec. The default is no reservation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The share count for this network
+interface when the share level is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bandwidth share allocation level for
+this interface. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default:
+<code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">macAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The MAC address of this network interface. Can
+only be manually set if <code class="docutils literal notranslate"><span class="pre">use_static_mac</span></code> is true, otherwise this is a
+computed value that gives the current MAC address of this interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [managed object reference
+ID][docs-about-morefs] of the network to connect this interface to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useStaticMac</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, the <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> field is treated as
+a static MAC address and set accordingly. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires
+<code class="docutils literal notranslate"><span class="pre">mac_address</span></code> to be set. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>vapp</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
@@ -7152,6 +7308,16 @@ Default: <code class="docutils literal notranslate"><span class="pre">false</spa
 <code class="sig-name descname">cdrom</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.cdrom" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specification for a CDROM device on this virtual
 machine. See CDROM options below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clientDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether the device should be backed by
+remote client device. Conflicts with <code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The datastore ID that the ISO is located in.
+Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the ISO file. Requried for using a datastore
+ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7169,6 +7335,58 @@ configuration.</p>
 specified template. Optional customization options can be submitted as well.
 See creating a virtual machine from a
 template for more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customize</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServerLists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsSuffixLists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linuxOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hwClockUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interfaces</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A specification for a virtual NIC on this
+virtual machine. See network interface options
+below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServerLists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4_address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowsOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoLogon</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoLogonCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">computerName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domainAdminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domainAdminUser</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fullName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">joinDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">productKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runOnceCommandLists</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workgroup</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowsSysprepText</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linkedClone</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templateUuid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7252,6 +7470,56 @@ Requried for using a datastore ISO. Conflicts with <code class="docutils literal
 <code class="sig-name descname">disks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>A specification for a virtual disk device on this virtual
 machine. See disk options below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attach</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Attach an external disk instead of creating a new one.
+Implies and conflicts with <code class="docutils literal notranslate"><span class="pre">keep_on_remove</span></code>. If set, you cannot set <code class="docutils literal notranslate"><span class="pre">size</span></code>,
+<code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code>, or <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code>. Must set <code class="docutils literal notranslate"><span class="pre">path</span></code> if used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The datastore ID that the ISO is located in.
+Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskMode</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The mode of this this virtual disk for purposes of
+writes and snapshotting. Can be one of <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">independent_nonpersistent</span></code>,
+<code class="docutils literal notranslate"><span class="pre">independent_persistent</span></code>, <code class="docutils literal notranslate"><span class="pre">nonpersistent</span></code>, <code class="docutils literal notranslate"><span class="pre">persistent</span></code>, or <code class="docutils literal notranslate"><span class="pre">undoable</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">persistent</span></code>. For an explanation of options, click
+[here][vmware-docs-disk-mode].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskSharing</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The sharing mode of this virtual disk. Can be one
+of <code class="docutils literal notranslate"><span class="pre">sharingMultiWriter</span></code> or <code class="docutils literal notranslate"><span class="pre">sharingNone</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">sharingNone</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eagerlyScrub</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the disk space is zeroed out
+on VM creation. This will delay the creation of the disk or virtual machine.
+Cannot be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.  See the section
+on picking a disk type.  Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The upper limit of IOPS that this disk can use. The
+default is no limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioReservation</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The I/O reservation (guarantee) that this disk
+has, in IOPS.  The default is no reservation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioShareCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The share count for this disk when the share
+level is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The share allocation level for this disk. Can
+be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keepOnRemove</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Keep this disk when removing the device or
+destroying the virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A label for the disk. Forces a new disk if changed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
+using <code class="docutils literal notranslate"><span class="pre">attach</span></code>. Required if not using <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The path to the ISO file. Requried for using a datastore
+ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of the disk, in GiB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thinProvisioned</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this disk is thin provisioned,
+with space for the file being allocated on an as-needed basis. Cannot be set
+to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. See the section on picking a disk
+type. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unitNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The disk number on the SCSI bus. The maximum value
+for this setting is the value of
+<code class="docutils literal notranslate"><span class="pre">scsi_controller_count</span></code> times 15, minus 1 (so <code class="docutils literal notranslate"><span class="pre">14</span></code>,
+<code class="docutils literal notranslate"><span class="pre">29</span></code>, <code class="docutils literal notranslate"><span class="pre">44</span></code>, and <code class="docutils literal notranslate"><span class="pre">59</span></code>, for 1-4 controllers respectively). The default is <code class="docutils literal notranslate"><span class="pre">0</span></code>,
+for which one disk must be set to. Duplicate unit numbers are not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The UUID of the virtual disk’s VMDK file. This is used to track the
+virtual disk on the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeThrough</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, writes for this disk are sent
+directly to the filesystem immediately instead of being buffered. Default:
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7453,6 +7721,29 @@ Default: <code class="docutils literal notranslate"><span class="pre">false</spa
 <dd><p>A specification for a virtual NIC on this
 virtual machine. See network interface options
 below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adapter_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The network interface type. Can be one of
+<code class="docutils literal notranslate"><span class="pre">e1000</span></code>, <code class="docutils literal notranslate"><span class="pre">e1000e</span></code>, or <code class="docutils literal notranslate"><span class="pre">vmxnet3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vmxnet3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The upper bandwidth limit of this network
+interface, in Mbits/sec. The default is no limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthReservation</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The bandwidth reservation of this
+network interface, in Mbits/sec. The default is no reservation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The share count for this network
+interface when the share level is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The bandwidth share allocation level for
+this interface. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default:
+<code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">macAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The MAC address of this network interface. Can
+only be manually set if <code class="docutils literal notranslate"><span class="pre">use_static_mac</span></code> is true, otherwise this is a
+computed value that gives the current MAC address of this interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The [managed object reference
+ID][docs-about-morefs] of the network to connect this interface to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useStaticMac</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, the <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> field is treated as
+a static MAC address and set accordingly. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires
+<code class="docutils literal notranslate"><span class="pre">mac_address</span></code> to be set. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7575,6 +7866,9 @@ is <code class="docutils literal notranslate"><span class="pre">properties</span
 imported from OVF or OVA files. See Using vApp properties to supply OVF/OVA
 configuration for
 more details.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -7635,17 +7929,15 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</p>
 <dt id="pulumi_vsphere.VirtualMachine.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">alternate_guest_name=None</em>, <em class="sig-param">annotation=None</em>, <em class="sig-param">boot_delay=None</em>, <em class="sig-param">boot_retry_delay=None</em>, <em class="sig-param">boot_retry_enabled=None</em>, <em class="sig-param">cdrom=None</em>, <em class="sig-param">change_version=None</em>, <em class="sig-param">clone=None</em>, <em class="sig-param">cpu_hot_add_enabled=None</em>, <em class="sig-param">cpu_hot_remove_enabled=None</em>, <em class="sig-param">cpu_limit=None</em>, <em class="sig-param">cpu_performance_counters_enabled=None</em>, <em class="sig-param">cpu_reservation=None</em>, <em class="sig-param">cpu_share_count=None</em>, <em class="sig-param">cpu_share_level=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">datastore_id=None</em>, <em class="sig-param">default_ip_address=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">efi_secure_boot_enabled=None</em>, <em class="sig-param">enable_disk_uuid=None</em>, <em class="sig-param">enable_logging=None</em>, <em class="sig-param">ept_rvi_mode=None</em>, <em class="sig-param">extra_config=None</em>, <em class="sig-param">firmware=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">force_power_off=None</em>, <em class="sig-param">guest_id=None</em>, <em class="sig-param">guest_ip_addresses=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">hv_mode=None</em>, <em class="sig-param">ignored_guest_ips=None</em>, <em class="sig-param">imported=None</em>, <em class="sig-param">latency_sensitivity=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">memory_hot_add_enabled=None</em>, <em class="sig-param">memory_limit=None</em>, <em class="sig-param">memory_reservation=None</em>, <em class="sig-param">memory_share_count=None</em>, <em class="sig-param">memory_share_level=None</em>, <em class="sig-param">migrate_wait_timeout=None</em>, <em class="sig-param">moid=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">nested_hv_enabled=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">num_cores_per_socket=None</em>, <em class="sig-param">num_cpus=None</em>, <em class="sig-param">reboot_required=None</em>, <em class="sig-param">resource_pool_id=None</em>, <em class="sig-param">run_tools_scripts_after_power_on=None</em>, <em class="sig-param">run_tools_scripts_after_resume=None</em>, <em class="sig-param">run_tools_scripts_before_guest_reboot=None</em>, <em class="sig-param">run_tools_scripts_before_guest_shutdown=None</em>, <em class="sig-param">run_tools_scripts_before_guest_standby=None</em>, <em class="sig-param">scsi_bus_sharing=None</em>, <em class="sig-param">scsi_controller_count=None</em>, <em class="sig-param">scsi_type=None</em>, <em class="sig-param">shutdown_wait_timeout=None</em>, <em class="sig-param">swap_placement_policy=None</em>, <em class="sig-param">sync_time_with_host=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uuid=None</em>, <em class="sig-param">vapp=None</em>, <em class="sig-param">vapp_transports=None</em>, <em class="sig-param">vmware_tools_status=None</em>, <em class="sig-param">vmx_path=None</em>, <em class="sig-param">wait_for_guest_ip_timeout=None</em>, <em class="sig-param">wait_for_guest_net_routable=None</em>, <em class="sig-param">wait_for_guest_net_timeout=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachine.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualMachine resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] alternate_guest_name: The guest name for the operating system</p>
-<blockquote>
-<div><p>when <code class="docutils literal notranslate"><span class="pre">guest_id</span></code> is <code class="docutils literal notranslate"><span class="pre">other</span></code> or <code class="docutils literal notranslate"><span class="pre">other-64</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>alternate_guest_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The guest name for the operating system
+when <code class="docutils literal notranslate"><span class="pre">guest_id</span></code> is <code class="docutils literal notranslate"><span class="pre">other</span></code> or <code class="docutils literal notranslate"><span class="pre">other-64</span></code>.</p></li>
 <li><p><strong>annotation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A user-provided description of the virtual machine.
 The default is no annotation.</p></li>
 <li><p><strong>boot_delay</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of milliseconds to wait before starting
@@ -7844,6 +8136,149 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>cdrom</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">clientDevice</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether the device should be backed by
+remote client device. Conflicts with <code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datastore ID that the ISO is located in.
+Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Requried for using a datastore
+ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+</ul>
+<p>The <strong>clone</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">customize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServerLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsSuffixLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linuxOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">domain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hwClockUtc</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">network_interfaces</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A specification for a virtual NIC on this
+virtual machine. See network interface options
+below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dnsServerLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4_address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv6Netmask</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowsOptions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">adminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoLogon</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">autoLogonCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">computerName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domainAdminPassword</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">domainAdminUser</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fullName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">joinDomain</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">organizationName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">productKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">runOnceCommandLists</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeZone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">workgroup</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">windowsSysprepText</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linkedClone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">templateUuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeout</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<p>The <strong>disks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">attach</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Attach an external disk instead of creating a new one.
+Implies and conflicts with <code class="docutils literal notranslate"><span class="pre">keep_on_remove</span></code>. If set, you cannot set <code class="docutils literal notranslate"><span class="pre">size</span></code>,
+<code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code>, or <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code>. Must set <code class="docutils literal notranslate"><span class="pre">path</span></code> if used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">datastore_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The datastore ID that the ISO is located in.
+Requried for using a datastore ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskMode</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The mode of this this virtual disk for purposes of
+writes and snapshotting. Can be one of <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">independent_nonpersistent</span></code>,
+<code class="docutils literal notranslate"><span class="pre">independent_persistent</span></code>, <code class="docutils literal notranslate"><span class="pre">nonpersistent</span></code>, <code class="docutils literal notranslate"><span class="pre">persistent</span></code>, or <code class="docutils literal notranslate"><span class="pre">undoable</span></code>.
+Default: <code class="docutils literal notranslate"><span class="pre">persistent</span></code>. For an explanation of options, click
+[here][vmware-docs-disk-mode].</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskSharing</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The sharing mode of this virtual disk. Can be one
+of <code class="docutils literal notranslate"><span class="pre">sharingMultiWriter</span></code> or <code class="docutils literal notranslate"><span class="pre">sharingNone</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">sharingNone</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eagerlyScrub</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the disk space is zeroed out
+on VM creation. This will delay the creation of the disk or virtual machine.
+Cannot be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">thin_provisioned</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.  See the section
+on picking a disk type.  Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The upper limit of IOPS that this disk can use. The
+default is no limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioReservation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The I/O reservation (guarantee) that this disk
+has, in IOPS.  The default is no reservation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioShareCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The share count for this disk when the share
+level is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ioShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The share allocation level for this disk. Can
+be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">keepOnRemove</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Keep this disk when removing the device or
+destroying the virtual machine. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A label for the disk. Forces a new disk if changed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An alias for both <code class="docutils literal notranslate"><span class="pre">label</span></code> and <code class="docutils literal notranslate"><span class="pre">path</span></code>, the latter when
+using <code class="docutils literal notranslate"><span class="pre">attach</span></code>. Required if not using <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The path to the ISO file. Requried for using a datastore
+ISO. Conflicts with <code class="docutils literal notranslate"><span class="pre">client_device</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of the disk, in GiB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">thinProvisioned</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, this disk is thin provisioned,
+with space for the file being allocated on an as-needed basis. Cannot be set
+to <code class="docutils literal notranslate"><span class="pre">true</span></code> when <code class="docutils literal notranslate"><span class="pre">eagerly_scrub</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>. See the section on picking a disk
+type. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unitNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The disk number on the SCSI bus. The maximum value
+for this setting is the value of
+<code class="docutils literal notranslate"><span class="pre">scsi_controller_count</span></code> times 15, minus 1 (so <code class="docutils literal notranslate"><span class="pre">14</span></code>,
+<code class="docutils literal notranslate"><span class="pre">29</span></code>, <code class="docutils literal notranslate"><span class="pre">44</span></code>, and <code class="docutils literal notranslate"><span class="pre">59</span></code>, for 1-4 controllers respectively). The default is <code class="docutils literal notranslate"><span class="pre">0</span></code>,
+for which one disk must be set to. Duplicate unit numbers are not allowed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uuid</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The UUID of the virtual disk’s VMDK file. This is used to track the
+virtual disk on the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">writeThrough</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If <code class="docutils literal notranslate"><span class="pre">true</span></code>, writes for this disk are sent
+directly to the filesystem immediately instead of being buffered. Default:
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>network_interfaces</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">adapter_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The network interface type. Can be one of
+<code class="docutils literal notranslate"><span class="pre">e1000</span></code>, <code class="docutils literal notranslate"><span class="pre">e1000e</span></code>, or <code class="docutils literal notranslate"><span class="pre">vmxnet3</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">vmxnet3</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The upper bandwidth limit of this network
+interface, in Mbits/sec. The default is no limit.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthReservation</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The bandwidth reservation of this
+network interface, in Mbits/sec. The default is no reservation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The share count for this network
+interface when the share level is <code class="docutils literal notranslate"><span class="pre">custom</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bandwidthShareLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The bandwidth share allocation level for
+this interface. Can be one of <code class="docutils literal notranslate"><span class="pre">low</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">high</span></code>, or <code class="docutils literal notranslate"><span class="pre">custom</span></code>. Default:
+<code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <span class="raw-html-m2r"><elided></span></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The ID of the device within the virtual machine.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">macAddress</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The MAC address of this network interface. Can
+only be manually set if <code class="docutils literal notranslate"><span class="pre">use_static_mac</span></code> is true, otherwise this is a
+computed value that gives the current MAC address of this interface.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">networkId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The [managed object reference
+ID][docs-about-morefs] of the network to connect this interface to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">useStaticMac</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, the <code class="docutils literal notranslate"><span class="pre">mac_address</span></code> field is treated as
+a static MAC address and set accordingly. Setting this to <code class="docutils literal notranslate"><span class="pre">true</span></code> requires
+<code class="docutils literal notranslate"><span class="pre">mac_address</span></code> to be set. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+<p>The <strong>vapp</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">properties</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
@@ -7983,18 +8418,16 @@ is removed when this resource is destroyed.</p>
 <dt id="pulumi_vsphere.VirtualMachineSnapshot.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">consolidate=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">quiesce=None</em>, <em class="sig-param">remove_children=None</em>, <em class="sig-param">snapshot_name=None</em>, <em class="sig-param">virtual_machine_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VirtualMachineSnapshot.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VirtualMachineSnapshot resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] consolidate: If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the delta disks involved in this</p>
-<blockquote>
-<div><p>snapshot will be consolidated into the parent when this resource is
-destroyed.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>consolidate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the delta disks involved in this
+snapshot will be consolidated into the parent when this resource is
+destroyed.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the snapshot.</p></li>
 <li><p><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, a dump of the internal state of the
 virtual machine is included in the snapshot.</p></li>
@@ -8179,17 +8612,15 @@ potentially used by all virtual machines on this datastore.</p>
 <dt id="pulumi_vsphere.VmfsDatastore.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessible=None</em>, <em class="sig-param">capacity=None</em>, <em class="sig-param">custom_attributes=None</em>, <em class="sig-param">datastore_cluster_id=None</em>, <em class="sig-param">disks=None</em>, <em class="sig-param">folder=None</em>, <em class="sig-param">free_space=None</em>, <em class="sig-param">host_system_id=None</em>, <em class="sig-param">maintenance_mode=None</em>, <em class="sig-param">multiple_host_access=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uncommitted_space=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.VmfsDatastore.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VmfsDatastore resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] accessible: The connectivity status of the datastore. If this is <code class="docutils literal notranslate"><span class="pre">false</span></code>,</p>
-<blockquote>
-<div><p>some other computed attributes may be out of date.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>accessible</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The connectivity status of the datastore. If this is <code class="docutils literal notranslate"><span class="pre">false</span></code>,
+some other computed attributes may be out of date.</p></li>
 <li><p><strong>capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum capacity of the datastore, in megabytes.</p></li>
 <li><p><strong>custom_attributes</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Map of custom attribute ids to attribute 
 value string to set on datastore resource. See
@@ -8264,7 +8695,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_vsphere.get_compute_cluster">
 <code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_compute_cluster</code><span class="sig-paren">(</span><em class="sig-param">datacenter_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_compute_cluster" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of the datacenter the cluster is located in.  This can
+be omitted if the search path used in <code class="docutils literal notranslate"><span class="pre">name</span></code> is an absolute path.  For
+default datacenters, use the id attribute from an empty <code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code>
+data source.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name or absolute path to the cluster.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/compute_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/compute_cluster.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
@@ -8272,7 +8716,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="function">
 <dt id="pulumi_vsphere.get_custom_attribute">
 <code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_custom_attribute</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_custom_attribute" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the custom attribute.</p>
+</dd>
+</dl>
+<blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/custom_attribute.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/custom_attribute.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
@@ -8284,6 +8734,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 vSphere datacenter. This can then be used with resources or data sources that
 require a datacenter, such as the <cite>`</cite>.getHost`` &lt;/docs/providers/vsphere/d/host.html&gt;`_
 data source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the datacenter. This can be a name or path.
+Can be omitted if there is only one datacenter in your inventory.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datacenter.html.markdown</a>.</p>
 </div></blockquote>
@@ -8296,6 +8752,18 @@ data source.</p>
 datastore in vSphere. This is useful to fetch the ID of a datastore that you
 want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of the datacenter the datastore is located in. This
+can be omitted if the search path used in <code class="docutils literal notranslate"><span class="pre">name</span></code> is an absolute path. For
+default datacenters, use the id attribute from an empty <code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code>
+data source.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the datastore. This can be a name or path.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore.html.markdown</a>.</p>
 </div></blockquote>
@@ -8311,6 +8779,18 @@ cluster that you want to use to assign datastores to using the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resources, or create
 virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of the datacenter the datastore cluster is located in.
+This can be omitted if the search path used in <code class="docutils literal notranslate"><span class="pre">name</span></code> is an absolute path.
+For default datacenters, use the id attribute from an empty
+<code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code> data source.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name or absolute path to the datastore cluster.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/datastore_cluster.html.markdown</a>.</p>
 </div></blockquote>
@@ -8327,7 +8807,22 @@ an example is shown below.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> This data source requires vCenter and is not available on direct
 ESXi connections.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of the datacenter the DVS is located in. This can be
+omitted if the search path used in <code class="docutils literal notranslate"><span class="pre">name</span></code> is an absolute path. For default
+datacenters, use the id attribute from an empty <code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code> data
+source.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the distributed virtual switch. This can be a
+name or path.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/distributed_virtual_switch.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
@@ -8348,6 +8843,16 @@ datacenter.</p>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.getHost</span></code> data source can be used to discover the ID of a vSphere
 host. This can then be used with resources or data sources that require a host
 managed object reference ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of a datacenter.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the host. This can be a name or path. Can be
+omitted if there is only one host in your inventory.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/host.html.markdown</a>.</p>
 </div></blockquote>
@@ -8361,6 +8866,18 @@ in vSphere. This can be any network that can be used as the backing for a
 network interface for <code class="docutils literal notranslate"><span class="pre">.VirtualMachine</span></code> or any other vSphere resource
 that requires a network. This includes standard (host-based) port groups, DVS
 port groups, or opaque networks such as those managed by NSX.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of the datacenter the network is located in. This can
+be omitted if the search path used in <code class="docutils literal notranslate"><span class="pre">name</span></code> is an absolute path. For default
+datacenters, use the id attribute from an empty <code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code> data
+source.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the network. This can be a name or path.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/network.html.markdown</a>.</p>
 </div></blockquote>
@@ -8373,6 +8890,19 @@ port groups, or opaque networks such as those managed by NSX.</p>
 resource pool in vSphere. This is useful to fetch the ID of a resource pool
 that you want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of the datacenter the resource pool is located in.
+This can be omitted if the search path used in <code class="docutils literal notranslate"><span class="pre">name</span></code> is an absolute path.
+For default datacenters, use the id attribute from an empty
+<code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code> data source.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the resource pool. This can be a name or
+path. This is required when using vCenter.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/resource_pool.html.markdown</a>.</p>
 </div></blockquote>
@@ -8381,7 +8911,16 @@ that you want to use to create virtual machines in using the
 <dl class="function">
 <dt id="pulumi_vsphere.get_tag">
 <code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_tag</code><span class="sig-paren">(</span><em class="sig-param">category_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category_id</strong> (<em>str</em>) – The ID of the tag category the tag is located in.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the tag.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
@@ -8389,7 +8928,13 @@ that you want to use to create virtual machines in using the
 <dl class="function">
 <dt id="pulumi_vsphere.get_tag_category">
 <code class="sig-prename descclassname">pulumi_vsphere.</code><code class="sig-name descname">get_tag_category</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vsphere.get_tag_category" title="Permalink to this definition">¶</a></dt>
-<dd><blockquote>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the tag category.</p>
+</dd>
+</dl>
+<blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag_category.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/tag_category.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
@@ -8401,6 +8946,16 @@ that you want to use to create virtual machines in using the
 vApp container in vSphere. This is useful to fetch the ID of a vApp container
 that you want to use to create virtual machines in using the
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of the datacenter the vApp container is located in.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the vApp container. This can be a name or
+path.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vapp_container.html.markdown</a>.</p>
 </div></blockquote>
@@ -8414,6 +8969,21 @@ existing virtual machine or template. Its most relevant purpose is for finding
 the UUID of a template to be used as the source for cloning into a new
 <cite>`</cite>.VirtualMachine`` &lt;/docs/providers/vsphere/r/virtual_machine.html&gt;`_ resource. It also
 reads the guest ID so that can be supplied as well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenter_id</strong> (<em>str</em>) – The [managed object reference
+ID][docs-about-morefs] of the datacenter the virtual machine is located in.
+This can be omitted if the search path used in <code class="docutils literal notranslate"><span class="pre">name</span></code> is an absolute path.
+For default datacenters, use the <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute from an empty
+<code class="docutils literal notranslate"><span class="pre">.Datacenter</span></code> data source.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the virtual machine. This can be a name or
+path.</p></li>
+<li><p><strong>scsi_controller_scan_count</strong> (<em>float</em>) – The number of SCSI controllers to
+scan for disk attributes and controller types on. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown</a>.</p>
 </div></blockquote>
@@ -8426,6 +8996,19 @@ reads the guest ID so that can be supplied as well.</p>
 devices available on an ESXi host. This data source can be combined with the
 <cite>`</cite>.VmfsDatastore`` &lt;/docs/providers/vsphere/r/vmfs_datastore.html&gt;`_ resource to create VMFS
 datastores based off a set of discovered disks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filter</strong> (<em>str</em>) – A regular expression to filter the disks against. Only
+disks with canonical names that match will be included.</p></li>
+<li><p><strong>host_system_id</strong> (<em>str</em>) – The [managed object ID][docs-about-morefs] of
+the host to look for disks on.</p></li>
+<li><p><strong>rescan</strong> (<em>bool</em>) – Whether or not to rescan storage adapters before
+searching for disks. This may lengthen the time it takes to perform the
+search. Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown">https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/vmfs_disks.html.markdown</a>.</p>
 </div></blockquote>

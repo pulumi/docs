@@ -330,18 +330,16 @@ visibility depends upon the configuration of the OpenStack cloud.</p>
 <dt id="pulumi_openstack.images.Image.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">container_format=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk_format=None</em>, <em class="sig-param">file=None</em>, <em class="sig-param">image_cache_path=None</em>, <em class="sig-param">image_source_url=None</em>, <em class="sig-param">local_file_path=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">min_disk_gb=None</em>, <em class="sig-param">min_ram_mb=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">protected=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">size_bytes=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">update_at=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">verify_checksum=None</em>, <em class="sig-param">visibility=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.Image.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Image resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] checksum: The checksum of the data associated with the image.
-:param pulumi.Input[str] container_format: The container format. Must be one of</p>
-<blockquote>
-<div><p>“ami”, “ari”, “aki”, “bare”, “ovf”.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>checksum</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The checksum of the data associated with the image.</p></li>
+<li><p><strong>container_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container format. Must be one of
+“ami”, “ari”, “aki”, “bare”, “ovf”.</p></li>
 <li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date the image was created.</p></li>
 <li><p><strong>disk_format</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The disk format. Must be one of
 “ami”, “ari”, “aki”, “vhd”, “vmdk”, “raw”, “qcow2”, “vdi”, “iso”.</p></li>
@@ -437,6 +435,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.images.get_image">
 <code class="sig-prename descclassname">pulumi_openstack.images.</code><code class="sig-name descname">get_image</code><span class="sig-paren">(</span><em class="sig-param">member_status=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner=None</em>, <em class="sig-param">properties=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size_max=None</em>, <em class="sig-param">size_min=None</em>, <em class="sig-param">sort_direction=None</em>, <em class="sig-param">sort_key=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">visibility=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.images.get_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>member_status</strong> (<em>str</em>) – The status of the image. Must be one of
+“accepted”, “pending”, “rejected”, or “all”.</p></li>
+<li><p><strong>most_recent</strong> (<em>bool</em>) – If more than one result is returned, use the most
+recent image.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the image.</p></li>
+<li><p><strong>owner</strong> (<em>str</em>) – The owner (UUID) of the image.</p></li>
+<li><p><strong>properties</strong> (<em>dict</em>) – a map of key/value pairs to match an image with.
+All specified properties must be matched.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Glance client.
+A Glance client is needed to create an Image that can be used with
+a compute instance. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider
+is used.</p></li>
+<li><p><strong>size_max</strong> (<em>float</em>) – The maximum size (in bytes) of the image to return.</p></li>
+<li><p><strong>size_min</strong> (<em>float</em>) – The minimum size (in bytes) of the image to return.</p></li>
+<li><p><strong>sort_direction</strong> (<em>str</em>) – Order the results in either <code class="docutils literal notranslate"><span class="pre">asc</span></code> or <code class="docutils literal notranslate"><span class="pre">desc</span></code>.</p></li>
+<li><p><strong>sort_key</strong> (<em>str</em>) – Sort images based on a certain key. Defaults to <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><strong>tag</strong> (<em>str</em>) – Search for images with a specific tag.</p></li>
+<li><p><strong>visibility</strong> (<em>str</em>) – The visibility of the image. Must be one of
+“public”, “private”, “community”, or “shared”. Defaults to “private”.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/images_image_v2.html.markdown</a>.</p>
 </div></blockquote>

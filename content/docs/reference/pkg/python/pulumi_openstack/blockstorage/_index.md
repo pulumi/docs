@@ -212,6 +212,11 @@ Changing this creates a new volume.</p></li>
 <dd><p>If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -315,18 +320,16 @@ Changing this creates a new volume.</p>
 <dt id="pulumi_openstack.blockstorage.Volume.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">consistency_group_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_online_resize=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">multiattach=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">source_replica=None</em>, <em class="sig-param">source_vol_id=None</em>, <em class="sig-param">volume_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Volume resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] attachments: If a volume is attached to an instance, this attribute will</p>
-<blockquote>
-<div><p>display the Attachment ID, Instance ID, and the Device as the Instance
-sees it.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If a volume is attached to an instance, this attribute will
+display the Attachment ID, Instance ID, and the Device as the Instance
+sees it.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone for the volume.
 Changing this creates a new volume.</p></li>
 <li><p><strong>consistency_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The consistency group to place the volume
@@ -357,6 +360,12 @@ Changing this creates a new volume.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>attachments</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -549,18 +558,16 @@ connections.</p>
 <dt id="pulumi_openstack.blockstorage.VolumeAttach.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach_mode=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">device=None</em>, <em class="sig-param">driver_volume_type=None</em>, <em class="sig-param">host_name=None</em>, <em class="sig-param">initiator=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">mount_point_base=None</em>, <em class="sig-param">multipath=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">platform=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">wwnn=None</em>, <em class="sig-param">wwpns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeAttach.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VolumeAttach resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] attach_mode: Specify whether to attach the volume as Read-Only</p>
-<blockquote>
-<div><p>(<code class="docutils literal notranslate"><span class="pre">ro</span></code>) or Read-Write (<code class="docutils literal notranslate"><span class="pre">rw</span></code>). Only values of <code class="docutils literal notranslate"><span class="pre">ro</span></code> and <code class="docutils literal notranslate"><span class="pre">rw</span></code> are accepted.
-If left unspecified, the Block Storage API will apply a default of <code class="docutils literal notranslate"><span class="pre">rw</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attach_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify whether to attach the volume as Read-Only
+(<code class="docutils literal notranslate"><span class="pre">ro</span></code>) or Read-Write (<code class="docutils literal notranslate"><span class="pre">rw</span></code>). Only values of <code class="docutils literal notranslate"><span class="pre">ro</span></code> and <code class="docutils literal notranslate"><span class="pre">rw</span></code> are accepted.
+If left unspecified, the Block Storage API will apply a default of <code class="docutils literal notranslate"><span class="pre">rw</span></code>.</p></li>
 <li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.</p></li>
@@ -778,18 +785,16 @@ connections.</p>
 <dt id="pulumi_openstack.blockstorage.VolumeAttachV2.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attach_mode=None</em>, <em class="sig-param">data=None</em>, <em class="sig-param">device=None</em>, <em class="sig-param">driver_volume_type=None</em>, <em class="sig-param">host_name=None</em>, <em class="sig-param">initiator=None</em>, <em class="sig-param">ip_address=None</em>, <em class="sig-param">mount_point_base=None</em>, <em class="sig-param">multipath=None</em>, <em class="sig-param">os_type=None</em>, <em class="sig-param">platform=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">wwnn=None</em>, <em class="sig-param">wwpns=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeAttachV2.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VolumeAttachV2 resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] attach_mode: Specify whether to attach the volume as Read-Only</p>
-<blockquote>
-<div><p>(<code class="docutils literal notranslate"><span class="pre">ro</span></code>) or Read-Write (<code class="docutils literal notranslate"><span class="pre">rw</span></code>). Only values of <code class="docutils literal notranslate"><span class="pre">ro</span></code> and <code class="docutils literal notranslate"><span class="pre">rw</span></code> are accepted.
-If left unspecified, the Block Storage API will apply a default of <code class="docutils literal notranslate"><span class="pre">rw</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attach_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specify whether to attach the volume as Read-Only
+(<code class="docutils literal notranslate"><span class="pre">ro</span></code>) or Read-Write (<code class="docutils literal notranslate"><span class="pre">rw</span></code>). Only values of <code class="docutils literal notranslate"><span class="pre">ro</span></code> and <code class="docutils literal notranslate"><span class="pre">rw</span></code> are accepted.
+If left unspecified, the Block Storage API will apply a default of <code class="docutils literal notranslate"><span class="pre">rw</span></code>.</p></li>
 <li><p><strong>data</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – This is a map of key/value pairs that contain the connection
 information. You will want to pass this information to a provisioner
 script to finalize the connection. See below for more information.</p></li>
@@ -900,6 +905,11 @@ Changing this creates a new volume.</p></li>
 <dd><p>If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -977,18 +987,16 @@ Changing this creates a new volume.</p>
 <dt id="pulumi_openstack.blockstorage.VolumeV1.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">source_vol_id=None</em>, <em class="sig-param">volume_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV1.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VolumeV1 resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] attachments: If a volume is attached to an instance, this attribute will</p>
-<blockquote>
-<div><p>display the Attachment ID, Instance ID, and the Device as the Instance
-sees it.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If a volume is attached to an instance, this attribute will
+display the Attachment ID, Instance ID, and the Device as the Instance
+sees it.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone for the volume.
 Changing this creates a new volume.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description of the volume. Changing this updates
@@ -1013,6 +1021,12 @@ Changing this creates a new volume.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>attachments</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v1.html.markdown</a>.</p>
 </div></blockquote>
@@ -1101,6 +1115,11 @@ Changing this creates a new volume.</p></li>
 <dd><p>If a volume is attached to an instance, this attribute will
 display the Attachment ID, Instance ID, and the Device as the Instance
 sees it.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1191,18 +1210,16 @@ Changing this creates a new volume.</p>
 <dt id="pulumi_openstack.blockstorage.VolumeV2.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">consistency_group_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">source_replica=None</em>, <em class="sig-param">source_vol_id=None</em>, <em class="sig-param">volume_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.VolumeV2.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VolumeV2 resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] attachments: If a volume is attached to an instance, this attribute will</p>
-<blockquote>
-<div><p>display the Attachment ID, Instance ID, and the Device as the Instance
-sees it.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – If a volume is attached to an instance, this attribute will
+display the Attachment ID, Instance ID, and the Device as the Instance
+sees it.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The availability zone for the volume.
 Changing this creates a new volume.</p></li>
 <li><p><strong>consistency_group_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The consistency group to place the volume
@@ -1230,6 +1247,12 @@ Changing this creates a new volume.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>attachments</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">instanceId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_volume_v2.html.markdown</a>.</p>
 </div></blockquote>
@@ -1277,6 +1300,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.get_availability_zones_v3">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_availability_zones_v3</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_availability_zones_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Block Storage availability zones from OpenStack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the Block Storage client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>state</strong> (<em>str</em>) – The <code class="docutils literal notranslate"><span class="pre">state</span></code> of the availability zones to match. Can
+either be <code class="docutils literal notranslate"><span class="pre">available</span></code> or <code class="docutils literal notranslate"><span class="pre">unavailable</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">available</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_availability_zones_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_availability_zones_v3.html.markdown</a>.</p>
 </div></blockquote>
@@ -1286,6 +1319,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v2">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_snapshot_v2</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>most_recent</strong> (<em>bool</em>) – Pick the most recently created snapshot if there
+are multiple results.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the snapshot.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Block Storage
+client. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the snapshot.</p></li>
+<li><p><strong>volume_id</strong> (<em>str</em>) – The ID of the snapshot’s volume.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v2.html.markdown</a>.</p>
 </div></blockquote>
@@ -1295,6 +1341,19 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.blockstorage.get_snapshot_v3">
 <code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">get_snapshot_v3</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.get_snapshot_v3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an existing snapshot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>most_recent</strong> (<em>bool</em>) – Pick the most recently created snapshot if there
+are multiple results.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the snapshot.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V3 Block Storage
+client. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – The status of the snapshot.</p></li>
+<li><p><strong>volume_id</strong> (<em>str</em>) – The ID of the snapshot’s volume.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/blockstorage_snapshot_v3.html.markdown</a>.</p>
 </div></blockquote>
