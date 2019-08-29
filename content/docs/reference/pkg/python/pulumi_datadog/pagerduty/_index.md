@@ -28,6 +28,11 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </dd>
 </dl>
+<p>The <strong>services</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">service_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Your Service name associated service key in Pagerduty.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Your Service name in PagerDuty.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty.html.markdown</a>.</p>
 </div></blockquote>
@@ -53,6 +58,10 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_datadog.pagerduty.Integration.services">
 <code class="sig-name descname">services</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.services" title="Permalink to this definition">¶</a></dt>
 <dd><p>Array of PagerDuty service objects. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">services</span></code> list is now deprecated in favour of <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty_service_object.html">pagerduty.ServiceObject</a> resource. Note that <code class="docutils literal notranslate"><span class="pre">individual_services</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to ignore the <code class="docutils literal notranslate"><span class="pre">service</span></code> attribute and use individual services properly.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">service_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Your Service name associated service key in Pagerduty.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Your Service name in PagerDuty.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -65,15 +74,28 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_datadog.pagerduty.Integration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_token=None</em>, <em class="sig-param">individual_services=None</em>, <em class="sig-param">schedules=None</em>, <em class="sig-param">services=None</em>, <em class="sig-param">subdomain=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] api_token: Your PagerDuty API token.
-:param pulumi.Input[bool] individual_services: Boolean to specify whether or not individual service objects specified by <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty_service_object.html">pagerduty.ServiceObject</a> resource are to be used. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">services</span></code> key.
-:param pulumi.Input[list] schedules: Array of your schedule URLs.
-:param pulumi.Input[list] services: Array of PagerDuty service objects. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">services</span></code> list is now deprecated in favour of <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty_service_object.html">pagerduty.ServiceObject</a> resource. Note that <code class="docutils literal notranslate"><span class="pre">individual_services</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to ignore the <code class="docutils literal notranslate"><span class="pre">service</span></code> attribute and use individual services properly.
-:param pulumi.Input[str] subdomain: Your PagerDuty account’s personalized subdomain name.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your PagerDuty API token.</p></li>
+<li><p><strong>individual_services</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Boolean to specify whether or not individual service objects specified by <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty_service_object.html">pagerduty.ServiceObject</a> resource are to be used. Mutually exclusive with <code class="docutils literal notranslate"><span class="pre">services</span></code> key.</p>
+</p></li>
+<li><p><strong>schedules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Array of your schedule URLs.</p></li>
+<li><p><strong>services</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Array of PagerDuty service objects. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">services</span></code> list is now deprecated in favour of <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty_service_object.html">pagerduty.ServiceObject</a> resource. Note that <code class="docutils literal notranslate"><span class="pre">individual_services</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to ignore the <code class="docutils literal notranslate"><span class="pre">service</span></code> attribute and use individual services properly.</p>
+</p></li>
+<li><p><strong>subdomain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your PagerDuty account’s personalized subdomain name.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>services</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">service_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Your Service name associated service key in Pagerduty.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">service_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Your Service name in PagerDuty.</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty.html.markdown</a>.</p>
 </div></blockquote>
@@ -143,11 +165,17 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_datadog.pagerduty.ServiceObject.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">service_key=None</em>, <em class="sig-param">service_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ServiceObject resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] service_name: Your Service name in PagerDuty.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Service name in PagerDuty.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty_service_object.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty_service_object.html.markdown</a>.</p>
 </div></blockquote>

@@ -43,6 +43,11 @@ creates a new container.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>versioning</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_container_v1.html.markdown</a>.</p>
 </div></blockquote>
@@ -115,25 +120,27 @@ creates a new container.</p>
 <dt id="pulumi_openstack.objectstorage.Container.versioning">
 <code class="sig-name descname">versioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.objectstorage.Container.versioning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable object versioning. The structure is described below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_openstack.objectstorage.Container.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_read=None</em>, <em class="sig-param">container_sync_key=None</em>, <em class="sig-param">container_sync_to=None</em>, <em class="sig-param">container_write=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">versioning=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.Container.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Container resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] container_read: Sets an access control list (ACL) that grants</p>
-<blockquote>
-<div><p>read access. This header can contain a comma-delimited list of users that
-can read the container (allows the GET method for all objects in the
-container). Changing this updates the access control list read access.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>container_read</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Sets an access control list (ACL) that grants
+read access. This header can contain a comma-delimited list of users that
+can read the container (allows the GET method for all objects in the
+container). Changing this updates the access control list read access.</p></li>
 <li><p><strong>container_sync_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret key for container synchronization.
 Changing this updates container synchronization.</p></li>
 <li><p><strong>container_sync_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination for container synchronization.
@@ -154,6 +161,11 @@ creates a new container.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>versioning</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/objectstorage_container_v1.html.markdown</a>.</p>
 </div></blockquote>
@@ -397,21 +409,19 @@ need this value if you report a problem.</p>
 <dt id="pulumi_openstack.objectstorage.ContainerObject.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_name=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_length=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">copy_from=None</em>, <em class="sig-param">date=None</em>, <em class="sig-param">delete_after=None</em>, <em class="sig-param">delete_at=None</em>, <em class="sig-param">detect_content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">last_modified=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">object_manifest=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">trans_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.ContainerObject.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ContainerObject resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] container_name: A unique (within an account) name for the container.</p>
-<blockquote>
-<div><p>The container name must be from 1 to 256 characters long and can start
-with any character and contain any pattern. Character set must be UTF-8.
-The container name cannot contain a slash (/) character because this
-character delimits the container and object name. For example, the path
-/v1/account/www/pages specifies the www container, not the www/pages container.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>container_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique (within an account) name for the container. 
+The container name must be from 1 to 256 characters long and can start
+with any character and contain any pattern. Character set must be UTF-8.
+The container name cannot contain a slash (/) character because this
+character delimits the container and object name. For example, the path
+/v1/account/www/pages specifies the www container, not the www/pages container.</p></li>
 <li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string representing the content of the object. Conflicts with
 <code class="docutils literal notranslate"><span class="pre">source</span></code> and <code class="docutils literal notranslate"><span class="pre">copy_from</span></code>.</p></li>
 <li><p><strong>content_disposition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string which specifies the override behavior for 
@@ -584,18 +594,16 @@ be valid.</p>
 <dt id="pulumi_openstack.objectstorage.TempUrl.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container=None</em>, <em class="sig-param">method=None</em>, <em class="sig-param">object=None</em>, <em class="sig-param">regenerate=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">split=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.objectstorage.TempUrl.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TempUrl resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] container: The container name the object belongs to.
-:param pulumi.Input[str] method: The method allowed when accessing this URL.</p>
-<blockquote>
-<div><p>Valid values are <code class="docutils literal notranslate"><span class="pre">GET</span></code>, and <code class="docutils literal notranslate"><span class="pre">POST</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>container</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The container name the object belongs to.</p></li>
+<li><p><strong>method</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The method allowed when accessing this URL.
+Valid values are <code class="docutils literal notranslate"><span class="pre">GET</span></code>, and <code class="docutils literal notranslate"><span class="pre">POST</span></code>. Default is <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</p></li>
 <li><p><strong>object</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The object name the tempurl is for.</p></li>
 <li><p><strong>regenerate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to automatically regenerate the URL when
 it has expired. If set to true, this will create a new resource with a new

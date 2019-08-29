@@ -72,18 +72,16 @@ the operating system on which the MySQL server is running.</p>
 <dt id="pulumi_mysql.Database.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_character_set=None</em>, <em class="sig-param">default_collation=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Database.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Database resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] default_character_set: The default character set to use when</p>
-<blockquote>
-<div><p>a table is created without specifying an explicit character set. Defaults
-to “utf8”.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>default_character_set</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default character set to use when
+a table is created without specifying an explicit character set. Defaults
+to “utf8”.</p></li>
 <li><p><strong>default_collation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The default collation to use when a table
 is created without specifying an explicit collation. Defaults to
 <code class="docutils literal notranslate"><span class="pre">utf8_general_ci</span></code>. Each character set has its own set of collations, so
@@ -220,19 +218,26 @@ a user on a MySQL server.</p>
 <dt id="pulumi_mysql.Grant.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">grant=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">privileges=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">table=None</em>, <em class="sig-param">tls_option=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Grant.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Grant resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] database: The database to grant privileges on.
-:param pulumi.Input[bool] grant: Whether to also give the user privileges to grant the same privileges to other users.
-:param pulumi.Input[str] host: The source host of the user. Defaults to “localhost”. Conflicts with <code class="docutils literal notranslate"><span class="pre">role</span></code>.
-:param pulumi.Input[list] privileges: A list of privileges to grant to the user. Refer to a list of privileges (such as <a class="reference external" href="https://dev.mysql.com/doc/refman/5.5/en/grant.html">here</a>) for applicable privileges. Conflicts with <code class="docutils literal notranslate"><span class="pre">roles</span></code>.
-:param pulumi.Input[str] role: The role to grant <code class="docutils literal notranslate"><span class="pre">privileges</span></code> to. Conflicts with <code class="docutils literal notranslate"><span class="pre">user</span></code> and <code class="docutils literal notranslate"><span class="pre">host</span></code>.
-:param pulumi.Input[list] roles: A list of rols to grant to the user. Conflicts with <code class="docutils literal notranslate"><span class="pre">privileges</span></code>.
-:param pulumi.Input[str] table: Which table to grant <code class="docutils literal notranslate"><span class="pre">privileges</span></code> on. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>, which is all tables.
-:param pulumi.Input[str] tls_option: An TLS-Option for the <code class="docutils literal notranslate"><span class="pre">GRANT</span></code> statement. The value is suffixed to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span></code>. A value of ‘SSL’ will generate a <code class="docutils literal notranslate"><span class="pre">GRANT</span> <span class="pre">...</span> <span class="pre">REQUIRE</span> <span class="pre">SSL</span></code> statement. See the <cite>MYSQL ``GRANT`</cite> documentation &lt;<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/grant.html">https://dev.mysql.com/doc/refman/5.7/en/grant.html</a>&gt;`_ for more. Ignored if MySQL version is under 5.7.0.
-:param pulumi.Input[str] user: The name of the user. Conflicts with <code class="docutils literal notranslate"><span class="pre">role</span></code>.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>database</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The database to grant privileges on.</p></li>
+<li><p><strong>grant</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to also give the user privileges to grant the same privileges to other users.</p></li>
+<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source host of the user. Defaults to “localhost”. Conflicts with <code class="docutils literal notranslate"><span class="pre">role</span></code>.</p></li>
+<li><p><strong>privileges</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of privileges to grant to the user. Refer to a list of privileges (such as <a class="reference external" href="https://dev.mysql.com/doc/refman/5.5/en/grant.html">here</a>) for applicable privileges. Conflicts with <code class="docutils literal notranslate"><span class="pre">roles</span></code>.</p>
+</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The role to grant <code class="docutils literal notranslate"><span class="pre">privileges</span></code> to. Conflicts with <code class="docutils literal notranslate"><span class="pre">user</span></code> and <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p></li>
+<li><p><strong>roles</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of rols to grant to the user. Conflicts with <code class="docutils literal notranslate"><span class="pre">privileges</span></code>.</p></li>
+<li><p><strong>table</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Which table to grant <code class="docutils literal notranslate"><span class="pre">privileges</span></code> on. Defaults to <code class="docutils literal notranslate"><span class="pre">*</span></code>, which is all tables.</p></li>
+<li><p><strong>tls_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An TLS-Option for the <code class="docutils literal notranslate"><span class="pre">GRANT</span></code> statement. The value is suffixed to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span></code>. A value of ‘SSL’ will generate a <code class="docutils literal notranslate"><span class="pre">GRANT</span> <span class="pre">...</span> <span class="pre">REQUIRE</span> <span class="pre">SSL</span></code> statement. See the <cite>MYSQL ``GRANT`</cite> documentation &lt;<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/grant.html">https://dev.mysql.com/doc/refman/5.7/en/grant.html</a>&gt;`_ for more. Ignored if MySQL version is under 5.7.0.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the user. Conflicts with <code class="docutils literal notranslate"><span class="pre">role</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/grant.html.markdown</a>.</p>
 </div></blockquote>
@@ -298,10 +303,16 @@ construction to achieve fine-grained programmatic control over provider settings
 <dt id="pulumi_mysql.Provider.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Provider.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/index.html.markdown</a>.</p>
 </div></blockquote>
@@ -375,11 +386,17 @@ server.</p>
 <dt id="pulumi_mysql.Role.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.Role.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Role resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] name: The name of the role.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/role.html.markdown</a>.</p>
 </div></blockquote>
@@ -491,16 +508,22 @@ Care is required when using this resource, to avoid disclosing the password.</p>
 <dt id="pulumi_mysql.User.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_plugin=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">plaintext_password=None</em>, <em class="sig-param">tls_option=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.User.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing User resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] auth_plugin: Use an [authentication plugin][ref-auth-plugins] to authenticate the user instead of using password authentication.  Description of the fields allowed in the block below. Conflicts with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code>.<span class="raw-html-m2r"><br></span>
-:param pulumi.Input[str] host: The source host of the user. Defaults to “localhost”.
-:param pulumi.Input[str] password: Deprecated alias of <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code>, whose value is <em>stored as plaintext in state</em>. Prefer to use <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code> instead, which stores the password as an unsalted hash. Conflicts with <code class="docutils literal notranslate"><span class="pre">auth_plugin</span></code>.
-:param pulumi.Input[str] plaintext_password: The password for the user. This must be provided in plain text, so the data source for it must be secured. An <em>unsalted</em> hash of the provided password is stored in state. Conflicts with <code class="docutils literal notranslate"><span class="pre">auth_plugin</span></code>.
-:param pulumi.Input[str] tls_option: An TLS-Option for the <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">USER</span></code> or <code class="docutils literal notranslate"><span class="pre">ALTER</span> <span class="pre">USER</span></code> statement. The value is suffixed to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span></code>. A value of ‘SSL’ will generate a <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">USER</span> <span class="pre">...</span> <span class="pre">REQUIRE</span> <span class="pre">SSL</span></code> statement. See the <cite>MYSQL ``CREATE USER`</cite> documentation &lt;<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/create-user.html">https://dev.mysql.com/doc/refman/5.7/en/create-user.html</a>&gt;`_ for more. Ignored if MySQL version is under 5.7.0.
-:param pulumi.Input[str] user: The name of the user.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auth_plugin</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Use an [authentication plugin][ref-auth-plugins] to authenticate the user instead of using password authentication.  Description of the fields allowed in the block below. Conflicts with <code class="docutils literal notranslate"><span class="pre">password</span></code> and <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code>.<span class="raw-html-m2r"><br></span></p></li>
+<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source host of the user. Defaults to “localhost”.</p></li>
+<li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Deprecated alias of <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code>, whose value is <em>stored as plaintext in state</em>. Prefer to use <code class="docutils literal notranslate"><span class="pre">plaintext_password</span></code> instead, which stores the password as an unsalted hash. Conflicts with <code class="docutils literal notranslate"><span class="pre">auth_plugin</span></code>.</p></li>
+<li><p><strong>plaintext_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The password for the user. This must be provided in plain text, so the data source for it must be secured. An <em>unsalted</em> hash of the provided password is stored in state. Conflicts with <code class="docutils literal notranslate"><span class="pre">auth_plugin</span></code>.</p></li>
+<li><p><strong>tls_option</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An TLS-Option for the <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">USER</span></code> or <code class="docutils literal notranslate"><span class="pre">ALTER</span> <span class="pre">USER</span></code> statement. The value is suffixed to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span></code>. A value of ‘SSL’ will generate a <code class="docutils literal notranslate"><span class="pre">CREATE</span> <span class="pre">USER</span> <span class="pre">...</span> <span class="pre">REQUIRE</span> <span class="pre">SSL</span></code> statement. See the <cite>MYSQL ``CREATE USER`</cite> documentation &lt;<a class="reference external" href="https://dev.mysql.com/doc/refman/5.7/en/create-user.html">https://dev.mysql.com/doc/refman/5.7/en/create-user.html</a>&gt;`_ for more. Ignored if MySQL version is under 5.7.0.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the user.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user.html.markdown</a>.</p>
 </div></blockquote>
@@ -596,15 +619,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_mysql.UserPassword.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">encrypted_password=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">key_fingerprint=None</em>, <em class="sig-param">pgp_key=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_mysql.UserPassword.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing UserPassword resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] encrypted_password: The encrypted password, base64 encoded.
-:param pulumi.Input[str] host: The source host of the user. Defaults to <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.
-:param pulumi.Input[str] key_fingerprint: The fingerprint of the PGP key used to encrypt the password 
-:param pulumi.Input[str] pgp_key: Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.
-:param pulumi.Input[str] user: The IAM user to associate with this access key.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>encrypted_password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The encrypted password, base64 encoded.</p></li>
+<li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The source host of the user. Defaults to <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p></li>
+<li><p><strong>key_fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the PGP key used to encrypt the password</p></li>
+<li><p><strong>pgp_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Either a base-64 encoded PGP public key, or a keybase username in the form <code class="docutils literal notranslate"><span class="pre">keybase:some_person_that_exists</span></code>.</p></li>
+<li><p><strong>user</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM user to associate with this access key.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown">https://github.com/terraform-providers/terraform-provider-mysql/blob/master/website/docs/r/user_password.html.markdown</a>.</p>
 </div></blockquote>

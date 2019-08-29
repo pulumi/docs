@@ -67,13 +67,19 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_packet.BgpSession.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">default_route=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.BgpSession.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing BgpSession resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] address_family: <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code>
-:param pulumi.Input[bool] default_route: Boolean flag to set the default route policy. False by default.
-:param pulumi.Input[str] device_id: ID of device</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <code class="docutils literal notranslate"><span class="pre">ipv4</span></code> or <code class="docutils literal notranslate"><span class="pre">ipv6</span></code></p></li>
+<li><p><strong>default_route</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean flag to set the default route policy. False by default.</p></li>
+<li><p><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of device</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/bgp_session.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/bgp_session.html.markdown</a>.</p>
 </div></blockquote>
@@ -203,15 +209,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.Connect.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">port_speed=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">provider_payload=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">vxlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Connect.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Connect resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] facility: Facility where to create the VLAN
-:param pulumi.Input[str] name: Name for the Connect resource
-:param pulumi.Input[float] port_speed: Port speed in Mbps
-:param pulumi.Input[str] project_id: ID of parent project
-:param pulumi.Input[str] provider_id: ID of Connect Provider. Provider IDs are</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to create the VLAN</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name for the Connect resource</p></li>
+<li><p><strong>port_speed</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Port speed in Mbps</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of parent project</p></li>
+<li><p><strong>provider_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of Connect Provider. Provider IDs are</p></li>
+</ul>
+</dd>
+</dl>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Azure</span> <span class="n">ExpressRoute</span> <span class="o">-</span> <span class="s2">&quot;ed5de8e0-77a9-4d3b-9de0-65281d3aa831&quot;</span>
 </pre></div>
 </div>
@@ -410,7 +422,15 @@ doc.</p>
 <li><p>IPv6 at <code class="docutils literal notranslate"><span class="pre">packet_device.name.network.1</span></code></p></li>
 <li><p>Private IPv4 at <code class="docutils literal notranslate"><span class="pre">packet_device.name.network.2</span></code>
 Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
-The fields of the network attributes are:</p></li>
+The fields of the network attributes are:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - IPv4 or IPv6 address string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - bit length of the network mask of the address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - IP version - “4” or “6”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - address of router</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - whether the address is routable from the Internet</p></li>
+</ul>
+</li>
 </ul>
 </dd></dl>
 
@@ -430,6 +450,17 @@ The fields of the network attributes are:</p></li>
 <dt id="pulumi_packet.Device.ports">
 <code class="sig-name descname">ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Device.ports" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ports assigned to the device</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bonded</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether this port is part of a bond in bonded network setup</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code>- The ID of the project the device belongs to</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - ID of the port</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mac</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - MAC address assigned to the port</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Name of the port (e.g. <code class="docutils literal notranslate"><span class="pre">eth0</span></code>, or <code class="docutils literal notranslate"><span class="pre">bond0</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of the port (e.g. <code class="docutils literal notranslate"><span class="pre">NetworkPort</span></code> or <code class="docutils literal notranslate"><span class="pre">NetworkBondPort</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -504,20 +535,18 @@ information is in the
 <dt id="pulumi_packet.Device.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deployed_facility=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facilities=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">ip_address_types=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">project_ssh_key_ids=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">wait_for_reservation_deprovision=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Device.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Device resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] access_private_ipv4: The ipv4 private IP assigned to the device
-:param pulumi.Input[str] access_public_ipv4: The ipv4 maintenance IP assigned to the device
-:param pulumi.Input[str] access_public_ipv6: The ipv6 maintenance IP assigned to the device
-:param pulumi.Input[bool] always_pxe: If true, a device with OS <code class="docutils literal notranslate"><span class="pre">custom_ipxe</span></code> will</p>
-<blockquote>
-<div><p>continue to boot via iPXE on reboots.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_private_ipv4</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ipv4 private IP assigned to the device</p></li>
+<li><p><strong>access_public_ipv4</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ipv4 maintenance IP assigned to the device</p></li>
+<li><p><strong>access_public_ipv6</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ipv6 maintenance IP assigned to the device</p></li>
+<li><p><strong>always_pxe</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If true, a device with OS <code class="docutils literal notranslate"><span class="pre">custom_ipxe</span></code> will
+continue to boot via iPXE on reboots.</p></li>
 <li><p><strong>billing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – monthly or hourly</p></li>
 <li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the device was created</p></li>
 <li><p><strong>deployed_facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The facility where the device is deployed.</p></li>
@@ -570,6 +599,26 @@ information is in the
 </ul>
 </dd>
 </dl>
+<p>The <strong>networks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - IPv4 or IPv6 address string</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cidr</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - bit length of the network mask of the address</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">family</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - IP version - “4” or “6”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gateway</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - address of router</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - whether the address is routable from the Internet</p></li>
+</ul>
+<p>The <strong>ports</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bonded</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether this port is part of a bond in bonded network setup</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">project_id</span></code>- The ID of the project the device belongs to</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - ID of the port</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mac</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - MAC address assigned to the port</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Name of the port (e.g. <code class="docutils literal notranslate"><span class="pre">eth0</span></code>, or <code class="docutils literal notranslate"><span class="pre">bond0</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of the port (e.g. <code class="docutils literal notranslate"><span class="pre">NetworkPort</span></code> or <code class="docutils literal notranslate"><span class="pre">NetworkBondPort</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/device.html.markdown</a>.</p>
 </div></blockquote>
@@ -744,19 +793,17 @@ project and facility as the device</p>
 <dt id="pulumi_packet.IpAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">cidr_notation=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">global_=None</em>, <em class="sig-param">manageable=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">netmask=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">public=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.IpAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IpAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] address_family: Address family as integer (4 or 6)
-:param pulumi.Input[float] cidr: length of CIDR prefix of the subnet as integer
-:param pulumi.Input[str] cidr_notation: CIDR notation of subnet from block reserved in the same</p>
-<blockquote>
-<div><p>project and facility as the device</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Address family as integer (4 or 6)</p></li>
+<li><p><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – length of CIDR prefix of the subnet as integer</p></li>
+<li><p><strong>cidr_notation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CIDR notation of subnet from block reserved in the same
+project and facility as the device</p></li>
 <li><p><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of device to which to assign the subnet</p></li>
 <li><p><strong>gateway</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – IP address of gateway for the subnet</p></li>
 <li><p><strong>netmask</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Subnet mask in decimal notation, e.g. “255.255.255.0”</p></li>
@@ -862,15 +909,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.Organization.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">logo=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">twitter=None</em>, <em class="sig-param">updated=None</em>, <em class="sig-param">website=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Organization.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Organization resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: Description string.
-:param pulumi.Input[str] logo: Logo URL.
-:param pulumi.Input[str] name: The name of the Organization.
-:param pulumi.Input[str] twitter: Twitter handle.
-:param pulumi.Input[str] website: Website link.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string.</p></li>
+<li><p><strong>logo</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Logo URL.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Organization.</p></li>
+<li><p><strong>twitter</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Twitter handle.</p></li>
+<li><p><strong>website</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Website link.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/organization.html.markdown</a>.</p>
 </div></blockquote>
@@ -980,15 +1033,21 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.PortVlanAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">force_bond=None</em>, <em class="sig-param">native=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">port_name=None</em>, <em class="sig-param">vlan_id=None</em>, <em class="sig-param">vlan_vnid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.PortVlanAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing PortVlanAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] device_id: ID of device to be assigned to the VLAN
-:param pulumi.Input[bool] force_bond: Add port back to the bond when this resource is removed. Default is false.
-:param pulumi.Input[bool] native: Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above. 
-:param pulumi.Input[str] port_name: Name of network port to be assigned to the VLAN
-:param pulumi.Input[float] vlan_vnid: VXLAN Network Identifier, integer</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of device to be assigned to the VLAN</p></li>
+<li><p><strong>force_bond</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Add port back to the bond when this resource is removed. Default is false.</p></li>
+<li><p><strong>native</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Mark this VLAN a native VLAN on the port. This can be used only if this assignment assigns second or further VLAN to the port. To ensure that this attachment is not first on a port, you can use <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> pointing to another packet_port_vlan_attachment, just like in the layer2-individual example above.</p></li>
+<li><p><strong>port_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of network port to be assigned to the VLAN</p></li>
+<li><p><strong>vlan_vnid</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – VXLAN Network Identifier, integer</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/port_vlan_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/port_vlan_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -1050,6 +1109,14 @@ in your projects.</p>
 </ul>
 </dd>
 </dl>
+<p>The <strong>bgp_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of route filters allowed per server</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - status of BGP configuration in the project</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown</a>.</p>
 </div></blockquote>
@@ -1063,6 +1130,13 @@ in your projects.</p>
 <dt id="pulumi_packet.Project.bgp_config">
 <code class="sig-name descname">bgp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Project.bgp_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The maximum number of route filters allowed per server</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - status of BGP configuration in the project</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1099,17 +1173,33 @@ in your projects.</p>
 <dt id="pulumi_packet.Project.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_transfer=None</em>, <em class="sig-param">bgp_config=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">organization_id=None</em>, <em class="sig-param">payment_method_id=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Project.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Project resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] backend_transfer: Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false
-:param pulumi.Input[dict] bgp_config: Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.
-:param pulumi.Input[str] created: The timestamp for when the project was created
-:param pulumi.Input[str] name: The name of the project
-:param pulumi.Input[str] organization_id: The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.
-:param pulumi.Input[str] payment_method_id: The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).
-:param pulumi.Input[str] updated: The timestamp for the last time the project was updated</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend_transfer</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – <p>Enable or disable <a class="reference external" href="https://support.packet.com/kb/articles/backend-transfer">Backend Transfer</a>, default is false</p>
+</p></li>
+<li><p><strong>bgp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Optional BGP settings. Refer to <a class="reference external" href="https://support.packet.com/kb/articles/bgp">Packet guide for BGP</a>.</p>
+</p></li>
+<li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the project was created</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the project</p></li>
+<li><p><strong>organization_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of organization under which you want to create the project. If you leave it out, the project will be create under your the default organization of your account.</p></li>
+<li><p><strong>payment_method_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The UUID of payment method for this project. The payment method and the project need to belong to the same organization (passed with <code class="docutils literal notranslate"><span class="pre">organization_id</span></code>, or default).</p></li>
+<li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the project was updated</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>bgp_config</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">asn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deploymentType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxPrefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The maximum number of route filters allowed per server</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">md5</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - status of BGP configuration in the project</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project.html.markdown</a>.</p>
 </div></blockquote>
@@ -1212,16 +1302,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.ProjectSshKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ProjectSshKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ProjectSshKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] created: The timestamp for when the SSH key was created
-:param pulumi.Input[str] fingerprint: The fingerprint of the SSH key
-:param pulumi.Input[str] name: The name of the SSH key for identification
-:param pulumi.Input[str] project_id: The ID of parent project
-:param pulumi.Input[str] public_key: The public key. If this is a file, it can be read using the file interpolation function
-:param pulumi.Input[str] updated: The timestamp for the last time the SSH key was updated</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the SSH key was created</p></li>
+<li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the SSH key</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSH key for identification</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of parent project</p></li>
+<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key. If this is a file, it can be read using the file interpolation function</p></li>
+<li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the SSH key was updated</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/project_ssh_key.html.markdown</a>.</p>
 </div></blockquote>
@@ -1287,10 +1383,16 @@ construction to achieve fine-grained programmatic control over provider settings
 <dt id="pulumi_packet.Provider.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Provider.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Provider resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/index.html.markdown</a>.</p>
 </div></blockquote>
@@ -1430,15 +1532,21 @@ The IPv6 and private IPv4 blocks can’t be created, only imported. With this re
 <dt id="pulumi_packet.ReservedIpBlock.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">address_family=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">cidr_notation=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">gateway=None</em>, <em class="sig-param">global_=None</em>, <em class="sig-param">manageable=None</em>, <em class="sig-param">management=None</em>, <em class="sig-param">netmask=None</em>, <em class="sig-param">network=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.ReservedIpBlock.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ReservedIpBlock resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] address_family: Address family as integer (4 or 6)
-:param pulumi.Input[float] cidr: length of CIDR prefix of the block as integer
-:param pulumi.Input[str] cidr_notation: Address and mask in CIDR notation, e.g. “147.229.15.30/31”
-:param pulumi.Input[str] facility: Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global<em>ipv4
-:param pulumi.Input[bool] global</em>: boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address_family</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Address family as integer (4 or 6)</p></li>
+<li><p><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – length of CIDR prefix of the block as integer</p></li>
+<li><p><strong>cidr_notation</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Address and mask in CIDR notation, e.g. “147.229.15.30/31”</p></li>
+<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to allocate the public IP address block, makes sense only for type==public_ipv4, must be empty for type==global<a href="#id17"><span class="problematic" id="id18">*</span></a>ipv4</p></li>
+</ul>
+</dd>
+</dl>
+<p>:param pulumi.Input[bool] global*: boolean flag whether addresses from a block are global (i.e. can be assigned in any facility)
 :param pulumi.Input[str] netmask: Mask in decimal notation, e.g. “255.255.255.0”
 :param pulumi.Input[str] network: Network IP address portion of the block specification
 :param pulumi.Input[str] project_id: The packet project ID where to allocate the address block
@@ -1508,6 +1616,21 @@ manage spot market requests on your account. <a class="reference external" href=
 </ul>
 </dd>
 </dl>
+<p>The <strong>instance_parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">always_pxe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">billing_cycle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">features</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locked</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operating_system</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectSshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">termintationTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userSshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userdata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown</a>.</p>
 </div></blockquote>
@@ -1533,6 +1656,20 @@ manage spot market requests on your account. <a class="reference external" href=
 <dt id="pulumi_packet.SpotMarketRequest.instance_parameters">
 <code class="sig-name descname">instance_parameters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.SpotMarketRequest.instance_parameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Device parameters. See device resource for details</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">always_pxe</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">billing_cycle</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">features</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locked</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operating_system</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plan</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectSshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">termintationTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userSshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userdata</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1557,17 +1694,38 @@ manage spot market requests on your account. <a class="reference external" href=
 <dt id="pulumi_packet.SpotMarketRequest.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">devices_max=None</em>, <em class="sig-param">devices_min=None</em>, <em class="sig-param">facilities=None</em>, <em class="sig-param">instance_parameters=None</em>, <em class="sig-param">max_bid_price=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">wait_for_devices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SpotMarketRequest.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpotMarketRequest resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[float] devices_max: Maximum number devices to be created
-:param pulumi.Input[float] devices_min: Miniumum number devices to be created
-:param pulumi.Input[list] facilities: Facility IDs where devices should be created
-:param pulumi.Input[dict] instance_parameters: Device parameters. See device resource for details
-:param pulumi.Input[float] max_bid_price: Maximum price user is willing to pay per hour per device
-:param pulumi.Input[str] project_id: Project ID
-:param pulumi.Input[bool] wait_for_devices: On resource creation - wait until all desired devices are active, on resource destruction - wait until devices are removed</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>devices_max</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum number devices to be created</p></li>
+<li><p><strong>devices_min</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Miniumum number devices to be created</p></li>
+<li><p><strong>facilities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Facility IDs where devices should be created</p></li>
+<li><p><strong>instance_parameters</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Device parameters. See device resource for details</p></li>
+<li><p><strong>max_bid_price</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Maximum price user is willing to pay per hour per device</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Project ID</p></li>
+<li><p><strong>wait_for_devices</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – On resource creation - wait until all desired devices are active, on resource destruction - wait until devices are removed</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>instance_parameters</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">always_pxe</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">billing_cycle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">description</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">features</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">locked</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">operating_system</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">plan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">projectSshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">termintationTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userSshKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">userdata</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/spot_market_request.html.markdown</a>.</p>
 </div></blockquote>
@@ -1665,20 +1823,20 @@ can be read using the file interpolation function</p>
 <dt id="pulumi_packet.SshKey.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">fingerprint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.SshKey.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SshKey resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] created: The timestamp for when the SSH key was created
-:param pulumi.Input[str] fingerprint: The fingerprint of the SSH key
-:param pulumi.Input[str] name: The name of the SSH key for identification
-:param pulumi.Input[str] public_key: The public key. If this is a file, it</p>
-<blockquote>
-<div><p>can be read using the file interpolation function</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the SSH key was updated</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the SSH key was created</p></li>
+<li><p><strong>fingerprint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The fingerprint of the SSH key</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the SSH key for identification</p></li>
+<li><p><strong>public_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The public key. If this is a file, it
+can be read using the file interpolation function</p></li>
+<li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the SSH key was updated</p></li>
+</ul>
 </dd>
 </dl>
 <blockquote>
@@ -1775,14 +1933,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.Vlan.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">vxlan=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Vlan.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Vlan resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: Description string
-:param pulumi.Input[str] facility: Facility where to create the VLAN
-:param pulumi.Input[str] project_id: ID of parent project
-:param pulumi.Input[float] vxlan: VXLAN segment ID</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description string</p></li>
+<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Facility where to create the VLAN</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of parent project</p></li>
+<li><p><strong>vxlan</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – VXLAN segment ID</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/vlan.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/vlan.html.markdown</a>.</p>
 </div></blockquote>
@@ -1846,6 +2010,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </dd>
 </dl>
+<p>The <strong>snapshot_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshotCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshotFrequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown</a>.</p>
 </div></blockquote>
@@ -1853,6 +2022,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.Volume.attachments">
 <code class="sig-name descname">attachments</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Volume.attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of attachments, each with it’s own <code class="docutils literal notranslate"><span class="pre">href</span></code> attribute</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">href</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1913,6 +2085,10 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.Volume.snapshot_policies">
 <code class="sig-name descname">snapshot_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.Volume.snapshot_policies" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optional list of snapshot policies</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshotCount</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshotFrequency</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1931,23 +2107,38 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.Volume.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attachments=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_policies=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">updated=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.Volume.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Volume resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[list] attachments: A list of attachments, each with it’s own <code class="docutils literal notranslate"><span class="pre">href</span></code> attribute
-:param pulumi.Input[str] billing_cycle: The billing cycle, defaults to “hourly”
-:param pulumi.Input[str] created: The timestamp for when the volume was created
-:param pulumi.Input[str] description: Optional description for the volume
-:param pulumi.Input[str] facility: The facility to create the volume in
-:param pulumi.Input[bool] locked: Lock or unlock the volume
-:param pulumi.Input[str] name: The name of the volume
-:param pulumi.Input[str] plan: The service plan slug of the volume
-:param pulumi.Input[str] project_id: The packet project ID to deploy the volume in
-:param pulumi.Input[float] size: The size in GB to make the volume
-:param pulumi.Input[list] snapshot_policies: Optional list of snapshot policies
-:param pulumi.Input[str] state: The state of the volume
-:param pulumi.Input[str] updated: The timestamp for the last time the volume was updated</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>attachments</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of attachments, each with it’s own <code class="docutils literal notranslate"><span class="pre">href</span></code> attribute</p></li>
+<li><p><strong>billing_cycle</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The billing cycle, defaults to “hourly”</p></li>
+<li><p><strong>created</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for when the volume was created</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Optional description for the volume</p></li>
+<li><p><strong>facility</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The facility to create the volume in</p></li>
+<li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Lock or unlock the volume</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the volume</p></li>
+<li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service plan slug of the volume</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The packet project ID to deploy the volume in</p></li>
+<li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size in GB to make the volume</p></li>
+<li><p><strong>snapshot_policies</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optional list of snapshot policies</p></li>
+<li><p><strong>state</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The state of the volume</p></li>
+<li><p><strong>updated</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp for the last time the volume was updated</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>attachments</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">href</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+<p>The <strong>snapshot_policies</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshotCount</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshotFrequency</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume.html.markdown</a>.</p>
 </div></blockquote>
@@ -2024,12 +2215,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.VolumeAttachment.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">device_id=None</em>, <em class="sig-param">volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.VolumeAttachment.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing VolumeAttachment resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] device_id: The ID of the device to which the volume should be attached
-:param pulumi.Input[str] volume_id: The ID of the volume to attach</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>device_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the device to which the volume should be attached</p></li>
+<li><p><strong>volume_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the volume to attach</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/r/volume_attachment.html.markdown</a>.</p>
 </div></blockquote>
@@ -2077,6 +2274,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_packet.get_operating_system">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_operating_system</code><span class="sig-paren">(</span><em class="sig-param">distro=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">provisionable_on=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_operating_system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get Packet Operating System image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distro</strong> (<em>str</em>) – Name of the OS distribution.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name or part of the name of the distribution. Case insensitive.</p></li>
+<li><p><strong>provisionable_on</strong> (<em>str</em>) – Plan name.</p></li>
+<li><p><strong>version</strong> (<em>str</em>) – Version of the distribution</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/operating_system.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/operating_system.html.markdown</a>.</p>
 </div></blockquote>
@@ -2087,6 +2294,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_precreated_ip_block</code><span class="sig-paren">(</span><em class="sig-param">address_family=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">global_=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_precreated_ip_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get CIDR expression for precreated IPv6 and IPv4 blocks in Packet.
 You can then use the cidrsubnet TF builtin function to derive subnets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address*family</strong> (<em>float</em>) – <p>4 or 6, depending on which block you are looking for.</p>
+</p></li>
+<li><p><strong>facility</strong> (<em>str</em>) – Facility of the searched block. (Optional) Only allowed for non-global blocks.</p></li>
+</ul>
+</dd>
+</dl>
+<p>:param bool global*: Whether to look for global block. Default is false for backward compatibility.
+:param str project_id: ID of the project where the searched block should be.
+:param bool public: Whether to look for public or private block.</p>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/precreated_ip_block.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/precreated_ip_block.html.markdown</a>.</p>
 </div></blockquote>
@@ -2096,6 +2315,14 @@ You can then use the cidrsubnet TF builtin function to derive subnets.</p>
 <dt id="pulumi_packet.get_spot_market_price">
 <code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_spot_market_price</code><span class="sig-paren">(</span><em class="sig-param">facility=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_spot_market_price" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get Packet Spot Market Price.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>facility</strong> (<em>str</em>) – Name of the facility.</p></li>
+<li><p><strong>plan</strong> (<em>str</em>) – Name of the plan.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/spot_market_price.html.markdown</a>.</p>
 </div></blockquote>
