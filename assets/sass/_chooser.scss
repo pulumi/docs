@@ -113,11 +113,11 @@ $tab-font-size: 14px !default;
     border-bottom: 2px solid $brand-purple;
 }
 
-.mdl-tabs__tab.langtab {
+.mdl-tabs__tab.language-tab, .mdl-tabs__tab.os-tab {
     cursor: pointer;
 }
 
-.langtab-tabs {
+.language-tab-tabs {
     // Remove the top margin from code snippets under lang chooser tabs so the tabs sit directly on top.
     ~ .highlight > .chroma {
         margin-top: 0;
@@ -129,6 +129,9 @@ $tab-font-size: 14px !default;
 .language-prologue-javascript + *,
 .language-prologue-typescript + *,
 .language-prologue-python + *,
-.language-prologue-go + * {
+.language-prologue-go + *,
+.os-prologue-linux + *,
+.os-prologue-macos + *,
+.os-prologue-windows + * {
     display: none;
 }

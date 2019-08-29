@@ -20,77 +20,11 @@ This page contains detailed instructions for [installing Pulumi](#install-pulumi
 
 ## Install Pulumi
 
-<script>
-    var oses = [ "unknown", "linux", "macos", "windows" ];
+{{< oschoose >}}
 
-    function showInstall(os) {
-        // Show the div and select it in the dropdown.
-        var e = document.getElementById(os + "_installation");
-        if (e) {
-            e.style.display = "block";
-            var s = document.getElementById("os");
-            if (s) {
-                for (var i = 0; i < s.options.length; i++) {
-                    if (s.options[i].value === os) {
-                        s.selectedIndex = i;
-                        break;
-                     }
-                }
-            }
-
-            // If this is a real installation step, show the post-install markup too.
-            var post = document.getElementById("installation_post");
-            if (post) {
-                post.style.display = os === oses[0] ? "none" : "block";
-            }
-        }
-    }
-
-    function hideInstall(os) {
-        // Hide the installation div for this OS.
-        var e = document.getElementById(os + "_installation");
-        if (e) e.style.display = "none";
-    }
-
-    function selectOs(os) {
-        // Select this OS by showing its div and selecting it in the dropdown.
-        var found;
-        for (var i = 0; i < oses.length; i++) {
-            if (os === oses[i]) {
-                showInstall(oses[i]);
-                found = true;
-            } else {
-                hideInstall(oses[i]);
-            }
-        }
-        if (!found) {
-            showInstall(oses[0]);
-        }
-    }
-
-    function selectCurrentOs(os) {
-        var e = document.getElementById("os");
-        if (e) {
-            selectOs(e.value);
-        }
-    }
-</script>
-
-<label for="os">Operating system:</label>
-<select id="os" onchange="selectCurrentOs()">
-    <option value="unknown">(choose one)</option>
-    <option value="linux">Linux</option>
-    <option value="macos">macOS</option>
-    <option value="windows">Windows</option>
-</select>
-
-<div id="unknown_installation">
-    <p>Please select your operating system.</p>
-</div>
-
-<div id="macos_installation" class="mt-8">
+<div class="os-prologue-macos"></div>
+<div class="mt-8">
 {{% md %}}
-
 
 ### Homebrew
 
@@ -135,7 +69,8 @@ If you do not wish to use the previous options, you can install Pulumi manually.
 {{% /md %}}
 </div>
 
-<div id="linux_installation" class="mt-8">
+<div class="os-prologue-linux"></div>
+<div class="mt-8">
 {{% md %}}
 
 ### Installation Script
@@ -161,7 +96,8 @@ Alternatively, you can install Pulumi manually. We provide a prebuilt binary for
 {{% /md %}}
 </div>
 
-<div id="windows_installation" class="mt-8">
+<div class="os-prologue-windows"></div>
+<div class="mt-8">
 {{% md %}}
 
 ### Installation Script
@@ -188,20 +124,6 @@ Alternatively, you can install Pulumi manually.
 {{% /md %}}
 </div>
 
-<script>
-    if (navigator.appVersion.indexOf("Win") !== -1) {
-        selectOs("windows");
-    } else if (navigator.appVersion.indexOf("Mac") !== -1) {
-        selectOs("macos");
-    } else if (navigator.appVersion.indexOf("Linux") !== -1) {
-        selectOs("linux");
-    } else {
-        selectOs("unknown");
-    }
-</script>
-
-<div id="installation_post" class="mt-8">
-{{% md %}}
 ## Verify your Installation
 
 After installing Pulumi, verify everything is in working order by running the `pulumi` CLI:
@@ -232,5 +154,3 @@ or visit https://pulumi.com/docs/install/ for manual instructions and release no
 
 To uninstall Pulumi, remove the `.pulumi` folder from your home directory. If you installed Pulumi manually, you should
 also remove the `pulumi` folder that was created.
-{{% /md %}}
-</div>
