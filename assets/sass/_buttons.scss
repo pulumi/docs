@@ -8,7 +8,7 @@
     @apply bg-blue-600 border-2 border-blue-600 font-bold text-white;
 
     &:hover {
-        @apply bg-blue-500 text-white;
+        @apply bg-blue-500 border-blue-500 text-white;
     }
 
     &:active {
