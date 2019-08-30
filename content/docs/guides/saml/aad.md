@@ -33,7 +33,7 @@ This guide explains how to configure your Azure Active Directory (Azure AD) as a
     ![New application](/images/docs/reference/service/saml-aad/new-application.png)
 
 1. Select **Non-gallery application** tile and in the **Add your own application** panel, enter
-   _Pulumi Cloud Console_ as the application name then click **Add**.
+   _Pulumi Console_ as the application name then click **Add**.
 
     ![Non-gallery application](/images/docs/reference/service/saml-aad/non-gallery-application.png)
 
@@ -77,10 +77,10 @@ This guide explains how to configure your Azure Active Directory (Azure AD) as a
 > **Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between Email or Persistent.
 
 Now that the Azure AD-side of the SAML SSO configuration is complete, you will need
-to configure the Pulumi Cloud Console to receive SAML SSO requests from your
+to configure the Pulumi Console to receive SAML SSO requests from your
 Azure AD.
 
-> **Note:** Be sure to assign users and groups to use your new _Pulumi Cloud Console_ SAML application.
+> **Note:** Be sure to assign users and groups to use your new _Pulumi Console_ SAML application.
 > That is how you can control membership access to your Pulumi organization. See the
 > [Azure AD documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications#assign-users-and-groups-to-your-saml-application)
 > for more information.
