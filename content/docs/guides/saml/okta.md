@@ -29,8 +29,9 @@ give it a name---Pulumi Console for example---and an icon.
 
 ![Configuring a SAML Integration](/images/docs/reference/service/saml-okta/create-saml-integration.png)
 
-The next step is where you configure the SAML application's settings. The values you provide will
-depend on the name of your Pulumi organization. For example, `acmecorp`.
+The next step is to configure the SAML application's settings.
+
+{{< saml-warning >}}
 
 | General Setting | Value |
 | --------------- | ----- |
@@ -40,7 +41,7 @@ depend on the name of your Pulumi organization. For example, `acmecorp`.
 | Name ID format | EmailAddress or Persistent |
 | App username | Email |
 
-**Important:** Do not change the value of the Name ID Format once your users have started using Pulumi---not even switching its value between `EmailAddress` or `Persistent`.
+> **Important:** Do not change the value of the Name ID Format once your users have started using Pulumi---not even switching its value between `EmailAddress` or `Persistent`.
 
 In addition, you can optionally provide two attribute statements so that users
 who sign in with their Okta credentials will have proper user names.

@@ -48,6 +48,7 @@ Pulumi organization is `acmecorp`, the values would be:
     * Entity ID: `https://api.pulumi.com/login/acmecorp/sso/saml/metadata`
     * Start URL: `https://api.pulumi.com/login/acmecorp/sso`
     * Name ID Format: `EMAIL` or `PERSISTENT`
+{{< saml-warning >}}
 
     ![Step 4: Provide ACS and metadata URLs](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-4.png)
 

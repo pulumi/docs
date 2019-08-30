@@ -47,9 +47,7 @@ This guide explains how to configure your Azure Active Directory (Azure AD) as a
     ![SAML configuration](/images/docs/reference/service/saml-aad/saml-configuration.png)
 
 ### Enter Pulumi configuration into your Azure AD application
-
-The values you will want to use are dependent upon your organization's name on Pulumi. Be sure
-to replace `acmecorp` with whatever your specific Pulumi organization's name is.
+{{< saml-warning >}}
 
 | SAML Setting | Value |
 | --------------- | ----- |
@@ -57,8 +55,6 @@ to replace `acmecorp` with whatever your specific Pulumi organization's name is.
 | Reply URL | `https://api.pulumi.com/login/<acmecorp>/sso/saml/acs` |
 | Relay State | `https://api.pulumi.com/login/<acmecorp>/sso` |
 
-
-<p><!-- space between table and image --></p>
 
 ![Edited SAML configuration](/images/docs/reference/service/saml-aad/edited-saml-configuration.png)
 
