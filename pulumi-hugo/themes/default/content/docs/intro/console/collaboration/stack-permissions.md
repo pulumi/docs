@@ -47,4 +47,4 @@ from these sources are merged together, granting the highest permission availabl
 
 ## Next Steps
 
-- [Project and Stack Management]({{ relref "project-and-stack-management" >}})
+- [Project and Stack Management]({{< relref "project-and-stack-management" >}})
