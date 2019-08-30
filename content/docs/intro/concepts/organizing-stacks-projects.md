@@ -129,7 +129,7 @@ const k8s = require("@pulumi/kubernetes");
 const pulumi = require("@pulumi/pulumi");
 const env = pulumi.getStack();
 const infra = new pulumi.StackReference(`acmecorp/infra/${env}`);
-const provider = new k8s.Provider("k8s", { kubeConfig: infra.getOutput("kubeConfig") });
+const provider = new k8s.Provider("k8s", { kubeconfig: infra.getOutput("kubeConfig") });
 const service = new k8s.core.v1.Service(..., { provider: provider });
 ```
 
@@ -138,7 +138,7 @@ import * as k8s from "@pulumi/kubernetes";
 import * as pulumi from "@pulumi/pulumi";
 const env = pulumi.getStack();
 const infra = new pulumi.StackReference(`acmecorp/infra/${env}`);
-const provider = new k8s.Provider("k8s", { kubeConfig: infra.getOutput("kubeConfig") });
+const provider = new k8s.Provider("k8s", { kubeconfig: infra.getOutput("kubeConfig") });
 const service = new k8s.core.v1.Service(..., { provider: provider });
 ```
 
