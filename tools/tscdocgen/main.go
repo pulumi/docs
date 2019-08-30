@@ -322,7 +322,7 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 	}
 	if len(node.Signatures) > 20 {
 		// To avoid places where we have 1000+ overloads from becoming unreadable, limit the lists
-		// of overloads to 20, and show a note that there are more aviailable instead of rendering
+		// of overloads to 20, and show a note that there are more available instead of rendering
 		// them all.
 		node.Signatures = append(node.Signatures[:20], &typeDocNode{
 			Label: fmt.Sprintf("+ %d additional overloads", len(node.Signatures)-20),
