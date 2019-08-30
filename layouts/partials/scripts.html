@@ -9,7 +9,7 @@
 {{ $s := slice (resources.Get "js/main.js") }}
 {{ $s = $s | append (resources.Get "js/nav.js") }}
 {{ $s = $s | append (resources.Get "js/carousel.js") }}
-{{ $s = $s | append (resources.Get "js/langchoose.js") }}
+{{ $s = $s | append (resources.Get "js/chooser.js") }}
 {{ $s = $s | append (resources.Get "js/noselect.js") }}
 
 <!-- We use the `clipboard-polyfill` npm package. If it hasn't been installed, show a friendlier error message. -->

@@ -1,11 +1,31 @@
+{{/*
+This table is effectively the same as oschoose.md, however it
+needs to be embedded inline because shortcodes cannot reference
+other shortcodes.
+*/}}
+<div class="mdl-tabs os-tab-tabs">
+    <div class="mdl-tabs__tab-dir os-tab-tabstrip">
+        <a class="mdl-tabs__tab os-tab is-active">macOS</a>
+        <a class="mdl-tabs__tab os-tab">Linux</a>
+        <a class="mdl-tabs__tab os-tab">Windows</a>
+    </div>
+</div>
+
+{{/*
+.mdl-tabs__tab uses floats, so we need to use clearfix to avoid
+wrapping/indenting the subsequent element containing the code snippet.
+*/}}
+<div class="clearfix"></div>
+
+<div class="os-prologue-macos"></div>
 <div class="install_macos">
     <p>Install Pulumi on macOS through <a href="https://brew.sh/" target="_blank">Homebrew</a>:</p>
-
     <div class="highlight">
         <pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install pulumi</code></pre>
     </div>
 </div>
 
+<div class="os-prologue-linux"></div>
 <div class="install_linux">
     <p>Install Pulumi on Linux by running the installation script:</p>
     <div class="highlight">
@@ -13,6 +33,7 @@
     </div>
 </div>
 
+<div class="os-prologue-windows"></div>
 <div class="install_windows">
     <p>Install Pulumi on Windows by running the installation script from a <code>cmd.exe</code> window:</p>
     <div class="highlight">
@@ -24,63 +45,3 @@
     <i>For manual installation instructions, other platforms, or troubleshooting, see
     <a href="{{ relref . "/docs/get-started/install" }}" target="_blank">Download and Install</a>.</i>
 </p>
-
-<p class="pt-4">Verify your installation:</p>
-<div class="highlight">
-    <pre class="chroma"><code class="language-bash" data-lang="bash">$ pulumi version
-v{{- readFile "/static/latest-version" -}}</code></pre>
-</div>
-
-<script>
-    function showHelper(id, value) {
-        var e = document.getElementsByClassName(id + "_" + value)
-        for (var i = 0; i < e.length; i++) {
-            e[i].style.display = "block";
-        }
-
-        var s = document.getElementById(id);
-        if (s) {
-            for (var i = 0; i < s.options.length; i++) {
-                if (s.options[i].value === value) {
-                    s.selectedIndex = i;
-                    break;
-                }
-            }
-        }
-    }
-
-    function hideHelper(id, value) {
-        var e = document.getElementsByClassName(id + "_" + value)
-        for (var i = 0; i < e.length; i++) {
-            e[i].style.display = "none";
-        }
-    }
-
-    function selectHelper(id, values, value) {
-        var found;
-        for (var i = 0; i < values.length; i++) {
-            if (value === values[i]) {
-                showHelper(id, values[i]);
-                found = true;
-            } else {
-                hideHelper(id, values[i]);
-            }
-        }
-        if (!found) {
-            showHelper(id, values[0]);
-        }
-    }
-
-    var oses = ["linux", "macos", "windows"];
-    if (navigator.appVersion.indexOf("Win") !== -1) {
-        selectHelper("install", oses, "windows");
-    } else if (navigator.appVersion.indexOf("Mac") !== -1) {
-        selectHelper("install", oses, "macos");
-    } else {
-        // Otherwise, just show the command for Linux.
-        selectHelper("install", oses, "linux");
-    }
-
-    var languages = ["typescript", "javascript", "python"];
-    selectHelper("language", languages, "typescript");
-</script>

@@ -1,10 +1,10 @@
-<div class="mdl-tabs langtab-tabs">
-    <div class="mdl-tabs__tab-dir langtab-tabstrip">
-        <a class="mdl-tabs__tab langtab is-active">TypeScript</a>
-        <a class="mdl-tabs__tab langtab">JavaScript</a>
+<div class="mdl-tabs language-tab-tabs">
+    <div class="mdl-tabs__tab-dir language-tab-tabstrip">
+        <a class="mdl-tabs__tab language-tab is-active">TypeScript</a>
+        <a class="mdl-tabs__tab language-tab">JavaScript</a>
         {{ if not (eq (.Get 0) "nodeonly") }}
-        <a class="mdl-tabs__tab langtab">Python</a>
-        {{ if not (eq (.Get 0) "nogo") }}<a class="mdl-tabs__tab langtab">Go</a>{{ end }}
+        <a class="mdl-tabs__tab language-tab">Python</a>
+        {{ if not (eq (.Get 0) "nogo") }}<a class="mdl-tabs__tab language-tab">Go</a>{{ end }}
         {{ end }}
     </div>
 </div>
