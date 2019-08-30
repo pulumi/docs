@@ -9,7 +9,11 @@ aliases:
 This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for use with
 the Pulumi Console.
 
-> **NOTE:** The screen shots below are using the Okta _Classic UI_. You can switch to it by clicking the gear
+## Prerequisites
+
+- [Single Sign-On]({{< relref "sso" >}})
+
+> **Note:** The screen shots below are using the Okta _Classic UI_. You can switch to it by clicking the gear
 > icon in the top right of the screen.
 
 ## Creating the Okta Application

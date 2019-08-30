@@ -9,6 +9,10 @@ aliases:
 This guide explains how to configure your G Suite service as a SAML SSO identity provider
 (IDP) for use with the Pulumi Console.
 
+## Prerequisites
+
+- [Single Sign-On]({{< relref "sso" >}})
+
 ## Creating the SAML Application
 
 1. In the [administrator console](https://admin.google.com/) for your G Suite domain, open the flyout menu
@@ -47,7 +51,7 @@ Pulumi organization were `acmecorp`, those values would be:
 
     ![Step 4: Provide ACS and metadata URLs](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-4.png)
 
-**IMPORTANT:** Do not change the value of Name ID Format value once your users have started using Pulumi; not even switching its value between Email or Persistent.
+**Important:** Do not change the value of Name ID Format value once your users have started using Pulumi; not even switching its value between Email or Persistent.
 
    Leave the other fields as their default values, then click **Next**.
 

@@ -4,4 +4,7 @@
     &.badge-preview {
         @apply bg-orange-200 text-orange-600;
     }
+    &.badge-required {
+        @apply border border-red-200 text-red-600;
+    }
 }
