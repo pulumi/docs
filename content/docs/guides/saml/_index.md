@@ -16,7 +16,7 @@ The [Pulumi Console](https://app.pulumi.com) can be configured to work with any 
 
 ## Single Sign-On (SSO)
 
-If you're a member of a SAML-based Pulumi organization, you can sign in to [your account]({{< relref "/docs/intro//accounts-and-organizations/accounts" >}}) via [Single Sign-On]({{< relref "sso" >}}).
+If you're a member of a SAML-based Pulumi organization, you can sign in to [your account]({{< relref "/docs/intro/console/accounts-and-organizations/accounts" >}}) via [Single Sign-On]({{< relref "sso" >}}).
 
 ## Integration Guides
 

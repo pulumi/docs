@@ -6,15 +6,14 @@ aliases:
 - /docs/console/accounts/saml/okta/
 ---
 
-This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for use with
-the Pulumi Console.
+This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for the Pulumi Console.
 
 ## Prerequisites
 
 - [Single Sign-On]({{< relref "sso" >}})
 
 > **Note:** The screen shots below are using the Okta _Classic UI_. You can switch to it by clicking the gear
-> icon in the top right of the screen.
+> icon on the upper right corner of the screen.
 
 ## Creating the Okta Application
 
@@ -26,29 +25,12 @@ available, choose **SAML 2.0**.
 ### Configuring the Application
 
 Next you will be guided through a wizard to configure the Okta application. The first step is to
-give it a name, e.g. _Pulumi Console_, and an icon.
+give it a name---Pulumi Console for example---and an icon.
 
 ![Configuring a SAML Integration](/images/docs/reference/service/saml-okta/create-saml-integration.png)
 
-The next step is where you configure the SAML application's settings. The values to provide will
-depend on the name of your Pulumi organization, e.g. `acmecorp`.
-
-<style>
-td, th {
-    padding: 8px 8px;
-    border: 1px solid rgba(0,0,0,0.13);
-}
-
-thead tr th {
-    color: #00acf2;  /* $primary2, blue */
-    font-weight: 800;
-}
-
-tbody tr td {
-    padding-left: 16px;
-    padding-right: 16px;
-}
-</style>
+The next step is where you configure the SAML application's settings. The values you provide will
+depend on the name of your Pulumi organization. For example, `acmecorp`.
 
 | General Setting | Value |
 | --------------- | ----- |
@@ -58,10 +40,9 @@ tbody tr td {
 | Name ID format | EmailAddress or Persistent |
 | App username | Email |
 
-**IMPORTANT:** Do not change the value of Name ID Format value once your users have started using Pulumi; not even switching its value between Email or Persistent.
+**Important:** Do not change the value of the Name ID Format once your users have started using Pulumi---not even switching its value between `EmailAddress` or `Persistent`.
 
-<p><!-- space between table and text --></p>
-In addition, there are two attribute statements that can optionally be provided so that users
+In addition, you can optionally provide two attribute statements so that users
 who sign in with their Okta credentials will have proper user names.
 
 | Attribute | Value |
@@ -69,13 +50,12 @@ who sign in with their Okta credentials will have proper user names.
 | firstName | user.firstName |
 | lastName  | user.lastName  |
 
-<p><!-- space between table and image --></p>
 ![Configuration Settings](/images/docs/reference/service/saml-okta/configure-saml-settings.png)
 
 ### User Assignments
 
 After the Pulumi SAML application has been created in Okta, the next step is to assign users to it.
-This will grant specific users or groups access to sign into Pulumi using their Okta-provided
+This will grant specific users or groups access to sign into Pulumi with their Okta-provided
 credentials.
 
 To assign users or groups to the application, navigate to the **Assignments** tab on the application
@@ -85,7 +65,7 @@ page.
 
 ## Configuring Your Pulumi Organization
 
-The final step is to configure the Pulumi Console with the details about your new Okta-based
+The final step is to configure the Pulumi Console with details on your new Okta-based
 SAML application. To do this, you need to obtain the IDP metadata document from Okta and then provide
 it to Pulumi.
 
@@ -105,11 +85,11 @@ With the block of XML text in your clipboard, open the Pulumi Console and naviga
 organization. Click the **Settings** tab, and then select **SAML SSO**.
 
 Paste the IDP metadata descriptor into the bottom card
-titled **SAML SSO Settings**. Then click the "SAVE" button at the bottom of the card.
+titled **SAML SSO Settings**. Then click **Save** at the bottom of the card.
 
 ![Pulumi Organization Settings](/images/docs/reference/service/saml-okta/pulumi-org-settings.png)
 
-Once the IDP metadata descriptor has been saved, you are all set to log into to Pulumi.
+Once the IDP metadata descriptor has been saved, you are all set to log into Pulumi.
 
 ### Signing into Pulumi using Okta
 
@@ -121,5 +101,5 @@ name of your Pulumi organization.
 
 ## Troubleshooting
 
-If you run into any troubles configuring Okta, signing into Pulumi, or need some assistance please
+If you run into any troubles configuring Okta, signing into Pulumi, or need some assistance, please
 [contact us](https://www.pulumi.com/about/#contact-us).

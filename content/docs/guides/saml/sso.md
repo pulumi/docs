@@ -13,7 +13,7 @@ aliases:
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work
 with the [Pulumi Console]({{ relref "../intro/console" >}}).
 
-> For a specific example, you can refer to one of our integration guides:
+> For a specific example, refer to one of our integration guides:
 >
 > - [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
 > - [G Suite (Google)]({{< relref "/docs/guides/saml/gsuite" >}})
@@ -31,14 +31,14 @@ which can be used by the service provider to make authentication requests.
 The following are the only properties you will really be configuring when you setup SAML SSO with your IdP.
 
 | Name | Other Names | Required |
-|----- | ---------- |
+|----- | ---------- |-----------|
 | Single sign on URL | ACS URL | Yes |
 | Entity ID | Metadata _or_ Audience URL | Yes |
 | Default relay state | Start _or_ Application Start URL | No |
 | Name identifier format | Name Identifier, Name | Yes |
 
 ### Single Sign On URL
-{{< badge-required >}}
+<span class="badge badge-required">required</span>
 
 This is the URL where the IdP can `POST` SAML assertions. The URL format is always:
 
@@ -47,7 +47,7 @@ This is the URL where the IdP can `POST` SAML assertions. The URL format is alwa
 `{orgName}` in the previous URL is where your Pulumi organization's name must be entered. The org name is case-sensitive. For example, if your Pulumi login name is `ACME-corp`, you must enter the name exactly as is in the above URL as well. You can find your org's Pulumi login name from the URL when you navigate to it in the [Pulumi Console](https://app.pulumi.com). Using this example, the URL would be `https://app.pulumi.com/ACME-corp`.
 
 ### Entity ID
-{{< badge-required >}}
+<span class="badge badge-required">required</span>
 
 The (SP) entity ID is a URL where a service provider publishes public information about its SAML configuration. The metadata document published by the service provider shows its public certificate that can be used to verify the signature of authentication requests initiated from the service itself.
 
@@ -58,7 +58,7 @@ The (SP) entity ID is a URL where a service provider publishes public informatio
 The relay state is a URL, which itself is passed as a query parameter in SSO requests initiated by the identity provider. This is an optional property. This is also known as **deep-linking**. This allows a user to directly navigate to a downstream service by launching the application from the identity provider itself.
 
 ### Name ID Format
-{{< badge-required >}}
+<span class="badge badge-required">required</span>
 
 The name ID format is one of the most important aspects of your SAML SSO configuration. It defines how an identity provider identifies a user on the downstream service. The value of the format defines what value would be used for the user's `Subject`.
 
