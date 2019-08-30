@@ -78,18 +78,15 @@ travis_push::
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),staging)
 	HUGO_ENVIRONMENT=staging $(MAKE) build
-	# TODO [pulumi/docs#1648]: Re-enable broken link checker
-	# $(MAKE) validate
+	$(MAKE) validate
 	./scripts/run-pulumi.sh update staging
 else ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_ENVIRONMENT=production $(MAKE) build
-	# TODO [pulumi/docs#1648]: Re-enable broken link checker
-	# $(MAKE) validate
+	$(MAKE) validate
 	./scripts/run-pulumi.sh update production
 else
 	$(MAKE) build
-	# TODO [pulumi/docs#1648]: Re-enable broken link checker
-	# $(MAKE) validate
+	$(MAKE) validate
 endif
 
 .PHONY: travis_pull_request
@@ -98,18 +95,15 @@ travis_pull_request::
 	$(MAKE) ensure
 ifeq ($(TRAVIS_BRANCH),staging)
 	HUGO_ENVIRONMENT=staging $(MAKE) build
-	# TODO [pulumi/docs#1648]: Re-enable broken link checker
-	# $(MAKE) validate
+	$(MAKE) validate
 	./scripts/run-pulumi.sh preview staging
 else ifeq ($(TRAVIS_BRANCH),master)
 	HUGO_ENVIRONMENT=production $(MAKE) build
-	# TODO [pulumi/docs#1648]: Re-enable broken link checker
-	# $(MAKE) validate
+	$(MAKE) validate
 	./scripts/run-pulumi.sh preview production
 else
 	$(MAKE) build
-	# TODO [pulumi/docs#1648]: Re-enable broken link checker
-	# $(MAKE) validate
+	$(MAKE) validate
 endif
 
 .PHONY: travis_cron
@@ -117,5 +111,4 @@ travis_cron::
 	$(MAKE) banner
 	$(MAKE) ensure
 	$(MAKE) build
-	# TODO [pulumi/docs#1648]: Re-enable broken link checker
-	# $(MAKE) validate
+	$(MAKE) validate
