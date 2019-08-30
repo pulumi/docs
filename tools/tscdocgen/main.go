@@ -24,6 +24,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
 	"unicode"
@@ -265,6 +266,16 @@ func getRepoURL(pkgRepoDir, githash string) string {
 	return fmt.Sprintf("https://github.com/pulumi/%s/blob/%s/%s", repo, githash, dir)
 }
 
+var (
+	h3RE = regexp.MustCompile(`(?m)^### `)
+	h2RE = regexp.MustCompile(`(?m)^## `)
+)
+
+const (
+	h4 = "#### "
+	h5 = "##### "
+)
+
 // augmentNode recurses throughout a tree AST, adding information that we'll need when translating it to Markdown.
 func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) {
 	// Add some labels.
@@ -275,6 +286,18 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 	node.Label = e.createLabel(node, parent)
 	node.CodeDetails = e.createCodeDetails(node)
 	node.URLPath = getURLPath(node, parent)
+
+	if isResource(node) {
+		node.IsResource = true
+	} else if isDataSource(node) {
+		node.IsDataSource = true
+	}
+
+	// Convert <h3>'s to be <h5>'s, and <h2>'s to be <h4>'s.
+	node.Comment.ShortText = h3RE.ReplaceAllString(node.Comment.ShortText, h5)
+	node.Comment.Text = h3RE.ReplaceAllString(node.Comment.Text, h5)
+	node.Comment.ShortText = h2RE.ReplaceAllString(node.Comment.ShortText, h4)
+	node.Comment.Text = h2RE.ReplaceAllString(node.Comment.Text, h4)
 
 	// In K8S docs, ShortText can contain placeholder references that look like HTML tags.
 	// We need to replace those with the HTML-encoded characters.
@@ -381,7 +404,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
-		linktitle = e.pkgname
+		linktitle = e.pkg
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
 		readme = filepath.Join(e.srcdir, "README.md")
@@ -419,7 +442,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	// Ensure the files, members, and children (deeply throughout the tree) are sorted deterministically.
 	sort.Strings(files)
-	transitiveSortByLabels(members)
+	transitiveSortNodes(members)
 
 	// Get any submodules, make relative links, and ensure they are also sorted in a deterministic order.
 	var modules []struct {
@@ -446,20 +469,41 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		return modules[i].Name < modules[j].Name
 	})
 
+	// Split members between resources, data sources, and others...
+	var resources []*typeDocNode
+	var dataSources []*typeDocNode
+	var others []*typeDocNode
+	for _, member := range members {
+		if member.IsResource {
+			resources = append(resources, member)
+		} else if member.IsDataSource {
+			dataSources = append(dataSources, member)
+		} else {
+			others = append(others, member)
+		}
+	}
+
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
-		"Title":          title,
-		"LinkTitle":      linktitle,
-		"RepoURL":        e.repoURL,
-		"Package":        pkg,
-		"PackageName":    e.pkgname,
-		"PackageComment": string(pkgcomm),
-		"PackageVar":     pkgvar,
-		"Files":          files,
-		"Modules":        modules,
-		"HasModules":     len(modules) > 0,
-		"Members":        members,
-		"HasMembers":     len(members) > 0,
+		"Title":                     title,
+		"LinkTitle":                 linktitle,
+		"RepoURL":                   e.repoURL,
+		"Package":                   pkg,
+		"PackageName":               e.pkgname,
+		"PackageComment":            string(pkgcomm),
+		"PackageVar":                pkgvar,
+		"Files":                     files,
+		"Modules":                   modules,
+		"HasModules":                len(modules) > 0,
+		"Members":                   members,
+		"HasMembers":                len(members) > 0,
+		"Resources":                 resources,
+		"HasResources":              len(resources) > 0,
+		"DataSources":               dataSources,
+		"HasDataSources":            len(dataSources) > 0,
+		"HasResourcesOrDataSources": len(resources) > 0 || len(dataSources) > 0,
+		"Others":                    others,
+		"HasOthers":                 len(others) > 0,
 	}); err != nil {
 		return err
 	}
@@ -473,24 +517,65 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	return nil
 }
 
-// labelSorter sorts nodes with labels alphabetically.
-func labelSorter(nodes []*typeDocNode) func(i, j int) bool {
-	return func(i, j int) bool {
-		if nodes[i].Label != nodes[j].Label {
-			return nodes[i].Label < nodes[j].Label
-		}
-		return nodes[i].Name < nodes[j].Name
-	}
+var resourceBaseTypes = map[string]bool{
+	"Resource":          true,
+	"CustomResource":    true,
+	"ProviderResource":  true,
+	"ComponentResource": true,
 }
 
-// transitiveSortByLabels sorts an array of nodes and their children, deeply.
-func transitiveSortByLabels(nodes []*typeDocNode) {
-	// First sort the nodes themselves.
-	sort.SliceStable(nodes, labelSorter(nodes))
+// isResource returns true if the node is an exported class that extends a type named `Resource`, `CustomResource`,
+// `ProviderResource`, or `ComponentResource`.
+func isResource(node *typeDocNode) bool {
+	if node.Kind != typeDocClassNode || !node.Flags.IsExported {
+		return false
+	}
+
+	if node.Name == "Resource" {
+		return true
+	}
+
+	if len(node.ExtendedTypes) == 0 {
+		return false
+	}
+
+	for _, t := range node.ExtendedTypes {
+		if t.Type == typeDocReferenceType && resourceBaseTypes[t.Name] {
+			return true
+		}
+	}
+
+	return false
+}
+
+// isDataSource returns true if the node is an exported function with a name that starts with lowercase "get" and has
+// a `pulumi.InvokeOptions` parameter.
+func isDataSource(node *typeDocNode) bool {
+	if node.Kind != typeDocFunctionNode || !node.Flags.IsExported || !strings.HasPrefix(node.Name, "get") ||
+		len(node.Signatures) != 1 || len(node.Signatures[0].Parameters) == 0 {
+		return false
+	}
+
+	// If there's a `pulumi.InvokeOptions` parameter, consider it a data source.
+	for _, p := range node.Signatures[0].Parameters {
+		if p.Type != nil && p.Type.Type == typeDocReferenceType && p.Type.Name == "pulumi.InvokeOptions" {
+			return true
+		}
+	}
+
+	return false
+}
+
+// transitiveSortNodes sorts an array of nodes and their children, deeply.
+func transitiveSortNodes(nodes []*typeDocNode) {
+	// First sort the nodes themselves using a case-insensitive sort.
+	sort.SliceStable(nodes, func(i, j int) bool {
+		return strings.ToLower(nodes[i].Name) < strings.ToLower(nodes[j].Name)
+	})
 
 	// And now their children, deeply. Note that we use a stable sort because some children don't have labels.
 	for _, node := range nodes {
-		transitiveSortByLabels(node.Children)
+		transitiveSortNodes(node.Children)
 	}
 }
 
@@ -994,7 +1079,8 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 				return fmt.Sprintf(
 					"/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
 			case "ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
-				"ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs", "Resource", "ResourceOptions", "URN":
+				"ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs", "Resource", "ResourceOptions", "URN",
+				"ProviderResource":
 				return fmt.Sprintf(
 					"/docs/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
 			}
@@ -1207,6 +1293,10 @@ type typeDocNode struct {
 	Extends string
 	// Implements is a rendered list of interfaces this type implements (if any, or empty if none).
 	Implements string
+	// IsResource is true if the node represents a Pulumi resource.
+	IsResource bool
+	// IsDataSource is true if the node represents a Pulumi data source.
+	IsDataSource bool
 }
 
 type typeDocFlags struct {

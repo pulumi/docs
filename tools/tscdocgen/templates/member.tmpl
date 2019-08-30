@@ -1,34 +1,33 @@
-<h2 class="pdoc-module-header" id="{{AnchorName}}">
-<a class="pdoc-member-name" href="{{RepoURL}}/{{URLPath}}">{{{Label}}} <b>{{{Name}}}</b></a>
-</h2>
-<div class="pdoc-module-contents">
+<h3 class="pdoc-module-header" id="{{AnchorName}}" data-link-title="{{{Name}}}">
+    <a href="{{RepoURL}}/{{URLPath}}">
+        {{#IsResource}}Resource {{/IsResource}}{{^IsResource}}{{#IsDataSource}}Data Source {{/IsDataSource}}{{/IsResource}}{{^IsResource}}{{^IsDataSource}}{{{Label}}} {{/IsDataSource}}{{/IsResource}}<strong>{{{Name}}}</strong>
+    </a>
+</h3>
+
 {{#Extends}}
-<pre class="highlight">{{{Extends}}}</pre>
+<pre class="highlight"><code>{{{Extends}}}</code></pre>
 {{/Extends}}
 {{#Implements}}
-<pre class="highlight">{{{Implements}}}</pre>
+<pre class="highlight"><code>{{{Implements}}}</code></pre>
 {{/Implements}}
 {{#CodeDetails}}
-<pre class="highlight">{{{CodeDetails}}}</pre>
+<pre class="highlight"><code>{{{CodeDetails}}}</code></pre>
 {{/CodeDetails}}
 {{#Comment.ShortText}}
-{{=<% %>=}}{{% md %}}<%={{ }}=%>
 
 {{{Comment.ShortText}}}
 
 {{#Comment.Text}}
 {{{Comment.Text}}}
 {{/Comment.Text}}
-{{=<% %>=}}{{% /md %}}<%={{ }}=%>
 {{/Comment.ShortText}}
 {{#Children}}
 {{>child}}
 {{/Children}}
 {{#Signatures}}
 
-<pre class="highlight">{{{Label}}}</pre>
+<pre class="highlight"><code>{{{Label}}}</code></pre>
 
-{{=<% %>=}}{{% md %}}<%={{ }}=%>
 {{#Comment.ShortText}}
 
 {{{Comment.ShortText}}}
@@ -42,6 +41,4 @@
 * `{{Name}}` {{Comment.ShortText}}
 {{/Comment.ShortText}}
 {{/Parameters}}
-{{=<% %>=}}{{% /md %}}<%={{ }}=%>
 {{/Signatures}}
-</div>
