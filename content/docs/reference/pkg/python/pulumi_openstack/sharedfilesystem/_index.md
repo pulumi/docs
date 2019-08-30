@@ -415,17 +415,15 @@ tenant.</p>
 <dt id="pulumi_openstack.sharedfilesystem.SecurityService.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">dns_ip=None</em>, <em class="sig-param">domain=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ou=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">server=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.SecurityService.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SecurityService resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] description: The human-readable description for the security service.</p>
-<blockquote>
-<div><p>Changing this updates the description of the existing security service.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the security service.
+Changing this updates the description of the existing security service.</p></li>
 <li><p><strong>dns_ip</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security service DNS IP address that is used inside the
 tenant network.</p></li>
 <li><p><strong>domain</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The security service domain.</p></li>
@@ -556,6 +554,10 @@ Changing this updates the description of the existing share.</p>
 <code class="sig-name descname">export_locations</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.Share.export_locations" title="Permalink to this definition">¶</a></dt>
 <dd><p>A list of export locations. For example, when a share server
 has more than one network interface, it can have multiple export locations.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preferred</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -658,17 +660,15 @@ a new share.</p>
 <dt id="pulumi_openstack.sharedfilesystem.Share.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">all_metadata=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">export_locations=None</em>, <em class="sig-param">has_replicas=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">replication_type=None</em>, <em class="sig-param">share_network_id=None</em>, <em class="sig-param">share_proto=None</em>, <em class="sig-param">share_server_id=None</em>, <em class="sig-param">share_type=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.Share.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Share resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] all_metadata: The map of metadata, assigned on the share, which has been</p>
-<blockquote>
-<div><p>explicitly and implicitly added.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>all_metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The map of metadata, assigned on the share, which has been
+explicitly and implicitly added.</p></li>
 <li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The share availability zone. Changing this creates a
 new share.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the share.
@@ -704,6 +704,11 @@ a new share.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The <strong>export_locations</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">preferred</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/sharedfilesystem_share_v2.html.markdown</a>.</p>
 </div></blockquote>
@@ -817,19 +822,17 @@ creates a new share access.</p>
 <dt id="pulumi_openstack.sharedfilesystem.ShareAccess.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_key=None</em>, <em class="sig-param">access_level=None</em>, <em class="sig-param">access_to=None</em>, <em class="sig-param">access_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareAccess.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ShareAccess resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] access_key: The access credential of the entity granted access.
-:param pulumi.Input[str] access_level: The access level to the share. Can either be <code class="docutils literal notranslate"><span class="pre">rw</span></code> or <code class="docutils literal notranslate"><span class="pre">ro</span></code>.
-:param pulumi.Input[str] access_to: The value that defines the access. Can either be an IP</p>
-<blockquote>
-<div><p>address or a username verified by configured Security Service of the Share Network.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access credential of the entity granted access.</p></li>
+<li><p><strong>access_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access level to the share. Can either be <code class="docutils literal notranslate"><span class="pre">rw</span></code> or <code class="docutils literal notranslate"><span class="pre">ro</span></code>.</p></li>
+<li><p><strong>access_to</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value that defines the access. Can either be an IP
+address or a username verified by configured Security Service of the Share Network.</p></li>
 <li><p><strong>access_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access rule type. Can either be an ip, user,
 cert, or cephx. cephx support requires an OpenStack environment that supports
 Shared Filesystem microversion 2.13 (Mitaka) or later.</p></li>
@@ -996,18 +999,16 @@ the share network. The security service must be specified by ID and not name.</p
 <dt id="pulumi_openstack.sharedfilesystem.ShareNetwork.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cidr=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">neutron_net_id=None</em>, <em class="sig-param">neutron_subnet_id=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_service_ids=None</em>, <em class="sig-param">segmentation_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.ShareNetwork.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ShareNetwork resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] cidr: The share network CIDR.
-:param pulumi.Input[str] description: The human-readable description for the share network.</p>
-<blockquote>
-<div><p>Changing this updates the description of the existing share network.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>cidr</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The share network CIDR.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The human-readable description for the share network.
+Changing this updates the description of the existing share network.</p></li>
 <li><p><strong>ip_version</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The IP version of the share network. Can either be 4 or 6.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name for the share network. Changing this updates the name
 of the existing share network.</p></li>
@@ -1077,6 +1078,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">get_availbility_zones</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_availbility_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of Shared File System availability zones
 from OpenStack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Shared File System
+client. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_availability_zones_v2.html.markdown</a>.</p>
 </div></blockquote>
@@ -1086,6 +1093,27 @@ from OpenStack</p>
 <dt id="pulumi_openstack.sharedfilesystem.get_share">
 <code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">get_share</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">export_location_path=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_network_id=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System share.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> (<em>str</em>) – The human-readable description for the share.</p></li>
+<li><p><strong>export_location_path</strong> (<em>str</em>) – The export location path of the share. Available
+since Manila API version 2.35.</p></li>
+<li><p><strong>is_public</strong> (<em>bool</em>) – The level of visibility for the share.
+length.</p></li>
+<li><p><strong>metadata</strong> (<em>dict</em>) – One or more metadata key and value pairs as a dictionary of
+strings.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the share.</p></li>
+<li><p><strong>share_network_id</strong> (<em>str</em>) – The UUID of the share’s share network.</p></li>
+<li><p><strong>snapshot_id</strong> (<em>str</em>) – The UUID of the share’s base snapshot.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – A share status filter. A valid value is <code class="docutils literal notranslate"><span class="pre">creating</span></code>,
+<code class="docutils literal notranslate"><span class="pre">error</span></code>, <code class="docutils literal notranslate"><span class="pre">available</span></code>, <code class="docutils literal notranslate"><span class="pre">deleting</span></code>, <code class="docutils literal notranslate"><span class="pre">error_deleting</span></code>, <code class="docutils literal notranslate"><span class="pre">manage_starting</span></code>,
+<code class="docutils literal notranslate"><span class="pre">manage_error</span></code>, <code class="docutils literal notranslate"><span class="pre">unmanage_starting</span></code>, <code class="docutils literal notranslate"><span class="pre">unmanage_error</span></code>, <code class="docutils literal notranslate"><span class="pre">unmanaged</span></code>,
+<code class="docutils literal notranslate"><span class="pre">extending</span></code>, <code class="docutils literal notranslate"><span class="pre">extending_error</span></code>, <code class="docutils literal notranslate"><span class="pre">shrinking</span></code>, <code class="docutils literal notranslate"><span class="pre">shrinking_error</span></code>, or
+<code class="docutils literal notranslate"><span class="pre">shrinking_possible_data_loss_error</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_share_v2.html.markdown</a>.</p>
 </div></blockquote>
@@ -1095,6 +1123,25 @@ from OpenStack</p>
 <dt id="pulumi_openstack.sharedfilesystem.get_share_network">
 <code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">get_share_network</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">neutron_net_id=None</em>, <em class="sig-param">neutron_subnet_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">security_service_id=None</em>, <em class="sig-param">segmentation_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_share_network" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System share network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> (<em>str</em>) – The human-readable description of the share network.</p></li>
+<li><p><strong>ip_version</strong> (<em>float</em>) – The IP version of the share network. Can either be 4 or 6.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the share network.</p></li>
+<li><p><strong>network_type</strong> (<em>str</em>) – The share network type. Can either be VLAN, VXLAN,
+GRE, or flat.</p></li>
+<li><p><strong>neutron_net_id</strong> (<em>str</em>) – The neutron network UUID of the share network.</p></li>
+<li><p><strong>neutron_subnet_id</strong> (<em>str</em>) – The neutron subnet UUID of the share network.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Shared File System client.
+A Shared File System client is needed to read a share network. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>security_service_id</strong> (<em>str</em>) – The security service IDs associated with
+the share network.</p></li>
+<li><p><strong>segmentation_id</strong> (<em>float</em>) – The share network segmentation ID.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_sharenetwork_v2.html.markdown</a>.</p>
 </div></blockquote>
@@ -1104,6 +1151,18 @@ from OpenStack</p>
 <dt id="pulumi_openstack.sharedfilesystem.get_snapshot">
 <code class="sig-prename descclassname">pulumi_openstack.sharedfilesystem.</code><code class="sig-name descname">get_snapshot</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">share_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.sharedfilesystem.get_snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available Shared File System snapshot.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> (<em>str</em>) – The human-readable description of the snapshot.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the snapshot.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Shared File System client.</p></li>
+<li><p><strong>status</strong> (<em>str</em>) – A snapshot status filter. A valid value is <code class="docutils literal notranslate"><span class="pre">available</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>,
+<code class="docutils literal notranslate"><span class="pre">creating</span></code>, <code class="docutils literal notranslate"><span class="pre">deleting</span></code>, <code class="docutils literal notranslate"><span class="pre">manage_starting</span></code>, <code class="docutils literal notranslate"><span class="pre">manage_error</span></code>, <code class="docutils literal notranslate"><span class="pre">unmanage_starting</span></code>,
+<code class="docutils literal notranslate"><span class="pre">unmanage_error</span></code> or <code class="docutils literal notranslate"><span class="pre">error_deleting</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/sharedfilesystem_snapshot_v2.html.markdown</a>.</p>
 </div></blockquote>

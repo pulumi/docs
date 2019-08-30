@@ -71,16 +71,22 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_datadog.gcp.Integration.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_email=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">host_filters=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">private_key_id=None</em>, <em class="sig-param">project_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.gcp.Integration.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Integration resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] client_email: Your email found in your JSON service account key.
-:param pulumi.Input[str] client_id: Your ID found in your JSON service account key.
-:param pulumi.Input[str] host_filters: Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog.
-:param pulumi.Input[str] private_key: Your private key name found in your JSON service account key.
-:param pulumi.Input[str] private_key_id: Your private key ID found in your JSON service account key.
-:param pulumi.Input[str] project_id: Your Google Cloud project ID found in your JSON service account key.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>client_email</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your email found in your JSON service account key.</p></li>
+<li><p><strong>client_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your ID found in your JSON service account key.</p></li>
+<li><p><strong>host_filters</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Limit the GCE instances that are pulled into Datadog by using tags. Only hosts that match one of the defined tags are imported into Datadog.</p></li>
+<li><p><strong>private_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your private key name found in your JSON service account key.</p></li>
+<li><p><strong>private_key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your private key ID found in your JSON service account key.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your Google Cloud project ID found in your JSON service account key.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_gcp.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_gcp.html.markdown</a>.</p>
 </div></blockquote>

@@ -142,10 +142,16 @@ new cluster.</p>
 <dt id="pulumi_openstack.containerinfra.Cluster.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_address=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">coe_version=None</em>, <em class="sig-param">container_version=None</em>, <em class="sig-param">create_timeout=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">discovery_url=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">keypair=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_addresses=None</em>, <em class="sig-param">master_count=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_addresses=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">stack_id=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_cluster_v1.html.markdown</a>.</p>
 </div></blockquote>
@@ -422,10 +428,16 @@ the existing cluster template.</p>
 <dt id="pulumi_openstack.containerinfra.ClusterTemplate.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">apiserver_port=None</em>, <em class="sig-param">cluster_distro=None</em>, <em class="sig-param">coe=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">dns_nameserver=None</em>, <em class="sig-param">docker_storage_driver=None</em>, <em class="sig-param">docker_volume_size=None</em>, <em class="sig-param">external_network_id=None</em>, <em class="sig-param">fixed_network=None</em>, <em class="sig-param">fixed_subnet=None</em>, <em class="sig-param">flavor=None</em>, <em class="sig-param">floating_ip_enabled=None</em>, <em class="sig-param">http_proxy=None</em>, <em class="sig-param">https_proxy=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">insecure_registry=None</em>, <em class="sig-param">keypair_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">master_flavor=None</em>, <em class="sig-param">master_lb_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_driver=None</em>, <em class="sig-param">no_proxy=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">registry_enabled=None</em>, <em class="sig-param">server_type=None</em>, <em class="sig-param">tls_disabled=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">volume_driver=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.ClusterTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing ClusterTemplate resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.</p>
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
 </div></blockquote>
@@ -828,6 +840,16 @@ cluster nodes.</p>
 <dt id="pulumi_openstack.containerinfra.get_cluster">
 <code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack Magnum cluster.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the cluster.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V1 Container Infra
+client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_cluster_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_cluster_v1.html.markdown</a>.</p>
 </div></blockquote>
@@ -838,6 +860,16 @@ cluster nodes.</p>
 <code class="sig-prename descclassname">pulumi_openstack.containerinfra.</code><code class="sig-name descname">get_cluster_template</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.containerinfra.get_cluster_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack Magnum cluster
 template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the cluster template.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V1 Container Infra
+client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_clustertemplate_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/containerinfra_clustertemplate_v1.html.markdown</a>.</p>
 </div></blockquote>

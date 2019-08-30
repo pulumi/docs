@@ -125,18 +125,16 @@ firewall.</p>
 <dt id="pulumi_openstack.firewall.Firewall.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_state_up=None</em>, <em class="sig-param">associated_routers=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">no_routers=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Firewall.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Firewall resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] admin_state_up: Administrative up/down status for the firewall</p>
-<blockquote>
-<div><p>(must be “true” or “false” if provided - defaults to “true”).
-Changing this updates the <code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing firewall.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>admin_state_up</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Administrative up/down status for the firewall
+(must be “true” or “false” if provided - defaults to “true”).
+Changing this updates the <code class="docutils literal notranslate"><span class="pre">admin_state_up</span></code> of an existing firewall.</p></li>
 <li><p><strong>associated_routers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
 of an existing firewall. Conflicts with <code class="docutils literal notranslate"><span class="pre">no_routers</span></code>.</p></li>
@@ -361,20 +359,18 @@ can specify if the policy should be shared.</p>
 <dt id="pulumi_openstack.firewall.Policy.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">audited=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">shared=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Policy.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Policy resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[bool] audited: Audit status of the firewall policy</p>
-<blockquote>
-<div><p>(must be “true” or “false” if provided - defaults to “false”).
-This status is set to “false” whenever the firewall policy or any of its
-rules are changed. Changing this updates the <code class="docutils literal notranslate"><span class="pre">audited</span></code> status of an existing
-firewall policy.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>audited</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Audit status of the firewall policy
+(must be “true” or “false” if provided - defaults to “false”).
+This status is set to “false” whenever the firewall policy or any of its
+rules are changed. Changing this updates the <code class="docutils literal notranslate"><span class="pre">audited</span></code> status of an existing
+firewall policy.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the firewall policy. Changing
 this updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing firewall policy.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the firewall policy. Changing this
@@ -592,18 +588,16 @@ new firewall rule.</p>
 <dt id="pulumi_openstack.firewall.Rule.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">destination_ip_address=None</em>, <em class="sig-param">destination_port=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">ip_version=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">source_ip_address=None</em>, <em class="sig-param">source_port=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">value_specs=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.Rule.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Rule resource’s state with the given name, id, and optional extra
-properties used to qualify the lookup.
-:param str resource_name: The unique name of the resulting resource.
-:param str id: The unique provider ID of the resource to lookup.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[str] action: Action to be taken ( must be “allow” or “deny”) when the</p>
-<blockquote>
-<div><p>firewall rule matches. Changing this updates the <code class="docutils literal notranslate"><span class="pre">action</span></code> of an existing
-firewall rule.</p>
-</div></blockquote>
+properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>action</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Action to be taken ( must be “allow” or “deny”) when the
+firewall rule matches. Changing this updates the <code class="docutils literal notranslate"><span class="pre">action</span></code> of an existing
+firewall rule.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A description for the firewall rule. Changing this
 updates the <code class="docutils literal notranslate"><span class="pre">description</span></code> of an existing firewall rule.</p></li>
 <li><p><strong>destination_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The destination IP address on which the
@@ -686,6 +680,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.firewall.get_policy">
 <code class="sig-prename descclassname">pulumi_openstack.firewall.</code><code class="sig-name descname">get_policy</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">policy_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.firewall.get_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get firewall policy information of an available OpenStack firewall policy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the firewall policy.</p></li>
+<li><p><strong>policy_id</strong> (<em>str</em>) – The ID of the firewall policy.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Neutron client.
+A Neutron client is needed to retrieve firewall policy ids. If omitted, the
+<code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>tenant_id</strong> (<em>str</em>) – The owner of the firewall policy.</p></li>
+</ul>
+</dd>
+</dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/fw_policy_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/fw_policy_v1.html.markdown</a>.</p>
 </div></blockquote>
