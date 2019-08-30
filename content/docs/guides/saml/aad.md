@@ -6,12 +6,8 @@ aliases:
 - /docs/console/accounts/saml/aad/
 ---
 
-This guide explains how to configure your Azure Active Directory (Azure AD) as a SAML SSO identity provider
-<<<<<<< HEAD
-(IDP) for use with the Pulumi Console.
-=======
+This guide walks you through configuring your Azure Active Directory (Azure AD) as a SAML SSO identity provider
 (IDP) for the Pulumi Console.
->>>>>>> 8e176b0f... - Update SAML index page
 
 ## Prerequisites
 
@@ -76,14 +72,14 @@ This guide explains how to configure your Azure Active Directory (Azure AD) as a
 
 > **Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between Email or Persistent.
 
-Now that the Azure AD-side of the SAML SSO configuration is complete, you will need
-to configure the Pulumi Console to receive SAML SSO requests from your
-Azure AD.
-
 > **Note:** Be sure to assign users and groups to use your new _Pulumi Console_ SAML application.
 > That is how you can control membership access to your Pulumi organization. See the
 > [Azure AD documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications#assign-users-and-groups-to-your-saml-application)
 > for more information.
+
+Now that the Azure AD-side of the SAML SSO configuration is complete, you will need
+to configure the Pulumi Console to receive SAML SSO requests from your
+Azure AD.
 
 ## Configuring Your Pulumi Organization
 

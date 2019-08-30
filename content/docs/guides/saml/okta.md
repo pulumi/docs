@@ -6,7 +6,7 @@ aliases:
 - /docs/console/accounts/saml/okta/
 ---
 
-This guide walks through how to configure Okta as a SAML SSO identity provider (IdP) for the Pulumi Console.
+This guide walks you through configuring Okta as a SAML SSO identity provider (IdP) for the Pulumi Console.
 
 ## Prerequisites
 

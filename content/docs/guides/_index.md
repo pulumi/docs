@@ -24,7 +24,7 @@ Pulumi’s approach to infrastructure as code is great for continuous delivery, 
     </div>
     <div class="w-1/2 border-solid ml-4 border-t-2 border-gray-200">
         <h3 class="no-anchor pt-4"><a href="{{< relref "saml" >}}"><i class="fas fa-user-lock pr-2"></i> SAML Integrations</a></h3>
-        <p>Link your Pulumi organization with your SAML 2.0 identity provider. Have members in your organization sign in via <a href="{{< relref "saml/sso" >}}i">SSO</a>.
+        <p>Link your Pulumi organization with your SAML 2.0 identity provider. Have members in your organization sign in via <a href="{{< relref "saml/sso" >}}">SSO</a>.
         <ul class="p2">
             <li><a href="{{< relref "saml/aad" >}}">Azure AD</a></li>
             <li><a href="{{< relref "saml/gsuite" >}}">Google Suite</a></li>

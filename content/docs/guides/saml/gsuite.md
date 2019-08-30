@@ -6,7 +6,7 @@ aliases:
 - /docs/console/accounts/saml/gsuite/
 ---
 
-This guide explains how to configure your G Suite service as a SAML SSO identity provider
+This guide walks you through configuring your G Suite service as a SAML SSO identity provider
 (IDP) for the Pulumi Console.
 
 ## Prerequisites
@@ -41,20 +41,20 @@ and logo, then click **Next**.
     ![Step 3: Name the application](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-3.png)
 
 1. In step 4, for the required **ACS URL** and **Entity ID** fields, enter the fully-qualified
-URLs of the `acs` and `metadata` endpoints of the Pulumi API, adjusted for your Pulumi organization name. For example, if your
-Pulumi organization is `acmecorp`, the values would be:
-
-    * ACS URL: `https://api.pulumi.com/login/acmecorp/sso/saml/acs`
-    * Entity ID: `https://api.pulumi.com/login/acmecorp/sso/saml/metadata`
-    * Start URL: `https://api.pulumi.com/login/acmecorp/sso`
-    * Name ID Format: `EMAIL` or `PERSISTENT`
+URLs of the `acs` and `metadata` endpoints of the Pulumi API, adjusted for your Pulumi organization name. 
 {{< saml-warning >}}
+    For example, if your Pulumi organization is `acmecorp`, the values would be:
+
+    * ACS URL: `https://api.pulumi.com/login/<acmecorp>/sso/saml/acs`
+    * Entity ID: `https://api.pulumi.com/login/<acmecorp>/sso/saml/metadata`
+    * Start URL: `https://api.pulumi.com/login/<acmecorp>/sso`
+    * Name ID Format: `EMAIL` or `PERSISTENT`
 
     ![Step 4: Provide ACS and metadata URLs](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-4.png)
 
-**Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between `EMAIL` or `PERSISTENT`.
+    > **Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between `EMAIL` or `PERSISTENT`.
 
-   Leave the other fields as their default values, then click **Next**.
+    Leave the other fields as their default values, then click **Next**.
 
 1. The final step---attribute mapping---is optional, but you may wish to specify proper
 first and last names for your Pulumi users, based on their Google account profiles. The Pulumi service
