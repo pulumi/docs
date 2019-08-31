@@ -29,7 +29,7 @@
                     <div>
                         <ul>
                             {{ range sort $.Site.Data.glossary.entries "term" }}
-                                <li><a href="#{{ lower .term }}" class="">{{ .term }}</a></li>
+                                <li><a href="#{{ anchorize .term }}" class="">{{ .term }}</a></li>
                             {{ end }}
                         </ul>
                     </div>
@@ -38,8 +38,8 @@
                         {{ range sort $.Site.Data.glossary.entries "term" }}
                             <h2 class="mt-2 mb-0">{{ .term }} </h2>
                             <p>{{ .description }}</p>
-                            <ul class="mb-4">
-                                <li>Read More: <a href="{{ .link }}" class="">{{ .term }}</a></li>
+                            <ul class="mb-4 list-none">
+                                <li><a href="{{ .link }}" class=""><i class="fab fa-readme pr-2"></i>{{ .term }}</a></li>
                             </ul>
                         {{ end }}
                     </div>
