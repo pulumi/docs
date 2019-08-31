@@ -173,15 +173,3 @@ link = "/docs/intro/concepts/state"
 term = "Secrets Encryption"
 description = "The Pulumi Service automatically manages per-stack encryption keys on your behalf. Anytime you encrypt a value using --secret or by programmatically wrapping it as a secret at runtime, a secure protocol is used between the CLI and Pulumi Service that ensures secret data is encrypted in transit, at rest, and physically anywhere it gets stored."
 link = "/docs/intro/concepts/config#configuring-secrets-encryption"
-
-
-
-
-
-
-
-
-
-
-
-
