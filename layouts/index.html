@@ -1,5 +1,5 @@
 {{ define "hero" }}
-    <header class="header-hero-home text-center mb-16 relative px-4 md:px-0">
+    <header class="header-hero-home text-center mb-8 relative px-4 md:px-0">
         <div class="relative">
             <h1 class="font-sans font-body font-normal">
                 {{ .Params.heading }}
@@ -7,24 +7,9 @@
             <p>
                 {{ .Params.subhead | markdownify }}
             </p>
-            <div class="mt-5">
-                <a href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-400 border border-purple-400 shadow-xl px-6 transition-all py-3 text-sm hover:bg-purple-300 hover:border-purple-300 rounded-lg" title="Create your first project with Pulumi">
-                    GET STARTED
-                </a>
-            </div>
-        </div>
-    </header>
-{{ end }}
-
-{{ define "main" }}
-    <section class="pb-16 pt-8 px-4 md:px-0" style="background: linear-gradient(#ffffff 50%, #f5fbff 100%);">
-        <div class="container mx-auto text-center">
-
-            <!-- Carousel -->
-            {{ partial "carousel" . }}
 
             <!-- CTA 0 -->
-            <div class="mt-24 mx-auto max-w-3xl md:flex items-center bg-white px-8 py-6 rounded-lg border border-gray-300 shadow-md">
+            <div class="mt-12 mx-auto max-w-3xl md:flex items-center bg-gray-100 px-8 py-6 rounded-lg border border-gray-300 shadow-md">
                 <div>
                     <i class="text-green-600 fas fa-check text-4xl"></i>
                 </div>
@@ -39,6 +24,15 @@
                 </div>
             </div>
         </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <section class="pb-16 px-4 md:px-0" style="background: linear-gradient(#ffffff 50%, #f5fbff 100%);">
+        <div class="container mx-auto text-center">
+            <!-- Carousel -->
+            {{ partial "carousel" . }}
+        </div>
     </section>
 
     <!-- Testimonials -->
@@ -51,11 +45,6 @@
                         {{ (index .Params.quotes 0).body }}
                     </p>
                     <div class="leading-relaxed flex items-start">
-                        {{ if (index .Params.quotes 0).avatar }}
-                            <div class="rounded-full bg-gray-300 inline-block p-1 mr-4">
-                                <img class="w-8 h-8 rounded-full" src="{{ (index .Params.quotes 0).avatar }}">
-                            </div>
-                        {{ end }}
                         <div>
                             <div class="text-blue-700 font-semibold">
                                 {{ (index .Params.quotes 0).name }}
@@ -72,11 +61,6 @@
                         {{ (index .Params.quotes 1).body }}
                     </p>
                     <div class="leading-relaxed flex items-start">
-                        {{ if (index .Params.quotes 1).avatar }}
-                            <div class="rounded-full bg-gray-300 inline-block p-1 mr-4">
-                                <img class="w-8 h-8 rounded-full" src="{{ (index .Params.quotes 0).avatar }}">
-                            </div>
-                        {{ end }}
                         <div>
                             <div class="text-blue-700 font-semibold">
                                 {{ (index .Params.quotes 1).name }}
@@ -93,11 +77,6 @@
                         {{ (index .Params.quotes 2).body }}
                     </p>
                     <div class="leading-relaxed flex items-start">
-                        {{ if (index .Params.quotes 2).avatar }}
-                            <div class="rounded-full bg-gray-300 inline-block p-1 mr-4">
-                                <img class="w-8 h-8 rounded-full" src="{{ (index .Params.quotes 0).avatar }}">
-                            </div>
-                        {{ end }}
                         <div>
                             <div class="text-blue-700 font-semibold">
                                 {{ (index .Params.quotes 2).name }}
@@ -117,16 +96,32 @@
         <div class="container mx-auto flex justify-center items-center">
             <div class="lg:flex items-center justify-center my-4">
                 <a href="https://www.tableau.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-8 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
                 </a>
                 <a href="https://mbrdna.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-8 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
+                    <img class="mx-auto lg:mx-8 mt-8 mb-4 lg:my-0 h-12 mx-8" src="/logos/customers/mercedes-benz-RDNA_logo.png" title="Mercedes-Benz Research and Development" alt="Mercedes-Benz Research and Development">
                 </a>
                 <a href="https://www.mindbodyonline.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
+                    <img class="mx-auto lg:mx-8 h-16 mx-8" src="/logos/customers/mindbody_logo.svg" alt="MindBody" title="MindBody">
                 </a>
                 <a href="https://www.nih.gov/" target="_blank">
-                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-8 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                    <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-12 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
+                </a>
+            </div>
+        </div>
+        <div class="container mx-auto flex justify-center items-center">
+            <div class="lg:flex items-center justify-center my-4">
+                <a href="https://www.linio.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
+                </a>
+                <a href="https://www.cockroachlabs.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
+                </a>
+                <a href="https://www.sourcegraph.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
+                </a>
+                <a href="https://www.snopes.com/" target="_blank">
+                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
                 </a>
             </div>
         </div>
