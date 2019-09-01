@@ -6,7 +6,7 @@ noindex: true
 no_on_this_page: true
 menu:
     header:
-        weight: 4
+        weight: 3
 ---
 
 Pulumi is an <a href="https://github.com/pulumi/pulumi" target="_blank">open source</a> platform for building and
@@ -66,57 +66,6 @@ Describe your resources in code---VMs, networks, databases, containers, Kubernet
             in between. Languages and clouds are supported using an extensible
             plugin model, enabling public, private, and even hybrid cloud support.
         </p>
-    </div>
-</div>
-
-<div class="my-4 bg-gray-100 border-t border-b border-gray-300 md:flex py-8 px-4 max-w-3xl">
-    <div class="flex flex-col justify-between text-center h-full md:w-1/4 md:px-2 mb-12 md:mb-0">
-        <a href="{{< relref "/docs/tutorials/aws/ecs-fargate" >}}">
-            <img class="inline-block w-24" src="/images/docs/icon-feature-containers.svg">
-            <h3 class="no-anchor mt-2 mb-0">Containers</h3>
-        </a>
-        <p class="mb-8 text-sm text-gray-600">
-            Deploy a Docker container to production in 5 minutes using your favorite orchestrator.
-        </p>
-        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/ecs-fargate" >}}">
-            Start Now
-        </a>
-    </div>
-    <div class="flex flex-col justify-between text-center h-full md:w-1/4 md:px-2 mb-12 md:mb-0">
-        <a href="{{< relref "/docs/tutorials/aws/rest-api" >}}">
-            <img class="inline-block w-24" src="/images/docs/icon-feature-serverless.svg">
-            <h3 class="no-anchor mt-2 mb-0">Serverless</h3>
-        </a>
-        <p class="mb-8 text-sm text-gray-600">
-            Stand up a serverless API or event handler in 5 minutes using a real lambda in code.
-        </p>
-        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/rest-api" >}}">
-            Start Now
-        </a>
-    </div>
-    <div class="flex flex-col justify-between text-center h-full md:w-1/4 md:px-2 mb-12 md:mb-0">
-        <a href="{{< relref "/docs/tutorials/aws/ec2-webserver" >}}">
-            <img class="inline-block w-24" src="/images/docs/icon-feature-data.svg">
-            <h3 class="no-anchor mt-2 mb-0">Infrastructure</h3>
-        </a>
-        <p class="mb-8 text-sm text-gray-600">
-            Manage cloud infrastructure or hosted services using infrastructure as code.
-        </p>
-        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/tutorials/aws/ec2-webserver" >}}">
-            Start Now
-        </a>
-    </div>
-    <div class="flex flex-col justify-between text-center h-full md:w-1/4 md:px-2">
-        <a href="{{< relref "/docs/get-started/kubernetes" >}}">
-            <img class="inline-block w-24" src="/images/docs/icon-feature-kubernetes.svg">
-            <h3 class="no-anchor mt-2 mb-0">Kubernetes</h3>
-        </a>
-        <p class="mb-8 text-sm text-gray-600">
-            Deploy and orchestrate cloud native Kubernetes services in real code, no YAML needed.
-        </p>
-        <a class="btn btn-sm btn-secondary" href="{{< relref "/docs/get-started/kubernetes" >}}">
-            Start Now
-        </a>
     </div>
 </div>
 

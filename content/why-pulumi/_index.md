@@ -5,6 +5,6 @@ meta_desc: "The Pulumi Platform is the easiest way for teams and individuals to 
 layout: why-pulumi
 menu:
     header:
-        weight: 2
+        weight: 5
         identifier: why
 ---
