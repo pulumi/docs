@@ -1,9 +1,10 @@
 ---
-heading: Program the cloud.
+heading: Modern Infrastructure as Code.
+
 
 subhead: >
-    **Modern infrastructure as code**. Create, deploy, and manage infrastructure on
-    any cloud, using your favorite language.
+    Use your favorite languages and tools. Empower your developers
+    and operators to work better together.
 
 ctas:
     - |
@@ -16,47 +17,86 @@ ctas:
 carousel:
     - heading: Create
       label: Create
-      description: >
-        Compose infrastructure as software, with the full power of real programming languages
-        &mdash; high-level abstractions, rich IDE integration, and cloud engineering
-        best-practices built in.
+      description: modern apps and infrastructure.
+      details:
+        - title: Real programming languages.
+          description: Define infrastructure in JavaScript, TypeScript, Python, or Go.
+        - title: Great tools.
+          description: Unlock access to your favorite IDEs, test frameworks, and tools.
+        - title: Share and reuse.
+          description: Codify best practices and share them with your team or a growing community of practitioners.
 
     - heading: Deploy
       label: Deploy
-      description: >
-        Various words about being able to deploy to any cloud, and the awesome CLI experience &mdash;
-        previews, diffs, logs, generators, secrets, outputs, and CI/CD, amounting to no more
-        than three lines.
+      description: to any cloud.
+      details:
+        - title: Many clouds, one workflow.
+          description: Use the same language, tools, and workflow, no matter the cloud.
+        - title: Collaborate.
+          description: Unify your approach to delivery between developers and operators.
+        - title: Easy continuous delivery.
+          description: >
+            Deploy from the CLI, or integrate with your favorite CI/CD
+            system, and review all changes before they are made.
 
     - heading: Manage
       label: Manage
-      description: >
-        Manage projects across multiple environments, do stuff with secrets and whatnot, histories, logs,
-        teams, RBAC, policies, integrations, resource visualizations, and additional awesomeness.
+      description: your team's projects and environments.
+      details:
+        - title: Tame complexity.
+          description: Deploy and gain visibility across all of your environments.
+        - title: Audit and secure.
+          description: >
+            Record a trail of who changed what, when, and why. Enforce infrastructure
+            and deployment policies using your identity provider of choice.
+        - title: Secrets management.
+          description: >
+            Easy, built-in encrypted configuration, keeping your secrets safe.
 
 quotes:
-    - name: Christian Nunciato
-      title: "@cnunciato"
-      avatar: https://avatars3.githubusercontent.com/u/274700?s=40&v=4
+    - name: Dinesh Ramamurthy
+      title: Engineering Manager, Mercedes-Benz Research and Development North America
+      logo: mercedes-benz-RDNA_logo.png
       body: >
-        Pulumi is totally the bee’s knees. I love JavaScript and building cloud apps with
-        Pulumi is so awesome, I can hardly contain myself. Srsly.
+        I needed a solution that cut across silos and gave our developers a tool they could use
+        themselves to provision infrastructure to suit their own immediate needs. The way Pulumi
+        solves the multi-cloud problem is exactly what I was looking for.
 
-    - name: Jane Something
-      title: Director of Engineering, Startuply
-      avatar: https://avatars3.githubusercontent.com/u/274700?s=40&v=4
+    - name: Harrison Heck
+      title: Head of DevOps, Linio
+      logo: linio_logo.png
       body: >
-        Our smallish team discovered Pulumi and just about fell in love with
-        how fantastic an experience it was and how well it allowed us to
-        collaborate in our totally typical startup situation.
+        As the largest eCommerce platform in Latin America, our infrastructure has to be highly
+        stable, well documented and agile. With Pulumi, we're able to develop new infrastructure,
+        change existing infrastructure and more with greater speed and reliability than we've ever
+        had before.
 
-    - name: Rad Northington
-      title: CTO, Intergalactic Planetary
-      avatar: https://avatars3.githubusercontent.com/u/274700?s=40&v=4
+    - name: Josh Imhoff
+      title: Site Reliability Engineer, Cockroach Labs
+      logo: cockroach-labs_logo.png
       body: >
-        As a huge multi-national conglomerate managing all of our
-        mission-critical infrastructure with Pulumi in production, we couldn’t
-        be happier. It’s nothing but bliss all over this place.
+        We are building a distributed-database-as-a-service product that runs on Kubernetes clusters
+        across multiple public clouds including GCP, AWS and others. Pulumi's declarative model,
+        the support support for real programming languages, and the uniform workflow on any cloud
+        make our SRE team much more efficient.
+
+    - name: Beyang Liu
+      title: CTO, Sourcegraph
+      logo: sourcegraph_logo.png
+      body: >
+        Sourcegraph uses Kubernetes heavily and Pulumi is a great tool that lets us work efficiently
+        with Kubernetes and support a rich set of configuration options for our customers' diverse
+        set of scaling, deployment, and end-user needs. Pulumi's infrastructure as code model makes
+        working on this stuff a joy.
+
+    - name: Pankaj Dhingra
+      title: Senior Director of Cloud Engineering, Tableau Software
+      avatar: tableau_logo.png
+      body: >
+        Our team was looking for an end-to-end solution to tame the complexity of Kubernetes on AWS
+        and ensure we adhere to AWS best practices. Pulumi has equipped our team to scale far better:
+        our delivery is now automated and we can now deliver new features with much faster turn-around.
+        Pulumi is key to our team's productivity.
 
 articles:
     - label: Start Simple

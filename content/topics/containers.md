@@ -6,25 +6,34 @@ url: /containers
 meta_desc: Pulumi provides a cloud native programming model for container management. Any code, any cloud, any app.
 
 hero:
-    title: Container Management with Pulumi
+    title: Manage Clusters and Deploy Containers with Ease
     body: >
-        Pulumi provides a cloud native programming model for container
-        management: deploy Docker to AWS Fargate, Microsoft ACI, and
-        Kubernetes.
+        Pulumi supports managing clusters and their associated infrastructure,
+        whether it is Kubernetes, Amazon ECS, Azure ACI, or Google GKE. Build
+        and deploy application containers to private registies, all in one
+        programming model.
 
 
         Any code, any cloud, any language.
     code: |
         // Deploy Nginx to AWS Fargate
-        import * as cloud from "@pulumi/cloud";
+        import * as awsx from "@pulumi/awsx";
 
-        let nginx = new cloud.Service("nginx", {
-            image: "nginx",
-            ports: [{ port: 80 }],
-            replicas: 2,
+        let web = new awsx.elb.ApplicationLoadBalancer(
+            "net-lb", { external: true }).
+            createListener("web", { port: 80, external: true });
+
+        let appService = new awsx.ecs.FargateService("nginx-svc", {
+            taskDefinitionArgs: {
+                container: {
+                    image: "nginx",
+                    portMappings: [ web ],
+                },
+            },
+            desiredCount: 5,
         });
 
-        export let url = nginx.defaultEndpoint;
+        export let url = web.endpoint.hostname;
 
 sections:
     - id: what-is-container-management
@@ -41,25 +50,30 @@ sections:
 examples:
     - title: Deploy Nginx to AWS Fargate
       body: >
-          In this example, Pulumi uses a multi-cloud <code>cloud.Service</code> object to pull the nginx
-          image from Docker Hub, and deploy it in a load-balanced way to AWS Fargate. Pulumi can
-          pull from any container registry.
+          In this example, Pulumi defines and uses a new Amazon ECS Fargate cluster, and creates
+          a load balanced service running the standard Nginx image from the Docker Hub. The same
+          experience is available on other clouds and Pulumi can pull from any container registry.
       code: |
-          // In Pulumi configuration
-          pulumi config set cloud-aws:useFargate true
-
           // Deploy Nginx to AWS Fargate
-          import * as cloud from "@pulumi/cloud";
+          import * as awsx from "@pulumi/awsx";
 
-          let nginx = new cloud.Service("nginx", {
-              image: "nginx",
-              ports: [{ port: 80 }],
-              replicas: 2,
+          let web = new awsx.elb.ApplicationLoadBalancer(
+              "net-lb", { external: true }).
+              createListener("web", { port: 80, external: true });
+
+          let appService = new awsx.ecs.FargateService("nginx-svc", {
+              taskDefinitionArgs: {
+                  container: {
+                      image: "nginx",
+                      portMappings: [ web ],
+                  },
+              },
+              desiredCount: 5,
           });
 
-          export let url = nginx.defaultEndpoint;
+          export let url = web.endpoint.hostname;
       cta:
-          url: /docs/tutorials/cloudfx/service
+          url: /docs/get-started
           label: GET STARTED
 
     - title: Deploying with a custom build
@@ -68,66 +82,59 @@ examples:
           <code>./www</code> directory into the nginx HTML target so that it will be served up.
       code: |
           // Using a custom build based on Nginx
-          import * as cloud from "@pulumi/cloud";
+          import * as awsx from "@pulumi/awsx";
 
-          let nginx = new cloud.Service("nginx", {
-              build: ".",
-              ports: [{ port: 80 }],
-              replicas: 2,
+          let web = new awsx.elb.ApplicationLoadBalancer(
+              "net-lb", { external: true }).
+              createListener("web", { port: 80, external: true });
+
+          const appService = new awsx.ecs.FargateService("nginx-svc", {
+              taskDefinitionArgs: {
+                  container: {
+                      image: awsx.ecs.Image.fromPath("app-img", "./www");
+                      portMappings: [ web ],
+                  },
+              },
+              desiredCount: 5,
           });
 
-          export let url = nginx.defaultEndpoint;
+          export const url = web.endpoint.hostname;
 
           // Dockerfile
           FROM nginx
           COPY ./www /usr/share/nginx/html
       cta:
-          url: /docs/tutorials/cloudfx/service
+          url: /docs/get-started
           label: GET STARTED
 
-    - title: Connecting containers
+    - title: Creating a Kubernetes cluster
       body: >
-          This example shows how we can connect containers using Pulumi &mdash; in this case Redis for a data store,
-          and a Python flask app for a front end. Using Pulumi, it is easy to obtain a reference to the container
-          objects, and connect them using code.
+          Pulumi can provision Kubernetes clusters &mdash; in this example, an AWS EKS cluster &mdash;
+          in addition to deploying application-level configuration, using a standard set of languages,
+          abstractions, and tools.
       code: |
-          import * as pulumi from "@pulumi/pulumi";
-          import * as cloud from "@pulumi/cloud";
+          import * as awsx from "@pulumi/awsx";
+          import * as eks from "@pulumi/eks";
 
-          // The data layer for the application
-          let redisCache = new cloud.Service("voting-app-cache", {
-              containers: {
-                  redis: {
-                      image: "redis:alpine",
-                      memory: 512,
-                      ports: [{ port: redisPort }],
-                      command: ["redis-server", "--requirepass", redisPassword],
-                  },
-              },
+          // Create a VPC for our cluster.
+          const vpc = new awsx.Network("vpc");
+
+          // Create the EKS cluster itself.
+          const cluster = new eks.Cluster("cluster", {
+              vpcId: vpc.vpcId,
+              subnetIds: vpc.subnetIds,
+              instanceType: "t2.medium",
+              desiredCapacity: 4,
+              minSize: 3,
+              maxSize: 5,
+              storageClasses: "gp2",
+              deployDashboard: true,
           });
 
-          let redisEndpoint = redisCache.endpoints.apply(endpoints => endpoints.redis[redisPort]);
-
-          // A custom container for the frontend, which is a Python Flask app
-          let frontend = new cloud.Service("voting-app-frontend", {
-              containers: {
-                  votingAppFrontend: {
-                      build: "./frontend",   // path to Dockerfile folder
-                      memory: 512,
-                      ports: [{ port: 80 }],
-                      environment: {
-                          // pass the Redis container info in environment variables
-                          "REDIS":      redisEndpoint.apply(e => e.hostname),
-                          "REDIS_PORT": redisEndpoint.apply(e => e.port.toString()),
-                          "REDIS_PWD":  redisPassword
-                      }
-                  },
-              },
-          });
-
-          export let frontendURL = frontend.endpoints.apply(e => e["votingAppFrontend"][80].hostname);
+          // Export the cluster's kubeconfig.
+          export const kubeconfig = cluster.kubeconfig;
       cta:
-          url: /docs/tutorials/cloudfx/service
+          url: /docs/get-started
           label: GET STARTED
 
     - title: Deploy containers to Microsoft ACI
@@ -160,7 +167,7 @@ examples:
               },
           });
       cta:
-          url: /docs/tutorials/cloudfx/service
+          url: /docs/get-started
           label: GET STARTED
 
     - title: Invoke a long-running container as a task
@@ -168,33 +175,53 @@ examples:
           This example shows a container used for executing a long-running task. Here, we use a container to
           perform a thumbnail extraction on a piece of video uploaded to an S3 bucket.
       code: |
-          let cloud = require("@pulumi/cloud-aws");
+          import * as aws from "@pulumi/aws";
+          import * as awsx from "@pulumi/awsx";
 
           // A bucket to store videos and thumbnails.
-          let videos = new cloud.Bucket("bucket");
+          const videos = new aws.s3.Bucket("bucket");
 
-          // A task which runs an FFMPEG transform to extract a thumbnail image.
-          let ffmpegThumbnailTask = new cloud.Task("ffmpegThumbTask", {
-              build: ".",
-              memoryReservation: 512,
+          // A task which runs a containerized FFMPEG job to extract a thumbnail image.
+          const ffmpegThumbnailTask = new awsx.ecs.FargateTaskDefinition("ffmpegThumbTask", {
+              container: {
+                  image: awsx.ecs.Image.fromPath("ffmpegThumbTask", "./docker-ffmpeg-thumb"),
+                  memoryReservation: 512,
+              },
           });
 
           // When a new video is uploaded, run the FFMPEG task on the video file.
-          videos.onPut("onNewVideo", args => {
-              let file = args.key;
-              ffmpegThumbnailTask.run({
-                  environment: {
-                      "S3_BUCKET":   videos.bucket.name.get(),
-                      "INPUT_VIDEO": file,
-                      "TIME_OFFSET": file.substring(file.indexOf('_')+1, file.indexOf('.')).replace('-',':'),
-                      "OUTPUT_FILE": file.substring(0, file.indexOf('_')) + '.jpg',
+          videos.onObjectCreated("onNewVideo",
+              new aws.lambda.CallbackFunction<aws.s3.BucketEvent, void>("onNewVideo", {
+                  // Specify appropriate policies so that this AWS lambda can run EC2 tasks.
+                  policies: [
+                      aws.iam.AWSLambdaFullAccess,
+                      aws.iam.AmazonEC2ContainerServiceFullAccess,
+                  ],
+                  callback: async bucketArgs => {
+                      for (const record of bucketArgs.Records) {
+                          const file = record.s3.object.key;
+                          const thumbnailFile = file.substring(0, file.indexOf('_')) + '.jpg';
+                          const framePos = file.substring(file.indexOf('_')+1, file.indexOf('.')).replace('-',':');
+                          await ffmpegThumbnailTask.run({
+                              overrides: {
+                                  containerOverrides: [{
+                                      name: "container",
+                                      environment: [
+                                          { name: "S3_BUCKET", value: bucketName.get() },
+                                          { name: "INPUT_VIDEO", value: file },
+                                          { name: "TIME_OFFSET", value: framePos },
+                                          { name: "OUTPUT_FILE", value: thumbnailFile },
+                                      ],
+                                  }],
+                              },
+                          });
+                      }
                   },
-              });
-          }, { keySuffix: ".mp4" });
+              }), { filterSuffix: ".mp4" });
 
-          exports.bucketName = videos.bucket.name;
+          exports.bucketName = videos.bucket;
       cta:
-          url: /docs/tutorials/cloudfx/service
+          url: /docs/get-started
           label: GET STARTED
 
 ---
