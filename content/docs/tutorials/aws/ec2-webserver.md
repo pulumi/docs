@@ -100,6 +100,7 @@ aws:region: (us-east-1)
     ```python
     import pulumi
     from pulumi_aws import ec2
+    ami = 'ami-0ff8a91507f77f867' # AMI for Amazon Linux in us-east-1 (Virginia)
 
     size = 't2.micro'
 
@@ -112,7 +113,7 @@ aws:region: (us-east-1)
     server = ec2.Instance('webserver-www',
         instance_type=size,
         security_groups=[group.name], # reference security group from above
-        ami='ami-0ff8a91507f77f867')
+        ami=ami)
 
     pulumi.export('publicIp', server.public_ip)
     pulumi.export('publicHostName', server.public_dns)
