@@ -907,8 +907,10 @@ func (e *emitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
 		return "interface"
 	case typeDocMethodNode:
 		return "method"
-	case typeDocExternalModuleNode, typeDocModuleNode:
+	case typeDocExternalModuleNode:
 		return "module"
+	case typeDocModuleNode:
+		return "namespace"
 	case typeDocPackageNode:
 		return "package"
 	case typeDocParameterNode:
