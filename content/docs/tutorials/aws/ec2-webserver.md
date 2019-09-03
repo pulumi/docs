@@ -100,7 +100,6 @@ aws:region: (us-east-1)
     ```python
     import pulumi
     from pulumi_aws import ec2
-    from ami import get_linux_ami
 
     size = 't2.micro'
 
