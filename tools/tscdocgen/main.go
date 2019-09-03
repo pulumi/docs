@@ -457,6 +457,12 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		} else {
 			link = modname
 		}
+
+		// Ensure the link has a trailing slash to avoid the S3 302 redirect dance.
+		if !strings.HasSuffix(link, "/") {
+			link = link + "/"
+		}
+
 		modules = append(modules, struct {
 			Name string
 			Link string
