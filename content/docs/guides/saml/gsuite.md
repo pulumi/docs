@@ -41,14 +41,16 @@ and logo, then click **Next**.
     ![Step 3: Name the application](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-3.png)
 
 1. In step 4, for the required **ACS URL** and **Entity ID** fields, enter the fully-qualified
-URLs of the `acs` and `metadata` endpoints of the Pulumi API, adjusted for your Pulumi organization name. 
+URLs of the `acs` and `metadata` endpoints of the Pulumi API, adjusted for your Pulumi organization name.
 {{< saml-warning >}}
-    For example, if your Pulumi organization is `acmecorp`, the values would be:
 
-    * ACS URL: `https://api.pulumi.com/login/<acmecorp>/sso/saml/acs`
-    * Entity ID: `https://api.pulumi.com/login/<acmecorp>/sso/saml/metadata`
-    * Start URL: `https://api.pulumi.com/login/<acmecorp>/sso`
-    * Name ID Format: `EMAIL` or `PERSISTENT`
+    | SAML Setting | Value    |
+    | --------------- | ----- |
+    | ACS URL | `https://api.pulumi.com/login/<acmecorp>/sso/saml/acs` |
+    | Entity ID | `https://api.pulumi.com/login/<acmecorp>/sso/saml/metadata` |
+    | Start URL | `https://api.pulumi.com/login/<acmecorp>/sso` |
+    | Name ID Format | `EMAIL` or `PERSISTENT` |
+
 
     ![Step 4: Provide ACS and metadata URLs](/images/docs/reference/service/saml-gsuite/gsuite-dialog-step-4.png)
 

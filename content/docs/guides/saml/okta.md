@@ -33,12 +33,12 @@ The next step is to configure the SAML application's settings.
 
 {{< saml-warning >}}
 
-| General Setting | Value |
+| SAML Setting | Value |
 | --------------- | ----- |
-| Single sign on URL | `https://api.pulumi.com/login/robot-co/sso/saml/acs` |
-| Audience URI | `https://api.pulumi.com/login/robot-co/sso/saml/metadata` |
-| Default relay state | `https://api.pulumi.com/login/robot-co/sso` |
-| Name ID format | EmailAddress or Persistent |
+| Single Sign-on URL | `https://api.pulumi.com/login/<acmecorp>/sso/saml/acs` |
+| Audience URI | `https://api.pulumi.com/login/<acmecorp>/sso/saml/metadata` |
+| Default Relay State | `https://api.pulumi.com/login/<acmecorp>/sso` |
+| Name ID Format | EmailAddress or Persistent |
 | App username | Email |
 
 > **Important:** Do not change the value of the Name ID Format once your users have started using Pulumi---not even switching its value between `EmailAddress` or `Persistent`.
