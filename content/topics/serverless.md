@@ -3,28 +3,37 @@ title: Serverless Programming with Pulumi
 layout: serverless
 url: /serverless
 
-meta_desc: Pulumi provides a cloud native programming model for serverless applications. Any code, any cloud, any app.
+meta_desc:
+    Pulumi makes serverless applications easy by letting you focus on business logic and managing
+    infrastructure in the same familiar language you're already writing your code in.
 
 hero:
-    title: Serverless Programming with Pulumi
+    title: Serverless In Just a Few Lines of Code
     body:
-        Pulumi provides a cloud native programming model for serverless
-        applications &mdash; from high-level multi-cloud, to fine-grained
-        cloud-specific libraries.
+        Pulumi makes serverless applications easy by letting you focus on business logic and managing
+        infrastructure in the same familiar language you're already writing your code in.
 
 
         Any code, any cloud, any language.
     code: |
         // Create a serverless REST API
-        import * as cloud from "@pulumi/cloud";
-
-        let app = new cloud.API("my-app");
-        app.static("/", "www");
+        import * as awsx from "@pulumi/awsx";
 
         // Serve a simple REST API at `GET /hello`.
-        app.get("/hello", (req, res) => res.json({ hello: "World!" }));
+        let app = new awsx.apigateway.API("my-app", {
+            routes: [{
+                path: "/hello",
+                method: "GET",
+                eventHandler: async (event) => {
+                    return {
+                        statusCode: 200,
+                        body: JSON.stringify({ hello: "World!" }),
+                    };
+                },
+            }],
+        });
 
-        export let url = app.publish().url;
+        export let url = app.url;
 
 sections:
     - id: what-is-serverless
@@ -46,30 +55,49 @@ examples:
           route has been hit. To implement this API, we need a DynamoDB table, an API endpoint,
           and a Lambda function.
       code: |
-          const cloud = require("@pulumi/cloud-aws");
+          import * as aws from "@pulumi/aws";
+          import * as awsx from "@pulumi/awsx";
 
           // Create a mapping from 'route' to a count.
-          let counterTable = new cloud.Table("counterTable", "route");
-
-          // Create an API endpoint.
-          let endpoint = new cloud.API("hello-world");
-
-          endpoint.get("/{route+}", (req, res) => {
-              let route = req.params["route"];
-              console.log(`Getting count for '${route}'`);
-
-              // Get previous value and increment
-              // reference outer `counterTable` object.
-              counterTable.get({ route }).then(value => {
-                  let count = (value && value.count) || 0;
-                  counterTable.insert({ route, count: ++count }).then(() => {
-                      res.status(200).json({ route, count });
-                      console.log(`Got count ${count} for '${route}'`);
-                  });
-              });
+          let counterTable = new aws.dynamodb.Table("counterTable", {
+              attributes: [{ name: "id", type: "S" }],
+              hashKey: "id",
+              readCapacity: 5,
+              writeCapacity: 5,
           });
 
-          exports.endpoint = endpoint.publish().url;
+          // Create an API endpoint.
+          let endpoint = new awsx.apigateway.API("hello-world", {
+              routes: [{
+                  path: "/{route+}",
+                  method: "GET",
+                  eventHandler: (req, res) => {
+                      let route = event.pathParameters!["route"];
+                      let client = new aws.sdk.DynamoDB.DocumentClient();
+
+                      // Get previous value and increment our table entry.
+                      let tableData = await client.get({
+                          TableName: counterTable.name.get(),
+                          Key: { id: route },
+                          ConsistentRead: true,
+                      }).promise();
+
+                      let value = tableData.Item;
+                      let count = (value && value.count) || 0;
+                      await client.put({
+                          TableName: counterTable.name.get(),
+                          Item: { id: route, count: ++count },
+                      }).promise();
+
+                      return {
+                          statusCode: 200,
+                          body: JSON.stringify({ route, count }),
+                      };
+                  },
+              }],
+          });
+
+          exports.endpoint = endpoint.url;
       cta:
           url: /docs/get-started
           label: GET STARTED
@@ -82,19 +110,18 @@ examples:
 
           This example sets up a storage bucket (using S3 on AWS) and a simple Lambda function to respond to new items being added to the bucket.
       code: |
-          const cloud = require("@pulumi/cloud-aws");
+          const aws = require("@pulumi/aws");
 
           // A storage bucket.
-          const bucket = new cloud.Bucket("bucket");
-          const bucketName = bucket.bucket.id;
+          const videos = new aws.s3.Bucket("bucket");
 
           // Trigger a Lambda function when something is added.
-          bucket.onPut("onNewVideo", bucketArgs => {
+          videos.onPut("onNewVideo", bucketArgs => {
               console.log(`*** New Item in Bucket`);
           }
 
           // Export the bucket name.
-          exports.bucketName = bucketName;
+          exports.bucketName = videos.bucket;
       cta:
           url: /docs/get-started
           label: GET STARTED
@@ -102,28 +129,27 @@ examples:
     - id: code-table
       title: Stash info into a document database
       body: >
-          This example uses a serverless timer that fetches the Hacker News homepage every hour and
-          stashes it into a document database, making use of Pulumi's ability to reference the
-          <code>cloud.table</code> object.
+          This example uses a serverless timer that fetches the Hacker News homepage every day at 8:30AM and
+          stashes it into a document database, making use of Pulumi's ability to reference resources
+          by capturing them inside of serverless lambdas.
       code: |
-          import * as cloud from "@pulumi/cloud";
+          const aws = require("@pulumi/aws");
 
-          let snapshots = new cloud.Table("snapshots");
+          const snapshots = new aws.dynamodb.Table("snapshots", {
+              attributes: [{ name: "id", type: "S", }],
+              hashKey: "id", billingMode: "PAY_PER_REQUEST",
+          });
 
-          cloud.timer.daily("daily-yc-snapshot",
-              { hourUTC: 0, minuteUTC: 0 }, () => {
-                  let req = require("https")
-                      .get("https://news.ycombinator.com", (res) => {
+          aws.cloudwatch.onSchedule("daily-yc-snapshot", "cron(30 8 * * ? *)", () => {
+              require("https").get("https://news.ycombinator.com", res => {
                   let content = "";
                   res.setEncoding("utf8");
-                  res.on("data", (chunk) => { content += chunk });
-                  res.on("end", () => {
-                      snapshots.insert({
-                          date: Date.now(), content: content
-                      });
-                  });
-              });
-              req.end();
+                  res.on("data", chunk => content += chunk);
+                  res.on("end", () => new aws.sdk.DynamoDB.DocumentClient().put({
+                      TableName: snapshots.name.get(),
+                      Item: { date: Date.now(), content },
+                  }).promise());
+              }).end();
           });
       cta:
           url: /docs/get-started
@@ -140,26 +166,21 @@ examples:
           There are several ways to schedule a timer, depending on your stylistic preferences. These
           examples simply print the current time to the console on a given interval.
       code: |
-          import * as cloud from "@pulumi/cloud";
+          import * as aws from "@pulumi/aws";
 
           // Run a timer every minute:
-          cloud.timer.interval("interval-timer", { minutes: 0 }, () => {
-              console.log(`interval-timer: ${Date.now()}`);
+          aws.cloudwatch.onSchedule("everyMinute", "rate(1 minute)", async (event) => {
+              console.log(`everyMinute: ${Date.now()}`);
           });
 
           // Run a timer every minute (cron-style expression):
-          cloud.timer.cron("cron-timer", "0 * * * * *", () => {
-              console.log(`cron-timer: ${Date.now()}`);
+          aws.cloudwatch.onSchedule("everyMinuteCron", "cron(0 * * * * *)", async (event) => {
+              console.log(`everyMinuteCron: ${Date.now()}`);
           });
 
           // Run a timer every day at 7:30 UTC:
-          cloud.timer.daily("daily-timer", { hourUTC: 7, minuteUTC: 30 }, () => {
-              console.log(`daily-timer: ${Date.now()}`);
-          });
-
-          // Run a timer at the 45th minute UTC of every hour:
-          cloud.timer.hourly("hourly-timer", { minuteUTC: 45 }, () => {
-              console.log(`hourly-timer: ${Date.now()}`);
+          aws.cloudwatch.onSchedule("everyDay730", "cron(30 7 * * ? *)", async (event) => {
+              console.log(`everyDay730: ${Date.now()}`);
           });
       cta:
           url: /docs/get-started
@@ -203,52 +224,27 @@ examples:
     - id: code-topic
       title: Subscribe to an SNS endpoint
       body: >
-          This example users a timer to trigger a notification which then recursively
-          triggers itself to countdown from 25..0 every five minutes.
-      code: |
-          import * as pulumi from "@pulumi/cloud";
-
-          let countDown = new pulumi.Topic("examples-countDown");
-
-          countDown.subscribe("watcher", async (num) => {
-              console.log(num);
-              if (num > 0) {
-                  await countDown.publish(num - 1);
-              }
-          });
-
-          pulumi.timer.interval("examples-heartbeat", {minutes: 5}, async () => {
-              await countDown.publish(25);
-          });
-      cta:
-          url: /docs/get-started
-          label: GET STARTED
-
-    - id: code-state-machine
-      title: Create state machines of functions
-      body: >
-          This example shows a very simple state machine using AWS Step Functions. When
-          executed the state machine steps will execute the 'Hello' and then 'World', steps
-          in order before exiting.
+          This example uses an SNS topic to hold a list of website URLs to crawl,
+          and does so everytime a new message arrives.
       code: |
           import * as aws from "@pulumi/aws";
-          import * as pulumi from "@pulumi/pulumi";
+          import * as fetch from "node-fetch";
 
-          const helloFunction = new aws.serverless.Function(
-              "helloFunction",
-              { role: lambdaRole },
-              (event, context, callback) => {
-                  callback(null, "Hello");
+          const topic = new aws.sns.Topic("sites-to-process-topic");
+          topic.onEvent("for-each-url", async (event) => {
+              const records = event.Records || [];
+              for (const record of records) {
+                  // Fetch the contents at the URL
+                  const url = record.Sns.Message;
+                  console.log(`${url}: Getting`);
+                  try {
+                      const res = await fetch.default(url);
+                  } catch (err) {
+                      console.log(`${url}: Failed to GET`);
+                      return;
+                  }
               }
-          );
-
-          const worldFunction = new aws.serverless.Function(
-              "worldFunction",
-              {role: lambdaRole},
-              (event, context, callback) => {
-                  callback(null, `${event} World!`);
-              }
-          );
+          });
       cta:
           url: /docs/get-started
           label: GET STARTED

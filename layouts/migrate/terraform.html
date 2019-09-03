@@ -4,18 +4,43 @@
             <div class="header-hero-item">
                 <h1>Migrating to Pulumi from Terraform</h1>
                 <p>
-                    HashiCorp Terraform provides a custom DSL called Hashicorp
-                    Configuration Language (HCL) to describe and provision infrastructure
-                    resources on Terraform providers.
+                    Terraform uses a proprietary DSL called HCL to describe and provision
+                    infrastructure resources.
                 </p>
                 <p>
-                    Pulumi enables you to describe the same infrastructure resources as
-                    real code, providing huge productivity gains, and has deep support for
-                    cloud native technologies such as Kubernetes and serverless
-                    programming.
+                    In Pulumi, you describe infrastructure using familiar
+                    languages and tools, providing productivity gains, better abstraction
+                    and reuse, and developer approachability &mdash; while still supporting
+                    robust infrastructure as code provisioning across many clouds.
                 </p>
+                <section class="container text-center max-w-2xl">
+                    <div class="header-hero-actions rounded bg-purple-700 py-8 px-16" style="flex-direction: column">
+                        <h3 class="text-gray-300">Automating your migration</h3>
+                        <ul>
+                            <li class="text-orange-500 my-4">
+                                <span class="-ml-4">→</span>
+                                <strong>Coexist</strong>
+                                <a href="{{ relref . "/blog/using-terraform-remote-state-with-pulumi" }}" class="link
+                                    text-blue-400">with Terraform, by using remote state from Pulumi</a>
+                            </li>
+                            <li class="text-orange-500 my-4">
+                                <span class="-ml-4">→</span>
+                                <strong>Convert</strong>
+                                <a href="{{ relref . "/blog/from-terraform-to-infrastructure-as-software" }}"
+                                    class="link text-blue-400">HCL to Pulumi code</a>
+                            </li>
+                            <li class="text-orange-500 my-4">
+                                <span class="-ml-4">→</span>
+                                <strong>Adopt</strong>
+                                <a href="{{ relref . "/blog/adopting-existing-cloud-resources-into-pulumi" }}"
+                                    class="link text-blue-400">existing resource state into Pulumi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </div>
             <div class="header-hero-item">
+                <h2 class="text-gray-300">Need help converting?</h2>
                 {{ partial "hubspot-form.html" (dict "hubspotFormID" "123cfbdb-9ce4-4d33-a9b7-c30302463d7a") }}
             </div>
         </div>
@@ -24,12 +49,11 @@
 
 {{ define "main" }}
     <nav class="nav-section-sticky">
-        <div class="container mx-auto">
+        <div class="container mx-auto uppercase">
             <ul>
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#code">Code</a></li>
                 <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#case-study">Case Study</a></li>
                 <li><a href="#get-started">Get Started</a></li>
                 <li><a href="#contact-us">Contact Us</a></li>
             </ul>
