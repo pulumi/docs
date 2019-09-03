@@ -3,7 +3,7 @@ title: Languages
 menu:
   intro:
     identifier: languages
-    weight: 4
+    weight: 5
 
 aliases: ["/docs/reference/languages/"]
 ---
