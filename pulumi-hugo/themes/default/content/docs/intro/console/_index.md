@@ -3,7 +3,7 @@ title: Pulumi Console
 menu:
   intro:
     identifier: console
-    weight: 1
+    weight: 3
 no_on_this_page: true
 aliases: [/docs/reference/service]
 ---
