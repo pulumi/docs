@@ -73,6 +73,10 @@ body {
 }
 
 .nav-main {
+    z-index: 1000000;
+    @screen md {
+        @apply px-0 sticky top-0;
+    }
     a {
         @include transition;
     }

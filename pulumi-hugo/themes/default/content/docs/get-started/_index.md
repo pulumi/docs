@@ -10,7 +10,6 @@ aliases: ["/docs/quickstart/"]
 ---
 
 <div class="flex max-w-2xl">
-
     <p class="text-xl leading-loose text-gray-600">
         Step-by-step guides for creating, deploying, and managing infrastructure with
         Pulumi on the cloud using your favorite language

@@ -1,11 +1,7 @@
 nav {
 
     &.nav-section-sticky {
-        @apply bg-black text-base text-white px-4;
-
-        @screen md {
-            @apply px-0 sticky top-0;
-        }
+        @apply bg-purple-900 text-base text-white px-4;
 
         ul {
             @apply flex list-none justify-around items-center flex-wrap text-sm py-2 p-0;
