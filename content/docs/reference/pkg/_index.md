@@ -12,7 +12,7 @@ as higher-level APIs that make it easier to deliver cloud applications and
 infrastructure.
 
 These APIs are available as packages in your chosen language's package manager
-&mdash; npm for TypeScript/JavaScript and PyPI for Python. There is a dedicated package for
+---npm for TypeScript/JavaScript and PyPI for Python. There is a dedicated package for
 each cloud that includes access to its full capabilities. In addition, Pulumi
 offers many convenience packages that make common tasks easier, like setting
 up a network, creating a Kubernetes cluster, and building and publishing containers
@@ -24,7 +24,7 @@ to private registries.
 
 ### General Purpose Packages
 
-The Pulumi SDK package is used for accessing the core programming model around resources, configuration, etc.
+The Pulumi SDK package is used for accessing the core programming model around resources, configuration, and other components
 directly. Additional general purpose packages can be used across all cloud platforms:
 
 {{% lang nodejs %}}
@@ -94,7 +94,7 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 ### Cloud-Agnostic Packages
 
 {{% lang nodejs %}}
-Pulumi offers a highly productive, cloud-agnostic package for container and serverless oriented programming in the
+Pulumi offers a highly productive, cloud-agnostic package for container and serverless programming in the
 `@pulumi/cloud` package which currently allows writing applications once and deploying to either AWS or Azure.
 
 * [**Pulumi Cloud Framework** (`@pulumi/cloud`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/cloud" >}})
