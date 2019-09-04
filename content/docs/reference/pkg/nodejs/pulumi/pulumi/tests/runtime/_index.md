@@ -18,14 +18,14 @@ title: Module tests/runtime
 <li><a href="#exportedValue">const exportedValue</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi/blob/809c91c0045ddeeeadf50bafcbeb57cadac30226/sdk/nodejs/tests/runtime/tsClosureCases.ts">tests/runtime/tsClosureCases.ts</a> 
+<a href="https://github.com/pulumi/pulumi/blob/aee0b42692e3906234fe2a5e1e39e12f9a2844da/sdk/nodejs/tests/runtime/tsClosureCases.ts">tests/runtime/tsClosureCases.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="exportedValue">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/809c91c0045ddeeeadf50bafcbeb57cadac30226/sdk/nodejs/tests/runtime/tsClosureCases.ts#L38">const <b>exportedValue</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi/blob/aee0b42692e3906234fe2a5e1e39e12f9a2844da/sdk/nodejs/tests/runtime/tsClosureCases.ts#L38">const <b>exportedValue</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>const</span> exportedValue: 42 = <span class='s2'>42</span>;</pre>
