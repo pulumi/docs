@@ -35,6 +35,15 @@ import * as {{PackageVar}} from "{{Package}}";
 </ul>
 {{/HasModules}}
 
+{{#Namespaces}}
+<h3>namespace <strong>{{{Name}}}</strong></h3>
+<ul class="api clearfix">
+{{#Members}}
+<li><a href="#{{{Name}}}"><span class="symbol api"></span>{{{Name}}}</a></li>
+{{/Members}}
+</ul>
+{{/Namespaces}}
+
 {{#HasResources}}
 <h3>Resources</h3>
 <ul class="api clearfix">
@@ -61,6 +70,13 @@ import * as {{PackageVar}} from "{{Package}}";
 {{/Others}}
 </ul>
 {{/HasOthers}}
+
+{{#Namespaces}}
+<h2 id="{{{Name}}}" data-link-title="{{{Name}}}">namespace <strong>{{{Name}}}</strong></h2>
+{{#Members}}
+{{>member}}
+{{/Members}}
+{{/Namespaces}}
 
 {{#HasResources}}
 <h2 id="resources">Resources</h2>

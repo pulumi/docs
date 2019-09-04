@@ -455,6 +455,9 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		return modules[i].Name < modules[j].Name
 	})
 
+	var namespaces []namespace
+	namespaces, members = e.gatherNamespaces(members, "")
+
 	// Split members between resources, data sources, and others...
 	var resources []*typeDocNode
 	var dataSources []*typeDocNode
@@ -483,6 +486,8 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		"HasModules":                len(modules) > 0,
 		"Members":                   members,
 		"HasMembers":                len(members) > 0,
+		"Namespaces":                namespaces,
+		"HasNamespaces":             len(namespaces) > 0,
 		"Resources":                 resources,
 		"HasResources":              len(resources) > 0,
 		"DataSources":               dataSources,
@@ -501,6 +506,32 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		}
 	}
 	return nil
+}
+
+func (e *emitter) gatherNamespaces(nodes []*typeDocNode, prefix string) ([]namespace, []*typeDocNode) {
+	var namespaces []namespace
+	var members []*typeDocNode
+	for _, node := range nodes {
+		if node.Kind == typeDocModuleNode {
+			name := fmt.Sprintf("%s%s", prefix, node.Name)
+			ns, mems := e.gatherNamespaces(node.Children, fmt.Sprintf("%s.", name))
+			if len(mems) > 0 {
+				namespaces = append(namespaces, namespace{
+					Name:    name,
+					Members: mems,
+				})
+			}
+			namespaces = append(namespaces, ns...)
+		} else {
+			members = append(members, node)
+		}
+	}
+	return namespaces, members
+}
+
+type namespace struct {
+	Name    string
+	Members []*typeDocNode
 }
 
 var resourceBaseTypes = map[string]bool{
