@@ -1,15 +1,14 @@
-<h3 class="pdoc-member-header" id="{{AnchorName}}">
+<h4 class="pdoc-member-header" id="{{AnchorName}}">
 <a class="pdoc-child-name" href="{{RepoURL}}/{{URLPath}}">{{{Label}}} <b>{{{Name}}}</b></a>
-</h3>
-<div class="pdoc-member-contents">
+</h4>
+
 {{#CodeDetails}}
-<pre class="highlight">{{{CodeDetails}}}</pre>
+<pre class="highlight"><code>{{{CodeDetails}}}</code></pre>
 {{/CodeDetails}}
 {{#Signatures}}
 
-<pre class="highlight">{{{Label}}}</pre>
+<pre class="highlight"><code>{{{Label}}}</code></pre>
 
-{{=<% %>=}}{{% md %}}<%={{ }}=%>
 {{#Comment.ShortText}}
 
 {{{Comment.ShortText}}}
@@ -23,21 +22,17 @@
 * `{{Name}}` {{Comment.ShortText}}
 {{/Comment.ShortText}}
 {{/Parameters}}
-{{=<% %>=}}{{% /md %}}<%={{ }}=%>
 {{/Signatures}}
 {{^Signatures}}
 {{#Comment.ShortText}}
-{{=<% %>=}}{{% md %}}<%={{ }}=%>
 
 {{{Comment.ShortText}}}
 
 {{#Comment.Text}}
 {{{Comment.Text}}}
 {{/Comment.Text}}
-{{=<% %>=}}{{% /md %}}<%={{ }}=%>
 {{/Comment.ShortText}}
 {{/Signatures}}
 {{#Children}}
 {{>child}}
 {{/Children}}
-</div>

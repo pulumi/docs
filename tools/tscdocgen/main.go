@@ -24,6 +24,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strings"
 	"unicode"
@@ -265,6 +266,16 @@ func getRepoURL(pkgRepoDir, githash string) string {
 	return fmt.Sprintf("https://github.com/pulumi/%s/blob/%s/%s", repo, githash, dir)
 }
 
+var (
+	h3RE = regexp.MustCompile(`(?m)^### `)
+	h2RE = regexp.MustCompile(`(?m)^## `)
+)
+
+const (
+	h4 = "#### "
+	h5 = "##### "
+)
+
 // augmentNode recurses throughout a tree AST, adding information that we'll need when translating it to Markdown.
 func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) {
 	// Add some labels.
@@ -275,6 +286,18 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 	node.Label = e.createLabel(node, parent)
 	node.CodeDetails = e.createCodeDetails(node)
 	node.URLPath = getURLPath(node, parent)
+
+	if isResource(node) {
+		node.IsResource = true
+	} else if isDataSource(node) {
+		node.IsDataSource = true
+	}
+
+	// Convert <h3>'s to be <h5>'s, and <h2>'s to be <h4>'s.
+	node.Comment.ShortText = h3RE.ReplaceAllString(node.Comment.ShortText, h5)
+	node.Comment.Text = h3RE.ReplaceAllString(node.Comment.Text, h5)
+	node.Comment.ShortText = h2RE.ReplaceAllString(node.Comment.ShortText, h4)
+	node.Comment.Text = h2RE.ReplaceAllString(node.Comment.Text, h4)
 
 	// In K8S docs, ShortText can contain placeholder references that look like HTML tags.
 	// We need to replace those with the HTML-encoded characters.
@@ -291,26 +314,6 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 		// of the < and > characters alone.
 		node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, "<", "&lt;")
 		node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, ">", "&gt;")
-	}
-
-	// If this extends or implements other types, render them.
-	if len(node.ExtendedTypes) > 0 {
-		node.Extends = "<span class='kd'>extends</span> "
-		for i, ext := range node.ExtendedTypes {
-			if i > 0 {
-				node.Extends += ", "
-			}
-			node.Extends += e.createTypeLabel(ext, 0)
-		}
-	}
-	if len(node.ImplementedTypes) > 0 {
-		node.Implements = "<span class='kd'>implements</span> "
-		for i, impl := range node.ImplementedTypes {
-			if i > 0 {
-				node.Implements += ", "
-			}
-			node.Implements += e.createTypeLabel(impl, 0)
-		}
 	}
 
 	// Augment everything deeply.
@@ -374,52 +377,24 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	// First a title and some additional package header info, for the root module.
 	var title string
+	var linktitle string
 	var pkg string
 	var pkgvar string
 	var readme string
-	var breadcrumbs []string
 
 	if root {
 		title = fmt.Sprintf("Package %s", e.pkg)
+		linktitle = e.pkg
 		pkg = e.pkg
 		pkgvar = camelCase(e.pkg[strings.IndexRune(e.pkg, '/')+1:])
 		readme = filepath.Join(e.srcdir, "README.md")
 	} else {
 		title = fmt.Sprintf("Module %s", name)
 		readme = filepath.Join(e.srcdir, name, "README.md")
-
-		// Create the breadcrumb links (in LIFO order).  First, add the current module name.
-		var simplename string
-		if slix := strings.IndexRune(name, '/'); slix != -1 {
-			simplename = name[slix+1:]
-		} else {
-			simplename = name
+		linktitle = name
+		if slix := strings.IndexRune(linktitle, '/'); slix != -1 {
+			linktitle = linktitle[slix+1:]
 		}
-		breadcrumbs = append(breadcrumbs, simplename)
-
-		// Now split the parent and walk it in reverse, prepending all of the parent links.
-		parts := strings.Split(getModuleParentName(name), "/")
-		crumbs := ".."
-		for i := len(parts) - 1; i >= 0; i-- {
-			name := parts[i]
-			if i == 0 && name == rootModule {
-				// we will add the root after this loop, no need to be redundant.
-				break
-			}
-
-			breadcrumbs = append(
-				[]string{fmt.Sprintf("<a href=\"%s/\">%s</a> &gt; ", crumbs, name)},
-				breadcrumbs...)
-			if crumbs != "" {
-				crumbs += string(filepath.Separator)
-			}
-			crumbs += ".."
-		}
-
-		// Finally, add the link to the root module.
-		breadcrumbs = append(
-			[]string{fmt.Sprintf("<a href=\"%s/\">%s</a> &gt; ", crumbs, e.pkg)},
-			breadcrumbs...)
 	}
 
 	// See if there is a README.md file and, if so, include it as the package's comment.
@@ -447,7 +422,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	// Ensure the files, members, and children (deeply throughout the tree) are sorted deterministically.
 	sort.Strings(files)
-	transitiveSortByLabels(members)
+	transitiveSortNodes(members, false /*sortByLabel*/)
 
 	// Get any submodules, make relative links, and ensure they are also sorted in a deterministic order.
 	var modules []struct {
@@ -462,6 +437,12 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		} else {
 			link = modname
 		}
+
+		// Ensure the link has a trailing slash to avoid the S3 302 redirect dance.
+		if !strings.HasSuffix(link, "/") {
+			link = link + "/"
+		}
+
 		modules = append(modules, struct {
 			Name string
 			Link string
@@ -474,20 +455,46 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 		return modules[i].Name < modules[j].Name
 	})
 
+	var namespaces []namespace
+	namespaces, members = e.gatherNamespaces(members, "")
+
+	// Split members between resources, data sources, and others...
+	var resources []*typeDocNode
+	var dataSources []*typeDocNode
+	var others []*typeDocNode
+	for _, member := range members {
+		if member.IsResource {
+			resources = append(resources, member)
+		} else if member.IsDataSource {
+			dataSources = append(dataSources, member)
+		} else {
+			others = append(others, member)
+		}
+	}
+
 	// To generate the code, simply render the source Mustache template, using the right set of arguments.
 	if err = indexTemplate.FRender(f, map[string]interface{}{
-		"Title":          title,
-		"Breadcrumbs":    breadcrumbs,
-		"RepoURL":        e.repoURL,
-		"Package":        pkg,
-		"PackageName":    e.pkgname,
-		"PackageComment": string(pkgcomm),
-		"PackageVar":     pkgvar,
-		"Files":          files,
-		"Modules":        modules,
-		"HasModules":     len(modules) > 0,
-		"Members":        members,
-		"HasMembers":     len(members) > 0,
+		"Title":                     title,
+		"LinkTitle":                 linktitle,
+		"RepoURL":                   e.repoURL,
+		"Package":                   pkg,
+		"PackageName":               e.pkgname,
+		"PackageComment":            string(pkgcomm),
+		"PackageVar":                pkgvar,
+		"Files":                     files,
+		"Modules":                   modules,
+		"HasModules":                len(modules) > 0,
+		"Members":                   members,
+		"HasMembers":                len(members) > 0,
+		"Namespaces":                namespaces,
+		"HasNamespaces":             len(namespaces) > 0,
+		"Resources":                 resources,
+		"HasResources":              len(resources) > 0,
+		"DataSources":               dataSources,
+		"HasDataSources":            len(dataSources) > 0,
+		"HasResourcesOrDataSources": len(resources) > 0 || len(dataSources) > 0,
+		"Others":                    others,
+		"HasOthers":                 len(others) > 0,
 	}); err != nil {
 		return err
 	}
@@ -501,6 +508,81 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 	return nil
 }
 
+func (e *emitter) gatherNamespaces(nodes []*typeDocNode, prefix string) ([]namespace, []*typeDocNode) {
+	var namespaces []namespace
+	var members []*typeDocNode
+	for _, node := range nodes {
+		if node.Kind == typeDocModuleNode {
+			name := fmt.Sprintf("%s%s", prefix, node.Name)
+			ns, mems := e.gatherNamespaces(node.Children, fmt.Sprintf("%s.", name))
+			if len(mems) > 0 {
+				namespaces = append(namespaces, namespace{
+					Name:    name,
+					Members: mems,
+				})
+			}
+			namespaces = append(namespaces, ns...)
+		} else {
+			members = append(members, node)
+		}
+	}
+	return namespaces, members
+}
+
+type namespace struct {
+	Name    string
+	Members []*typeDocNode
+}
+
+var resourceBaseTypes = map[string]bool{
+	"Resource":          true,
+	"CustomResource":    true,
+	"ProviderResource":  true,
+	"ComponentResource": true,
+}
+
+// isResource returns true if the node is an exported class that extends a type named `Resource`, `CustomResource`,
+// `ProviderResource`, or `ComponentResource`.
+func isResource(node *typeDocNode) bool {
+	if node.Kind != typeDocClassNode || !node.Flags.IsExported {
+		return false
+	}
+
+	if node.Name == "Resource" {
+		return true
+	}
+
+	if len(node.ExtendedTypes) == 0 {
+		return false
+	}
+
+	for _, t := range node.ExtendedTypes {
+		if t.Type == typeDocReferenceType && resourceBaseTypes[t.Name] {
+			return true
+		}
+	}
+
+	return false
+}
+
+// isDataSource returns true if the node is an exported function with a name that starts with lowercase "get" and has
+// a `pulumi.InvokeOptions` parameter.
+func isDataSource(node *typeDocNode) bool {
+	if node.Kind != typeDocFunctionNode || !node.Flags.IsExported || !strings.HasPrefix(node.Name, "get") ||
+		len(node.Signatures) != 1 || len(node.Signatures[0].Parameters) == 0 {
+		return false
+	}
+
+	// If there's a `pulumi.InvokeOptions` parameter, consider it a data source.
+	for _, p := range node.Signatures[0].Parameters {
+		if p.Type != nil && p.Type.Type == typeDocReferenceType && p.Type.Name == "pulumi.InvokeOptions" {
+			return true
+		}
+	}
+
+	return false
+}
+
 // labelSorter sorts nodes with labels alphabetically.
 func labelSorter(nodes []*typeDocNode) func(i, j int) bool {
 	return func(i, j int) bool {
@@ -511,14 +593,23 @@ func labelSorter(nodes []*typeDocNode) func(i, j int) bool {
 	}
 }
 
-// transitiveSortByLabels sorts an array of nodes and their children, deeply.
-func transitiveSortByLabels(nodes []*typeDocNode) {
-	// First sort the nodes themselves.
-	sort.SliceStable(nodes, labelSorter(nodes))
+// transitiveSortNodes sorts an array of nodes and their children, deeply.
+func transitiveSortNodes(nodes []*typeDocNode, sortByLabel bool) {
+	if sortByLabel {
+		// Sort the nodes themeselves by label.
+		sort.SliceStable(nodes, labelSorter(nodes))
+	} else {
+		// Sort the nodes themselves using a case-insensitive sort.
+		sort.SliceStable(nodes, func(i, j int) bool {
+			return strings.ToLower(nodes[i].Name) < strings.ToLower(nodes[j].Name)
+		})
+	}
 
-	// And now their children, deeply. Note that we use a stable sort because some children don't have labels.
+	// And now their children, deeply. If the node type is a class or interface, sort by label,
+	// so that constructors come first, all properties are grouped together, etc.
 	for _, node := range nodes {
-		transitiveSortByLabels(node.Children)
+		sortByLabel := node.Kind == typeDocClassNode || node.Kind == typeDocInterfaceNode
+		transitiveSortNodes(node.Children, sortByLabel)
 	}
 }
 
@@ -850,8 +941,10 @@ func (e *emitter) createLabel(node *typeDocNode, parent *typeDocNode) string {
 		return "interface"
 	case typeDocMethodNode:
 		return "method"
-	case typeDocExternalModuleNode, typeDocModuleNode:
+	case typeDocExternalModuleNode:
 		return "module"
+	case typeDocModuleNode:
+		return "namespace"
 	case typeDocPackageNode:
 		return "package"
 	case typeDocParameterNode:
@@ -974,6 +1067,32 @@ func (e *emitter) createCodeDetails(node *typeDocNode) string {
 			label += " = <span class='s2'>" + html.EscapeString(*node.DefaultValue) + "</span>"
 		}
 		return label + ";"
+
+	case typeDocClassNode, typeDocInterfaceNode:
+		label := fmt.Sprintf("<span class='kr'>%s</span> <span class='nx'>%s</span>",
+			e.createLabel(node, nil), node.Name)
+
+		// If this extends or implements other types, render them.
+		if len(node.ExtendedTypes) > 0 {
+			label += " <span class='kr'>extends</span> "
+			for i, ext := range node.ExtendedTypes {
+				if i > 0 {
+					label += ", "
+				}
+				label += e.createTypeLabel(ext, 0)
+			}
+		}
+		if len(node.ImplementedTypes) > 0 {
+			label = " <span class='kr'>implements</span> "
+			for i, impl := range node.ImplementedTypes {
+				if i > 0 {
+					label += ", "
+				}
+				label += e.createTypeLabel(impl, 0)
+			}
+		}
+		return label
+
 	default:
 		return ""
 	}
@@ -1022,7 +1141,8 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 				return fmt.Sprintf(
 					"/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
 			case "ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
-				"ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs", "Resource", "ResourceOptions", "URN":
+				"ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs", "Resource", "ResourceOptions", "URN",
+				"ProviderResource":
 				return fmt.Sprintf(
 					"/docs/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
 			}
@@ -1231,10 +1351,10 @@ type typeDocNode struct {
 	CodeDetails string
 	// URLPath is the path to this member in the relevant Git repi.  It's augmented information.
 	URLPath string
-	// Extends is a rendered type this type inherits from (or empty if none).
-	Extends string
-	// Implements is a rendered list of interfaces this type implements (if any, or empty if none).
-	Implements string
+	// IsResource is true if the node represents a Pulumi resource.
+	IsResource bool
+	// IsDataSource is true if the node represents a Pulumi data source.
+	IsDataSource bool
 }
 
 type typeDocFlags struct {

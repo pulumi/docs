@@ -79,6 +79,7 @@ class CreateMarkdownInput(NamedTuple):
     The CreateMarkdownInput is the input to create_markdown_file.
     """
     title: str
+    linktitle: str
     """
     Sphinx output file, to be used as the source of data to derive a Markdown file. It is technically
            JSON but in reality it's a JSON object with a "body" property that's filled with HTML.
@@ -267,6 +268,7 @@ def transform_sphinx_output_to_markdown(ctx: Context):
         # If this thing has submodules, provider_sphinx_output is a directory and it exists.
         if path.exists(provider_sphinx_output):
             create_markdown_input = CreateMarkdownInput(title=f"Package {provider.package_name}",
+                                                        linktitle=provider.package_name,
                                                         file=f"{provider_sphinx_output}.fjson",
                                                         out_file=path.join(provider_path, "_index.md"))
             create_markdown_file(create_markdown_input)
@@ -285,11 +287,13 @@ def transform_sphinx_output_to_markdown(ctx: Context):
                     module_path = create_dir(provider_path, module_name)
 
                 create_markdown_input = CreateMarkdownInput(title=f"Module {module_name}",
+                                                            linktitle=module_name,
                                                             file=file,
                                                             out_file=path.join(module_path, "_index.md"))
                 create_markdown_file(create_markdown_input)
         else:
             create_markdown_input = CreateMarkdownInput(title=f"Package {provider.package_name}",
+                                                        linktitle=provider.package_name,
                                                         file=f"{provider_sphinx_output}.fjson",
                                                         out_file=path.join(provider_path, "_index.md"))
             # Otherwise, just drop an _index.md in the provider directory.
@@ -317,6 +321,7 @@ def create_markdown_file(input: CreateMarkdownInput):
         # First, write some empty front-matter at the beginning of the file.
         f.write("---\n")
         f.write(f"title: {input.title}\n")
+        f.write(f"linktitle: {input.linktitle}\n")
         f.write("---\n\n")
         # The "body" property of Sphinx's JSON is basically the rendered HTML of the documentation on this page. We're
         # going to slam it verbatim into a file and call it Markdown, because we're professionals.

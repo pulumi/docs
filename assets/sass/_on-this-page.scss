@@ -9,8 +9,12 @@
         @apply p-0 list-none;
 
         // Extra padding for H3s.
-        li.h3 {
-            @apply ml-4;
+        li {
+            @apply truncate;
+
+            &.h3 {
+                @apply ml-2;
+            }
         }
     }
 }
