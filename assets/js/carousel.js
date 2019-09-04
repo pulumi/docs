@@ -40,11 +40,9 @@
             .css("pointer-events", "auto");
 
         $(".carousel-item-label")
-            .removeClass("underline")
-            .removeClass("text-purple-700")
+            .removeClass("bg-purple-700")
             .eq(i)
-            .addClass("underline")
-            .addClass("text-purple-700");
+            .addClass("bg-purple-700");
 
         if (i === 0) {
             showIDE();
