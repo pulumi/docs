@@ -1,0 +1,10 @@
+id = "dan-hernandez"
+name = "Dan Hernandez"
+title = "Customer Engineer"
+weight = 1
+
+status = "active"
+
+[social]
+linkedin = "danfhernandez"
+twitter = "danfhernandez"
