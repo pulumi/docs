@@ -23,19 +23,19 @@ title: Module yaml
 <li><a href="#ConfigOpts">interface ConfigOpts</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts">yaml/yaml.ts</a> 
+<a href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts">yaml/yaml.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="CollectionComponentResource">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L198">class <b>CollectionComponentResource</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L198">class <b>CollectionComponentResource</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResource'>ComponentResource</a></pre>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L199"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L199"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -45,7 +45,7 @@ title: Module yaml
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-getCustomResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2229">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2229">method <b>getCustomResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -66,7 +66,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L198">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L198">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -76,11 +76,11 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-getResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L213">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L213">method <b>getResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 
@@ -91,97 +91,97 @@ For example:
 
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfigurationList'>MutatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfigurationList'>MutatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfiguration'>ValidatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfiguration'>ValidatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfigurationList'>ValidatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfigurationList'>ValidatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinition&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinition'>CustomResourceDefinition</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinition&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinition'>CustomResourceDefinition</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinitionList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinitionList'>CustomResourceDefinitionList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinitionList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinitionList'>CustomResourceDefinitionList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -192,7 +192,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-getResourceProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L575">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L575">method <b>getResourceProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -222,22 +222,22 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhook'>outputs.admissionregistration.v1beta1.MutatingWebhook</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhook'>MutatingWebhook</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhook'>outputs.admissionregistration.v1beta1.MutatingWebhook</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhook'>MutatingWebhook</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -252,12 +252,12 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhookConfiguration'>outputs.admissionregistration.v1beta1.MutatingWebhookConfiguration</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhookConfiguration'>outputs.admissionregistration.v1beta1.MutatingWebhookConfiguration</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -272,12 +272,12 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -308,7 +308,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L198">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L198">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -322,7 +322,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L198">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L198">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -332,13 +332,13 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L199">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L199">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>pulumi.CustomResource</a>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>}&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="CollectionComponentResource-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L198">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L198">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -351,7 +351,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigFile">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2273">class <b>ConfigFile</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2273">class <b>ConfigFile</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CollectionComponentResource'>CollectionComponentResource</a></pre>
@@ -362,7 +362,7 @@ is not specified, `ConfigFile` assumes the argument `name` is the filename.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigFile-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2273"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2273"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -372,7 +372,7 @@ is not specified, `ConfigFile` assumes the argument `name` is the filename.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-getCustomResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2229">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2229">method <b>getCustomResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -393,7 +393,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2273">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2273">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -403,11 +403,11 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-getResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L213">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L213">method <b>getResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 
@@ -418,97 +418,97 @@ For example:
 
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfigurationList'>MutatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfigurationList'>MutatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfiguration'>ValidatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfiguration'>ValidatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfigurationList'>ValidatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfigurationList'>ValidatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinition&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinition'>CustomResourceDefinition</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinition&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinition'>CustomResourceDefinition</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinitionList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinitionList'>CustomResourceDefinitionList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinitionList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinitionList'>CustomResourceDefinitionList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -519,7 +519,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-getResourceProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L575">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L575">method <b>getResourceProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -549,22 +549,22 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhook'>outputs.admissionregistration.v1beta1.MutatingWebhook</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhook'>MutatingWebhook</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhook'>outputs.admissionregistration.v1beta1.MutatingWebhook</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhook'>MutatingWebhook</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -579,12 +579,12 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhookConfiguration'>outputs.admissionregistration.v1beta1.MutatingWebhookConfiguration</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhookConfiguration'>outputs.admissionregistration.v1beta1.MutatingWebhookConfiguration</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -599,12 +599,12 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -635,7 +635,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2273">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2273">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -649,7 +649,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2273">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2273">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -659,13 +659,13 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L199">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L199">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>pulumi.CustomResource</a>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>}&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ConfigFile-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2273">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2273">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -678,7 +678,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2262">class <b>ConfigGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2262">class <b>ConfigGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='#CollectionComponentResource'>CollectionComponentResource</a></pre>
@@ -701,7 +701,7 @@ may be supplied using any of the following `ConfigGroupOpts`:
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ConfigGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2262"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2262"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -711,7 +711,7 @@ may be supplied using any of the following `ConfigGroupOpts`:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-getCustomResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2229">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2229">method <b>getCustomResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -732,7 +732,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2262">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2262">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -742,11 +742,11 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-getResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L213">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L213">method <b>getResource</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 
@@ -757,97 +757,97 @@ For example:
 
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfigurationList'>MutatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.MutatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfigurationList'>MutatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfiguration'>ValidatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfiguration&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfiguration'>ValidatingWebhookConfiguration</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfigurationList'>ValidatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.admissionregistration.v1beta1.ValidatingWebhookConfigurationList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/ValidatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ValidatingWebhookConfigurationList'>ValidatingWebhookConfigurationList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinition&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinition'>CustomResourceDefinition</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinition&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinition"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinition'>CustomResourceDefinition</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinitionList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinitionList'>CustomResourceDefinitionList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiextensions.v1beta1.CustomResourceDefinitionList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1beta1/CustomResourceDefinitionList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#CustomResourceDefinitionList'>CustomResourceDefinitionList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIService&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIService"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIService'>APIService</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration.k8s.io/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;k8s.apiregistration.v1.APIServiceList&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiregistration/v1/APIServiceList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#APIServiceList'>APIServiceList</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -858,7 +858,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-getResourceProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L575">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L575">method <b>getResourceProperty</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -888,22 +888,22 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>outputs.meta.v1.ObjectMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ObjectMeta'>ObjectMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhook'>outputs.admissionregistration.v1beta1.MutatingWebhook</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhook'>MutatingWebhook</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhook'>outputs.admissionregistration.v1beta1.MutatingWebhook</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"webhooks"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhook'>MutatingWebhook</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -918,12 +918,12 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhookConfiguration'>outputs.admissionregistration.v1beta1.MutatingWebhookConfiguration</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MutatingWebhookConfiguration'>outputs.admissionregistration.v1beta1.MutatingWebhookConfiguration</a>[]&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"items"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#MutatingWebhookConfiguration'>MutatingWebhookConfiguration</a>[]&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -938,12 +938,12 @@ For example:
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
 
-<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>outputs.meta.v1.ListMeta</a>&gt;</pre>
+<pre class="highlight"><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1beta1/MutatingWebhookConfigurationList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"metadata"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ListMeta'>ListMeta</a>&gt;</pre>
 
 {{% md %}}
 {{% /md %}}
@@ -974,7 +974,7 @@ For example:
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2262">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2262">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -988,7 +988,7 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2262">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2262">method <b>registerOutputs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -998,13 +998,13 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L199">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L199">property <b>resources</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>pulumi.CustomResource</a>}&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>}&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L2262">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L2262">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1017,11 +1017,11 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigFileOpts">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L53">interface <b>ConfigFileOpts</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L53">interface <b>ConfigFileOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ConfigFileOpts-file">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L55">property <b>file</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L55">property <b>file</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>file?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1032,7 +1032,7 @@ Path or a URL that uniquely identifies a file.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFileOpts-resourcePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L85">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L85">property <b>resourcePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourcePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1044,10 +1044,10 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigFileOpts-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L79">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L79">property <b>transformations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</pre>
+<pre class="highlight"><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</pre>
 {{% md %}}
 
 A set of transformations to apply to Kubernetes resource definitions before registering
@@ -1057,11 +1057,11 @@ with engine.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigGroupOpts">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L11">interface <b>ConfigGroupOpts</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L11">interface <b>ConfigGroupOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ConfigGroupOpts-files">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L13">property <b>files</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L13">property <b>files</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>files?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1072,7 +1072,7 @@ Set of paths or a URLs that uniquely identify files.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroupOpts-objs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L19">property <b>objs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L19">property <b>objs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objs?: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[] | <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>;</pre>
@@ -1083,7 +1083,7 @@ JavaScript objects representing Kubernetes resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroupOpts-resourcePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L50">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L50">property <b>resourcePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourcePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1095,10 +1095,10 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroupOpts-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L44">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L44">property <b>transformations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</pre>
+<pre class="highlight"><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</pre>
 {{% md %}}
 
 A set of transformations to apply to Kubernetes resource definitions before registering
@@ -1107,7 +1107,7 @@ with engine.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigGroupOpts-yaml">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L16">property <b>yaml</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L16">property <b>yaml</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>yaml?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1119,11 +1119,11 @@ YAML text containing Kubernetes resource definitions.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ConfigOpts">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L88">interface <b>ConfigOpts</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L88">interface <b>ConfigOpts</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ConfigOpts-objs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L90">property <b>objs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L90">property <b>objs</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objs: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>[];</pre>
@@ -1134,7 +1134,7 @@ JavaScript objects representing Kubernetes resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigOpts-resourcePrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L120">property <b>resourcePrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L120">property <b>resourcePrefix</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourcePrefix?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -1146,10 +1146,10 @@ Example: A resource created with resourcePrefix="foo" would produce a resource n
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ConfigOpts-transformations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/36ce0bf824c0f772e9a72416e6f8a1e98161408f/sdk/nodejs/yaml/yaml.ts#L114">property <b>transformations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/491e0cf7ac2d4f43c3337af41a0f918cab31eb25/sdk/nodejs/yaml/yaml.ts#L114">property <b>transformations</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</pre>
+<pre class="highlight"><span class='kd'></span>transformations?: (o: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>CustomResourceOptions</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>[];</pre>
 {{% md %}}
 
 A set of transformations to apply to Kubernetes resource definitions before registering

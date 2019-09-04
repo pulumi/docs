@@ -165,6 +165,368 @@ match the queried <code class="docutils literal notranslate"><span class="pre">s
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">QuoteSetV2</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backup_gigabytes=None</em>, <em class="sig-param">backups=None</em>, <em class="sig-param">gigabytes=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">per_volume_gigabytes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">snapshots=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V2 block storage quotaset resource within OpenStack.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This usually requires admin privileges.</p>
+<dl class="simple">
+<dt><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API </dt><dd><p>in case of delete call.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backup_gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for backup gigabytes. Changing
+this updates the existing quotaset.</p></li>
+<li><p><strong>backups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for backups. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for gigabytes. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for groups. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>per_volume_gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project to manage quotas. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>snapshots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for snapshots. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for volumes. Changing this updates the
+existing quotaset.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v2.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.backup_gigabytes">
+<code class="sig-name descname">backup_gigabytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.backup_gigabytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for backup gigabytes. Changing
+this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.backups">
+<code class="sig-name descname">backups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.backups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for backups. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.gigabytes">
+<code class="sig-name descname">gigabytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.gigabytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for gigabytes. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for groups. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.per_volume_gigabytes">
+<code class="sig-name descname">per_volume_gigabytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.per_volume_gigabytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.project_id">
+<code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the project to manage quotas. Changing this
+creates a new quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.snapshots">
+<code class="sig-name descname">snapshots</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.snapshots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for snapshots. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.volumes">
+<code class="sig-name descname">volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for volumes. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backup_gigabytes=None</em>, <em class="sig-param">backups=None</em>, <em class="sig-param">gigabytes=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">per_volume_gigabytes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">snapshots=None</em>, <em class="sig-param">volumes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing QuoteSetV2 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backup_gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for backup gigabytes. Changing
+this updates the existing quotaset.</p></li>
+<li><p><strong>backups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for backups. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for gigabytes. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for groups. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>per_volume_gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project to manage quotas. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>snapshots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for snapshots. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for volumes. Changing this updates the
+existing quotaset.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v2.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV2.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV2.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">QuoteSetV3</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backup_gigabytes=None</em>, <em class="sig-param">backups=None</em>, <em class="sig-param">gigabytes=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">per_volume_gigabytes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">snapshots=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V3 block storage quotaset resource within OpenStack.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This usually requires admin privileges.</p>
+<dl class="simple">
+<dt><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API </dt><dd><p>in case of delete call.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backup_gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for backup gigabytes. Changing
+this updates the existing quotaset.</p></li>
+<li><p><strong>backups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for backups. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for gigabytes. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for groups. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>per_volume_gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project to manage quotas. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>snapshots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for snapshots. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for volumes. Changing this updates the
+existing quotaset.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v3.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.backup_gigabytes">
+<code class="sig-name descname">backup_gigabytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.backup_gigabytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for backup gigabytes. Changing
+this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.backups">
+<code class="sig-name descname">backups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.backups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for backups. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.gigabytes">
+<code class="sig-name descname">gigabytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.gigabytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for gigabytes. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.groups">
+<code class="sig-name descname">groups</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for groups. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.per_volume_gigabytes">
+<code class="sig-name descname">per_volume_gigabytes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.per_volume_gigabytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.project_id">
+<code class="sig-name descname">project_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.project_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the project to manage quotas. Changing this
+creates a new quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.snapshots">
+<code class="sig-name descname">snapshots</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.snapshots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for snapshots. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.volumes">
+<code class="sig-name descname">volumes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.volumes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quota value for volumes. Changing this updates the
+existing quotaset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backup_gigabytes=None</em>, <em class="sig-param">backups=None</em>, <em class="sig-param">gigabytes=None</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">per_volume_gigabytes=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">snapshots=None</em>, <em class="sig-param">volumes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing QuoteSetV3 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backup_gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for backup gigabytes. Changing
+this updates the existing quotaset.</p></li>
+<li><p><strong>backups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for backups. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for gigabytes. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>groups</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for groups. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>per_volume_gigabytes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.</p></li>
+<li><p><strong>project_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the project to manage quotas. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to create the volume. If
+omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used. Changing this
+creates a new quotaset.</p></li>
+<li><p><strong>snapshots</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for snapshots. Changing this updates the
+existing quotaset.</p></li>
+<li><p><strong>volumes</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Quota value for volumes. Changing this updates the
+existing quotaset.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/blockstorage_quotaset_v3.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.blockstorage.QuoteSetV3.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.QuoteSetV3.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.blockstorage.Volume">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.blockstorage.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zone=None</em>, <em class="sig-param">consistency_group_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_online_resize=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">multiattach=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">snapshot_id=None</em>, <em class="sig-param">source_replica=None</em>, <em class="sig-param">source_vol_id=None</em>, <em class="sig-param">volume_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.blockstorage.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 volume resource within OpenStack.</p>

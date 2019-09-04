@@ -72,6 +72,28 @@ resource’s behavior.</p></li>
 </ul>
 </dd>
 </dl>
+<dl class="attribute">
+<dt id="pulumi_kubernetes.helm.v2.Chart.resources">
+<code class="sig-name descname">resources</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.Chart.resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kubernetes resources contained in this Chart.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_kubernetes.helm.v2.Chart.get_resource">
+<code class="sig-name descname">get_resource</code><span class="sig-paren">(</span><em class="sig-param">group_version_kind</em>, <em class="sig-param">name</em>, <em class="sig-param">namespace=None</em><span class="sig-paren">)</span> &#x2192; pulumi.output.Output[pulumi.resource.CustomResource][pulumi.resource.CustomResource]<a class="headerlink" href="#pulumi_kubernetes.helm.v2.Chart.get_resource" title="Permalink to this definition">¶</a></dt>
+<dd><p>get_resource returns a resource defined by a built-in Kubernetes group/version/kind and
+name. For example: <code class="docutils literal notranslate"><span class="pre">get_resource(&quot;apps/v1/Deployment&quot;,</span> <span class="pre">&quot;nginx&quot;)</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_version_kind</strong> (<em>str</em>) – Group/Version/Kind of the resource, e.g., <code class="docutils literal notranslate"><span class="pre">apps/v1/Deployment</span></code></p></li>
+<li><p><strong>name</strong> (<em>str</em>) – Name of the resource to retrieve</p></li>
+<li><p><strong>namespace</strong> (<em>str</em>) – Optional namespace of the resource to retrieve</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
