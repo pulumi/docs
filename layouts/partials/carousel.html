@@ -1,16 +1,16 @@
 <!-- Controls -->
-<div class="text-center py-8 md:py-16 relative">
-    <div class="inline-flex items-center mx-auto mt-0 text-lg">
+<div class="text-center py-8 md:py-16">
+    <div class="inline-flex items-center justify-center mx-auto mt-0 text-base md:text-lg">
         <div class="carousel-item-label border-b-4 border-white font-semibold text-purple-700 transition-all cursor-pointer border-purple-700">
-            <span class="block mx-4 pb-2">{{ (index .Params.carousel 0).label }}</span>
+            <span class="block mx-2 md:mx-4 pb-2">{{ (index .Params.carousel 0).label }}</span>
         </div>
-        <i class="fas fa-chevron-right text-purple-100 pb-3 text-sm mx-4"></i>
+        <i class="fas fa-chevron-right text-purple-100 pb-3 text-sm mx-2 md:mx-4"></i>
         <div class="carousel-item-label border-b-4 border-white font-semibold text-purple-200 hover:text-purple-300 transition-all cursor-pointer border-purple-700">
-            <span class="block mx-4 pb-2">{{ (index .Params.carousel 1).label }}</span>
+            <span class="block mx-2 md:mx-4 pb-2">{{ (index .Params.carousel 1).label }}</span>
         </div>
-        <i class="fas fa-chevron-right text-purple-100 pb-3 text-sm mx-4"></i>
+        <i class="fas fa-chevron-right text-purple-100 pb-3 text-sm mx-2 md:mx-4"></i>
         <div class="carousel-item-label border-b-4 border-white font-semibold text-purple-200 hover:text-purple-300 transition-all cursor-pointer border-purple-700">
-            <span class="block mx-4 pb-2">{{ (index .Params.carousel 2).label }}</span>
+            <span class="block mx-2 md:mx-4 pb-2">{{ (index .Params.carousel 2).label }}</span>
         </div>
     </div>
 </div>
