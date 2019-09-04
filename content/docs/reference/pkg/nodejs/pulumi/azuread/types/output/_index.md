@@ -29,18 +29,18 @@ title: Module types/output
 <li><a href="#ServicePrincipalOauth2Permission">interface ServicePrincipalOauth2Permission</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts">types/output.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts">types/output.ts</a> 
 </div>
 </div>
 </div>
 
 
 <h2 class="pdoc-module-header" id="ApplicationAppRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L7">interface <b>ApplicationAppRole</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L7">interface <b>ApplicationAppRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ApplicationAppRole-allowedMemberTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L11">property <b>allowedMemberTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L11">property <b>allowedMemberTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedMemberTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -51,7 +51,7 @@ Specifies whether this app role definition can be assigned to users and groups b
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationAppRole-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L15">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L15">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -62,7 +62,7 @@ Permission help text that appears in the admin app assignment and consent experi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationAppRole-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L19">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L19">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -73,7 +73,7 @@ Display name for the permission that appears in the admin consent and app assign
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationAppRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L23">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L23">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -84,7 +84,7 @@ The unique identifier of the `appRole`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationAppRole-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L27">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L27">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isEnabled?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -95,7 +95,7 @@ Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationAppRole-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L31">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L31">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -107,11 +107,11 @@ Specifies the value of the roles claim that the application should expect in the
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationOauth2Permission">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L34">interface <b>ApplicationOauth2Permission</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L34">interface <b>ApplicationOauth2Permission</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ApplicationOauth2Permission-adminConsentDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L38">property <b>adminConsentDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L38">property <b>adminConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminConsentDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -122,7 +122,7 @@ The description of the admin consent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationOauth2Permission-adminConsentDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L42">property <b>adminConsentDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L42">property <b>adminConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminConsentDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -133,7 +133,7 @@ The display name of the admin consent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationOauth2Permission-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L46">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -144,7 +144,7 @@ The unique identifier of the `appRole`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationOauth2Permission-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L50">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L50">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -155,7 +155,7 @@ Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationOauth2Permission-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L54">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L54">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -166,7 +166,7 @@ Specifies whether the id property references an `OAuth2Permission` or an `AppRol
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationOauth2Permission-userConsentDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L58">property <b>userConsentDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L58">property <b>userConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userConsentDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -177,7 +177,7 @@ The description of the user consent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationOauth2Permission-userConsentDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L62">property <b>userConsentDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L62">property <b>userConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userConsentDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -188,7 +188,7 @@ The display name of the user consent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationOauth2Permission-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L66">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L66">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -200,14 +200,14 @@ Specifies the value of the roles claim that the application should expect in the
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationRequiredResourceAccess">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L69">interface <b>ApplicationRequiredResourceAccess</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L69">interface <b>ApplicationRequiredResourceAccess</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ApplicationRequiredResourceAccess-resourceAccesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L73">property <b>resourceAccesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L73">property <b>resourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccessResourceAccess'>outputs.ApplicationRequiredResourceAccessResourceAccess</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='#ApplicationRequiredResourceAccessResourceAccess'>ApplicationRequiredResourceAccessResourceAccess</a>[];</pre>
 {{% md %}}
 
 A collection of `resourceAccess` blocks as documented below.
@@ -215,7 +215,7 @@ A collection of `resourceAccess` blocks as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationRequiredResourceAccess-resourceAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L77">property <b>resourceAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L77">property <b>resourceAppId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceAppId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -227,11 +227,11 @@ The unique identifier for the resource that the application requires access to. 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationRequiredResourceAccessResourceAccess">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L80">interface <b>ApplicationRequiredResourceAccessResourceAccess</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L80">interface <b>ApplicationRequiredResourceAccessResourceAccess</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ApplicationRequiredResourceAccessResourceAccess-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L84">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L84">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -242,7 +242,7 @@ The unique identifier of the `appRole`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationRequiredResourceAccessResourceAccess-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L88">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L88">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -254,11 +254,11 @@ Specifies whether the id property references an `OAuth2Permission` or an `AppRol
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationAppRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L91">interface <b>GetApplicationAppRole</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L91">interface <b>GetApplicationAppRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetApplicationAppRole-allowedMemberTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L95">property <b>allowedMemberTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L95">property <b>allowedMemberTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedMemberTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -269,7 +269,7 @@ Specifies whether this app role definition can be assigned to users and groups, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationAppRole-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L99">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L99">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -280,7 +280,7 @@ Permission help text that appears in the admin app assignment and consent experi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationAppRole-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L103">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L103">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -291,7 +291,7 @@ Display name for the permission that appears in the admin consent and app assign
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationAppRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L107">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L107">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -302,7 +302,7 @@ The unique identifier of the `appRole`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationAppRole-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L111">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L111">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -313,7 +313,7 @@ Determines if the app role is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationAppRole-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L115">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L115">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -325,11 +325,11 @@ Specifies the value of the roles claim that the application should expect in the
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationOauth2Permission">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L118">interface <b>GetApplicationOauth2Permission</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L118">interface <b>GetApplicationOauth2Permission</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetApplicationOauth2Permission-adminConsentDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L122">property <b>adminConsentDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L122">property <b>adminConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminConsentDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -340,7 +340,7 @@ The description of the admin consent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationOauth2Permission-adminConsentDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L126">property <b>adminConsentDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L126">property <b>adminConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminConsentDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -351,7 +351,7 @@ The display name of the admin consent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationOauth2Permission-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L130">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L130">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -362,7 +362,7 @@ The unique identifier of the `appRole`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationOauth2Permission-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L134">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L134">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -373,7 +373,7 @@ Determines if the app role is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationOauth2Permission-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L138">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L138">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -384,7 +384,7 @@ The type of the permission
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationOauth2Permission-userConsentDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L142">property <b>userConsentDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L142">property <b>userConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userConsentDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -395,7 +395,7 @@ The description of the user consent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationOauth2Permission-userConsentDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L146">property <b>userConsentDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L146">property <b>userConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userConsentDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -406,7 +406,7 @@ The display name of the user consent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationOauth2Permission-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L150">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L150">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -418,14 +418,14 @@ Specifies the value of the roles claim that the application should expect in the
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationRequiredResourceAccess">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L153">interface <b>GetApplicationRequiredResourceAccess</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L153">interface <b>GetApplicationRequiredResourceAccess</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetApplicationRequiredResourceAccess-resourceAccesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L157">property <b>resourceAccesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L157">property <b>resourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccessResourceAccess'>outputs.GetApplicationRequiredResourceAccessResourceAccess</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>resourceAccesses: <a href='#GetApplicationRequiredResourceAccessResourceAccess'>GetApplicationRequiredResourceAccessResourceAccess</a>[];</pre>
 {{% md %}}
 
 A collection of `resourceAccess` blocks as documented below
@@ -433,7 +433,7 @@ A collection of `resourceAccess` blocks as documented below
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationRequiredResourceAccess-resourceAppId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L161">property <b>resourceAppId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L161">property <b>resourceAppId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>resourceAppId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -445,11 +445,11 @@ The unique identifier for the resource that the application requires access to.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationRequiredResourceAccessResourceAccess">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L164">interface <b>GetApplicationRequiredResourceAccessResourceAccess</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L164">interface <b>GetApplicationRequiredResourceAccessResourceAccess</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetApplicationRequiredResourceAccessResourceAccess-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L168">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L168">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -460,7 +460,7 @@ The unique identifier of the `appRole`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationRequiredResourceAccessResourceAccess-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L172">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L172">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -472,11 +472,11 @@ The type of the permission
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDomainsDomain">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L175">interface <b>GetDomainsDomain</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L175">interface <b>GetDomainsDomain</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetDomainsDomain-authenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L179">property <b>authenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L179">property <b>authenticationType</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>authenticationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -487,7 +487,7 @@ The authentication type of the domain (Managed or Federated).
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsDomain-domainName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L183">property <b>domainName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L183">property <b>domainName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>domainName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -498,7 +498,7 @@ The name of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsDomain-isDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L187">property <b>isDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L187">property <b>isDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isDefault: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -509,7 +509,7 @@ The name of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsDomain-isInitial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L191">property <b>isInitial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L191">property <b>isInitial</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isInitial: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -520,7 +520,7 @@ The name of the domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsDomain-isVerified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L195">property <b>isVerified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L195">property <b>isVerified</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isVerified: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -532,11 +532,11 @@ The name of the domain.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServicePrincipalAppRole">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L198">interface <b>GetServicePrincipalAppRole</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L198">interface <b>GetServicePrincipalAppRole</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetServicePrincipalAppRole-allowedMemberTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L202">property <b>allowedMemberTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L202">property <b>allowedMemberTypes</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>allowedMemberTypes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -547,7 +547,7 @@ Specifies whether this app role definition can be assigned to users and groups, 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalAppRole-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L206">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L206">property <b>description</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -558,7 +558,7 @@ Permission help text that appears in the admin app assignment and consent experi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalAppRole-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L210">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L210">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -569,7 +569,7 @@ The Display Name of the Azure AD Application associated with this Service Princi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalAppRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L214">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L214">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -580,7 +580,7 @@ The unique identifier of the `appRole`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalAppRole-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L218">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L218">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -591,7 +591,7 @@ Determines if the app role is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalAppRole-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L222">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L222">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -603,11 +603,11 @@ Specifies the value of the roles claim that the application should expect in the
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServicePrincipalOauth2Permission">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L225">interface <b>GetServicePrincipalOauth2Permission</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L225">interface <b>GetServicePrincipalOauth2Permission</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="GetServicePrincipalOauth2Permission-adminConsentDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L229">property <b>adminConsentDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L229">property <b>adminConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminConsentDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -618,7 +618,7 @@ The description of the admin consent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalOauth2Permission-adminConsentDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L233">property <b>adminConsentDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L233">property <b>adminConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminConsentDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -629,7 +629,7 @@ The display name of the admin consent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalOauth2Permission-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L237">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L237">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -640,7 +640,7 @@ The unique identifier of the `appRole`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalOauth2Permission-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L241">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L241">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -651,7 +651,7 @@ Determines if the app role is enabled.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalOauth2Permission-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L245">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L245">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -662,7 +662,7 @@ The type of the permission
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalOauth2Permission-userConsentDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L249">property <b>userConsentDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L249">property <b>userConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userConsentDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -673,7 +673,7 @@ The description of the user consent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalOauth2Permission-userConsentDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L253">property <b>userConsentDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L253">property <b>userConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userConsentDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -684,7 +684,7 @@ The display name of the user consent
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalOauth2Permission-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L257">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L257">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -696,11 +696,11 @@ Specifies the value of the roles claim that the application should expect in the
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipalOauth2Permission">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L260">interface <b>ServicePrincipalOauth2Permission</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L260">interface <b>ServicePrincipalOauth2Permission</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <h3 class="pdoc-member-header" id="ServicePrincipalOauth2Permission-adminConsentDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L264">property <b>adminConsentDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L264">property <b>adminConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminConsentDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -711,7 +711,7 @@ The description of the admin consent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalOauth2Permission-adminConsentDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L268">property <b>adminConsentDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L268">property <b>adminConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>adminConsentDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -722,7 +722,7 @@ The display name of the admin consent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalOauth2Permission-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L272">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L272">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -733,7 +733,7 @@ The unique identifier for one of the `OAuth2Permission`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalOauth2Permission-isEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L276">property <b>isEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L276">property <b>isEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>isEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -744,7 +744,7 @@ Is this permission enabled?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalOauth2Permission-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L280">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L280">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -755,7 +755,7 @@ The type of the permission.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalOauth2Permission-userConsentDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L284">property <b>userConsentDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L284">property <b>userConsentDescription</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userConsentDescription: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -766,7 +766,7 @@ The description of the user consent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalOauth2Permission-userConsentDisplayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L288">property <b>userConsentDisplayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L288">property <b>userConsentDisplayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userConsentDisplayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -777,7 +777,7 @@ The display name of the user consent.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalOauth2Permission-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/types/output.ts#L292">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/types/output.ts#L292">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>

@@ -97,7 +97,7 @@ import * as azuread from "@pulumi/azuread";
 <li><a href="#UserState">interface UserState</a></li>
 </ul>
 
-<a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts">application.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts">applicationPassword.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts">getApplication.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts">getDomains.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts">getGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts">getGroups.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts">getServicePrincipal.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts">getUser.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts">getUsers.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts">group.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts">groupMember.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts">servicePrincipal.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts">servicePrincipalPassword.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts">user.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/utilities.ts">utilities.ts</a> 
+<a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts">application.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts">applicationPassword.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts">getApplication.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts">getDomains.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts">getGroup.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts">getGroups.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts">getServicePrincipal.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts">getUser.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts">getUsers.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts">group.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts">groupMember.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts">provider.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts">servicePrincipal.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts">servicePrincipalPassword.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts">user.ts</a> <a href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/utilities.ts">utilities.ts</a> 
 </div>
 </div>
 </div>
@@ -118,7 +118,7 @@ import * as azuread from "@pulumi/azuread";
 </div>
 
 <h2 class="pdoc-module-header" id="Application">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L68">class <b>Application</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L68">class <b>Application</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -184,7 +184,7 @@ const example = new azuread.Application("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L150"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L150"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -201,7 +201,7 @@ Create a Application resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L77">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L77">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -215,7 +215,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L68">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L68">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -225,7 +225,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L88">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L88">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -239,10 +239,10 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-appRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L98">property <b>appRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L98">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationAppRole'>outputs.ApplicationAppRole</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApplicationAppRole'>ApplicationAppRole</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -250,7 +250,7 @@ A collection of `appRole` blocks as documented below. For more information https
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L102">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L102">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -261,7 +261,7 @@ The Application ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-availableToOtherTenants">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L106">property <b>availableToOtherTenants</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L106">property <b>availableToOtherTenants</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>availableToOtherTenants: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -272,7 +272,7 @@ Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-groupMembershipClaims">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L110">property <b>groupMembershipClaims</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L110">property <b>groupMembershipClaims</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>groupMembershipClaims: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -283,7 +283,7 @@ Configures the `groups` claim issued in a user or OAuth 2.0 access token that th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-homepage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L114">property <b>homepage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L114">property <b>homepage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>homepage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -294,7 +294,7 @@ The URL to the application's home page. If no homepage is specified this default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L68">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -306,7 +306,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-identifierUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L118">property <b>identifierUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L118">property <b>identifierUris</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>identifierUris: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -317,7 +317,7 @@ A list of user-defined URI(s) that uniquely identify a Web application within it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L122">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L122">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -328,7 +328,7 @@ The display name for the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-oauth2AllowImplicitFlow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L126">property <b>oauth2AllowImplicitFlow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L126">property <b>oauth2AllowImplicitFlow</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>oauth2AllowImplicitFlow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -339,10 +339,10 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L130">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L130">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationOauth2Permission'>outputs.ApplicationOauth2Permission</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -350,7 +350,7 @@ A collection of OAuth 2.0 permission scopes that the web API (resource) app expo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L134">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L134">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -361,7 +361,7 @@ The Application's Object ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-publicClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L138">property <b>publicClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L138">property <b>publicClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>publicClient: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -372,7 +372,7 @@ Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-replyUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L142">property <b>replyUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L142">property <b>replyUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>replyUrls: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -383,10 +383,10 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-requiredResourceAccesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L146">property <b>requiredResourceAccesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L146">property <b>requiredResourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ApplicationRequiredResourceAccess'>outputs.ApplicationRequiredResourceAccess</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
 {{% md %}}
 
 A collection of `requiredResourceAccess` blocks as documented below.
@@ -394,7 +394,7 @@ A collection of `requiredResourceAccess` blocks as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L150">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L150">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -405,7 +405,7 @@ Specifies whether the id property references an `OAuth2Permission` or an `AppRol
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L68">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L68">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -418,7 +418,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationPassword">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L36">class <b>ApplicationPassword</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L36">class <b>ApplicationPassword</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -452,7 +452,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationPassword-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L87"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L87"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -469,7 +469,7 @@ Create a ApplicationPassword resource with the given unique name, arguments, and
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L45">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -483,7 +483,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L36">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -493,7 +493,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L56">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -507,13 +507,13 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L63">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L63">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-applicationObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L67">property <b>applicationObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L67">property <b>applicationObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>applicationObjectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -524,7 +524,7 @@ The Object ID of the Application for which this password should be created. Chan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L71">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L71">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -535,7 +535,7 @@ The End Date which the Password is valid until, formatted as a RFC3339 date stri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-endDateRelative">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L75">property <b>endDateRelative</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L75">property <b>endDateRelative</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endDateRelative: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -546,7 +546,7 @@ A relative duration for which the Password is valid until, for example `240h` (1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L36">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -558,7 +558,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L79">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L79">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -569,7 +569,7 @@ A GUID used to uniquely identify this Password. If not specified a GUID will be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L83">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L83">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>startDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -580,7 +580,7 @@ The Start Date which the Password is valid from, formatted as a RFC3339 date str
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L36">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -592,7 +592,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPassword-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L87">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L87">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -604,7 +604,7 @@ The Password for this Application .
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Group">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L12">class <b>Group</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L12">class <b>Group</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -614,7 +614,7 @@ The Password for this Application .
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Group-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L51"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L51"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -631,7 +631,7 @@ Create a Group resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L21">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -645,7 +645,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L12">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -655,7 +655,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L32">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -669,7 +669,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L12">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -681,7 +681,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L42">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L42">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>members: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -692,7 +692,7 @@ A set of members who should be present in this Group. Supported Object types are
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L46">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -703,13 +703,13 @@ The display name for the Group. Changing this forces a new resource to be create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L47">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L47">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="Group-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L51">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L51">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>owners: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</pre>
@@ -720,7 +720,7 @@ A set of owners who own this Group. Supported Object types are Users or Service 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Group-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L12">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -733,7 +733,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMember">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L32">class <b>GroupMember</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L32">class <b>GroupMember</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -763,7 +763,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMember-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L66"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -780,7 +780,7 @@ Create a GroupMember resource with the given unique name, arguments, and options
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMember-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L41">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L41">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -794,7 +794,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMember-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L32">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L32">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -804,7 +804,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMember-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L52">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L52">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -818,7 +818,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMember-groupObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L62">property <b>groupObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L62">property <b>groupObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>groupObjectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -829,7 +829,7 @@ The Object ID of the Azure AD Group you want to add the Member to.  Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMember-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L32">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L32">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -841,7 +841,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMember-memberObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L66">property <b>memberObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L66">property <b>memberObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>memberObjectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -852,7 +852,7 @@ The Object ID of the Azure AD Object you want to add as a Member to the Group. S
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMember-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L32">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L32">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -865,7 +865,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="Provider">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L17">class <b>Provider</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L17">class <b>Provider</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> ProviderResource</pre>
@@ -880,7 +880,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -897,7 +897,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -907,7 +907,7 @@ Create a Provider resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -921,7 +921,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -933,7 +933,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -946,7 +946,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L40">class <b>ServicePrincipal</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L40">class <b>ServicePrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -984,7 +984,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipal-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L90"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L90"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1001,7 +1001,7 @@ Create a ServicePrincipal resource with the given unique name, arguments, and op
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L49">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1015,7 +1015,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L40">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1025,7 +1025,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L60">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1039,7 +1039,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-appRoleAssignmentRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L70">property <b>appRoleAssignmentRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L70">property <b>appRoleAssignmentRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>appRoleAssignmentRequired: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1050,7 +1050,7 @@ Does this Service Principal require an AppRoleAssignment to a user or group befo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L74">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L74">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1061,7 +1061,7 @@ The ID of the Azure AD Application for which to create a Service Principal.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L78">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L78">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1072,7 +1072,7 @@ The Display Name of the Azure Active Directory Application associated with this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L40">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1084,10 +1084,10 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L82">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L82">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#ServicePrincipalOauth2Permission'>outputs.ServicePrincipalOauth2Permission</a>[]&gt;;</pre>
+<pre class="highlight"><span class='kd'>public </span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -1095,7 +1095,7 @@ A collection of OAuth 2.0 permissions exposed by the associated application. Eac
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L86">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L86">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1106,7 +1106,7 @@ The Service Principal's Object ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L90">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L90">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1117,7 +1117,7 @@ A list of tags to apply to the Service Principal.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipal-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L40">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1130,7 +1130,7 @@ deployments.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipalPassword">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L39">class <b>ServicePrincipalPassword</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L39">class <b>ServicePrincipalPassword</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1167,7 +1167,7 @@ const exampleServicePrincipal = new azuread.ServicePrincipal("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L89"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1184,7 +1184,7 @@ Create a ServicePrincipalPassword resource with the given unique name, arguments
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L48">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1198,7 +1198,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L39">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1208,7 +1208,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L59">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1222,7 +1222,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L69">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L69">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1233,7 +1233,7 @@ The End Date which the Password is valid until, formatted as a RFC3339 date stri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-endDateRelative">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L73">property <b>endDateRelative</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L73">property <b>endDateRelative</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>endDateRelative: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1244,7 +1244,7 @@ A relative duration for which the Password is valid until, for example `240h` (1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L39">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1256,7 +1256,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L77">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L77">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>keyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1267,7 +1267,7 @@ A GUID used to uniquely identify this Key. If not specified a GUID will be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-servicePrincipalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L81">property <b>servicePrincipalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L81">property <b>servicePrincipalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>servicePrincipalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1278,7 +1278,7 @@ The ID of the Service Principal for which this password should be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L85">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L85">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>startDate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1289,7 +1289,7 @@ The Start Date which the Password is valid from, formatted as a RFC3339 date str
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L39">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1301,7 +1301,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPassword-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L89">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L89">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1313,7 +1313,7 @@ The Password for this Service Principal.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="User">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L30">class <b>User</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L30">class <b>User</b></a>
 </h2>
 <div class="pdoc-module-contents">
 <pre class="highlight"><span class='kd'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></pre>
@@ -1341,7 +1341,7 @@ const example = new azuread.User("example", {
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="User-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L86"> <b>constructor</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1358,7 +1358,7 @@ Create a User resource with the given unique name, arguments, and options.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L39">method <b>get</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1372,7 +1372,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L30">method <b>getProvider</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1382,7 +1382,7 @@ properties used to qualify the lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L50">method <b>isInstance</b></a>
 </h3>
 <div class="pdoc-member-contents">
 
@@ -1396,7 +1396,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-accountEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L61">property <b>accountEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L61">property <b>accountEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>accountEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1408,7 +1408,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L65">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L65">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1419,7 +1419,7 @@ The name to display in the address book for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-forcePasswordChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L69">property <b>forcePasswordChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L69">property <b>forcePasswordChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>forcePasswordChange: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</pre>
@@ -1430,7 +1430,7 @@ The name to display in the address book for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L30">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</pre>
@@ -1442,7 +1442,7 @@ deployments and may be missing (undefined) during planning phases.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-mail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L73">property <b>mail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L73">property <b>mail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1453,13 +1453,13 @@ The primary email address of the Azure AD User.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-mailNickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L74">property <b>mailNickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L74">property <b>mailNickname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>mailNickname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="User-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L78">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L78">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>objectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1470,7 +1470,7 @@ The Object ID of the Azure AD User.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L82">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L82">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1481,7 +1481,7 @@ The password for the User. The password must satisfy minimum requirements as spe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L30">property <b>urn</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</pre>
@@ -1493,7 +1493,7 @@ deployments.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="User-userPrincipalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L86">property <b>userPrincipalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L86">property <b>userPrincipalName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'>public </span>userPrincipalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1505,7 +1505,7 @@ The User Principal Name of the Azure AD User.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="getApplication">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L29">function <b>getApplication</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L29">function <b>getApplication</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1535,7 +1535,7 @@ export const azureAdObjectId = example.id;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getDomains">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L27">function <b>getDomains</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L27">function <b>getDomains</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1563,7 +1563,7 @@ export const domains = aadDomains.domains;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnv">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/utilities.ts#L5">function <b>getEnv</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1573,7 +1573,7 @@ export const domains = aadDomains.domains;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvBoolean">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/utilities.ts#L15">function <b>getEnvBoolean</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1583,7 +1583,7 @@ export const domains = aadDomains.domains;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getEnvNumber">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/utilities.ts#L30">function <b>getEnvNumber</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1593,7 +1593,7 @@ export const domains = aadDomains.domains;
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getGroup">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L27">function <b>getGroup</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L27">function <b>getGroup</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1621,7 +1621,7 @@ const example = azuread.getGroup({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getGroups">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts#L30">function <b>getGroups</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts#L30">function <b>getGroups</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1652,7 +1652,7 @@ const groups = azuread.getGroups({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getServicePrincipal">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L49">function <b>getServicePrincipal</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L49">function <b>getServicePrincipal</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1702,7 +1702,7 @@ const example = azuread.getServicePrincipal({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getUser">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L27">function <b>getUser</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L27">function <b>getUser</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1730,7 +1730,7 @@ const example = azuread.getUser({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getUsers">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts#L30">function <b>getUsers</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts#L30">function <b>getUsers</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1761,7 +1761,7 @@ const users = azuread.getUsers({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="getVersion">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/utilities.ts#L41">function <b>getVersion</b></a>
 </h2>
 <div class="pdoc-module-contents">
 
@@ -1771,7 +1771,7 @@ const users = azuread.getUsers({
 {{% /md %}}
 </div>
 <h2 class="pdoc-module-header" id="ApplicationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L271">interface <b>ApplicationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L271">interface <b>ApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1780,10 +1780,10 @@ The set of arguments for constructing a Application resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationArgs-appRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L275">property <b>appRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L275">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole'>inputs.ApplicationAppRole</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationAppRole'>ApplicationAppRole</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -1791,7 +1791,7 @@ A collection of `appRole` blocks as documented below. For more information https
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-availableToOtherTenants">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L279">property <b>availableToOtherTenants</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L279">property <b>availableToOtherTenants</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableToOtherTenants?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1802,7 +1802,7 @@ Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-groupMembershipClaims">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L283">property <b>groupMembershipClaims</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L283">property <b>groupMembershipClaims</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupMembershipClaims?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1813,7 +1813,7 @@ Configures the `groups` claim issued in a user or OAuth 2.0 access token that th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-homepage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L287">property <b>homepage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L287">property <b>homepage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>homepage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1824,7 +1824,7 @@ The URL to the application's home page. If no homepage is specified this default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-identifierUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L291">property <b>identifierUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L291">property <b>identifierUris</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identifierUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1835,7 +1835,7 @@ A list of user-defined URI(s) that uniquely identify a Web application within it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L295">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L295">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1846,7 +1846,7 @@ The display name for the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-oauth2AllowImplicitFlow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L299">property <b>oauth2AllowImplicitFlow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L299">property <b>oauth2AllowImplicitFlow</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>oauth2AllowImplicitFlow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1857,10 +1857,10 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L303">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L303">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission'>inputs.ApplicationOauth2Permission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -1868,7 +1868,7 @@ A collection of OAuth 2.0 permission scopes that the web API (resource) app expo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-publicClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L307">property <b>publicClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L307">property <b>publicClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -1879,7 +1879,7 @@ Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-replyUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L311">property <b>replyUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L311">property <b>replyUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replyUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -1890,10 +1890,10 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-requiredResourceAccesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L315">property <b>requiredResourceAccesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L315">property <b>requiredResourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess'>inputs.ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `requiredResourceAccess` blocks as documented below.
@@ -1901,7 +1901,7 @@ A collection of `requiredResourceAccess` blocks as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L319">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L319">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1913,7 +1913,7 @@ Specifies whether the id property references an `OAuth2Permission` or an `AppRol
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationPasswordArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L166">interface <b>ApplicationPasswordArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L166">interface <b>ApplicationPasswordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -1922,13 +1922,13 @@ The set of arguments for constructing a ApplicationPassword resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationPasswordArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L167">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L167">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordArgs-applicationObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L171">property <b>applicationObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L171">property <b>applicationObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationObjectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1939,7 +1939,7 @@ The Object ID of the Application for which this password should be created. Chan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordArgs-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L175">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L175">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1950,7 +1950,7 @@ The End Date which the Password is valid until, formatted as a RFC3339 date stri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordArgs-endDateRelative">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L179">property <b>endDateRelative</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L179">property <b>endDateRelative</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endDateRelative?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1961,7 +1961,7 @@ A relative duration for which the Password is valid until, for example `240h` (1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordArgs-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L183">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L183">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1972,7 +1972,7 @@ A GUID used to uniquely identify this Password. If not specified a GUID will be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordArgs-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L187">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L187">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1983,7 +1983,7 @@ The Start Date which the Password is valid from, formatted as a RFC3339 date str
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L191">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L191">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -1995,7 +1995,7 @@ The Password for this Application .
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationPasswordState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L135">interface <b>ApplicationPasswordState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L135">interface <b>ApplicationPasswordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2004,13 +2004,13 @@ Input properties used for looking up and filtering ApplicationPassword resources
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationPasswordState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L136">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L136">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordState-applicationObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L140">property <b>applicationObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L140">property <b>applicationObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationObjectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2021,7 +2021,7 @@ The Object ID of the Application for which this password should be created. Chan
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordState-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L144">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L144">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2032,7 +2032,7 @@ The End Date which the Password is valid until, formatted as a RFC3339 date stri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordState-endDateRelative">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L148">property <b>endDateRelative</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L148">property <b>endDateRelative</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endDateRelative?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2043,7 +2043,7 @@ A relative duration for which the Password is valid until, for example `240h` (1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordState-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L152">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L152">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2054,7 +2054,7 @@ A GUID used to uniquely identify this Password. If not specified a GUID will be 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordState-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L156">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L156">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2065,7 +2065,7 @@ The Start Date which the Password is valid from, formatted as a RFC3339 date str
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationPasswordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/applicationPassword.ts#L160">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/applicationPassword.ts#L160">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2077,7 +2077,7 @@ The Password for this Application .
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ApplicationState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L209">interface <b>ApplicationState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L209">interface <b>ApplicationState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2086,10 +2086,10 @@ Input properties used for looking up and filtering Application resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ApplicationState-appRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L213">property <b>appRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L213">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationAppRole'>inputs.ApplicationAppRole</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationAppRole'>ApplicationAppRole</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -2097,7 +2097,7 @@ A collection of `appRole` blocks as documented below. For more information https
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L217">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L217">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2108,7 +2108,7 @@ The Application ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-availableToOtherTenants">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L221">property <b>availableToOtherTenants</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L221">property <b>availableToOtherTenants</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableToOtherTenants?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2119,7 +2119,7 @@ Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-groupMembershipClaims">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L225">property <b>groupMembershipClaims</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L225">property <b>groupMembershipClaims</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupMembershipClaims?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2130,7 +2130,7 @@ Configures the `groups` claim issued in a user or OAuth 2.0 access token that th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-homepage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L229">property <b>homepage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L229">property <b>homepage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>homepage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2141,7 +2141,7 @@ The URL to the application's home page. If no homepage is specified this default
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-identifierUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L233">property <b>identifierUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L233">property <b>identifierUris</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identifierUris?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2152,7 +2152,7 @@ A list of user-defined URI(s) that uniquely identify a Web application within it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L237">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L237">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2163,7 +2163,7 @@ The display name for the application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-oauth2AllowImplicitFlow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L241">property <b>oauth2AllowImplicitFlow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L241">property <b>oauth2AllowImplicitFlow</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>oauth2AllowImplicitFlow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2174,10 +2174,10 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L245">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L245">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationOauth2Permission'>inputs.ApplicationOauth2Permission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationOauth2Permission'>ApplicationOauth2Permission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -2185,7 +2185,7 @@ A collection of OAuth 2.0 permission scopes that the web API (resource) app expo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L249">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L249">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2196,7 +2196,7 @@ The Application's Object ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-publicClient">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L253">property <b>publicClient</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L253">property <b>publicClient</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>publicClient?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -2207,7 +2207,7 @@ Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-replyUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L257">property <b>replyUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L257">property <b>replyUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replyUrls?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -2218,10 +2218,10 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-requiredResourceAccesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L261">property <b>requiredResourceAccesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L261">property <b>requiredResourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ApplicationRequiredResourceAccess'>inputs.ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>requiredResourceAccesses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ApplicationRequiredResourceAccess'>ApplicationRequiredResourceAccess</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of `requiredResourceAccess` blocks as documented below.
@@ -2229,7 +2229,7 @@ A collection of `requiredResourceAccess` blocks as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ApplicationState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/application.ts#L265">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/application.ts#L265">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -2241,7 +2241,7 @@ Specifies whether the id property references an `OAuth2Permission` or an `AppRol
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L51">interface <b>GetApplicationArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L51">interface <b>GetApplicationArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2250,13 +2250,13 @@ A collection of arguments for invoking getApplication.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationArgs-appRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L52">property <b>appRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L52">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationAppRole'>inputs.GetApplicationAppRole</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>appRoles?: <a href='#GetApplicationAppRole'>GetApplicationAppRole</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L56">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L56">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2267,13 +2267,13 @@ Specifies the name of the Application within Azure Active Directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationArgs-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L57">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L57">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOauth2Permission'>inputs.GetApplicationOauth2Permission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='#GetApplicationOauth2Permission'>GetApplicationOauth2Permission</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationArgs-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L61">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L61">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2285,7 +2285,7 @@ Specifies the Object ID of the Application within Azure Active Directory.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetApplicationResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L67">interface <b>GetApplicationResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L67">interface <b>GetApplicationResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2294,10 +2294,10 @@ A collection of values returned by getApplication.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetApplicationResult-appRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L71">property <b>appRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L71">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationAppRole'>outputs.GetApplicationAppRole</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>appRoles: <a href='#GetApplicationAppRole'>GetApplicationAppRole</a>[];</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -2305,7 +2305,7 @@ A collection of `appRole` blocks as documented below. For more information https
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L75">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L75">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2316,7 +2316,7 @@ the Application ID of the Azure Active Directory Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-availableToOtherTenants">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L79">property <b>availableToOtherTenants</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L79">property <b>availableToOtherTenants</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>availableToOtherTenants: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -2327,7 +2327,7 @@ Is this Azure AD Application available to other tenants?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-groupMembershipClaims">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L83">property <b>groupMembershipClaims</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L83">property <b>groupMembershipClaims</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupMembershipClaims: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2338,13 +2338,13 @@ The `groups` claim issued in a user or OAuth 2.0 access token that the app expec
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-homepage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L84">property <b>homepage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L84">property <b>homepage</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>homepage: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L117">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L117">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2355,7 +2355,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-identifierUris">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L88">property <b>identifierUris</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L88">property <b>identifierUris</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>identifierUris: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2366,13 +2366,13 @@ A list of user-defined URI(s) that uniquely identify a Web application within it
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L89">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L89">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-oauth2AllowImplicitFlow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L93">property <b>oauth2AllowImplicitFlow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L93">property <b>oauth2AllowImplicitFlow</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>oauth2AllowImplicitFlow: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -2383,10 +2383,10 @@ Does this Azure AD Application allow OAuth2.0 implicit flow tokens?
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L97">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L97">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOauth2Permission'>outputs.GetApplicationOauth2Permission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions: <a href='#GetApplicationOauth2Permission'>GetApplicationOauth2Permission</a>[];</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -2394,7 +2394,7 @@ A collection of OAuth 2.0 permission scopes that the web API (resource) app expo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L101">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L101">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2405,7 +2405,7 @@ the Object ID of the Azure Active Directory Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-replyUrls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L105">property <b>replyUrls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L105">property <b>replyUrls</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>replyUrls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2416,10 +2416,10 @@ A list of URLs that user tokens are sent to for sign in, or the redirect URIs th
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-requiredResourceAccesses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L109">property <b>requiredResourceAccesses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L109">property <b>requiredResourceAccesses</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>requiredResourceAccesses: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccess'>outputs.GetApplicationRequiredResourceAccess</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>requiredResourceAccesses: <a href='#GetApplicationRequiredResourceAccess'>GetApplicationRequiredResourceAccess</a>[];</pre>
 {{% md %}}
 
 A collection of `requiredResourceAccess` blocks as documented below.
@@ -2427,7 +2427,7 @@ A collection of `requiredResourceAccess` blocks as documented below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetApplicationResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getApplication.ts#L113">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getApplication.ts#L113">property <b>type</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2439,7 +2439,7 @@ The type of the permission
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDomainsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L48">interface <b>GetDomainsArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L48">interface <b>GetDomainsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2448,7 +2448,7 @@ A collection of arguments for invoking getDomains.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDomainsArgs-includeUnverified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L52">property <b>includeUnverified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L52">property <b>includeUnverified</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>includeUnverified?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -2459,7 +2459,7 @@ Set to `true` if unverified Azure AD Domains should be included. Defaults to `fa
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsArgs-onlyDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L56">property <b>onlyDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L56">property <b>onlyDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onlyDefault?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -2470,7 +2470,7 @@ Set to `true` to only return the default domain.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsArgs-onlyInitial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L60">property <b>onlyInitial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L60">property <b>onlyInitial</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onlyInitial?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
@@ -2482,7 +2482,7 @@ Set to `true` to only return the initial domain, which is your primary Azure Act
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetDomainsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L66">interface <b>GetDomainsResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L66">interface <b>GetDomainsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2491,10 +2491,10 @@ A collection of values returned by getDomains.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetDomainsResult-domains">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L70">property <b>domains</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L70">property <b>domains</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>domains: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetDomainsDomain'>outputs.GetDomainsDomain</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>domains: <a href='#GetDomainsDomain'>GetDomainsDomain</a>[];</pre>
 {{% md %}}
 
 One or more `domain` blocks as defined below.
@@ -2502,7 +2502,7 @@ One or more `domain` blocks as defined below.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L77">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2513,26 +2513,26 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsResult-includeUnverified">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L71">property <b>includeUnverified</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L71">property <b>includeUnverified</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>includeUnverified?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsResult-onlyDefault">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L72">property <b>onlyDefault</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L72">property <b>onlyDefault</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onlyDefault?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetDomainsResult-onlyInitial">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getDomains.ts#L73">property <b>onlyInitial</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getDomains.ts#L73">property <b>onlyInitial</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>onlyInitial?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L47">interface <b>GetGroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L47">interface <b>GetGroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2541,7 +2541,7 @@ A collection of arguments for invoking getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L51">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L51">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2552,7 +2552,7 @@ The Name of the AD Group we want to lookup.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupArgs-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L55">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L55">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2564,7 +2564,7 @@ Specifies the Object ID of the AD Group within Azure Active Directory.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L61">interface <b>GetGroupResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L61">interface <b>GetGroupResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2573,7 +2573,7 @@ A collection of values returned by getGroup.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L69">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2584,32 +2584,32 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L62">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L62">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L63">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L63">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L64">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L64">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetGroupResult-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroup.ts#L65">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroup.ts#L65">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupsArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts#L50">interface <b>GetGroupsArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts#L50">interface <b>GetGroupsArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2618,7 +2618,7 @@ A collection of arguments for invoking getGroups.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupsArgs-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts#L54">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts#L54">property <b>names</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>names?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2629,7 +2629,7 @@ The Display Names of the Azure AD Groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupsArgs-objectIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts#L58">property <b>objectIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts#L58">property <b>objectIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2641,7 +2641,7 @@ The Object IDs of the Azure AD Groups.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetGroupsResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts#L64">interface <b>GetGroupsResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts#L64">interface <b>GetGroupsResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2650,7 +2650,7 @@ A collection of values returned by getGroups.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts#L76">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2661,7 +2661,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts#L68">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts#L68">property <b>names</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2672,7 +2672,7 @@ The Display Names of the Azure AD Groups.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetGroupsResult-objectIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getGroups.ts#L72">property <b>objectIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getGroups.ts#L72">property <b>objectIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2684,7 +2684,7 @@ The Object IDs of the Azure AD Groups.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServicePrincipalArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L72">interface <b>GetServicePrincipalArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L72">interface <b>GetServicePrincipalArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2693,10 +2693,10 @@ A collection of arguments for invoking getServicePrincipal.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetServicePrincipalArgs-appRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L76">property <b>appRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L76">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalAppRole'>inputs.GetServicePrincipalAppRole</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>appRoles?: <a href='#GetServicePrincipalAppRole'>GetServicePrincipalAppRole</a>[];</pre>
 {{% md %}}
 
 A collection of `appRole` blocks as documented below. For more information https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/app-roles
@@ -2704,7 +2704,7 @@ A collection of `appRole` blocks as documented below. For more information https
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L80">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L80">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2715,7 +2715,7 @@ The ID of the Azure AD Application.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L84">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L84">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2726,10 +2726,10 @@ The Display Name of the Azure AD Application associated with this Service Princi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalArgs-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L88">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L88">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalOauth2Permission'>inputs.GetServicePrincipalOauth2Permission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='#GetServicePrincipalOauth2Permission'>GetServicePrincipalOauth2Permission</a>[];</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -2737,7 +2737,7 @@ A collection of OAuth 2.0 permissions exposed by the associated application. Eac
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalArgs-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L92">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L92">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2749,7 +2749,7 @@ The ID of the Azure AD Service Principal.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetServicePrincipalResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L98">interface <b>GetServicePrincipalResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L98">interface <b>GetServicePrincipalResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2758,19 +2758,19 @@ A collection of values returned by getServicePrincipal.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetServicePrincipalResult-appRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L99">property <b>appRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L99">property <b>appRoles</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>appRoles: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalAppRole'>outputs.GetServicePrincipalAppRole</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>appRoles: <a href='#GetServicePrincipalAppRole'>GetServicePrincipalAppRole</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalResult-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L100">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L100">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L104">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L104">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2781,7 +2781,7 @@ Display name for the permission that appears in the admin consent and app assign
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L110">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L110">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2792,20 +2792,20 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalResult-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L105">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L105">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions: <a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalOauth2Permission'>outputs.GetServicePrincipalOauth2Permission</a>[];</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions: <a href='#GetServicePrincipalOauth2Permission'>GetServicePrincipalOauth2Permission</a>[];</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetServicePrincipalResult-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getServicePrincipal.ts#L106">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getServicePrincipal.ts#L106">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L47">interface <b>GetUserArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L47">interface <b>GetUserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2814,7 +2814,7 @@ A collection of arguments for invoking getUser.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserArgs-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L51">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L51">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2825,7 +2825,7 @@ Specifies the Object ID of the Application within Azure Active Directory.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserArgs-userPrincipalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L55">property <b>userPrincipalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L55">property <b>userPrincipalName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPrincipalName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2837,7 +2837,7 @@ The User Principal Name of the Azure AD User.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUserResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L61">interface <b>GetUserResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L61">interface <b>GetUserResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2846,7 +2846,7 @@ A collection of values returned by getUser.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUserResult-accountEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L65">property <b>accountEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L65">property <b>accountEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</pre>
@@ -2857,7 +2857,7 @@ A collection of values returned by getUser.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L69">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L69">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2868,7 +2868,7 @@ The Display Name of the Azure AD User.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L86">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2879,7 +2879,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-mail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L73">property <b>mail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L73">property <b>mail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mail: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2890,7 +2890,7 @@ The primary email address of the Azure AD User.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-mailNickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L77">property <b>mailNickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L77">property <b>mailNickname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mailNickname: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2901,13 +2901,13 @@ The email alias of the Azure AD User.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L78">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L78">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GetUserResult-userPrincipalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUser.ts#L82">property <b>userPrincipalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUser.ts#L82">property <b>userPrincipalName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPrincipalName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2919,7 +2919,7 @@ The User Principal Name of the Azure AD User.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUsersArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts#L50">interface <b>GetUsersArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts#L50">interface <b>GetUsersArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2928,7 +2928,7 @@ A collection of arguments for invoking getUsers.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUsersArgs-objectIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts#L54">property <b>objectIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts#L54">property <b>objectIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2939,7 +2939,7 @@ The Object IDs of the Azure AD Users.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersArgs-userPrincipalNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts#L58">property <b>userPrincipalNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts#L58">property <b>userPrincipalNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPrincipalNames?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2951,7 +2951,7 @@ The User Principal Names of the Azure AD Users.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GetUsersResult">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts#L64">interface <b>GetUsersResult</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts#L64">interface <b>GetUsersResult</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -2960,7 +2960,7 @@ A collection of values returned by getUsers.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GetUsersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts#L76">property <b>id</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</pre>
@@ -2971,7 +2971,7 @@ id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-objectIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts#L68">property <b>objectIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts#L68">property <b>objectIds</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2982,7 +2982,7 @@ The Object IDs of the Azure AD Users.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GetUsersResult-userPrincipalNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/getUsers.ts#L72">property <b>userPrincipalNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/getUsers.ts#L72">property <b>userPrincipalNames</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPrincipalNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</pre>
@@ -2994,7 +2994,7 @@ The User Principal Names of the Azure AD Users.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L109">interface <b>GroupArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L109">interface <b>GroupArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3003,7 +3003,7 @@ The set of arguments for constructing a Group resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupArgs-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L113">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L113">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3014,7 +3014,7 @@ A set of members who should be present in this Group. Supported Object types are
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L117">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L117">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3025,7 +3025,7 @@ The display name for the Group. Changing this forces a new resource to be create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupArgs-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L121">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L121">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3037,7 +3037,7 @@ A set of owners who own this Group. Supported Object types are Users or Service 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMemberArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L121">interface <b>GroupMemberArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L121">interface <b>GroupMemberArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3046,7 +3046,7 @@ The set of arguments for constructing a GroupMember resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMemberArgs-groupObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L125">property <b>groupObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L125">property <b>groupObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupObjectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3057,7 +3057,7 @@ The Object ID of the Azure AD Group you want to add the Member to.  Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMemberArgs-memberObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L129">property <b>memberObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L129">property <b>memberObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>memberObjectId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3069,7 +3069,7 @@ The Object ID of the Azure AD Object you want to add as a Member to the Group. S
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupMemberState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L107">interface <b>GroupMemberState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L107">interface <b>GroupMemberState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3078,7 +3078,7 @@ Input properties used for looking up and filtering GroupMember resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupMemberState-groupObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L111">property <b>groupObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L111">property <b>groupObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>groupObjectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3089,7 +3089,7 @@ The Object ID of the Azure AD Group you want to add the Member to.  Changing thi
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupMemberState-memberObjectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/groupMember.ts#L115">property <b>memberObjectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/groupMember.ts#L115">property <b>memberObjectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>memberObjectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3101,7 +3101,7 @@ The Object ID of the Azure AD Object you want to add as a Member to the Group. S
 </div>
 </div>
 <h2 class="pdoc-module-header" id="GroupState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L90">interface <b>GroupState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L90">interface <b>GroupState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3110,7 +3110,7 @@ Input properties used for looking up and filtering Group resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="GroupState-members">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L94">property <b>members</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L94">property <b>members</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>members?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3121,7 +3121,7 @@ A set of members who should be present in this Group. Supported Object types are
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L98">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L98">property <b>name</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3132,13 +3132,13 @@ The display name for the Group. Changing this forces a new resource to be create
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="GroupState-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L99">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L99">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="GroupState-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/group.ts#L103">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/group.ts#L103">property <b>owners</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>owners?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3150,7 +3150,7 @@ A set of owners who own this Group. Supported Object types are Users or Service 
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ProviderArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L67">interface <b>ProviderArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L67">interface <b>ProviderArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3159,62 +3159,62 @@ The set of arguments for constructing a Provider resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ProviderArgs-clientCertificatePassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L68">property <b>clientCertificatePassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L68">property <b>clientCertificatePassword</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCertificatePassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-clientCertificatePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L69">property <b>clientCertificatePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L69">property <b>clientCertificatePath</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientCertificatePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L70">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L70">property <b>clientId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-clientSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L71">property <b>clientSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L71">property <b>clientSecret</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>clientSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L72">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L72">property <b>environment</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-msiEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L73">property <b>msiEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L73">property <b>msiEndpoint</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>msiEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-subscriptionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L74">property <b>subscriptionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L74">property <b>subscriptionId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>subscriptionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L75">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L75">property <b>tenantId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="ProviderArgs-useMsi">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/provider.ts#L76">property <b>useMsi</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/provider.ts#L76">property <b>useMsi</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>useMsi?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipalArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L166">interface <b>ServicePrincipalArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L166">interface <b>ServicePrincipalArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3223,7 +3223,7 @@ The set of arguments for constructing a ServicePrincipal resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalArgs-appRoleAssignmentRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L170">property <b>appRoleAssignmentRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L170">property <b>appRoleAssignmentRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appRoleAssignmentRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3234,7 +3234,7 @@ Does this Service Principal require an AppRoleAssignment to a user or group befo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalArgs-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L174">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L174">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3245,10 +3245,10 @@ The ID of the Azure AD Application for which to create a Service Principal.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalArgs-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L178">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L178">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission'>inputs.ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -3256,7 +3256,7 @@ A collection of OAuth 2.0 permissions exposed by the associated application. Eac
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L182">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L182">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3268,7 +3268,7 @@ A list of tags to apply to the Service Principal.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipalPasswordArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L168">interface <b>ServicePrincipalPasswordArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L168">interface <b>ServicePrincipalPasswordArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3277,7 +3277,7 @@ The set of arguments for constructing a ServicePrincipalPassword resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordArgs-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L172">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L172">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3288,7 +3288,7 @@ The End Date which the Password is valid until, formatted as a RFC3339 date stri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordArgs-endDateRelative">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L176">property <b>endDateRelative</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L176">property <b>endDateRelative</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endDateRelative?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3299,7 +3299,7 @@ A relative duration for which the Password is valid until, for example `240h` (1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordArgs-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L180">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L180">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3310,7 +3310,7 @@ A GUID used to uniquely identify this Key. If not specified a GUID will be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordArgs-servicePrincipalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L184">property <b>servicePrincipalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L184">property <b>servicePrincipalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>servicePrincipalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3321,7 +3321,7 @@ The ID of the Service Principal for which this password should be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordArgs-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L188">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L188">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3332,7 +3332,7 @@ The Start Date which the Password is valid from, formatted as a RFC3339 date str
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L192">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L192">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3344,7 +3344,7 @@ The Password for this Service Principal.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipalPasswordState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L138">interface <b>ServicePrincipalPasswordState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L138">interface <b>ServicePrincipalPasswordState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3353,7 +3353,7 @@ Input properties used for looking up and filtering ServicePrincipalPassword reso
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordState-endDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L142">property <b>endDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L142">property <b>endDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3364,7 +3364,7 @@ The End Date which the Password is valid until, formatted as a RFC3339 date stri
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordState-endDateRelative">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L146">property <b>endDateRelative</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L146">property <b>endDateRelative</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>endDateRelative?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3375,7 +3375,7 @@ A relative duration for which the Password is valid until, for example `240h` (1
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordState-keyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L150">property <b>keyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L150">property <b>keyId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>keyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3386,7 +3386,7 @@ A GUID used to uniquely identify this Key. If not specified a GUID will be creat
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordState-servicePrincipalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L154">property <b>servicePrincipalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L154">property <b>servicePrincipalId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>servicePrincipalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3397,7 +3397,7 @@ The ID of the Service Principal for which this password should be created. Chang
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordState-startDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L158">property <b>startDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L158">property <b>startDate</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>startDate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3408,7 +3408,7 @@ The Start Date which the Password is valid from, formatted as a RFC3339 date str
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalPasswordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipalPassword.ts#L162">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipalPassword.ts#L162">property <b>value</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3420,7 +3420,7 @@ The Password for this Service Principal.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="ServicePrincipalState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L136">interface <b>ServicePrincipalState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L136">interface <b>ServicePrincipalState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3429,7 +3429,7 @@ Input properties used for looking up and filtering ServicePrincipal resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="ServicePrincipalState-appRoleAssignmentRequired">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L140">property <b>appRoleAssignmentRequired</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L140">property <b>appRoleAssignmentRequired</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>appRoleAssignmentRequired?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3440,7 +3440,7 @@ Does this Service Principal require an AppRoleAssignment to a user or group befo
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalState-applicationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L144">property <b>applicationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L144">property <b>applicationId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>applicationId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3451,7 +3451,7 @@ The ID of the Azure AD Application for which to create a Service Principal.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L148">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L148">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3462,10 +3462,10 @@ The Display Name of the Azure Active Directory Application associated with this 
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalState-oauth2Permissions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L152">property <b>oauth2Permissions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L152">property <b>oauth2Permissions</b></a>
 </h3>
 <div class="pdoc-member-contents">
-<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#ServicePrincipalOauth2Permission'>inputs.ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</pre>
+<pre class="highlight"><span class='kd'></span>oauth2Permissions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#ServicePrincipalOauth2Permission'>ServicePrincipalOauth2Permission</a>&gt;[]&gt;;</pre>
 {{% md %}}
 
 A collection of OAuth 2.0 permissions exposed by the associated application. Each permission is covered by a `oauth2Permission` block as documented below.
@@ -3473,7 +3473,7 @@ A collection of OAuth 2.0 permissions exposed by the associated application. Eac
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalState-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L156">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L156">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3484,7 +3484,7 @@ The Service Principal's Object ID.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="ServicePrincipalState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/servicePrincipal.ts#L160">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/servicePrincipal.ts#L160">property <b>tags</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</pre>
@@ -3496,7 +3496,7 @@ A list of tags to apply to the Service Principal.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserArgs">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L178">interface <b>UserArgs</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L178">interface <b>UserArgs</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3505,7 +3505,7 @@ The set of arguments for constructing a User resource.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserArgs-accountEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L183">property <b>accountEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L183">property <b>accountEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3517,7 +3517,7 @@ The set of arguments for constructing a User resource.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L187">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L187">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3528,7 +3528,7 @@ The name to display in the address book for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-forcePasswordChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L191">property <b>forcePasswordChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L191">property <b>forcePasswordChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forcePasswordChange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3539,13 +3539,13 @@ The name to display in the address book for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-mailNickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L192">property <b>mailNickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L192">property <b>mailNickname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mailNickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L196">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L196">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3556,7 +3556,7 @@ The password for the User. The password must satisfy minimum requirements as spe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserArgs-userPrincipalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L200">property <b>userPrincipalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L200">property <b>userPrincipalName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPrincipalName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3568,7 +3568,7 @@ The User Principal Name of the Azure AD User.
 </div>
 </div>
 <h2 class="pdoc-module-header" id="UserState">
-<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L142">interface <b>UserState</b></a>
+<a class="pdoc-member-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L142">interface <b>UserState</b></a>
 </h2>
 <div class="pdoc-module-contents">
 {{% md %}}
@@ -3577,7 +3577,7 @@ Input properties used for looking up and filtering User resources.
 
 {{% /md %}}
 <h3 class="pdoc-member-header" id="UserState-accountEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L147">property <b>accountEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L147">property <b>accountEnabled</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>accountEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3589,7 +3589,7 @@ Input properties used for looking up and filtering User resources.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L151">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L151">property <b>displayName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3600,7 +3600,7 @@ The name to display in the address book for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-forcePasswordChange">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L155">property <b>forcePasswordChange</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L155">property <b>forcePasswordChange</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>forcePasswordChange?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</pre>
@@ -3611,7 +3611,7 @@ The name to display in the address book for the user.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-mail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L159">property <b>mail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L159">property <b>mail</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3622,13 +3622,13 @@ The primary email address of the Azure AD User.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-mailNickname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L160">property <b>mailNickname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L160">property <b>mailNickname</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>mailNickname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
 </div>
 <h3 class="pdoc-member-header" id="UserState-objectId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L164">property <b>objectId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L164">property <b>objectId</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>objectId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3639,7 +3639,7 @@ The Object ID of the Azure AD User.
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L168">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L168">property <b>password</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
@@ -3650,7 +3650,7 @@ The password for the User. The password must satisfy minimum requirements as spe
 {{% /md %}}
 </div>
 <h3 class="pdoc-member-header" id="UserState-userPrincipalName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/e4781cd1a63d48cdd74331c923bc9a9214c6257b/sdk/nodejs/user.ts#L172">property <b>userPrincipalName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azuread/blob/fe601fd19807c439a13509287d0240881449e6e5/sdk/nodejs/user.ts#L172">property <b>userPrincipalName</b></a>
 </h3>
 <div class="pdoc-member-contents">
 <pre class="highlight"><span class='kd'></span>userPrincipalName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</pre>
