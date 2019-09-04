@@ -27,10 +27,11 @@ function generateOnThisPage() {
             var $el = $(this);
             var id = $el.attr("id");
             var text = $el.text();
+            var linkTitle = $el.data("link-title");
             var tag = $el.prop("tagName").toLowerCase();
             if (id && text) {
                 found = true;
-                $ul.append("<li class='" + tag + "'><a href='#" + id + "'>" + text + "</a></li>");
+                $ul.append("<li class='" + tag + "'><a href='#" + id + "'>" + (linkTitle || text) + "</a></li>");
             }
         });
 

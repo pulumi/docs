@@ -35,7 +35,7 @@
         {{ $toggle_state := "toggle" }}
         {{ $sidenav_selected := "" }}
 
-        {{ if eq $page.RelPermalink .URL }}
+        {{ if or (eq $page.RelPermalink .URL) (and (not .HasChildren) (hasPrefix $page.RelPermalink .URL) (ne .Name "Overview") (ne .Name "Troubleshooting")) }}
             {{ $toggle_state = "toggleVisible" }}
             {{ $sidenav_selected = "active" }}
         {{ else if hasPrefix $page.RelPermalink .URL }}
