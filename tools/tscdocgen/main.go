@@ -422,7 +422,7 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 
 	// Ensure the files, members, and children (deeply throughout the tree) are sorted deterministically.
 	sort.Strings(files)
-	transitiveSortNodes(members)
+	transitiveSortNodes(members, false /*sortByLabel*/)
 
 	// Get any submodules, make relative links, and ensure they are also sorted in a deterministic order.
 	var modules []struct {
@@ -583,16 +583,33 @@ func isDataSource(node *typeDocNode) bool {
 	return false
 }
 
-// transitiveSortNodes sorts an array of nodes and their children, deeply.
-func transitiveSortNodes(nodes []*typeDocNode) {
-	// First sort the nodes themselves using a case-insensitive sort.
-	sort.SliceStable(nodes, func(i, j int) bool {
-		return strings.ToLower(nodes[i].Name) < strings.ToLower(nodes[j].Name)
-	})
+// labelSorter sorts nodes with labels alphabetically.
+func labelSorter(nodes []*typeDocNode) func(i, j int) bool {
+	return func(i, j int) bool {
+		if nodes[i].Label != nodes[j].Label {
+			return nodes[i].Label < nodes[j].Label
+		}
+		return nodes[i].Name < nodes[j].Name
+	}
+}
 
-	// And now their children, deeply. Note that we use a stable sort because some children don't have labels.
+// transitiveSortNodes sorts an array of nodes and their children, deeply.
+func transitiveSortNodes(nodes []*typeDocNode, sortByLabel bool) {
+	if sortByLabel {
+		// Sort the nodes themeselves by label.
+		sort.SliceStable(nodes, labelSorter(nodes))
+	} else {
+		// Sort the nodes themselves using a case-insensitive sort.
+		sort.SliceStable(nodes, func(i, j int) bool {
+			return strings.ToLower(nodes[i].Name) < strings.ToLower(nodes[j].Name)
+		})
+	}
+
+	// And now their children, deeply. If the node type is a class or interface, sort by label,
+	// so that constructors come first, all properties are grouped together, etc.
 	for _, node := range nodes {
-		transitiveSortNodes(node.Children)
+		sortByLabel := node.Kind == typeDocClassNode || node.Kind == typeDocInterfaceNode
+		transitiveSortNodes(node.Children, sortByLabel)
 	}
 }
 
