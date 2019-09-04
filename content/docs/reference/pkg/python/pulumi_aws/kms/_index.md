@@ -535,6 +535,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for identifying the grant.</p></li>
 <li><p><strong>operations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of operations that the grant permits. The permitted values are: <code class="docutils literal notranslate"><span class="pre">Decrypt,</span> <span class="pre">Encrypt,</span> <span class="pre">GenerateDataKey,</span> <span class="pre">GenerateDataKeyWithoutPlaintext,</span> <span class="pre">ReEncryptFrom,</span> <span class="pre">ReEncryptTo,</span> <span class="pre">CreateGrant,</span> <span class="pre">RetireGrant,</span> <span class="pre">DescribeKey</span></code></p></li>
+<li><p><strong>retiring_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.</p></li>
 </ul>
 </dd>
 </dl>
@@ -602,6 +603,12 @@ See <a class="reference external" href="https://docs.aws.amazon.com/kms/latest/A
 <dd><p>A list of operations that the grant permits. The permitted values are: <code class="docutils literal notranslate"><span class="pre">Decrypt,</span> <span class="pre">Encrypt,</span> <span class="pre">GenerateDataKey,</span> <span class="pre">GenerateDataKeyWithoutPlaintext,</span> <span class="pre">ReEncryptFrom,</span> <span class="pre">ReEncryptTo,</span> <span class="pre">CreateGrant,</span> <span class="pre">RetireGrant,</span> <span class="pre">DescribeKey</span></code></p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_aws.kms.Grant.retiring_principal">
+<code class="sig-name descname">retiring_principal</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kms.Grant.retiring_principal" title="Permalink to this definition">¶</a></dt>
+<dd><p>The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_aws.kms.Grant.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">constraints=None</em>, <em class="sig-param">grant_creation_tokens=None</em>, <em class="sig-param">grant_id=None</em>, <em class="sig-param">grant_token=None</em>, <em class="sig-param">grantee_principal=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">operations=None</em>, <em class="sig-param">retire_on_delete=None</em>, <em class="sig-param">retiring_principal=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kms.Grant.get" title="Permalink to this definition">¶</a></dt>
@@ -634,6 +641,7 @@ See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_Retire
 <li><p><strong>key_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A friendly name for identifying the grant.</p></li>
 <li><p><strong>operations</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of operations that the grant permits. The permitted values are: <code class="docutils literal notranslate"><span class="pre">Decrypt,</span> <span class="pre">Encrypt,</span> <span class="pre">GenerateDataKey,</span> <span class="pre">GenerateDataKeyWithoutPlaintext,</span> <span class="pre">ReEncryptFrom,</span> <span class="pre">ReEncryptTo,</span> <span class="pre">CreateGrant,</span> <span class="pre">RetireGrant,</span> <span class="pre">DescribeKey</span></code></p></li>
+<li><p><strong>retiring_principal</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the state may not always be refreshed to reflect what is true in AWS.</p></li>
 </ul>
 </dd>
 </dl>

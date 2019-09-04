@@ -2092,7 +2092,8 @@ For supported values, see the EngineVersion parameter in <a class="reference ext
 Note that for Amazon Aurora instances the engine version must match the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">DB cluster</a>’s engine version’.</p>
 </p></li>
 <li><p><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final DB snapshot
-when this DB instance is deleted. If omitted, no final snapshot will be made.</p></li>
+when this DB instance is deleted. Must be provided if <code class="docutils literal notranslate"><span class="pre">skip_final_snapshot</span></code> is
+set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>iam_database_authentication_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether or
 mappings of AWS Identity and Access Management (IAM) accounts to database
 accounts is enabled.</p></li>
@@ -2342,7 +2343,8 @@ Note that for Amazon Aurora instances the engine version must match the <a class
 <dt id="pulumi_aws.rds.Instance.final_snapshot_identifier">
 <code class="sig-name descname">final_snapshot_identifier</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.rds.Instance.final_snapshot_identifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>The name of your final DB snapshot
-when this DB instance is deleted. If omitted, no final snapshot will be made.</p>
+when this DB instance is deleted. Must be provided if <code class="docutils literal notranslate"><span class="pre">skip_final_snapshot</span></code> is
+set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2677,7 +2679,8 @@ For supported values, see the EngineVersion parameter in <a class="reference ext
 Note that for Amazon Aurora instances the engine version must match the <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/rds_cluster.html">DB cluster</a>’s engine version’.</p>
 </p></li>
 <li><p><strong>final_snapshot_identifier</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your final DB snapshot
-when this DB instance is deleted. If omitted, no final snapshot will be made.</p></li>
+when this DB instance is deleted. Must be provided if <code class="docutils literal notranslate"><span class="pre">skip_final_snapshot</span></code> is
+set to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>hosted_zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The canonical hosted zone ID of the DB instance (to be used
 in a Route 53 Alias record).</p></li>
 <li><p><strong>iam_database_authentication_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies whether or

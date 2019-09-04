@@ -11,6 +11,11 @@ title: Module elasticsearch
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/issues">terraform-providers/terraform-provider-aws repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.elasticsearch"></span><dl class="class">
+<dt id="pulumi_aws.elasticsearch.AwaitableGetDomainResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">AwaitableGetDomainResult</code><span class="sig-paren">(</span><em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_configs=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encryption_at_rests=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">kibana_endpoint=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryptions=None</em>, <em class="sig-param">processing=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.AwaitableGetDomainResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.elasticsearch.Domain">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">Domain</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">cluster_config=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encrypt_at_rest=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryption=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Elasticsearch Domain.</p>
@@ -60,7 +65,7 @@ domain on every apply.</p></li>
 </ul>
 <p>The <strong>ebs_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether EBS volumes are attached to data nodes in the domain</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether EBS volumes are attached to data nodes in the domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of EBS volumes attached to data nodes (in GB).
@@ -154,7 +159,7 @@ domain on every apply.</p>
 <code class="sig-name descname">ebs_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.Domain.ebs_options" title="Permalink to this definition">¶</a></dt>
 <dd><p>EBS related options, may be required based on chosen <a class="reference external" href="https://aws.amazon.com/elasticsearch-service/pricing/">instance size</a>. See below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether EBS volumes are attached to data nodes in the domain</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether EBS volumes are attached to data nodes in the domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of EBS volumes attached to data nodes (in GB).
@@ -312,7 +317,7 @@ domain on every apply.</p></li>
 </ul>
 <p>The <strong>ebs_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether EBS volumes are attached to data nodes in the domain</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ebsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether EBS volumes are attached to data nodes in the domain.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The baseline input/output (I/O) performance of EBS volumes
 attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">volume_size</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of EBS volumes attached to data nodes (in GB).
@@ -475,6 +480,143 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">GetDomainResult</code><span class="sig-paren">(</span><em class="sig-param">access_policies=None</em>, <em class="sig-param">advanced_options=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">cluster_configs=None</em>, <em class="sig-param">cognito_options=None</em>, <em class="sig-param">created=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">ebs_options=None</em>, <em class="sig-param">elasticsearch_version=None</em>, <em class="sig-param">encryption_at_rests=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">kibana_endpoint=None</em>, <em class="sig-param">log_publishing_options=None</em>, <em class="sig-param">node_to_node_encryptions=None</em>, <em class="sig-param">processing=None</em>, <em class="sig-param">snapshot_options=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_options=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDomain.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.access_policies">
+<code class="sig-name descname">access_policies</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.access_policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>The policy document attached to the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.advanced_options">
+<code class="sig-name descname">advanced_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.advanced_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value string pairs to specify advanced configuration options.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Amazon Resource Name (ARN) of the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.cluster_configs">
+<code class="sig-name descname">cluster_configs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.cluster_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cluster configuration of the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.cognito_options">
+<code class="sig-name descname">cognito_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.cognito_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Domain Amazon Cognito Authentication options for Kibana.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.created">
+<code class="sig-name descname">created</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the creation of the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.deleted">
+<code class="sig-name descname">deleted</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of the deletion of the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.domain_id">
+<code class="sig-name descname">domain_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.domain_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique identifier for the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.ebs_options">
+<code class="sig-name descname">ebs_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.ebs_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>EBS Options for the instances in the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.elasticsearch_version">
+<code class="sig-name descname">elasticsearch_version</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.elasticsearch_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>ElasticSearch version for the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.encryption_at_rests">
+<code class="sig-name descname">encryption_at_rests</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.encryption_at_rests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Domain encryption at rest related options.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.endpoint">
+<code class="sig-name descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Domain-specific endpoint used to submit index, search, and data upload requests.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.kibana_endpoint">
+<code class="sig-name descname">kibana_endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.kibana_endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Domain-specific endpoint used to access the Kibana application.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.log_publishing_options">
+<code class="sig-name descname">log_publishing_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.log_publishing_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Domain log publishing related options.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.node_to_node_encryptions">
+<code class="sig-name descname">node_to_node_encryptions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.node_to_node_encryptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Domain in transit encryption related options.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.processing">
+<code class="sig-name descname">processing</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.processing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Status of a configuration change in the domain.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">snapshot_options</span></code> – Domain snapshot related options.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tags assigned to the domain.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.vpc_options">
+<code class="sig-name descname">vpc_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.vpc_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>VPC Options for private Elasticsearch domains.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.elasticsearch.GetDomainResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.elasticsearch.GetDomainResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.elasticsearch.get_domain">
+<code class="sig-prename descclassname">pulumi_aws.elasticsearch.</code><code class="sig-name descname">get_domain</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.elasticsearch.get_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get information about an Elasticsearch Domain</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>domain_name</strong> (<em>str</em>) – Name of the domain.</p>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elasticsearch_domain.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 </div>

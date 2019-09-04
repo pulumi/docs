@@ -229,9 +229,160 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_openstack.identity.AwaitableGetServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">AwaitableGetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.AwaitableGetServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.identity.AwaitableGetUserResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">AwaitableGetUserResult</code><span class="sig-paren">(</span><em class="sig-param">default_project_id=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">idp_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password_expires_at=None</em>, <em class="sig-param">protocol_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">unique_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.AwaitableGetUserResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.identity.EndpointV3">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">EndpointV3</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint_region=None</em>, <em class="sig-param">interface=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V3 Endpoint resource within OpenStack Keystone.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This usually requires admin privileges.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>endpoint_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint region. The <code class="docutils literal notranslate"><span class="pre">region</span></code> and
+<code class="docutils literal notranslate"><span class="pre">endpoint_region</span></code> can be different.</p></li>
+<li><p><strong>interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint interface. Valid values are <code class="docutils literal notranslate"><span class="pre">public</span></code>,
+<code class="docutils literal notranslate"><span class="pre">internal</span></code> and <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">public</span></code></p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint name.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint service ID.</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint url.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_endpoint_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_endpoint_v3.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.EndpointV3.endpoint_region">
+<code class="sig-name descname">endpoint_region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.endpoint_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint region. The <code class="docutils literal notranslate"><span class="pre">region</span></code> and
+<code class="docutils literal notranslate"><span class="pre">endpoint_region</span></code> can be different.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.EndpointV3.interface">
+<code class="sig-name descname">interface</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint interface. Valid values are <code class="docutils literal notranslate"><span class="pre">public</span></code>,
+<code class="docutils literal notranslate"><span class="pre">internal</span></code> and <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">public</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.EndpointV3.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.EndpointV3.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.EndpointV3.service_id">
+<code class="sig-name descname">service_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.service_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint service ID.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.EndpointV3.service_name">
+<code class="sig-name descname">service_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.service_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service name of the endpoint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.EndpointV3.service_type">
+<code class="sig-name descname">service_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.service_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service type of the endpoint.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.EndpointV3.url">
+<code class="sig-name descname">url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The endpoint url.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.identity.EndpointV3.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint_region=None</em>, <em class="sig-param">interface=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_id=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">service_type=None</em>, <em class="sig-param">url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing EndpointV3 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>endpoint_region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint region. The <code class="docutils literal notranslate"><span class="pre">region</span></code> and
+<code class="docutils literal notranslate"><span class="pre">endpoint_region</span></code> can be different.</p></li>
+<li><p><strong>interface</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint interface. Valid values are <code class="docutils literal notranslate"><span class="pre">public</span></code>,
+<code class="docutils literal notranslate"><span class="pre">internal</span></code> and <code class="docutils literal notranslate"><span class="pre">admin</span></code>. Default value is <code class="docutils literal notranslate"><span class="pre">public</span></code></p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint name.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>service_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint service ID.</p></li>
+<li><p><strong>service_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name of the endpoint.</p></li>
+<li><p><strong>service_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service type of the endpoint.</p></li>
+<li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint url.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_endpoint_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_endpoint_v3.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.identity.EndpointV3.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.identity.EndpointV3.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.EndpointV3.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 <dl class="class">
 <dt id="pulumi_openstack.identity.GetAuthScopeResult">
@@ -468,6 +619,48 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_openstack.identity.GetRoleResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetRoleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.identity.GetServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">GetServiceResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.GetServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getService.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetServiceResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetServiceResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service description.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetServiceResult.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetServiceResult.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetServiceResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetServiceResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetServiceResult.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetServiceResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetServiceResult.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetServiceResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.GetServiceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.GetServiceResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
@@ -900,6 +1093,124 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_openstack.identity.ServiceV3">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">ServiceV3</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages a V3 Service resource within OpenStack Keystone.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This usually requires admin privileges.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service description.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The service status. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service type.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_service_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_service_v3.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.ServiceV3.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service description.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.ServiceV3.enabled">
+<code class="sig-name descname">enabled</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3.enabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service status. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.ServiceV3.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.ServiceV3.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.identity.ServiceV3.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The service type.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.identity.ServiceV3.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing ServiceV3 resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service description.</p></li>
+<li><p><strong>enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – The service status. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service name.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The service type.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_service_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/identity_service_v3.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.identity.ServiceV3.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_openstack.identity.ServiceV3.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.ServiceV3.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.identity.User">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">default_project_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">domain_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">extra=None</em>, <em class="sig-param">ignore_change_password_upon_first_use=None</em>, <em class="sig-param">ignore_lockout_failure_attempts=None</em>, <em class="sig-param">ignore_password_expiry=None</em>, <em class="sig-param">multi_factor_auth_enabled=None</em>, <em class="sig-param">multi_factor_auth_rules=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V3 User resource within OpenStack Keystone.</p>
@@ -1227,6 +1538,29 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_role_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_role_v3.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.identity.get_service">
+<code class="sig-prename descclassname">pulumi_openstack.identity.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.identity.get_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ID of an OpenStack service.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This usually requires admin privileges.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enabled</strong> (<em>bool</em>) – The service status.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The service name.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V3 Keystone client.
+If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The service type.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_service_v3.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/identity_service_v3.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
