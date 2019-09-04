@@ -1,5 +1,7 @@
 {{ define "hero" }}
     <header class="header-hero-home text-center mb-8 relative px-4 md:px-0">
+        {{ partial "alert" . }}
+
         <div class="relative">
             <h1 class="font-sans font-body font-normal">
                 {{ .Params.heading }}
@@ -7,9 +9,28 @@
             <p>
                 {{ .Params.subhead | markdownify }}
             </p>
+            <div class="mt-6">
+                <a href="{{ relref . "/docs/get-started" }}" class="btn bg-purple-300 hover:bg-purple-200 border-none px-8 py-4 transition-all text-sm rounded-full uppercase shadow-lg" title="Create your first project with Pulumi">
+                    Get Started
+                </a>
+            </div>
+            <div class="mt-8 text-sm text-purple-100">
+                Pulumi is <a class="text-white hover:underline" href="{{ relref . "/pricing" }}">free</a>
+                and <a class="text-white hover:underline" href="https://github.com/pulumi/pulumi" target="_blank">open source</a>.
+            </div>
+        </div>
+    </header>
+{{ end }}
+
+{{ define "main" }}
+    <section class="pb-16 px-4 md:px-0" style="background: linear-gradient(#ffffff 50%, #f5fbff 100%);">
+        <div class="container mx-auto text-center">
+
+            <!-- Carousel -->
+            {{ partial "carousel" . }}
 
             <!-- CTA 0 -->
-            <div class="mt-12 mx-auto max-w-3xl md:flex items-center bg-gray-100 px-8 py-6 rounded-lg border border-gray-300 shadow-md">
+            <div class="mt-6 md:mt-12 mx-auto max-w-3xl md:flex items-center bg-white px-8 py-6 rounded-lg border border-gray-300 shadow-md">
                 <div>
                     <i class="text-green-600 fas fa-check text-4xl"></i>
                 </div>
@@ -23,15 +44,6 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </header>
-{{ end }}
-
-{{ define "main" }}
-    <section class="pb-16 px-4 md:px-0" style="background: linear-gradient(#ffffff 50%, #f5fbff 100%);">
-        <div class="container mx-auto text-center">
-            <!-- Carousel -->
-            {{ partial "carousel" . }}
         </div>
     </section>
 
@@ -93,7 +105,7 @@
 
     <!-- Customer logos -->
     <section class="mb-16 px-4 md:px-0">
-        <div class="container mx-auto flex justify-center items-center">
+        <div class="container mx-auto">
             <div class="lg:flex items-center justify-center my-4">
                 <a href="https://www.tableau.com/" target="_blank">
                     <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/tableau_logo.png" alt="Tableau Software" title="Tableau Software">
@@ -108,20 +120,18 @@
                     <img class="mx-auto mt-6 md:mt-0 lg:mx-8 h-12 mx-8" src="/logos/customers/nih.png" alt="National Institutes of Health" title="National Institutes of Health">
                 </a>
             </div>
-        </div>
-        <div class="container mx-auto flex justify-center items-center">
             <div class="lg:flex items-center justify-center my-4">
                 <a href="https://www.linio.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/linio_logo.png" alt="Linio" title="Linio">
                 </a>
                 <a href="https://www.cockroachlabs.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-8 mx-8" src="/logos/customers/cockroach-labs_logo.png" alt="Cockroach Labs" title="Cockroach Labs">
                 </a>
                 <a href="https://www.sourcegraph.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-6 mx-8" src="/logos/customers/sourcegraph_logo.png" alt="Sourcegraph" title="Sourcegraph">
                 </a>
                 <a href="https://www.snopes.com/" target="_blank">
-                    <img class="mx-auto lg:mx-8 h-12 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
+                    <img class="mx-auto my-8 md:my-0 lg:mx-8 h-10 mx-8" src="/logos/customers/snopes_logo.png" alt="Snopes" title="Snopes">
                 </a>
             </div>
         </div>

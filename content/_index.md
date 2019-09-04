@@ -1,9 +1,8 @@
 ---
-heading: Modern Infrastructure as Code.
-
+heading: Modern infrastructure as code.
 
 subhead: >
-    Use your favorite languages and tools. Empower your developers
+    Use real languages and tools. Empower developers
     and operators to work better together.
 
 ctas:
@@ -44,14 +43,14 @@ carousel:
       description: your team's projects and environments.
       details:
         - title: Tame complexity.
-          description: Deploy and gain visibility across all of your environments.
+          description: Gain visibility across all of your environments.
         - title: Audit and secure.
           description: >
-            Record a trail of who changed what, when, and why. Enforce infrastructure
-            and deployment policies using your identity provider of choice.
+            Know who changed what, when, and why. Enforce deployment policies with your
+            identity provider of choice.
         - title: Secrets management.
           description: >
-            Easy, built-in encrypted configuration, keeping your secrets safe.
+            Keep secrets safe with easy, built-in encrypted configuration.
 
 quotes:
     - name: Dinesh Ramamurthy
