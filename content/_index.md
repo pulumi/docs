@@ -1,9 +1,9 @@
 ---
-heading: Modern infrastructure as code.
+heading: Modern Infrastructure as Code.
 
 subhead: >
-    Use real languages and tools. Empower developers
-    and operators to work better together.
+    Declare cloud infrastructure using real languages. Enable
+    developers and operators to work better together.
 
 ctas:
     - |
@@ -16,12 +16,12 @@ ctas:
 carousel:
     - heading: Create
       label: Create
-      description: modern apps and infrastructure.
+      description: modern applications.
       details:
         - title: Real programming languages.
           description: Define infrastructure in JavaScript, TypeScript, Python, or Go.
-        - title: Great tools.
-          description: Unlock access to your favorite IDEs, test frameworks, and tools.
+        - title: Your favorite tools.
+          description: Use familiar IDEs, test frameworks, and tools.
         - title: Share and reuse.
           description: Codify best practices and share them with your team or a growing community of practitioners.
 
@@ -32,7 +32,7 @@ carousel:
         - title: Many clouds, one workflow.
           description: Use the same language, tools, and workflow, no matter the cloud.
         - title: Collaborate.
-          description: Unify your approach to delivery between developers and operators.
+          description: Harmonize your engineering practices between developers and operators.
         - title: Easy continuous delivery.
           description: >
             Deploy from the CLI, or integrate with your favorite CI/CD
@@ -40,7 +40,7 @@ carousel:
 
     - heading: Manage
       label: Manage
-      description: your team's projects and environments.
+      description: cloud environments.
       details:
         - title: Tame complexity.
           description: Gain visibility across all of your environments.
