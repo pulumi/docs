@@ -3,7 +3,7 @@ title: Cloud Providers
 menu:
   intro:
     identifier: cloud-providers
-    weight: 2
+    weight: 4
 
 aliases: ["/docs/reference/clouds/"]
 ---

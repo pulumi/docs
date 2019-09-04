@@ -3,7 +3,7 @@ title: Architecture & Concepts
 menu:
   intro:
     identifier: concepts
-    weight: 1
+    weight: 2
 
 aliases: ["/docs/reference/concepts/"]
 ---
@@ -14,9 +14,9 @@ At the center of Pulumi is an open-source cloud object model, coupled with an ev
 
 Each Pulumi [project]({{< relref "project.md" >}}) contains a [program]({{< relref "programming-model.md" >}}) --  executable code in a familiar language such as JavaScript, TypeScript, Python, or Go.  You will manage this program as you would any other source code, for example, using Git.
 
-Each project also has associated [stacks]({{< relref "stack.md" >}}).  A stack is an isolated, independently configurable instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev). 
+Each project also has associated [stacks]({{< relref "stack.md" >}}).  A stack is an isolated, independently configurable instance of a Pulumi program. Stacks are commonly used to denote different phases of development (such as development, staging and production) or feature branches (such as feature-x-dev, jane-feature-x-dev).
 
-When you select a stack and run the program, the Pulumi engine creates a model of the desired state of that stack.  The objects and dependencies created by your program form the model.  The model describes the [resources]({{< relref "programming-model.md" >}}) needed in the stack and their settings (for example, new aws.ec2.Instance(...)).  Pulumi updates the stack to match the desired state.
+When you select a stack and run the program, the Pulumi engine creates a model of the desired state of that stack. The objects and dependencies created by your program form the model. The model describes the [resources]({{< relref "programming-model.md" >}}) needed in the stack and their settings (for example, new aws.ec2.Instance(...)).  Pulumi updates the stack to match the desired state.
 
 This following topics describe the core concepts behind Pulumi in more detail:
 
