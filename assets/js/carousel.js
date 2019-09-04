@@ -40,9 +40,15 @@
             .css("pointer-events", "auto");
 
         $(".carousel-item-label")
-            .removeClass("bg-purple-700")
+            .removeClass("border-purple-700")
+            .removeClass("text-purple-700")
+            .removeClass("hover:text-purple-700")
+            .addClass("text-purple-200")
+            .addClass("hover:text-purple-300")
             .eq(i)
-            .addClass("bg-purple-700");
+            .addClass("border-purple-700")
+            .addClass("text-purple-700")
+            .addClass("hover:text-purple-700");
 
         if (i === 0) {
             showIDE();
