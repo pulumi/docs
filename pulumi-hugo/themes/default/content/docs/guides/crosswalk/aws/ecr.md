@@ -375,7 +375,7 @@ policy permissions to access your Amazon ECR registry. The following example def
 See the [Pulumi Crosswalk for AWS IAM documentation]({{< relref "iam.md" >}}) for instructions on how to manage
 such policies.
 
-## Managing Container Image Lifcycles using Policies
+## Managing Container Image Lifecycles using Policies
 
 [ECR lifecycle policies](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html) allow
 you to specify the lifecycle management of images in a repository. A lifecycle policy is a set of one or more rules,
