@@ -62,7 +62,8 @@ test:
 		--exclude "https://apps.twitter.com/" \
 		--exclude "https://www.googleapis.com/" \
 		--exclude "https://us-central1-/" \
-		--exclude "https://www.mysql.com/"
+		--exclude "https://www.mysql.com/" \
+		--exclude "https://ksonnet.io/"
 
 .PHONY: validate
 validate:
