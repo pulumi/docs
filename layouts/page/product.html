@@ -2,43 +2,41 @@
     <header class="header-hero header-hero-glow">
         <div class="header-hero-items container mx-auto">
             <div class="header-hero-item">
-                <h1>The Pulumi Platform</h1>
+                <h1>Pulumi provides a platform for building modern cloud software.</h1>
                 <p>
-                    Create, deploy, and manage cloud apps and infrastructure, for any
-                    cloud, in your favorite language. From infrastructure to containers to
-                    Kubernetes to serverless. Solutions for teams of all sizes, Dev and
-                    DevOps alike.
+                    Create, deploy, and manage applications and infrastructure on any cloud.
+                    Easily go to production with modern cloud architectures, and break down
+                    silos inhibiting innovation within your organization.
+                </p>
+                <p class="my-8" style="font-size: 1rem !important">
+                    <a class="rounded text-orange-400 font-bold underline md:font-normal md:no-underline md:border-2 md:border-orange-400 md:py-1 md:px-2 md:mr-1 hover:text-orange-300 hover:border-orange-300 transition-all"
+                        href="/pricing#community-edition">Pulumi Community Edition</a>
+                    is free forever for unlimited individual use.
                 </p>
                 <div class="header-hero-actions">
                     <a class="btn btn-lg" href="{{ relref . "/docs/get-started" }}">Get Started</a>
-                    <a class="btn btn-lg btn-orange-translucent" href="{{ relref . "/docs" }}">Read the Docs</a>
+                    <a class="btn btn-lg btn-orange-translucent" href="{{ relref . "/pricing" }}">View Pricing</a>
                 </div>
             </div>
-            <div class="header-hero-item">
-                {{ $code := `$ pulumi up
 
-Previewing update of stack 'mystack-dev'
+            <!-- Right side -->
+            <div id="carousel" class="header-hero-item">
+                <div class="relative p-10" style="height: 440px;">
+                    <!-- IDE -->
+                    <div class="carousel-item opacity-1 absolute top-0 right-0 left-0 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/ide" . }}
+                    </div>
 
-     Type
- +   pulumi:pulumi:Stack
- +   ├─ aws-infra:network:Network
- +   ├─ cloud:global:infrastructure
- +   │  ├─ aws:iam:Role
- +   │  ├─ aws:iam:RolePolicyAttachment
- +   ├─ cloud:bucket:Bucket
- +   │  ├─ cloud:function:Function
- +   │  │  └─ aws:serverless:Function
- +   │  │     ├─ aws:iam:Role
- +   │  │     ├─ aws:iam:RolePolicyAttachment
- +   │  │     └─ aws:lambda:Function
- +   │  ├─ aws:s3:Bucket
- +   ...
+                    <!-- CLI -->
+                    <div class="carousel-item opacity-0 absolute top-0 right-0 left-0 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/cli" . }}
+                    </div>
 
-info: 33 changes previewed:
-    + 33 resources to create
-` }}
-
-                {{ partial "code" (dict "code" $code "lang" "pulumi" "mode" "dark" "chrome" true) }}
+                    <!-- Console -->
+                    <div class="carousel-item opacity-0 absolute top-0 right-0 left-0 transition-all-200 text-xs shadow-xl">
+                        {{ partial "home/console" . }}
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -46,30 +44,28 @@ info: 33 changes previewed:
 
 {{ define "main" }}
     <nav class="nav-section-sticky">
-        <div class="container mx-auto">
+        <div class="container mx-auto uppercase">
             <ul>
-                <li><a href="#pulumi-sdk">Pulumi SDK</a></li>
-                <li><a href="#pulumi-crosswalk">Pulumi Crosswalk</a></li>
-                <li><a href="#pulumi-saas">Pulumi SaaS</a></li>
-                <li><a href="#multi-cloud-subscription">Multi-Cloud Subscription</a></li>
-                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#sdk">SDK</a></li>
+                <li><a href="#teams">For Teams</a></li>
+                <li><a href="#support">Support and Training</a></li>
             </ul>
         </div>
     </nav>
 
     <section class="py-16 px-4 md:px-0">
-        <div class="container md:mx-auto">
-            <h2>Create, deploy, and manage cloud software</h2>
-            <p>
+        <div class="container md:mx-auto text-center">
+            <h2>Create, deploy, and manage modern cloud software.</h2>
+            <p class="text-xl">
                 A single workflow for provisioning cloud apps and infrastructure, in any cloud environment, public, private, or hybrid.
             </p>
         </div>
-        <div class="container md:mx-auto md:flex my-16">
+        <div class="container md:mx-auto md:flex my-16 text-center">
             <div class="md:w-1/3">
-                <h4>ANY CODE</h4>
+                <h4>CREATE</h4>
                 <p class="text-gray-600">
-                    Familiar languages like JavaScript, Python, and Go. Benefit from
-                    abstraction and reuse. Use your favorite IDE, linters, and test
+                    Familiar languages like TypeScript, JavaScript, Python, and Go. Benefit
+                    from abstraction and reuse. Use your favorite IDE, linters, and test
                     frameworks.
                 </p>
                 <ul class="inline-flex list-none p-0 items-center">
@@ -88,10 +84,10 @@ info: 33 changes previewed:
                 </ul>
             </div>
             <div class="md:w-1/3 md:mx-8 my-8 md:my-0">
-                <h4>ANY CLOUD</h4>
+                <h4>DEPLOY</h4>
                 <p class="text-gray-600">
-                    Deploy apps and infrastructure to any cloud with one consistent
-                    approach. Unlearn those YAML/DSL dialects and disjoint workflows.
+                    Deploy applications and infrastructure to any cloud with one consistent
+                    workflow, fully integrated with your favorite CI system.
                 </p>
                 <ul class="inline-flex list-none p-0 items-center">
                     <li class="mr-2">
@@ -109,7 +105,7 @@ info: 33 changes previewed:
                 </ul>
             </div>
             <div class="md:w-1/3">
-                <h4>ANY TEAM</h4>
+                <h4>MANAGE</h4>
                 <p class="text-gray-600">
                     Unlock collaboration across your team with package sharing and reuse,
                     and Dev and DevOps policies and management features.
@@ -132,7 +128,7 @@ info: 33 changes previewed:
         </div>
     </section>
 
-    <section id="pulumi-sdk" class="bg-gray-100 py-16 px-4 md:px-0">
+    <section id="sdk" class="bg-gray-100 py-16 px-4 md:px-0">
         <div class="container md:mx-auto md:flex">
             <div class="md:w-1/2 flex-shrink-0 md:mr-8">
                 <h2>Pulumi SDK</h2>
@@ -147,11 +143,23 @@ info: 33 changes previewed:
             <div class="md:w-1/2 md:flex flex-wrap flex-shrink-0">
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core-1.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-cloud text-blue-300"></i>
                         <div>
-                            <h5>Language Bindings</h5>
+                            <h5>Many Clouds</h5>
                             <p class="text-sm">
-                                Code in JavaScript, Python, and Go instead of YAML or
+                                Access the full breadth of services in AWS, Azure, GCP, Kubernetes,
+                                and more, using shared tools.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
+                    <div class="flex items-start">
+                        <i class="w-12 mr-4 fas fa-2x fa-sticky-note text-blue-300"></i>
+                        <div>
+                            <h5>Many Languages</h5>
+                            <p class="text-sm">
+                                Code in TypeScript, JavaScript, Python, and Go, instead of YAML or
                                 vendor-specific DSLs.
                             </p>
                         </div>
@@ -159,7 +167,7 @@ info: 33 changes previewed:
                 </div>
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core2.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-user-friends text-blue-300"></i>
                         <div>
                             <h5>Open Source</h5>
                             <p class="text-sm">
@@ -171,24 +179,12 @@ info: 33 changes previewed:
                 </div>
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core3.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-tools text-blue-300"></i>
                         <div>
-                            <h5>Component Model</h5>
-                            <p class="text-sm">
-                                Share and reuse components using familiar package
-                                managers.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
-                    <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core4.svg">
-                        <div>
-                            <h5>Cloud Engineering</h5>
+                            <h5>Great Tools</h5>
                             <p class="text-sm">
                                 Be productive with IDEs, syntax highlighting, error
-                                checking, and testing.
+                                checking, and testing. Share and reuse components.
                             </p>
                         </div>
                     </div>
@@ -197,87 +193,22 @@ info: 33 changes previewed:
         </div>
     </section>
 
-    <section id="pulumi-crosswalk" class="bg-gray-200 py-16 px-4 md:px-0">
+    <section id="teams" class="py-16 px-4 md:px-0">
         <div class="container md:mx-auto md:flex">
             <div class="md:w-1/2 flex-shrink-0 md:mr-8">
-                <h2>Pulumi Crosswalk</h2>
+                <h2>Pulumi for Teams</h2>
                 <p class="text-xl">
-                    Pulumi Crosswalk, now available for AWS, is a framework for productive
-                    infrastructure as code using built-in best practices.
+                    The Pulumi web console helps teams of all sizes a reliable way to continuously
+                    deliver and manage cloud apps and infrastructure.
                 </p>
-                <a class="inline-block btn btn-lg my-4" href="{{ relref . "/crosswalk/aws" }}">
+                <a class="inline-block btn btn-lg btn-orange my-4" href="{{ relref . "/pricing" }}">
                     Learn More
                 </a>
             </div>
             <div class="md:w-1/2 md:flex flex-wrap flex-shrink-0">
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core4.svg">
-                        <div>
-                            <h5>Best Practices</h5>
-                            <p class="text-sm">
-                                Benefit from real languages and adopt patterns and
-                                practices productively.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
-                    <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-service3.svg">
-                        <div>
-                            <h5>Secure by Default</h5>
-                            <p class="text-sm">
-                                Easy things are easy -- and secure by default! -- and hard
-                                things are possible.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
-                    <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core-1.svg">
-                        <div>
-                            <h5>Production Ready</h5>
-                            <p class="text-sm">
-                                Ease of use combined with production ready configurations
-                                out of the box.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
-                    <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core3.svg">
-                        <div>
-                            <h5>Easy AWS</h5>
-                            <p class="text-sm">
-                                Use the best of the AWS platform easily and with
-                                confidence and production readiness.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pulumi-saas" class="py-16 px-4 md:px-0">
-        <div class="container md:mx-auto md:flex">
-            <div class="md:w-1/2 flex-shrink-0 md:mr-8">
-                <h2>Pulumi SaaS</h2>
-                <p class="text-xl">
-                    The SaaS helps teams of all sizes a reliable way to continuously
-                    deliver and manage cloud apps and infrastructure.
-                </p>
-                <a class="inline-block btn btn-lg my-4" href="{{ relref . "/docs/get-started" }}">
-                    Get Started
-                </a>
-            </div>
-            <div class="md:w-1/2 md:flex flex-wrap flex-shrink-0">
-                <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
-                    <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-service1.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-car-side text-purple-100"></i>
                         <div>
                             <h5>CI/CD Workflow</h5>
                             <p class="text-sm">
@@ -289,7 +220,7 @@ info: 33 changes previewed:
                 </div>
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-service2.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-book text-purple-100"></i>
                         <div>
                             <h5>History & Auditing</h5>
                             <p class="text-sm">
@@ -301,7 +232,7 @@ info: 33 changes previewed:
                 </div>
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-service3.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-key text-purple-100"></i>
                         <div>
                             <h5>Secrets & Configuration</h5>
                             <p class="text-sm">
@@ -313,7 +244,7 @@ info: 33 changes previewed:
                 </div>
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-service4.svg">
+                        <i class="w-12 -ml-4 mr-4 fas fa-2x fa-people-carry text-purple-100"></i>
                         <div>
                             <h5>Organizations & Teams</h5>
                             <p class="text-sm">
@@ -327,63 +258,63 @@ info: 33 changes previewed:
         </div>
     </section>
 
-      <section id="multi-cloud-subscription" class="bg-gray-200 py-16 px-4 md:px-0">
+    <section id="support" class="bg-gray-100 py-16 px-4 md:px-0">
         <div class="container md:mx-auto md:flex">
             <div class="md:w-1/2 flex-shrink-0 md:mr-8">
-                <h2>Multi-Cloud Subscription</h2>
+                <h2>Pulumi Support and Training</h2>
                 <p class="text-xl">
-                    An end-to-end solution for running Kubernetes in production on
-                    multiple clouds, public or private.
+                    Use Pulumi more effectively within your team. Learn how
+                    modernize your tools, organization, and practices based on industry leaders.
                 </p>
-                <a class="inline-block btn btn-lg my-4" href="{{ relref . "/pricing#contact" }}">
+                <a class="inline-block btn btn-lg btn-purple my-4" href="{{ relref . "/contact" }}">
                     Contact Us
                 </a>
             </div>
             <div class="md:w-1/2 md:flex flex-wrap flex-shrink-0">
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core4.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-user-tie text-orange-300"></i>
                         <div>
-                            <h5>Kubernetes First</h5>
+                            <h5>Solution Guidance</h5>
                             <p class="text-sm">
-                                Leverage hosted Kubernetes to get up and running faster
-                                than any alternative.
+                                Access Pulumi's expertise and material for modern
+                                cloud engineering, from Kubernetes to continuous delivery.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core-1.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-phone text-orange-300"></i>
                         <div>
-                            <h5>Solution Oriented</h5>
+                            <h5>Slack with the Team</h5>
                             <p class="text-sm">
-                                The CNCF landscape is complex. We'll help you navigate it
-                                with complete solutions.
+                                Get direct access to Pulumi customer engineers who
+                                can help you out in realtime.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core3.svg">
+                        <i class="w-12 -ml-4 mr-4 fas fa-2x fa-chalkboard-teacher text-orange-300"></i>
                         <div>
-                            <h5>Batteries Included</h5>
+                            <h5>Training Workshops</h5>
                             <p class="text-sm">
-                                Use best practices that have been battle tested at scale,
-                                with customizability built-in.
+                                Hold onsite training for your team -- for Pulumi
+                                specifically, or more general modern cloud practices.
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="md:w-1/2 md:pr-4 mb-8 md:mb-0">
                     <div class="flex items-start">
-                        <img class="w-12 mr-4" src="/icons/icon-core2.svg">
+                        <i class="w-12 mr-4 fas fa-2x fa-pager text-orange-300"></i>
                         <div>
-                            <h5>Enterprise Grade</h5>
+                            <h5>Enterprise Grade SLAs</h5>
                             <p class="text-sm">
-                                Use Pulumi Enterprise and open source packages and tools
-                                for Dev and DevOps alike.
+                                Ensure a guaranteed rapid response to requests
+                                for help when you need it the most.
                             </p>
                         </div>
                     </div>
