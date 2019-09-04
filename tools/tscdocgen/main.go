@@ -316,26 +316,6 @@ func (e *emitter) augmentNode(node *typeDocNode, parent *typeDocNode, k8s bool) 
 		node.Comment.ShortText = strings.ReplaceAll(node.Comment.ShortText, ">", "&gt;")
 	}
 
-	// If this extends or implements other types, render them.
-	if len(node.ExtendedTypes) > 0 {
-		node.Extends = "<span class='kd'>extends</span> "
-		for i, ext := range node.ExtendedTypes {
-			if i > 0 {
-				node.Extends += ", "
-			}
-			node.Extends += e.createTypeLabel(ext, 0)
-		}
-	}
-	if len(node.ImplementedTypes) > 0 {
-		node.Implements = "<span class='kd'>implements</span> "
-		for i, impl := range node.ImplementedTypes {
-			if i > 0 {
-				node.Implements += ", "
-			}
-			node.Implements += e.createTypeLabel(impl, 0)
-		}
-	}
-
 	// Augment everything deeply.
 	for _, child := range node.Children {
 		e.augmentNode(child, node, k8s)
@@ -1039,6 +1019,32 @@ func (e *emitter) createCodeDetails(node *typeDocNode) string {
 			label += " = <span class='s2'>" + html.EscapeString(*node.DefaultValue) + "</span>"
 		}
 		return label + ";"
+
+	case typeDocClassNode, typeDocInterfaceNode:
+		label := fmt.Sprintf("<span class='kr'>%s</span> <span class='nx'>%s</span>",
+			e.createLabel(node, nil), node.Name)
+
+		// If this extends or implements other types, render them.
+		if len(node.ExtendedTypes) > 0 {
+			label += " <span class='kr'>extends</span> "
+			for i, ext := range node.ExtendedTypes {
+				if i > 0 {
+					label += ", "
+				}
+				label += e.createTypeLabel(ext, 0)
+			}
+		}
+		if len(node.ImplementedTypes) > 0 {
+			label = " <span class='kr'>implements</span> "
+			for i, impl := range node.ImplementedTypes {
+				if i > 0 {
+					label += ", "
+				}
+				label += e.createTypeLabel(impl, 0)
+			}
+		}
+		return label
+
 	default:
 		return ""
 	}
@@ -1297,10 +1303,6 @@ type typeDocNode struct {
 	CodeDetails string
 	// URLPath is the path to this member in the relevant Git repi.  It's augmented information.
 	URLPath string
-	// Extends is a rendered type this type inherits from (or empty if none).
-	Extends string
-	// Implements is a rendered list of interfaces this type implements (if any, or empty if none).
-	Implements string
 	// IsResource is true if the node represents a Pulumi resource.
 	IsResource bool
 	// IsDataSource is true if the node represents a Pulumi data source.
