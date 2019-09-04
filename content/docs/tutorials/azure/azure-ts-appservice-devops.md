@@ -2,7 +2,7 @@
 title: "A Todo App on Azure App Service with SQL Database and Application Insights and deploys it to Azure DevOps"
 ---
 
-<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops" target="_blank">
+<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-appservice-devops/infra" target="_blank">
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 

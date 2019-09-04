@@ -2,7 +2,7 @@
 title: "Deploy a Spring Boot App using Jenkins and Pulumi"
 ---
 
-<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-appservice-springboot" target="_blank">
+<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/azure-ts-appservice-springboot/infrastructure" target="_blank">
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 

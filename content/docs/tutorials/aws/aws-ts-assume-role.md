@@ -2,7 +2,7 @@
 title: "AWS AssumeRole Example"
 ---
 
-<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/aws-ts-assume-role" target="_blank">
+<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/aws-ts-assume-role/assume-role" target="_blank">
     <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
 </a>
 
