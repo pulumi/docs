@@ -28,7 +28,7 @@ import * as {{PackageVar}} from "{{Package}}";
 
 {{#HasModules}}
 <h3>Modules</h3>
-<ul class="api clearfix">
+<ul class="api">
 {{#Modules}}
     <li><a href="{{Link}}"><span class="symbol module"></span>{{{Name}}}</a></li>
 {{/Modules}}
@@ -37,7 +37,7 @@ import * as {{PackageVar}} from "{{Package}}";
 
 {{#Namespaces}}
 <h3>namespace <strong>{{{Name}}}</strong></h3>
-<ul class="api clearfix">
+<ul class="api">
 {{#Members}}
 <li><a href="#{{{Name}}}"><span class="symbol api"></span>{{{Name}}}</a></li>
 {{/Members}}
@@ -46,7 +46,7 @@ import * as {{PackageVar}} from "{{Package}}";
 
 {{#HasResources}}
 <h3>Resources</h3>
-<ul class="api clearfix">
+<ul class="api">
 {{#Resources}}
     <li><a href="#{{{Name}}}"><span class="symbol resource"></span>{{{Name}}}</a></li>
 {{/Resources}}
@@ -55,7 +55,7 @@ import * as {{PackageVar}} from "{{Package}}";
 
 {{#HasDataSources}}
 <h3>Data Sources</h3>
-<ul class="api clearfix">
+<ul class="api">
 {{#DataSources}}
     <li><a href="#{{{Name}}}"><span class="symbol datasource"></span>{{{Name}}}</a></li>
 {{/DataSources}}
@@ -64,7 +64,7 @@ import * as {{PackageVar}} from "{{Package}}";
 
 {{#HasOthers}}
 <h3>{{#HasResourcesOrDataSources}}Others{{/HasResourcesOrDataSources}}{{^HasResourcesOrDataSources}}APIs{{/HasResourcesOrDataSources}}</h3>
-<ul class="api clearfix">
+<ul class="api">
 {{#Others}}
     <li><a href="#{{{Name}}}"><span class="symbol api"></span>{{{Name}}}</a></li>
 {{/Others}}

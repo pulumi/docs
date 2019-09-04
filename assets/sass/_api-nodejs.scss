@@ -36,11 +36,10 @@ h3.api {
 ul.api {
     @apply list-none p-0 m-0 overflow-hidden;
 
-    li {
-        @apply float-left truncate mt-0;
+    columns: 3 220px;
 
-        width: 33%;
-        min-width: 220px;
+    li {
+        @apply truncate mt-0;
 
         a {
             @apply btn bg-transparent inline-block p-1;
