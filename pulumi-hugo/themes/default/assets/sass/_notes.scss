@@ -17,15 +17,15 @@
     }
 
     &.note-warning {
-        @apply bg-orange-100 text-orange-800 my-4 px-4 rounded text-sm border border-l-4 border-orange-200;
+        @apply bg-yellow-200 text-yellow-900 my-4 px-4 rounded text-sm border border-l-4 border-yellow-200;
 
 
         a {
-            @apply text-orange-900 underline;
+            @apply text-yellow-900 underline;
         }
 
         code {
-               @apply bg-red-100;
+               @apply bg-orange-200;
         }
 
     }

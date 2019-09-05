@@ -113,7 +113,7 @@ main {
     }
 
     blockquote {
-        @apply border-l-4 rounded border-orange-300 px-4 py-1 text-sm;
+        @apply border-l-4 rounded border-orange-300 px-4 py-1 text-sm mt-4;
 
         p {
             @apply my-1;

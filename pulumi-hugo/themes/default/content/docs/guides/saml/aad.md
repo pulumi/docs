@@ -6,12 +6,16 @@ aliases:
 - /docs/console/accounts/saml/aad/
 ---
 
-This guide explains how to configure your Azure Active Directory (Azure AD) as a SAML SSO identity provider
-(IDP) for use with the Pulumi Console.
+This guide walks you through configuring your Azure Active Directory (Azure AD) as a SAML SSO identity provider
+(IDP) for the Pulumi Console.
 
-## Add an application to your Azure AD tenant
+## Prerequisites
 
-The first step is to add a new Pulumi application to your Azure AD tenant.
+- [Single Sign-On]({{< relref "sso" >}})
+
+## Configuring Azure AD
+
+### Add an application to your Azure AD tenant
 
 1. In the Azure portal, on the left navigation panel, click **Azure Active Directory**.
 
@@ -20,12 +24,12 @@ The first step is to add a new Pulumi application to your Azure AD tenant.
 
     ![Enterprise applications section](/images/docs/reference/service/saml-aad/enterprise-applications.png)
 
-1. Click **New application** at the top of the **All applications** blade.
+1. Click **New application**.
 
     ![New application](/images/docs/reference/service/saml-aad/new-application.png)
 
-1. Click the **Non-gallery application** tile and in the **Add your own application** blade, enter
-   _Pulumi Console_ as the application name and click **Add**.
+1. Select **Non-gallery application** tile and in the **Add your own application** panel, enter
+   _Pulumi Console_ as the application name then click **Add**.
 
     ![Non-gallery application](/images/docs/reference/service/saml-aad/non-gallery-application.png)
 
@@ -38,22 +42,19 @@ The first step is to add a new Pulumi application to your Azure AD tenant.
 
     ![SAML configuration](/images/docs/reference/service/saml-aad/saml-configuration.png)
 
-The next step is to enter Pulumi-specific configuration data into your Azure AD application.
-The values you will want to use are dependent upon your organization's name on Pulumi. Be sure
-to replace `acmecorp` with whatever your specific Pulumi organization's name is.
+### Enter Pulumi configuration into your Azure AD application
+{{< saml-warning >}}
 
 | SAML Setting | Value |
 | --------------- | ----- |
-| Identifier (Entity ID) | `https://api.pulumi.com/login/**acmecorp**/sso/saml/metadata` |
-| Reply URL | `https://api.pulumi.com/login/**acmecorp**/sso/saml/acs` |
-| Relay State | `https://api.pulumi.com/login/**acmecorp**/sso` |
+| Identifier (Entity ID) | `https://api.pulumi.com/login/<acmecorp>/sso/saml/metadata` |
+| Reply URL | `https://api.pulumi.com/login/<acmecorp>/sso/saml/acs` |
+| Relay State | `https://api.pulumi.com/login/<acmecorp>/sso` |
 
-
-<p><!-- space between table and image --></p>
 
 ![Edited SAML configuration](/images/docs/reference/service/saml-aad/edited-saml-configuration.png)
 
-The final step is to configure the **name identifier format**.
+### Configure the name identifier format
 
 1. Click the **Edit** icon on the **User Attributes & Claims** panel.
 
@@ -63,22 +64,22 @@ The final step is to configure the **name identifier format**.
 
 ![User Attributes & Claims](/images/docs/reference/service/saml-aad/attributes-and-claims.png)
 
-1. In the **Manage User Claims** panel, expand the **Choose name identifier format** and select **Email address**.
+1. In the **Manage User Claims** panel, expand **Choose name identifier format** and select **Email address**.
 
 ![Manage Name Identifier Format](/images/docs/reference/service/saml-aad/name-identifier-format.png)
 
 1. Finally, click **Save** at the bottom of the **Manage User Claims** panel.
 
-**IMPORTANT:** Do not change the value of Name ID Format value once your users have started using Pulumi; not even switching its value between Email or Persistent.
+> **Important:** Do not change the value of Name ID Format value once your users have started using Pulumi---not even switching its value between Email or Persistent.
 
-Now the Azure AD-side of the SAML SSO configuration is complete. The next and final
-step is to configure the Pulumi Console to receive SAML SSO requests from your
-Azure AD.
-
-> **NOTE:** Be sure to assign users and groups to use your new _Pulumi Console_ SAML application.
-> That is how you can control access to who can join your Pulumi organization. See the
+> **Note:** Be sure to assign users and groups to use your new _Pulumi Console_ SAML application.
+> That is how you can control membership access to your Pulumi organization. See the
 > [Azure AD documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications#assign-users-and-groups-to-your-saml-application)
 > for more information.
+
+Now that the Azure AD-side of the SAML SSO configuration is complete, you will need
+to configure the Pulumi Console to receive SAML SSO requests from your
+Azure AD.
 
 ## Configuring Your Pulumi Organization
 
