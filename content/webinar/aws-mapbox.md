@@ -34,7 +34,7 @@ main:
         - Why current technologies fall short—especially at scale
         - How to compile an asset tracking solution using modern, serverless technology with Pulumi, AWS, and Mapbox
         - "Pulumi Live demo: Asset tracking at work"
-        - "Programing your cloud applications with TypeScript, JavaScript, or Python: Pulumi SDKs and SaaS console"
+        - "Programing your cloud applications with TypeScript, JavaScript, or Python: Pulumi SDKs and Service"
         - Why serverless tech matters and what it enables
 
 webinar:

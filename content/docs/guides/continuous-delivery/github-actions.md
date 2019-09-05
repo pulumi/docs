@@ -209,7 +209,7 @@ does not have access to your source code.)
 
 Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of
 any resource changes will be left on the Pull Request, as well as links to the Pulumi
-Cloud Console for more detailed information.
+Console for more detailed information.
 
 You can install the Pulumi GitHub App now, by visiting
 [github.com/apps/pulumi](https://github.com/apps/pulumi) or clicking the button below.

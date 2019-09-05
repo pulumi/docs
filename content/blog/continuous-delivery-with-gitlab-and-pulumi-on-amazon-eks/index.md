@@ -62,13 +62,13 @@ please refer to our documentation
 - Pulumi Stacks have associated metadata in the form of key/value
     tags.
 - You can assign custom tags to stacks (when logged into the
-  [web backend]({{< ref "/docs/intro/concepts/state" >}}) to customize how
-  stacks are listed in the [Pulumi Cloud Console](https://app.pulumi.com/).
+  [Pulumi Service backend]({{< ref "/docs/intro/concepts/state" >}}) to customize how
+  stacks are listed in the [Pulumi Console](https://app.pulumi.com/).
   - In our example below we have two environments _prod_ and _dev_.
     - To group stacks by environment we assign custom tags
       `environment: prod` and `environment: dev` to the respective
       stacks
-    - In the Pulumi Cloud Console, you'll be able to group stacks by
+    - In the Pulumi Console, you'll be able to group stacks by
       tag: `environment:dev` and tag: `environment:prod`.
 
 Please read more about managing [stack tags in Pulumi]({{< ref "/docs/intro/concepts/stack#stack-tags" >}}).
@@ -85,7 +85,7 @@ Let's now work through our example with GitLab Pipelines.
 1.  We created a GitLab Group called **pulumi-gitlab**.
 2.  We created three GitLab projects called **sample-iam**,
     **sample-eks** and **sample-k8sapp**. These projects match the
-    project names in Pulumi SaaS platform.
+    project names in the Pulumi Service.
 3.  We have two pipelines: **environment:dev** and **environment:prod**.
     In the two pipelines, we have a total of six pulumi stacks:
     -   `<org-name-in-pulumi>/sample-iam/dev`, and `<org-name-in-pulumi>/sample-iam/prod`.
