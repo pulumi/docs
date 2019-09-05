@@ -1,9 +1,8 @@
 ---
 title: Intro to Pulumi
-linktitle: Overview
-
 menu:
   intro:
+    name: Overview
     weight: 1
 ---
 
