@@ -795,6 +795,127 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_cloudflare.CustomSsl">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">CustomSsl</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_ssl_options=None</em>, <em class="sig-param">custom_ssl_priorities=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomSsl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Cloudflare custom ssl resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>custom_ssl_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The certificate, private key and associated optional parameters, such as bundle_method, geo_restrictions, and type.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone id to the custom ssl cert should be added.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>custom_ssl_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bundle_method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Method of building intermediate certificate chain. A ubiquitous bundle has the highest probability of being verified everywhere, even by clients using outdated or unusual trust stores. An optimal bundle uses the shortest chain and newest intermediates. And the force bundle verifies the chain, but does not otherwise modify it. Valid values are <code class="docutils literal notranslate"><span class="pre">ubiquitous</span></code> (default), <code class="docutils literal notranslate"><span class="pre">optimal</span></code>, <code class="docutils literal notranslate"><span class="pre">force</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Certificate certificate and the intermediate(s)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geo_restrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the region where your private key can be held locally. Valid values are <code class="docutils literal notranslate"><span class="pre">us</span></code>, <code class="docutils literal notranslate"><span class="pre">eu</span></code>, <code class="docutils literal notranslate"><span class="pre">highest_security</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Certificate’s private key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether to enable support for legacy clients which do not include SNI in the TLS handshake. Valid values are <code class="docutils literal notranslate"><span class="pre">legacy_custom</span></code> (default), <code class="docutils literal notranslate"><span class="pre">sni_custom</span></code>.</p></li>
+</ul>
+<p>The <strong>custom_ssl_priorities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown</a>.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="pulumi_cloudflare.CustomSsl.custom_ssl_options">
+<code class="sig-name descname">custom_ssl_options</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.CustomSsl.custom_ssl_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>The certificate, private key and associated optional parameters, such as bundle_method, geo_restrictions, and type.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bundle_method</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Method of building intermediate certificate chain. A ubiquitous bundle has the highest probability of being verified everywhere, even by clients using outdated or unusual trust stores. An optimal bundle uses the shortest chain and newest intermediates. And the force bundle verifies the chain, but does not otherwise modify it. Valid values are <code class="docutils literal notranslate"><span class="pre">ubiquitous</span></code> (default), <code class="docutils literal notranslate"><span class="pre">optimal</span></code>, <code class="docutils literal notranslate"><span class="pre">force</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Certificate certificate and the intermediate(s)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geo_restrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the region where your private key can be held locally. Valid values are <code class="docutils literal notranslate"><span class="pre">us</span></code>, <code class="docutils literal notranslate"><span class="pre">eu</span></code>, <code class="docutils literal notranslate"><span class="pre">highest_security</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Certificate’s private key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Whether to enable support for legacy clients which do not include SNI in the TLS handshake. Valid values are <code class="docutils literal notranslate"><span class="pre">legacy_custom</span></code> (default), <code class="docutils literal notranslate"><span class="pre">sni_custom</span></code>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_cloudflare.CustomSsl.zone_id">
+<code class="sig-name descname">zone_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_cloudflare.CustomSsl.zone_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DNS zone id to the custom ssl cert should be added.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.CustomSsl.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">custom_ssl_options=None</em>, <em class="sig-param">custom_ssl_priorities=None</em>, <em class="sig-param">expires_on=None</em>, <em class="sig-param">hosts=None</em>, <em class="sig-param">issuer=None</em>, <em class="sig-param">modified_on=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">signature=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">uploaded_on=None</em>, <em class="sig-param">zone_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomSsl.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing CustomSsl resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>custom_ssl_options</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The certificate, private key and associated optional parameters, such as bundle_method, geo_restrictions, and type.</p></li>
+<li><p><strong>zone_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DNS zone id to the custom ssl cert should be added.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>custom_ssl_options</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bundle_method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Method of building intermediate certificate chain. A ubiquitous bundle has the highest probability of being verified everywhere, even by clients using outdated or unusual trust stores. An optimal bundle uses the shortest chain and newest intermediates. And the force bundle verifies the chain, but does not otherwise modify it. Valid values are <code class="docutils literal notranslate"><span class="pre">ubiquitous</span></code> (default), <code class="docutils literal notranslate"><span class="pre">optimal</span></code>, <code class="docutils literal notranslate"><span class="pre">force</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Certificate certificate and the intermediate(s)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">geo_restrictions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the region where your private key can be held locally. Valid values are <code class="docutils literal notranslate"><span class="pre">us</span></code>, <code class="docutils literal notranslate"><span class="pre">eu</span></code>, <code class="docutils literal notranslate"><span class="pre">highest_security</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Certificate’s private key</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Whether to enable support for legacy clients which do not include SNI in the TLS handshake. Valid values are <code class="docutils literal notranslate"><span class="pre">legacy_custom</span></code> (default), <code class="docutils literal notranslate"><span class="pre">sni_custom</span></code>.</p></li>
+</ul>
+<p>The <strong>custom_ssl_priorities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">priority</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown">https://github.com/terraform-providers/terraform-provider-cloudflare/blob/master/website/docs/r/custom_ssl.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.CustomSsl.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomSsl.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_cloudflare.CustomSsl.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.CustomSsl.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_cloudflare.Filter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudflare.</code><code class="sig-name descname">Filter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">expression=None</em>, <em class="sig-param">paused=None</em>, <em class="sig-param">ref=None</em>, <em class="sig-param">zone=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudflare.Filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Filter expressions that can be referenced across multiple features, e.g. Firewall Rule. The expression format is similar to <a class="reference external" href="https://www.wireshark.org/docs/man-pages/wireshark-filter.html">Wireshark Display Filter</a>.</p>
