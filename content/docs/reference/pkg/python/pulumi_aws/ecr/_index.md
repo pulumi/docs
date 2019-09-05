@@ -1,5 +1,7 @@
 ---
 title: Module ecr
+linktitle: ecr
+notitle: true
 ---
 
 <div class="section" id="ecr">

@@ -1,5 +1,7 @@
 ---
 title: Module msk
+linktitle: msk
+notitle: true
 ---
 
 <div class="section" id="msk">

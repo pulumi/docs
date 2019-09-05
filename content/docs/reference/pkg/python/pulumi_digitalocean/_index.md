@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_digitalocean
+linktitle: pulumi_digitalocean
+notitle: true
 ---
 
 <div class="section" id="pulumi-digitalocean">

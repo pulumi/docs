@@ -1,5 +1,7 @@
 ---
 title: Module cfg
+linktitle: cfg
+notitle: true
 ---
 
 <div class="section" id="cfg">

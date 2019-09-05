@@ -1,5 +1,7 @@
 ---
 title: Module waf
+linktitle: waf
+notitle: true
 ---
 
 <div class="section" id="waf">

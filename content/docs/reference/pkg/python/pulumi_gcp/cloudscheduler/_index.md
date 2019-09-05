@@ -1,5 +1,7 @@
 ---
 title: Module cloudscheduler
+linktitle: cloudscheduler
+notitle: true
 ---
 
 <div class="section" id="cloudscheduler">

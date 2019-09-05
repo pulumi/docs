@@ -1,5 +1,7 @@
 ---
 title: Module managementgroups
+linktitle: managementgroups
+notitle: true
 ---
 
 <div class="section" id="managementgroups">

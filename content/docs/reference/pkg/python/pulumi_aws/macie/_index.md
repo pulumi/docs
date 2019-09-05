@@ -1,5 +1,7 @@
 ---
 title: Module macie
+linktitle: macie
+notitle: true
 ---
 
 <div class="section" id="macie">

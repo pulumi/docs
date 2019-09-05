@@ -1,5 +1,7 @@
 ---
 title: Module appmesh
+linktitle: appmesh
+notitle: true
 ---
 
 <div class="section" id="appmesh">

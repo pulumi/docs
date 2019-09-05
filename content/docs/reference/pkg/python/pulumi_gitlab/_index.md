@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_gitlab
+linktitle: pulumi_gitlab
+notitle: true
 ---
 
 <div class="section" id="pulumi-gitlab">

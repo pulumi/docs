@@ -1,5 +1,7 @@
 ---
 title: Module s3
+linktitle: s3
+notitle: true
 ---
 
 <div class="section" id="s3">

@@ -1,5 +1,7 @@
 ---
 title: Module resourcemanager
+linktitle: resourcemanager
+notitle: true
 ---
 
 <div class="section" id="resourcemanager">

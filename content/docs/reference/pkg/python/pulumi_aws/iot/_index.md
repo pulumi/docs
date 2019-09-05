@@ -1,5 +1,7 @@
 ---
 title: Module iot
+linktitle: iot
+notitle: true
 ---
 
 <div class="section" id="iot">

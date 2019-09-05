@@ -1,5 +1,7 @@
 ---
 title: Module datafactory
+linktitle: datafactory
+notitle: true
 ---
 
 <div class="section" id="datafactory">

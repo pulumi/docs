@@ -1,5 +1,7 @@
 ---
 title: Module monitoring
+linktitle: monitoring
+notitle: true
 ---
 
 <div class="section" id="monitoring">

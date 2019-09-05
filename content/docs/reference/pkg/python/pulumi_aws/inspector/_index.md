@@ -1,5 +1,7 @@
 ---
 title: Module inspector
+linktitle: inspector
+notitle: true
 ---
 
 <div class="section" id="inspector">

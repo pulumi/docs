@@ -1,5 +1,7 @@
 ---
 title: Module dns
+linktitle: dns
+notitle: true
 ---
 
 <div class="section" id="dns">

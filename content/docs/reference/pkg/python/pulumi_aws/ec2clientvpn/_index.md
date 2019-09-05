@@ -1,5 +1,7 @@
 ---
 title: Module ec2clientvpn
+linktitle: ec2clientvpn
+notitle: true
 ---
 
 <div class="section" id="ec2clientvpn">

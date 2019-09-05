@@ -1,5 +1,7 @@
 ---
 title: Module authentication
+linktitle: authentication
+notitle: true
 ---
 
 <div class="section" id="authentication">

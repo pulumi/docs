@@ -1,5 +1,7 @@
 ---
 title: Module operationalinsights
+linktitle: operationalinsights
+notitle: true
 ---
 
 <div class="section" id="operationalinsights">

@@ -1,5 +1,7 @@
 ---
 title: Module batch
+linktitle: batch
+notitle: true
 ---
 
 <div class="section" id="batch">

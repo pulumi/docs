@@ -1,5 +1,7 @@
 ---
 title: Module msi
+linktitle: msi
+notitle: true
 ---
 
 <div class="section" id="msi">

@@ -1,5 +1,7 @@
 ---
 title: Module bigtable
+linktitle: bigtable
+notitle: true
 ---
 
 <div class="section" id="bigtable">

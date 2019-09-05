@@ -1,5 +1,7 @@
 ---
 title: Module projects
+linktitle: projects
+notitle: true
 ---
 
 <div class="section" id="projects">

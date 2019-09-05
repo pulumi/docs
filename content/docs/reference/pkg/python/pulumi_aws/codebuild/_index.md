@@ -1,5 +1,7 @@
 ---
 title: Module codebuild
+linktitle: codebuild
+notitle: true
 ---
 
 <div class="section" id="codebuild">

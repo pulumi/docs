@@ -1,5 +1,7 @@
 ---
 title: Module secretsmanager
+linktitle: secretsmanager
+notitle: true
 ---
 
 <div class="section" id="secretsmanager">

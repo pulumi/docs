@@ -1,5 +1,7 @@
 ---
 title: Module lambda_
+linktitle: lambda_
+notitle: true
 ---
 
 <div class="section" id="lambda">

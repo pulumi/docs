@@ -1,5 +1,7 @@
 ---
 title: Module scheduler
+linktitle: scheduler
+notitle: true
 ---
 
 <div class="section" id="scheduler">

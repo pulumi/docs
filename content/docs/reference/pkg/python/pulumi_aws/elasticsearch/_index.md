@@ -1,5 +1,7 @@
 ---
 title: Module elasticsearch
+linktitle: elasticsearch
+notitle: true
 ---
 
 <div class="section" id="elasticsearch">

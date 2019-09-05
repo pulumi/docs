@@ -1,5 +1,7 @@
 ---
 title: Module coordination
+linktitle: coordination
+notitle: true
 ---
 
 <div class="section" id="coordination">

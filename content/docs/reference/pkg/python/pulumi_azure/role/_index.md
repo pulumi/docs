@@ -1,5 +1,7 @@
 ---
 title: Module role
+linktitle: role
+notitle: true
 ---
 
 <div class="section" id="role">

@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_postgresql
+linktitle: pulumi_postgresql
+notitle: true
 ---
 
 <div class="section" id="pulumi-postgresql">

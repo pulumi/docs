@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_vsphere
+linktitle: pulumi_vsphere
+notitle: true
 ---
 
 <div class="section" id="pulumi-vsphere">

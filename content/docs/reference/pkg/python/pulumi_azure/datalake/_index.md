@@ -1,5 +1,7 @@
 ---
 title: Module datalake
+linktitle: datalake
+notitle: true
 ---
 
 <div class="section" id="datalake">

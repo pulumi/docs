@@ -1,5 +1,7 @@
 ---
 title: Module codepipeline
+linktitle: codepipeline
+notitle: true
 ---
 
 <div class="section" id="codepipeline">

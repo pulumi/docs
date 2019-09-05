@@ -1,5 +1,7 @@
 ---
 title: Module datasync
+linktitle: datasync
+notitle: true
 ---
 
 <div class="section" id="datasync">

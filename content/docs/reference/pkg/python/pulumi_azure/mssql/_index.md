@@ -1,5 +1,7 @@
 ---
 title: Module mssql
+linktitle: mssql
+notitle: true
 ---
 
 <div class="section" id="mssql">

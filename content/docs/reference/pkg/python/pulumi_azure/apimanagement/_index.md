@@ -1,5 +1,7 @@
 ---
 title: Module apimanagement
+linktitle: apimanagement
+notitle: true
 ---
 
 <div class="section" id="apimanagement">

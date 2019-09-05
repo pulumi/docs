@@ -1,5 +1,7 @@
 ---
 title: Module cosmosdb
+linktitle: cosmosdb
+notitle: true
 ---
 
 <div class="section" id="cosmosdb">

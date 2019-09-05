@@ -1,5 +1,7 @@
 ---
 title: Module xray
+linktitle: xray
+notitle: true
 ---
 
 <div class="section" id="xray">

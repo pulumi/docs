@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_tls
+linktitle: pulumi_tls
+notitle: true
 ---
 
 <div class="section" id="pulumi-tls">

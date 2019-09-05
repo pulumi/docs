@@ -1,5 +1,7 @@
 ---
 title: Module appinsights
+linktitle: appinsights
+notitle: true
 ---
 
 <div class="section" id="appinsights">

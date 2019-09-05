@@ -1,5 +1,7 @@
 ---
 title: Module automation
+linktitle: automation
+notitle: true
 ---
 
 <div class="section" id="automation">

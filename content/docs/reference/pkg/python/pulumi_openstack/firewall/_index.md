@@ -1,5 +1,7 @@
 ---
 title: Module firewall
+linktitle: firewall
+notitle: true
 ---
 
 <div class="section" id="firewall">

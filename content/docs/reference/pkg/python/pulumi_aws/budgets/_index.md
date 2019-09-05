@@ -1,5 +1,7 @@
 ---
 title: Module budgets
+linktitle: budgets
+notitle: true
 ---
 
 <div class="section" id="budgets">

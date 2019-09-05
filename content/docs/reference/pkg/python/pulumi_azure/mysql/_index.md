@@ -1,5 +1,7 @@
 ---
 title: Module mysql
+linktitle: mysql
+notitle: true
 ---
 
 <div class="section" id="mysql">

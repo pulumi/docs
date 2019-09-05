@@ -1,5 +1,7 @@
 ---
 title: Module hdinsight
+linktitle: hdinsight
+notitle: true
 ---
 
 <div class="section" id="hdinsight">

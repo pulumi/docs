@@ -1,5 +1,7 @@
 ---
 title: Module v1
+linktitle: v1
+notitle: true
 ---
 
 <div class="section" id="module-pulumi_kubernetes.core.v1">

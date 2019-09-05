@@ -1,5 +1,7 @@
 ---
 title: Module sagemaker
+linktitle: sagemaker
+notitle: true
 ---
 
 <div class="section" id="sagemaker">

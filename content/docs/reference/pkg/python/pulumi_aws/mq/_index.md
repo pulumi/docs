@@ -1,5 +1,7 @@
 ---
 title: Module mq
+linktitle: mq
+notitle: true
 ---
 
 <div class="section" id="mq">

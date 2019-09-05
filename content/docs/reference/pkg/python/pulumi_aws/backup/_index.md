@@ -1,5 +1,7 @@
 ---
 title: Module backup
+linktitle: backup
+notitle: true
 ---
 
 <div class="section" id="backup">

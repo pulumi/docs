@@ -1,5 +1,7 @@
 ---
 title: Module dataflow
+linktitle: dataflow
+notitle: true
 ---
 
 <div class="section" id="dataflow">

@@ -1,5 +1,7 @@
 ---
 title: Module healthcare
+linktitle: healthcare
+notitle: true
 ---
 
 <div class="section" id="healthcare">

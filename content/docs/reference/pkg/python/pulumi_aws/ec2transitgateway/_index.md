@@ -1,5 +1,7 @@
 ---
 title: Module ec2transitgateway
+linktitle: ec2transitgateway
+notitle: true
 ---
 
 <div class="section" id="ec2transitgateway">

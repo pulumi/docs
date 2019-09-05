@@ -1,5 +1,7 @@
 ---
 title: Module composer
+linktitle: composer
+notitle: true
 ---
 
 <div class="section" id="composer">

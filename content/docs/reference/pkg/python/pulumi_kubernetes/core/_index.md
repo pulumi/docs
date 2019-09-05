@@ -1,5 +1,7 @@
 ---
 title: Module core
+linktitle: core
+notitle: true
 ---
 
 <div class="section" id="core">

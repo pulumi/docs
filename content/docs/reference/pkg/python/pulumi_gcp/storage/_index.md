@@ -1,5 +1,7 @@
 ---
 title: Module storage
+linktitle: storage
+notitle: true
 ---
 
 <div class="section" id="storage">

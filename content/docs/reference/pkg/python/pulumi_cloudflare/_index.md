@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_cloudflare
+linktitle: pulumi_cloudflare
+notitle: true
 ---
 
 <div class="section" id="pulumi-cloudflare">

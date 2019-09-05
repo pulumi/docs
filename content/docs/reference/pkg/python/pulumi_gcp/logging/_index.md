@@ -1,5 +1,7 @@
 ---
 title: Module logging
+linktitle: logging
+notitle: true
 ---
 
 <div class="section" id="logging">

@@ -1,5 +1,7 @@
 ---
 title: Module workspaces
+linktitle: workspaces
+notitle: true
 ---
 
 <div class="section" id="workspaces">

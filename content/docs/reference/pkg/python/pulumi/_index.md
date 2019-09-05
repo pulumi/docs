@@ -1,5 +1,7 @@
 ---
 title: Package pulumi
+linktitle: pulumi
+notitle: true
 ---
 
 <div class="section" id="pulumi-python-sdk">

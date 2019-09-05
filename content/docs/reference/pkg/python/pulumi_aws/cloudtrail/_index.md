@@ -1,5 +1,7 @@
 ---
 title: Module cloudtrail
+linktitle: cloudtrail
+notitle: true
 ---
 
 <div class="section" id="cloudtrail">

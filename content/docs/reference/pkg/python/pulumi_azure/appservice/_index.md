@@ -1,5 +1,7 @@
 ---
 title: Module appservice
+linktitle: appservice
+notitle: true
 ---
 
 <div class="section" id="appservice">

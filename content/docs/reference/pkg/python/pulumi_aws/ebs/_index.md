@@ -1,5 +1,7 @@
 ---
 title: Module ebs
+linktitle: ebs
+notitle: true
 ---
 
 <div class="section" id="ebs">

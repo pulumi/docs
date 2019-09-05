@@ -1,5 +1,7 @@
 ---
 title: Module ssm
+linktitle: ssm
+notitle: true
 ---
 
 <div class="section" id="ssm">

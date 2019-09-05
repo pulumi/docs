@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_aws
+linktitle: pulumi_aws
+notitle: true
 ---
 
 <div class="section" id="pulumi-aws">

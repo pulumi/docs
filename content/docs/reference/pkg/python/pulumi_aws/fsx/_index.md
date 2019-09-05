@@ -1,5 +1,7 @@
 ---
 title: Module fsx
+linktitle: fsx
+notitle: true
 ---
 
 <div class="section" id="fsx">

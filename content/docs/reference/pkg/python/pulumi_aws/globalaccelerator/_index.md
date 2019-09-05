@@ -1,5 +1,7 @@
 ---
 title: Module globalaccelerator
+linktitle: globalaccelerator
+notitle: true
 ---
 
 <div class="section" id="globalaccelerator">

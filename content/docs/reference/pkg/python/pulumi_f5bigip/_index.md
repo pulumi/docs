@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_f5bigip
+linktitle: pulumi_f5bigip
+notitle: true
 ---
 
 <div class="section" id="pulumi-f5bigip">

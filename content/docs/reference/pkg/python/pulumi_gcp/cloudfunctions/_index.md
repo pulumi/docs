@@ -1,5 +1,7 @@
 ---
 title: Module cloudfunctions
+linktitle: cloudfunctions
+notitle: true
 ---
 
 <div class="section" id="cloudfunctions">

@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_openstack
+linktitle: pulumi_openstack
+notitle: true
 ---
 
 <div class="section" id="pulumi-openstack">

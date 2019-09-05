@@ -1,5 +1,7 @@
 ---
 title: Module mariadb
+linktitle: mariadb
+notitle: true
 ---
 
 <div class="section" id="mariadb">

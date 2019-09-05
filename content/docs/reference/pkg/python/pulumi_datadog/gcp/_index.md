@@ -1,5 +1,7 @@
 ---
 title: Module gcp
+linktitle: gcp
+notitle: true
 ---
 
 <div class="section" id="gcp">

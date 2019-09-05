@@ -1,5 +1,7 @@
 ---
 title: Module loganalytics
+linktitle: loganalytics
+notitle: true
 ---
 
 <div class="section" id="loganalytics">

@@ -1,5 +1,7 @@
 ---
 title: Module network
+linktitle: network
+notitle: true
 ---
 
 <div class="section" id="network">

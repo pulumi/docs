@@ -1,5 +1,7 @@
 ---
 title: Module pricing
+linktitle: pricing
+notitle: true
 ---
 
 <div class="section" id="pricing">

@@ -1,5 +1,7 @@
 ---
 title: Module billing
+linktitle: billing
+notitle: true
 ---
 
 <div class="section" id="billing">

@@ -1,5 +1,7 @@
 ---
 title: Module loadbalancer
+linktitle: loadbalancer
+notitle: true
 ---
 
 <div class="section" id="loadbalancer">

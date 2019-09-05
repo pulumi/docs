@@ -1,5 +1,7 @@
 ---
 title: Module managementresource
+linktitle: managementresource
+notitle: true
 ---
 
 <div class="section" id="managementresource">

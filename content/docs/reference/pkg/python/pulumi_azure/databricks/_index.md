@@ -1,5 +1,7 @@
 ---
 title: Module databricks
+linktitle: databricks
+notitle: true
 ---
 
 <div class="section" id="databricks">

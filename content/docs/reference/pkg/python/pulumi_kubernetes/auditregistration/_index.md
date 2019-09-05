@@ -1,5 +1,7 @@
 ---
 title: Module auditregistration
+linktitle: auditregistration
+notitle: true
 ---
 
 <div class="section" id="auditregistration">

@@ -1,5 +1,7 @@
 ---
 title: Module storagegateway
+linktitle: storagegateway
+notitle: true
 ---
 
 <div class="section" id="storagegateway">

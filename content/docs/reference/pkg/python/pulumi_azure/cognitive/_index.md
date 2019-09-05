@@ -1,5 +1,7 @@
 ---
 title: Module cognitive
+linktitle: cognitive
+notitle: true
 ---
 
 <div class="section" id="cognitive">

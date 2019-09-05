@@ -1,5 +1,7 @@
 ---
 title: Module servicefabric
+linktitle: servicefabric
+notitle: true
 ---
 
 <div class="section" id="servicefabric">

@@ -1,5 +1,7 @@
 ---
 title: Module meta
+linktitle: meta
+notitle: true
 ---
 
 <div class="section" id="meta">

@@ -1,5 +1,7 @@
 ---
 title: Module extensions
+linktitle: extensions
+notitle: true
 ---
 
 <div class="section" id="extensions">

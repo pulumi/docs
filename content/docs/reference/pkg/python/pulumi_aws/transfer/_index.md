@@ -1,5 +1,7 @@
 ---
 title: Module transfer
+linktitle: transfer
+notitle: true
 ---
 
 <div class="section" id="transfer">

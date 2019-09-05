@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_packet
+linktitle: pulumi_packet
+notitle: true
 ---
 
 <div class="section" id="pulumi-packet">

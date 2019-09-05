@@ -1,5 +1,7 @@
 ---
 title: Module swf
+linktitle: swf
+notitle: true
 ---
 
 <div class="section" id="swf">

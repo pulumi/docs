@@ -1,5 +1,7 @@
 ---
 title: Module eks
+linktitle: eks
+notitle: true
 ---
 
 <div class="section" id="eks">

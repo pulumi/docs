@@ -1,5 +1,7 @@
 ---
 title: Module sourcerepo
+linktitle: sourcerepo
+notitle: true
 ---
 
 <div class="section" id="sourcerepo">
