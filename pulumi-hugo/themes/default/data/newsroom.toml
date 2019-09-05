@@ -1,4 +1,10 @@
 [[releases]]
+date = "5th September 2019"
+title = "Pulumi 1.0 Brings Developers and Operators Together with Modern Infrastructure as Code"
+summary = "Pulumi announces the general availability of Pulumi 1.0, a modern Infrastructure as Code platform that supports many languages and many clouds."
+url = "https://info.pulumi.com/pulumi-1-0"
+
+[[releases]]
 date = "11th June 2019"
 title = "Pulumi Crosswalk for AWS Accelerates Delivery of Well-Architected Infrastructure as Code"
 summary = "Pulumi announces Pulumi Crosswalk for Amazon Web Services (AWS), an open source framework for defining and deploying modern AWS applications and infrastructure with built-in AWS Best Practices."
