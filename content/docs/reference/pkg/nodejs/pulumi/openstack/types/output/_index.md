@@ -88,153 +88,153 @@ linktitle: "output"
 
 <h2 id="blockstorage" data-link-title="blockstorage">namespace <strong>blockstorage</strong></h2>
 <h3 class="pdoc-module-header" id="VolumeAttachment" data-link-title="VolumeAttachment">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L8">
         interface <strong>VolumeAttachment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VolumeAttachment</span></code></pre>
 <h4 class="pdoc-member-header" id="VolumeAttachment-device">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L9">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L9">property <b>device</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>device: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VolumeAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VolumeAttachment-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L11">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L11">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VolumeV1Attachment" data-link-title="VolumeV1Attachment">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L14">
         interface <strong>VolumeV1Attachment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VolumeV1Attachment</span></code></pre>
 <h4 class="pdoc-member-header" id="VolumeV1Attachment-device">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L15">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L15">property <b>device</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>device: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VolumeV1Attachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VolumeV1Attachment-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L17">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L17">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="VolumeV2Attachment" data-link-title="VolumeV2Attachment">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L20">
         interface <strong>VolumeV2Attachment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>VolumeV2Attachment</span></code></pre>
 <h4 class="pdoc-member-header" id="VolumeV2Attachment-device">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L21">property <b>device</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L21">property <b>device</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>device: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VolumeV2Attachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L22">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L22">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="VolumeV2Attachment-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L23">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L23">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h2 id="compute" data-link-title="compute">namespace <strong>compute</strong></h2>
 <h3 class="pdoc-module-header" id="InstanceBlockDevice" data-link-title="InstanceBlockDevice">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L28">
         interface <strong>InstanceBlockDevice</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceBlockDevice</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-bootIndex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L29">property <b>bootIndex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L29">property <b>bootIndex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootIndex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-deleteOnTermination">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L30">property <b>deleteOnTermination</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L30">property <b>deleteOnTermination</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteOnTermination?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-destinationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L31">property <b>destinationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L31">property <b>destinationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-deviceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L32">property <b>deviceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L32">property <b>deviceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deviceType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-diskBus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L33">property <b>diskBus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L33">property <b>diskBus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskBus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-guestFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L34">property <b>guestFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L34">property <b>guestFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>guestFormat?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L35">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L35">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L36">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L36">property <b>uuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uuid?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceBlockDevice-volumeSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L37">property <b>volumeSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L37">property <b>volumeSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>volumeSize?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceNetwork" data-link-title="InstanceNetwork">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L40">
         interface <strong>InstanceNetwork</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceNetwork</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-accessNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L41">property <b>accessNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L41">property <b>accessNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessNetwork?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-fixedIpV4">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L42">property <b>fixedIpV4</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L42">property <b>fixedIpV4</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedIpV4: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-fixedIpV6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L43">property <b>fixedIpV6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L43">property <b>fixedIpV6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedIpV6: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-mac">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L44">property <b>mac</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L44">property <b>mac</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mac: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L48">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L48">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -242,138 +242,138 @@ linktitle: "output"
 A unique name for the resource.
 
 <h4 class="pdoc-member-header" id="InstanceNetwork-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L49">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L49">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L50">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L50">property <b>uuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uuid: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstancePersonality" data-link-title="InstancePersonality">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L53">
         interface <strong>InstancePersonality</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstancePersonality</span></code></pre>
 <h4 class="pdoc-member-header" id="InstancePersonality-content">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L54">property <b>content</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L54">property <b>content</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>content: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstancePersonality-file">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L55">property <b>file</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L55">property <b>file</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceSchedulerHint" data-link-title="InstanceSchedulerHint">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L58">
         interface <strong>InstanceSchedulerHint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceSchedulerHint</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceSchedulerHint-additionalProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L59">property <b>additionalProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L59">property <b>additionalProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>additionalProperties?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSchedulerHint-buildNearHostIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L60">property <b>buildNearHostIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L60">property <b>buildNearHostIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buildNearHostIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSchedulerHint-differentHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L61">property <b>differentHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L61">property <b>differentHosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>differentHosts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSchedulerHint-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L62">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L62">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSchedulerHint-queries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L63">property <b>queries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L63">property <b>queries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>queries?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSchedulerHint-sameHosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L64">property <b>sameHosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L64">property <b>sameHosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sameHosts?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceSchedulerHint-targetCell">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L65">property <b>targetCell</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L65">property <b>targetCell</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetCell?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceVendorOptions" data-link-title="InstanceVendorOptions">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L68">
         interface <strong>InstanceVendorOptions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceVendorOptions</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceVendorOptions-ignoreResizeConfirmation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L69">property <b>ignoreResizeConfirmation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L69">property <b>ignoreResizeConfirmation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreResizeConfirmation?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SecGroupRule" data-link-title="SecGroupRule">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L72">
         interface <strong>SecGroupRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SecGroupRule</span></code></pre>
 <h4 class="pdoc-member-header" id="SecGroupRule-cidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L73">property <b>cidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L73">property <b>cidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidr?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecGroupRule-fromGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L74">property <b>fromGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L74">property <b>fromGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecGroupRule-fromPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L75">property <b>fromPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L75">property <b>fromPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fromPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecGroupRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecGroupRule-ipProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L77">property <b>ipProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L77">property <b>ipProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipProtocol: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecGroupRule-self">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L78">property <b>self</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L78">property <b>self</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>self?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="SecGroupRule-toPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L79">property <b>toPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L79">property <b>toPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>toPort: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h2 id="database" data-link-title="database">namespace <strong>database</strong></h2>
 <h3 class="pdoc-module-header" id="ConfigurationConfiguration" data-link-title="ConfigurationConfiguration">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L84">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L84">
         interface <strong>ConfigurationConfiguration</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConfigurationConfiguration</span></code></pre>
 <h4 class="pdoc-member-header" id="ConfigurationConfiguration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L88">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L88">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -381,46 +381,46 @@ A unique name for the resource.
 A unique name for the resource.
 
 <h4 class="pdoc-member-header" id="ConfigurationConfiguration-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L89">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L89">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ConfigurationDatastore" data-link-title="ConfigurationDatastore">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L92">
         interface <strong>ConfigurationDatastore</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ConfigurationDatastore</span></code></pre>
 <h4 class="pdoc-member-header" id="ConfigurationDatastore-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L93">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L93">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigurationDatastore-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L94">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L94">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceDatabase" data-link-title="InstanceDatabase">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L97">
         interface <strong>InstanceDatabase</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceDatabase</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceDatabase-charset">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L98">property <b>charset</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L98">property <b>charset</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>charset?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceDatabase-collate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L99">property <b>collate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L99">property <b>collate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>collate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceDatabase-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L103">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L103">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -428,68 +428,68 @@ A unique name for the resource.
 A unique name for the resource.
 
 <h3 class="pdoc-module-header" id="InstanceDatastore" data-link-title="InstanceDatastore">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L106">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L106">
         interface <strong>InstanceDatastore</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceDatastore</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceDatastore-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L107">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L107">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceDatastore-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L108">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L108">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceNetwork" data-link-title="InstanceNetwork">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L111">
         interface <strong>InstanceNetwork</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceNetwork</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-fixedIpV4">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L112">property <b>fixedIpV4</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L112">property <b>fixedIpV4</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedIpV4?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-fixedIpV6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L113">property <b>fixedIpV6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L113">property <b>fixedIpV6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedIpV6?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L114">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L114">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceNetwork-uuid">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L115">property <b>uuid</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L115">property <b>uuid</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uuid?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="InstanceUser" data-link-title="InstanceUser">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L118">
         interface <strong>InstanceUser</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>InstanceUser</span></code></pre>
 <h4 class="pdoc-member-header" id="InstanceUser-databases">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L119">property <b>databases</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L119">property <b>databases</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databases?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="InstanceUser-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L120">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L120">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceUser-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L124">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L124">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -497,20 +497,20 @@ A unique name for the resource.
 A unique name for the resource.
 
 <h4 class="pdoc-member-header" id="InstanceUser-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L125">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L125">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h2 id="identity" data-link-title="identity">namespace <strong>identity</strong></h2>
 <h3 class="pdoc-module-header" id="GetAuthScopeRole" data-link-title="GetAuthScopeRole">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L130">
         interface <strong>GetAuthScopeRole</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetAuthScopeRole</span></code></pre>
 <h4 class="pdoc-member-header" id="GetAuthScopeRole-roleId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L134">property <b>roleId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L134">property <b>roleId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -518,7 +518,7 @@ A unique name for the resource.
 The ID of the role.
 
 <h4 class="pdoc-member-header" id="GetAuthScopeRole-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L138">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L138">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -526,27 +526,27 @@ The ID of the role.
 The name of the role.
 
 <h3 class="pdoc-module-header" id="UserMultiFactorAuthRule" data-link-title="UserMultiFactorAuthRule">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L141">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L141">
         interface <strong>UserMultiFactorAuthRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>UserMultiFactorAuthRule</span></code></pre>
 <h4 class="pdoc-member-header" id="UserMultiFactorAuthRule-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L142">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L142">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h2 id="keymanager" data-link-title="keymanager">namespace <strong>keymanager</strong></h2>
 <h3 class="pdoc-module-header" id="ContainerV1Consumer" data-link-title="ContainerV1Consumer">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L147">
         interface <strong>ContainerV1Consumer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerV1Consumer</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerV1Consumer-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -555,7 +555,7 @@ Human-readable name for the Container. Does not have
 to be unique.
 
 <h4 class="pdoc-member-header" id="ContainerV1Consumer-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L156">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L156">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -563,14 +563,14 @@ to be unique.
 The consumer URL.
 
 <h3 class="pdoc-module-header" id="ContainerV1SecretRef" data-link-title="ContainerV1SecretRef">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L159">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L159">
         interface <strong>ContainerV1SecretRef</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerV1SecretRef</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerV1SecretRef-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -579,20 +579,20 @@ Human-readable name for the Container. Does not have
 to be unique.
 
 <h4 class="pdoc-member-header" id="ContainerV1SecretRef-secretRef">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L165">property <b>secretRef</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L165">property <b>secretRef</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretRef: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h2 id="loadbalancer" data-link-title="loadbalancer">namespace <strong>loadbalancer</strong></h2>
 <h3 class="pdoc-module-header" id="PoolPersistence" data-link-title="PoolPersistence">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L170">
         interface <strong>PoolPersistence</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PoolPersistence</span></code></pre>
 <h4 class="pdoc-member-header" id="PoolPersistence-cookieName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L175">property <b>cookieName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L175">property <b>cookieName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cookieName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -601,7 +601,7 @@ The name of the cookie if persistence mode is set
 appropriately. Required if `type = APP_COOKIE`.
 
 <h4 class="pdoc-member-header" id="PoolPersistence-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L180">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L180">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -611,14 +611,14 @@ supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
 
 <h2 id="networking" data-link-title="networking">namespace <strong>networking</strong></h2>
 <h3 class="pdoc-module-header" id="GetPortAllowedAddressPair" data-link-title="GetPortAllowedAddressPair">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L185">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L185">
         interface <strong>GetPortAllowedAddressPair</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPortAllowedAddressPair</span></code></pre>
 <h4 class="pdoc-member-header" id="GetPortAllowedAddressPair-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L189">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L189">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -626,7 +626,7 @@ supports SOURCE_IP, HTTP_COOKIE, and APP_COOKIE.
 The additional IP address.
 
 <h4 class="pdoc-member-header" id="GetPortAllowedAddressPair-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L193">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L193">property <b>macAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>macAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -634,14 +634,14 @@ The additional IP address.
 The MAC address of the port.
 
 <h3 class="pdoc-module-header" id="GetPortBinding" data-link-title="GetPortBinding">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L196">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L196">
         interface <strong>GetPortBinding</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPortBinding</span></code></pre>
 <h4 class="pdoc-member-header" id="GetPortBinding-hostId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L200">property <b>hostId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L200">property <b>hostId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -649,7 +649,7 @@ The MAC address of the port.
 The ID of the host, which has the allocatee port.
 
 <h4 class="pdoc-member-header" id="GetPortBinding-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L204">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L204">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -657,7 +657,7 @@ The ID of the host, which has the allocatee port.
 A JSON string containing the binding profile information.
 
 <h4 class="pdoc-member-header" id="GetPortBinding-vifDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L209">property <b>vifDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L209">property <b>vifDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vifDetails: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -666,7 +666,7 @@ A map of JSON strings containing additional details for this
 specific binding.
 
 <h4 class="pdoc-member-header" id="GetPortBinding-vifType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L213">property <b>vifType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L213">property <b>vifType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vifType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -674,7 +674,7 @@ specific binding.
 The VNIC type of the port binding.
 
 <h4 class="pdoc-member-header" id="GetPortBinding-vnicType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L217">property <b>vnicType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L217">property <b>vnicType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnicType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -682,14 +682,14 @@ The VNIC type of the port binding.
 VNIC type for the port.
 
 <h3 class="pdoc-module-header" id="GetPortExtraDhcpOption" data-link-title="GetPortExtraDhcpOption">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L220">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L220">
         interface <strong>GetPortExtraDhcpOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetPortExtraDhcpOption</span></code></pre>
 <h4 class="pdoc-member-header" id="GetPortExtraDhcpOption-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L224">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L224">property <b>ipVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipVersion: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -697,7 +697,7 @@ VNIC type for the port.
 IP protocol version
 
 <h4 class="pdoc-member-header" id="GetPortExtraDhcpOption-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L228">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L228">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -705,7 +705,7 @@ IP protocol version
 The name of the port.
 
 <h4 class="pdoc-member-header" id="GetPortExtraDhcpOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L232">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L232">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -713,14 +713,14 @@ The name of the port.
 Value of the DHCP option.
 
 <h3 class="pdoc-module-header" id="GetRouterExternalFixedIp" data-link-title="GetRouterExternalFixedIp">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L235">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L235">
         interface <strong>GetRouterExternalFixedIp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetRouterExternalFixedIp</span></code></pre>
 <h4 class="pdoc-member-header" id="GetRouterExternalFixedIp-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L239">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L239">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -728,53 +728,53 @@ Value of the DHCP option.
 The IP address to set on the router.
 
 <h4 class="pdoc-member-header" id="GetRouterExternalFixedIp-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L240">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L240">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSubnetAllocationPool" data-link-title="GetSubnetAllocationPool">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L243">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L243">
         interface <strong>GetSubnetAllocationPool</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetSubnetAllocationPool</span></code></pre>
 <h4 class="pdoc-member-header" id="GetSubnetAllocationPool-end">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L244">property <b>end</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L244">property <b>end</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>end: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSubnetAllocationPool-start">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L245">property <b>start</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L245">property <b>start</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSubnetHostRoute" data-link-title="GetSubnetHostRoute">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L248">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L248">
         interface <strong>GetSubnetHostRoute</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetSubnetHostRoute</span></code></pre>
 <h4 class="pdoc-member-header" id="GetSubnetHostRoute-destinationCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L249">property <b>destinationCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L249">property <b>destinationCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationCidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSubnetHostRoute-nextHop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L250">property <b>nextHop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L250">property <b>nextHop</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextHop: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetTrunkSubPort" data-link-title="GetTrunkSubPort">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L253">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L253">
         interface <strong>GetTrunkSubPort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetTrunkSubPort</span></code></pre>
 <h4 class="pdoc-member-header" id="GetTrunkSubPort-portId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L257">property <b>portId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L257">property <b>portId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -782,7 +782,7 @@ The IP address to set on the router.
 The ID of the trunk parent port.
 
 <h4 class="pdoc-member-header" id="GetTrunkSubPort-segmentationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L261">property <b>segmentationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L261">property <b>segmentationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>segmentationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -790,7 +790,7 @@ The ID of the trunk parent port.
 The numeric id of the subport segment.
 
 <h4 class="pdoc-member-header" id="GetTrunkSubPort-segmentationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L265">property <b>segmentationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L265">property <b>segmentationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>segmentationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -798,41 +798,41 @@ The numeric id of the subport segment.
 The segmenation tecnology used, e.g., "vlan".
 
 <h3 class="pdoc-module-header" id="NetworkSegment" data-link-title="NetworkSegment">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L268">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L268">
         interface <strong>NetworkSegment</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>NetworkSegment</span></code></pre>
 <h4 class="pdoc-member-header" id="NetworkSegment-networkType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L269">property <b>networkType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L269">property <b>networkType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="NetworkSegment-physicalNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L270">property <b>physicalNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L270">property <b>physicalNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>physicalNetwork?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="NetworkSegment-segmentationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L271">property <b>segmentationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L271">property <b>segmentationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>segmentationId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="PortAllowedAddressPair" data-link-title="PortAllowedAddressPair">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L274">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L274">
         interface <strong>PortAllowedAddressPair</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PortAllowedAddressPair</span></code></pre>
 <h4 class="pdoc-member-header" id="PortAllowedAddressPair-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L275">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L275">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="PortAllowedAddressPair-macAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L280">property <b>macAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L280">property <b>macAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>macAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -841,51 +841,51 @@ Specify a specific MAC address for the port. Changing
 this creates a new port.
 
 <h3 class="pdoc-module-header" id="PortBinding" data-link-title="PortBinding">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L283">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L283">
         interface <strong>PortBinding</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PortBinding</span></code></pre>
 <h4 class="pdoc-member-header" id="PortBinding-hostId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L284">property <b>hostId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L284">property <b>hostId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="PortBinding-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L285">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L285">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="PortBinding-vifDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L286">property <b>vifDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L286">property <b>vifDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vifDetails: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="PortBinding-vifType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L287">property <b>vifType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L287">property <b>vifType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vifType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="PortBinding-vnicType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L288">property <b>vnicType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L288">property <b>vnicType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vnicType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="PortExtraDhcpOption" data-link-title="PortExtraDhcpOption">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L291">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L291">
         interface <strong>PortExtraDhcpOption</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PortExtraDhcpOption</span></code></pre>
 <h4 class="pdoc-member-header" id="PortExtraDhcpOption-ipVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L292">property <b>ipVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L292">property <b>ipVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="PortExtraDhcpOption-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L297">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L297">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -894,116 +894,116 @@ A unique name for the port. Changing this
 updates the `name` of an existing port.
 
 <h4 class="pdoc-member-header" id="PortExtraDhcpOption-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L298">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L298">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="PortFixedIp" data-link-title="PortFixedIp">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L301">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L301">
         interface <strong>PortFixedIp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>PortFixedIp</span></code></pre>
 <h4 class="pdoc-member-header" id="PortFixedIp-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L302">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L302">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="PortFixedIp-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L303">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L303">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="RouterExternalFixedIp" data-link-title="RouterExternalFixedIp">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L306">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L306">
         interface <strong>RouterExternalFixedIp</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RouterExternalFixedIp</span></code></pre>
 <h4 class="pdoc-member-header" id="RouterExternalFixedIp-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L307">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L307">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="RouterExternalFixedIp-subnetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L308">property <b>subnetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L308">property <b>subnetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="RouterVendorOptions" data-link-title="RouterVendorOptions">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L311">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L311">
         interface <strong>RouterVendorOptions</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RouterVendorOptions</span></code></pre>
 <h4 class="pdoc-member-header" id="RouterVendorOptions-setRouterGatewayAfterCreate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L312">property <b>setRouterGatewayAfterCreate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L312">property <b>setRouterGatewayAfterCreate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>setRouterGatewayAfterCreate?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="SubnetAllocationPool" data-link-title="SubnetAllocationPool">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L315">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L315">
         interface <strong>SubnetAllocationPool</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SubnetAllocationPool</span></code></pre>
 <h4 class="pdoc-member-header" id="SubnetAllocationPool-end">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L316">property <b>end</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L316">property <b>end</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>end: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetAllocationPool-start">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L317">property <b>start</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L317">property <b>start</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SubnetAllocationPoolsCollection" data-link-title="SubnetAllocationPoolsCollection">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L320">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L320">
         interface <strong>SubnetAllocationPoolsCollection</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SubnetAllocationPoolsCollection</span></code></pre>
 <h4 class="pdoc-member-header" id="SubnetAllocationPoolsCollection-end">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L321">property <b>end</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L321">property <b>end</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>end: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetAllocationPoolsCollection-start">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L322">property <b>start</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L322">property <b>start</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>start: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SubnetHostRoute" data-link-title="SubnetHostRoute">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L325">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L325">
         interface <strong>SubnetHostRoute</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SubnetHostRoute</span></code></pre>
 <h4 class="pdoc-member-header" id="SubnetHostRoute-destinationCidr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L326">property <b>destinationCidr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L326">property <b>destinationCidr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>destinationCidr: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SubnetHostRoute-nextHop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L327">property <b>nextHop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L327">property <b>nextHop</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nextHop: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="TrunkSubPort" data-link-title="TrunkSubPort">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L330">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L330">
         interface <strong>TrunkSubPort</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TrunkSubPort</span></code></pre>
 <h4 class="pdoc-member-header" id="TrunkSubPort-portId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L336">property <b>portId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L336">property <b>portId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1013,122 +1013,122 @@ trunk. This is the port that should be used as the compute instance network
 port. Changing this creates a new trunk.
 
 <h4 class="pdoc-member-header" id="TrunkSubPort-segmentationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L337">property <b>segmentationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L337">property <b>segmentationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>segmentationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="TrunkSubPort-segmentationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L338">property <b>segmentationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L338">property <b>segmentationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>segmentationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h2 id="objectstorage" data-link-title="objectstorage">namespace <strong>objectstorage</strong></h2>
 <h3 class="pdoc-module-header" id="ContainerVersioning" data-link-title="ContainerVersioning">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L343">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L343">
         interface <strong>ContainerVersioning</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ContainerVersioning</span></code></pre>
 <h4 class="pdoc-member-header" id="ContainerVersioning-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L344">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L344">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ContainerVersioning-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L345">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L345">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h2 id="sharedfilesystem" data-link-title="sharedfilesystem">namespace <strong>sharedfilesystem</strong></h2>
 <h3 class="pdoc-module-header" id="GetShareExportLocation" data-link-title="GetShareExportLocation">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L350">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L350">
         interface <strong>GetShareExportLocation</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetShareExportLocation</span></code></pre>
 <h4 class="pdoc-member-header" id="GetShareExportLocation-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L351">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L351">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetShareExportLocation-preferred">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L352">property <b>preferred</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L352">property <b>preferred</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferred: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ShareExportLocation" data-link-title="ShareExportLocation">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L355">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L355">
         interface <strong>ShareExportLocation</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ShareExportLocation</span></code></pre>
 <h4 class="pdoc-member-header" id="ShareExportLocation-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L356">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L356">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="ShareExportLocation-preferred">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L357">property <b>preferred</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L357">property <b>preferred</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferred: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h2 id="vpnaas" data-link-title="vpnaas">namespace <strong>vpnaas</strong></h2>
 <h3 class="pdoc-module-header" id="IkePolicyLifetime" data-link-title="IkePolicyLifetime">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L362">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L362">
         interface <strong>IkePolicyLifetime</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IkePolicyLifetime</span></code></pre>
 <h4 class="pdoc-member-header" id="IkePolicyLifetime-units">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L363">property <b>units</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L363">property <b>units</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>units: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="IkePolicyLifetime-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L364">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L364">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="IpSecPolicyLifetime" data-link-title="IpSecPolicyLifetime">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L367">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L367">
         interface <strong>IpSecPolicyLifetime</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IpSecPolicyLifetime</span></code></pre>
 <h4 class="pdoc-member-header" id="IpSecPolicyLifetime-units">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L368">property <b>units</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L368">property <b>units</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>units: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="IpSecPolicyLifetime-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L369">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L369">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SiteConnectionDpd" data-link-title="SiteConnectionDpd">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L372">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L372">
         interface <strong>SiteConnectionDpd</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>SiteConnectionDpd</span></code></pre>
 <h4 class="pdoc-member-header" id="SiteConnectionDpd-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L373">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L373">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SiteConnectionDpd-interval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L374">property <b>interval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L374">property <b>interval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>interval: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="SiteConnectionDpd-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/d10c42ec402b6c8235ecfe8d7263d7af4a4eb527/sdk/nodejs/types/output.ts#L375">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/types/output.ts#L375">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>

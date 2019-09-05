@@ -31,28 +31,28 @@ linktitle: "config"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="endpoint" data-link-title="endpoint">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/19859803dde7bf689971544920db520d1f0d48bc/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/39d22d3766d3521cdbf5ebd582a0c11ae766acc4/sdk/nodejs/config/vars.ts#L9">
         let <strong>endpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;endpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="password" data-link-title="password">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/19859803dde7bf689971544920db520d1f0d48bc/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/39d22d3766d3521cdbf5ebd582a0c11ae766acc4/sdk/nodejs/config/vars.ts#L10">
         let <strong>password</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> password: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;password&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="tls" data-link-title="tls">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/19859803dde7bf689971544920db520d1f0d48bc/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/39d22d3766d3521cdbf5ebd582a0c11ae766acc4/sdk/nodejs/config/vars.ts#L11">
         let <strong>tls</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> tls: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tls&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="username" data-link-title="username">
-    <a href="https://github.com/pulumi/pulumi-mysql/blob/19859803dde7bf689971544920db520d1f0d48bc/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-mysql/blob/39d22d3766d3521cdbf5ebd582a0c11ae766acc4/sdk/nodejs/config/vars.ts#L12">
         let <strong>username</strong>
     </a>
 </h3>

@@ -30,21 +30,21 @@ linktitle: "config"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/256b91e69d6e75e0b9769abd9fea803b4f067a3a/sdk/nodejs/config/vars.ts#L9">
         let <strong>apiKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiKey&#34;) || utilities.getEnv(&#34;NEWRELIC_API_KEY&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/256b91e69d6e75e0b9769abd9fea803b4f067a3a/sdk/nodejs/config/vars.ts#L10">
         let <strong>apiUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiUrl&#34;) || (utilities.getEnv(&#34;NEWRELIC_API_URL&#34;) || &#34;https://api.newrelic.com/v2&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="infraApiUrl" data-link-title="infraApiUrl">
-    <a href="https://github.com/pulumi/pulumi-newrelic/blob/d9e70b17933f80560b6709a268d7eeeaca841878/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-newrelic/blob/256b91e69d6e75e0b9769abd9fea803b4f067a3a/sdk/nodejs/config/vars.ts#L11">
         let <strong>infraApiUrl</strong>
     </a>
 </h3>

@@ -27,6 +27,7 @@ import * as linode from "@pulumi/linode";
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="config/"><span class="symbol module"></span>config</a></li>
+    <li><a href="types/"><span class="symbol module"></span>types</a></li>
 </ul>
 
 
@@ -112,7 +113,7 @@ import * as linode from "@pulumi/linode";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Domain" data-link-title="Domain">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L10">
         Resource <strong>Domain</strong>
     </a>
 </h3>
@@ -122,7 +123,7 @@ import * as linode from "@pulumi/linode";
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain.html.markdown.
 
 <h4 class="pdoc-member-header" id="Domain-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L88"> <b>constructor</b></a>
 </h4>
 
 
@@ -136,7 +137,7 @@ Create a Domain resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Domain-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L19">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L19">method <b>get</b></a>
 </h4>
 
 
@@ -147,14 +148,14 @@ Get an existing Domain resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Domain-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L10">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L10">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Domain-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L30">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L30">method <b>isInstance</b></a>
 </h4>
 
 
@@ -165,7 +166,7 @@ Returns true if the given object is an instance of Domain.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Domain-axfrIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L40">property <b>axfrIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L40">property <b>axfrIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>axfrIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -173,7 +174,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The list of IPs that may perform a zone transfer for this Domain. This is potentially dangerous, and should be set to an empty list unless you intend to use it.
 
 <h4 class="pdoc-member-header" id="Domain-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L44">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L44">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -181,7 +182,7 @@ The list of IPs that may perform a zone transfer for this Domain. This is potent
 A description for this Domain. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="Domain-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L48">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L48">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +190,7 @@ A description for this Domain. This is for display purposes only.
 The domain this Domain represents. These must be unique in our system; you cannot have two Domains representing the same domain.
 
 <h4 class="pdoc-member-header" id="Domain-expireSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L52">property <b>expireSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L52">property <b>expireSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expireSec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -197,7 +198,7 @@ The domain this Domain represents. These must be unique in our system; you canno
 The amount of time in seconds that may pass before this Domain is no longer authoritative. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="Domain-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L56">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L56">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -205,7 +206,7 @@ The amount of time in seconds that may pass before this Domain is no longer auth
 The group this Domain belongs to. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="Domain-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L10">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L10">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -214,7 +215,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Domain-masterIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L60">property <b>masterIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L60">property <b>masterIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>masterIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -222,7 +223,7 @@ deployments and may be missing (undefined) during planning phases.
 The IP addresses representing the master DNS for this Domain.
 
 <h4 class="pdoc-member-header" id="Domain-refreshSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L64">property <b>refreshSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L64">property <b>refreshSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>refreshSec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -230,7 +231,7 @@ The IP addresses representing the master DNS for this Domain.
 The amount of time in seconds before this Domain should be refreshed. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="Domain-retrySec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L68">property <b>retrySec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L68">property <b>retrySec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>retrySec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -238,7 +239,7 @@ The amount of time in seconds before this Domain should be refreshed. Valid valu
 The interval, in seconds, at which a failed refresh should be retried. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="Domain-soaEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L72">property <b>soaEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L72">property <b>soaEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>soaEmail: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -246,7 +247,7 @@ The interval, in seconds, at which a failed refresh should be retried. Valid val
 Start of Authority email address. This is required for master Domains.
 
 <h4 class="pdoc-member-header" id="Domain-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L76">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L76">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -254,7 +255,7 @@ Start of Authority email address. This is required for master Domains.
 Used to control whether this Domain is currently being rendered (defaults to "active").
 
 <h4 class="pdoc-member-header" id="Domain-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L80">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L80">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -262,7 +263,7 @@ Used to control whether this Domain is currently being rendered (defaults to "ac
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="Domain-ttlSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L84">property <b>ttlSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L84">property <b>ttlSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttlSec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -270,7 +271,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 'Time to Live' - the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="Domain-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L88">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L88">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -278,7 +279,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 If this Domain represents the authoritative source of information for the domain it describes, or if it is a read-only copy of a master (also called a slave).
 
 <h4 class="pdoc-member-header" id="Domain-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L10">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L10">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -287,7 +288,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="DomainRecord" data-link-title="DomainRecord">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L38">
         Resource <strong>DomainRecord</strong>
     </a>
 </h3>
@@ -325,7 +326,7 @@ This resource exports no additional attributes.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/domain_record.html.markdown.
 
 <h4 class="pdoc-member-header" id="DomainRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L109"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L109"> <b>constructor</b></a>
 </h4>
 
 
@@ -339,7 +340,7 @@ Create a DomainRecord resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DomainRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -350,14 +351,14 @@ Get an existing DomainRecord resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DomainRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DomainRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -368,7 +369,7 @@ Returns true if the given object is an instance of DomainRecord.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DomainRecord-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L68">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L68">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -376,7 +377,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the Domain to access.  *Changing `domainId` forces the creation of a new Linode Domain Record.*.
 
 <h4 class="pdoc-member-header" id="DomainRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -385,7 +386,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DomainRecord-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L72">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L72">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -393,7 +394,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of this Record. This field's actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.
 
 <h4 class="pdoc-member-header" id="DomainRecord-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L76">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L76">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -401,7 +402,7 @@ The name of this Record. This field's actual usage depends on the type of record
 The port this Record points to.
 
 <h4 class="pdoc-member-header" id="DomainRecord-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L80">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L80">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -409,7 +410,7 @@ The port this Record points to.
 The priority of the target host. Lower values are preferred.
 
 <h4 class="pdoc-member-header" id="DomainRecord-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L84">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L84">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -417,7 +418,7 @@ The priority of the target host. Lower values are preferred.
 The protocol this Record's service communicates with. Only valid for SRV records.
 
 <h4 class="pdoc-member-header" id="DomainRecord-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L88">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L88">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recordType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +426,7 @@ The protocol this Record's service communicates with. Only valid for SRV records
 The type of Record this is in the DNS system. For example, A records associate a domain name with an IPv4 address, and AAAA records associate a domain name with an IPv6 address. *Changing `recordType` forces the creation of a new Linode Domain Record.*.
 
 <h4 class="pdoc-member-header" id="DomainRecord-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L92">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L92">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>service: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -433,7 +434,7 @@ The type of Record this is in the DNS system. For example, A records associate a
 The service this Record identified. Only valid for SRV records.
 
 <h4 class="pdoc-member-header" id="DomainRecord-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L96">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L96">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tag: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -441,7 +442,7 @@ The service this Record identified. Only valid for SRV records.
 The tag portion of a CAA record. It is invalid to set this on other record types.
 
 <h4 class="pdoc-member-header" id="DomainRecord-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L101">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L101">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -450,7 +451,7 @@ The target for this Record. This field's actual usage depends on the type of rec
 - - -
 
 <h4 class="pdoc-member-header" id="DomainRecord-ttlSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L105">property <b>ttlSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L105">property <b>ttlSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttlSec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -458,7 +459,7 @@ The target for this Record. This field's actual usage depends on the type of rec
 'Time to Live' - the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -467,7 +468,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="DomainRecord-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L109">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L109">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -475,7 +476,7 @@ deployments.
 The relative weight of this Record. Higher values are preferred.
 
 <h3 class="pdoc-module-header" id="Image" data-link-title="Image">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L61">
         Resource <strong>Image</strong>
     </a>
 </h3>
@@ -536,7 +537,7 @@ This resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/image.html.markdown.
 
 <h4 class="pdoc-member-header" id="Image-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L136"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L136"> <b>constructor</b></a>
 </h4>
 
 
@@ -550,7 +551,7 @@ Create a Image resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Image-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L70">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L70">method <b>get</b></a>
 </h4>
 
 
@@ -561,14 +562,14 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Image-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L61">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L61">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Image-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L81">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L81">method <b>isInstance</b></a>
 </h4>
 
 
@@ -579,7 +580,7 @@ Returns true if the given object is an instance of Image.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Image-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L91">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L91">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>created: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -587,7 +588,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 When this Image was created.
 
 <h4 class="pdoc-member-header" id="Image-createdBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L95">property <b>createdBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L95">property <b>createdBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdBy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -595,7 +596,7 @@ When this Image was created.
 The name of the User who created this Image.
 
 <h4 class="pdoc-member-header" id="Image-deprecated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L99">property <b>deprecated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L99">property <b>deprecated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deprecated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -603,7 +604,7 @@ The name of the User who created this Image.
 Whether or not this Image is deprecated. Will only be True for deprecated public Images.
 
 <h4 class="pdoc-member-header" id="Image-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L103">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L103">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -611,7 +612,7 @@ Whether or not this Image is deprecated. Will only be True for deprecated public
 A detailed description of this Image.
 
 <h4 class="pdoc-member-header" id="Image-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L107">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L107">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -619,7 +620,7 @@ A detailed description of this Image.
 The ID of the Linode Disk that this Image will be created from.
 
 <h4 class="pdoc-member-header" id="Image-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L111">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L111">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +628,7 @@ The ID of the Linode Disk that this Image will be created from.
 Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 
 <h4 class="pdoc-member-header" id="Image-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -636,7 +637,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Image-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L115">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L115">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isPublic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -644,7 +645,7 @@ deployments and may be missing (undefined) during planning phases.
 True if the Image is public.
 
 <h4 class="pdoc-member-header" id="Image-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L119">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L119">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -652,7 +653,7 @@ True if the Image is public.
 A short description of the Image. Labels cannot contain special characters.
 
 <h4 class="pdoc-member-header" id="Image-linodeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L123">property <b>linodeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L123">property <b>linodeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linodeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -660,7 +661,7 @@ A short description of the Image. Labels cannot contain special characters.
 The ID of the Linode that this Image will be created from.
 
 <h4 class="pdoc-member-header" id="Image-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L127">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L127">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -668,7 +669,7 @@ The ID of the Linode that this Image will be created from.
 The minimum size this Image needs to deploy. Size is in MB.
 
 <h4 class="pdoc-member-header" id="Image-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L132">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L132">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -677,7 +678,7 @@ How the Image was created. 'Manual' Images can be created at any time. 'Automati
 from a deleted Linode.
 
 <h4 class="pdoc-member-header" id="Image-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L61">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L61">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -686,7 +687,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Image-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L136">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L136">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vendor: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -694,7 +695,7 @@ deployments.
 The upstream distribution vendor. Nil for private Images.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L12">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -704,7 +705,7 @@ The upstream distribution vendor. Nil for private Images.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/instance.html.markdown.
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L140"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L140"> <b>constructor</b></a>
 </h4>
 
 
@@ -718,7 +719,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -729,14 +730,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -747,12 +748,12 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-alerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L39">property <b>alerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L39">property <b>alerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alerts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceAlerts'>outputs.InstanceAlerts</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-authorizedKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L43">property <b>authorizedKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L43">property <b>authorizedKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizedKeys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -760,7 +761,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorizedKeys` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="Instance-authorizedUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L47">property <b>authorizedUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L47">property <b>authorizedUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizedUsers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -768,7 +769,7 @@ A list of SSH public keys to deploy for the root user on the newly created Linod
 A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorizedUsers` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="Instance-backupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L51">property <b>backupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L51">property <b>backupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -776,7 +777,7 @@ A list of Linode usernames. If the usernames have associated SSH keys, the keys 
 A Backup ID from another Linode's available backups. Your User must have readWrite access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backupId` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="Instance-backups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L55">property <b>backups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L55">property <b>backups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceBackups'>outputs.InstanceBackups</a>&gt;;</code></pre>
@@ -784,7 +785,7 @@ A Backup ID from another Linode's available backups. Your User must have readWri
 Information about this Linode's backups status.
 
 <h4 class="pdoc-member-header" id="Instance-backupsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L59">property <b>backupsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L59">property <b>backupsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backupsEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -792,7 +793,7 @@ Information about this Linode's backups status.
 If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 
 <h4 class="pdoc-member-header" id="Instance-bootConfigLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L63">property <b>bootConfigLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L63">property <b>bootConfigLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bootConfigLabel: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -800,7 +801,7 @@ If this field is set to true, the created Linode will automatically be enrolled 
 The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `bootConfigLabel`. *This value can not be imported.*
 
 <h4 class="pdoc-member-header" id="Instance-configs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L67">property <b>configs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L67">property <b>configs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfig'>outputs.InstanceConfig</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -808,12 +809,12 @@ The Label of the Instance Config that should be used to boot the Linode instance
 Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 
 <h4 class="pdoc-member-header" id="Instance-disks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L68">property <b>disks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L68">property <b>disks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceDisk'>outputs.InstanceDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L72">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L72">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>group: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -821,7 +822,7 @@ Configuration profiles define the VM settings and boot behavior of the Linode In
 The display group of the Linode instance.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -830,7 +831,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L76">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L76">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>image: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -838,7 +839,7 @@ deployments and may be missing (undefined) during planning phases.
 An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="Instance-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L81">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L81">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -847,7 +848,7 @@ This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses o
 address will be used for this field.
 
 <h4 class="pdoc-member-header" id="Instance-ipv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L86">property <b>ipv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L86">property <b>ipv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv4s: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -856,7 +857,7 @@ This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 addre
 single private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
 
 <h4 class="pdoc-member-header" id="Instance-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L90">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L90">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv6: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -864,7 +865,7 @@ single private IPv4 address if needed. You may need to open a support ticket to 
 This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.
 
 <h4 class="pdoc-member-header" id="Instance-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L94">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L94">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -872,7 +873,7 @@ This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and ma
 The Config's label for display purposes.  Also used by `bootConfigLabel`.
 
 <h4 class="pdoc-member-header" id="Instance-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L98">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L98">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -880,7 +881,7 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 
 <h4 class="pdoc-member-header" id="Instance-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L103">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L103">property <b>privateIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>privateIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -889,7 +890,7 @@ This Linode's Private IPv4 Address. The regional private IP address range is 192
 Linode Instances in a region.
 
 <h4 class="pdoc-member-header" id="Instance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L107">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L107">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,7 +898,7 @@ Linode Instances in a region.
 This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
 
 <h4 class="pdoc-member-header" id="Instance-rootPass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L111">property <b>rootPass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L111">property <b>rootPass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rootPass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -905,12 +906,12 @@ This is the location where the Linode is deployed. Examples are `"us-east"`, `"u
 The password that will be initialially assigned to the 'root' user account.
 
 <h4 class="pdoc-member-header" id="Instance-specs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L112">property <b>specs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L112">property <b>specs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>specs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceSpecs'>outputs.InstanceSpecs</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Instance-stackscriptData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L116">property <b>stackscriptData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L116">property <b>stackscriptData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackscriptData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -918,7 +919,7 @@ The password that will be initialially assigned to the 'root' user account.
 An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscriptData` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="Instance-stackscriptId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L120">property <b>stackscriptId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L120">property <b>stackscriptId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stackscriptId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -926,7 +927,7 @@ An object containing responses to any User Defined Fields present in the StackSc
 The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscriptId` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="Instance-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L124">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L124">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -934,7 +935,7 @@ The StackScript to deploy to the newly created Linode. If provided, 'image' must
 The status of the instance, indicating the current readiness state.
 
 <h4 class="pdoc-member-header" id="Instance-swapSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L128">property <b>swapSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L128">property <b>swapSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>swapSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -942,7 +943,7 @@ The status of the instance, indicating the current readiness state.
 When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L132">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L132">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -950,7 +951,7 @@ When deploying from an Image, this field is optional with a Linode API default o
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="Instance-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L136">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L136">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -958,7 +959,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -967,7 +968,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-watchdogEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L140">property <b>watchdogEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L140">property <b>watchdogEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>watchdogEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -975,7 +976,7 @@ deployments.
 The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 
 <h3 class="pdoc-module-header" id="NodeBalancer" data-link-title="NodeBalancer">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L12">
         Resource <strong>NodeBalancer</strong>
     </a>
 </h3>
@@ -985,7 +986,7 @@ The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer.html.markdown.
 
 <h4 class="pdoc-member-header" id="NodeBalancer-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -999,7 +1000,7 @@ Create a NodeBalancer resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NodeBalancer-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -1010,14 +1011,14 @@ Get an existing NodeBalancer resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NodeBalancer-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NodeBalancer-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1028,7 +1029,7 @@ Returns true if the given object is an instance of NodeBalancer.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NodeBalancer-clientConnThrottle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L42">property <b>clientConnThrottle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L42">property <b>clientConnThrottle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientConnThrottle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1036,12 +1037,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
 
 <h4 class="pdoc-member-header" id="NodeBalancer-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L43">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L43">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>created: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancer-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L47">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L47">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1049,7 +1050,7 @@ Throttle connections per second (0-20). Set to 0 (default) to disable throttling
 This NodeBalancer's hostname, ending with .nodebalancer.linode.com
 
 <h4 class="pdoc-member-header" id="NodeBalancer-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1058,7 +1059,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NodeBalancer-ipv4">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L51">property <b>ipv4</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L51">property <b>ipv4</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv4: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1066,7 +1067,7 @@ deployments and may be missing (undefined) during planning phases.
 The Public IPv4 Address of this NodeBalancer
 
 <h4 class="pdoc-member-header" id="NodeBalancer-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L55">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L55">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ipv6: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1074,7 +1075,7 @@ The Public IPv4 Address of this NodeBalancer
 The Public IPv6 Address of this NodeBalancer
 
 <h4 class="pdoc-member-header" id="NodeBalancer-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L59">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L59">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1082,7 +1083,7 @@ The Public IPv6 Address of this NodeBalancer
 The label of the Linode NodeBalancer
 
 <h4 class="pdoc-member-header" id="NodeBalancer-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L63">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L63">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1090,7 +1091,7 @@ The label of the Linode NodeBalancer
 The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
 
 <h4 class="pdoc-member-header" id="NodeBalancer-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L67">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L67">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1098,17 +1099,17 @@ The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, 
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="NodeBalancer-transfer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L68">property <b>transfer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L68">property <b>transfer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>transfer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#NodeBalancerTransfer'>outputs.NodeBalancerTransfer</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancer-updated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L69">property <b>updated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L69">property <b>updated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancer-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1117,7 +1118,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NodeBalancerConfig" data-link-title="NodeBalancerConfig">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L12">
         Resource <strong>NodeBalancerConfig</strong>
     </a>
 </h3>
@@ -1127,7 +1128,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_config.html.markdown.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -1141,7 +1142,7 @@ Create a NodeBalancerConfig resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -1152,14 +1153,14 @@ Get an existing NodeBalancerConfig resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1170,7 +1171,7 @@ Returns true if the given object is an instance of NodeBalancerConfig.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L42">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L42">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>algorithm: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1178,7 +1179,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-check">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L46">property <b>check</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L46">property <b>check</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>check: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1186,7 +1187,7 @@ What algorithm this NodeBalancer should use for routing traffic to backends: rou
 The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and httpBody rely on the backend serving HTTP, and that the response returned matches what is expected.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-checkAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L50">property <b>checkAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L50">property <b>checkAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checkAttempts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1194,7 +1195,7 @@ The type of check to perform against backends to ensure they are serving request
 How many times to attempt a check before considering a backend to be down. (1-30)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-checkBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L55">property <b>checkBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L55">property <b>checkBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checkBody: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1203,7 +1204,7 @@ This value must be present in the response body of the check in order for it to 
 in the response body of a check request, the backend is considered to be down
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-checkInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L59">property <b>checkInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L59">property <b>checkInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checkInterval: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1211,7 +1212,7 @@ in the response body of a check request, the backend is considered to be down
 How often, in seconds, to check that backends are up and serving requests.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-checkPassive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L63">property <b>checkPassive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L63">property <b>checkPassive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checkPassive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1219,7 +1220,7 @@ How often, in seconds, to check that backends are up and serving requests.
 If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-checkPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L67">property <b>checkPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L67">property <b>checkPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checkPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1227,7 +1228,7 @@ If true, any response from this backend with a 5xx status code will be enough fo
 The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-checkTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L71">property <b>checkTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L71">property <b>checkTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checkTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1235,7 +1236,7 @@ The URL path to check on each backend. If the backend does not respond to this r
 How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-cipherSuite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L75">property <b>cipherSuite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L75">property <b>cipherSuite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cipherSuite: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1243,7 +1244,7 @@ How long, in seconds, to wait for a check attempt before considering it failed. 
 What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1252,12 +1253,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-nodeStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L76">property <b>nodeStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L76">property <b>nodeStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#NodeBalancerConfigNodeStatus'>outputs.NodeBalancerConfigNodeStatus</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-nodebalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L80">property <b>nodebalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L80">property <b>nodebalancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodebalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1265,7 +1266,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the NodeBalancer to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L84">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L84">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1273,7 +1274,7 @@ The ID of the NodeBalancer to access.
 The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L88">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L88">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1281,7 +1282,7 @@ The TCP port this Config is for. These values must be unique across configs on a
 The protocol this port is configured to serve. If this is set to https you must include an sslCert and an ssl_key. (Defaults to "http")
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-sslCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L92">property <b>sslCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L92">property <b>sslCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslCert: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1289,7 +1290,7 @@ The protocol this port is configured to serve. If this is set to https you must 
 The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the sslCommonname and sslFingerprint to identify the certificate.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-sslCommonname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L96">property <b>sslCommonname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L96">property <b>sslCommonname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslCommonname: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1297,7 +1298,7 @@ The certificate this port is serving. This is not returned. If set, this field w
 The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-sslFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L100">property <b>sslFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L100">property <b>sslFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslFingerprint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1305,7 +1306,7 @@ The common name for the SSL certification this port is serving if this port is n
 The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-sslKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L104">property <b>sslKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L104">property <b>sslKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1313,7 +1314,7 @@ The fingerprint for the SSL certification this port is serving if this port is n
 The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the sslCommonname and sslFingerprint to identify the certificate.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L108">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L108">property <b>stickiness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stickiness: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1322,7 @@ The private key corresponding to this port's certificate. This is not returned. 
 Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1330,7 +1331,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="NodeBalancerNode" data-link-title="NodeBalancerNode">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L12">
         Resource <strong>NodeBalancerNode</strong>
     </a>
 </h3>
@@ -1340,7 +1341,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/nodebalancer_node.html.markdown.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L66"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L66"> <b>constructor</b></a>
 </h4>
 
 
@@ -1354,7 +1355,7 @@ Create a NodeBalancerNode resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -1365,14 +1366,14 @@ Get an existing NodeBalancerNode resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1383,7 +1384,7 @@ Returns true if the given object is an instance of NodeBalancerNode.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L42">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L42">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1391,7 +1392,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The private IP Address where this backend can be reached. This must be a private IP address.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-configId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L46">property <b>configId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L46">property <b>configId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>configId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1399,7 +1400,7 @@ The private IP Address where this backend can be reached. This must be a private
 The ID of the NodeBalancerConfig to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1408,7 +1409,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L50">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L50">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1416,7 +1417,7 @@ deployments and may be missing (undefined) during planning phases.
 The label of the Linode NodeBalancer Node. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L54">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L54">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1424,7 +1425,7 @@ The label of the Linode NodeBalancer Node. This is for display purposes only.
 The mode this NodeBalancer should use when sending traffic to this backend. If set to `accept` this backend is accepting traffic. If set to `reject` this backend will not receive traffic. If set to `drain` this backend will not receive new traffic, but connections already pinned to it will continue to be routed to it
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-nodebalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L58">property <b>nodebalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L58">property <b>nodebalancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodebalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1432,7 +1433,7 @@ The mode this NodeBalancer should use when sending traffic to this backend. If s
 The ID of the NodeBalancer to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L62">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L62">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1440,7 +1441,7 @@ The ID of the NodeBalancer to access.
 The current status of this node, based on the configured checks of its NodeBalancer Config. (unknown, UP, DOWN)
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1449,7 +1450,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNode-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L66">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L66">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weight: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1457,7 +1458,7 @@ deployments.
 Used when picking a backend to serve a request and is not pinned to a single backend yet. Nodes with a higher weight will receive more traffic. (1-255).
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L17">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -1472,7 +1473,7 @@ construction to achieve fine-grained programmatic control over provider settings
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/index.html.markdown.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L30"> <b>constructor</b></a>
 </h4>
 
 
@@ -1486,14 +1487,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L25">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1504,7 +1505,7 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1513,7 +1514,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1522,7 +1523,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Rdns" data-link-title="Rdns">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L37">
         Resource <strong>Rdns</strong>
     </a>
 </h3>
@@ -1557,7 +1558,7 @@ const fooRdns = new linode.Rdns("foo", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/rdns.html.markdown.
 
 <h4 class="pdoc-member-header" id="Rdns-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -1571,7 +1572,7 @@ Create a Rdns resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Rdns-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -1582,14 +1583,14 @@ Get an existing Rdns resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Rdns-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Rdns-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1600,7 +1601,7 @@ Returns true if the given object is an instance of Rdns.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Rdns-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L67">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L67">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1608,7 +1609,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Public IPv4 or IPv6 address that will receive the `PTR` record.  A matching `A` or `AAAA` record must exist.
 
 <h4 class="pdoc-member-header" id="Rdns-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1617,7 +1618,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Rdns-rdns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L71">property <b>rdns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L71">property <b>rdns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rdns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1625,7 +1626,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the RDNS address.
 
 <h4 class="pdoc-member-header" id="Rdns-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1634,7 +1635,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SshKey" data-link-title="SshKey">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L44">
         Resource <strong>SshKey</strong>
     </a>
 </h3>
@@ -1676,7 +1677,7 @@ This resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/sshkey.html.markdown.
 
 <h4 class="pdoc-member-header" id="SshKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L82"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L82"> <b>constructor</b></a>
 </h4>
 
 
@@ -1690,7 +1691,7 @@ Create a SshKey resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SshKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -1701,14 +1702,14 @@ Get an existing SshKey resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SshKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SshKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1719,7 +1720,7 @@ Returns true if the given object is an instance of SshKey.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SshKey-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L74">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L74">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>created: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1727,7 +1728,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date this key was added.
 
 <h4 class="pdoc-member-header" id="SshKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1736,7 +1737,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SshKey-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L78">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L78">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1744,7 +1745,7 @@ deployments and may be missing (undefined) during planning phases.
 A label for the SSH Key.
 
 <h4 class="pdoc-member-header" id="SshKey-sshKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L82">property <b>sshKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L82">property <b>sshKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sshKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1752,7 +1753,7 @@ A label for the SSH Key.
 The public SSH Key, which is used to authenticate to the root user of the Linodes you deploy.
 
 <h4 class="pdoc-member-header" id="SshKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1761,7 +1762,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="StackScript" data-link-title="StackScript">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L12">
         Resource <strong>StackScript</strong>
     </a>
 </h3>
@@ -1771,7 +1772,7 @@ deployments.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/stackscript.html.markdown.
 
 <h4 class="pdoc-member-header" id="StackScript-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L91"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L91"> <b>constructor</b></a>
 </h4>
 
 
@@ -1785,7 +1786,7 @@ Create a StackScript resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StackScript-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -1796,14 +1797,14 @@ Get an existing StackScript resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StackScript-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StackScript-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1814,7 +1815,7 @@ Returns true if the given object is an instance of StackScript.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="StackScript-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L42">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L42">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>created: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1822,7 +1823,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date this StackScript was created.
 
 <h4 class="pdoc-member-header" id="StackScript-deploymentsActive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L46">property <b>deploymentsActive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L46">property <b>deploymentsActive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentsActive: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1830,7 +1831,7 @@ The date this StackScript was created.
 Count of currently active, deployed Linodes created from this StackScript.
 
 <h4 class="pdoc-member-header" id="StackScript-deploymentsTotal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L50">property <b>deploymentsTotal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L50">property <b>deploymentsTotal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deploymentsTotal: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1838,7 +1839,7 @@ Count of currently active, deployed Linodes created from this StackScript.
 The total number of times this StackScript has been deployed.
 
 <h4 class="pdoc-member-header" id="StackScript-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L54">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L54">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1846,7 +1847,7 @@ The total number of times this StackScript has been deployed.
 A description for the StackScript.
 
 <h4 class="pdoc-member-header" id="StackScript-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1855,7 +1856,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StackScript-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L58">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L58">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>images: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1863,7 +1864,7 @@ deployments and may be missing (undefined) during planning phases.
 An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 
 <h4 class="pdoc-member-header" id="StackScript-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L62">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L62">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isPublic: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1871,7 +1872,7 @@ An array of Image IDs representing the Images that this StackScript is compatibl
 This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `isPublic` forces the creation of a new StackScript*
 
 <h4 class="pdoc-member-header" id="StackScript-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L66">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L66">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1879,7 +1880,7 @@ This determines whether other users can use your StackScript. Once a StackScript
 The StackScript's label is for display purposes only.
 
 <h4 class="pdoc-member-header" id="StackScript-revNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L70">property <b>revNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L70">property <b>revNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revNote: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1887,7 +1888,7 @@ The StackScript's label is for display purposes only.
 This field allows you to add notes for the set of revisions made to this StackScript.
 
 <h4 class="pdoc-member-header" id="StackScript-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L74">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L74">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>script: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1895,7 +1896,7 @@ This field allows you to add notes for the set of revisions made to this StackSc
 The script to execute when provisioning a new Linode with this StackScript.
 
 <h4 class="pdoc-member-header" id="StackScript-updated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L78">property <b>updated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L78">property <b>updated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1903,7 +1904,7 @@ The script to execute when provisioning a new Linode with this StackScript.
 The date this StackScript was updated.
 
 <h4 class="pdoc-member-header" id="StackScript-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1912,7 +1913,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="StackScript-userDefinedFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L83">property <b>userDefinedFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L83">property <b>userDefinedFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userDefinedFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#StackScriptUserDefinedField'>outputs.StackScriptUserDefinedField</a>[]&gt;;</code></pre>
@@ -1921,7 +1922,7 @@ This is a list of fields defined with a special syntax inside this StackScript t
 parameters during deployment.
 
 <h4 class="pdoc-member-header" id="StackScript-userGravatarId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L87">property <b>userGravatarId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L87">property <b>userGravatarId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userGravatarId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1929,7 +1930,7 @@ parameters during deployment.
 The Gravatar ID for the User who created the StackScript.
 
 <h4 class="pdoc-member-header" id="StackScript-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L91">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L91">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1937,7 +1938,7 @@ The Gravatar ID for the User who created the StackScript.
 The User who created the StackScript.
 
 <h3 class="pdoc-module-header" id="Token" data-link-title="Token">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L12">
         Resource <strong>Token</strong>
     </a>
 </h3>
@@ -1947,7 +1948,7 @@ The User who created the StackScript.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/token.html.markdown.
 
 <h4 class="pdoc-member-header" id="Token-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L58"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L58"> <b>constructor</b></a>
 </h4>
 
 
@@ -1961,7 +1962,7 @@ Create a Token resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Token-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L21">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L21">method <b>get</b></a>
 </h4>
 
 
@@ -1972,14 +1973,14 @@ Get an existing Token resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Token-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Token-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L32">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L32">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1990,7 +1991,7 @@ Returns true if the given object is an instance of Token.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Token-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L42">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L42">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>created: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1998,7 +1999,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The date and time this token was created.
 
 <h4 class="pdoc-member-header" id="Token-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L46">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L46">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>expiry: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2006,7 +2007,7 @@ The date and time this token was created.
 When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with 'null' as their expiry and will never expire unless revoked.
 
 <h4 class="pdoc-member-header" id="Token-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2015,7 +2016,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Token-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L50">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L50">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2023,7 +2024,7 @@ deployments and may be missing (undefined) during planning phases.
 A label for the Token.
 
 <h4 class="pdoc-member-header" id="Token-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L54">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L54">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2031,7 +2032,7 @@ A label for the Token.
 The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to *. Tokens with more restrictive scopes are generally more secure.
 
 <h4 class="pdoc-member-header" id="Token-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L58">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L58">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>token: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2039,7 +2040,7 @@ The scopes this token was created with. These define what parts of the Account t
 The token used to access the API.
 
 <h4 class="pdoc-member-header" id="Token-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2048,7 +2049,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Volume" data-link-title="Volume">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L66">
         Resource <strong>Volume</strong>
     </a>
 </h3>
@@ -2112,7 +2113,7 @@ This resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/r/volume.html.markdown.
 
 <h4 class="pdoc-member-header" id="Volume-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L121"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L121"> <b>constructor</b></a>
 </h4>
 
 
@@ -2126,7 +2127,7 @@ Create a Volume resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Volume-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L75">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L75">method <b>get</b></a>
 </h4>
 
 
@@ -2137,14 +2138,14 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Volume-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L66">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L66">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Volume-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L86">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L86">method <b>isInstance</b></a>
 </h4>
 
 
@@ -2155,7 +2156,7 @@ Returns true if the given object is an instance of Volume.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Volume-filesystemPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L97">property <b>filesystemPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L97">property <b>filesystemPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>filesystemPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2164,7 +2165,7 @@ The full filesystem path for the Volume based on the Volume's label. Path is /de
 Volume label.
 
 <h4 class="pdoc-member-header" id="Volume-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L66">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L66">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -2173,7 +2174,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Volume-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L101">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L101">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2181,7 +2182,7 @@ deployments and may be missing (undefined) during planning phases.
 The label of the Linode Volume
 
 <h4 class="pdoc-member-header" id="Volume-linodeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L105">property <b>linodeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L105">property <b>linodeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>linodeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2189,7 +2190,7 @@ The label of the Linode Volume
 The ID of a Linode Instance where the the Volume should be attached.
 
 <h4 class="pdoc-member-header" id="Volume-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L109">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L109">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2197,7 +2198,7 @@ The ID of a Linode Instance where the the Volume should be attached.
 The region where this volume will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Volume.*.
 
 <h4 class="pdoc-member-header" id="Volume-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L113">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L113">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2205,7 +2206,7 @@ The region where this volume will be deployed.  Examples are `"us-east"`, `"us-w
 Size of the Volume in GB.
 
 <h4 class="pdoc-member-header" id="Volume-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L117">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L117">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2213,7 +2214,7 @@ Size of the Volume in GB.
 The status of the volume, indicating the current readiness state.
 
 <h4 class="pdoc-member-header" id="Volume-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L121">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L121">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2221,7 +2222,7 @@ The status of the volume, indicating the current readiness state.
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="Volume-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L66">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L66">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2232,7 +2233,7 @@ deployments.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getAccount" data-link-title="getAccount">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L55">
         Data Source <strong>getAccount</strong>
     </a>
 </h3>
@@ -2287,7 +2288,7 @@ The Linode Account resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/account.html.markdown.
 
 <h3 class="pdoc-module-header" id="getDomain" data-link-title="getDomain">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L62">
         Data Source <strong>getDomain</strong>
     </a>
 </h3>
@@ -2349,7 +2350,7 @@ The Linode Domain resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/domain.html.markdown.
 
 <h3 class="pdoc-module-header" id="getImage" data-link-title="getImage">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L49">
         Data Source <strong>getImage</strong>
     </a>
 </h3>
@@ -2398,7 +2399,7 @@ The Linode Image resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/image.html.markdown.
 
 <h3 class="pdoc-module-header" id="getInstanceType" data-link-title="getInstanceType">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L47">
         Data Source <strong>getInstanceType</strong>
     </a>
 </h3>
@@ -2445,7 +2446,7 @@ The Linode Instance Type resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/instance_type.html.markdown.
 
 <h3 class="pdoc-module-header" id="getNetworkingIp" data-link-title="getNetworkingIp">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L49">
         Data Source <strong>getNetworkingIp</strong>
     </a>
 </h3>
@@ -2494,7 +2495,7 @@ The Linode Network IP Address resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/networking_ip.html.markdown.
 
 <h3 class="pdoc-module-header" id="getProfile" data-link-title="getProfile">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L61">
         Data Source <strong>getProfile</strong>
     </a>
 </h3>
@@ -2555,7 +2556,7 @@ The Linode Profile resource exports the following attributes:
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/profile.html.markdown.
 
 <h3 class="pdoc-module-header" id="getRegion" data-link-title="getRegion">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getRegion.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getRegion.ts#L27">
         Data Source <strong>getRegion</strong>
     </a>
 </h3>
@@ -2582,7 +2583,7 @@ const region = linode.getRegion({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/region.html.markdown.
 
 <h3 class="pdoc-module-header" id="getSshKey" data-link-title="getSshKey">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getSshKey.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getSshKey.ts#L27">
         Data Source <strong>getSshKey</strong>
     </a>
 </h3>
@@ -2609,7 +2610,7 @@ const foo = linode.getSshKey({
 > This content is derived from https://github.com/terraform-providers/terraform-provider-linode/blob/master/website/docs/d/sshkey.html.markdown.
 
 <h3 class="pdoc-module-header" id="getUser" data-link-title="getUser">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L37">
         Data Source <strong>getUser</strong>
     </a>
 </h3>
@@ -2648,7 +2649,7 @@ The Linode User resource exports the following attributes:
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DomainArgs" data-link-title="DomainArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L209">
         interface <strong>DomainArgs</strong>
     </a>
 </h3>
@@ -2658,7 +2659,7 @@ The Linode User resource exports the following attributes:
 The set of arguments for constructing a Domain resource.
 
 <h4 class="pdoc-member-header" id="DomainArgs-axfrIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L213">property <b>axfrIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L213">property <b>axfrIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>axfrIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2666,7 +2667,7 @@ The set of arguments for constructing a Domain resource.
 The list of IPs that may perform a zone transfer for this Domain. This is potentially dangerous, and should be set to an empty list unless you intend to use it.
 
 <h4 class="pdoc-member-header" id="DomainArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L217">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L217">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2674,7 +2675,7 @@ The list of IPs that may perform a zone transfer for this Domain. This is potent
 A description for this Domain. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="DomainArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L221">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L221">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2682,7 +2683,7 @@ A description for this Domain. This is for display purposes only.
 The domain this Domain represents. These must be unique in our system; you cannot have two Domains representing the same domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-expireSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L225">property <b>expireSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L225">property <b>expireSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expireSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2690,7 +2691,7 @@ The domain this Domain represents. These must be unique in our system; you canno
 The amount of time in seconds that may pass before this Domain is no longer authoritative. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L229">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L229">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2698,7 +2699,7 @@ The amount of time in seconds that may pass before this Domain is no longer auth
 The group this Domain belongs to. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="DomainArgs-masterIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L233">property <b>masterIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L233">property <b>masterIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2706,7 +2707,7 @@ The group this Domain belongs to. This is for display purposes only.
 The IP addresses representing the master DNS for this Domain.
 
 <h4 class="pdoc-member-header" id="DomainArgs-refreshSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L237">property <b>refreshSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L237">property <b>refreshSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2714,7 +2715,7 @@ The IP addresses representing the master DNS for this Domain.
 The amount of time in seconds before this Domain should be refreshed. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainArgs-retrySec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L241">property <b>retrySec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L241">property <b>retrySec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retrySec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2722,7 +2723,7 @@ The amount of time in seconds before this Domain should be refreshed. Valid valu
 The interval, in seconds, at which a failed refresh should be retried. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainArgs-soaEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L245">property <b>soaEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L245">property <b>soaEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>soaEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2730,7 +2731,7 @@ The interval, in seconds, at which a failed refresh should be retried. Valid val
 Start of Authority email address. This is required for master Domains.
 
 <h4 class="pdoc-member-header" id="DomainArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L249">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L249">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2738,7 +2739,7 @@ Start of Authority email address. This is required for master Domains.
 Used to control whether this Domain is currently being rendered (defaults to "active").
 
 <h4 class="pdoc-member-header" id="DomainArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L253">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L253">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2746,7 +2747,7 @@ Used to control whether this Domain is currently being rendered (defaults to "ac
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="DomainArgs-ttlSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L257">property <b>ttlSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L257">property <b>ttlSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttlSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2754,7 +2755,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 'Time to Live' - the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L261">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L261">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2762,7 +2763,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 If this Domain represents the authoritative source of information for the domain it describes, or if it is a read-only copy of a master (also called a slave).
 
 <h3 class="pdoc-module-header" id="DomainRecordArgs" data-link-title="DomainRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L225">
         interface <strong>DomainRecordArgs</strong>
     </a>
 </h3>
@@ -2772,7 +2773,7 @@ If this Domain represents the authoritative source of information for the domain
 The set of arguments for constructing a DomainRecord resource.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L229">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L229">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2780,7 +2781,7 @@ The set of arguments for constructing a DomainRecord resource.
 The ID of the Domain to access.  *Changing `domainId` forces the creation of a new Linode Domain Record.*.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L233">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L233">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2788,7 +2789,7 @@ The ID of the Domain to access.  *Changing `domainId` forces the creation of a n
 The name of this Record. This field's actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L237">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L237">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2796,7 +2797,7 @@ The name of this Record. This field's actual usage depends on the type of record
 The port this Record points to.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L241">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L241">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2804,7 +2805,7 @@ The port this Record points to.
 The priority of the target host. Lower values are preferred.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L245">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L245">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2812,7 +2813,7 @@ The priority of the target host. Lower values are preferred.
 The protocol this Record's service communicates with. Only valid for SRV records.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L249">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L249">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2820,7 +2821,7 @@ The protocol this Record's service communicates with. Only valid for SRV records
 The type of Record this is in the DNS system. For example, A records associate a domain name with an IPv4 address, and AAAA records associate a domain name with an IPv6 address. *Changing `recordType` forces the creation of a new Linode Domain Record.*.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L253">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L253">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2828,7 +2829,7 @@ The type of Record this is in the DNS system. For example, A records associate a
 The service this Record identified. Only valid for SRV records.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L257">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L257">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2836,7 +2837,7 @@ The service this Record identified. Only valid for SRV records.
 The tag portion of a CAA record. It is invalid to set this on other record types.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L262">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L262">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2845,7 +2846,7 @@ The target for this Record. This field's actual usage depends on the type of rec
 - - -
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-ttlSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L266">property <b>ttlSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L266">property <b>ttlSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttlSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2853,7 +2854,7 @@ The target for this Record. This field's actual usage depends on the type of rec
 'Time to Live' - the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainRecordArgs-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L270">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L270">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2861,7 +2862,7 @@ The target for this Record. This field's actual usage depends on the type of rec
 The relative weight of this Record. Higher values are preferred.
 
 <h3 class="pdoc-module-header" id="DomainRecordState" data-link-title="DomainRecordState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L174">
         interface <strong>DomainRecordState</strong>
     </a>
 </h3>
@@ -2871,7 +2872,7 @@ The relative weight of this Record. Higher values are preferred.
 Input properties used for looking up and filtering DomainRecord resources.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-domainId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L178">property <b>domainId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L178">property <b>domainId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domainId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2879,7 +2880,7 @@ Input properties used for looking up and filtering DomainRecord resources.
 The ID of the Domain to access.  *Changing `domainId` forces the creation of a new Linode Domain Record.*.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L182">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L182">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2887,7 +2888,7 @@ The ID of the Domain to access.  *Changing `domainId` forces the creation of a n
 The name of this Record. This field's actual usage depends on the type of record this represents. For A and AAAA records, this is the subdomain being associated with an IP address.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L186">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L186">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2895,7 +2896,7 @@ The name of this Record. This field's actual usage depends on the type of record
 The port this Record points to.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L190">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L190">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2903,7 +2904,7 @@ The port this Record points to.
 The priority of the target host. Lower values are preferred.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L194">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L194">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2911,7 +2912,7 @@ The priority of the target host. Lower values are preferred.
 The protocol this Record's service communicates with. Only valid for SRV records.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-recordType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L198">property <b>recordType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L198">property <b>recordType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2919,7 +2920,7 @@ The protocol this Record's service communicates with. Only valid for SRV records
 The type of Record this is in the DNS system. For example, A records associate a domain name with an IPv4 address, and AAAA records associate a domain name with an IPv6 address. *Changing `recordType` forces the creation of a new Linode Domain Record.*.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L202">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L202">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2927,7 +2928,7 @@ The type of Record this is in the DNS system. For example, A records associate a
 The service this Record identified. Only valid for SRV records.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L206">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L206">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2935,7 +2936,7 @@ The service this Record identified. Only valid for SRV records.
 The tag portion of a CAA record. It is invalid to set this on other record types.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-target">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L211">property <b>target</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L211">property <b>target</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>target?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2944,7 +2945,7 @@ The target for this Record. This field's actual usage depends on the type of rec
 - - -
 
 <h4 class="pdoc-member-header" id="DomainRecordState-ttlSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L215">property <b>ttlSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L215">property <b>ttlSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttlSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2952,7 +2953,7 @@ The target for this Record. This field's actual usage depends on the type of rec
 'Time to Live' - the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainRecordState-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domainRecord.ts#L219">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domainRecord.ts#L219">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2960,7 +2961,7 @@ The target for this Record. This field's actual usage depends on the type of rec
 The relative weight of this Record. Higher values are preferred.
 
 <h3 class="pdoc-module-header" id="DomainState" data-link-title="DomainState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L151">
         interface <strong>DomainState</strong>
     </a>
 </h3>
@@ -2970,7 +2971,7 @@ The relative weight of this Record. Higher values are preferred.
 Input properties used for looking up and filtering Domain resources.
 
 <h4 class="pdoc-member-header" id="DomainState-axfrIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L155">property <b>axfrIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L155">property <b>axfrIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>axfrIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2978,7 +2979,7 @@ Input properties used for looking up and filtering Domain resources.
 The list of IPs that may perform a zone transfer for this Domain. This is potentially dangerous, and should be set to an empty list unless you intend to use it.
 
 <h4 class="pdoc-member-header" id="DomainState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L159">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L159">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2986,7 +2987,7 @@ The list of IPs that may perform a zone transfer for this Domain. This is potent
 A description for this Domain. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="DomainState-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L163">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L163">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2994,7 +2995,7 @@ A description for this Domain. This is for display purposes only.
 The domain this Domain represents. These must be unique in our system; you cannot have two Domains representing the same domain.
 
 <h4 class="pdoc-member-header" id="DomainState-expireSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L167">property <b>expireSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L167">property <b>expireSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expireSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3002,7 +3003,7 @@ The domain this Domain represents. These must be unique in our system; you canno
 The amount of time in seconds that may pass before this Domain is no longer authoritative. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L171">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L171">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3010,7 +3011,7 @@ The amount of time in seconds that may pass before this Domain is no longer auth
 The group this Domain belongs to. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="DomainState-masterIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L175">property <b>masterIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L175">property <b>masterIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3018,7 +3019,7 @@ The group this Domain belongs to. This is for display purposes only.
 The IP addresses representing the master DNS for this Domain.
 
 <h4 class="pdoc-member-header" id="DomainState-refreshSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L179">property <b>refreshSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L179">property <b>refreshSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3026,7 +3027,7 @@ The IP addresses representing the master DNS for this Domain.
 The amount of time in seconds before this Domain should be refreshed. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainState-retrySec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L183">property <b>retrySec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L183">property <b>retrySec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retrySec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3034,7 +3035,7 @@ The amount of time in seconds before this Domain should be refreshed. Valid valu
 The interval, in seconds, at which a failed refresh should be retried. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainState-soaEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L187">property <b>soaEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L187">property <b>soaEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>soaEmail?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3042,7 +3043,7 @@ The interval, in seconds, at which a failed refresh should be retried. Valid val
 Start of Authority email address. This is required for master Domains.
 
 <h4 class="pdoc-member-header" id="DomainState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L191">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L191">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3050,7 +3051,7 @@ Start of Authority email address. This is required for master Domains.
 Used to control whether this Domain is currently being rendered (defaults to "active").
 
 <h4 class="pdoc-member-header" id="DomainState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L195">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L195">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3058,7 +3059,7 @@ Used to control whether this Domain is currently being rendered (defaults to "ac
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="DomainState-ttlSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L199">property <b>ttlSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L199">property <b>ttlSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttlSec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3066,7 +3067,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 'Time to Live' - the amount of time in seconds that this Domain's records may be cached by resolvers or other domain servers. Valid values are 300, 3600, 7200, 14400, 28800, 57600, 86400, 172800, 345600, 604800, 1209600, and 2419200 - any other value will be rounded to the nearest valid value.
 
 <h4 class="pdoc-member-header" id="DomainState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/domain.ts#L203">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/domain.ts#L203">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3074,7 +3075,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 If this Domain represents the authoritative source of information for the domain it describes, or if it is a read-only copy of a master (also called a slave).
 
 <h3 class="pdoc-module-header" id="GetAccountResult" data-link-title="GetAccountResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L72">
         interface <strong>GetAccountResult</strong>
     </a>
 </h3>
@@ -3084,47 +3085,47 @@ If this Domain represents the authoritative source of information for the domain
 A collection of values returned by getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-address1">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L73">property <b>address1</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L73">property <b>address1</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address1: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-address2">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L74">property <b>address2</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L74">property <b>address2</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address2: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-balance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L75">property <b>balance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L75">property <b>balance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>balance: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-city">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L76">property <b>city</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L76">property <b>city</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>city: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-company">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L77">property <b>company</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L77">property <b>company</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>company: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L78">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L78">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L79">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L79">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-firstName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L80">property <b>firstName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L80">property <b>firstName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firstName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3132,27 +3133,27 @@ A collection of values returned by getAccount.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-lastName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L81">property <b>lastName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L81">property <b>lastName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-phone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L82">property <b>phone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L82">property <b>phone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>phone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L83">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L83">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-zip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getAccount.ts#L84">property <b>zip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getAccount.ts#L84">property <b>zip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zip: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDomainArgs" data-link-title="GetDomainArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L82">
         interface <strong>GetDomainArgs</strong>
     </a>
 </h3>
@@ -3162,7 +3163,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getDomain.
 
 <h4 class="pdoc-member-header" id="GetDomainArgs-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L86">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L86">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3170,7 +3171,7 @@ A collection of arguments for invoking getDomain.
 The unique domain name of the Domain record to query.
 
 <h4 class="pdoc-member-header" id="GetDomainArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3178,7 +3179,7 @@ The unique domain name of the Domain record to query.
 The unique numeric ID of the Domain record to query.
 
 <h3 class="pdoc-module-header" id="GetDomainResult" data-link-title="GetDomainResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L96">
         interface <strong>GetDomainResult</strong>
     </a>
 </h3>
@@ -3188,77 +3189,77 @@ The unique numeric ID of the Domain record to query.
 A collection of values returned by getDomain.
 
 <h4 class="pdoc-member-header" id="GetDomainResult-axfrIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L97">property <b>axfrIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L97">property <b>axfrIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>axfrIps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L98">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L98">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L99">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L99">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-expireSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L100">property <b>expireSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L100">property <b>expireSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expireSec: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L101">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L101">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L102">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-masterIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L103">property <b>masterIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L103">property <b>masterIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>masterIps: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-refreshSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L104">property <b>refreshSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L104">property <b>refreshSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>refreshSec: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-retrySec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L105">property <b>retrySec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L105">property <b>retrySec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>retrySec: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-soaEmail">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L106">property <b>soaEmail</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L106">property <b>soaEmail</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>soaEmail: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L107">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L107">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L108">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L108">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-ttlSec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L109">property <b>ttlSec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L109">property <b>ttlSec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttlSec: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDomainResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getDomain.ts#L110">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getDomain.ts#L110">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -3267,7 +3268,7 @@ A collection of values returned by getDomain.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -3276,7 +3277,7 @@ A collection of values returned by getDomain.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -3285,7 +3286,7 @@ A collection of values returned by getDomain.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetImageArgs" data-link-title="GetImageArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L67">
         interface <strong>GetImageArgs</strong>
     </a>
 </h3>
@@ -3295,7 +3296,7 @@ A collection of values returned by getDomain.
 A collection of arguments for invoking getImage.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3303,7 +3304,7 @@ A collection of arguments for invoking getImage.
 The unique ID of this Image.  The ID of private images begin with `private/` followed by the numeric identifier of the private image, for example `private/12345`.
 
 <h3 class="pdoc-module-header" id="GetImageResult" data-link-title="GetImageResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L77">
         interface <strong>GetImageResult</strong>
     </a>
 </h3>
@@ -3313,62 +3314,62 @@ The unique ID of this Image.  The ID of private images begin with `private/` fol
 A collection of values returned by getImage.
 
 <h4 class="pdoc-member-header" id="GetImageResult-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L78">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L78">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-createdBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L79">property <b>createdBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L79">property <b>createdBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdBy: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-deprecated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L80">property <b>deprecated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L80">property <b>deprecated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprecated: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L81">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L81">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L82">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L82">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L84">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L84">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isPublic: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L85">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L85">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L86">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L86">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L87">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L87">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getImage.ts#L88">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getImage.ts#L88">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vendor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstanceTypeArgs" data-link-title="GetInstanceTypeArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L66">
         interface <strong>GetInstanceTypeArgs</strong>
     </a>
 </h3>
@@ -3378,7 +3379,7 @@ A collection of values returned by getImage.
 A collection of arguments for invoking getInstanceType.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypeArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3386,12 +3387,12 @@ A collection of arguments for invoking getInstanceType.
 Label used to identify instance type
 
 <h4 class="pdoc-member-header" id="GetInstanceTypeArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L71">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L71">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetInstanceTypeResult" data-link-title="GetInstanceTypeResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L77">
         interface <strong>GetInstanceTypeResult</strong>
     </a>
 </h3>
@@ -3401,57 +3402,57 @@ Label used to identify instance type
 A collection of values returned by getInstanceType.
 
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-addons">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L78">property <b>addons</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L78">property <b>addons</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>addons: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypeAddons'>outputs.GetInstanceTypeAddons</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-class">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L79">property <b>class</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L79">property <b>class</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>class: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-disk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L80">property <b>disk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L80">property <b>disk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disk: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L81">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L81">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L82">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L82">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-memory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L83">property <b>memory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L83">property <b>memory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memory: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-networkOut">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L84">property <b>networkOut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L84">property <b>networkOut</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkOut: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-price">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L85">property <b>price</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L85">property <b>price</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>price: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypePrice'>outputs.GetInstanceTypePrice</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-transfer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L86">property <b>transfer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L86">property <b>transfer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transfer: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceTypeResult-vcpus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getInstanceType.ts#L87">property <b>vcpus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getInstanceType.ts#L87">property <b>vcpus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vcpus: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetNetworkingIpArgs" data-link-title="GetNetworkingIpArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L67">
         interface <strong>GetNetworkingIpArgs</strong>
     </a>
 </h3>
@@ -3461,7 +3462,7 @@ A collection of values returned by getInstanceType.
 A collection of arguments for invoking getNetworkingIp.
 
 <h4 class="pdoc-member-header" id="GetNetworkingIpArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L71">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L71">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3469,7 +3470,7 @@ A collection of arguments for invoking getNetworkingIp.
 The IP Address to access.  The address must be associated with the account and a resource that the user has access to view.
 
 <h3 class="pdoc-module-header" id="GetNetworkingIpResult" data-link-title="GetNetworkingIpResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L77">
         interface <strong>GetNetworkingIpResult</strong>
     </a>
 </h3>
@@ -3479,17 +3480,17 @@ The IP Address to access.  The address must be associated with the account and a
 A collection of values returned by getNetworkingIp.
 
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L78">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L78">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-gateway">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L79">property <b>gateway</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L79">property <b>gateway</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gateway: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L90">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L90">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3497,42 +3498,42 @@ A collection of values returned by getNetworkingIp.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-linodeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L80">property <b>linodeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L80">property <b>linodeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linodeId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-prefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L81">property <b>prefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L81">property <b>prefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-public">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L82">property <b>public</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L82">property <b>public</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>public: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-rdns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L83">property <b>rdns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L83">property <b>rdns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rdns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L84">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L84">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-subnetMask">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L85">property <b>subnetMask</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L85">property <b>subnetMask</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetMask: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNetworkingIpResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getNetworkingIp.ts#L86">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getNetworkingIp.ts#L86">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetProfileResult" data-link-title="GetProfileResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L78">
         interface <strong>GetProfileResult</strong>
     </a>
 </h3>
@@ -3542,22 +3543,22 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of values returned by getProfile.
 
 <h4 class="pdoc-member-header" id="GetProfileResult-authorizedKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L79">property <b>authorizedKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L79">property <b>authorizedKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedKeys: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L80">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L80">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-emailNotifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L81">property <b>emailNotifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L81">property <b>emailNotifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>emailNotifications: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L92">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L92">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3565,42 +3566,42 @@ A collection of values returned by getProfile.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetProfileResult-ipWhitelistEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L82">property <b>ipWhitelistEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L82">property <b>ipWhitelistEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipWhitelistEnabled: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-lishAuthMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L83">property <b>lishAuthMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L83">property <b>lishAuthMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lishAuthMethod: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-referrals">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L84">property <b>referrals</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L84">property <b>referrals</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>referrals: <a href='/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetProfileReferrals'>outputs.GetProfileReferrals</a>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-restricted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L85">property <b>restricted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L85">property <b>restricted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restricted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-timezone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L86">property <b>timezone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L86">property <b>timezone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timezone: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-twoFactorAuth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L87">property <b>twoFactorAuth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L87">property <b>twoFactorAuth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>twoFactorAuth: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetProfileResult-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getProfile.ts#L88">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getProfile.ts#L88">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegionArgs" data-link-title="GetRegionArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getRegion.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getRegion.ts#L46">
         interface <strong>GetRegionArgs</strong>
     </a>
 </h3>
@@ -3610,17 +3611,17 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getRegion.
 
 <h4 class="pdoc-member-header" id="GetRegionArgs-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getRegion.ts#L47">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getRegion.ts#L47">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getRegion.ts#L48">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getRegion.ts#L48">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegionResult" data-link-title="GetRegionResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getRegion.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getRegion.ts#L54">
         interface <strong>GetRegionResult</strong>
     </a>
 </h3>
@@ -3630,17 +3631,17 @@ A collection of arguments for invoking getRegion.
 A collection of values returned by getRegion.
 
 <h4 class="pdoc-member-header" id="GetRegionResult-country">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getRegion.ts#L55">property <b>country</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getRegion.ts#L55">property <b>country</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>country: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getRegion.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getRegion.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSshKeyArgs" data-link-title="GetSshKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getSshKey.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getSshKey.ts#L45">
         interface <strong>GetSshKeyArgs</strong>
     </a>
 </h3>
@@ -3650,12 +3651,12 @@ A collection of values returned by getRegion.
 A collection of arguments for invoking getSshKey.
 
 <h4 class="pdoc-member-header" id="GetSshKeyArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getSshKey.ts#L46">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getSshKey.ts#L46">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSshKeyResult" data-link-title="GetSshKeyResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getSshKey.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getSshKey.ts#L52">
         interface <strong>GetSshKeyResult</strong>
     </a>
 </h3>
@@ -3665,12 +3666,12 @@ A collection of arguments for invoking getSshKey.
 A collection of values returned by getSshKey.
 
 <h4 class="pdoc-member-header" id="GetSshKeyResult-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getSshKey.ts#L53">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getSshKey.ts#L53">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeyResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getSshKey.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getSshKey.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3678,17 +3679,17 @@ A collection of values returned by getSshKey.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSshKeyResult-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getSshKey.ts#L54">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getSshKey.ts#L54">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSshKeyResult-sshKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getSshKey.ts#L55">property <b>sshKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getSshKey.ts#L55">property <b>sshKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetUserArgs" data-link-title="GetUserArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L55">
         interface <strong>GetUserArgs</strong>
     </a>
 </h3>
@@ -3698,7 +3699,7 @@ id is the provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getUser.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L59">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L59">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3706,7 +3707,7 @@ A collection of arguments for invoking getUser.
 The unique username of this User.
 
 <h3 class="pdoc-module-header" id="GetUserResult" data-link-title="GetUserResult">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L65">
         interface <strong>GetUserResult</strong>
     </a>
 </h3>
@@ -3716,12 +3717,12 @@ The unique username of this User.
 A collection of values returned by getUser.
 
 <h4 class="pdoc-member-header" id="GetUserResult-email">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L66">property <b>email</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L66">property <b>email</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>email: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3729,22 +3730,22 @@ A collection of values returned by getUser.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUserResult-restricted">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L67">property <b>restricted</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L67">property <b>restricted</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>restricted: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-sshKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L68">property <b>sshKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L68">property <b>sshKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKeys: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/getUser.ts#L69">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/getUser.ts#L69">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -3753,7 +3754,7 @@ id is the provider-assigned unique ID for this managed resource.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ImageArgs" data-link-title="ImageArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L255">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L255">
         interface <strong>ImageArgs</strong>
     </a>
 </h3>
@@ -3763,7 +3764,7 @@ id is the provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Image resource.
 
 <h4 class="pdoc-member-header" id="ImageArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L259">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L259">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3771,7 +3772,7 @@ The set of arguments for constructing a Image resource.
 A detailed description of this Image.
 
 <h4 class="pdoc-member-header" id="ImageArgs-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L263">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L263">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3779,7 +3780,7 @@ A detailed description of this Image.
 The ID of the Linode Disk that this Image will be created from.
 
 <h4 class="pdoc-member-header" id="ImageArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L267">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L267">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3787,7 +3788,7 @@ The ID of the Linode Disk that this Image will be created from.
 A short description of the Image. Labels cannot contain special characters.
 
 <h4 class="pdoc-member-header" id="ImageArgs-linodeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L271">property <b>linodeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L271">property <b>linodeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linodeId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3795,7 +3796,7 @@ A short description of the Image. Labels cannot contain special characters.
 The ID of the Linode that this Image will be created from.
 
 <h3 class="pdoc-module-header" id="ImageState" data-link-title="ImageState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L200">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L200">
         interface <strong>ImageState</strong>
     </a>
 </h3>
@@ -3805,7 +3806,7 @@ The ID of the Linode that this Image will be created from.
 Input properties used for looking up and filtering Image resources.
 
 <h4 class="pdoc-member-header" id="ImageState-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L204">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L204">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3813,7 +3814,7 @@ Input properties used for looking up and filtering Image resources.
 When this Image was created.
 
 <h4 class="pdoc-member-header" id="ImageState-createdBy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L208">property <b>createdBy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L208">property <b>createdBy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdBy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3821,7 +3822,7 @@ When this Image was created.
 The name of the User who created this Image.
 
 <h4 class="pdoc-member-header" id="ImageState-deprecated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L212">property <b>deprecated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L212">property <b>deprecated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprecated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3829,7 +3830,7 @@ The name of the User who created this Image.
 Whether or not this Image is deprecated. Will only be True for deprecated public Images.
 
 <h4 class="pdoc-member-header" id="ImageState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L216">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L216">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3837,7 +3838,7 @@ Whether or not this Image is deprecated. Will only be True for deprecated public
 A detailed description of this Image.
 
 <h4 class="pdoc-member-header" id="ImageState-diskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L220">property <b>diskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L220">property <b>diskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3845,7 +3846,7 @@ A detailed description of this Image.
 The ID of the Linode Disk that this Image will be created from.
 
 <h4 class="pdoc-member-header" id="ImageState-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L224">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L224">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3853,7 +3854,7 @@ The ID of the Linode Disk that this Image will be created from.
 Only Images created automatically (from a deleted Linode; type=automatic) will expire.
 
 <h4 class="pdoc-member-header" id="ImageState-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L228">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L228">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isPublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3861,7 +3862,7 @@ Only Images created automatically (from a deleted Linode; type=automatic) will e
 True if the Image is public.
 
 <h4 class="pdoc-member-header" id="ImageState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L232">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L232">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3869,7 +3870,7 @@ True if the Image is public.
 A short description of the Image. Labels cannot contain special characters.
 
 <h4 class="pdoc-member-header" id="ImageState-linodeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L236">property <b>linodeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L236">property <b>linodeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linodeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3877,7 +3878,7 @@ A short description of the Image. Labels cannot contain special characters.
 The ID of the Linode that this Image will be created from.
 
 <h4 class="pdoc-member-header" id="ImageState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L240">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L240">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3885,7 +3886,7 @@ The ID of the Linode that this Image will be created from.
 The minimum size this Image needs to deploy. Size is in MB.
 
 <h4 class="pdoc-member-header" id="ImageState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L245">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L245">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3894,7 +3895,7 @@ How the Image was created. 'Manual' Images can be created at any time. 'Automati
 from a deleted Linode.
 
 <h4 class="pdoc-member-header" id="ImageState-vendor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/image.ts#L249">property <b>vendor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/image.ts#L249">property <b>vendor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vendor?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3902,7 +3903,7 @@ from a deleted Linode.
 The upstream distribution vendor. Nil for private Images.
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L336">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L336">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -3912,12 +3913,12 @@ The upstream distribution vendor. Nil for private Images.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-alerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L337">property <b>alerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L337">property <b>alerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceAlerts'>inputs.InstanceAlerts</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-authorizedKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L341">property <b>authorizedKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L341">property <b>authorizedKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3925,7 +3926,7 @@ The set of arguments for constructing a Instance resource.
 A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorizedKeys` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceArgs-authorizedUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L345">property <b>authorizedUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L345">property <b>authorizedUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3933,7 +3934,7 @@ A list of SSH public keys to deploy for the root user on the newly created Linod
 A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorizedUsers` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceArgs-backupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L349">property <b>backupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L349">property <b>backupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3941,7 +3942,7 @@ A list of Linode usernames. If the usernames have associated SSH keys, the keys 
 A Backup ID from another Linode's available backups. Your User must have readWrite access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backupId` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceArgs-backupsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L353">property <b>backupsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L353">property <b>backupsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3949,7 +3950,7 @@ A Backup ID from another Linode's available backups. Your User must have readWri
 If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-bootConfigLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L357">property <b>bootConfigLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L357">property <b>bootConfigLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootConfigLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3957,7 +3958,7 @@ If this field is set to true, the created Linode will automatically be enrolled 
 The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `bootConfigLabel`. *This value can not be imported.*
 
 <h4 class="pdoc-member-header" id="InstanceArgs-configs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L361">property <b>configs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L361">property <b>configs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfig'>inputs.InstanceConfig</a>&gt;[]&gt;;</code></pre>
@@ -3965,12 +3966,12 @@ The Label of the Instance Config that should be used to boot the Linode instance
 Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-disks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L362">property <b>disks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L362">property <b>disks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceDisk'>inputs.InstanceDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceArgs-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L366">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L366">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3978,7 +3979,7 @@ Configuration profiles define the VM settings and boot behavior of the Linode In
 The display group of the Linode instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L370">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L370">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3986,7 +3987,7 @@ The display group of the Linode instance.
 An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L374">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L374">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3994,7 +3995,7 @@ An Image ID to deploy the Disk from. Official Linode Images start with linode/, 
 The Config's label for display purposes.  Also used by `bootConfigLabel`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L378">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L378">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4002,7 +4003,7 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L382">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L382">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4010,7 +4011,7 @@ If true, the created Linode will have private networking enabled, allowing use o
 This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-rootPass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L386">property <b>rootPass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L386">property <b>rootPass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootPass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4018,7 +4019,7 @@ This is the location where the Linode is deployed. Examples are `"us-east"`, `"u
 The password that will be initialially assigned to the 'root' user account.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-stackscriptData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L390">property <b>stackscriptData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L390">property <b>stackscriptData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackscriptData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4026,7 +4027,7 @@ The password that will be initialially assigned to the 'root' user account.
 An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscriptData` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceArgs-stackscriptId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L394">property <b>stackscriptId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L394">property <b>stackscriptId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackscriptId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4034,7 +4035,7 @@ An object containing responses to any User Defined Fields present in the StackSc
 The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscriptId` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceArgs-swapSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L398">property <b>swapSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L398">property <b>swapSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>swapSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4042,7 +4043,7 @@ The StackScript to deploy to the newly created Linode. If provided, 'image' must
 When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L402">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L402">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4050,7 +4051,7 @@ When deploying from an Image, this field is optional with a Linode API default o
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L406">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L406">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4058,7 +4059,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-watchdogEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L410">property <b>watchdogEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L410">property <b>watchdogEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>watchdogEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4066,7 +4067,7 @@ The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  
 The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L228">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L228">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -4076,12 +4077,12 @@ The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-alerts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L229">property <b>alerts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L229">property <b>alerts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alerts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceAlerts'>inputs.InstanceAlerts</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-authorizedKeys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L233">property <b>authorizedKeys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L233">property <b>authorizedKeys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedKeys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4089,7 +4090,7 @@ Input properties used for looking up and filtering Instance resources.
 A list of SSH public keys to deploy for the root user on the newly created Linode. Only accepted if `image` is provided. *This value can not be imported.* *Changing `authorizedKeys` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceState-authorizedUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L237">property <b>authorizedUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L237">property <b>authorizedUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedUsers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4097,7 +4098,7 @@ A list of SSH public keys to deploy for the root user on the newly created Linod
 A list of Linode usernames. If the usernames have associated SSH keys, the keys will be appended to the `root` user's `~/.ssh/authorized_keys` file automatically. *This value can not be imported.* *Changing `authorizedUsers` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceState-backupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L241">property <b>backupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L241">property <b>backupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4105,7 +4106,7 @@ A list of Linode usernames. If the usernames have associated SSH keys, the keys 
 A Backup ID from another Linode's available backups. Your User must have readWrite access to that Linode, the Backup must have a status of successful, and the Linode must be deployed to the same region as the Backup. See /linode/instances/{linodeId}/backups for a Linode's available backups. This field and the image field are mutually exclusive. *This value can not be imported.* *Changing `backupId` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceState-backups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L245">property <b>backups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L245">property <b>backups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceBackups'>inputs.InstanceBackups</a>&gt;;</code></pre>
@@ -4113,7 +4114,7 @@ A Backup ID from another Linode's available backups. Your User must have readWri
 Information about this Linode's backups status.
 
 <h4 class="pdoc-member-header" id="InstanceState-backupsEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L249">property <b>backupsEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L249">property <b>backupsEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backupsEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4121,7 +4122,7 @@ Information about this Linode's backups status.
 If this field is set to true, the created Linode will automatically be enrolled in the Linode Backup service. This will incur an additional charge. The cost for the Backup service is dependent on the Type of Linode deployed.
 
 <h4 class="pdoc-member-header" id="InstanceState-bootConfigLabel">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L253">property <b>bootConfigLabel</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L253">property <b>bootConfigLabel</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bootConfigLabel?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4129,7 +4130,7 @@ If this field is set to true, the created Linode will automatically be enrolled 
 The Label of the Instance Config that should be used to boot the Linode instance.  If there is only one `config`, the `label` of that `config` will be used as the `bootConfigLabel`. *This value can not be imported.*
 
 <h4 class="pdoc-member-header" id="InstanceState-configs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L257">property <b>configs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L257">property <b>configs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfig'>inputs.InstanceConfig</a>&gt;[]&gt;;</code></pre>
@@ -4137,12 +4138,12 @@ The Label of the Instance Config that should be used to boot the Linode instance
 Configuration profiles define the VM settings and boot behavior of the Linode Instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-disks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L258">property <b>disks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L258">property <b>disks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceDisk'>inputs.InstanceDisk</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-group">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L262">property <b>group</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L262">property <b>group</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>group?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4150,7 +4151,7 @@ Configuration profiles define the VM settings and boot behavior of the Linode In
 The display group of the Linode instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-image">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L266">property <b>image</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L266">property <b>image</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>image?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4158,7 +4159,7 @@ The display group of the Linode instance.
 An Image ID to deploy the Disk from. Official Linode Images start with linode/, while your Images start with private/. See /images for more information on the Images available for you to use. Examples are `linode/debian9`, `linode/fedora28`, `linode/ubuntu16.04lts`, `linode/arch`, and `private/12345`. *Changing `image` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceState-ipAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L271">property <b>ipAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L271">property <b>ipAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4167,7 +4168,7 @@ This Linode's Public IPv4 Address. If there are multiple public IPv4 addresses o
 address will be used for this field.
 
 <h4 class="pdoc-member-header" id="InstanceState-ipv4s">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L276">property <b>ipv4s</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L276">property <b>ipv4s</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4s?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4176,7 +4177,7 @@ This Linode's IPv4 Addresses. Each Linode is assigned a single public IPv4 addre
 single private IPv4 address if needed. You may need to open a support ticket to get additional IPv4 addresses.
 
 <h4 class="pdoc-member-header" id="InstanceState-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L280">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L280">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4184,7 +4185,7 @@ single private IPv4 address if needed. You may need to open a support ticket to 
 This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and may not be shared.
 
 <h4 class="pdoc-member-header" id="InstanceState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L284">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L284">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4192,7 +4193,7 @@ This Linode's IPv6 SLAAC addresses. This address is specific to a Linode, and ma
 The Config's label for display purposes.  Also used by `bootConfigLabel`.
 
 <h4 class="pdoc-member-header" id="InstanceState-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L288">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L288">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4200,7 +4201,7 @@ The Config's label for display purposes.  Also used by `bootConfigLabel`.
 If true, the created Linode will have private networking enabled, allowing use of the 192.168.128.0/17 network within the Linode's region. It can be enabled on an existing Linode but it can't be disabled.
 
 <h4 class="pdoc-member-header" id="InstanceState-privateIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L293">property <b>privateIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L293">property <b>privateIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4209,7 +4210,7 @@ This Linode's Private IPv4 Address. The regional private IP address range is 192
 Linode Instances in a region.
 
 <h4 class="pdoc-member-header" id="InstanceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L297">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L297">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4217,7 +4218,7 @@ Linode Instances in a region.
 This is the location where the Linode is deployed. Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Instance.*.
 
 <h4 class="pdoc-member-header" id="InstanceState-rootPass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L301">property <b>rootPass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L301">property <b>rootPass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootPass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4225,12 +4226,12 @@ This is the location where the Linode is deployed. Examples are `"us-east"`, `"u
 The password that will be initialially assigned to the 'root' user account.
 
 <h4 class="pdoc-member-header" id="InstanceState-specs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L302">property <b>specs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L302">property <b>specs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>specs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceSpecs'>inputs.InstanceSpecs</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="InstanceState-stackscriptData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L306">property <b>stackscriptData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L306">property <b>stackscriptData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackscriptData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -4238,7 +4239,7 @@ The password that will be initialially assigned to the 'root' user account.
 An object containing responses to any User Defined Fields present in the StackScript being deployed to this Linode. Only accepted if 'stackscript_id' is given. The required values depend on the StackScript being deployed.  *This value can not be imported.* *Changing `stackscriptData` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceState-stackscriptId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L310">property <b>stackscriptId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L310">property <b>stackscriptId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stackscriptId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4246,7 +4247,7 @@ An object containing responses to any User Defined Fields present in the StackSc
 The StackScript to deploy to the newly created Linode. If provided, 'image' must also be provided, and must be an Image that is compatible with this StackScript. *This value can not be imported.* *Changing `stackscriptId` forces the creation of a new Linode Instance.*
 
 <h4 class="pdoc-member-header" id="InstanceState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L314">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L314">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4254,7 +4255,7 @@ The StackScript to deploy to the newly created Linode. If provided, 'image' must
 The status of the instance, indicating the current readiness state.
 
 <h4 class="pdoc-member-header" id="InstanceState-swapSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L318">property <b>swapSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L318">property <b>swapSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>swapSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4262,7 +4263,7 @@ The status of the instance, indicating the current readiness state.
 When deploying from an Image, this field is optional with a Linode API default of 512mb, otherwise it is ignored. This is used to set the swap disk size for the newly-created Linode.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L322">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L322">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4270,7 +4271,7 @@ When deploying from an Image, this field is optional with a Linode API default o
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="InstanceState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L326">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L326">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4278,7 +4279,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  Examples are `"g6-nanode-1"`, `"g6-standard-2"`, `"g6-highmem-16"`, `"g6-dedicated-16"`, etc.
 
 <h4 class="pdoc-member-header" id="InstanceState-watchdogEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/instance.ts#L330">property <b>watchdogEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/instance.ts#L330">property <b>watchdogEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>watchdogEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4286,7 +4287,7 @@ The Linode type defines the pricing, CPU, disk, and RAM specs of the instance.  
 The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and will reboot it if it powers off unexpectedly. It works by issuing a boot job when your Linode powers off without a shutdown job being responsible. To prevent a loop, Lassie will give up if there have been more than 5 boot jobs issued within 15 minutes.
 
 <h3 class="pdoc-module-header" id="NodeBalancerArgs" data-link-title="NodeBalancerArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L160">
         interface <strong>NodeBalancerArgs</strong>
     </a>
 </h3>
@@ -4296,7 +4297,7 @@ The watchdog, named Lassie, is a Shutdown Watchdog that monitors your Linode and
 The set of arguments for constructing a NodeBalancer resource.
 
 <h4 class="pdoc-member-header" id="NodeBalancerArgs-clientConnThrottle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L164">property <b>clientConnThrottle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L164">property <b>clientConnThrottle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientConnThrottle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4304,7 +4305,7 @@ The set of arguments for constructing a NodeBalancer resource.
 Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
 
 <h4 class="pdoc-member-header" id="NodeBalancerArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L168">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L168">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4312,7 +4313,7 @@ Throttle connections per second (0-20). Set to 0 (default) to disable throttling
 The label of the Linode NodeBalancer
 
 <h4 class="pdoc-member-header" id="NodeBalancerArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L172">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L172">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4320,7 +4321,7 @@ The label of the Linode NodeBalancer
 The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
 
 <h4 class="pdoc-member-header" id="NodeBalancerArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L176">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L176">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4328,7 +4329,7 @@ The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, 
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h3 class="pdoc-module-header" id="NodeBalancerConfigArgs" data-link-title="NodeBalancerConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L254">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L254">
         interface <strong>NodeBalancerConfigArgs</strong>
     </a>
 </h3>
@@ -4338,7 +4339,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 The set of arguments for constructing a NodeBalancerConfig resource.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L258">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L258">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4346,7 +4347,7 @@ The set of arguments for constructing a NodeBalancerConfig resource.
 What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-check">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L262">property <b>check</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L262">property <b>check</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>check?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4354,7 +4355,7 @@ What algorithm this NodeBalancer should use for routing traffic to backends: rou
 The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and httpBody rely on the backend serving HTTP, and that the response returned matches what is expected.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-checkAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L266">property <b>checkAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L266">property <b>checkAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4362,7 +4363,7 @@ The type of check to perform against backends to ensure they are serving request
 How many times to attempt a check before considering a backend to be down. (1-30)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-checkBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L271">property <b>checkBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L271">property <b>checkBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4371,7 +4372,7 @@ This value must be present in the response body of the check in order for it to 
 in the response body of a check request, the backend is considered to be down
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-checkInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L275">property <b>checkInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L275">property <b>checkInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4379,7 +4380,7 @@ in the response body of a check request, the backend is considered to be down
 How often, in seconds, to check that backends are up and serving requests.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-checkPassive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L279">property <b>checkPassive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L279">property <b>checkPassive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkPassive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4387,7 +4388,7 @@ How often, in seconds, to check that backends are up and serving requests.
 If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-checkPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L283">property <b>checkPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L283">property <b>checkPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4395,7 +4396,7 @@ If true, any response from this backend with a 5xx status code will be enough fo
 The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-checkTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L287">property <b>checkTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L287">property <b>checkTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4403,7 +4404,7 @@ The URL path to check on each backend. If the backend does not respond to this r
 How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-cipherSuite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L291">property <b>cipherSuite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L291">property <b>cipherSuite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cipherSuite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4411,7 +4412,7 @@ How long, in seconds, to wait for a check attempt before considering it failed. 
 What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-nodebalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L295">property <b>nodebalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L295">property <b>nodebalancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodebalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4419,7 +4420,7 @@ What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is
 The ID of the NodeBalancer to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L299">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L299">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4427,7 +4428,7 @@ The ID of the NodeBalancer to access.
 The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L303">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L303">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4435,7 +4436,7 @@ The TCP port this Config is for. These values must be unique across configs on a
 The protocol this port is configured to serve. If this is set to https you must include an sslCert and an ssl_key. (Defaults to "http")
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-sslCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L307">property <b>sslCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L307">property <b>sslCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4443,7 +4444,7 @@ The protocol this port is configured to serve. If this is set to https you must 
 The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the sslCommonname and sslFingerprint to identify the certificate.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-sslKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L311">property <b>sslKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L311">property <b>sslKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4451,7 +4452,7 @@ The certificate this port is serving. This is not returned. If set, this field w
 The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the sslCommonname and sslFingerprint to identify the certificate.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigArgs-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L315">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L315">property <b>stickiness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickiness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4459,7 +4460,7 @@ The private key corresponding to this port's certificate. This is not returned. 
 Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
 
 <h3 class="pdoc-module-header" id="NodeBalancerConfigState" data-link-title="NodeBalancerConfigState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L178">
         interface <strong>NodeBalancerConfigState</strong>
     </a>
 </h3>
@@ -4469,7 +4470,7 @@ Controls how session stickiness is handled on this port: 'none', 'table', 'http_
 Input properties used for looking up and filtering NodeBalancerConfig resources.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-algorithm">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L182">property <b>algorithm</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L182">property <b>algorithm</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>algorithm?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4477,7 +4478,7 @@ Input properties used for looking up and filtering NodeBalancerConfig resources.
 What algorithm this NodeBalancer should use for routing traffic to backends: roundrobin, leastconn, source
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-check">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L186">property <b>check</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L186">property <b>check</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>check?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4485,7 +4486,7 @@ What algorithm this NodeBalancer should use for routing traffic to backends: rou
 The type of check to perform against backends to ensure they are serving requests. This is used to determine if backends are up or down. If none no check is performed. connection requires only a connection to the backend to succeed. http and httpBody rely on the backend serving HTTP, and that the response returned matches what is expected.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-checkAttempts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L190">property <b>checkAttempts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L190">property <b>checkAttempts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkAttempts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4493,7 +4494,7 @@ The type of check to perform against backends to ensure they are serving request
 How many times to attempt a check before considering a backend to be down. (1-30)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-checkBody">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L195">property <b>checkBody</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L195">property <b>checkBody</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkBody?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4502,7 +4503,7 @@ This value must be present in the response body of the check in order for it to 
 in the response body of a check request, the backend is considered to be down
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-checkInterval">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L199">property <b>checkInterval</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L199">property <b>checkInterval</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkInterval?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4510,7 +4511,7 @@ in the response body of a check request, the backend is considered to be down
 How often, in seconds, to check that backends are up and serving requests.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-checkPassive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L203">property <b>checkPassive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L203">property <b>checkPassive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkPassive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4518,7 +4519,7 @@ How often, in seconds, to check that backends are up and serving requests.
 If true, any response from this backend with a 5xx status code will be enough for it to be considered unhealthy and taken out of rotation.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-checkPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L207">property <b>checkPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L207">property <b>checkPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4526,7 +4527,7 @@ If true, any response from this backend with a 5xx status code will be enough fo
 The URL path to check on each backend. If the backend does not respond to this request it is considered to be down.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-checkTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L211">property <b>checkTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L211">property <b>checkTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checkTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4534,7 +4535,7 @@ The URL path to check on each backend. If the backend does not respond to this r
 How long, in seconds, to wait for a check attempt before considering it failed. (1-30)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-cipherSuite">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L215">property <b>cipherSuite</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L215">property <b>cipherSuite</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cipherSuite?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4542,12 +4543,12 @@ How long, in seconds, to wait for a check attempt before considering it failed. 
 What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is considered insecure and should only be used if necessary.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-nodeStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L216">property <b>nodeStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L216">property <b>nodeStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#NodeBalancerConfigNodeStatus'>inputs.NodeBalancerConfigNodeStatus</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-nodebalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L220">property <b>nodebalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L220">property <b>nodebalancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodebalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4555,7 +4556,7 @@ What ciphers to use for SSL connections served by this NodeBalancer. `legacy` is
 The ID of the NodeBalancer to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L224">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L224">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4563,7 +4564,7 @@ The ID of the NodeBalancer to access.
 The TCP port this Config is for. These values must be unique across configs on a single NodeBalancer (you can't have two configs for port 80, for example). While some ports imply some protocols, no enforcement is done and you may configure your NodeBalancer however is useful to you. For example, while port 443 is generally used for HTTPS, you do not need SSL configured to have a NodeBalancer listening on port 443. (Defaults to 80)
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L228">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L228">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4571,7 +4572,7 @@ The TCP port this Config is for. These values must be unique across configs on a
 The protocol this port is configured to serve. If this is set to https you must include an sslCert and an ssl_key. (Defaults to "http")
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-sslCert">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L232">property <b>sslCert</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L232">property <b>sslCert</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCert?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4579,7 +4580,7 @@ The protocol this port is configured to serve. If this is set to https you must 
 The certificate this port is serving. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the sslCommonname and sslFingerprint to identify the certificate.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-sslCommonname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L236">property <b>sslCommonname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L236">property <b>sslCommonname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslCommonname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4587,7 +4588,7 @@ The certificate this port is serving. This is not returned. If set, this field w
 The common name for the SSL certification this port is serving if this port is not configured to use SSL.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-sslFingerprint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L240">property <b>sslFingerprint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L240">property <b>sslFingerprint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslFingerprint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4595,7 +4596,7 @@ The common name for the SSL certification this port is serving if this port is n
 The fingerprint for the SSL certification this port is serving if this port is not configured to use SSL.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-sslKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L244">property <b>sslKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L244">property <b>sslKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4603,7 +4604,7 @@ The fingerprint for the SSL certification this port is serving if this port is n
 The private key corresponding to this port's certificate. This is not returned. If set, this field will come back as `<REDACTED>`. Please use the sslCommonname and sslFingerprint to identify the certificate.
 
 <h4 class="pdoc-member-header" id="NodeBalancerConfigState-stickiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerConfig.ts#L248">property <b>stickiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerConfig.ts#L248">property <b>stickiness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stickiness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4611,7 +4612,7 @@ The private key corresponding to this port's certificate. This is not returned. 
 Controls how session stickiness is handled on this port: 'none', 'table', 'http_cookie'
 
 <h3 class="pdoc-module-header" id="NodeBalancerNodeArgs" data-link-title="NodeBalancerNodeArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L157">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L157">
         interface <strong>NodeBalancerNodeArgs</strong>
     </a>
 </h3>
@@ -4621,7 +4622,7 @@ Controls how session stickiness is handled on this port: 'none', 'table', 'http_
 The set of arguments for constructing a NodeBalancerNode resource.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L161">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L161">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4629,7 +4630,7 @@ The set of arguments for constructing a NodeBalancerNode resource.
 The private IP Address where this backend can be reached. This must be a private IP address.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeArgs-configId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L165">property <b>configId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L165">property <b>configId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4637,7 +4638,7 @@ The private IP Address where this backend can be reached. This must be a private
 The ID of the NodeBalancerConfig to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L169">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L169">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4645,7 +4646,7 @@ The ID of the NodeBalancerConfig to access.
 The label of the Linode NodeBalancer Node. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeArgs-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L173">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L173">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4653,7 +4654,7 @@ The label of the Linode NodeBalancer Node. This is for display purposes only.
 The mode this NodeBalancer should use when sending traffic to this backend. If set to `accept` this backend is accepting traffic. If set to `reject` this backend will not receive traffic. If set to `drain` this backend will not receive new traffic, but connections already pinned to it will continue to be routed to it
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeArgs-nodebalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L177">property <b>nodebalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L177">property <b>nodebalancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodebalancerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4661,7 +4662,7 @@ The mode this NodeBalancer should use when sending traffic to this backend. If s
 The ID of the NodeBalancer to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeArgs-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L181">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L181">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4669,7 +4670,7 @@ The ID of the NodeBalancer to access.
 Used when picking a backend to serve a request and is not pinned to a single backend yet. Nodes with a higher weight will receive more traffic. (1-255).
 
 <h3 class="pdoc-module-header" id="NodeBalancerNodeState" data-link-title="NodeBalancerNodeState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L123">
         interface <strong>NodeBalancerNodeState</strong>
     </a>
 </h3>
@@ -4679,7 +4680,7 @@ Used when picking a backend to serve a request and is not pinned to a single bac
 Input properties used for looking up and filtering NodeBalancerNode resources.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeState-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L127">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L127">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4687,7 +4688,7 @@ Input properties used for looking up and filtering NodeBalancerNode resources.
 The private IP Address where this backend can be reached. This must be a private IP address.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeState-configId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L131">property <b>configId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L131">property <b>configId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4695,7 +4696,7 @@ The private IP Address where this backend can be reached. This must be a private
 The ID of the NodeBalancerConfig to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L135">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L135">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4703,7 +4704,7 @@ The ID of the NodeBalancerConfig to access.
 The label of the Linode NodeBalancer Node. This is for display purposes only.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeState-mode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L139">property <b>mode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L139">property <b>mode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4711,7 +4712,7 @@ The label of the Linode NodeBalancer Node. This is for display purposes only.
 The mode this NodeBalancer should use when sending traffic to this backend. If set to `accept` this backend is accepting traffic. If set to `reject` this backend will not receive traffic. If set to `drain` this backend will not receive new traffic, but connections already pinned to it will continue to be routed to it
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeState-nodebalancerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L143">property <b>nodebalancerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L143">property <b>nodebalancerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodebalancerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4719,7 +4720,7 @@ The mode this NodeBalancer should use when sending traffic to this backend. If s
 The ID of the NodeBalancer to access.
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L147">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L147">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4727,7 +4728,7 @@ The ID of the NodeBalancer to access.
 The current status of this node, based on the configured checks of its NodeBalancer Config. (unknown, UP, DOWN)
 
 <h4 class="pdoc-member-header" id="NodeBalancerNodeState-weight">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancerNode.ts#L151">property <b>weight</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancerNode.ts#L151">property <b>weight</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weight?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4735,7 +4736,7 @@ The current status of this node, based on the configured checks of its NodeBalan
 Used when picking a backend to serve a request and is not pinned to a single backend yet. Nodes with a higher weight will receive more traffic. (1-255).
 
 <h3 class="pdoc-module-header" id="NodeBalancerState" data-link-title="NodeBalancerState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L123">
         interface <strong>NodeBalancerState</strong>
     </a>
 </h3>
@@ -4745,7 +4746,7 @@ Used when picking a backend to serve a request and is not pinned to a single bac
 Input properties used for looking up and filtering NodeBalancer resources.
 
 <h4 class="pdoc-member-header" id="NodeBalancerState-clientConnThrottle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L127">property <b>clientConnThrottle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L127">property <b>clientConnThrottle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientConnThrottle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4753,12 +4754,12 @@ Input properties used for looking up and filtering NodeBalancer resources.
 Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
 
 <h4 class="pdoc-member-header" id="NodeBalancerState-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L128">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L128">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerState-hostname">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L132">property <b>hostname</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L132">property <b>hostname</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostname?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4766,7 +4767,7 @@ Throttle connections per second (0-20). Set to 0 (default) to disable throttling
 This NodeBalancer's hostname, ending with .nodebalancer.linode.com
 
 <h4 class="pdoc-member-header" id="NodeBalancerState-ipv4">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L136">property <b>ipv4</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L136">property <b>ipv4</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv4?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4774,7 +4775,7 @@ This NodeBalancer's hostname, ending with .nodebalancer.linode.com
 The Public IPv4 Address of this NodeBalancer
 
 <h4 class="pdoc-member-header" id="NodeBalancerState-ipv6">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L140">property <b>ipv6</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L140">property <b>ipv6</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4782,7 +4783,7 @@ The Public IPv4 Address of this NodeBalancer
 The Public IPv6 Address of this NodeBalancer
 
 <h4 class="pdoc-member-header" id="NodeBalancerState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L144">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L144">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4790,7 +4791,7 @@ The Public IPv6 Address of this NodeBalancer
 The label of the Linode NodeBalancer
 
 <h4 class="pdoc-member-header" id="NodeBalancerState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L148">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L148">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4798,7 +4799,7 @@ The label of the Linode NodeBalancer
 The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
 
 <h4 class="pdoc-member-header" id="NodeBalancerState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L152">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L152">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4806,17 +4807,17 @@ The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, 
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h4 class="pdoc-member-header" id="NodeBalancerState-transfer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L153">property <b>transfer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L153">property <b>transfer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>transfer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#NodeBalancerTransfer'>inputs.NodeBalancerTransfer</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="NodeBalancerState-updated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/nodeBalancer.ts#L154">property <b>updated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/nodeBalancer.ts#L154">property <b>updated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L61">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -4826,7 +4827,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L65">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L65">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4834,7 +4835,7 @@ The set of arguments for constructing a Provider resource.
 The token that allows you access to your Linode account
 
 <h4 class="pdoc-member-header" id="ProviderArgs-uaPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L69">property <b>uaPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L69">property <b>uaPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>uaPrefix?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4842,7 +4843,7 @@ The token that allows you access to your Linode account
 An HTTP User-Agent Prefix to prepend in API requests.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/provider.ts#L73">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/provider.ts#L73">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4850,7 +4851,7 @@ An HTTP User-Agent Prefix to prepend in API requests.
 The HTTP(S) API address of the Linode API to use.
 
 <h3 class="pdoc-module-header" id="RdnsArgs" data-link-title="RdnsArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L126">
         interface <strong>RdnsArgs</strong>
     </a>
 </h3>
@@ -4860,7 +4861,7 @@ The HTTP(S) API address of the Linode API to use.
 The set of arguments for constructing a Rdns resource.
 
 <h4 class="pdoc-member-header" id="RdnsArgs-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L130">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L130">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4868,7 +4869,7 @@ The set of arguments for constructing a Rdns resource.
 The Public IPv4 or IPv6 address that will receive the `PTR` record.  A matching `A` or `AAAA` record must exist.
 
 <h4 class="pdoc-member-header" id="RdnsArgs-rdns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L134">property <b>rdns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L134">property <b>rdns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rdns: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4876,7 +4877,7 @@ The Public IPv4 or IPv6 address that will receive the `PTR` record.  A matching 
 The name of the RDNS address.
 
 <h3 class="pdoc-module-header" id="RdnsState" data-link-title="RdnsState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L112">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L112">
         interface <strong>RdnsState</strong>
     </a>
 </h3>
@@ -4886,7 +4887,7 @@ The name of the RDNS address.
 Input properties used for looking up and filtering Rdns resources.
 
 <h4 class="pdoc-member-header" id="RdnsState-address">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L116">property <b>address</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L116">property <b>address</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>address?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4894,7 +4895,7 @@ Input properties used for looking up and filtering Rdns resources.
 The Public IPv4 or IPv6 address that will receive the `PTR` record.  A matching `A` or `AAAA` record must exist.
 
 <h4 class="pdoc-member-header" id="RdnsState-rdns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/rdns.ts#L120">property <b>rdns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/rdns.ts#L120">property <b>rdns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rdns?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4902,7 +4903,7 @@ The Public IPv4 or IPv6 address that will receive the `PTR` record.  A matching 
 The name of the RDNS address.
 
 <h3 class="pdoc-module-header" id="SshKeyArgs" data-link-title="SshKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L143">
         interface <strong>SshKeyArgs</strong>
     </a>
 </h3>
@@ -4912,7 +4913,7 @@ The name of the RDNS address.
 The set of arguments for constructing a SshKey resource.
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L147">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L147">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4920,7 +4921,7 @@ The set of arguments for constructing a SshKey resource.
 A label for the SSH Key.
 
 <h4 class="pdoc-member-header" id="SshKeyArgs-sshKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L151">property <b>sshKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L151">property <b>sshKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4928,7 +4929,7 @@ A label for the SSH Key.
 The public SSH Key, which is used to authenticate to the root user of the Linodes you deploy.
 
 <h3 class="pdoc-module-header" id="SshKeyState" data-link-title="SshKeyState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L125">
         interface <strong>SshKeyState</strong>
     </a>
 </h3>
@@ -4938,7 +4939,7 @@ The public SSH Key, which is used to authenticate to the root user of the Linode
 Input properties used for looking up and filtering SshKey resources.
 
 <h4 class="pdoc-member-header" id="SshKeyState-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L129">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L129">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4946,7 +4947,7 @@ Input properties used for looking up and filtering SshKey resources.
 The date this key was added.
 
 <h4 class="pdoc-member-header" id="SshKeyState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L133">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L133">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4954,7 +4955,7 @@ The date this key was added.
 A label for the SSH Key.
 
 <h4 class="pdoc-member-header" id="SshKeyState-sshKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/sshKey.ts#L137">property <b>sshKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/sshKey.ts#L137">property <b>sshKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sshKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4962,7 +4963,7 @@ A label for the SSH Key.
 The public SSH Key, which is used to authenticate to the root user of the Linodes you deploy.
 
 <h3 class="pdoc-module-header" id="StackScriptArgs" data-link-title="StackScriptArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L219">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L219">
         interface <strong>StackScriptArgs</strong>
     </a>
 </h3>
@@ -4972,7 +4973,7 @@ The public SSH Key, which is used to authenticate to the root user of the Linode
 The set of arguments for constructing a StackScript resource.
 
 <h4 class="pdoc-member-header" id="StackScriptArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L223">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L223">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4980,7 +4981,7 @@ The set of arguments for constructing a StackScript resource.
 A description for the StackScript.
 
 <h4 class="pdoc-member-header" id="StackScriptArgs-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L227">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L227">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>images: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4988,7 +4989,7 @@ A description for the StackScript.
 An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 
 <h4 class="pdoc-member-header" id="StackScriptArgs-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L231">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L231">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isPublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4996,7 +4997,7 @@ An array of Image IDs representing the Images that this StackScript is compatibl
 This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `isPublic` forces the creation of a new StackScript*
 
 <h4 class="pdoc-member-header" id="StackScriptArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L235">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L235">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5004,7 +5005,7 @@ This determines whether other users can use your StackScript. Once a StackScript
 The StackScript's label is for display purposes only.
 
 <h4 class="pdoc-member-header" id="StackScriptArgs-revNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L239">property <b>revNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L239">property <b>revNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revNote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5012,7 +5013,7 @@ The StackScript's label is for display purposes only.
 This field allows you to add notes for the set of revisions made to this StackScript.
 
 <h4 class="pdoc-member-header" id="StackScriptArgs-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L243">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L243">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>script: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5020,7 +5021,7 @@ This field allows you to add notes for the set of revisions made to this StackSc
 The script to execute when provisioning a new Linode with this StackScript.
 
 <h4 class="pdoc-member-header" id="StackScriptArgs-userDefinedFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L248">property <b>userDefinedFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L248">property <b>userDefinedFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDefinedFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#StackScriptUserDefinedField'>inputs.StackScriptUserDefinedField</a>&gt;[]&gt;;</code></pre>
@@ -5029,7 +5030,7 @@ This is a list of fields defined with a special syntax inside this StackScript t
 parameters during deployment.
 
 <h3 class="pdoc-module-header" id="StackScriptState" data-link-title="StackScriptState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L160">
         interface <strong>StackScriptState</strong>
     </a>
 </h3>
@@ -5039,7 +5040,7 @@ parameters during deployment.
 Input properties used for looking up and filtering StackScript resources.
 
 <h4 class="pdoc-member-header" id="StackScriptState-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L164">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L164">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5047,7 +5048,7 @@ Input properties used for looking up and filtering StackScript resources.
 The date this StackScript was created.
 
 <h4 class="pdoc-member-header" id="StackScriptState-deploymentsActive">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L168">property <b>deploymentsActive</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L168">property <b>deploymentsActive</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentsActive?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5055,7 +5056,7 @@ The date this StackScript was created.
 Count of currently active, deployed Linodes created from this StackScript.
 
 <h4 class="pdoc-member-header" id="StackScriptState-deploymentsTotal">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L172">property <b>deploymentsTotal</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L172">property <b>deploymentsTotal</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deploymentsTotal?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5063,7 +5064,7 @@ Count of currently active, deployed Linodes created from this StackScript.
 The total number of times this StackScript has been deployed.
 
 <h4 class="pdoc-member-header" id="StackScriptState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L176">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L176">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5071,7 +5072,7 @@ The total number of times this StackScript has been deployed.
 A description for the StackScript.
 
 <h4 class="pdoc-member-header" id="StackScriptState-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L180">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L180">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>images?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5079,7 +5080,7 @@ A description for the StackScript.
 An array of Image IDs representing the Images that this StackScript is compatible for deploying with.
 
 <h4 class="pdoc-member-header" id="StackScriptState-isPublic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L184">property <b>isPublic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L184">property <b>isPublic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isPublic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -5087,7 +5088,7 @@ An array of Image IDs representing the Images that this StackScript is compatibl
 This determines whether other users can use your StackScript. Once a StackScript is made public, it cannot be made private. *Changing `isPublic` forces the creation of a new StackScript*
 
 <h4 class="pdoc-member-header" id="StackScriptState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L188">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L188">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5095,7 +5096,7 @@ This determines whether other users can use your StackScript. Once a StackScript
 The StackScript's label is for display purposes only.
 
 <h4 class="pdoc-member-header" id="StackScriptState-revNote">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L192">property <b>revNote</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L192">property <b>revNote</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revNote?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5103,7 +5104,7 @@ The StackScript's label is for display purposes only.
 This field allows you to add notes for the set of revisions made to this StackScript.
 
 <h4 class="pdoc-member-header" id="StackScriptState-script">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L196">property <b>script</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L196">property <b>script</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>script?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5111,7 +5112,7 @@ This field allows you to add notes for the set of revisions made to this StackSc
 The script to execute when provisioning a new Linode with this StackScript.
 
 <h4 class="pdoc-member-header" id="StackScriptState-updated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L200">property <b>updated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L200">property <b>updated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5119,7 +5120,7 @@ The script to execute when provisioning a new Linode with this StackScript.
 The date this StackScript was updated.
 
 <h4 class="pdoc-member-header" id="StackScriptState-userDefinedFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L205">property <b>userDefinedFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L205">property <b>userDefinedFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userDefinedFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/linode/types/input/#StackScriptUserDefinedField'>inputs.StackScriptUserDefinedField</a>&gt;[]&gt;;</code></pre>
@@ -5128,7 +5129,7 @@ This is a list of fields defined with a special syntax inside this StackScript t
 parameters during deployment.
 
 <h4 class="pdoc-member-header" id="StackScriptState-userGravatarId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L209">property <b>userGravatarId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L209">property <b>userGravatarId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userGravatarId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5136,7 +5137,7 @@ parameters during deployment.
 The Gravatar ID for the User who created the StackScript.
 
 <h4 class="pdoc-member-header" id="StackScriptState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/stackScript.ts#L213">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/stackScript.ts#L213">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5144,7 +5145,7 @@ The Gravatar ID for the User who created the StackScript.
 The User who created the StackScript.
 
 <h3 class="pdoc-module-header" id="TokenArgs" data-link-title="TokenArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L128">
         interface <strong>TokenArgs</strong>
     </a>
 </h3>
@@ -5154,7 +5155,7 @@ The User who created the StackScript.
 The set of arguments for constructing a Token resource.
 
 <h4 class="pdoc-member-header" id="TokenArgs-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L132">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L132">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5162,7 +5163,7 @@ The set of arguments for constructing a Token resource.
 When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with 'null' as their expiry and will never expire unless revoked.
 
 <h4 class="pdoc-member-header" id="TokenArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L136">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L136">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5170,7 +5171,7 @@ When this token will expire. Personal Access Tokens cannot be renewed, so after 
 A label for the Token.
 
 <h4 class="pdoc-member-header" id="TokenArgs-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L140">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L140">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5178,7 +5179,7 @@ A label for the Token.
 The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to *. Tokens with more restrictive scopes are generally more secure.
 
 <h3 class="pdoc-module-header" id="TokenState" data-link-title="TokenState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L102">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L102">
         interface <strong>TokenState</strong>
     </a>
 </h3>
@@ -5188,7 +5189,7 @@ The scopes this token was created with. These define what parts of the Account t
 Input properties used for looking up and filtering Token resources.
 
 <h4 class="pdoc-member-header" id="TokenState-created">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L106">property <b>created</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L106">property <b>created</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>created?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5196,7 +5197,7 @@ Input properties used for looking up and filtering Token resources.
 The date and time this token was created.
 
 <h4 class="pdoc-member-header" id="TokenState-expiry">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L110">property <b>expiry</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L110">property <b>expiry</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>expiry?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5204,7 +5205,7 @@ The date and time this token was created.
 When this token will expire. Personal Access Tokens cannot be renewed, so after this time the token will be completely unusable and a new token will need to be generated. Tokens may be created with 'null' as their expiry and will never expire unless revoked.
 
 <h4 class="pdoc-member-header" id="TokenState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L114">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L114">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5212,7 +5213,7 @@ When this token will expire. Personal Access Tokens cannot be renewed, so after 
 A label for the Token.
 
 <h4 class="pdoc-member-header" id="TokenState-scopes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L118">property <b>scopes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L118">property <b>scopes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scopes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5220,7 +5221,7 @@ A label for the Token.
 The scopes this token was created with. These define what parts of the Account the token can be used to access. Many command-line tools, such as the Linode CLI, require tokens with access to *. Tokens with more restrictive scopes are generally more secure.
 
 <h4 class="pdoc-member-header" id="TokenState-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/token.ts#L122">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/token.ts#L122">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5228,7 +5229,7 @@ The scopes this token was created with. These define what parts of the Account t
 The token used to access the API.
 
 <h3 class="pdoc-module-header" id="VolumeArgs" data-link-title="VolumeArgs">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L207">
         interface <strong>VolumeArgs</strong>
     </a>
 </h3>
@@ -5238,7 +5239,7 @@ The token used to access the API.
 The set of arguments for constructing a Volume resource.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L211">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L211">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5246,7 +5247,7 @@ The set of arguments for constructing a Volume resource.
 The label of the Linode Volume
 
 <h4 class="pdoc-member-header" id="VolumeArgs-linodeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L215">property <b>linodeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L215">property <b>linodeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linodeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5254,7 +5255,7 @@ The label of the Linode Volume
 The ID of a Linode Instance where the the Volume should be attached.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L219">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L219">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5262,7 +5263,7 @@ The ID of a Linode Instance where the the Volume should be attached.
 The region where this volume will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Volume.*.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L223">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L223">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5270,7 +5271,7 @@ The region where this volume will be deployed.  Examples are `"us-east"`, `"us-w
 Size of the Volume in GB.
 
 <h4 class="pdoc-member-header" id="VolumeArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L227">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L227">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -5278,7 +5279,7 @@ Size of the Volume in GB.
 A list of tags applied to this object. Tags are for organizational purposes only.
 
 <h3 class="pdoc-module-header" id="VolumeState" data-link-title="VolumeState">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L172">
         interface <strong>VolumeState</strong>
     </a>
 </h3>
@@ -5288,7 +5289,7 @@ A list of tags applied to this object. Tags are for organizational purposes only
 Input properties used for looking up and filtering Volume resources.
 
 <h4 class="pdoc-member-header" id="VolumeState-filesystemPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L177">property <b>filesystemPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L177">property <b>filesystemPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filesystemPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5297,7 +5298,7 @@ The full filesystem path for the Volume based on the Volume's label. Path is /de
 Volume label.
 
 <h4 class="pdoc-member-header" id="VolumeState-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L181">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L181">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5305,7 +5306,7 @@ Volume label.
 The label of the Linode Volume
 
 <h4 class="pdoc-member-header" id="VolumeState-linodeId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L185">property <b>linodeId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L185">property <b>linodeId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>linodeId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5313,7 +5314,7 @@ The label of the Linode Volume
 The ID of a Linode Instance where the the Volume should be attached.
 
 <h4 class="pdoc-member-header" id="VolumeState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L189">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L189">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5321,7 +5322,7 @@ The ID of a Linode Instance where the the Volume should be attached.
 The region where this volume will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode Volume.*.
 
 <h4 class="pdoc-member-header" id="VolumeState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L193">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L193">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -5329,7 +5330,7 @@ The region where this volume will be deployed.  Examples are `"us-east"`, `"us-w
 Size of the Volume in GB.
 
 <h4 class="pdoc-member-header" id="VolumeState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L197">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L197">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -5337,7 +5338,7 @@ Size of the Volume in GB.
 The status of the volume, indicating the current readiness state.
 
 <h4 class="pdoc-member-header" id="VolumeState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/volume.ts#L201">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/volume.ts#L201">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
