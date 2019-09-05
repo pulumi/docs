@@ -63,6 +63,7 @@ generate_docs() {
         # Generate the docs, copy any READMEs, and remember the Git hash.
         ${TOOL_TYPEDOC} --json "${PULUMI_DOC_TMP}/$1.docs.json" \
             --mode modules --includeDeclarations --excludeExternals --excludePrivate
+        mkdir -p ${PULUMI_DOC_TMP}/readmes
         find . -name 'README.md' -exec rsync -R {} ${PULUMI_DOC_TMP}/readmes \;
         HEAD_COMMIT=$(git rev-parse HEAD)
 
