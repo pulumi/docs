@@ -46,7 +46,7 @@ The Pulumi service is available as a free Community Edition as well as advanced 
 
 Using real languages offers significant advantages for declaring your infrastructure:
 
-* **Control flow**: use if statements, for loops, case statemetns, etc.
+* **Control flow**: use if statements, for loops, case statements, etc.
 * **Abstractions and reuse**: leverage classes and functions to avoid repeating the same boilerplate over and over again
 * **Package managers**: share libraries with your team or the community
 * **IDEs**: use your favorite IDE and get statement completion, live error checking, and interactive documentation
