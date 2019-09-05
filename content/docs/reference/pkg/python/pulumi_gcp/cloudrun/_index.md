@@ -1,5 +1,7 @@
 ---
 title: Module cloudrun
+linktitle: cloudrun
+notitle: true
 ---
 
 <div class="section" id="cloudrun">

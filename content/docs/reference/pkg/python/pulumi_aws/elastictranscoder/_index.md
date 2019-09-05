@@ -1,5 +1,7 @@
 ---
 title: Module elastictranscoder
+linktitle: elastictranscoder
+notitle: true
 ---
 
 <div class="section" id="elastictranscoder">

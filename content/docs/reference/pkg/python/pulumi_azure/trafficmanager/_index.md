@@ -1,5 +1,7 @@
 ---
 title: Module trafficmanager
+linktitle: trafficmanager
+notitle: true
 ---
 
 <div class="section" id="trafficmanager">

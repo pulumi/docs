@@ -1,5 +1,7 @@
 ---
 title: Module securitycenter
+linktitle: securitycenter
+notitle: true
 ---
 
 <div class="section" id="securitycenter">

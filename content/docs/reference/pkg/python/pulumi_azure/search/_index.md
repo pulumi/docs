@@ -1,5 +1,7 @@
 ---
 title: Module search
+linktitle: search
+notitle: true
 ---
 
 <div class="section" id="search">

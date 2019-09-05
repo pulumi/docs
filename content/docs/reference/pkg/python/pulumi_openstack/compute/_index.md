@@ -1,5 +1,7 @@
 ---
 title: Module compute
+linktitle: compute
+notitle: true
 ---
 
 <div class="section" id="compute">

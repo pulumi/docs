@@ -1,5 +1,7 @@
 ---
 title: Module filestore
+linktitle: filestore
+notitle: true
 ---
 
 <div class="section" id="filestore">

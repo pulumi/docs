@@ -1,5 +1,7 @@
 ---
 title: Module elasticache
+linktitle: elasticache
+notitle: true
 ---
 
 <div class="section" id="elasticache">

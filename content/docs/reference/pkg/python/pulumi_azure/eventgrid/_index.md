@@ -1,5 +1,7 @@
 ---
 title: Module eventgrid
+linktitle: eventgrid
+notitle: true
 ---
 
 <div class="section" id="eventgrid">

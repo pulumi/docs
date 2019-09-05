@@ -1,5 +1,7 @@
 ---
 title: Module binaryauthorization
+linktitle: binaryauthorization
+notitle: true
 ---
 
 <div class="section" id="binaryauthorization">

@@ -1,5 +1,7 @@
 ---
 title: Module images
+linktitle: images
+notitle: true
 ---
 
 <div class="section" id="images">

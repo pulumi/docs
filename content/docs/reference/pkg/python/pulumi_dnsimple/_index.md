@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_dnsimple
+linktitle: pulumi_dnsimple
+notitle: true
 ---
 
 <div class="section" id="pulumi-dnsimple">

@@ -1,5 +1,7 @@
 ---
 title: Module ram
+linktitle: ram
+notitle: true
 ---
 
 <div class="section" id="ram">

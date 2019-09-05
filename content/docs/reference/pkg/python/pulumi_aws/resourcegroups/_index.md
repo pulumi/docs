@@ -1,5 +1,7 @@
 ---
 title: Module resourcegroups
+linktitle: resourcegroups
+notitle: true
 ---
 
 <div class="section" id="resourcegroups">

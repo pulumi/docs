@@ -1,5 +1,7 @@
 ---
 title: Module endpoints
+linktitle: endpoints
+notitle: true
 ---
 
 <div class="section" id="endpoints">

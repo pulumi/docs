@@ -1,5 +1,7 @@
 ---
 title: Module quicksight
+linktitle: quicksight
+notitle: true
 ---
 
 <div class="section" id="quicksight">

@@ -1,5 +1,7 @@
 ---
 title: Module aws
+linktitle: aws
+notitle: true
 ---
 
 <div class="section" id="aws">

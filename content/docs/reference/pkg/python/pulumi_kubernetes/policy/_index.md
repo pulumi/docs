@@ -1,5 +1,7 @@
 ---
 title: Module policy
+linktitle: policy
+notitle: true
 ---
 
 <div class="section" id="policy">

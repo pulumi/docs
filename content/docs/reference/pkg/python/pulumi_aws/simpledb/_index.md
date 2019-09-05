@@ -1,5 +1,7 @@
 ---
 title: Module simpledb
+linktitle: simpledb
+notitle: true
 ---
 
 <div class="section" id="simpledb">

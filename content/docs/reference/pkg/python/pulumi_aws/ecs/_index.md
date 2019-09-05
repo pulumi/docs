@@ -1,5 +1,7 @@
 ---
 title: Module ecs
+linktitle: ecs
+notitle: true
 ---
 
 <div class="section" id="ecs">

@@ -1,5 +1,7 @@
 ---
 title: Module glacier
+linktitle: glacier
+notitle: true
 ---
 
 <div class="section" id="glacier">

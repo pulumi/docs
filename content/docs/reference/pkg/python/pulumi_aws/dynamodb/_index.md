@@ -1,5 +1,7 @@
 ---
 title: Module dynamodb
+linktitle: dynamodb
+notitle: true
 ---
 
 <div class="section" id="dynamodb">

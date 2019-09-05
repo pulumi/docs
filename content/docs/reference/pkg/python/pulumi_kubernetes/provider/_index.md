@@ -1,5 +1,7 @@
 ---
 title: Module provider
+linktitle: provider
+notitle: true
 ---
 
 <div class="section" id="module-pulumi_kubernetes.provider">

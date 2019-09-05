@@ -1,5 +1,7 @@
 ---
 title: Module pagerduty
+linktitle: pagerduty
+notitle: true
 ---
 
 <div class="section" id="pagerduty">

@@ -1,5 +1,7 @@
 ---
 title: Module settings
+linktitle: settings
+notitle: true
 ---
 
 <div class="section" id="settings">

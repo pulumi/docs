@@ -1,5 +1,7 @@
 ---
 title: Module maps
+linktitle: maps
+notitle: true
 ---
 
 <div class="section" id="maps">

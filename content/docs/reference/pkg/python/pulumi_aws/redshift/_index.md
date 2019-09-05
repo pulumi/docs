@@ -1,5 +1,7 @@
 ---
 title: Module redshift
+linktitle: redshift
+notitle: true
 ---
 
 <div class="section" id="redshift">

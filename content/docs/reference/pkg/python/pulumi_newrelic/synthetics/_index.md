@@ -1,5 +1,7 @@
 ---
 title: Module synthetics
+linktitle: synthetics
+notitle: true
 ---
 
 <div class="section" id="synthetics">

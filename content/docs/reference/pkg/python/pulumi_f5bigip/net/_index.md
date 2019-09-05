@@ -1,5 +1,7 @@
 ---
 title: Module net
+linktitle: net
+notitle: true
 ---
 
 <div class="section" id="net">

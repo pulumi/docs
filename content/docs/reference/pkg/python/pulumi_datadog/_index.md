@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_datadog
+linktitle: pulumi_datadog
+notitle: true
 ---
 
 <div class="section" id="pulumi-datadog">

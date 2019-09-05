@@ -1,5 +1,7 @@
 ---
 title: Module cognito
+linktitle: cognito
+notitle: true
 ---
 
 <div class="section" id="cognito">

@@ -1,5 +1,7 @@
 ---
 title: Module directoryservice
+linktitle: directoryservice
+notitle: true
 ---
 
 <div class="section" id="directoryservice">

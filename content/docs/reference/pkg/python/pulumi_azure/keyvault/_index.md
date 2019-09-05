@@ -1,5 +1,7 @@
 ---
 title: Module keyvault
+linktitle: keyvault
+notitle: true
 ---
 
 <div class="section" id="keyvault">

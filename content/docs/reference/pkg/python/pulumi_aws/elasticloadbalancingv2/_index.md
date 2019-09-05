@@ -1,5 +1,7 @@
 ---
 title: Module elasticloadbalancingv2
+linktitle: elasticloadbalancingv2
+notitle: true
 ---
 
 <div class="section" id="elasticloadbalancingv2">

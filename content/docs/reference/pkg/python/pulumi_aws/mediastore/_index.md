@@ -1,5 +1,7 @@
 ---
 title: Module mediastore
+linktitle: mediastore
+notitle: true
 ---
 
 <div class="section" id="mediastore">

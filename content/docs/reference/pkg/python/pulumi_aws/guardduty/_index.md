@@ -1,5 +1,7 @@
 ---
 title: Module guardduty
+linktitle: guardduty
+notitle: true
 ---
 
 <div class="section" id="guardduty">

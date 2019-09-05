@@ -1,5 +1,7 @@
 ---
 title: Module containerinfra
+linktitle: containerinfra
+notitle: true
 ---
 
 <div class="section" id="containerinfra">

@@ -1,5 +1,7 @@
 ---
 title: Module codecommit
+linktitle: codecommit
+notitle: true
 ---
 
 <div class="section" id="codecommit">

@@ -1,5 +1,7 @@
 ---
 title: Module shield
+linktitle: shield
+notitle: true
 ---
 
 <div class="section" id="shield">

@@ -322,6 +322,7 @@ def create_markdown_file(input: CreateMarkdownInput):
         f.write("---\n")
         f.write(f"title: {input.title}\n")
         f.write(f"linktitle: {input.linktitle}\n")
+        f.write(f"notitle: true\n")
         f.write("---\n\n")
         # The "body" property of Sphinx's JSON is basically the rendered HTML of the documentation on this page. We're
         # going to slam it verbatim into a file and call it Markdown, because we're professionals.

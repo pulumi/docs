@@ -1,5 +1,7 @@
 ---
 title: Module eventhub
+linktitle: eventhub
+notitle: true
 ---
 
 <div class="section" id="eventhub">

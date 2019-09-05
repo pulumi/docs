@@ -1,5 +1,7 @@
 ---
 title: Module kms
+linktitle: kms
+notitle: true
 ---
 
 <div class="section" id="kms">

@@ -1,5 +1,7 @@
 ---
 title: Module notificationhub
+linktitle: notificationhub
+notitle: true
 ---
 
 <div class="section" id="notificationhub">

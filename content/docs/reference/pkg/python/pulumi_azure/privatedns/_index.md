@@ -1,5 +1,7 @@
 ---
 title: Module privatedns
+linktitle: privatedns
+notitle: true
 ---
 
 <div class="section" id="privatedns">

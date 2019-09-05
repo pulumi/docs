@@ -1,5 +1,7 @@
 ---
 title: Module keymanager
+linktitle: keymanager
+notitle: true
 ---
 
 <div class="section" id="keymanager">

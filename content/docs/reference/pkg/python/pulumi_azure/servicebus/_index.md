@@ -1,5 +1,7 @@
 ---
 title: Module servicebus
+linktitle: servicebus
+notitle: true
 ---
 
 <div class="section" id="servicebus">

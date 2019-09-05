@@ -1,5 +1,7 @@
 ---
 title: Module relay
+linktitle: relay
+notitle: true
 ---
 
 <div class="section" id="relay">

@@ -1,5 +1,7 @@
 ---
 title: Module elb
+linktitle: elb
+notitle: true
 ---
 
 <div class="section" id="elb">

@@ -1,5 +1,7 @@
 ---
 title: Module apigateway
+linktitle: apigateway
+notitle: true
 ---
 
 <div class="section" id="apigateway">

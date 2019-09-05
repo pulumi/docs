@@ -1,5 +1,7 @@
 ---
 title: Module folder
+linktitle: folder
+notitle: true
 ---
 
 <div class="section" id="folder">

@@ -1,5 +1,7 @@
 ---
 title: Module v1beta2
+linktitle: v1beta2
+notitle: true
 ---
 
 <div class="section" id="module-pulumi_kubernetes.apps.v1beta2">

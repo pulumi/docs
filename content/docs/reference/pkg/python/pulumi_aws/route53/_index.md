@@ -1,5 +1,7 @@
 ---
 title: Module route53
+linktitle: route53
+notitle: true
 ---
 
 <div class="section" id="route53">

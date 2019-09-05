@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_mysql
+linktitle: pulumi_mysql
+notitle: true
 ---
 
 <div class="section" id="pulumi-mysql">

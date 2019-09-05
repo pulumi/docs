@@ -1,5 +1,7 @@
 ---
 title: Module certificates
+linktitle: certificates
+notitle: true
 ---
 
 <div class="section" id="certificates">

@@ -1,5 +1,7 @@
 ---
 title: Module signalr
+linktitle: signalr
+notitle: true
 ---
 
 <div class="section" id="signalr">

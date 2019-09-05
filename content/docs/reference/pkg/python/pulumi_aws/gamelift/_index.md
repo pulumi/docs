@@ -1,5 +1,7 @@
 ---
 title: Module gamelift
+linktitle: gamelift
+notitle: true
 ---
 
 <div class="section" id="gamelift">

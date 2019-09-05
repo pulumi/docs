@@ -1,5 +1,7 @@
 ---
 title: Module bigquery
+linktitle: bigquery
+notitle: true
 ---
 
 <div class="section" id="bigquery">

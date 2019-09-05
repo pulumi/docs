@@ -1,5 +1,7 @@
 ---
 title: Module apiextensions
+linktitle: apiextensions
+notitle: true
 ---
 
 <div class="section" id="apiextensions">

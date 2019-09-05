@@ -1,5 +1,7 @@
 ---
 title: Module v1alpha1
+linktitle: v1alpha1
+notitle: true
 ---
 
 <div class="section" id="module-pulumi_kubernetes.rbac.v1alpha1">

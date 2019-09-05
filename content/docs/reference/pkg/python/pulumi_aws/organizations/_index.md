@@ -1,5 +1,7 @@
 ---
 title: Module organizations
+linktitle: organizations
+notitle: true
 ---
 
 <div class="section" id="organizations">

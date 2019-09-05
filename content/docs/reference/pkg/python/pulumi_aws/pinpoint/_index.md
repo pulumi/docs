@@ -1,5 +1,7 @@
 ---
 title: Module pinpoint
+linktitle: pinpoint
+notitle: true
 ---
 
 <div class="section" id="pinpoint">

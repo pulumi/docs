@@ -1,5 +1,7 @@
 ---
 title: Module wafregional
+linktitle: wafregional
+notitle: true
 ---
 
 <div class="section" id="wafregional">

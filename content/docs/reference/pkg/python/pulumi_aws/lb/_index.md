@@ -1,5 +1,7 @@
 ---
 title: Module lb
+linktitle: lb
+notitle: true
 ---
 
 <div class="section" id="lb">

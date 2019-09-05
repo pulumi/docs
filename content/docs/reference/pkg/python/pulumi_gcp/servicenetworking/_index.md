@@ -1,5 +1,7 @@
 ---
 title: Module servicenetworking
+linktitle: servicenetworking
+notitle: true
 ---
 
 <div class="section" id="servicenetworking">

@@ -1,5 +1,7 @@
 ---
 title: Module ad
+linktitle: ad
+notitle: true
 ---
 
 <div class="section" id="ad">

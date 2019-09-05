@@ -1,5 +1,7 @@
 ---
 title: Module tpu
+linktitle: tpu
+notitle: true
 ---
 
 <div class="section" id="tpu">

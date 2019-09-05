@@ -1,5 +1,7 @@
 ---
 title: Module cm
+linktitle: cm
+notitle: true
 ---
 
 <div class="section" id="cm">

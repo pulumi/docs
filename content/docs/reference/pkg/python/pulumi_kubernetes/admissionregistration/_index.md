@@ -1,5 +1,7 @@
 ---
 title: Module admissionregistration
+linktitle: admissionregistration
+notitle: true
 ---
 
 <div class="section" id="admissionregistration">

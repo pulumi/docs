@@ -1,5 +1,7 @@
 ---
 title: Module blockstorage
+linktitle: blockstorage
+notitle: true
 ---
 
 <div class="section" id="blockstorage">

@@ -1,5 +1,7 @@
 ---
 title: Module iap
+linktitle: iap
+notitle: true
 ---
 
 <div class="section" id="iap">

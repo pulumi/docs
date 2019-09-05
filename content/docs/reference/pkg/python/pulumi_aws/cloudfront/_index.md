@@ -1,5 +1,7 @@
 ---
 title: Module cloudfront
+linktitle: cloudfront
+notitle: true
 ---
 
 <div class="section" id="cloudfront">

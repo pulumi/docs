@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_linode
+linktitle: pulumi_linode
+notitle: true
 ---
 
 <div class="section" id="pulumi-linode">

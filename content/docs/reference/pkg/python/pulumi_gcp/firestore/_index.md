@@ -1,5 +1,7 @@
 ---
 title: Module firestore
+linktitle: firestore
+notitle: true
 ---
 
 <div class="section" id="firestore">

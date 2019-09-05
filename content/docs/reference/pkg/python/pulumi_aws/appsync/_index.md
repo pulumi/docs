@@ -1,5 +1,7 @@
 ---
 title: Module appsync
+linktitle: appsync
+notitle: true
 ---
 
 <div class="section" id="appsync">

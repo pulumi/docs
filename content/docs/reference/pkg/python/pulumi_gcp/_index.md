@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_gcp
+linktitle: pulumi_gcp
+notitle: true
 ---
 
 <div class="section" id="pulumi-gcp">

@@ -1,5 +1,7 @@
 ---
 title: Module dataproc
+linktitle: dataproc
+notitle: true
 ---
 
 <div class="section" id="dataproc">

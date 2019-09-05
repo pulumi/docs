@@ -1,5 +1,7 @@
 ---
 title: Module worklink
+linktitle: worklink
+notitle: true
 ---
 
 <div class="section" id="worklink">

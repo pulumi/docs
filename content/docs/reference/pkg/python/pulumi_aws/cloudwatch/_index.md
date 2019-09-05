@@ -1,5 +1,7 @@
 ---
 title: Module cloudwatch
+linktitle: cloudwatch
+notitle: true
 ---
 
 <div class="section" id="cloudwatch">

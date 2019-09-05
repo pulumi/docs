@@ -1,5 +1,7 @@
 ---
 title: Module directconnect
+linktitle: directconnect
+notitle: true
 ---
 
 <div class="section" id="directconnect">

@@ -1,5 +1,7 @@
 ---
 title: Module acmpca
+linktitle: acmpca
+notitle: true
 ---
 
 <div class="section" id="acmpca">

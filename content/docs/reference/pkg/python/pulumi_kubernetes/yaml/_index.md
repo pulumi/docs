@@ -1,5 +1,7 @@
 ---
 title: Module yaml
+linktitle: yaml
+notitle: true
 ---
 
 <div class="section" id="module-pulumi_kubernetes.yaml">

@@ -1,5 +1,7 @@
 ---
 title: Module redis
+linktitle: redis
+notitle: true
 ---
 
 <div class="section" id="redis">

@@ -1,5 +1,7 @@
 ---
 title: Module athena
+linktitle: athena
+notitle: true
 ---
 
 <div class="section" id="athena">

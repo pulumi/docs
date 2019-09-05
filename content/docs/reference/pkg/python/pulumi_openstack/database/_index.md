@@ -1,5 +1,7 @@
 ---
 title: Module database
+linktitle: database
+notitle: true
 ---
 
 <div class="section" id="database">

@@ -1,5 +1,7 @@
 ---
 title: Module appautoscaling
+linktitle: appautoscaling
+notitle: true
 ---
 
 <div class="section" id="appautoscaling">

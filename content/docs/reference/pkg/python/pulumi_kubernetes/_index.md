@@ -1,5 +1,7 @@
 ---
 title: Package pulumi_kubernetes
+linktitle: pulumi_kubernetes
+notitle: true
 ---
 
 <div class="section" id="pulumi-kubernetes">

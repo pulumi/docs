@@ -1,5 +1,7 @@
 ---
 title: Module glue
+linktitle: glue
+notitle: true
 ---
 
 <div class="section" id="glue">

@@ -1,5 +1,7 @@
 ---
 title: Module analysisservices
+linktitle: analysisservices
+notitle: true
 ---
 
 <div class="section" id="analysisservices">

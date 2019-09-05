@@ -1,5 +1,7 @@
 ---
 title: Module apiregistration
+linktitle: apiregistration
+notitle: true
 ---
 
 <div class="section" id="apiregistration">

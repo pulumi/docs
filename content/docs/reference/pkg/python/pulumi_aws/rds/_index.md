@@ -1,5 +1,7 @@
 ---
 title: Module rds
+linktitle: rds
+notitle: true
 ---
 
 <div class="section" id="rds">

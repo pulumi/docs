@@ -1,5 +1,7 @@
 ---
 title: Module runtimeconfig
+linktitle: runtimeconfig
+notitle: true
 ---
 
 <div class="section" id="runtimeconfig">
