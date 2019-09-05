@@ -25,7 +25,7 @@ following:
 ## Profile
 
 Your Pulumi user account profile is used to identify you across the Pulumi
-Cloud Console.  Your account display name, avatar URL, and email address are
+Console.  Your account display name, avatar URL, and email address are
 obtained from the identity provider you used for signing up. For example, your
 GitHub identity.
 
