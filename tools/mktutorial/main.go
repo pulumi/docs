@@ -82,40 +82,6 @@ func main() {
 	}
 }
 
-// getPulumiYamlPath returns the path to the folder in a given tutorial,
-// that contains the Pulumi.yaml file. It does not recursively search for it, though.
-func getPulumiYamlPath(root, tutorialName string) string {
-	// Most tutorials have the Pulumi.yaml in the root folder, so we'll
-	// check that first. If it is not found in the root of the tutorial
-	// we will override the path later with the correct one (if we find it).
-	result := tutorialName
-	if _, err := ioutil.ReadFile(filepath.Join(root, tutorialName, "Pulumi.yaml")); err == nil {
-		return result
-	}
-
-	// Pulumi.yaml wasn't in the root of this tutorial folder,
-	// we'll try to find it one of the sub-folders.
-	files, err := ioutil.ReadDir(filepath.Join(root, tutorialName))
-	if err != nil {
-		fmt.Printf("Error: reading tutorial folder: %v\n", err)
-		return result
-	}
-
-	// Iterate the tutorial folder and then check under each folder.
-	for _, file := range files {
-		if !file.IsDir() {
-			continue
-		}
-		name := file.Name()
-		if _, err := ioutil.ReadFile(filepath.Join(root, tutorialName, name, "Pulumi.yaml")); err == nil {
-			return filepath.Join(tutorialName, name)
-		}
-	}
-
-	fmt.Printf("Warning: Pulumi.yaml could not be found for %v in the root or its sub-folders.", tutorialName)
-	return result
-}
-
 type tutorial struct {
 	Name              string
 	Title             string
@@ -142,7 +108,7 @@ func gatherTutorials(root string) ([]tutorial, error) {
 			continue
 		}
 		githubURL := fmt.Sprintf("%s/tree/master/%s", gitHubBaseURL, name)
-		pulumiTemplateURL := fmt.Sprintf("%s/tree/master/%s", gitHubBaseURL, getPulumiYamlPath(root, name))
+		pulumiTemplateURL := ""
 
 		// Each tutorial directory follows a convention: <cloud>-<language>-<short-name>. Parse it.
 		// Warn and ignore any that don't follow this convention (ideally we'd fix them).
@@ -175,6 +141,14 @@ func gatherTutorials(root string) ([]tutorial, error) {
 		// The first H1 is assumed to be the title.
 		var title string
 		top.Walk(func(node *blackfriday.Node, entering bool) blackfriday.WalkStatus {
+			if node.Type == blackfriday.Link {
+				destination := string(node.LinkData.Destination)
+				if destination == "https://app.pulumi.com/new" {
+					pulumiTemplateURL = githubURL
+				} else if strings.HasPrefix(destination, "https://app.pulumi.com/new?template=") {
+					pulumiTemplateURL = strings.TrimPrefix(destination, "https://app.pulumi.com/new?template=")
+				}
+			}
 			if node.Type == blackfriday.Heading && node.HeadingData.Level == 1 {
 				node.Walk(func(inner *blackfriday.Node, entering bool) blackfriday.WalkStatus {
 					if inner.Type == blackfriday.Text {
