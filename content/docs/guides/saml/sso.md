@@ -11,13 +11,13 @@ aliases:
 ---
 
 This document walks through the important aspects of configuring any SAML (Security Assertion Markup Language) 2.0 identity provider to work
-with the [Pulumi Console]({{ relref "../intro/console" >}}).
+with the [Pulumi Console]({{< relref "/docs/intro/console" >}}).
 
 > For a specific example, refer to one of our integration guides:
 >
-> - [Azure Active Directory]({{< relref "/docs/guides/saml/aad" >}})
-> - [G Suite (Google)]({{< relref "/docs/guides/saml/gsuite" >}})
-> - [Okta]({{< relref "/docs/guides/saml/okta" >}})
+> - [Azure Active Directory]({{< relref "aad" >}})
+> - [G Suite (Google)]({{< relref "gsuite" >}})
+> - [Okta]({{< relref "okta" >}})
 
 ## Terminology
 
@@ -28,7 +28,7 @@ which can be used by the service provider to make authentication requests.
 
 ## Configuration Properties
 
-The following are the only properties you will really be configuring when you setup SAML SSO with your IdP.
+The following are the only properties you will really be configuring when you set up SAML SSO with your IdP.
 
 | Name | Other Names | Required |
 |----- | ---------- |-----------|
