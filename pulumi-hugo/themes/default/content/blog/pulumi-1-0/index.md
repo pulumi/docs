@@ -77,7 +77,7 @@ The `pulumi up` CLI command runs this program using Pulumi's multi-language engi
 
 To see this workflow in action, watch this short 5 minute video:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QfJTJs24-JM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{{< youtube "QfJTJs24-JM" >}}
 
 ## How to Get It
 
