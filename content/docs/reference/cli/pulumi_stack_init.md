@@ -16,12 +16,12 @@ but afterwards it can become the target of a deployment using the `update` comma
 To create a stack in an organization when logged in to the Pulumi service,
 prefix the stack name with the organization name and a slash (e.g. 'acmecorp/dev')
 
-By default, a stack created using the pulumi.com backend will use the pulumi.com secrets
+By default, a stack created using the Pulumi Service backend will use the Pulumi Service secrets
 provider and a stack created using the local or cloud object storage backend will use the
 `passphrase` secrets provider.  A different secrets provider can be selected by passing the
 `--secrets-provider` flag.
 
-To use the `passphrase` secrets provider with the pulumi.com backend, use:
+To use the `passphrase` secrets provider with the Pulumi Service backend, use:
 * `pulumi stack init --secrets-provider=passphrase`
 
 To use a cloud secrets provider with any backend, use one of the following:

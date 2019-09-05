@@ -28,20 +28,20 @@ Pulumi operates, we'll cover a few of the state backend options on this page.
 Pulumi supports multiple  _backends_ for storing your infrastructure
 state:
 
-- The `pulumi.com` backend
+- The Pulumi Service backend
 - A self-managed backend, either stored locally on your filesystem or remotely using
 a cloud storage service
 
 
-### pulumi.com backend
+### Pulumi Service backend
 
-The `pulumi.com` backend requires no additional configuration after
+The Pulumi Service backend requires no additional configuration after
 [installing the CLI]({{< relref "/docs/get-started/install" >}}). By default, the CLI
-uses a web backend hosted at [app.pulumi.com](https://app.pulumi.com).
+uses the Service backend hosted at [app.pulumi.com](https://app.pulumi.com).
 
 Pulumi offers this backend as a free service with
 [advanced tiers]({{< relref "/pricing" >}}) for team and
-enterprise features. Using the [`pulumi.com` backend](#pulumi-backend-features)
+enterprise features. Using the [Pulumi Service backend](#pulumi-backend-features)
 and the CLI together provides a great combination of usability, safety, and
 security for most users.
 
@@ -74,9 +74,9 @@ and Microsoft's [Storage Blobs Quickstart](https://docs.microsoft.com/en-us/azur
 - **Google Cloud Storage.** _See [GCP Setup]({{< relref "/docs/intro/cloud-providers/gcp/setup" >}})
 and [Google's Cloud Storage Quickstarts](https://cloud.google.com/storage/docs/quickstarts)._
 
-### Pulumi backend features
+### Pulumi Service backend features
 
-At a glance, the `pulumi.com` backend provides the following benefits:
+At a glance, the Pulumi Service backend provides the following benefits:
 
 - Secure checkpoint storage, with client-side authentication to your cloud provider
 - Encrypted state in transit and at rest
@@ -91,7 +91,7 @@ class="img-bordered">
 
 #### Enterprise web architecture
 
-Pulumi enterprise users have a self-hosting option, for using the Pulumi backend features without depending on
+Pulumi enterprise users have a self-hosting option, for using the Pulumi Service backend features without depending on
 `app.pulumi.com`.
 
 <img src="/images/docs/reference/state_enterprise.png" alt="Pulumi Enterprise
@@ -123,9 +123,9 @@ User: <your-username>
 Backend URL: https://app.pulumi.com/<your-username>
 ```
 
-### To the pulumi.com backend
+### To the Pulumi Service backend
 
-The `pulumi.com` backend login process involves using access tokens.
+The Pulumi Service backend login process involves using access tokens.
 
 ```sh
 $ pulumi login
@@ -172,7 +172,7 @@ service instead of `app.pulumi.com`.
 The filesystem or cloud storage backend allows you to store state locally on
 your machine, or remotely with your cloud storage provider. For self-managed backends,
 state management including backup, sharing, and team access synchronization is
-entirely up to you. Pulumi built the `pulumi.com` backend to solve all of these
+entirely up to you. Pulumi built the Pulumi Service backend to solve all of these
 problems "out of the box", but we understand that some users prefer to have
 more control.
 
@@ -274,7 +274,7 @@ your stack. If you want to collaborate with another person, you'll need to
 share this passphrase with them as well. All of these overhead tasks will have
 to be managed separately when you opt into the local or remote state backend.
 
-### Going back to the pulumi.com backend
+### Going back to the Pulumi Service backend
 
 If you are currently using a self-managed backend, but would now prefer to
 simplify things, just run `pulumi login`again, and you’ll be back to
@@ -288,10 +288,10 @@ using `app.pulumi.com`.
 `pulumi config set --secret <key> <value>` because `pulumi.com` uses
 a different key to encrypt your secrets than the local endpoint.
 
-If you'd like to migrate your stacks from the filesystem to the `pulumi.com`
+If you'd like to migrate your stacks from the filesystem to the Pulumi Service
 backend, you can follow the steps below. Suppose the stack "my-app-production"
 has been managed with a local checkpoint file, and you want to migrate it to
-`pulumi.com`, run the following commands if you are logged in to the local
+the Pulumi Service. Run the following commands if you are logged in to the local
 endpoint:
 
 ```sh
@@ -312,10 +312,10 @@ When a secret value is provided via secret configuration---either by passing
 `pulumi.secret` (JavaScript) or `Output.secret` (Python)---the value is
 encrypted with a key managed by the backend you are connected to.  When using
 the local or remote backend, this key is derived from a passphrase you set when
-creating your stack. When using the `pulumi.com` backend, it is handled by
+creating your stack. When using the Pulumi Service backend, it is handled by
 a key managed by the service.
 
-For new stacks managed with the `pulumi.com` backend, you may choose to use the
+For new stacks managed with the Pulumi Service backend, you may choose to use the
 passphrase-based key instead. Pass `--secrets-provider passphrase` when you
 create the stack---either via `pulumi new` or `pulumi stack init`. You will be
 prompted to choose a passphrase which will be required for future operations
