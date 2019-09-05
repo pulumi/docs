@@ -21,6 +21,7 @@ linktitle: "config"
 <h3>APIs</h3>
 <ul class="api">
     <li><a href="#apiClientLogging"><span class="symbol api"></span>apiClientLogging</a></li>
+    <li><a href="#apiToken"><span class="symbol api"></span>apiToken</a></li>
     <li><a href="#email"><span class="symbol api"></span>email</a></li>
     <li><a href="#maxBackoff"><span class="symbol api"></span>maxBackoff</a></li>
     <li><a href="#minBackoff"><span class="symbol api"></span>minBackoff</a></li>
@@ -36,7 +37,7 @@ linktitle: "config"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiClientLogging" data-link-title="apiClientLogging">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiClientLogging</strong>
     </a>
 </h3>
@@ -45,8 +46,18 @@ linktitle: "config"
 
 Whether to print logs from the API client (using the default log library logger)
 
+<h3 class="pdoc-module-header" id="apiToken" data-link-title="apiToken">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L16">
+        let <strong>apiToken</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> apiToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiToken&#34;)</span>;</code></pre>
+
+The API Token for operations.
+
 <h3 class="pdoc-module-header" id="email" data-link-title="email">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L20">
         let <strong>email</strong>
     </a>
 </h3>
@@ -56,7 +67,7 @@ Whether to print logs from the API client (using the default log library logger)
 A registered Cloudflare email address.
 
 <h3 class="pdoc-module-header" id="maxBackoff" data-link-title="maxBackoff">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L24">
         let <strong>maxBackoff</strong>
     </a>
 </h3>
@@ -66,7 +77,7 @@ A registered Cloudflare email address.
 Maximum backoff period in seconds after failed API calls
 
 <h3 class="pdoc-module-header" id="minBackoff" data-link-title="minBackoff">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L28">
         let <strong>minBackoff</strong>
     </a>
 </h3>
@@ -76,7 +87,7 @@ Maximum backoff period in seconds after failed API calls
 Minimum backoff period in seconds after failed API calls
 
 <h3 class="pdoc-module-header" id="orgId" data-link-title="orgId">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L32">
         let <strong>orgId</strong>
     </a>
 </h3>
@@ -86,7 +97,7 @@ Minimum backoff period in seconds after failed API calls
 Configure API client to always use that organization. If set this will override 'user_owner_from_zone'
 
 <h3 class="pdoc-module-header" id="retries" data-link-title="retries">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L36">
         let <strong>retries</strong>
     </a>
 </h3>
@@ -96,7 +107,7 @@ Configure API client to always use that organization. If set this will override 
 Maximum number of retries to perform when an API request fails
 
 <h3 class="pdoc-module-header" id="rps" data-link-title="rps">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L40">
         let <strong>rps</strong>
     </a>
 </h3>
@@ -106,17 +117,17 @@ Maximum number of retries to perform when an API request fails
 RPS limit to apply when making calls to the API
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L44">
         let <strong>token</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> token: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;token&#34;) || utilities.getEnv(&#34;CLOUDFLARE_TOKEN&#34;)</span>;</code></pre>
 
-The token key for API operations.
+The API key for operations.
 
 <h3 class="pdoc-module-header" id="useOrgFromZone" data-link-title="useOrgFromZone">
-    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/5aadb3dd5f4a6dab989fff273cdb20e09b6c6f35/sdk/nodejs/config/vars.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-cloudflare/blob/599fbf5ab9199f88602c32d62532894650f8a874/sdk/nodejs/config/vars.ts#L48">
         let <strong>useOrgFromZone</strong>
     </a>
 </h3>

@@ -13,6 +13,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/issues">terraform-providers/terraform-provider-openstack repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_openstack.keymanager"></span><dl class="class">
+<dt id="pulumi_openstack.keymanager.AwaitableGetContainerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">AwaitableGetContainerResult</code><span class="sig-paren">(</span><em class="sig-param">consumers=None</em>, <em class="sig-param">container_ref=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.AwaitableGetContainerResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_openstack.keymanager.AwaitableGetSecretResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">AwaitableGetSecretResult</code><span class="sig-paren">(</span><em class="sig-param">acl_only=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">bit_length=None</em>, <em class="sig-param">content_types=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">created_at_filter=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">expiration=None</em>, <em class="sig-param">expiration_filter=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">payload=None</em>, <em class="sig-param">payload_content_encoding=None</em>, <em class="sig-param">payload_content_type=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_ref=None</em>, <em class="sig-param">secret_type=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">updated_at_filter=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.AwaitableGetSecretResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -202,6 +207,80 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_openstack.keymanager.GetContainerResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">GetContainerResult</code><span class="sig-paren">(</span><em class="sig-param">consumers=None</em>, <em class="sig-param">container_ref=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">creator_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">secret_refs=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getContainer.</p>
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.consumers">
+<code class="sig-name descname">consumers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.consumers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of the container consumers. The structure is described
+below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.container_ref">
+<code class="sig-name descname">container_ref</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.container_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>The container reference / where to find the container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.created_at">
+<code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the container was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.creator_id">
+<code class="sig-name descname">creator_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.creator_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The creator of the container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the consumer.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>See Argument Reference above.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.secret_refs">
+<code class="sig-name descname">secret_refs</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.secret_refs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of dictionaries containing references to secrets. The
+structure is described below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The status of the container.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.type">
+<code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The container type.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.updated_at">
+<code class="sig-name descname">updated_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.updated_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date the container was last updated.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_openstack.keymanager.GetContainerResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.keymanager.GetContainerResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -567,6 +646,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_openstack.keymanager.get_container">
+<code class="sig-prename descclassname">pulumi_openstack.keymanager.</code><code class="sig-name descname">get_container</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.keymanager.get_container" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to get the ID of an available Barbican container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The Container name.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V1 KeyManager client.
+A KeyManager client is needed to fetch a container. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code>
+argument of the provider is used.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_container_v1.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/keymanager_container_v1.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">
