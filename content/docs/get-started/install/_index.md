@@ -14,7 +14,7 @@ NOTE: To update this page with a new binary release, do the following:
 - Update `content/docs/get-started/install/versions.md`
 -->
 
-This page contains detailed instructions for [installing Pulumi](#install-pulumi) on your machine.
+This page contains detailed instructions for [installing Pulumi](#install-pulumi) on your machine. For links to detailed release notes, see the [Available Versions]({{< relref "versions" >}}) page.
 
 {{< get-started-note >}}
 
