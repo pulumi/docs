@@ -121,7 +121,7 @@ in touch.
 ### What payment options do you accept?
 
 All subscriptions can be paid with a credit card (we use Stripe for
-processing). The SaaS is meant to be easy to sign up for, so feel free
+processing). The Pulumi Service is meant to be easy to sign up for, so feel free
 to simply begin your trial, and then you may enter your credit card on
 your organization's Settings page.
 

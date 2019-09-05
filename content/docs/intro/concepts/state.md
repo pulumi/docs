@@ -86,7 +86,7 @@ At a glance, the `pulumi.com` backend provides the following benefits:
 
 #### app.pulumi.com architecture
 
-<img src="/images/docs/reference/state_saas.png" alt="Pulumi SaaS Architecture"
+<img src="/images/docs/reference/state_saas.png" alt="Pulumi Service Architecture"
 class="img-bordered">
 
 #### Enterprise web architecture
@@ -245,7 +245,7 @@ This stores all stack checkpoints as JSON files to the `.pulumi` directory of
 your specified cloud URL.
 
 To control where these checkpoints get stored, refer to your cloud storage
-provider's documentation. See [Self-managed backend](#self-managed-backend) 
+provider's documentation. See [Self-managed backend](#self-managed-backend)
 for quick links to Amazon, Google, and Microsoft Azure's storage service quickstarts.
 
 You may omit `--cloud-url` or `-c` when logging in to a remote backend and just
@@ -276,8 +276,8 @@ to be managed separately when you opt into the local or remote state backend.
 
 ### Going back to the pulumi.com backend
 
-If you are currently using a self-managed backend, but would now prefer to 
-simplify things, just run `pulumi login`again, and you’ll be back to 
+If you are currently using a self-managed backend, but would now prefer to
+simplify things, just run `pulumi login`again, and you’ll be back to
 using `app.pulumi.com`.
 
 > **Note:** Existing stacks on a self-managed backend have to be migrated. It's

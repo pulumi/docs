@@ -85,7 +85,7 @@ Let's now work through our example with GitLab Pipelines.
 1.  We created a GitLab Group called **pulumi-gitlab**.
 2.  We created three GitLab projects called **sample-iam**,
     **sample-eks** and **sample-k8sapp**. These projects match the
-    project names in Pulumi SaaS platform.
+    project names in the Pulumi Service.
 3.  We have two pipelines: **environment:dev** and **environment:prod**.
     In the two pipelines, we have a total of six pulumi stacks:
     -   `<org-name-in-pulumi>/sample-iam/dev`, and `<org-name-in-pulumi>/sample-iam/prod`.
