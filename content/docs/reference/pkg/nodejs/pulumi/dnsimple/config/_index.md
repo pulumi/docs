@@ -30,7 +30,7 @@ linktitle: "config"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="account" data-link-title="account">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/8926e7d7772f978a1fc48bd995023ad5f685826a/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/759424479b265876ed254a6909fa83905339059f/sdk/nodejs/config/vars.ts#L12">
         let <strong>account</strong>
     </a>
 </h3>
@@ -40,7 +40,7 @@ linktitle: "config"
 The account for API operations.
 
 <h3 class="pdoc-module-header" id="email" data-link-title="email">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/8926e7d7772f978a1fc48bd995023ad5f685826a/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/759424479b265876ed254a6909fa83905339059f/sdk/nodejs/config/vars.ts#L16">
         let <strong>email</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ The account for API operations.
 The DNSimple account email address.
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/8926e7d7772f978a1fc48bd995023ad5f685826a/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-dnsimple/blob/759424479b265876ed254a6909fa83905339059f/sdk/nodejs/config/vars.ts#L20">
         let <strong>token</strong>
     </a>
 </h3>

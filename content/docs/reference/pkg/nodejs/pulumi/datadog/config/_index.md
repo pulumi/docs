@@ -30,21 +30,21 @@ linktitle: "config"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/8e56438e095d2cb78bdff6b97ba6cc6b9cd55faa/sdk/nodejs/config/vars.ts#L9">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/2258a976f41c4de086ae911a9ad1ca4f4f6972df/sdk/nodejs/config/vars.ts#L9">
         let <strong>apiKey</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiKey&#34;) || utilities.getEnv(&#34;DATADOG_API_KEY&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/8e56438e095d2cb78bdff6b97ba6cc6b9cd55faa/sdk/nodejs/config/vars.ts#L10">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/2258a976f41c4de086ae911a9ad1ca4f4f6972df/sdk/nodejs/config/vars.ts#L10">
         let <strong>apiUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiUrl&#34;) || utilities.getEnv(&#34;DATADOG_HOST&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="appKey" data-link-title="appKey">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/8e56438e095d2cb78bdff6b97ba6cc6b9cd55faa/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/2258a976f41c4de086ae911a9ad1ca4f4f6972df/sdk/nodejs/config/vars.ts#L11">
         let <strong>appKey</strong>
     </a>
 </h3>

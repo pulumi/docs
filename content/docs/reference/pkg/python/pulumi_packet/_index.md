@@ -13,6 +13,11 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/issues">terraform-providers/terraform-provider-packet repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_packet"></span><dl class="class">
+<dt id="pulumi_packet.AwaitableGetDeviceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetDeviceResult</code><span class="sig-paren">(</span><em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetDeviceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_packet.AwaitableGetOperatingSystemResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">AwaitableGetOperatingSystemResult</code><span class="sig-paren">(</span><em class="sig-param">distro=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">provisionable_on=None</em>, <em class="sig-param">slug=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.AwaitableGetOperatingSystemResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -660,6 +665,121 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_packet.GetDeviceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">GetDeviceResult</code><span class="sig-paren">(</span><em class="sig-param">access_private_ipv4=None</em>, <em class="sig-param">access_public_ipv4=None</em>, <em class="sig-param">access_public_ipv6=None</em>, <em class="sig-param">always_pxe=None</em>, <em class="sig-param">billing_cycle=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">facility=None</em>, <em class="sig-param">hardware_reservation_id=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipxe_script_url=None</em>, <em class="sig-param">networks=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">operating_system=None</em>, <em class="sig-param">plan=None</em>, <em class="sig-param">ports=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">public_ipv4_subnet_size=None</em>, <em class="sig-param">root_password=None</em>, <em class="sig-param">ssh_key_ids=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">storage=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.GetDeviceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDevice.</p>
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.access_private_ipv4">
+<code class="sig-name descname">access_private_ipv4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.access_private_ipv4" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ipv4 private IP assigned to the device</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.access_public_ipv4">
+<code class="sig-name descname">access_public_ipv4</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.access_public_ipv4" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ipv4 management IP assigned to the device</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.access_public_ipv6">
+<code class="sig-name descname">access_public_ipv6</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.access_public_ipv6" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ipv6 management IP assigned to the device</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.billing_cycle">
+<code class="sig-name descname">billing_cycle</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.billing_cycle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The billing cycle of the device (monthly or hourly)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Description string for the device</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.facility">
+<code class="sig-name descname">facility</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.facility" title="Permalink to this definition">¶</a></dt>
+<dd><p>The facility where the device is deployed.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.hardware_reservation_id">
+<code class="sig-name descname">hardware_reservation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.hardware_reservation_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of hardware reservation which this device occupies</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the port</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.networks">
+<code class="sig-name descname">networks</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.networks" title="Permalink to this definition">¶</a></dt>
+<dd><p>The device’s private and public IP (v4 and v6) network details. When a device is run without any special network configuration, it will have 3 networks:</p>
+<ul class="simple">
+<li><p>Public IPv4 at <code class="docutils literal notranslate"><span class="pre">packet_device.name.network.0</span></code></p></li>
+<li><p>IPv6 at <code class="docutils literal notranslate"><span class="pre">packet_device.name.network.1</span></code></p></li>
+<li><p>Private IPv4 at <code class="docutils literal notranslate"><span class="pre">packet_device.name.network.2</span></code>
+Elastic addresses then stack by type - an assigned public IPv4 will go after the management public IPv4 (to index 1), and will then shift the indices of the IPv6 and private IPv4. Assigned private IPv4 will go after the management private IPv4 (to the end of the network list).
+The fields of the network attributes are:</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.network_type">
+<code class="sig-name descname">network_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.network_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>L2 network type of the device, one of “layer3”, “layer2-bonded”, “layer2-individual”, “hybrid”</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.operating_system">
+<code class="sig-name descname">operating_system</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.operating_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operating system running on the device</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.plan">
+<code class="sig-name descname">plan</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.plan" title="Permalink to this definition">¶</a></dt>
+<dd><p>The hardware config of the device</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.ports">
+<code class="sig-name descname">ports</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.ports" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ports assigned to the device</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.root_password">
+<code class="sig-name descname">root_password</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.root_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Root password to the server (if still available)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.ssh_key_ids">
+<code class="sig-name descname">ssh_key_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.ssh_key_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of IDs of SSH keys deployed in the device, can be both user or project SSH keys</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.state">
+<code class="sig-name descname">state</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>The state of the device</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_packet.GetDeviceResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_packet.GetDeviceResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tags attached to the device</p>
 </dd></dl>
 
 </dd></dl>
@@ -2270,6 +2390,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_packet.get_device">
+<code class="sig-prename descclassname">pulumi_packet.</code><code class="sig-name descname">get_device</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_packet.get_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Packet device datasource.</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>Note:</strong> All arguments including the <code class="docutils literal notranslate"><span class="pre">root_password</span></code> and <code class="docutils literal notranslate"><span class="pre">user_data</span></code> will be stored in</dt><dd><p>the raw state as plain-text.</p>
+</dd>
+</dl>
+<p><a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hostname</strong> (<em>str</em>) – The device name</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – The id of the project in which the devices exists</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/device.html.markdown">https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/device.html.markdown</a>.</p>
+</div></blockquote>
 </dd></dl>
 
 <dl class="function">

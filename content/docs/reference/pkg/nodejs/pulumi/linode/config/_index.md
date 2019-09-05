@@ -30,7 +30,7 @@ linktitle: "config"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/config/vars.ts#L12">
         let <strong>token</strong>
     </a>
 </h3>
@@ -40,7 +40,7 @@ linktitle: "config"
 The token that allows you access to your Linode account
 
 <h3 class="pdoc-module-header" id="uaPrefix" data-link-title="uaPrefix">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/config/vars.ts#L16">
         let <strong>uaPrefix</strong>
     </a>
 </h3>
@@ -50,7 +50,7 @@ The token that allows you access to your Linode account
 An HTTP User-Agent Prefix to prepend in API requests.
 
 <h3 class="pdoc-module-header" id="url" data-link-title="url">
-    <a href="https://github.com/pulumi/pulumi-linode/blob/bc818109060360757d76b52a452180c6b42bdd55/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-linode/blob/dad8c81c69806a196fcd9c99d5b13799ed0bbd3c/sdk/nodejs/config/vars.ts#L20">
         let <strong>url</strong>
     </a>
 </h3>
