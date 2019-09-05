@@ -88,6 +88,7 @@ There are several other Go-based tools to install as well.
 ```bash
 go get -u github.com/cbroglie/mustache
 go get -u github.com/gobuffalo/packr
+go get -u github.com/pkg/errors
 ```
 
 ### Makefile
