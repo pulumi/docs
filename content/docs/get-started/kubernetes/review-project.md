@@ -32,7 +32,7 @@ const deployment = new k8s.apps.v1.Deployment("nginx", {
         }
     }
 });
-exports.name = deployment.metadata.apply(m => m.name);
+exports.name = deployment.metadata.name;
 ```
 
 ```typescript
@@ -49,7 +49,7 @@ const deployment = new k8s.apps.v1.Deployment("nginx", {
         }
     }
 });
-export const name = deployment.metadata.apply(m => m.name);
+export const name = deployment.metadata.name;
 ```
 
 ```python
