@@ -34,7 +34,7 @@ linktitle: "fsx"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="LustreFileSystem" data-link-title="LustreFileSystem">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L25">
         Resource <strong>LustreFileSystem</strong>
     </a>
 </h3>
@@ -59,7 +59,7 @@ const example = new aws.fsx.LustreFileSystem("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_lustre_file_system.html.markdown.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -73,7 +73,7 @@ Create a LustreFileSystem resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L34">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L34">method <b>get</b></a>
 </h4>
 
 
@@ -84,14 +84,14 @@ Get an existing LustreFileSystem resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L25">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L25">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L45">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L45">method <b>isInstance</b></a>
 </h4>
 
 
@@ -102,7 +102,7 @@ Returns true if the given object is an instance of LustreFileSystem.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L55">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L55">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -110,7 +110,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Amazon Resource Name of the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L59">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L59">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -118,7 +118,7 @@ Amazon Resource Name of the file system.
 DNS name for the file system, e.g. `fs-12345678.fsx.us-west-2.amazonaws.com`
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-exportPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L63">property <b>exportPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L63">property <b>exportPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>exportPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ DNS name for the file system, e.g. `fs-12345678.fsx.us-west-2.amazonaws.com`
 S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `importPath` argument and the path must use the same Amazon S3 bucket as specified in `importPath`. Set equal to `importPath` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L25">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L25">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -135,7 +135,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-importPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L67">property <b>importPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L67">property <b>importPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>importPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ deployments and may be missing (undefined) during planning phases.
 S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-importedFileChunkSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L71">property <b>importedFileChunkSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L71">property <b>importedFileChunkSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>importedFileChunkSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ S3 URI (with optional prefix) that you're using as the data repository for your 
 For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. Can only be specified with `importPath` argument. Defaults to `1024`. Minimum of `1` and maximum of `512000`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-networkInterfaceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L75">property <b>networkInterfaceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L75">property <b>networkInterfaceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkInterfaceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -159,7 +159,7 @@ For files imported from a data repository, this value determines the stripe coun
 Set of Elastic Network Interface identifiers from which the file system is accessible.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L79">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L79">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ Set of Elastic Network Interface identifiers from which the file system is acces
 AWS account identifier that created the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L83">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L83">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ AWS account identifier that created the file system.
 A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-storageCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L87">property <b>storageCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L87">property <b>storageCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -183,7 +183,7 @@ A list of IDs for the security groups that apply to the specified network interf
 The storage capacity (GiB) of the file system. Minimum of `3600`. Storage capacity is provisioned in increments of 3,600 GiB.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L91">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L91">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ The storage capacity (GiB) of the file system. Minimum of `3600`. Storage capaci
 A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet's Availability Zone.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
 A mapping of tags to assign to the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L25">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L25">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -208,7 +208,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L99">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L99">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -216,7 +216,7 @@ deployments.
 Identifier of the Virtual Private Cloud for the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystem-weeklyMaintenanceStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L103">property <b>weeklyMaintenanceStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L103">property <b>weeklyMaintenanceStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weeklyMaintenanceStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ Identifier of the Virtual Private Cloud for the file system.
 The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
 
 <h3 class="pdoc-module-header" id="WindowsFileSystem" data-link-title="WindowsFileSystem">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L60">
         Resource <strong>WindowsFileSystem</strong>
     </a>
 </h3>
@@ -282,7 +282,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/fsx_windows_file_system.html.markdown.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L155"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L155"> <b>constructor</b></a>
 </h4>
 
 
@@ -296,7 +296,7 @@ Create a WindowsFileSystem resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L69">method <b>get</b></a>
 </h4>
 
 
@@ -307,14 +307,14 @@ Get an existing WindowsFileSystem resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L60">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L60">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L80">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L80">method <b>isInstance</b></a>
 </h4>
 
 
@@ -325,7 +325,7 @@ Returns true if the given object is an instance of WindowsFileSystem.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-activeDirectoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L90">property <b>activeDirectoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L90">property <b>activeDirectoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>activeDirectoryId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `selfManagedActiveDirectory`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L94">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L94">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ The ID for an existing Microsoft Active Directory instance that the file system 
 Amazon Resource Name of the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-automaticBackupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L98">property <b>automaticBackupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L98">property <b>automaticBackupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>automaticBackupRetentionDays: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ Amazon Resource Name of the file system.
 The number of days to retain automatic backups. Minimum of `0` and maximum of `35`. Defaults to `7`. Set to `0` to disable.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-copyTagsToBackups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L102">property <b>copyTagsToBackups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L102">property <b>copyTagsToBackups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>copyTagsToBackups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -357,7 +357,7 @@ The number of days to retain automatic backups. Minimum of `0` and maximum of `3
 A boolean flag indicating whether tags on the file system should be copied to backups. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-dailyAutomaticBackupStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L106">property <b>dailyAutomaticBackupStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L106">property <b>dailyAutomaticBackupStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dailyAutomaticBackupStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ A boolean flag indicating whether tags on the file system should be copied to ba
 The preferred time (in `HH:MM` format) to take daily automatic backups, in the UTC time zone.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L110">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L110">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dnsName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ The preferred time (in `HH:MM` format) to take daily automatic backups, in the U
 DNS name for the file system, e.g. `fs-12345678.corp.example.com` (domain name matching the Active Directory domain name)
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L60">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L60">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -382,7 +382,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L114">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L114">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -390,7 +390,7 @@ deployments and may be missing (undefined) during planning phases.
 ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS managed KMS Key.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-networkInterfaceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L118">property <b>networkInterfaceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L118">property <b>networkInterfaceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkInterfaceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -398,7 +398,7 @@ ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS manag
 Set of Elastic Network Interface identifiers from which the file system is accessible.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L122">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L122">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ownerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -406,7 +406,7 @@ Set of Elastic Network Interface identifiers from which the file system is acces
 AWS account identifier that created the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L126">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L126">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -414,7 +414,7 @@ AWS account identifier that created the file system.
 A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-selfManagedActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L130">property <b>selfManagedActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L130">property <b>selfManagedActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>selfManagedActiveDirectory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WindowsFileSystemSelfManagedActiveDirectory'>outputs.fsx.WindowsFileSystemSelfManagedActiveDirectory</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -422,12 +422,12 @@ A list of IDs for the security groups that apply to the specified network interf
 Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `activeDirectoryId`. Detailed below.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-skipFinalBackup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L131">property <b>skipFinalBackup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L131">property <b>skipFinalBackup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skipFinalBackup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="WindowsFileSystem-storageCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L135">property <b>storageCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L135">property <b>storageCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -435,7 +435,7 @@ Configuration block that Amazon FSx uses to join the Windows File Server instanc
 Storage capacity (GiB) of the file system. Minimum of 300 and maximum of 65536.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L139">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L139">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -443,7 +443,7 @@ Storage capacity (GiB) of the file system. Minimum of 300 and maximum of 65536.
 A list of IDs for the subnets that the file system will be accessible from. File systems support only one subnet. The file server is also launched in that subnet's Availability Zone.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L143">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L143">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -451,7 +451,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
 A mapping of tags to assign to the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-throughputCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L147">property <b>throughputCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L147">property <b>throughputCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>throughputCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -459,7 +459,7 @@ A mapping of tags to assign to the file system.
 Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of `8` and maximum of `2048`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L60">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L60">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -468,7 +468,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L151">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L151">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ deployments.
 Identifier of the Virtual Private Cloud for the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystem-weeklyMaintenanceStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L155">property <b>weeklyMaintenanceStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L155">property <b>weeklyMaintenanceStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>weeklyMaintenanceStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -487,7 +487,7 @@ The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="LustreFileSystemArgs" data-link-title="LustreFileSystemArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L224">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L224">
         interface <strong>LustreFileSystemArgs</strong>
     </a>
 </h3>
@@ -497,7 +497,7 @@ The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in
 The set of arguments for constructing a LustreFileSystem resource.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemArgs-exportPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L228">property <b>exportPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L228">property <b>exportPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exportPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -505,7 +505,7 @@ The set of arguments for constructing a LustreFileSystem resource.
 S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `importPath` argument and the path must use the same Amazon S3 bucket as specified in `importPath`. Set equal to `importPath` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemArgs-importPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L232">property <b>importPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L232">property <b>importPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -513,7 +513,7 @@ S3 URI (with optional prefix) where the root of your Amazon FSx file system is e
 S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemArgs-importedFileChunkSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L236">property <b>importedFileChunkSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L236">property <b>importedFileChunkSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importedFileChunkSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -521,7 +521,7 @@ S3 URI (with optional prefix) that you're using as the data repository for your 
 For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. Can only be specified with `importPath` argument. Defaults to `1024`. Minimum of `1` and maximum of `512000`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L240">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L240">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -529,7 +529,7 @@ For files imported from a data repository, this value determines the stripe coun
 A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemArgs-storageCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L244">property <b>storageCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L244">property <b>storageCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -537,7 +537,7 @@ A list of IDs for the security groups that apply to the specified network interf
 The storage capacity (GiB) of the file system. Minimum of `3600`. Storage capacity is provisioned in increments of 3,600 GiB.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L248">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L248">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ The storage capacity (GiB) of the file system. Minimum of `3600`. Storage capaci
 A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet's Availability Zone.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L252">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L252">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -553,7 +553,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
 A mapping of tags to assign to the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemArgs-weeklyMaintenanceStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L256">property <b>weeklyMaintenanceStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L256">property <b>weeklyMaintenanceStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weeklyMaintenanceStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -561,7 +561,7 @@ A mapping of tags to assign to the file system.
 The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
 
 <h3 class="pdoc-module-header" id="LustreFileSystemState" data-link-title="LustreFileSystemState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L166">
         interface <strong>LustreFileSystemState</strong>
     </a>
 </h3>
@@ -571,7 +571,7 @@ The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in
 Input properties used for looking up and filtering LustreFileSystem resources.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L170">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L170">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -579,7 +579,7 @@ Input properties used for looking up and filtering LustreFileSystem resources.
 Amazon Resource Name of the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L174">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L174">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -587,7 +587,7 @@ Amazon Resource Name of the file system.
 DNS name for the file system, e.g. `fs-12345678.fsx.us-west-2.amazonaws.com`
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-exportPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L178">property <b>exportPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L178">property <b>exportPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exportPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -595,7 +595,7 @@ DNS name for the file system, e.g. `fs-12345678.fsx.us-west-2.amazonaws.com`
 S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `importPath` argument and the path must use the same Amazon S3 bucket as specified in `importPath`. Set equal to `importPath` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-importPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L182">property <b>importPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L182">property <b>importPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -603,7 +603,7 @@ S3 URI (with optional prefix) where the root of your Amazon FSx file system is e
 S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-importedFileChunkSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L186">property <b>importedFileChunkSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L186">property <b>importedFileChunkSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>importedFileChunkSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -611,7 +611,7 @@ S3 URI (with optional prefix) that you're using as the data repository for your 
 For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. Can only be specified with `importPath` argument. Defaults to `1024`. Minimum of `1` and maximum of `512000`.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-networkInterfaceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L190">property <b>networkInterfaceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L190">property <b>networkInterfaceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkInterfaceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -619,7 +619,7 @@ For files imported from a data repository, this value determines the stripe coun
 Set of Elastic Network Interface identifiers from which the file system is accessible.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L194">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L194">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -627,7 +627,7 @@ Set of Elastic Network Interface identifiers from which the file system is acces
 AWS account identifier that created the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L198">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L198">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -635,7 +635,7 @@ AWS account identifier that created the file system.
 A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-storageCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L202">property <b>storageCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L202">property <b>storageCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -643,7 +643,7 @@ A list of IDs for the security groups that apply to the specified network interf
 The storage capacity (GiB) of the file system. Minimum of `3600`. Storage capacity is provisioned in increments of 3,600 GiB.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L206">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L206">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -651,7 +651,7 @@ The storage capacity (GiB) of the file system. Minimum of `3600`. Storage capaci
 A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet's Availability Zone.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L210">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L210">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -659,7 +659,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
 A mapping of tags to assign to the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L214">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L214">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -667,7 +667,7 @@ A mapping of tags to assign to the file system.
 Identifier of the Virtual Private Cloud for the file system.
 
 <h4 class="pdoc-member-header" id="LustreFileSystemState-weeklyMaintenanceStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/lustreFileSystem.ts#L218">property <b>weeklyMaintenanceStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/lustreFileSystem.ts#L218">property <b>weeklyMaintenanceStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weeklyMaintenanceStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -675,7 +675,7 @@ Identifier of the Virtual Private Cloud for the file system.
 The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
 
 <h3 class="pdoc-module-header" id="WindowsFileSystemArgs" data-link-title="WindowsFileSystemArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L306">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L306">
         interface <strong>WindowsFileSystemArgs</strong>
     </a>
 </h3>
@@ -685,7 +685,7 @@ The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in
 The set of arguments for constructing a WindowsFileSystem resource.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-activeDirectoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L310">property <b>activeDirectoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L310">property <b>activeDirectoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeDirectoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -693,7 +693,7 @@ The set of arguments for constructing a WindowsFileSystem resource.
 The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `selfManagedActiveDirectory`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-automaticBackupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L314">property <b>automaticBackupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L314">property <b>automaticBackupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticBackupRetentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -701,7 +701,7 @@ The ID for an existing Microsoft Active Directory instance that the file system 
 The number of days to retain automatic backups. Minimum of `0` and maximum of `35`. Defaults to `7`. Set to `0` to disable.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-copyTagsToBackups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L318">property <b>copyTagsToBackups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L318">property <b>copyTagsToBackups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyTagsToBackups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -709,7 +709,7 @@ The number of days to retain automatic backups. Minimum of `0` and maximum of `3
 A boolean flag indicating whether tags on the file system should be copied to backups. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-dailyAutomaticBackupStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L322">property <b>dailyAutomaticBackupStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L322">property <b>dailyAutomaticBackupStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyAutomaticBackupStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -717,7 +717,7 @@ A boolean flag indicating whether tags on the file system should be copied to ba
 The preferred time (in `HH:MM` format) to take daily automatic backups, in the UTC time zone.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L326">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L326">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -725,7 +725,7 @@ The preferred time (in `HH:MM` format) to take daily automatic backups, in the U
 ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS managed KMS Key.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L330">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L330">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -733,7 +733,7 @@ ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS manag
 A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-selfManagedActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L334">property <b>selfManagedActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L334">property <b>selfManagedActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfManagedActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WindowsFileSystemSelfManagedActiveDirectory'>inputs.fsx.WindowsFileSystemSelfManagedActiveDirectory</a>&gt;;</code></pre>
@@ -741,12 +741,12 @@ A list of IDs for the security groups that apply to the specified network interf
 Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `activeDirectoryId`. Detailed below.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-skipFinalBackup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L335">property <b>skipFinalBackup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L335">property <b>skipFinalBackup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalBackup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-storageCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L339">property <b>storageCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L339">property <b>storageCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -754,7 +754,7 @@ Configuration block that Amazon FSx uses to join the Windows File Server instanc
 Storage capacity (GiB) of the file system. Minimum of 300 and maximum of 65536.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L343">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L343">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -762,7 +762,7 @@ Storage capacity (GiB) of the file system. Minimum of 300 and maximum of 65536.
 A list of IDs for the subnets that the file system will be accessible from. File systems support only one subnet. The file server is also launched in that subnet's Availability Zone.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L347">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L347">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -770,7 +770,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
 A mapping of tags to assign to the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-throughputCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L351">property <b>throughputCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L351">property <b>throughputCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throughputCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -778,7 +778,7 @@ A mapping of tags to assign to the file system.
 Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of `8` and maximum of `2048`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemArgs-weeklyMaintenanceStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L355">property <b>weeklyMaintenanceStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L355">property <b>weeklyMaintenanceStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weeklyMaintenanceStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ Throughput (megabytes per second) of the file system in power of 2 increments. M
 The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
 
 <h3 class="pdoc-module-header" id="WindowsFileSystemState" data-link-title="WindowsFileSystemState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L231">
         interface <strong>WindowsFileSystemState</strong>
     </a>
 </h3>
@@ -796,7 +796,7 @@ The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in
 Input properties used for looking up and filtering WindowsFileSystem resources.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-activeDirectoryId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L235">property <b>activeDirectoryId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L235">property <b>activeDirectoryId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>activeDirectoryId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -804,7 +804,7 @@ Input properties used for looking up and filtering WindowsFileSystem resources.
 The ID for an existing Microsoft Active Directory instance that the file system should join when it's created. Cannot be specified with `selfManagedActiveDirectory`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L239">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L239">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -812,7 +812,7 @@ The ID for an existing Microsoft Active Directory instance that the file system 
 Amazon Resource Name of the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-automaticBackupRetentionDays">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L243">property <b>automaticBackupRetentionDays</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L243">property <b>automaticBackupRetentionDays</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>automaticBackupRetentionDays?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -820,7 +820,7 @@ Amazon Resource Name of the file system.
 The number of days to retain automatic backups. Minimum of `0` and maximum of `35`. Defaults to `7`. Set to `0` to disable.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-copyTagsToBackups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L247">property <b>copyTagsToBackups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L247">property <b>copyTagsToBackups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>copyTagsToBackups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -828,7 +828,7 @@ The number of days to retain automatic backups. Minimum of `0` and maximum of `3
 A boolean flag indicating whether tags on the file system should be copied to backups. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-dailyAutomaticBackupStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L251">property <b>dailyAutomaticBackupStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L251">property <b>dailyAutomaticBackupStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dailyAutomaticBackupStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +836,7 @@ A boolean flag indicating whether tags on the file system should be copied to ba
 The preferred time (in `HH:MM` format) to take daily automatic backups, in the UTC time zone.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-dnsName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L255">property <b>dnsName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L255">property <b>dnsName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -844,7 +844,7 @@ The preferred time (in `HH:MM` format) to take daily automatic backups, in the U
 DNS name for the file system, e.g. `fs-12345678.corp.example.com` (domain name matching the Active Directory domain name)
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-kmsKeyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L259">property <b>kmsKeyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L259">property <b>kmsKeyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ DNS name for the file system, e.g. `fs-12345678.corp.example.com` (domain name m
 ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS managed KMS Key.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-networkInterfaceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L263">property <b>networkInterfaceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L263">property <b>networkInterfaceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkInterfaceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -860,7 +860,7 @@ ARN for the KMS Key to encrypt the file system at rest. Defaults to an AWS manag
 Set of Elastic Network Interface identifiers from which the file system is accessible.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L267">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L267">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -868,7 +868,7 @@ Set of Elastic Network Interface identifiers from which the file system is acces
 AWS account identifier that created the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L271">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L271">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -876,7 +876,7 @@ AWS account identifier that created the file system.
 A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-selfManagedActiveDirectory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L275">property <b>selfManagedActiveDirectory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L275">property <b>selfManagedActiveDirectory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>selfManagedActiveDirectory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WindowsFileSystemSelfManagedActiveDirectory'>inputs.fsx.WindowsFileSystemSelfManagedActiveDirectory</a>&gt;;</code></pre>
@@ -884,12 +884,12 @@ A list of IDs for the security groups that apply to the specified network interf
 Configuration block that Amazon FSx uses to join the Windows File Server instance to your self-managed (including on-premises) Microsoft Active Directory (AD) directory. Cannot be specified with `activeDirectoryId`. Detailed below.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-skipFinalBackup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L276">property <b>skipFinalBackup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L276">property <b>skipFinalBackup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipFinalBackup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-storageCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L280">property <b>storageCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L280">property <b>storageCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -897,7 +897,7 @@ Configuration block that Amazon FSx uses to join the Windows File Server instanc
 Storage capacity (GiB) of the file system. Minimum of 300 and maximum of 65536.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L284">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L284">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -905,7 +905,7 @@ Storage capacity (GiB) of the file system. Minimum of 300 and maximum of 65536.
 A list of IDs for the subnets that the file system will be accessible from. File systems support only one subnet. The file server is also launched in that subnet's Availability Zone.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L288">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L288">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -913,7 +913,7 @@ A list of IDs for the subnets that the file system will be accessible from. File
 A mapping of tags to assign to the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-throughputCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L292">property <b>throughputCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L292">property <b>throughputCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>throughputCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -921,7 +921,7 @@ A mapping of tags to assign to the file system.
 Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of `8` and maximum of `2048`.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L296">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L296">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -929,7 +929,7 @@ Throughput (megabytes per second) of the file system in power of 2 increments. M
 Identifier of the Virtual Private Cloud for the file system.
 
 <h4 class="pdoc-member-header" id="WindowsFileSystemState-weeklyMaintenanceStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/00ae83330810ff27fbe24ede3176231e70d77715/sdk/nodejs/fsx/windowsFileSystem.ts#L300">property <b>weeklyMaintenanceStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/fsx/windowsFileSystem.ts#L300">property <b>weeklyMaintenanceStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>weeklyMaintenanceStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

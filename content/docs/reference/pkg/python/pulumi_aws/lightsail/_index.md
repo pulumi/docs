@@ -134,7 +134,7 @@ for more information.</p>
 <p>Lightsail currently supports the following Blueprint IDs:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">amazon_linux_2018_03_0_2</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">centos_7_1805_01</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">centos_7_1901_01</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">debian_8_7</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">debian_9_5</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">freebsd_11_1</span></code></p></li>
@@ -209,13 +209,6 @@ Lightsail console (cannot use <code class="docutils literal notranslate"><span c
 <dt id="pulumi_aws.lightsail.Instance.arn">
 <code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Instance.arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ARN of the Lightsail instance (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>).</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">blueprint_id</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">bundle_id</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">key_pair_name</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code></p></li>
-</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -236,6 +229,19 @@ instance (see list below)</p>
 <dt id="pulumi_aws.lightsail.Instance.bundle_id">
 <code class="sig-name descname">bundle_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Instance.bundle_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The bundle of specification information (see list below)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.lightsail.Instance.created_at">
+<code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.lightsail.Instance.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The timestamp when the instance was created.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">availability_zone</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blueprint_id</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bundle_id</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">key_pair_name</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_data</span></code></p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -275,6 +281,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Lightsail instance (matches <code class="docutils literal notranslate"><span class="pre">id</span></code>).</p></li>
+<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone in which to create your
+instance (see list below)</p></li>
+<li><p><strong>blueprint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for a virtual private server image
+(see list below)</p></li>
+<li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bundle of specification information (see list below)</p></li>
+<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The timestamp when the instance was created.</p></li>
 </ul>
 </dd>
 </dl>
@@ -288,11 +300,6 @@ properties used to qualify the lookup.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>availability_zone</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Availability Zone in which to create your
-instance (see list below)</p></li>
-<li><p><strong>blueprint_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID for a virtual private server image
-(see list below)</p></li>
-<li><p><strong>bundle_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The bundle of specification information (see list below)</p></li>
 <li><p><strong>key_pair_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of your key pair. Created in the
 Lightsail console (cannot use <code class="docutils literal notranslate"><span class="pre">ec2.KeyPair</span></code> at this time)</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the Lightsail Instance</p></li>
