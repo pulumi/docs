@@ -1,16 +1,17 @@
+<ul class="glossary">
+    {{ range sort $.Site.Data.glossary.entries "term" }}
+        <li><a href="#{{ anchorize .term }}">{{ .term }}</a></li>
+    {{ end }}
+</ul>
+
 {{ range sort $.Site.Data.glossary.entries "term" }}
-    <div>
-        <ul>
-            <li><a href="#{{ lower .term }}" class="">{{ .term }}</a></li>
-        </ul>
-    </div>
-{{ end }}
-    
-{{ range sort $.Site.Data.glossary.entries "term" }}
-    <div class="flex-1 mt-8">
-        <h2 class="mt-2 mb-0">{{ .term }} </h2>
-            <p>{{ .description }}</p>
-                <ul class="mb-4">
-                    <li>Read More: <a href="{{ .link }}" class="">{{ .term }}</a></li>
-    </div>
+<h2 id="{{ anchorize .term }}">{{ .term }}</h2>
+<p>{{ .description }}</p>
+<p>
+    {{ $link := .link }}
+    {{ if hasPrefix $link "/" }}
+        {{ $link = relref $.Page $link }}
+    {{ end }}
+    <a href="{{ $link }}"><i class="fab fa-readme mr-2"></i>{{ .term }}</a>
+</p>
 {{ end }}

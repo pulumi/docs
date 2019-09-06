@@ -131,7 +131,7 @@ link = "https://en.wikipedia.org/wiki/SAML_2.0"
 [[entries]]
 term = "Stack Tags"
 description = "Stacks have associated metadata in the form of tags, with each tag consisting of a name and value. Stack tags are only supported when logged into the Pulumi Service backend."
-link = "/docs/intro/concepts/stack/#stack-tags"
+link = "/docs/intro/concepts/stack#stack-tags"
 
 [[entries]]
 term = "API"
@@ -141,7 +141,7 @@ link = "/docs/reference/pkg"
 [[entries]]
 term = "CLI"
 description = "Command-line Interface. The Pulumi CLI is open source and works in conjunction with the Pulumi service to deploy changes to your cloud apps and infrastructure."
-link = "/docs/reference/pkg"
+link = "/docs/reference/cli"
 
 [[entries]]
 term = "Project"

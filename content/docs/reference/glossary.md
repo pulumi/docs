@@ -5,7 +5,4 @@ menu:
     weight: 4
 ---
 
-This page is a collection of brief definitions of technical terms used in the Pulumi documentation.
-
-
-
+{{< glossary >}}
