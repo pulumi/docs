@@ -638,7 +638,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">destination_id=None</em>, <em class="sig-param">elasticsearch_configuration=None</em>, <em class="sig-param">extended_s3_configuration=None</em>, <em class="sig-param">kinesis_source_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redshift_configuration=None</em>, <em class="sig-param">s3_configuration=None</em>, <em class="sig-param">splunk_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.kinesis.</code><code class="sig-name descname">FirehoseDeliveryStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">destination_id=None</em>, <em class="sig-param">elasticsearch_configuration=None</em>, <em class="sig-param">extended_s3_configuration=None</em>, <em class="sig-param">kinesis_source_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redshift_configuration=None</em>, <em class="sig-param">s3_configuration=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">splunk_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Kinesis Firehose Delivery Stream resource. Amazon Kinesis Firehose is a fully managed, elastic service to easily deliver real-time data streams to destinations such as Amazon S3 and Amazon Redshift.</p>
 <p>For more details, see the [Amazon Kinesis Firehose Documentation][1].</p>
 <dl class="field-list simple">
@@ -657,6 +657,8 @@ Using <code class="docutils literal notranslate"><span class="pre">redshift_conf
 <code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> block. More details are given below.</p></li>
 <li><p><strong>s3_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Required for non-S3 destinations. For S3 destination, use <code class="docutils literal notranslate"><span class="pre">extended_s3_configuration</span></code> instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.</p></li>
+<li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options.
+Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the table version for the output data schema. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>.</p></li>
 </ul>
@@ -899,6 +901,10 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The “YYYY/MM/DD/HH” time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
+</ul>
+<p>The <strong>server_side_encryption</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
 </ul>
 <p>The <strong>splunk_configuration</strong> object supports the following:</p>
 <ul class="simple">
@@ -1181,6 +1187,16 @@ be used.</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.server_side_encryption">
+<code class="sig-name descname">server_side_encryption</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.server_side_encryption" title="Permalink to this definition">¶</a></dt>
+<dd><p>Encrypt at rest options.
+Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.tags">
 <code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.tags" title="Permalink to this definition">¶</a></dt>
 <dd><p>A mapping of tags to assign to the resource.</p>
@@ -1194,7 +1210,7 @@ be used.</p></li>
 
 <dl class="method">
 <dt id="pulumi_aws.kinesis.FirehoseDeliveryStream.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">destination_id=None</em>, <em class="sig-param">elasticsearch_configuration=None</em>, <em class="sig-param">extended_s3_configuration=None</em>, <em class="sig-param">kinesis_source_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redshift_configuration=None</em>, <em class="sig-param">s3_configuration=None</em>, <em class="sig-param">splunk_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">destination=None</em>, <em class="sig-param">destination_id=None</em>, <em class="sig-param">elasticsearch_configuration=None</em>, <em class="sig-param">extended_s3_configuration=None</em>, <em class="sig-param">kinesis_source_configuration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redshift_configuration=None</em>, <em class="sig-param">s3_configuration=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">splunk_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.kinesis.FirehoseDeliveryStream.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing FirehoseDeliveryStream resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1214,6 +1230,8 @@ Using <code class="docutils literal notranslate"><span class="pre">redshift_conf
 <code class="docutils literal notranslate"><span class="pre">s3_configuration</span></code> block. More details are given below.</p></li>
 <li><p><strong>s3_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Required for non-S3 destinations. For S3 destination, use <code class="docutils literal notranslate"><span class="pre">extended_s3_configuration</span></code> instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.</p></li>
+<li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encrypt at rest options.
+Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the table version for the output data schema. Defaults to <code class="docutils literal notranslate"><span class="pre">LATEST</span></code>.</p></li>
 </ul>
@@ -1456,6 +1474,10 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
 be used.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The “YYYY/MM/DD/HH” time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren’t allowed.</p></li>
+</ul>
+<p>The <strong>server_side_encryption</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. Set it to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you want to disable format conversion while preserving the configuration details.</p></li>
 </ul>
 <p>The <strong>splunk_configuration</strong> object supports the following:</p>
 <ul class="simple">

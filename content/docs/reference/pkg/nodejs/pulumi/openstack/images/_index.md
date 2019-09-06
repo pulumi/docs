@@ -37,7 +37,7 @@ linktitle: "images"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Image" data-link-title="Image">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L44">
         Resource <strong>Image</strong>
     </a>
 </h3>
@@ -81,7 +81,7 @@ Image Service set it.
 > This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/images_image_v2.html.markdown.
 
 <h4 class="pdoc-member-header" id="Image-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L188"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L188"> <b>constructor</b></a>
 </h4>
 
 
@@ -95,7 +95,7 @@ Create a Image resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Image-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L53">method <b>get</b></a>
 </h4>
 
 
@@ -106,14 +106,14 @@ Get an existing Image resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Image-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Image-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L64">method <b>isInstance</b></a>
 </h4>
 
 
@@ -124,7 +124,7 @@ Returns true if the given object is an instance of Image.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Image-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L74">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L74">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>checksum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -132,7 +132,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The checksum of the data associated with the image.
 
 <h4 class="pdoc-member-header" id="Image-containerFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L79">property <b>containerFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L79">property <b>containerFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>containerFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
 
 <h4 class="pdoc-member-header" id="Image-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L83">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L83">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createdAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -149,7 +149,7 @@ The container format. Must be one of
 The date the image was created.
 
 <h4 class="pdoc-member-header" id="Image-diskFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L88">property <b>diskFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L88">property <b>diskFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>diskFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -158,7 +158,7 @@ The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
 
 <h4 class="pdoc-member-header" id="Image-file">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L94">property <b>file</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L94">property <b>file</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>file: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -168,7 +168,7 @@ endpoint that represent the location of the image
 or the path to retrieve it.
 
 <h4 class="pdoc-member-header" id="Image-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -177,12 +177,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Image-imageCachePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L95">property <b>imageCachePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L95">property <b>imageCachePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageCachePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Image-imageSourceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L103">property <b>imageSourceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L103">property <b>imageSourceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageSourceUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ does not yet provide a way to do so.
 Conflicts with `localFilePath`.
 
 <h4 class="pdoc-member-header" id="Image-localFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L108">property <b>localFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L108">property <b>localFilePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>localFilePath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `imageSourceUrl`.
 
 <h4 class="pdoc-member-header" id="Image-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L114">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L114">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -213,7 +213,7 @@ Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
 
 <h4 class="pdoc-member-header" id="Image-minDiskGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L119">property <b>minDiskGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L119">property <b>minDiskGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minDiskGb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -222,7 +222,7 @@ Amount of disk space (in GB) required to boot image.
 Defaults to 0.
 
 <h4 class="pdoc-member-header" id="Image-minRamMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L124">property <b>minRamMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L124">property <b>minRamMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minRamMb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -231,7 +231,7 @@ Amount of ram (in MB) required to boot image.
 Defauts to 0.
 
 <h4 class="pdoc-member-header" id="Image-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L128">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L128">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -239,7 +239,7 @@ Defauts to 0.
 The name of the image.
 
 <h4 class="pdoc-member-header" id="Image-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L132">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L132">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>owner: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -247,7 +247,7 @@ The name of the image.
 The id of the openstack user who owns the image.
 
 <h4 class="pdoc-member-header" id="Image-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L138">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L138">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>properties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -257,7 +257,7 @@ information about an image. See the "Notes" section for further
 information about properties.
 
 <h4 class="pdoc-member-header" id="Image-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L143">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L143">property <b>protected</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protected: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ If true, image will not be deletable.
 Defaults to false.
 
 <h4 class="pdoc-member-header" id="Image-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L150">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L150">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
 
 <h4 class="pdoc-member-header" id="Image-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L155">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L155">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>schema: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -286,7 +286,7 @@ The path to the JSON-schema that represent
 the image or image
 
 <h4 class="pdoc-member-header" id="Image-sizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L159">property <b>sizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L159">property <b>sizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sizeBytes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -294,7 +294,7 @@ the image or image
 The size in bytes of the data associated with the image.
 
 <h4 class="pdoc-member-header" id="Image-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L164">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L164">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -303,7 +303,7 @@ The status of the image. It can be "queued", "active"
 or "saving".
 
 <h4 class="pdoc-member-header" id="Image-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L169">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L169">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -312,7 +312,7 @@ The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
 
 <h4 class="pdoc-member-header" id="Image-updateAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L173">property <b>updateAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L173">property <b>updateAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -320,7 +320,7 @@ At this time, it is not possible to delete all tags of an image.
 (**Deprecated** - use `updatedAt` instead)
 
 <h4 class="pdoc-member-header" id="Image-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L177">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L177">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedAt: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -328,7 +328,7 @@ At this time, it is not possible to delete all tags of an image.
 The date the image was last updated.
 
 <h4 class="pdoc-member-header" id="Image-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -337,7 +337,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Image-verifyChecksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L182">property <b>verifyChecksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L182">property <b>verifyChecksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verifyChecksum: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -346,7 +346,7 @@ If false, the checksum will not be verified
 once the image is finished uploading. Defaults to true.
 
 <h4 class="pdoc-member-header" id="Image-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L188">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L188">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>visibility: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -358,7 +358,7 @@ visibility depends upon the configuration of the OpenStack cloud.
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getImage" data-link-title="getImage">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L27">
         Data Source <strong>getImage</strong>
     </a>
 </h3>
@@ -389,7 +389,7 @@ const ubuntu = openstack.images.getImage({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetImageArgs" data-link-title="GetImageArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L57">
         interface <strong>GetImageArgs</strong>
     </a>
 </h3>
@@ -399,7 +399,7 @@ const ubuntu = openstack.images.getImage({
 A collection of arguments for invoking getImage.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-memberStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L62">property <b>memberStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L62">property <b>memberStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberStatus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -408,7 +408,7 @@ The status of the image. Must be one of
 "accepted", "pending", "rejected", or "all".
 
 <h4 class="pdoc-member-header" id="GetImageArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L67">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L67">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -417,7 +417,7 @@ If more than one result is returned, use the most
 recent image.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -425,7 +425,7 @@ recent image.
 The name of the image.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L75">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L75">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -433,7 +433,7 @@ The name of the image.
 The owner (UUID) of the image.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L80">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L80">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>properties?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -442,7 +442,7 @@ a map of key/value pairs to match an image with.
 All specified properties must be matched.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L87">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L87">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -453,7 +453,7 @@ a compute instance. If omitted, the `region` argument of the provider
 is used.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-sizeMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L91">property <b>sizeMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L91">property <b>sizeMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeMax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -461,7 +461,7 @@ is used.
 The maximum size (in bytes) of the image to return.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-sizeMin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L95">property <b>sizeMin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L95">property <b>sizeMin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeMin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -469,7 +469,7 @@ The maximum size (in bytes) of the image to return.
 The minimum size (in bytes) of the image to return.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-sortDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L99">property <b>sortDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L99">property <b>sortDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortDirection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -477,7 +477,7 @@ The minimum size (in bytes) of the image to return.
 Order the results in either `asc` or `desc`.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-sortKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L103">property <b>sortKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L103">property <b>sortKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -485,7 +485,7 @@ Order the results in either `asc` or `desc`.
 Sort images based on a certain key. Defaults to `name`.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L107">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L107">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -493,7 +493,7 @@ Sort images based on a certain key. Defaults to `name`.
 Search for images with a specific tag.
 
 <h4 class="pdoc-member-header" id="GetImageArgs-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L112">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L112">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -502,7 +502,7 @@ The visibility of the image. Must be one of
 "public", "private", "community", or "shared". Defaults to "private".
 
 <h3 class="pdoc-module-header" id="GetImageResult" data-link-title="GetImageResult">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L118">
         interface <strong>GetImageResult</strong>
     </a>
 </h3>
@@ -512,7 +512,7 @@ The visibility of the image. Must be one of
 A collection of values returned by getImage.
 
 <h4 class="pdoc-member-header" id="GetImageResult-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L122">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L122">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -520,12 +520,12 @@ A collection of values returned by getImage.
 The checksum of the data associated with the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-containerFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L123">property <b>containerFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L123">property <b>containerFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L129">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L129">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -535,12 +535,12 @@ The date the image was created.
 * `diskFormat`: The format of the image's disk.
 
 <h4 class="pdoc-member-header" id="GetImageResult-diskFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L130">property <b>diskFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L130">property <b>diskFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskFormat: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-file">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L135">property <b>file</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L135">property <b>file</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>file: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -549,7 +549,7 @@ the trailing path after the glance endpoint that represent the
 location of the image or the path to retrieve it.
 
 <h4 class="pdoc-member-header" id="GetImageResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L189">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L189">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -557,12 +557,12 @@ location of the image or the path to retrieve it.
 id is the provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetImageResult-memberStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L136">property <b>memberStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L136">property <b>memberStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memberStatus?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L142">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L142">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -572,7 +572,7 @@ Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
 
 <h4 class="pdoc-member-header" id="GetImageResult-minDiskGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L146">property <b>minDiskGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L146">property <b>minDiskGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDiskGb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -580,7 +580,7 @@ and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.ht
 The minimum amount of disk space required to use the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-minRamMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L150">property <b>minRamMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L150">property <b>minRamMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minRamMb: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -588,22 +588,22 @@ The minimum amount of disk space required to use the image.
 The minimum amount of ram required to use the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L151">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L151">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L152">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L152">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L153">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L153">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L157">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L157">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>properties?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -611,7 +611,7 @@ The minimum amount of ram required to use the image.
 Freeform information about the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L161">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L161">property <b>protected</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protected: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -619,12 +619,12 @@ Freeform information about the image.
 Whether or not the image is protected.
 
 <h4 class="pdoc-member-header" id="GetImageResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L162">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L162">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L167">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L167">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -633,7 +633,7 @@ The path to the JSON-schema that represent
 the image or image
 
 <h4 class="pdoc-member-header" id="GetImageResult-sizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L171">property <b>sizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L171">property <b>sizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeBytes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -641,32 +641,32 @@ the image or image
 The size of the image (in bytes).
 
 <h4 class="pdoc-member-header" id="GetImageResult-sizeMax">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L172">property <b>sizeMax</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L172">property <b>sizeMax</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeMax?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-sizeMin">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L173">property <b>sizeMin</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L173">property <b>sizeMin</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeMin?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-sortDirection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L174">property <b>sortDirection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L174">property <b>sortDirection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortDirection?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-sortKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L175">property <b>sortKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L175">property <b>sortKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortKey?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-tag">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L176">property <b>tag</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L176">property <b>tag</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetImageResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L180">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L180">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -674,7 +674,7 @@ The size of the image (in bytes).
 The tags list of the image.
 
 <h4 class="pdoc-member-header" id="GetImageResult-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L184">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L184">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -682,12 +682,12 @@ The tags list of the image.
 The date the image was last updated.
 
 <h4 class="pdoc-member-header" id="GetImageResult-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/getImage.ts#L185">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/getImage.ts#L185">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="ImageArgs" data-link-title="ImageArgs">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L397">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L397">
         interface <strong>ImageArgs</strong>
     </a>
 </h3>
@@ -697,7 +697,7 @@ The date the image was last updated.
 The set of arguments for constructing a Image resource.
 
 <h4 class="pdoc-member-header" id="ImageArgs-containerFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L402">property <b>containerFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L402">property <b>containerFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -706,7 +706,7 @@ The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
 
 <h4 class="pdoc-member-header" id="ImageArgs-diskFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L407">property <b>diskFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L407">property <b>diskFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskFormat: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -715,12 +715,12 @@ The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
 
 <h4 class="pdoc-member-header" id="ImageArgs-imageCachePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L408">property <b>imageCachePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L408">property <b>imageCachePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCachePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ImageArgs-imageSourceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L416">property <b>imageSourceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L416">property <b>imageSourceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageSourceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -732,7 +732,7 @@ does not yet provide a way to do so.
 Conflicts with `localFilePath`.
 
 <h4 class="pdoc-member-header" id="ImageArgs-localFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L421">property <b>localFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L421">property <b>localFilePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localFilePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -741,7 +741,7 @@ This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `imageSourceUrl`.
 
 <h4 class="pdoc-member-header" id="ImageArgs-minDiskGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L426">property <b>minDiskGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L426">property <b>minDiskGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDiskGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -750,7 +750,7 @@ Amount of disk space (in GB) required to boot image.
 Defaults to 0.
 
 <h4 class="pdoc-member-header" id="ImageArgs-minRamMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L431">property <b>minRamMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L431">property <b>minRamMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minRamMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -759,7 +759,7 @@ Amount of ram (in MB) required to boot image.
 Defauts to 0.
 
 <h4 class="pdoc-member-header" id="ImageArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L435">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L435">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -767,7 +767,7 @@ Defauts to 0.
 The name of the image.
 
 <h4 class="pdoc-member-header" id="ImageArgs-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L441">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L441">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -777,7 +777,7 @@ information about an image. See the "Notes" section for further
 information about properties.
 
 <h4 class="pdoc-member-header" id="ImageArgs-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L446">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L446">property <b>protected</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protected?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -786,7 +786,7 @@ If true, image will not be deletable.
 Defaults to false.
 
 <h4 class="pdoc-member-header" id="ImageArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L453">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L453">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -797,7 +797,7 @@ a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
 
 <h4 class="pdoc-member-header" id="ImageArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L458">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L458">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -806,7 +806,7 @@ The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
 
 <h4 class="pdoc-member-header" id="ImageArgs-verifyChecksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L463">property <b>verifyChecksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L463">property <b>verifyChecksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verifyChecksum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -815,7 +815,7 @@ If false, the checksum will not be verified
 once the image is finished uploading. Defaults to true.
 
 <h4 class="pdoc-member-header" id="ImageArgs-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L469">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L469">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -825,7 +825,7 @@ The visibility of the image. Must be one of
 visibility depends upon the configuration of the OpenStack cloud.
 
 <h3 class="pdoc-module-header" id="ImageState" data-link-title="ImageState">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L273">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L273">
         interface <strong>ImageState</strong>
     </a>
 </h3>
@@ -835,7 +835,7 @@ visibility depends upon the configuration of the OpenStack cloud.
 Input properties used for looking up and filtering Image resources.
 
 <h4 class="pdoc-member-header" id="ImageState-checksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L277">property <b>checksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L277">property <b>checksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>checksum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -843,7 +843,7 @@ Input properties used for looking up and filtering Image resources.
 The checksum of the data associated with the image.
 
 <h4 class="pdoc-member-header" id="ImageState-containerFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L282">property <b>containerFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L282">property <b>containerFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>containerFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ The container format. Must be one of
 "ami", "ari", "aki", "bare", "ovf".
 
 <h4 class="pdoc-member-header" id="ImageState-createdAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L286">property <b>createdAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L286">property <b>createdAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createdAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -860,7 +860,7 @@ The container format. Must be one of
 The date the image was created.
 
 <h4 class="pdoc-member-header" id="ImageState-diskFormat">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L291">property <b>diskFormat</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L291">property <b>diskFormat</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>diskFormat?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -869,7 +869,7 @@ The disk format. Must be one of
 "ami", "ari", "aki", "vhd", "vmdk", "raw", "qcow2", "vdi", "iso".
 
 <h4 class="pdoc-member-header" id="ImageState-file">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L297">property <b>file</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L297">property <b>file</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>file?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -879,12 +879,12 @@ endpoint that represent the location of the image
 or the path to retrieve it.
 
 <h4 class="pdoc-member-header" id="ImageState-imageCachePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L298">property <b>imageCachePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L298">property <b>imageCachePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageCachePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ImageState-imageSourceUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L306">property <b>imageSourceUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L306">property <b>imageSourceUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageSourceUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +896,7 @@ does not yet provide a way to do so.
 Conflicts with `localFilePath`.
 
 <h4 class="pdoc-member-header" id="ImageState-localFilePath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L311">property <b>localFilePath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L311">property <b>localFilePath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localFilePath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -905,7 +905,7 @@ This is the filepath of the raw image file
 that will be uploaded to Glance. Conflicts with `imageSourceUrl`.
 
 <h4 class="pdoc-member-header" id="ImageState-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L317">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L317">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -915,7 +915,7 @@ Image metadata allow for meaningfully define the image properties
 and tags. See https://docs.openstack.org/glance/latest/user/metadefs-concepts.html.
 
 <h4 class="pdoc-member-header" id="ImageState-minDiskGb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L322">property <b>minDiskGb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L322">property <b>minDiskGb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDiskGb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -924,7 +924,7 @@ Amount of disk space (in GB) required to boot image.
 Defaults to 0.
 
 <h4 class="pdoc-member-header" id="ImageState-minRamMb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L327">property <b>minRamMb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L327">property <b>minRamMb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minRamMb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -933,7 +933,7 @@ Amount of ram (in MB) required to boot image.
 Defauts to 0.
 
 <h4 class="pdoc-member-header" id="ImageState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L331">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L331">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -941,7 +941,7 @@ Defauts to 0.
 The name of the image.
 
 <h4 class="pdoc-member-header" id="ImageState-owner">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L335">property <b>owner</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L335">property <b>owner</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owner?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -949,7 +949,7 @@ The name of the image.
 The id of the openstack user who owns the image.
 
 <h4 class="pdoc-member-header" id="ImageState-properties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L341">property <b>properties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L341">property <b>properties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>properties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -959,7 +959,7 @@ information about an image. See the "Notes" section for further
 information about properties.
 
 <h4 class="pdoc-member-header" id="ImageState-protected">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L346">property <b>protected</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L346">property <b>protected</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protected?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -968,7 +968,7 @@ If true, image will not be deletable.
 Defaults to false.
 
 <h4 class="pdoc-member-header" id="ImageState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L353">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L353">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -979,7 +979,7 @@ a compute instance. If omitted, the `region` argument of the provider
 is used. Changing this creates a new Image.
 
 <h4 class="pdoc-member-header" id="ImageState-schema">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L358">property <b>schema</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L358">property <b>schema</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>schema?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -988,7 +988,7 @@ The path to the JSON-schema that represent
 the image or image
 
 <h4 class="pdoc-member-header" id="ImageState-sizeBytes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L362">property <b>sizeBytes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L362">property <b>sizeBytes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sizeBytes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -996,7 +996,7 @@ the image or image
 The size in bytes of the data associated with the image.
 
 <h4 class="pdoc-member-header" id="ImageState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L367">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L367">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1005,7 +1005,7 @@ The status of the image. It can be "queued", "active"
 or "saving".
 
 <h4 class="pdoc-member-header" id="ImageState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L372">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L372">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1014,7 +1014,7 @@ The tags of the image. It must be a list of strings.
 At this time, it is not possible to delete all tags of an image.
 
 <h4 class="pdoc-member-header" id="ImageState-updateAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L376">property <b>updateAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L376">property <b>updateAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1022,7 +1022,7 @@ At this time, it is not possible to delete all tags of an image.
 (**Deprecated** - use `updatedAt` instead)
 
 <h4 class="pdoc-member-header" id="ImageState-updatedAt">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L380">property <b>updatedAt</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L380">property <b>updatedAt</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedAt?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1030,7 +1030,7 @@ At this time, it is not possible to delete all tags of an image.
 The date the image was last updated.
 
 <h4 class="pdoc-member-header" id="ImageState-verifyChecksum">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L385">property <b>verifyChecksum</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L385">property <b>verifyChecksum</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verifyChecksum?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1039,7 +1039,7 @@ If false, the checksum will not be verified
 once the image is finished uploading. Defaults to true.
 
 <h4 class="pdoc-member-header" id="ImageState-visibility">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a537bb9ef69295994b3ccad0b0a40f046e0e186d/sdk/nodejs/images/image.ts#L391">property <b>visibility</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/bf2d4c5e0b364f3725c0966ede82750cd09d1576/sdk/nodejs/images/image.ts#L391">property <b>visibility</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visibility?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
