@@ -83,14 +83,15 @@ func main() {
 }
 
 type tutorial struct {
-	Name      string
-	Title     string
-	MetaDesc  string
-	Cloud     string
-	Language  string
-	Body      string
-	URL       string
-	GitHubURL string
+	Name              string
+	Title             string
+	MetaDesc          string
+	Cloud             string
+	Language          string
+	Body              string
+	URL               string
+	GitHubURL         string
+	PulumiTemplateURL string
 }
 
 func gatherTutorials(root string) ([]tutorial, error) {
@@ -106,6 +107,8 @@ func gatherTutorials(root string) ([]tutorial, error) {
 		if !file.IsDir() || name[0] == '.' {
 			continue
 		}
+		githubURL := fmt.Sprintf("%s/tree/master/%s", gitHubBaseURL, name)
+		pulumiTemplateURL := ""
 
 		// Each tutorial directory follows a convention: <cloud>-<language>-<short-name>. Parse it.
 		// Warn and ignore any that don't follow this convention (ideally we'd fix them).
@@ -138,6 +141,14 @@ func gatherTutorials(root string) ([]tutorial, error) {
 		// The first H1 is assumed to be the title.
 		var title string
 		top.Walk(func(node *blackfriday.Node, entering bool) blackfriday.WalkStatus {
+			if node.Type == blackfriday.Link {
+				destination := string(node.LinkData.Destination)
+				if destination == "https://app.pulumi.com/new" {
+					pulumiTemplateURL = githubURL
+				} else if strings.HasPrefix(destination, "https://app.pulumi.com/new?template=") {
+					pulumiTemplateURL = strings.TrimPrefix(destination, "https://app.pulumi.com/new?template=")
+				}
+			}
 			if node.Type == blackfriday.Heading && node.HeadingData.Level == 1 {
 				node.Walk(func(inner *blackfriday.Node, entering bool) blackfriday.WalkStatus {
 					if inner.Type == blackfriday.Text {
@@ -156,14 +167,15 @@ func gatherTutorials(root string) ([]tutorial, error) {
 
 		// Great! We have a new tutorial. Append it and let's move on to the next one.
 		tutorials = append(tutorials, tutorial{
-			Name:      name,
-			Title:     title,
-			MetaDesc:  "",
-			Cloud:     parts[0],
-			Language:  parts[1],
-			Body:      cleanMarkdownBody(name, string(body)),
-			URL:       fmt.Sprintf("/docs/tutorials/%s/%s", parts[0], name),
-			GitHubURL: fmt.Sprintf("%s/tree/master/%s", gitHubBaseURL, name),
+			Name:              name,
+			Title:             title,
+			MetaDesc:          "",
+			Cloud:             parts[0],
+			Language:          parts[1],
+			Body:              cleanMarkdownBody(name, string(body)),
+			URL:               fmt.Sprintf("/docs/tutorials/%s/%s", parts[0], name),
+			GitHubURL:         githubURL,
+			PulumiTemplateURL: pulumiTemplateURL,
 		})
 	}
 
