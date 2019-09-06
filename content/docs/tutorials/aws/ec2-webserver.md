@@ -57,7 +57,14 @@ aws:region: (us-east-1)
     const aws = require("@pulumi/aws");
 
     let size = "t2.micro";     // t2.micro is available in the AWS free tier
-    let ami  = "ami-0ff8a91507f77f867"; // AMI for Amazon Linux in us-east-1 (Virginia)
+    let ami = aws.getAmi({
+        filters: [{
+          name: "name",
+          values: ["amzn-ami-hvm-*"],
+        }],
+        owners: ["137112412989"], // This owner ID is Amazon
+        mostRecent: true,
+    });
 
     let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
         ingress: [
@@ -68,7 +75,7 @@ aws:region: (us-east-1)
     let server = new aws.ec2.Instance("webserver-www", {
         instanceType: size,
         securityGroups: [ group.name ], // reference the security group resource above
-        ami: ami,
+        ami: ami.id,
     });
 
     exports.publicIp = server.publicIp;
@@ -76,10 +83,17 @@ aws:region: (us-east-1)
     ```
 
     ```typescript
-    const aws = require("@pulumi/aws");
+    import * as aws from "@pulumi/aws";
 
     const size = "t2.micro";     // t2.micro is available in the AWS free tier
-    const ami  = "ami-0ff8a91507f77f867"; // AMI for Amazon Linux in us-east-1 (Virginia)
+    const ami = aws.getAmi({
+        filters: [{
+            name: "name",
+            values: ["amzn-ami-hvm-*"],
+        }],
+        owners: ["137112412989"], // This owner ID is Amazon
+        mostRecent: true,
+    });
 
     const group = new aws.ec2.SecurityGroup("webserver-secgrp", {
         ingress: [
@@ -90,30 +104,32 @@ aws:region: (us-east-1)
     const server = new aws.ec2.Instance("webserver-www", {
         instanceType: size,
         securityGroups: [ group.name ], // reference the security group resource above
-        ami: ami,
+        ami: ami.id,
     });
 
-    exports.publicIp = server.publicIp;
-    exports.publicHostName = server.publicDns;
+    export const publicIp = server.publicIp;
+    export const publicHostName = server.publicDns;
     ```
 
     ```python
     import pulumi
-    from pulumi_aws import ec2
-    ami = 'ami-0ff8a91507f77f867' # AMI for Amazon Linux in us-east-1 (Virginia)
+    import pulumi_aws as aws
 
     size = 't2.micro'
+    ami = aws.get_ami(most_recent="true",
+                      owners=["137112412989"],
+                      filters=[{"name":"name","values":["amzn-ami-hvm-*"]}])
 
-    group = ec2.SecurityGroup('webserver-secgrp',
+    group = aws.ec2.SecurityGroup('webserver-secgrp',
         description='Enable HTTP access',
         ingress=[
             { 'protocol': 'tcp', 'from_port': 22, 'to_port': 22, 'cidr_blocks': ['0.0.0.0/0'] }
         ])
 
-    server = ec2.Instance('webserver-www',
+    server = aws.ec2.Instance('webserver-www',
         instance_type=size,
         security_groups=[group.name], # reference security group from above
-        ami=ami)
+        ami=ami.id)
 
     pulumi.export('publicIp', server.public_ip)
     pulumi.export('publicHostName', server.public_dns)
