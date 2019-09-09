@@ -1,5 +1,5 @@
 ---
-title: Pulumi Glossary
+title: Glossary
 menu:
   reference:
     weight: 4

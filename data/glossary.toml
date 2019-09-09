@@ -39,7 +39,7 @@ description = "SP stands for Service Provider. A Security Assertion Markup Langu
 link = "https://en.wikipedia.org/wiki/Service_provider_(SAML)"
 
 [[entries]]
-term = "IdP"
+term = "IdP Metadata XML"
 description = "IdP Metadata XML is the XML configuration document provided by your Security Assertion Markup Language (SAML) IdP. It contains public information about your user directory, which can be used by the service provider to make authentication requests."
 link = "https://en.wikipedia.org/wiki/SAML_Metadata#Introduction_to_SAML_Metadata"
 
