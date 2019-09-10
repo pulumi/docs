@@ -4,7 +4,7 @@ linktitle: Serverless
 menu:
   intro:
     parent: vs
-    weight: 4
+    weight: 5
 
 aliases: ["/docs/reference/vs/serverless/"]
 ---

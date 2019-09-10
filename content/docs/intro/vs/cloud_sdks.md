@@ -4,7 +4,7 @@ linktitle: Cloud SDKs
 menu:
   intro:
     parent: vs
-    weight: 3
+    weight: 4
 
 aliases: ["/docs/reference/vs/cloud_sdks/"]
 ---
