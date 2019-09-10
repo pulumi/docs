@@ -7,6 +7,7 @@ authors:
     - eric-rudder
 tags:
     - pulumi
+    - infrastructure
 ---
 
 "What's in a name? That which we call a rose by any other name would smell as sweet."  William Shakespeare's oft repeated quote was used to help Juliet explain that a "Montague" is worthy of love.  Juliet may have underestimated the importance of a name, however, since things didn't work out so well for everyone in Verona!  Many customers have questions about "names" in Pulumi -- and in an effort to make sure that things work out better for them than they did for Romeo, here's a quick note on naming!
