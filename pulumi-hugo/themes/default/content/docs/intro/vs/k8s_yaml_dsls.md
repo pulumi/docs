@@ -4,7 +4,7 @@ linktitle: Kubernetes YAML
 menu:
   intro:
     parent: vs
-    weight: 5
+    weight: 6
 
 aliases: ["/docs/reference/vs/k8s_yaml_dsls/"]
 ---

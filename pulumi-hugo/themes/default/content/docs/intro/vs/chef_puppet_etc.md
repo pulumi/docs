@@ -4,7 +4,7 @@ linktitle: Chef, Puppet, etc.
 menu:
   intro:
     parent: vs
-    weight: 6
+    weight: 7
 
 aliases: ["/docs/reference/vs/chef_puppet_etc/"]
 ---

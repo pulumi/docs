@@ -4,7 +4,7 @@ linktitle: Custom Solutions
 menu:
   intro:
     parent: vs
-    weight: 7
+    weight: 8
 
 aliases: ["/docs/reference/vs/custom/"]
 ---
