@@ -14,8 +14,6 @@ title: "AWS Web Server example in Python"
 An example based on the Amazon sample at:
 http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/deploying.applications.html. The example deploys an EC2 instance and opens port 80. 
 
-To get the correct Amazon Linux AMI for the instance size and region, a mapping is defined in [ami.py](https://github.com/pulumi/examples/blob/master/aws-py-webserver/ami.py).
-
 ## Prerequisites
 
 1. [Install Pulumi](https://www.pulumi.com/docs/reference/install/)

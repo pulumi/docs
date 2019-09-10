@@ -229,7 +229,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     let server = new aws.ec2.Instance("web-server-www", {
         instanceType: size,
         securityGroups: [ group.name ], // reference the group object above
-        ami: ami,
+        ami: ami.id,
         userData: userData,             // <-- ADD THIS LINE
     });
 
@@ -255,7 +255,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
     const server = new aws.ec2.Instance("webserver-www", {
         instanceType: size,
         securityGroups: [ group.name ], // reference the security group resource above
-        ami: ami,
+        ami: ami.id,
         userData: userData,             // <-- ADD THIS LINE
     });
 
@@ -284,7 +284,7 @@ Pulumi program to define the new state we want our infrastructure to be in, then
         instance_type=size,
         security_groups=[group.name], # reference security group from above
         user_data=user_data, # <-- ADD THIS LINE
-        ami=get_linux_ami(size))
+        ami=ami.id)
 
     ...
     ```
