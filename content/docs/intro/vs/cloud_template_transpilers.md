@@ -40,8 +40,9 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
   source CloudFormation engine. This means more of Pulumi is accessible to community contributions.
 
 * The Pulumi CLI and Console are co-designed to [make team collaboration simple]({{< relref "/docs/intro/console" >}}),
-  especially with organization-wide sharing of projects and stacks. This feels like "GitHub for DevOps." Troposphere/CDK
-  rely on CloudFormation which is known to be more challenging in these areas.
+  especially with organization-wide sharing of projects and stacks. This feels like "GitHub for DevOps" and delivers
+  a rich experience including diffs and previews of updates before they are made. Troposphere/CDK rely on
+  CloudFormation which is known to be more challenging in these areas.
 
 * Pulumi has a built-in configuration system that was designed to be super easy to use. Related, encrypted secrets
   give you an easy way to integrate secrets management best practices for database passwords, tokens, etc. In
@@ -50,15 +51,20 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
   underlying building block services in your target cloud, or even HashiCorp Vault, to deliver an easy experience
   with secrets management automatic best practices built-in.
 
-* Pulumi integrates with [a number of CI/CD providers]({{< relref "/docs/guides/continuous-delivery" >}}) out of the box.
+* Pulumi integrates with [a number of CI/CD providers]({{< relref "/docs/guides/continuous-delivery" >}}) and
+  source control systems out of the box, to deliver easy continuous delivery with systems you might already be using.
+  Although CloudFormation can be used in this manner, it requires manual configuration, and is designed to work
+  best with AWS's own CodeBuild/Pipeline products.
 
 * Pulumi integrates with your identity provider, including GitHub, GitLab, Atlassian, or
   [any SAML/SSO 2.0 provider]({{< relref "/docs/guides/saml" >}}), such as Azure Active Directory, Google G Suite,
-  or Okta, for auditing and access controls. AWS CloudFormation can be manually integrated with greater effort.
+  or Okta, for auditing and access controls using your existing enterprise systems of record. AWS CloudFormation can
+  be manually integrated with those systems with greater effort.
 
-* Pulumi can be
-  [run entirely offline with custom state management]({{< relref "/docs/intro/concepts/state#self-managed-backend" >}}),
-  and offers a self-hosting option. Troposphere/CDK exclusively relies on the server-side AWS CloudFormation runtime.
+* Pulumi can be [use custom state management]({{< relref "/docs/intro/concepts/state#self-managed-backend" >}}),
+  and offers a self-hosting option, for greater control, including "behind the firewall" on-premises and hybrid
+  options. Troposphere/CDK exclusively relies on the server-side AWS CloudFormation runtime. Pulumi offers a free
+  hosted backend as its default offering but gives you more flexibility and control.
 
 Although Pulumi and the Troposphere and AWS CDK projects share a vision for the future of infrastructure as code using
 general purpose languages, Pulumi's many-cloud nature, embrace of modern Cloud Native technologies, and its open source
