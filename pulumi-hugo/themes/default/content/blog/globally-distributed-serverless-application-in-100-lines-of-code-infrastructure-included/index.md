@@ -66,13 +66,6 @@ let cosmosdb = new azure.cosmosdb.Account("UrlStore", {
 });
 ```
 
-Cosmos DB has a hierarchical structure of Accounts, Databases, and
-Containers. Unfortunately, Cosmos DB containers can't be defined as
-Pulumi resources yet. As a workaround, I defined a helper function
-`getContainer` to create a database and a container using Cosmos SDK,
-see
-[here](https://github.com/pulumi/examples/blob/master/azure-ts-serverless-url-shortener-global/cosmosclient.ts).
-
 ### Function App
 
 Serverless Azure Functions are going to handle the HTTP layer in my
