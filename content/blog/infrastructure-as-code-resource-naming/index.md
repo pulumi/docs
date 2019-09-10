@@ -1,7 +1,7 @@
 ---
-title: Names in Pulumi
+title: Infrastructure as Code Resource Naming
 date: 2019-09-10
-meta_desc: "Answers to your questions about names in Pulumi."
+meta_desc: "Answers to your questions about Infrastructure as Code Resource Naming."
 meta_image: meta.png
 authors:
     - eric-rudder
