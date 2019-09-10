@@ -66,6 +66,22 @@ let cosmosdb = new azure.cosmosdb.Account("UrlStore", {
 });
 ```
 
+Cosmos DB has a hierarchical structure of Accounts, Databases, and Containers.
+Let's define a database and a SQL collection to store our URL mappings:
+
+```typescript
+const database = new azure.cosmosdb.SqlDatabase("Database", {
+    resourceGroupName: resourceGroup.name,
+    accountName: account.name,
+});
+
+const collection = new azure.cosmosdb.SqlContainer("Urls", {
+    resourceGroupName: resourceGroup.name,
+    accountName: account.name,
+    databaseName: database.name,
+});
+```
+
 ### Function App
 
 Serverless Azure Functions are going to handle the HTTP layer in my
@@ -81,7 +97,9 @@ const fn = new azure.appservice.HttpEventSubscription("GetUrl", {
         const endpoint = cosmosdb.endpoint.get();
         const masterKey = cosmosdb.primaryMasterKey.get();
 
-        const container = await getContainer(endpoint, masterKey);
+        const client = new CosmosClient(
+            { endpoint, key, connectionPolicy: { preferredLocations: [location] } });
+        const container = client.database(database.name.get()).container(collection.name.get());
 
         const key = request.params['key'];
         try {
@@ -125,7 +143,10 @@ const fn = new azure.appservice.HttpEventSubscription("AddUrl", {
     callback: async (_, request: azure.appservice.HttpRequest) => {
         const endpoint = cosmosdb.endpoint.get();
         const masterKey = cosmosdb.primaryMasterKey.get();
-        const container = await getContainer(endpoint, masterKey, location);
+
+        const client = new CosmosClient(
+            { endpoint, key, connectionPolicy: { preferredLocations: [primaryLocation] } });
+        const container = client.database(database.name.get()).container(collection.name.get());
 
         await container.items.create(request.body);
         return { status: 200, body: 'Short URL saved' };
