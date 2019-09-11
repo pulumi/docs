@@ -2,9 +2,9 @@
 title: Single Sign-on (SSO)
 
 menu:
-    console:
-        parent: accounts
-        identifier: saml
+    userguides:
+        parent: saml
+        weight: 1
 
 aliases:
 - /docs/intro/console/accounts/saml/

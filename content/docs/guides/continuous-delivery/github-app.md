@@ -2,8 +2,9 @@
 title: Pulumi GitHub App
 
 menu:
-    console:
+    userguides:
         parent: cont_delivery
+        weight: 1
 
 aliases:
 - /docs/reference/cd-github/

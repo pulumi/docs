@@ -1,6 +1,11 @@
 ---
 title: Azure Active Directory
 
+menu:
+    userguides:
+        parent: saml
+        weight: 2
+
 aliases:
 - /docs/reference/service/saml-aad/
 - /docs/console/accounts/saml/aad/

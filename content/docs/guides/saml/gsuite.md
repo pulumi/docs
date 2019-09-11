@@ -1,6 +1,11 @@
 ---
 title: G Suite (Google)
 
+menu:
+    userguides:
+        parent: saml
+        weight: 2
+
 aliases:
 - /docs/reference/service/saml-gsuite/
 - /docs/console/accounts/saml/gsuite/
