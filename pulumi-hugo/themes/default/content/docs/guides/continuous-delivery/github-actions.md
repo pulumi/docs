@@ -2,8 +2,9 @@
 title: Pulumi GitHub Actions
 
 menu:
-    guides:
+    userguides:
         parent: cont_delivery
+        weight: 1
 
 aliases:
 - /docs/reference/cd-github-actions/

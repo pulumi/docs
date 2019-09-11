@@ -2,8 +2,9 @@
 title: Azure DevOps
 
 menu:
-    guides:
+    userguides:
         parent: cont_delivery
+        weight: 1
 
 aliases:
 - /docs/reference/cd-azure-devops/

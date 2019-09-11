@@ -1,6 +1,11 @@
 ---
 title: Okta
 
+menu:
+    userguides:
+        parent: saml
+        weight: 2
+
 aliases:
 - /docs/reference/service/saml-okta/
 - /docs/console/accounts/saml/okta/
