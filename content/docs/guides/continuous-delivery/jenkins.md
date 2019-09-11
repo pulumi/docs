@@ -2,8 +2,9 @@
 title: Jenkins
 
 menu:
-    console:
+    userguides:
         parent: cont_delivery
+        weight: 1
 
 aliases: ["/docs/console/continuous-delivery/jenkins/"]
 ---

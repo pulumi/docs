@@ -2,8 +2,9 @@
 title: Other
 
 menu:
-    guides:
+    userguides:
         parent: cont_delivery
+        weight: 2
 
 aliases:
 - /docs/reference/cd-supporting-new-ci/

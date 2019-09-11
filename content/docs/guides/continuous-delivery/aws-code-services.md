@@ -1,5 +1,11 @@
 ---
 title: AWS Code Services
+
+menu:
+    userguides:
+        parent: cont_delivery
+        weight: 1
+
 aliases:
 - /docs/reference/cd-aws-code-services/
 - /docs/console/continuous-delivery/aws-code-services/
