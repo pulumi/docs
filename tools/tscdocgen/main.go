@@ -705,17 +705,31 @@ func (e *emitter) gatherModules(doc *typeDocNode, parentModule string, k8s bool)
 		root = newModule(rootModule)
 		mods[rootModule] = root
 	}
-	for modname, mod := range mods {
+
+	// Copy the names to an array and then process until empty. This allows us to add new names while iterating.
+	var modnames []string
+	for modname := range mods {
+		modnames = append(modnames, modname)
+	}
+	for len(modnames) > 0 {
+		// Get an item to process (the last item) and remove it.
+		lastIndex := len(modnames) - 1
+		modname := modnames[lastIndex]
+		modnames = modnames[:lastIndex]
+
 		if modname != rootModule {
 			parname := getModuleParentName(modname)
 			par := mods[parname]
 			if par == nil {
 				par = newModule(parname)
 				mods[parname] = par
+				// Add to the array for further processing.
+				modnames = append(modnames, parname)
 			}
-			par.Modules[modname] = mod
+			par.Modules[modname] = mods[modname]
 		}
 	}
+
 	return root, nil
 }
 
