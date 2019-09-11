@@ -23,7 +23,7 @@ to the closed source AWS CloudFormation servers to provision infrastructure on A
 
 The transpiler approach gives you some of the benefits of Pulumi, with the following caveats:
 
-* Troposphere/CDK only supports the AWS platform. Pulumi supports many clouds, including _major cloud platforms_
+* Troposphere and CDK only support the AWS platform. Pulumi supports many clouds, including _major cloud platforms_
   (such as Microsoft Azure, Google Cloud Platform, Kubernetes, and DigitalOcean), _on-premises and hybrid technologies_
   (such as VMWare vSphere and OpenStack), and _online SaaS offerings_ (like Cloudflare, Datadog, New Relic, and more).
   Furthermore, Pulumi is extensible, supports custom providers, and can bridge with any existing Terraform-based provider.
@@ -31,17 +31,17 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
 * Pulumi supports Cloud Native technologies, including Kubernetes, Helm Charts, Istio service
   meshes, and hosted Kubernetes clusters in any cloud (AWS EKS, Azure AKS, Google GKE, etc).
 
-* Troposphere/CDK compiles down to YAML and is therefore limited in what it can express. The Pulumi engine understands
+* Troposphere and CDK compile down to YAML and are therefore limited in what they can express. The Pulumi engine understands
   general-purpose language patterns, dependencies between objects, and therefore delivers a better overall experience.
   Pulumi also supports going beyond what you can express in YAML, such as building and publishing a Docker container image,
   authoring serverless functions in code, automating packaging and versioning of code, and so on.
 
-* Pulumi's engine is [open source](https://github.com/pulumi/pulumi), whereas Troposphere/CDK depends on the closed
+* Pulumi's engine is [open source](https://github.com/pulumi/pulumi), whereas Troposphere and CDK depend on the closed
   source CloudFormation engine. This means more of Pulumi is accessible to community contributions.
 
 * The Pulumi CLI and Console are co-designed to [make team collaboration simple]({{< relref "/docs/intro/console" >}}),
   especially with organization-wide sharing of projects and stacks. This is closer to "GitHub for DevOps" and delivers
-  a rich experience including diffs and previews of updates before they are made. Troposphere/CDK relies on
+  a rich experience including diffs and previews of updates before they are made. Troposphere and CDK rely on
   CloudFormation which is known to be more challenging in these areas.
 
 * Pulumi has a built-in configuration system that is super easy to use. Related, encrypted secrets
@@ -63,7 +63,7 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
 
 * Pulumi can use [custom state management]({{< relref "/docs/intro/concepts/state#self-managed-backend" >}})
   and offers a self-hosting option for greater control, including "behind the firewall" on-premises and hybrid
-  options. Troposphere/CDK exclusively relies on the server-side AWS CloudFormation runtime. Pulumi offers a free
+  options. Tropospher and CDK exclusively rely on the server-side AWS CloudFormation runtime. Pulumi offers a free
   hosted backend as its default offering but gives you more flexibility and control.
 
 Although Pulumi and the Troposphere and AWS CDK projects share a vision for the future of infrastructure as code using
