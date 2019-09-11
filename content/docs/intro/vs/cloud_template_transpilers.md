@@ -31,7 +31,7 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
 * Pulumi supports Cloud Native technologies, including Kubernetes, Helm Charts, Istio service
   meshes, and hosted Kubernetes clusters in any cloud (AWS EKS, Azure AKS, Google GKE, etc).
 
-* Troposphere/CDK compiles down to YAML and is therefore limited in what it can express. The Pulumi engine understands
+* Troposphere and CDK compile down to YAML and are therefore limited in what they can express. The Pulumi engine understands
   general-purpose language patterns, dependencies between objects, and therefore delivers a better overall experience.
   Pulumi also supports going beyond what you can express in YAML, such as building and publishing a Docker container image,
   authoring serverless functions in code, automating packaging and versioning of code, and so on.
