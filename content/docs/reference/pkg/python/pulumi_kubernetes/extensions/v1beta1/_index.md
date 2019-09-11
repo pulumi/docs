@@ -9,8 +9,9 @@ notitle: true
 <dl class="class">
 <dt id="pulumi_kubernetes.extensions.v1beta1.DaemonSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.extensions.v1beta1.</code><code class="sig-name descname">DaemonSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.extensions.v1beta1.DaemonSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - This group version of DaemonSet is deprecated by apps/v1beta2/DaemonSet. See the
-release notes for more information. DaemonSet represents the configuration of a daemon set.</p>
+<dd><p>DEPRECATED - extensions/v1beta1/DaemonSet is not supported by Kubernetes 1.16+ clusters. Use
+apps/v1/DaemonSet instead.</p>
+<p>DaemonSet represents the configuration of a daemon set.</p>
 <p>Create a DaemonSet resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -226,9 +227,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.extensions.v1beta1.Deployment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.extensions.v1beta1.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.extensions.v1beta1.Deployment" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Deployment. See the
-release notes for more information. Deployment enables declarative updates for Pods and
-ReplicaSets.</p>
+<dd><p>DEPRECATED - extensions/v1beta1/Deployment is not supported by Kubernetes 1.16+ clusters. Use
+apps/v1/Deployment instead.</p>
+<p>Deployment enables declarative updates for Pods and ReplicaSets.</p>
 <p>This resource waits until it is ready before registering success for
 create/update and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
@@ -459,11 +460,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.extensions.v1beta1.Ingress">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.extensions.v1beta1.</code><code class="sig-name descname">Ingress</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.extensions.v1beta1.Ingress" title="Permalink to this definition">¶</a></dt>
-<dd><p>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined
+<dd><p>DEPRECATED - extensions/v1beta1/Ingress is not supported by Kubernetes 1.16+ clusters. Use
+networking/v1beta1/Ingress instead.</p>
+<p>Ingress is a collection of rules that allow inbound connections to reach the endpoints defined
 by a backend. An Ingress can be configured to give services externally-reachable urls, load
-balance traffic, terminate SSL, offer name based virtual hosting etc. DEPRECATED - This group
-version of Ingress is deprecated by networking.k8s.io/v1beta1 Ingress. See the release notes for
-more information.</p>
+balance traffic, terminate SSL, offer name based virtual hosting etc.</p>
 <p>This resource waits until it is ready before registering success for
 create/update and populating output properties from the current state of the resource.
 The following conditions are used to determine whether the resource creation has
@@ -1111,9 +1112,9 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_kubernetes.extensions.v1beta1.ReplicaSet">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.extensions.v1beta1.</code><code class="sig-name descname">ReplicaSet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.extensions.v1beta1.ReplicaSet" title="Permalink to this definition">¶</a></dt>
-<dd><p>DEPRECATED - This group version of ReplicaSet is deprecated by apps/v1beta2/ReplicaSet. See the
-release notes for more information. ReplicaSet ensures that a specified number of pod replicas
-are running at any given time.</p>
+<dd><p>DEPRECATED - extensions/v1beta1/ReplicaSet is not supported by Kubernetes 1.16+ clusters. Use
+apps/v1/ReplicaSet instead.</p>
+<p>ReplicaSet ensures that a specified number of pod replicas are running at any given time.</p>
 <p>Create a ReplicaSet resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -28,7 +28,7 @@ linktitle: "tests"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="assertAsyncThrows" data-link-title="assertAsyncThrows">
-    <a href="https://github.com/pulumi/pulumi/blob/6ea8b3b3dd501460566066bccea8e082421d5031/sdk/nodejs/tests/util.ts#L40">
+    <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/tests/util.ts#L40">
         function <strong>assertAsyncThrows</strong>
     </a>
 </h3>
@@ -37,7 +37,7 @@ linktitle: "tests"
 <pre class="highlight"><code><span class='kd'></span>assertAsyncThrows(test: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</code></pre>
 
 <h3 class="pdoc-module-header" id="asyncTest" data-link-title="asyncTest">
-    <a href="https://github.com/pulumi/pulumi/blob/6ea8b3b3dd501460566066bccea8e082421d5031/sdk/nodejs/tests/util.ts#L21">
+    <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/tests/util.ts#L21">
         function <strong>asyncTest</strong>
     </a>
 </h3>
@@ -46,7 +46,7 @@ linktitle: "tests"
 <pre class="highlight"><code><span class='kd'></span>asyncTest(test: () => <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span>&gt;): (func: <a href='#MochaFunc'>MochaFunc</a>) => <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#void'>void</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="MochaFunc" data-link-title="MochaFunc">
-    <a href="https://github.com/pulumi/pulumi/blob/6ea8b3b3dd501460566066bccea8e082421d5031/sdk/nodejs/tests/util.ts#L17">
+    <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/tests/util.ts#L17">
         type <strong>MochaFunc</strong>
     </a>
 </h3>

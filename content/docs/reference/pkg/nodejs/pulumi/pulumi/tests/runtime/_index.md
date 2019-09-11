@@ -21,7 +21,7 @@ linktitle: "runtime"
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="exportedValue" data-link-title="exportedValue">
-    <a href="https://github.com/pulumi/pulumi/blob/6ea8b3b3dd501460566066bccea8e082421d5031/sdk/nodejs/tests/runtime/tsClosureCases.ts#L38">
+    <a href="https://github.com/pulumi/pulumi/blob/5af13f9a4f750c6ff3234dae6fedd0b6a0233e25/sdk/nodejs/tests/runtime/tsClosureCases.ts#L38">
         const <strong>exportedValue</strong>
     </a>
 </h3>
