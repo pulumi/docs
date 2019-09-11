@@ -45,7 +45,7 @@ level:
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
-import * as cosmos from "@azure/cosmos";
+import { CosmosClient } from "@azure/cosmos";
 
 const location = "westus"; // To be changed to multiple configurable locations
 
