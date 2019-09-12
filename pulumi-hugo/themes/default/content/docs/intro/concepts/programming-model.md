@@ -115,7 +115,7 @@ The `args` provided to a resource determine what inputs will be used to initiali
 All resource constructors also accept an `options` argument which can provide the following additional resource options controlling how the resource will be managed by Pulumi.
 
 ###### `additionalSecretOutputs`
-Provides a list of output properties which should be treated as secrets. This value augments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).
+Provides a list of output properties which should be treated as secrets. This value augments any values that Pulumi detects itself, based on what secret inputs to the resource has. This is typically used to express that for a specific instance of a resource, some of its output properties should be treated as secrets (when they would not normally be).  Currently only top-level resource properties can be passed to `additionalSecretOutputs`, so if there is sensitive data nested inside output properties, the entire top-level output property must be marked as secret.
 
 {{< langchoose >}}
 
