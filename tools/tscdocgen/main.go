@@ -438,6 +438,9 @@ func (e *emitter) emitMarkdownModule(name string, mod *module, root bool) error 
 			link = modname
 		}
 
+		// Hugo converts all paths to lowercase by default when publishing, so we make these links lowercase as well.
+		link = strings.ToLower(link)
+
 		// Ensure the link has a trailing slash to avoid the S3 302 redirect dance.
 		if !strings.HasSuffix(link, "/") {
 			link = link + "/"

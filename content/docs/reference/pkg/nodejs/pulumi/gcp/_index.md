@@ -74,7 +74,7 @@ import * as gcp from "@pulumi/gcp";
     <li><a href="resourcemanager/"><span class="symbol module"></span>resourcemanager</a></li>
     <li><a href="runtimeconfig/"><span class="symbol module"></span>runtimeconfig</a></li>
     <li><a href="serverless/"><span class="symbol module"></span>serverless</a></li>
-    <li><a href="serviceAccount/"><span class="symbol module"></span>serviceAccount</a></li>
+    <li><a href="serviceaccount/"><span class="symbol module"></span>serviceAccount</a></li>
     <li><a href="servicenetworking/"><span class="symbol module"></span>servicenetworking</a></li>
     <li><a href="sourcerepo/"><span class="symbol module"></span>sourcerepo</a></li>
     <li><a href="spanner/"><span class="symbol module"></span>spanner</a></li>
