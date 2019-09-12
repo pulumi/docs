@@ -18,6 +18,16 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.route53.AwaitableGetResolverRuleResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetResolverRuleResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetResolverRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.route53.AwaitableGetResolverRulesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetResolverRulesResult</code><span class="sig-paren">(</span><em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_ids=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetResolverRulesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.route53.AwaitableGetZoneResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">AwaitableGetZoneResult</code><span class="sig-paren">(</span><em class="sig-param">caller_reference=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">linked_service_description=None</em>, <em class="sig-param">linked_service_principal=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_servers=None</em>, <em class="sig-param">private_zone=None</em>, <em class="sig-param">resource_record_set_count=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.AwaitableGetZoneResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -118,6 +128,61 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.route53.GetDelegationSetResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetDelegationSetResult</code><span class="sig-paren">(</span><em class="sig-param">caller_reference=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">name_servers=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetDelegationSetResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDelegationSet.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.route53.GetResolverRuleResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetResolverRuleResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getResolverRule.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRuleResult.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN (Amazon Resource Name) for the resolver rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRuleResult.owner_id">
+<code class="sig-name descname">owner_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.owner_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRuleResult.share_status">
+<code class="sig-name descname">share_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.share_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the rules is shared and, if so, whether the current account is sharing the rule with another account, or another account is sharing the rule with the current account.
+Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHARED</span></code>, <code class="docutils literal notranslate"><span class="pre">SHARED_BY_ME</span></code> or <code class="docutils literal notranslate"><span class="pre">SHARED_WITH_ME</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRuleResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to the resolver rule.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRuleResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRuleResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.route53.GetResolverRulesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">GetResolverRulesResult</code><span class="sig-paren">(</span><em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_ids=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.GetResolverRulesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getResolverRules.</p>
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRulesResult.resolver_rule_ids">
+<code class="sig-name descname">resolver_rule_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRulesResult.resolver_rule_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IDs of the matched resolver rules.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.route53.GetResolverRulesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.route53.GetResolverRulesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -1426,6 +1491,46 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <blockquote>
 <div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_delegation_set.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.route53.get_resolver_rule">
+<code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_resolver_rule</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">resolver_rule_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_resolver_rule" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">route53.ResolverRule</span></code> provides details about a specific Route53 Resolver rule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_name</strong> (<em>str</em>) – The domain name the desired resolver rule forwards DNS queries for. Conflicts with <code class="docutils literal notranslate"><span class="pre">resolver_rule_id</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The friendly name of the desired resolver rule. Conflicts with <code class="docutils literal notranslate"><span class="pre">resolver_rule_id</span></code>.</p></li>
+<li><p><strong>resolver_endpoint_id</strong> (<em>str</em>) – The ID of the outbound resolver endpoint of the desired resolver rule. Conflicts with <code class="docutils literal notranslate"><span class="pre">resolver_rule_id</span></code>.</p></li>
+<li><p><strong>resolver_rule_id</strong> (<em>str</em>) – The ID of the desired resolver rule. Conflicts with <code class="docutils literal notranslate"><span class="pre">domain_name</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">resolver_endpoint_id</span></code> and <code class="docutils literal notranslate"><span class="pre">rule_type</span></code>.</p></li>
+<li><p><strong>rule_type</strong> (<em>str</em>) – The rule type of the desired resolver rule. Valid values are <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> and <code class="docutils literal notranslate"><span class="pre">RECURSIVE</span></code>. Conflicts with <code class="docutils literal notranslate"><span class="pre">resolver_rule_id</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rule.html.markdown</a>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_aws.route53.get_resolver_rules">
+<code class="sig-prename descclassname">pulumi_aws.route53.</code><code class="sig-name descname">get_resolver_rules</code><span class="sig-paren">(</span><em class="sig-param">owner_id=None</em>, <em class="sig-param">resolver_endpoint_id=None</em>, <em class="sig-param">rule_type=None</em>, <em class="sig-param">share_status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.route53.get_resolver_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">route53.getResolverRules</span></code> provides details about a set of Route53 Resolver rules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>owner_id</strong> (<em>str</em>) – When the desired resolver rules are shared with another AWS account, the account ID of the account that the rules are shared with.</p></li>
+<li><p><strong>resolver_endpoint_id</strong> (<em>str</em>) – The ID of the outbound resolver endpoint for the desired resolver rules.</p></li>
+<li><p><strong>rule_type</strong> (<em>str</em>) – The rule type of the desired resolver rules. Valid values are <code class="docutils literal notranslate"><span class="pre">FORWARD</span></code>, <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code> and <code class="docutils literal notranslate"><span class="pre">RECURSIVE</span></code>.</p></li>
+<li><p><strong>share_status</strong> (<em>str</em>) – Whether the desired resolver rules are shared and, if so, whether the current account is sharing the rules with another account, or another account is sharing the rules with the current account.
+Values are <code class="docutils literal notranslate"><span class="pre">NOT_SHARED</span></code>, <code class="docutils literal notranslate"><span class="pre">SHARED_BY_ME</span></code> or <code class="docutils literal notranslate"><span class="pre">SHARED_WITH_ME</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<blockquote>
+<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route53_resolver_rules.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 
