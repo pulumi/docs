@@ -35,6 +35,7 @@ directly. Additional general purpose packages can be used across all cloud platf
 
 {{% lang python %}}
 * [**Pulumi SDK** (`pulumi`)]({{< relref "python/pulumi" >}})
+* [**Docker** (`pulumi_docker`)]({{< relref "python/pulumi_docker" >}})
 * [**Random** (`pulumi_random`)]({{< relref "python/pulumi_random" >}})
 {{% /lang %}}
 
