@@ -31,7 +31,7 @@ linktitle: "xray"
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SamplingRule" data-link-title="SamplingRule">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L36">
         Resource <strong>SamplingRule</strong>
     </a>
 </h3>
@@ -67,7 +67,7 @@ const example = new aws.xray.SamplingRule("example", {
 > This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/xray_sampling_rule.html.markdown.
 
 <h4 class="pdoc-member-header" id="SamplingRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -81,7 +81,7 @@ Create a SamplingRule resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SamplingRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -92,14 +92,14 @@ Get an existing SamplingRule resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SamplingRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SamplingRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -110,7 +110,7 @@ Returns true if the given object is an instance of SamplingRule.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SamplingRule-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L66">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L66">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -118,7 +118,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ARN of the sampling rule.
 
 <h4 class="pdoc-member-header" id="SamplingRule-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L70">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L70">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -126,7 +126,7 @@ The ARN of the sampling rule.
 Matches attributes derived from the request.
 
 <h4 class="pdoc-member-header" id="SamplingRule-fixedRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L74">property <b>fixedRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L74">property <b>fixedRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>fixedRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -134,7 +134,7 @@ Matches attributes derived from the request.
 The percentage of matching requests to instrument, after the reservoir is exhausted.
 
 <h4 class="pdoc-member-header" id="SamplingRule-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L78">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L78">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +142,7 @@ The percentage of matching requests to instrument, after the reservoir is exhaus
 Matches the hostname from a request URL.
 
 <h4 class="pdoc-member-header" id="SamplingRule-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L82">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L82">property <b>httpMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -150,7 +150,7 @@ Matches the hostname from a request URL.
 Matches the HTTP method of a request.
 
 <h4 class="pdoc-member-header" id="SamplingRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -159,7 +159,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SamplingRule-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L86">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L86">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -167,7 +167,7 @@ deployments and may be missing (undefined) during planning phases.
 The priority of the sampling rule.
 
 <h4 class="pdoc-member-header" id="SamplingRule-reservoirSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L90">property <b>reservoirSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L90">property <b>reservoirSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reservoirSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -175,7 +175,7 @@ The priority of the sampling rule.
 A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 
 <h4 class="pdoc-member-header" id="SamplingRule-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L94">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L94">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -183,7 +183,7 @@ A fixed number of matching requests to instrument per second, prior to applying 
 Matches the ARN of the AWS resource on which the service runs.
 
 <h4 class="pdoc-member-header" id="SamplingRule-ruleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L98">property <b>ruleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L98">property <b>ruleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -191,7 +191,7 @@ Matches the ARN of the AWS resource on which the service runs.
 The name of the sampling rule.
 
 <h4 class="pdoc-member-header" id="SamplingRule-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L102">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L102">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -199,7 +199,7 @@ The name of the sampling rule.
 Matches the `name` that the service uses to identify itself in segments.
 
 <h4 class="pdoc-member-header" id="SamplingRule-serviceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L106">property <b>serviceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L106">property <b>serviceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ Matches the `name` that the service uses to identify itself in segments.
 Matches the `origin` that the service uses to identify its type in segments.
 
 <h4 class="pdoc-member-header" id="SamplingRule-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L110">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L110">property <b>urlPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>urlPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -215,7 +215,7 @@ Matches the `origin` that the service uses to identify its type in segments.
 Matches the path from a request URL.
 
 <h4 class="pdoc-member-header" id="SamplingRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -224,7 +224,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SamplingRule-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L114">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L114">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -235,7 +235,7 @@ The version of the sampling rule format (`1` )
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="SamplingRuleArgs" data-link-title="SamplingRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L259">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L259">
         interface <strong>SamplingRuleArgs</strong>
     </a>
 </h3>
@@ -245,7 +245,7 @@ The version of the sampling rule format (`1` )
 The set of arguments for constructing a SamplingRule resource.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L263">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L263">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -253,7 +253,7 @@ The set of arguments for constructing a SamplingRule resource.
 Matches attributes derived from the request.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-fixedRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L267">property <b>fixedRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L267">property <b>fixedRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ Matches attributes derived from the request.
 The percentage of matching requests to instrument, after the reservoir is exhausted.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L271">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L271">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ The percentage of matching requests to instrument, after the reservoir is exhaus
 Matches the hostname from a request URL.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L275">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L275">property <b>httpMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpMethod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ Matches the hostname from a request URL.
 Matches the HTTP method of a request.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L279">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L279">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -285,7 +285,7 @@ Matches the HTTP method of a request.
 The priority of the sampling rule.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-reservoirSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L283">property <b>reservoirSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L283">property <b>reservoirSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservoirSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ The priority of the sampling rule.
 A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L287">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L287">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -301,7 +301,7 @@ A fixed number of matching requests to instrument per second, prior to applying 
 Matches the ARN of the AWS resource on which the service runs.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-ruleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L291">property <b>ruleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L291">property <b>ruleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ Matches the ARN of the AWS resource on which the service runs.
 The name of the sampling rule.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L295">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L295">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ The name of the sampling rule.
 Matches the `name` that the service uses to identify itself in segments.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-serviceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L299">property <b>serviceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L299">property <b>serviceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ Matches the `name` that the service uses to identify itself in segments.
 Matches the `origin` that the service uses to identify its type in segments.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L303">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L303">property <b>urlPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -333,7 +333,7 @@ Matches the `origin` that the service uses to identify its type in segments.
 Matches the path from a request URL.
 
 <h4 class="pdoc-member-header" id="SamplingRuleArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L307">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L307">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ Matches the path from a request URL.
 The version of the sampling rule format (`1` )
 
 <h3 class="pdoc-module-header" id="SamplingRuleState" data-link-title="SamplingRuleState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L201">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L201">
         interface <strong>SamplingRuleState</strong>
     </a>
 </h3>
@@ -351,7 +351,7 @@ The version of the sampling rule format (`1` )
 Input properties used for looking up and filtering SamplingRule resources.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L205">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L205">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ Input properties used for looking up and filtering SamplingRule resources.
 The ARN of the sampling rule.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L209">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L209">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -367,7 +367,7 @@ The ARN of the sampling rule.
 Matches attributes derived from the request.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-fixedRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L213">property <b>fixedRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L213">property <b>fixedRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>fixedRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -375,7 +375,7 @@ Matches attributes derived from the request.
 The percentage of matching requests to instrument, after the reservoir is exhausted.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-host">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L217">property <b>host</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L217">property <b>host</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>host?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ The percentage of matching requests to instrument, after the reservoir is exhaus
 Matches the hostname from a request URL.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-httpMethod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L221">property <b>httpMethod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L221">property <b>httpMethod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>httpMethod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ Matches the hostname from a request URL.
 Matches the HTTP method of a request.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L225">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L225">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ Matches the HTTP method of a request.
 The priority of the sampling rule.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-reservoirSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L229">property <b>reservoirSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L229">property <b>reservoirSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservoirSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ The priority of the sampling rule.
 A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L233">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L233">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -415,7 +415,7 @@ A fixed number of matching requests to instrument per second, prior to applying 
 Matches the ARN of the AWS resource on which the service runs.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-ruleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L237">property <b>ruleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L237">property <b>ruleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -423,7 +423,7 @@ Matches the ARN of the AWS resource on which the service runs.
 The name of the sampling rule.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-serviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L241">property <b>serviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L241">property <b>serviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -431,7 +431,7 @@ The name of the sampling rule.
 Matches the `name` that the service uses to identify itself in segments.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-serviceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L245">property <b>serviceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L245">property <b>serviceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -439,7 +439,7 @@ Matches the `name` that the service uses to identify itself in segments.
 Matches the `origin` that the service uses to identify its type in segments.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-urlPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L249">property <b>urlPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L249">property <b>urlPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urlPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -447,7 +447,7 @@ Matches the `origin` that the service uses to identify its type in segments.
 Matches the path from a request URL.
 
 <h4 class="pdoc-member-header" id="SamplingRuleState-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/12e670b7058a95d189b26e09a2864e3d7c210466/sdk/nodejs/xray/samplingRule.ts#L253">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/81eb5b934c1b60d5f2a0683170bae0728f2cc0d0/sdk/nodejs/xray/samplingRule.ts#L253">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

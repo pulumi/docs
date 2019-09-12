@@ -19,7 +19,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_aws.eks.AwaitableGetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.eks.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.eks.</code><code class="sig-name descname">AwaitableGetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.AwaitableGetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -78,6 +78,19 @@ anything, please consult the source <a class="reference external" href="https://
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.eks.Cluster.identities">
+<code class="sig-name descname">identities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.identities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">oidcs</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Nested attribute containing <a class="reference external" href="https://openid.net/connect/">OpenID Connect</a> identity provider information for the cluster.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Issuer URL for the OpenID Connect identity provider.</p></li>
+</ul>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.eks.Cluster.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.Cluster.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the cluster.</p>
@@ -122,7 +135,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="method">
 <dt id="pulumi_aws.eks.Cluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.Cluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Cluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -136,6 +149,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>enabled_cluster_log_types</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of the desired control plane logging to enable. For more information, see <a class="reference external" href="https://docs.aws.amazon.com/eks/latest/userguide/control-plane-logs.html">Amazon EKS Control Plane Logging</a></p>
 </p></li>
 <li><p><strong>endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The endpoint for your Kubernetes API server.</p></li>
+<li><p><strong>identities</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the cluster.</p></li>
 <li><p><strong>platform_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The platform version for the cluster.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.</p></li>
@@ -149,6 +163,14 @@ properties used to qualify the lookup.</p>
 <p>The <strong>certificate_authority</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">data</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The base64 encoded certificate data required to communicate with your cluster. Add this to the <code class="docutils literal notranslate"><span class="pre">certificate-authority-data</span></code> section of the <code class="docutils literal notranslate"><span class="pre">kubeconfig</span></code> file for your cluster.</p></li>
+</ul>
+<p>The <strong>identities</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">oidcs</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Nested attribute containing <a class="reference external" href="https://openid.net/connect/">OpenID Connect</a> identity provider information for the cluster.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">issuer</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Issuer URL for the OpenID Connect identity provider.</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>vpc_config</strong> object supports the following:</p>
 <ul class="simple">
@@ -221,7 +243,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.eks.GetClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.eks.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.eks.</code><code class="sig-name descname">GetClusterResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">certificate_authority=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">enabled_cluster_log_types=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">identities=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">platform_version=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_config=None</em>, <em class="sig-param">id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.eks.GetClusterResult.arn">
@@ -251,6 +273,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.eks.GetClusterResult.endpoint">
 <code class="sig-name descname">endpoint</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.endpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>The endpoint for your Kubernetes API server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.eks.GetClusterResult.identities">
+<code class="sig-name descname">identities</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.eks.GetClusterResult.identities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nested attribute containing identity provider information for your cluster. Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019. For an example using this information to enable IAM Roles for Service Accounts, see the <cite>``eks.Cluster`</cite> resource documentation &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/eks_cluster.html">https://www.terraform.io/docs/providers/aws/r/eks_cluster.html</a>&gt;`_.</p>
 </dd></dl>
 
 <dl class="attribute">
