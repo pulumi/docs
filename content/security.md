@@ -2,13 +2,13 @@
 title: Pulumi Security
 ---
 
-Pulumi takes security matters very seriously. We appreciate that our customers and users place a high degree of confidence and trust in our products and services and we strive to meet those expectations.
+Pulumi takes security and privacy matters very seriously. We appreciate that our customers and users place a high degree of confidence and trust in our products and services and we strive to meet those expectations.
 
 ## Vulnerability Reporting
 
 If you believe you’ve discovered a potential vulnerability in Pulumi’s security, please contact us at [security@pulumi.com](mailto:security@pulumi.com). For non-critical matters please file an issue at [https://support.pulumi.com](https://support.pulumi.com/).
 
-When reporting a potential vulnerability, please include as much of the following information as possible, such as:
+When reporting a potential vulnerability, please include as much of the following information as possible.
 
 * A description of the vulnerability
 * The impacted software or service and its version
@@ -16,7 +16,7 @@ When reporting a potential vulnerability, please include as much of the followin
 
 ## Secure Communications
 
-If you would like to secure your communications with us, our PGP key is below.
+If you're a security researcher and you believe that you have found a security issue within any of our services, email the details of your findings to [security@pulumi.com](mailto:security@pulumi.com). Use PGP to protect the message by using our public PGP key.
 
 ```
 -----BEGIN PGP PUBLIC KEY BLOCK-----
