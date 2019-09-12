@@ -112,6 +112,22 @@ To install, run our installation script from a `cmd.exe` window:
 
 This will install the `pulumi.exe` CLI to `%USERPROFILE%\.pulumi\bin` and add it to your path.
 
+### Chocolatey
+
+You can install Pulumi through the [Chocolatey package manager](https://chocolatey.org):
+
+```powershell
+choco install pulumi
+```
+
+This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`), will generate [shims](https://chocolatey.org/docs/features-shim) (usually `$($env:ChocolateyInstall)\bin`) that is added to your path.
+
+Subsequent updates can be installed in the usual way:
+
+```powershell
+choco upgrade pulumi
+```
+
 ### Manual Installation
 
 Alternatively, you can install Pulumi manually.
