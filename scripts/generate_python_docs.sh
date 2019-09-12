@@ -12,6 +12,7 @@ PACKAGES=(
   "pulumi_datadog"
   "pulumi_digitalocean"
   "pulumi_dnsimple"
+  "pulumi_docker"
   "pulumi_f5bigip"
   "pulumi_gcp"
   "pulumi_gitlab"
