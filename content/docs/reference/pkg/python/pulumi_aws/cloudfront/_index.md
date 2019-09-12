@@ -154,7 +154,8 @@ associated with this cache behavior.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of AWS account IDs (or <code class="docutils literal notranslate"><span class="pre">self</span></code>) that you want to allow to create signed URLs for private content. See the CloudFront User Guide for more information about this feature.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Use this element to specify the
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
@@ -235,7 +236,8 @@ associated with this cache behavior.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of AWS account IDs (or <code class="docutils literal notranslate"><span class="pre">self</span></code>) that you want to allow to create signed URLs for private content. See the CloudFront User Guide for more information about this feature.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Use this element to specify the
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
@@ -337,17 +339,9 @@ must be specified.</p></li>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudfront.Distribution.active_trusted_signers">
 <code class="sig-name descname">active_trusted_signers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.cloudfront.Distribution.active_trusted_signers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Nested attributes of active trusted signers, if the distribution is set up to serve private content with signed URLs</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the distribution is enabled to accept end
-user requests for content.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Nested attributes of each trusted signer</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">awsAccountNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - AWS account ID or <code class="docutils literal notranslate"><span class="pre">self</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyPairIds</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Set of active CloudFront key pairs associated with the signer account</p></li>
-</ul>
-</li>
-</ul>
+<dd><p>The key pair IDs that CloudFront is aware of for
+each trusted signer, if the distribution is set up to serve private content
+with signed URLs.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -462,7 +456,8 @@ associated with this cache behavior.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of AWS account IDs (or <code class="docutils literal notranslate"><span class="pre">self</span></code>) that you want to allow to create signed URLs for private content. See the CloudFront User Guide for more information about this feature.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Use this element to specify the
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
@@ -620,7 +615,8 @@ associated with this cache behavior.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - List of AWS account IDs (or <code class="docutils literal notranslate"><span class="pre">self</span></code>) that you want to allow to create signed URLs for private content. See the CloudFront User Guide for more information about this feature.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Use this element to specify the
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
@@ -801,7 +797,9 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>active_trusted_signers</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Nested attributes of active trusted signers, if the distribution is set up to serve private content with signed URLs</p></li>
+<li><p><strong>active_trusted_signers</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The key pair IDs that CloudFront is aware of for
+each trusted signer, if the distribution is set up to serve private content
+with signed URLs.</p></li>
 <li><p><strong>aliases</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Extra CNAMEs (alternate domain names), if any, for
 this distribution.</p></li>
 <li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN (Amazon Resource Name) for the distribution. For example: arn:aws:cloudfront::123456789012:distribution/EDFDVBD632BHDS5, where 123456789012 is your AWS account ID.</p></li>
@@ -865,17 +863,6 @@ region and the credentials configuring this argument must have
 </ul>
 </dd>
 </dl>
-<p>The <strong>active_trusted_signers</strong> object supports the following:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the distribution is enabled to accept end
-user requests for content.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">items</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Nested attributes of each trusted signer</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">awsAccountNumber</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - AWS account ID or <code class="docutils literal notranslate"><span class="pre">self</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">keyPairIds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Set of active CloudFront key pairs associated with the signer account</p></li>
-</ul>
-</li>
-</ul>
 <p>The <strong>custom_error_responses</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">errorCachingMinTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The minimum amount of time you want
@@ -952,7 +939,8 @@ associated with this cache behavior.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of AWS account IDs (or <code class="docutils literal notranslate"><span class="pre">self</span></code>) that you want to allow to create signed URLs for private content. See the CloudFront User Guide for more information about this feature.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Use this element to specify the
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
@@ -1033,7 +1021,8 @@ associated with this cache behavior.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">targetOriginId</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value of ID for the origin that you want
 CloudFront to route requests to when a request matches the path pattern
 either for a cache behavior or for the default cache behavior.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of AWS account IDs (or <code class="docutils literal notranslate"><span class="pre">self</span></code>) that you want to allow to create signed URLs for private content. See the CloudFront User Guide for more information about this feature.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trustedSigners</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The AWS accounts, if any, that you want to
+allow to create signed URLs for private content.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">viewerProtocolPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Use this element to specify the
 protocol that users can use to access the files in the origin specified by
 TargetOriginId when a request matches the path pattern in PathPattern. One
