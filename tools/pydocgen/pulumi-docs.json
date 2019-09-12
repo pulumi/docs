@@ -56,6 +56,12 @@
       "terraform_provider_name": "dnsimple"
     },
     {
+      "name": "Pulumi Docker",
+      "package_name": "pulumi_docker",
+      "pulumi_provider_name": "docker",
+      "terraform_provider_name": "docker"
+    },
+    {
       "name": "Pulumi GCP",
       "package_name": "pulumi_gcp",
       "pulumi_provider_name": "gcp",
