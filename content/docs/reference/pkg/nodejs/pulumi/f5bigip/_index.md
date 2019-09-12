@@ -31,6 +31,7 @@ import * as f5bigip from "@pulumi/f5bigip";
     <li><a href="ltm/"><span class="symbol module"></span>ltm</a></li>
     <li><a href="net/"><span class="symbol module"></span>net</a></li>
     <li><a href="sys/"><span class="symbol module"></span>sys</a></li>
+    <li><a href="types/"><span class="symbol module"></span>types</a></li>
 </ul>
 
 
