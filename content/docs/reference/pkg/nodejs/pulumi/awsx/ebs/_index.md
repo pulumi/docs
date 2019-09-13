@@ -150,7 +150,7 @@ Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/ebs/metrics.ts#L32">property <b>volume</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>volume?: aws.ebs.Volume;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>volume?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ebs/#Volume'>aws.ebs.Volume</a>;</code></pre>
 
 The only dimension that Amazon EBS sends to CloudWatch is the volume ID. This means that
 all available statistics are filtered by volume ID.

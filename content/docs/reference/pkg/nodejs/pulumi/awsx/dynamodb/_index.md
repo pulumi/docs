@@ -214,7 +214,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/dynamodb/metrics.ts#L53">property <b>receivingRegion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>receivingRegion?: aws.Region;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>receivingRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>;</code></pre>
 
 This dimension limits the data to a particular AWS region. It is used with metrics
 originating from replica tables within a DynamoDB global table.
@@ -242,7 +242,7 @@ originating from Amazon DynamoDB Streams 'GetRecords' operations.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/dynamodb/metrics.ts#L34">property <b>table</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>table?: aws.dynamodb.Table;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>table?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#Table'>aws.dynamodb.Table</a>;</code></pre>
 
 Optional [Table] this metric should be filtered down to.
 

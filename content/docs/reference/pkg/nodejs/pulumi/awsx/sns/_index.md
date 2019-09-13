@@ -325,7 +325,7 @@ property, then no change will be made.  However, if the property is there by set
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/sns/metrics.ts#L32">property <b>topic</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>topic?: aws.sns.Topic;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>topic?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic'>aws.sns.Topic</a>;</code></pre>
 
 Optional topic to filter down to.
 

@@ -808,7 +808,7 @@ Applies to: Aurora MySQL
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L102">property <b>cluster</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>cluster?: aws.rds.Cluster;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/rds/#Cluster'>aws.rds.Cluster</a>;</code></pre>
 
 Optional [Cluster] to filter down events to.
 
@@ -865,7 +865,7 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L97">property <b>instance</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>instance?: aws.rds.Instance;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/rds/#Instance'>aws.rds.Instance</a>;</code></pre>
 
 Optional [Instance] to filter down events to.
 
@@ -907,7 +907,7 @@ If this is provided then [cluster] must be provided as well.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L130">property <b>sourceRegion</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>sourceRegion?: aws.Region;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>sourceRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>;</code></pre>
 
 This dimension filters the data you request for the specified region only. For example,
 you can aggregate metrics for all instances in the region [us-east-1].

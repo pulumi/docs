@@ -193,7 +193,7 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L29">property <b>function</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>function?: aws.lambda.Function;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>function?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Function'>aws.lambda.Function</a>;</code></pre>
 
 Optional Function this metric should be filtered down to.
 
