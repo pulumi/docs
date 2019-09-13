@@ -22,7 +22,7 @@ Helm Chart and submit the expanded YAML to the cluster.
 > **NOTE:** This example has a dependency on the `helm` CLI. **Be sure to install that first!** See
 > instructions below.
 
-![wordpress](https://github.com/pulumi/examples/blob/master/kubernetes-ts-helm-wordpress/images/deploy.gif "Wordpress Helm Chart deployment")
+![wordpress](https://raw.githubusercontent.com/pulumi/examples/master/kubernetes-ts-helm-wordpress/images/deploy.gif "Wordpress Helm Chart deployment")
 
 ## Running the App
 

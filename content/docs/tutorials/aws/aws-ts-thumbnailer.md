@@ -15,7 +15,7 @@ A video thumbnail extractor using serverless functions and containers.
 
 Loosely derived from the example at https://serverless.com/blog/serverless-application-for-long-running-process-fargate-lambda/.
 
-![When a new video is uploaded, extract a thumbnail](https://github.com/pulumi/examples/blob/master/aws-ts-thumbnailer/thumbnailer-diagram.png)
+![When a new video is uploaded, extract a thumbnail](https://raw.githubusercontent.com/pulumi/examples/master/aws-ts-thumbnailer/thumbnailer-diagram.png)
 
 ## Prerequisites
 

@@ -50,7 +50,7 @@ When the program is run, it will look something like the following (although thi
 The majority of the time is taken up by deploying Prometheus. Towards the end, at the bottom, you
 can see `canary-example-app` and `canary-staging-app` created.
 
-![gatedDeployment](https://github.com/pulumi/examples/blob/master/kubernetes-ts-staged-rollout-with-prometheus/images/gatedDeployment.gif "Deployment gated by Prometheus check")
+![gatedDeployment](https://raw.githubusercontent.com/pulumi/examples/master/kubernetes-ts-staged-rollout-with-prometheus/images/gatedDeployment.gif "Deployment gated by Prometheus check")
 
 ## Running the App
 

@@ -73,7 +73,7 @@ with `***`.
 
 1.  In a browser, navigate to the URL for `frontendURL`. You should see the voting app webpage.
 
-   ![Voting app screenshot](https://github.com/pulumi/examples/blob/master/aws-ts-voting-app/voting-app-webpage.png)
+   ![Voting app screenshot](https://raw.githubusercontent.com/pulumi/examples/master/aws-ts-voting-app/voting-app-webpage.png)
 
 ### Delete resources
 
