@@ -2,12 +2,14 @@
 title: "Serverless App to Copy and Zip S3 Objects Between Buckets"
 ---
 
-<a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip" target="_blank">
-    <img src="https://get.pulumi.com/new/button.svg" alt="Deploy" style="float: right; padding: 8px; margin-top: -65px; margin-right: 8px">
-</a>
+<p class="mb-4 flex">
+    <a class="flex flex-wrap items-center rounded text-xs text-white bg-blue-600 border-2 border-blue-600 px-2 mr-2 whitespace-no-wrap hover:text-white" style="height: 32px" href="https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip" target="_blank">
+        <span><i class="fab fa-github pr-2"></i> View Code</span>
+    </a>
 
-<p class="mb-4">
-    <a class="btn btn-secondary" href="https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip" target="_blank"><i class="fab fa-github pr-2"></i> VIEW CODE</a>
+    <a href="https://app.pulumi.com/new?template=https://github.com/pulumi/examples/tree/master/aws-ts-s3-lambda-copyzip" target="_blank">
+        <img src="https://get.pulumi.com/new/button.svg" alt="Deploy">
+    </a>
 </p>
 
 
