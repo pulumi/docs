@@ -184,11 +184,13 @@ func gatherTutorials(root string) ([]tutorial, error) {
 
 const (
 	gitHubBaseURL                 = "https://github.com/pulumi/examples"
+	gitHubUserContentBaseURL      = "https://raw.githubusercontent.com/pulumi/examples"
 	tutorialsIndexShortcodePrefix = "tutorials-index"
 )
 
 var (
 	markdownLinkURL = regexp.MustCompile(`\[(.*)\]\((.*)\)`)
+	imageLink       = regexp.MustCompile(`.*\.(?:png|gif|jpe?g)`)
 )
 
 func cleanMarkdownBody(name, body string) string {
@@ -223,7 +225,12 @@ func cleanMarkdownBody(name, body string) string {
 			if strings.HasPrefix(mdurl, "./") {
 				mdurl = mdurl[2:]
 			}
-			mdurl = fmt.Sprintf("%s/blob/master/%s/%s", gitHubBaseURL, name, mdurl)
+			// If it's an image, we use the GitHub user content domain to the image actually displays.
+			if imageLink.MatchString(mdurl) {
+				mdurl = fmt.Sprintf("%s/master/%s/%s", gitHubUserContentBaseURL, name, mdurl)
+			} else {
+				mdurl = fmt.Sprintf("%s/blob/master/%s/%s", gitHubBaseURL, name, mdurl)
+			}
 		}
 		result += fmt.Sprintf("[%s](%s)", mdtext, mdurl)
 
