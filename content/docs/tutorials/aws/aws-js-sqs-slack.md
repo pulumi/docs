@@ -67,7 +67,7 @@ After installing the CLI and cloning the repo, `cd` into the directory, and run 
 
     If you've done everything right, you'll see a message posted to your Slack channel!
 
-    ![SQS Slack](https://github.com/pulumi/examples/blob/master/aws-js-sqs-slack/sqs_slack.png)
+    ![SQS Slack](https://raw.githubusercontent.com/pulumi/examples/master/aws-js-sqs-slack/sqs_slack.png)
 
     Notice we've used the `pulumi stack output` command to read the SQS queue URL that was provisioned.
 
