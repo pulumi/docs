@@ -99,7 +99,7 @@ examples:
 
           exports.endpoint = endpoint.url;
       cta:
-          url: /docs/get-started
+          url: /docs/get-started/
           label: GET STARTED
 
     - id: code-bucket
@@ -123,7 +123,7 @@ examples:
           // Export the bucket name.
           exports.bucketName = videos.bucket;
       cta:
-          url: /docs/get-started
+          url: /docs/get-started/
           label: GET STARTED
 
     - id: code-table
@@ -152,7 +152,7 @@ examples:
               }).end();
           });
       cta:
-          url: /docs/get-started
+          url: /docs/get-started/
           label: GET STARTED
 
     - id: code-timer
@@ -183,7 +183,7 @@ examples:
               console.log(`everyDay730: ${Date.now()}`);
           });
       cta:
-          url: /docs/get-started
+          url: /docs/get-started/
           label: GET STARTED
 
     - id: code-queue
@@ -218,7 +218,7 @@ examples:
               queueURL: queue.id,
           };
       cta:
-          url: /docs/get-started
+          url: /docs/get-started/
           label: GET STARTED
 
     - id: code-topic
@@ -246,6 +246,6 @@ examples:
               }
           });
       cta:
-          url: /docs/get-started
+          url: /docs/get-started/
           label: GET STARTED
 ---
