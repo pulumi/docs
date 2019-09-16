@@ -111,4 +111,4 @@ name of your Pulumi organization.
 ## Troubleshooting
 
 If you have any trouble configuring G Suite, signing into Pulumi, or need additional assistance, please
-[contact us](https://www.pulumi.com/about/#contact-us).
+[contact us]({{< relref "/about#contact-us" >}}).
