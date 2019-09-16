@@ -1,42 +1,16 @@
 ---
-title: "Run Your Own RSS Server on AWS with Pulumi"
-
-# The date represents the post's publish date, and by default corresponds with
-# the date this file was generated. Posts with future dates are visible in development,
-# but excluded from production builds. Use the time and timezone-offset portions of
-# of this value to schedule posts for publishing later.
+title: Run Your Own RSS Server on AWS with Pulumi
 date: 2019-09-13
-
-# Draft posts are visible in development, but excluded from production builds.
-# Set this property to `false` before submitting your post for review.
 draft: false
-
-# Use the optional meta_desc property to provide a brief summary (one or two sentences)
-# of the content of the post, which is useful for targeting search results or social-media
-# previews. If omitted or left blank, the content preceding the `<!--more-->` token
-# will be used in its place.
-meta_desc:
-
-# The meta_image appears in social-media previews and on the blog home page.
-# A placeholder image representing the recommended format, dimensions and aspect
-# ratio has been provided for you.
+meta_desc: In this post, I'll demonstrate how easy it is to build and deploy a Miniflux RSS service on AWS with Pulumi.
 meta_image: meta.png
-
-# At least one author is required. The values in this list correspond with the `id`
-# properties of the team member files at /data/team/team. Create a file for yourself
-# if you don't already have one.
 authors:
     - christian-nunciato
-
-# At least one tag is required. Lowercase, hyphen-delimited is recommended.
 tags:
     - containers
     - database
     - aws
     - rss
-
-# See the blogging docs at https://github.com/pulumi/docs/blob/master/BLOGGING.md.
-# for additional details, and please remove these comments before submitting for review.
 ---
 
 It's been a few years since [Google shut down Google Reader](https://googleblog.blogspot.com/2013/03/a-second-spring-of-cleaning.html), and while a number of nice commercial alternatives have sprung in its wake, none of them has ever been quite the right fit for me personally.
