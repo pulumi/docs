@@ -132,4 +132,4 @@ Edition, or paid Team or Enterprise Edition, you can continue to do so now with 
 
 ### Is Support or Training Available for Pulumi Crosswalk for AWS?
 
-Yes! Please fill out [this form](https://www.pulumi.com/contact) and a Pulumi team member will be in touch.
+Yes! Please fill out [this form]({{< relref "/contact" >}}) and a Pulumi team member will be in touch.

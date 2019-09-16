@@ -124,7 +124,7 @@ of our guides:
 
 If you need help configuring or would like us to officially support another SAML identity
 provider,
-please [contact us]({{< ref "/about#contact-us" >}}).
+please [contact us]({{< relref "/about#contact-us" >}}).
 
 ## Switching Organizations
 

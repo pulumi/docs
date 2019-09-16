@@ -117,7 +117,7 @@ If your IdP does not support an emailAddress Name ID Format identifier but suppo
 
 ### The IdP signing certificate expired and I can't login to Pulumi anymore
 
-Please [contact us](https://www.pulumi.com/about/#contact-us) for assistance with getting the IdP metadata XML updated.
+Please [contact us]({{< relref "/about#contact-us" >}}) for assistance with getting the IdP metadata XML updated.
 
 ### An SSO binding was not found in the XML. Please contact your SSO provider.
 
