@@ -118,7 +118,7 @@ a single package that contains everything. The [`@pulumi/aws`]({{< relref "/docs
 ### Is Pulumi Crosswalk for AWS Free to Use?
 
 Yes, Pulumi Crosswalk for AWS is completely open source and free to use, along with the Community Edition of Pulumi.
-[Pulumi's commercial offerings](https://www.pulumi.com/pricing) already fully support Pulumi Crosswalk for AWS.
+[Pulumi's commercial offerings]({{< relref "/pricing" >}}) already fully support Pulumi Crosswalk for AWS.
 
 If you would like to contribute to the packages, please see the relevant repo on GitHub: [`pulumi/pulumi-aws`](
 https://github.com/pulumi/pulumi-aws), [`pulumi/pulumi-awsx`](https://github.com/pulumi/pulumi-awsx), or
