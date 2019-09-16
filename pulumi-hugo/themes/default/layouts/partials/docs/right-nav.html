@@ -4,19 +4,17 @@
         {{ $isCLICommand := hasPrefix .Path "docs/reference/cli/" }}
         {{ $isNodePackage := hasPrefix .Path "docs/reference/pkg/nodejs/pulumi" }}
         {{ $isPythonPackage := hasPrefix .Path "docs/reference/pkg/python/pulumi" }}
-        {{ if not (or $isCLICommand $isNodePackage $isPythonPackage) }}
+        {{ if not (or $isCLICommand $isNodePackage $isPythonPackage $.Page.Params.no_edit_this_page) }}
             <li>
                 <a class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
-                    <i class="fas fa-edit mr-2"></i>
-                    Edit this Page
+                    <i class="fas fa-edit mr-2" style="width: 14px"></i>Edit this Page
                 </a>
             </li>
         {{ end }}
 
         <li>
             <a class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/issues/new?body=File: [{{ .Path }}]({{ $.Page.Permalink }})" target="_blank">
-                <i class="far fa-check-square mr-2"></i>
-                Request a Change
+                <i class="far fa-check-square mr-2" style="width: 14px"></i>Request a Change
             </a>
         </li>
     </ul>
