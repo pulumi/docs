@@ -33,6 +33,7 @@ $ pulumi new aws-typescript
 $ mkdir quickstart && cd quickstart
 $ pulumi new aws-python
 ```
+{{< cli-note >}}
 
 After logging in, the CLI will proceed with walking you through creating a new project.
 
