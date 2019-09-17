@@ -370,7 +370,7 @@ Valid statistics: Sum
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/s3/metrics.ts#L33">property <b>bucket</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>bucket?: aws.s3.Bucket;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>bucket?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket'>aws.s3.Bucket</a>;</code></pre>
 
 Optional bucket to filter metrics down to.
 

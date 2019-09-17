@@ -666,7 +666,7 @@ information, see Amazon CloudWatch Pricing.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/metrics.ts#L31">property <b>restApi</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>restApi?: aws.apigateway.RestApi;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>restApi?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#RestApi'>aws.apigateway.RestApi</a>;</code></pre>
 
 Optional [RestApi] this metric should be filtered down to.  Only one of [RestApi] or
 [api] can be provided.
@@ -901,7 +901,7 @@ You can use the dimensions in the following table to filter API Gateway metrics.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>getFunction(route?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, method?: Method): aws.lambda.Function</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>getFunction(route?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, method?: Method): <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Function'>aws.lambda.Function</a></code></pre>
 
 
 Returns the [aws.lambda.Function] an [EventHandlerRoute] points to.  This will either be for
@@ -946,22 +946,22 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L333">property <b>deployment</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>deployment: aws.apigateway.Deployment;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>deployment: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Deployment'>aws.apigateway.Deployment</a>;</code></pre>
 <h4 class="pdoc-member-header" id="API-restAPI">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L332">property <b>restAPI</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>restAPI: aws.apigateway.RestApi;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>restAPI: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#RestApi'>aws.apigateway.RestApi</a>;</code></pre>
 <h4 class="pdoc-member-header" id="API-stage">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L334">property <b>stage</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>stage: aws.apigateway.Stage;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>stage: <a href='/docs/reference/pkg/nodejs/pulumi/aws/apigateway/#Stage'>aws.apigateway.Stage</a>;</code></pre>
 <h4 class="pdoc-member-header" id="API-staticRoutesBucket">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L340">property <b>staticRoutesBucket</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>staticRoutesBucket?: aws.s3.Bucket;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>staticRoutesBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket'>aws.s3.Bucket</a>;</code></pre>
 
 Bucket where static resources were placed.  Only set if a Bucket was provided to the API at
 construction time, or if there were any [StaticRoute]s passed to the API.
@@ -1039,7 +1039,7 @@ The stage name for your API. This will get added as a base path to your API url.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L322">property <b>staticRoutesBucket</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>staticRoutesBucket?: aws.s3.Bucket | aws.s3.BucketArgs;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>staticRoutesBucket?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#Bucket'>aws.s3.Bucket</a> | <a href='/docs/reference/pkg/nodejs/pulumi/aws/s3/#BucketArgs'>aws.s3.BucketArgs</a>;</code></pre>
 
 Bucket to use for placing resources for static resources.  If not provided a default one will
 be created on your behalf if any [StaticRoute]s are provided.
@@ -1115,7 +1115,7 @@ gateway will validate these before sending traffic to the event handler.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L281">property <b>loadBalancer</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>loadBalancer: aws.lb.LoadBalancer;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>loadBalancer: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lb/#LoadBalancer'>aws.lb.LoadBalancer</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Endpoint-port">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L280">property <b>port</b></a>
 </h4>
@@ -1150,7 +1150,7 @@ the route is called.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L94">property <b>eventHandler</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>eventHandler: aws.lambda.EventHandler&lt;<a href='#Request'>Request</a>, <a href='#Response'>Response</a>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>eventHandler: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#EventHandler'>aws.lambda.EventHandler</a>&lt;<a href='#Request'>Request</a>, <a href='#Response'>Response</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventHandlerRoute-method">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/apigateway/api.ts#L93">property <b>method</b></a>
 </h4>

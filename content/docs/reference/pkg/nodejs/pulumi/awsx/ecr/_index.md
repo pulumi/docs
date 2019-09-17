@@ -314,7 +314,7 @@ destination registry.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>buildAndPushImage(pathOrBuild: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | docker.DockerBuild&gt;): OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; &amp; { ... }</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>buildAndPushImage(pathOrBuild: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | docker.DockerBuild&gt;): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; &amp; { ... }</code></pre>
 
 
 Builds the docker container specified by [pathOrBuild] and pushes it to this repository.
@@ -350,12 +350,12 @@ multiple copies of the Pulumi SDK have been loaded into the same process.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/ecr/repository.ts#L33">property <b>lifecyclePolicy</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>lifecyclePolicy: aws.ecr.LifecyclePolicy | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>lifecyclePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecr/#LifecyclePolicy'>aws.ecr.LifecyclePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="Repository-repository">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/ecr/repository.ts#L32">property <b>repository</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>repository: aws.ecr.Repository;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>repository: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecr/#Repository'>aws.ecr.Repository</a>;</code></pre>
 <h4 class="pdoc-member-header" id="Repository-urn">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/ecr/repository.ts#L31">property <b>urn</b></a>
 </h4>
@@ -396,7 +396,7 @@ repo.  This result type can be passed in as `image: ecr.buildAndPushImage(...)` 
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> LifecyclePolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, repository: aws.ecr.Repository, args?: <a href='#LifecyclePolicyArgs'>LifecyclePolicyArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> LifecyclePolicy(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, repository: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecr/#Repository'>aws.ecr.Repository</a>, args?: <a href='#LifecyclePolicyArgs'>LifecyclePolicyArgs</a>, opts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ComponentResourceOptions'>pulumi.ComponentResourceOptions</a>)</code></pre>
 
 
 Creates a new [LifecyclePolicy] for the given [repository].  If [args] is not provided, then
@@ -598,7 +598,7 @@ created using `LifecyclePolicy.getDefaultLifecyclePolicyArgs`.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/ecr/repository.ts#L77">property <b>repository</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>repository?: aws.ecr.Repository;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>repository?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/ecr/#Repository'>aws.ecr.Repository</a>;</code></pre>
 
 Underlying repository.  If not provided, a new one will be created on your behalf.
 
@@ -640,7 +640,7 @@ be passed in as the `image: repoImage` value to an `ecs.Container`.
 </h4>
 
 
-<pre class="highlight"><code><span class='kd'>public </span>image(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | OutputInstance&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>image(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt; | <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#OutputInstance'>OutputInstance</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="RepositoryImage-imageValue">
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/ecr/repositoryImage.ts#L26">property <b>imageValue</b></a>

@@ -86,7 +86,7 @@ cleared.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudfront/metrics.ts#L29">property <b>distribution</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>distribution?: aws.cloudfront.Distribution;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>distribution?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cloudfront/#Distribution'>aws.cloudfront.Distribution</a>;</code></pre>
 
 Optional [Distribution] this metric should be filtered down to.
 

@@ -119,7 +119,7 @@ to the default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cognito/metrics.ts#L28">property <b>userPool</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>userPool?: aws.cognito.UserPool;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>userPool?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPool'>aws.cognito.UserPool</a>;</code></pre>
 
 Optional [UserPool] this metric should be filtered down to.
 

@@ -160,7 +160,7 @@ to [undefined] then the value will be set to the default.
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/efs/metrics.ts#L30">property <b>fileSystem</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>fileSystem?: aws.efs.FileSystem;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>fileSystem?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/efs/#FileSystem'>aws.efs.FileSystem</a>;</code></pre>
 
 Filters down events to the specified [FileSystem].
 

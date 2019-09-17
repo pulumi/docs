@@ -288,7 +288,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/sqs/metrics.ts#L31">property <b>queue</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>queue?: aws.sqs.Queue;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>queue?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/sqs/#Queue'>aws.sqs.Queue</a>;</code></pre>
 
 Optional [Queue] to filter events down to.
 

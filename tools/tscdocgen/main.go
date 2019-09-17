@@ -1115,6 +1115,13 @@ func (e *emitter) createCodeDetails(node *typeDocNode) string {
 	}
 }
 
+// @pulumi/awsx imports types within the same modules using the following.
+// We'll use this mapping to map the local import to the actual top-level exported module.
+var awsxImportModuleMap = map[string]string{
+	"ecs.": "ecs",
+	"mod.": "lb",
+}
+
 // typeHyperlink returns the hyperlink for help text associated with a given type, if available.
 func (e *emitter) typeHyperlink(t *typeDocType) string {
 	// Add a hyperlink for the type if possible.
@@ -1158,10 +1165,19 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 				return fmt.Sprintf(
 					"/docs/reference/pkg/nodejs/pulumi/pulumi/asset/#%s", t.Name)
 			case "ComponentResource", "ComponentResourceOptions", "CustomResource", "CustomResourceOptions",
-				"ID", "Input", "Inputs", "InvokeOptions", "Output", "Outputs", "Resource", "ResourceOptions", "URN",
+				"ID", "Input", "Inputs", "InvokeOptions", "Output", "OutputInstance", "Outputs", "Resource", "ResourceOptions", "URN",
 				"ProviderResource":
 				return fmt.Sprintf(
 					"/docs/reference/pkg/nodejs/pulumi/pulumi/#%s", t.Name)
+			}
+
+			if e.pkgname == "awsx" {
+				for prefix, module := range awsxImportModuleMap {
+					if strings.HasPrefix(t.Name, prefix) {
+						name := strings.TrimPrefix(t.Name, prefix)
+						return fmt.Sprintf("/docs/reference/pkg/nodejs/pulumi/awsx/%s/#%s", module, name)
+					}
+				}
 			}
 
 			// If this is a qualified name, see if it refers to the Pulumi SDK. If so, generate a link.
@@ -1170,6 +1186,10 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 			if len(elements) > 1 {
 				if elements[0] == "pulumi" {
 					link = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
+				} else if e.pkgname == "awsx" && elements[0] == "aws" {
+					link = "/docs/reference/pkg/nodejs/pulumi/aws/"
+				} else if e.pkgname == "awsx" && (elements[0] == "x" || elements[0] == "awsx") {
+					link = "/docs/reference/pkg/nodejs/pulumi/awsx/"
 				} else if elements[0] == "inputs" || elements[0] == "inputApi" {
 					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/input/"
 					// Strip out everything except first and last element.  This is necessary given

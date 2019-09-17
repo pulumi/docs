@@ -126,7 +126,7 @@ to [undefined] then the value will be set to the default (300s).
 <a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/codebuild/metrics.ts#L31">property <b>project</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>project?: aws.codebuild.Project;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/codebuild/#Project'>aws.codebuild.Project</a>;</code></pre>
 
 Optional Project this metric should be filtered down to.
 
