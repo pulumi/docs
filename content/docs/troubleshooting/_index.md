@@ -5,8 +5,6 @@ menu:
     weight: 1
 
 aliases: ["/docs/reference/troubleshooting/"]
-
-toc_nochildren: true
 ---
 
 Pulumi tries very hard to ensure that your infrastructure is always in a known and predictable state.
