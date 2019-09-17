@@ -4,8 +4,6 @@ menu:
   reference:
     name: Overview
     weight: 1
-
-toc_nochildren: true
 ---
 
 This section includes all reference documentation for Pulumi.
