@@ -63,7 +63,7 @@ The transpiler approach gives you some of the benefits of Pulumi, with the follo
 
 * Pulumi can use [custom state management]({{< relref "/docs/intro/concepts/state#self-managed-backend" >}})
   and offers a self-hosting option for greater control, including "behind the firewall" on-premises and hybrid
-  options. Tropospher and CDK exclusively rely on the server-side AWS CloudFormation runtime. Pulumi offers a free
+  options. Troposphere and CDK exclusively rely on the server-side AWS CloudFormation runtime. Pulumi offers a free
   hosted backend as its default offering but gives you more flexibility and control.
 
 Although Pulumi and the Troposphere and AWS CDK projects share a vision for the future of infrastructure as code using
