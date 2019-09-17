@@ -280,5 +280,5 @@ field once the Ingress resource is ready to route traffic.
 *Traefik*
 
 For the Traefik controller, verify that the `kubernetes.ingressEndpoint` config
-is [set properly](https://docs.traefik.io/configuration/backends/kubernetes/). This option was
+is [set properly](https://docs.traefik.io/providers/kubernetes-ingress/). This option was
 introduced in Traefik 1.7.0.
