@@ -108,4 +108,4 @@ name of your Pulumi organization.
 ## Troubleshooting
 
 If you run into any troubles configuring Okta, signing into Pulumi, or need some assistance, please
-[contact us](https://www.pulumi.com/about/#contact-us).
+[contact us]({{< relref "/about#contact-us" >}}).

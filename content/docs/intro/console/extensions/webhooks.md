@@ -28,7 +28,7 @@ stacks and organization-specific events like team or membership
 changes.
 
 > There are some restrictions for the number of webhooks that can be registered
-> when using the Pulumi Team editions. [Contact us](https://www.pulumi.com/about/#contact-us)
+> when using the Pulumi Team editions. [Contact us]({{< relref "/about#contact-us" >}})
 > if you need the limit increased.
 
 The Webhooks management page is on the Stack or Organization Settings tab.

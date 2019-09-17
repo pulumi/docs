@@ -20,6 +20,7 @@ If you have multiple AWS profiles set up, specify a different profile using one 
 
 {{< cli-note >}}
 
+
 Next, we'll create a new project.
 
 {{< get-started-stepper >}}

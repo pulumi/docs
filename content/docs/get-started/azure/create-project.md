@@ -34,6 +34,8 @@ $ mkdir quickstart && cd quickstart
 $ pulumi new azure-python
 ```
 
+{{< cli-note >}}
+
 After logging in, the CLI will proceed with walking you through creating a new project.
 
 ```
