@@ -17,7 +17,7 @@ no_edit_this_page: true
 </p>
 
 
-The component version of [aws-js-s3-folder](../aws-js-s3-folder). For a detailed walkthrough of this example, see [Tutorial: Pulumi Components](https://www.pulumi.com/docs/reference/component-tutorial/).
+The component version of [aws-js-s3-folder](../aws-js-s3-folder/). For a detailed walkthrough of this example, see [Tutorial: Pulumi Components](https://www.pulumi.com/docs/tutorials/aws/s3-folder-component/).
 
 ## Deploying and running the program
 
