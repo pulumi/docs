@@ -1188,7 +1188,7 @@ func (e *emitter) typeHyperlink(t *typeDocType) string {
 					link = "/docs/reference/pkg/nodejs/pulumi/pulumi/"
 				} else if e.pkgname == "awsx" && elements[0] == "aws" {
 					link = "/docs/reference/pkg/nodejs/pulumi/aws/"
-				} else if e.pkgname == "awsx" && elements[0] == "x" {
+				} else if e.pkgname == "awsx" && (elements[0] == "x" || elements[0] == "awsx") {
 					link = "/docs/reference/pkg/nodejs/pulumi/awsx/"
 				} else if elements[0] == "inputs" || elements[0] == "inputApi" {
 					link = "/docs/reference/pkg/nodejs/pulumi/" + e.pkgname + "/types/input/"
