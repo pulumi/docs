@@ -135,7 +135,7 @@ aws:region: (us-east-1)
     pulumi.export('publicHostName', server.public_dns)
     ```
 
-    This example uses the [@pulumi/aws] package in JavaScript and TypeScript code and the [pulumi_aws](/docs/reference/pkg/python/pulumi_aws) package in Python code to create two resources:
+    This example uses the [@pulumi/aws] package in JavaScript and TypeScript code and the [pulumi_aws]({{< relref "/docs/reference/pkg/python/pulumi_aws" >}}) package in Python code to create two resources:
 
     * **Security Group**, which allows access for incoming SSH access
         * JavaScript and TypeScript: [aws.ec2.SecurityGroup][Security Group]
