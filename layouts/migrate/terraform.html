@@ -41,7 +41,9 @@
             </div>
             <div class="header-hero-item">
                 <h2 class="text-gray-300">Need help converting?</h2>
-                {{ partial "hubspot-form.html" (dict "hubspotFormID" "123cfbdb-9ce4-4d33-a9b7-c30302463d7a") }}
+                <div class="hs-form hs-form-fg-light">
+                    {{ partial "hubspot-form.html" (dict "hubspotFormID" "123cfbdb-9ce4-4d33-a9b7-c30302463d7a") }}
+                </div>
             </div>
         </div>
     </header>
