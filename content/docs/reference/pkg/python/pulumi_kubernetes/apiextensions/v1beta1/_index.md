@@ -10,14 +10,15 @@ notitle: true
 <dt id="pulumi_kubernetes.apiextensions.v1beta1.CustomResourceDefinition">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.apiextensions.v1beta1.</code><code class="sig-name descname">CustomResourceDefinition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.apiextensions.v1beta1.CustomResourceDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>CustomResourceDefinition represents a resource that should be exposed on the API server.  Its
-name MUST be in the format &lt;.spec.name&gt;.&lt;.spec.group&gt;.</p>
+name MUST be in the format &lt;.spec.name&gt;.&lt;.spec.group&gt;. Deprecated in v1.16, planned for removal
+in v1.19. Use apiextensions.k8s.io/v1 CustomResourceDefinition instead.</p>
 <p>Create a CustomResourceDefinition resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The <em>unique</em> name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – A bag of options that control this resource’s behavior.</p></li>
-<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Spec describes how the user wants the resources to appear</p></li>
+<li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – spec describes how the user wants the resources to appear</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – </p></li>
 </ul>
 </dd>
@@ -41,13 +42,13 @@ info: <a class="reference external" href="https://git.k8s.io/community/contribut
 <dl class="attribute">
 <dt id="pulumi_kubernetes.apiextensions.v1beta1.CustomResourceDefinition.spec">
 <code class="sig-name descname">spec</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.apiextensions.v1beta1.CustomResourceDefinition.spec" title="Permalink to this definition">¶</a></dt>
-<dd><p>Spec describes how the user wants the resources to appear</p>
+<dd><p>spec describes how the user wants the resources to appear</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_kubernetes.apiextensions.v1beta1.CustomResourceDefinition.status">
 <code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.apiextensions.v1beta1.CustomResourceDefinition.status" title="Permalink to this definition">¶</a></dt>
-<dd><p>Status indicates the actual state of the CustomResourceDefinition</p>
+<dd><p>status indicates the actual state of the CustomResourceDefinition</p>
 </dd></dl>
 
 <dl class="method">
@@ -118,7 +119,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The <em>unique</em> name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – A bag of options that control this resource’s behavior.</p></li>
-<li><p><strong>items</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Items individual CustomResourceDefinitions</p></li>
+<li><p><strong>items</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – items list individual CustomResourceDefinition objects</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – </p></li>
 </ul>
 </dd>
@@ -142,7 +143,7 @@ info: <a class="reference external" href="https://git.k8s.io/community/contribut
 <dl class="attribute">
 <dt id="pulumi_kubernetes.apiextensions.v1beta1.CustomResourceDefinitionList.items">
 <code class="sig-name descname">items</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.apiextensions.v1beta1.CustomResourceDefinitionList.items" title="Permalink to this definition">¶</a></dt>
-<dd><p>Items individual CustomResourceDefinitions</p>
+<dd><p>items list individual CustomResourceDefinition objects</p>
 </dd></dl>
 
 <dl class="method">

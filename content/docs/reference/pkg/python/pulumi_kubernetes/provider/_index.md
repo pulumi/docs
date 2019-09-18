@@ -8,7 +8,7 @@ notitle: true
 <span id="provider"></span><h1>provider<a class="headerlink" href="#module-pulumi_kubernetes.provider" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.provider.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.provider.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">__name__</em>, <em class="sig-param">__opts__=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">enable_dry_run=None</em>, <em class="sig-param">kubeconfig=None</em>, <em class="sig-param">namespace=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.provider.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.provider.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">__name__</em>, <em class="sig-param">__opts__=None</em>, <em class="sig-param">cluster=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">enable_dry_run=None</em>, <em class="sig-param">kubeconfig=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">suppress_deprecation_warnings=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.provider.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the kubernetes package.</p>
 <p>Create a Provider resource with the given unique name, arguments, and options.</p>
 <p>:param str <strong>name</strong>: The unique name of the resource.
@@ -29,6 +29,8 @@ If this is set, this config will be used instead of $KUBECONFIG.</p></li>
 This flag is ignored for cluster-scoped resources.
 Note: if .metadata.namespace is set on a resource, that value takes
 precedence over the provider default.</p></li>
+<li><p><strong>suppress_deprecation_warnings</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If present and set to True, suppress apiVersion
+deprecation warnings from the CLI.</p></li>
 </ul>
 </dd>
 </dl>

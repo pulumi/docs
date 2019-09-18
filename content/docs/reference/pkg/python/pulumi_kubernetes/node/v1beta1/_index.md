@@ -8,7 +8,7 @@ notitle: true
 <span id="v1beta1"></span><h1>v1beta1<a class="headerlink" href="#module-pulumi_kubernetes.node.v1beta1" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="pulumi_kubernetes.node.v1beta1.RuntimeClass">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.node.v1beta1.</code><code class="sig-name descname">RuntimeClass</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">handler=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClass" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.node.v1beta1.</code><code class="sig-name descname">RuntimeClass</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">handler=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">overhead=None</em>, <em class="sig-param">scheduling=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClass" title="Permalink to this definition">¶</a></dt>
 <dd><p>RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is
 used to determine which container runtime is used to run all containers in a pod. RuntimeClasses
 are (currently) manually defined by a user or cluster provisioner, and referenced in the
@@ -29,6 +29,14 @@ native Linux containers) will be used to run the containers in a pod. The Handle
 must conform to the DNS Label (RFC 1123) requirements, and is immutable.</p></li>
 <li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – More info:
 <a class="reference external" href="https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata">https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</a></p></li>
+<li><p><strong>overhead</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Overhead represents the resource overhead associated with running a pod for a given
+RuntimeClass. For more details, see
+<a class="reference external" href="https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md">https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md</a> This field is
+alpha-level as of Kubernetes v1.15, and is only honored by servers that enable the
+PodOverhead feature.</p></li>
+<li><p><strong>scheduling</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Scheduling holds the scheduling constraints to ensure that pods running with this
+RuntimeClass are scheduled to nodes that support it. If scheduling is nil, this
+RuntimeClass is assumed to be supported by all nodes.</p></li>
 </ul>
 </dd>
 </dl>
@@ -64,6 +72,23 @@ must conform to the DNS Label (RFC 1123) requirements, and is immutable.</p>
 <code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClass.metadata" title="Permalink to this definition">¶</a></dt>
 <dd><p>More info:
 <a class="reference external" href="https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata">https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata</a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_kubernetes.node.v1beta1.RuntimeClass.overhead">
+<code class="sig-name descname">overhead</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClass.overhead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overhead represents the resource overhead associated with running a pod for a given
+RuntimeClass. For more details, see
+<a class="reference external" href="https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md">https://git.k8s.io/enhancements/keps/sig-node/20190226-pod-overhead.md</a> This field is alpha-level
+as of Kubernetes v1.15, and is only honored by servers that enable the PodOverhead feature.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_kubernetes.node.v1beta1.RuntimeClass.scheduling">
+<code class="sig-name descname">scheduling</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.node.v1beta1.RuntimeClass.scheduling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scheduling holds the scheduling constraints to ensure that pods running with this RuntimeClass
+are scheduled to nodes that support it. If scheduling is nil, this RuntimeClass is assumed to be
+supported by all nodes.</p>
 </dd></dl>
 
 <dl class="method">

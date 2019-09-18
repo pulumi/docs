@@ -9,10 +9,12 @@ notitle: true
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="admissionregistration/">admissionregistration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="admissionregistration/v1/">v1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="admissionregistration/v1beta1/">v1beta1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="apiextensions/">apiextensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apiextensions/v1/">v1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="apiextensions/v1beta1/">v1beta1</a></li>
 </ul>
 </li>
@@ -64,6 +66,10 @@ notitle: true
 </li>
 <li class="toctree-l1"><a class="reference internal" href="core/">core</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="core/v1/">v1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="discovery/">discovery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="discovery/v1alpha1/">v1alpha1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="events/">events</a><ul>

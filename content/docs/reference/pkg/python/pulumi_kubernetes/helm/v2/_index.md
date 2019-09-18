@@ -105,9 +105,10 @@ name. For example: <code class="docutils literal notranslate"><span class="pre">
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>chart</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The chart to deploy.  If [repo] is provided, this chart name is
-looked up in the given repository. Otherwise, this chart name must be a fully qualified
-chart URL or <code class="docutils literal notranslate"><span class="pre">repo/chartname</span></code>.</p></li>
+<li><p><strong>chart</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the chart to deploy.  If <code class="docutils literal notranslate"><span class="pre">repo</span></code> is provided, this chart name
+will be prefixed by the repo name.
+Example: repo: “stable”, chart: “nginx-ingress” -&gt; “stable/nginx-ingress”
+Example: chart: “stable/nginx-ingress” -&gt; “stable/nginx-ingress”</p></li>
 <li><p><strong>namespace</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Optional namespace to install chart resources into.</p></li>
 <li><p><strong>values</strong> (<em>Optional</em><em>[</em><em>pulumi.Inputs</em><em>]</em>) – Optional overrides for chart values.</p></li>
 <li><p><strong>Optional</strong><strong>[</strong><strong>pulumi.ResourceOptions</strong><strong>]</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>transformations</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>Tuple</em><em>[</em><em>Callable</em><em>,</em>) – Optional list of
@@ -115,8 +116,8 @@ transformations to apply to resources that will be created by this chart prior t
 Allows customization of the chart behaviour without directly modifying the chart itself.</p></li>
 <li><p><strong>resource_prefix</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – An optional prefix for the auto-generated resource names.
 Example: A resource created with resource_prefix=”foo” would produce a resource named “foo-resourceName”.</p></li>
-<li><p><strong>repo</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The repository containing the desired chart.  If not
-provided, [chart] must be a fully qualified chart URL or repo/chartname.</p></li>
+<li><p><strong>repo</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The repository name of the chart to deploy.
+Example: “stable”</p></li>
 <li><p><strong>version</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The version of the chart to deploy. If not provided,
 the latest version will be deployed.</p></li>
 <li><p><strong>fetch_opts</strong> (<em>Optional</em><em>[</em><em>pulumi.Input</em><em>[</em><a class="reference internal" href="#pulumi_kubernetes.helm.v2.FetchOpts" title="pulumi_kubernetes.helm.v2.FetchOpts"><em>FetchOpts</em></a><em>]</em><em>]</em>) – Additional options to customize the
@@ -127,15 +128,16 @@ fetching of the Helm chart.</p></li>
 <dl class="attribute">
 <dt id="pulumi_kubernetes.helm.v2.ChartOpts.chart">
 <code class="sig-name descname">chart</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts.chart" title="Permalink to this definition">¶</a></dt>
-<dd><p>The chart to deploy.  If [repo] is provided, this chart name is looked up in the given repository.
-Otherwise, this chart name must be a fully qualified chart URL or <code class="docutils literal notranslate"><span class="pre">repo/chartname</span></code>.</p>
+<dd><p>The name of the chart to deploy.  If <code class="docutils literal notranslate"><span class="pre">repo</span></code> is provided, this chart name will be prefixed by the repo name.
+Example: repo: “stable”, chart: “nginx-ingress” -&gt; “stable/nginx-ingress”
+Example: chart: “stable/nginx-ingress” -&gt; “stable/nginx-ingress”</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_kubernetes.helm.v2.ChartOpts.repo">
 <code class="sig-name descname">repo</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_kubernetes.helm.v2.ChartOpts.repo" title="Permalink to this definition">¶</a></dt>
-<dd><p>The repository containing the desired chart.  If not provided, [chart] must be a fully qualified
-chart URL or repo/chartname.</p>
+<dd><p>The repository name of the chart to deploy. 
+Example: “stable”</p>
 </dd></dl>
 
 <dl class="attribute">

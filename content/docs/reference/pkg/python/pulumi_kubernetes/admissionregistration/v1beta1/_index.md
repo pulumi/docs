@@ -10,7 +10,8 @@ notitle: true
 <dt id="pulumi_kubernetes.admissionregistration.v1beta1.MutatingWebhookConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.admissionregistration.v1beta1.</code><code class="sig-name descname">MutatingWebhookConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">webhooks=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.admissionregistration.v1beta1.MutatingWebhookConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>MutatingWebhookConfiguration describes the configuration of and admission webhook that accept or
-reject and may change the object.</p>
+reject and may change the object. Deprecated in v1.16, planned for removal in v1.19. Use
+admissionregistration.k8s.io/v1 MutatingWebhookConfiguration instead.</p>
 <p>Create a MutatingWebhookConfiguration resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -217,7 +218,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_kubernetes.admissionregistration.v1beta1.ValidatingWebhookConfiguration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_kubernetes.admissionregistration.v1beta1.</code><code class="sig-name descname">ValidatingWebhookConfiguration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">webhooks=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_kubernetes.admissionregistration.v1beta1.ValidatingWebhookConfiguration" title="Permalink to this definition">¶</a></dt>
 <dd><p>ValidatingWebhookConfiguration describes the configuration of and admission webhook that accept
-or reject and object without changing it.</p>
+or reject and object without changing it. Deprecated in v1.16, planned for removal in v1.19. Use
+admissionregistration.k8s.io/v1 ValidatingWebhookConfiguration instead.</p>
 <p>Create a ValidatingWebhookConfiguration resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
