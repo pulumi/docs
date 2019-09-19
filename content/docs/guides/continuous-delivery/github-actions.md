@@ -11,121 +11,140 @@ aliases:
 - /docs/console/continuous-delivery/github-actions/
 ---
 
-Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and infrastructure
-to your cloud of choice, using nothing but code in your favorite language and GitHub. This includes previewing,
-validating, and collaborating on proposed deployments in the context of Pull Requests, and triggering deployments
-or promotions between different environments by merging or directly committing changes.
+Pulumi's [GitHub Actions](https://developer.github.com/actions) help you deploy apps and
+infrastructure to your cloud of choice, using nothing but code in your favorite language
+and GitHub. This includes previewing, validating, and collaborating on proposed
+deployments in the context of Pull Requests, and triggering deployments or promotions
+between different environments by merging or directly committing changes.
 
 Let's see how to get started -- it's easy!
 
 > **Note**: GitHub Actions is currently in public beta. Please [register for
-> access](https://github.com/features/actions) to start using the feature. Until you've been added, the
-> **Actions** tab won't show in your repos, and the `.pulumi/main.workflow` file described
-> below will not be recognized by GitHub. Also note that these features only work on
-> private repos in the specific account that has been granted access.
+> access](https://github.com/features/actions) to start using the feature. Until your
+> GitHub organization has been approved for the beta, the **Actions** tab won't show in
+> your repos, and the Actions-related files described in this guide will not be recognized by
+> GitHub.
 
 # Pre-Requisites
 
-Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you haven't already).
+Before proceeding, you'll need to [Sign Up for Pulumi](https://app.pulumi.com/) (if you
+haven't already). This guide also assumes you've reviewed the [GitHub Actions
+documentation](https://help.github.com/en/categories/automating-your-workflow-with-github-actions)
+and are generally familiar with its concepts and syntax.
 
-For your workflow to do anything interesting, you'll want to create a new Pulumi project.
-There are three ways to do this:
+For your workflow to do anything interesting, you'll want to create a new Pulumi project
+for it. There are three ways to do this:
 
 1. [Clone an existing Pulumi example](https://github.com/pulumi/examples)
 2. [Use the New Project wizard](https://app.pulumi.com/site/new-project)
-3. [Download the CLI]({{< relref "/docs/get-started/install" >}}) and run `pulumi new` to select a template
+3. [Download the CLI]({{< relref "/docs/get-started/install" >}}) and run `pulumi new` to
+   select a template
 
 # Creating a Workflow
 
-Although the full power of the Pulumi CLI is available to use with GitHub Actions, we recommend starting with
-our standard workflow, which consists of two actions, both triggered by GitHub events:
+Although the full power of the Pulumi CLI is available to use with GitHub Actions, we
+recommend starting with our standard workflow, which consists of two workflow files, each
+triggered by common GitHub events:
 
-1. **Pulumi Preview (Merged Stack)** runs `pulumi preview` in response to a Pull Request, showing what would happen if the PR were merged into the target branch.
-2. **Pulumi Deploy (Current Stack)** runs `pulumi up` on the target branch, in response to a commit on that branch.
+1. **Pulumi Preview** runs `pulumi preview` in response to a Pull Request, showing a preview of the changes
+   to the target branch when the PR gets merged.
+2. **Pulumi Up** runs `pulumi up` on the target branch, in response to a commit on that
+   branch.
 
-From here, there are two ways to configure actions in your repo: in code, by committing a
-workflow file in your project repository, or by using the visual editor on GitHub.com.
+## Committing the Workflow Files
 
-We'll start with the file-based approach, but if you'd prefer to use the visual editor
-instead, you can [skip to that section now](#using-the-visual-editor).
+Let's get started by adding these two new workflow files to the GitHub repository
+containing your Pulumi project.
 
-## Committing the Workflow File
+### The pull_request Workflow File
 
-Let's get started by adding a new workflow file to the GitHub repository containing your
-Pulumi project.
+Add a new file to your Pulumi project repository at `.github/workflows/pull_request.yml`
+containing the following workflow definition, which instructs GitHub Actions to run
+`pulumi preview` in response to all `pull_request` events:
 
-To set up the workflow to run anytime you make a commit or a Pull Request (including
-successive commits on PR branches), add a new file to the repository at
-`.github/main.workflow`:
+```yaml
+name: Pulumi
+on:
+  - pull_request
+jobs:
+  preview:
+    name: Preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - run: scripts/build
+      - uses: docker://pulumi/actions
+        with:
+          args: preview
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          PULUMI_CI: pr
 
-```hcl
-action "Build" {
-    uses = "docker://alpine"
-    runs = ["scripts/build"]
-}
-
-workflow "Preview" {
-    on = "pull_request"
-    resolves = "Pulumi Preview (Merged Stack)"
-}
-
-action "Pulumi Preview (Merged Stack)" {
-    needs = ["Build"]
-    uses = "docker://pulumi/actions"
-    args = ["preview"]
-    env = {
-        PULUMI_CI = "pr"
-    }
-    secrets = [
-        "PULUMI_ACCESS_TOKEN"
-    ]
-}
-
-workflow "Update" {
-    on = "push"
-    resolves = ["Pulumi Deploy (Current Stack)"]
-}
-
-action "Pulumi Deploy (Current Stack)" {
-    needs = ["Build"]
-    uses = "docker://pulumi/actions"
-    args = ["up"]
-    env = {
-        PULUMI_CI = "up"
-    }
-    secrets = [
-        "PULUMI_ACCESS_TOKEN"
-    ]
-}
 ```
 
-Note that by using the `pulumi/actions` Docker image, these workflow actions will
-automatically download and use the latest version of Pulumi. If you prefer to use a
-specific version of Pulumi, you can replace all occurrences of `uses =
-"docker://pulumi/actions"` with a container image that contains the version as a tag. For
-instance `uses = "docker://pulumi/actions:v0.16.6"`.
+Note that by using the `pulumi/actions` Docker image, the workflow will automatically
+download and use the latest version of Pulumi. If you prefer to use a specific version of
+Pulumi, you can replace all occurrences of `uses: "docker://pulumi/actions"` in this and
+other workflow files with a container reference that appends the desired version as a tag ---
+for example, `uses: "docker://pulumi/actions:v1.0.0"`.
 
-We've also included a preliminary `Build` action &mdash; and declared it as a
-dependency of both the Preview and Update actions &mdash; in order to demonstrate running
-a setup script in advance of Pulumi. Feel free to remove this block (and the `needs`
-references to it) if it doesn't suit your particular situation.
+Also note that we've set several environment variables, some of which are referenced as [GitHub Actions secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) (which we'll provide values for later), to expose to the workflow job at runtime.
 
-Now that you've got a workflow defined, you'll need to configure your secrets. Secrets are
-exposed as environment variables to the GitHub Actions runtime environment. Minimally,
-we'll need to supply a Pulumi access token in order to allow Pulumi CLI to communicate
-with the Pulumi Service on your behalf, and you'll probably want to provide credentials
-for communicating with your cloud provider as well.
+Lastly, we've also included a preliminary `Build` step, in order to to demonstrate
+running a setup script in advance of Pulumi. Feel free to remove this step if it doesn't
+suit your particular situation.
+
+### The push Workflow File
+
+Next, add a second workflow file at `.github/workflows/push.yml` containing the following
+definition, which tells GitHub to run `pulumi up` in response to a commit on the `master`
+branch:
+
+```yaml
+name: Pulumi
+on:
+  push:
+    branches:
+      - master
+jobs:
+  up:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - run: scripts/build
+      - uses: docker://pulumi/actions
+        with:
+          args: up
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+          PULUMI_CI: up
+```
+
+Now that you've got these two common workflows defined, you'll need to configure your
+secrets. Secrets are exposed as environment variables to the GitHub Actions runtime
+environment. Minimally, you'll need to supply a Pulumi access token to allow the Pulumi CLI to
+communicate with the Pulumi Service on your behalf, and you'll probably want to provide
+credentials for communicating with your cloud provider as well.
 
 ## Configuring Your Secrets
 
-After committing the workflow file into your repo as `.github/main.workflow`, head on over
-to your repo's **Settings tab**, where you'll find the new **Secrets area**:
+With your workflow files committed and pushed to GitHub, head on over
+to your repo's **Settings** tab, where you'll find the new **Secrets** area:
 
 ![Secrets](/images/docs/reference/gh-actions-secrets.png)
 
 First, [create a new Pulumi Access Token](https://app.pulumi.com/account/tokens), then
 submit that token as a new secret named named `PULUMI_ACCESS_TOKEN`. This enables your
-GitHub Action to communicate with the Pulumi service.
+GitHub Action to communicate with the Pulumi service on your behalf.
 
 Next, add secrets for your cloud credentials, just as you did `PULUMI_ACCESS_TOKEN` above,
 based on your provider of choice. For example:
@@ -134,47 +153,6 @@ based on your provider of choice. For example:
 * `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, and `ARM_TENANT_ID` for [Azure]({{< relref "/docs/intro/cloud-providers/azure/setup.md" >}})
 * `GOOGLE_CREDENTIALS` for [GCP]({{< relref "/docs/intro/cloud-providers/gcp/setup.md" >}})
 * `KUBECONFIG` for [Kubernetes]({{< relref "/docs/intro/cloud-providers/kubernetes/setup.md" >}})
-
-> **Important**: Remember to add these variable names to the `secrets` lists in your
-> workflow `action` blocks, or GitHub Actions won't make them available to the running
-> container, and things will behave as if you hadn't set them at all!
-
-# Using the Visual Editor
-
-All of the above can be done using GitHub's visual editor if you prefer. We have listed
-the manual instructions because not everybody will see the new UI while GitHub Actions is
-in preview. But after your initial setup, this UI will become available, and you may find
-it more convenient to edit things visually.
-
-1. Go to your repo on GitHub, and click on the new **Actions** tab:
-
-    ![Editor Actions Tab](/images/docs/reference/gh-actions-editor-tab.png)
-
-2. Click the **Create a new workflow** button:
-
-    ![Editor Create Workflow](/images/docs/reference/gh-actions-editor-create.png)
-
-3. Click the **Edit new file** tab:
-
-    ![Editor New File](/images/docs/reference/gh-actions-editor-newfile.png)
-
-4. Replace the default workflow with the one we provided described above, along with your customizations:
-
-    ![Editor Workflow Edit](/images/docs/reference/gh-actions-editor-edit.png)
-
-If you select the **Visual editor** tab, you'll see the resulting workflow actions, and all secrets may be edited:
-
-![Editor Visual Edit](/images/docs/reference/gh-actions-editor-visual.png)
-
-To edit your secrets, scroll down and select the first Pulumi action, and click **Edit**:
-
-![Editor Edit](/images/docs/reference/gh-actions-editor-configure.png)
-
-This will open the action editor on the right-hand side, in which you'll enter your
-various credentials (for Pulumi and your cloud). After configuring these, you should see
-the green secrets with lock icons show up for your actions:
-
-![Editor Secrets](/images/docs/reference/gh-actions-editor-secrets.png)
 
 # Try It Out!
 
@@ -206,7 +184,6 @@ the GitHub Actions container directly.
 
 The [Pulumi GitHub App]({{< relref "github-app.md" >}}) is something you install on your
 GitHub organization. It allows the Pulumi service to leave comments on Pull Requests but does not give it access to your source code.
-does not have access to your source code.)
 
 Once the Pulumi GitHub App is installed, when your GitHub Actions run Pulumi, a summary of
 any resource changes will be left on the Pull Request, as well as links to the Pulumi
@@ -233,21 +210,25 @@ output of the Pulumi CLI.
 To allow your GitHub Action to leave Pull Request comments, you'll need to set the
 `COMMENT_ON_PR` environment variable, and add `GITHUB_TOKEN` to the list of `secrets`
 passed to the action. (The `GITHUB_TOKEN` value will already be set in the running
-environment, so there's no need to add one explicitly as a secret.) For example:
+environment, so there's no need to add one explicitly as a secret.) Add the following two
+lines to the `env` block of the preview action:
 
-```hcl
-action "Pulumi Preview (Merged Stack)" {
-  uses = "docker://pulumi/actions"
-  args = ["preview"]
-  env = {
-    PULUMI_CI = "pr"
-    COMMENT_ON_PR = "1"
-  }
-  secrets = [
-    "PULUMI_ACCESS_TOKEN",
-    "GITHUB_TOKEN"
-  ]
-}
+```diff
+name: Pulumi
+on:
+  - pull_request
+jobs:
+  preview:
+    ...
+    steps:
+      ...
+      - uses: docker://pulumi/actions
+        with:
+          args: preview
+        env:
+          ...
+          PULUMI_CI: pr
+          COMMENT_ON_PR: 1
 ```
 
 Example comment when using GitHub Actions directly:
@@ -266,12 +247,17 @@ directory. If you are using a different root directory for your project, simply 
 project directory. For example:
 
 ```hcl
-action "Pulumi Deploy (Current Stack)" {
+name: Pulumi
+on:
+  - pull_request
+jobs:
+  preview:
     ...
-    env = {
-        PULUMI_ROOT = "infra"
-    }
-}
+    steps:
+      ...
+        env:
+          ...
+          PULUMI_ROOT: infra
 ```
 
 This tells Pulumi that the project can be found underneath the repo's `infra` directory.
