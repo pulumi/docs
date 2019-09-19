@@ -90,7 +90,7 @@ Note that by using the `pulumi/actions` Docker image, the workflow will automati
 download and use the latest version of Pulumi. If you prefer to use a specific version of
 Pulumi, you can replace all occurrences of `uses: "docker://pulumi/actions"` in this and
 other workflow files with a container reference that appends the desired version as a tag ---
-e.g., `uses: "docker://pulumi/actions:v1.0.0"`.
+for example, `uses: "docker://pulumi/actions:v1.0.0"`.
 
 Also note that we've set several environment variables, some of which are referenced as [GitHub Actions secrets](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) (which we'll provide values for later), to expose to the workflow job at runtime.
 
