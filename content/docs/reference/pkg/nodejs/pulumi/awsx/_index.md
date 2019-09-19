@@ -57,7 +57,7 @@ import * as awsx from "@pulumi/awsx";
 
 <h2 id="data-sources">Data Sources</h2>
 <h3 class="pdoc-module-header" id="getAvailabilityZone" data-link-title="getAvailabilityZone">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/aws.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/aws.ts#L24">
         Data Source <strong>getAvailabilityZone</strong>
     </a>
 </h3>
@@ -66,7 +66,7 @@ import * as awsx from "@pulumi/awsx";
 <pre class="highlight"><code><span class='kd'></span>getAvailabilityZone(index: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getAvailabilityZones" data-link-title="getAvailabilityZones">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/aws.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/aws.ts#L29">
         Data Source <strong>getAvailabilityZones</strong>
     </a>
 </h3>
@@ -77,7 +77,7 @@ import * as awsx from "@pulumi/awsx";
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="Overwrite" data-link-title="Overwrite">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/utils.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/utils.ts#L27">
         type <strong>Overwrite</strong>
     </a>
 </h3>
