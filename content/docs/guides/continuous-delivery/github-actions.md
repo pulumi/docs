@@ -46,8 +46,8 @@ Although the full power of the Pulumi CLI is available to use with GitHub Action
 recommend starting with our standard workflow, which consists of two workflow files, each
 triggered by common GitHub events:
 
-1. **Pulumi Preview** runs `pulumi preview` in response to a Pull Request, showing what
-   would happen if the PR were merged into the target branch.
+1. **Pulumi Preview** runs `pulumi preview` in response to a Pull Request, showing a preview of the changes
+   to the target branch when the PR gets merged.
 2. **Pulumi Up** runs `pulumi up` on the target branch, in response to a commit on that
    branch.
 
