@@ -251,7 +251,7 @@ we paste in the endpoint from Pulumi and pick our interval.
 
 ### Additional Resources
 
-For more solutions, check out the [Mapbox Blog](https://blog.mapbox.com/),
-[Pulumi Blog]({{< ref "/blog" >}})) and get started
-with more examples in our [Pulumi Examples repository](https://github.com/pulumi/examples) on GitHub. For AWS solutions visit
-the AWS partner [blog site](https://aws.amazon.com/blogs/apn/).
+For more information from Mapbox check out the [Mapbox Blog](https://blog.mapbox.com/).
+For more solutions from Pulumi please visit our [Blog]({{< relref "/blog" >}})
+or head over to the [Pulumi Examples repository](https://github.com/pulumi/examples).
+For AWS solutions visit the AWS partner [blog site](https://aws.amazon.com/blogs/apn/).
