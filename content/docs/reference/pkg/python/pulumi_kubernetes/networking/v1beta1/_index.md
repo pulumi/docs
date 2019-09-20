@@ -24,9 +24,7 @@ type is ExternalName).</p></li>
 </ol>
 <p>If the Ingress has not reached a Ready state after 10 minutes, it will
 time out and mark the resource update as Failed. You can override the default timeout value
-by setting the ‘customTimeouts’ option on the resource.
-Note that the timeout value for Delete is not yet supported. See
-<a class="reference external" href="https://github.com/pulumi/pulumi-kubernetes/issues/746">https://github.com/pulumi/pulumi-kubernetes/issues/746</a> for details.</p>
+by setting the ‘customTimeouts’ option on the resource.</p>
 <p>Create a Ingress resource with the given unique name, arguments, and options.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

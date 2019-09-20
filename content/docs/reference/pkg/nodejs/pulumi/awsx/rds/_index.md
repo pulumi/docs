@@ -87,7 +87,7 @@ linktitle: "rds"
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="activeTransactions" data-link-title="activeTransactions">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L449">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L449">
         function <strong>activeTransactions</strong>
     </a>
 </h3>
@@ -103,7 +103,7 @@ innodb_monitor_enable='all' in the DB parameter group for a specific DB instance
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="auroraBinlogReplicaLag" data-link-title="auroraBinlogReplicaLag">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L462">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L462">
         function <strong>auroraBinlogReplicaLag</strong>
     </a>
 </h3>
@@ -121,7 +121,7 @@ information, see Aurora MySQL Replication.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="auroraGlobalDBDataTransferBytes" data-link-title="auroraGlobalDBDataTransferBytes">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L480">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L480">
         function <strong>auroraGlobalDBDataTransferBytes</strong>
     </a>
 </h3>
@@ -135,7 +135,7 @@ Units: Bytes
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="auroraGlobalDBReplicatedWriteIO" data-link-title="auroraGlobalDBReplicatedWriteIO">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L471">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L471">
         function <strong>auroraGlobalDBReplicatedWriteIO</strong>
     </a>
 </h3>
@@ -149,7 +149,7 @@ Units: Bytes
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="auroraGlobalDBReplicationLag" data-link-title="auroraGlobalDBReplicationLag">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L489">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L489">
         function <strong>auroraGlobalDBReplicationLag</strong>
     </a>
 </h3>
@@ -163,7 +163,7 @@ Units: Milliseconds
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="auroraReplicaLag" data-link-title="auroraReplicaLag">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L499">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L499">
         function <strong>auroraReplicaLag</strong>
     </a>
 </h3>
@@ -178,7 +178,7 @@ in milliseconds.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="auroraReplicaLagMaximum" data-link-title="auroraReplicaLagMaximum">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L509">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L509">
         function <strong>auroraReplicaLagMaximum</strong>
     </a>
 </h3>
@@ -193,7 +193,7 @@ cluster, in milliseconds.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="auroraReplicaLagMinimum" data-link-title="auroraReplicaLagMinimum">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L519">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L519">
         function <strong>auroraReplicaLagMinimum</strong>
     </a>
 </h3>
@@ -208,7 +208,7 @@ cluster, in milliseconds.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="backtrackChangeRecordsCreationRate" data-link-title="backtrackChangeRecordsCreationRate">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L528">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L528">
         function <strong>backtrackChangeRecordsCreationRate</strong>
     </a>
 </h3>
@@ -222,7 +222,7 @@ The number of backtrack change records created over five minutes for your DB clu
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="backtrackChangeRecordsStored" data-link-title="backtrackChangeRecordsStored">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L537">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L537">
         function <strong>backtrackChangeRecordsStored</strong>
     </a>
 </h3>
@@ -236,7 +236,7 @@ The actual number of backtrack change records used by your DB cluster.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="backtrackWindowActual" data-link-title="backtrackWindowActual">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L546">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L546">
         function <strong>backtrackWindowActual</strong>
     </a>
 </h3>
@@ -250,7 +250,7 @@ The difference between the target backtrack window and the actual backtrack wind
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="backtrackWindowAlert" data-link-title="backtrackWindowAlert">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L556">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L556">
         function <strong>backtrackWindowAlert</strong>
     </a>
 </h3>
@@ -265,7 +265,7 @@ window for a given period of time.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="backupRetentionPeriodStorageUsed" data-link-title="backupRetentionPeriodStorageUsed">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L568">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L568">
         function <strong>backupRetentionPeriodStorageUsed</strong>
     </a>
 </h3>
@@ -282,7 +282,7 @@ instructions, see Understanding Aurora Backup Storage Usage. Units: Gibibytes (G
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="binLogDiskUsage" data-link-title="binLogDiskUsage">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L198">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L198">
         function <strong>binLogDiskUsage</strong>
     </a>
 </h3>
@@ -297,7 +297,7 @@ replicas.
 Units: Bytes
 
 <h3 class="pdoc-module-header" id="blockedTransactions" data-link-title="blockedTransactions">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L577">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L577">
         function <strong>blockedTransactions</strong>
     </a>
 </h3>
@@ -311,7 +311,7 @@ The average number of transactions in the database that are blocked per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="bufferCacheHitRatio" data-link-title="bufferCacheHitRatio">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L586">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L586">
         function <strong>bufferCacheHitRatio</strong>
     </a>
 </h3>
@@ -325,7 +325,7 @@ The percentage of requests that are served by the buffer cache.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="burstBalance" data-link-title="burstBalance">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L207">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L207">
         function <strong>burstBalance</strong>
     </a>
 </h3>
@@ -339,7 +339,7 @@ The percent of General Purpose SSD (gp2) burst-bucket I/O credits available.
 Units: Percent
 
 <h3 class="pdoc-module-header" id="commitLatency" data-link-title="commitLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L595">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L595">
         function <strong>commitLatency</strong>
     </a>
 </h3>
@@ -353,7 +353,7 @@ The amount of latency for commit operations, in milliseconds.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="commitThroughput" data-link-title="commitThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L604">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L604">
         function <strong>commitThroughput</strong>
     </a>
 </h3>
@@ -367,7 +367,7 @@ The average number of commit operations per second.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="cpuCreditBalance" data-link-title="cpuCreditBalance">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L251">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L251">
         function <strong>cpuCreditBalance</strong>
     </a>
 </h3>
@@ -394,7 +394,7 @@ stops, the CPUCreditBalance does not persist, and all accrued credits are lost.
 CPU credit metrics are available at a five-minute frequency only.
 
 <h3 class="pdoc-module-header" id="cpuCreditUsage" data-link-title="cpuCreditUsage">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L229">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L229">
         function <strong>cpuCreditUsage</strong>
     </a>
 </h3>
@@ -412,7 +412,7 @@ CPU credit metrics are available at a five-minute frequency only. If you specify
 greater than five minutes, use the Sum statistic instead of the Average statistic.
 
 <h3 class="pdoc-module-header" id="cpuUtilization" data-link-title="cpuUtilization">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L216">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L216">
         function <strong>cpuUtilization</strong>
     </a>
 </h3>
@@ -426,7 +426,7 @@ The percentage of CPU utilization.
 Units: Percent
 
 <h3 class="pdoc-module-header" id="databaseConnections" data-link-title="databaseConnections">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L260">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L260">
         function <strong>databaseConnections</strong>
     </a>
 </h3>
@@ -440,7 +440,7 @@ The number of database connections in use.
 Units: Count
 
 <h3 class="pdoc-module-header" id="ddlLatency" data-link-title="ddlLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L614">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L614">
         function <strong>ddlLatency</strong>
     </a>
 </h3>
@@ -455,7 +455,7 @@ example, create, alter, and drop requests.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="ddlThroughput" data-link-title="ddlThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L623">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L623">
         function <strong>ddlThroughput</strong>
     </a>
 </h3>
@@ -469,7 +469,7 @@ The average number of DDL requests per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="deadlocks" data-link-title="deadlocks">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L632">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L632">
         function <strong>deadlocks</strong>
     </a>
 </h3>
@@ -483,7 +483,7 @@ The average number of deadlocks in the database per second.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="deleteLatency" data-link-title="deleteLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L641">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L641">
         function <strong>deleteLatency</strong>
     </a>
 </h3>
@@ -497,7 +497,7 @@ The amount of latency for delete queries, in milliseconds.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="deleteThroughput" data-link-title="deleteThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L650">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L650">
         function <strong>deleteThroughput</strong>
     </a>
 </h3>
@@ -511,7 +511,7 @@ The average number of delete queries per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="diskQueueDepth" data-link-title="diskQueueDepth">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L269">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L269">
         function <strong>diskQueueDepth</strong>
     </a>
 </h3>
@@ -525,7 +525,7 @@ The number of outstanding IOs (read/write requests) waiting to access the disk.
 Units: Count
 
 <h3 class="pdoc-module-header" id="dmlLatency" data-link-title="dmlLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L659">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L659">
         function <strong>dmlLatency</strong>
     </a>
 </h3>
@@ -539,7 +539,7 @@ The amount of latency for inserts, updates, and deletes, in milliseconds.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="dmlThroughput" data-link-title="dmlThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L668">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L668">
         function <strong>dmlThroughput</strong>
     </a>
 </h3>
@@ -553,7 +553,7 @@ The average number of inserts, updates, and deletes per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="engineUptime" data-link-title="engineUptime">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L677">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L677">
         function <strong>engineUptime</strong>
     </a>
 </h3>
@@ -567,7 +567,7 @@ The amount of time that the instance has been running, in seconds.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="failedSQLServerAgentJobsCount" data-link-title="failedSQLServerAgentJobsCount">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L278">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L278">
         function <strong>failedSQLServerAgentJobsCount</strong>
     </a>
 </h3>
@@ -581,7 +581,7 @@ The number of failed SQL Server Agent jobs during the last minute.
 Unit: Count/Minute
 
 <h3 class="pdoc-module-header" id="freeableMemory" data-link-title="freeableMemory">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L287">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L287">
         function <strong>freeableMemory</strong>
     </a>
 </h3>
@@ -595,7 +595,7 @@ The amount of available random access memory.
 Units: Bytes
 
 <h3 class="pdoc-module-header" id="freeLocalStorage" data-link-title="freeLocalStorage">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L690">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L690">
         function <strong>freeLocalStorage</strong>
     </a>
 </h3>
@@ -613,7 +613,7 @@ storage space for an instance by choosing a larger DB instance class for your in
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="freeStorageSpace" data-link-title="freeStorageSpace">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L296">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L296">
         function <strong>freeStorageSpace</strong>
     </a>
 </h3>
@@ -627,7 +627,7 @@ The amount of available storage space.
 Units: Bytes
 
 <h3 class="pdoc-module-header" id="insertLatency" data-link-title="insertLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L699">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L699">
         function <strong>insertLatency</strong>
     </a>
 </h3>
@@ -641,7 +641,7 @@ The amount of latency for insert queries, in milliseconds.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="insertThroughput" data-link-title="insertThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L708">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L708">
         function <strong>insertThroughput</strong>
     </a>
 </h3>
@@ -655,7 +655,7 @@ The average number of insert queries per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="loginFailures" data-link-title="loginFailures">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L717">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L717">
         function <strong>loginFailures</strong>
     </a>
 </h3>
@@ -669,7 +669,7 @@ The average number of failed login attempts per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="maximumUsedTransactionIDs" data-link-title="maximumUsedTransactionIDs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L305">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L305">
         function <strong>maximumUsedTransactionIDs</strong>
     </a>
 </h3>
@@ -683,7 +683,7 @@ The maximum transaction ID that has been used. Applies to PostgreSQL.
 Units: Count
 
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L164">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -723,7 +723,7 @@ Amazon RDS metrics data can be filtered by using any of the following dimensions
    example, you can aggregate metrics for all instances in the region us-east-1.
 
 <h3 class="pdoc-module-header" id="networkReceiveThroughput" data-link-title="networkReceiveThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L315">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L315">
         function <strong>networkReceiveThroughput</strong>
     </a>
 </h3>
@@ -738,7 +738,7 @@ traffic and Amazon RDS traffic used for monitoring and replication.
 Units: Bytes/Second
 
 <h3 class="pdoc-module-header" id="networkThroughput" data-link-title="networkThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L728">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L728">
         function <strong>networkThroughput</strong>
     </a>
 </h3>
@@ -754,7 +754,7 @@ network traffic between instances in the DB cluster and the cluster volume.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="networkTransmitThroughput" data-link-title="networkTransmitThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L325">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L325">
         function <strong>networkTransmitThroughput</strong>
     </a>
 </h3>
@@ -769,7 +769,7 @@ traffic and Amazon RDS traffic used for monitoring and replication.
 Units: Bytes/Second
 
 <h3 class="pdoc-module-header" id="oldestReplicationSlotLag" data-link-title="oldestReplicationSlotLag">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L335">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L335">
         function <strong>oldestReplicationSlotLag</strong>
     </a>
 </h3>
@@ -784,7 +784,7 @@ PostgreSQL.
 Units: Megabytes
 
 <h3 class="pdoc-module-header" id="queries" data-link-title="queries">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L737">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L737">
         function <strong>queries</strong>
     </a>
 </h3>
@@ -798,14 +798,14 @@ The average number of queries executed per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="RdsMetricChange" data-link-title="RdsMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L93">
         interface <strong>RdsMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RdsMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="RdsMetricChange-cluster">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L102">property <b>cluster</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L102">property <b>cluster</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cluster?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/rds/#Cluster'>aws.rds.Cluster</a>;</code></pre>
@@ -813,7 +813,7 @@ Applies to: Aurora MySQL
 Optional [Cluster] to filter down events to.
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -823,7 +823,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-databaseClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L118">property <b>databaseClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L118">property <b>databaseClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseClass?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -833,7 +833,7 @@ example, you can aggregate metrics for all instances that belong to the database
 [db.m1.small].
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -843,7 +843,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-engineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L124">property <b>engineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L124">property <b>engineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineName?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -852,7 +852,7 @@ This dimension filters the data you request for the identified engine name only.
 example, you can aggregate metrics for all instances that have the engine name [mysql].
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -862,7 +862,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-instance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L97">property <b>instance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L97">property <b>instance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instance?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/rds/#Instance'>aws.rds.Instance</a>;</code></pre>
@@ -870,7 +870,7 @@ to [undefined] then the value will be set to the default.
 Optional [Instance] to filter down events to.
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -882,7 +882,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -892,7 +892,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-role">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L111">property <b>role</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L111">property <b>role</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>role?: <span class='s2'>"WRITER"</span> | <span class='s2'>"READER"</span>;</code></pre>
@@ -904,7 +904,7 @@ all READER instances that belong to a cluster.
 If this is provided then [cluster] must be provided as well.
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-sourceRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L130">property <b>sourceRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L130">property <b>sourceRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/#Region'>aws.Region</a>;</code></pre>
@@ -913,7 +913,7 @@ This dimension filters the data you request for the specified region only. For e
 you can aggregate metrics for all instances in the region [us-east-1].
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -923,7 +923,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -933,7 +933,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -944,7 +944,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="RdsMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -954,14 +954,14 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="RdsMetricName" data-link-title="RdsMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L21">
         type <strong>RdsMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> RdsMetricName = <span class='s2'>"BinLogDiskUsage"</span> | <span class='s2'>"BurstBalance"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"CPUCreditUsage"</span> | <span class='s2'>"CPUCreditBalance"</span> | <span class='s2'>"DatabaseConnections"</span> | <span class='s2'>"DiskQueueDepth"</span> | <span class='s2'>"FailedSQLServerAgentJobsCount"</span> | <span class='s2'>"FreeableMemory"</span> | <span class='s2'>"FreeStorageSpace"</span> | <span class='s2'>"MaximumUsedTransactionIDs"</span> | <span class='s2'>"NetworkReceiveThroughput"</span> | <span class='s2'>"NetworkTransmitThroughput"</span> | <span class='s2'>"OldestReplicationSlotLag"</span> | <span class='s2'>"ReadIOPS"</span> | <span class='s2'>"ReadLatency"</span> | <span class='s2'>"ReadThroughput"</span> | <span class='s2'>"ReplicaLag"</span> | <span class='s2'>"ReplicationSlotDiskUsage"</span> | <span class='s2'>"SwapUsage"</span> | <span class='s2'>"TransactionLogsDiskUsage"</span> | <span class='s2'>"TransactionLogsGeneration"</span> | <span class='s2'>"WriteIOPS"</span> | <span class='s2'>"WriteLatency"</span> | <span class='s2'>"WriteThroughput"</span> | <span class='s2'>"ActiveTransactions"</span> | <span class='s2'>"AuroraBinlogReplicaLag"</span> | <span class='s2'>"AuroraGlobalDBReplicatedWriteIO"</span> | <span class='s2'>"AuroraGlobalDBDataTransferBytes"</span> | <span class='s2'>"AuroraGlobalDBReplicationLag"</span> | <span class='s2'>"AuroraReplicaLag"</span> | <span class='s2'>"AuroraReplicaLagMaximum"</span> | <span class='s2'>"AuroraReplicaLagMinimum"</span> | <span class='s2'>"BacktrackChangeRecordsCreationRate"</span> | <span class='s2'>"BacktrackChangeRecordsStored"</span> | <span class='s2'>"BacktrackWindowActual"</span> | <span class='s2'>"BacktrackWindowAlert"</span> | <span class='s2'>"BackupRetentionPeriodStorageUsed"</span> | <span class='s2'>"BinLogDiskUsage"</span> | <span class='s2'>"BlockedTransactions"</span> | <span class='s2'>"BufferCacheHitRatio"</span> | <span class='s2'>"CommitLatency"</span> | <span class='s2'>"CommitThroughput"</span> | <span class='s2'>"CPUCreditBalance"</span> | <span class='s2'>"CPUCreditUsage"</span> | <span class='s2'>"CPUUtilization"</span> | <span class='s2'>"DatabaseConnections"</span> | <span class='s2'>"DDLLatency"</span> | <span class='s2'>"DDLThroughput"</span> | <span class='s2'>"Deadlocks"</span> | <span class='s2'>"DeleteLatency"</span> | <span class='s2'>"DeleteThroughput"</span> | <span class='s2'>"DiskQueueDepth"</span> | <span class='s2'>"DMLLatency"</span> | <span class='s2'>"DMLThroughput"</span> | <span class='s2'>"EngineUptime"</span> | <span class='s2'>"FreeableMemory"</span> | <span class='s2'>"FreeLocalStorage"</span> | <span class='s2'>"InsertLatency"</span> | <span class='s2'>"InsertThroughput"</span> | <span class='s2'>"LoginFailures"</span> | <span class='s2'>"MaximumUsedTransactionIDs"</span> | <span class='s2'>"NetworkReceiveThroughput"</span> | <span class='s2'>"NetworkThroughput"</span> | <span class='s2'>"NetworkTransmitThroughput"</span> | <span class='s2'>"Queries"</span> | <span class='s2'>"RDSToAuroraPostgreSQLReplicaLag"</span> | <span class='s2'>"ReadIOPS"</span> | <span class='s2'>"ReadLatency"</span> | <span class='s2'>"ReadThroughput"</span> | <span class='s2'>"ResultSetCacheHitRatio"</span> | <span class='s2'>"SelectLatency"</span> | <span class='s2'>"SelectThroughput"</span> | <span class='s2'>"SnapshotStorageUsed"</span> | <span class='s2'>"SwapUsage"</span> | <span class='s2'>"TotalBackupStorageBilled"</span> | <span class='s2'>"TransactionLogsDiskUsage"</span> | <span class='s2'>"UpdateLatency"</span> | <span class='s2'>"UpdateThroughput"</span> | <span class='s2'>"VolumeBytesUsed"</span> | <span class='s2'>"VolumeReadIOPs"</span> | <span class='s2'>"VolumeWriteIOPs"</span> | <span class='s2'>"WriteIOPS"</span> | <span class='s2'>"WriteLatency"</span> | <span class='s2'>"WriteThroughput"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="rdsToAuroraPostgreSQLReplicaLag" data-link-title="rdsToAuroraPostgreSQLReplicaLag">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L747">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L747">
         function <strong>rdsToAuroraPostgreSQLReplicaLag</strong>
     </a>
 </h3>
@@ -976,7 +976,7 @@ instance to other nodes in the cluster.
 Applies to: Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="readIOPS" data-link-title="readIOPS">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L344">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L344">
         function <strong>readIOPS</strong>
     </a>
 </h3>
@@ -990,7 +990,7 @@ The average number of disk read I/O operations per second.
 Units: Count/Second
 
 <h3 class="pdoc-module-header" id="readLatency" data-link-title="readLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L353">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L353">
         function <strong>readLatency</strong>
     </a>
 </h3>
@@ -1004,7 +1004,7 @@ The average amount of time taken per disk I/O operation.
 Units: Seconds
 
 <h3 class="pdoc-module-header" id="readThroughput" data-link-title="readThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L362">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L362">
         function <strong>readThroughput</strong>
     </a>
 </h3>
@@ -1018,7 +1018,7 @@ The average number of bytes read from disk per second.
 Units: Bytes/Second
 
 <h3 class="pdoc-module-header" id="replicaLag" data-link-title="replicaLag">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L372">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L372">
         function <strong>replicaLag</strong>
     </a>
 </h3>
@@ -1033,7 +1033,7 @@ MySQL, MariaDB, and PostgreSQL Read Replicas.
 Units: Seconds
 
 <h3 class="pdoc-module-header" id="replicationSlotDiskUsage" data-link-title="replicationSlotDiskUsage">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L381">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L381">
         function <strong>replicationSlotDiskUsage</strong>
     </a>
 </h3>
@@ -1047,7 +1047,7 @@ The disk space used by replication slot files. Applies to PostgreSQL.
 Units: Megabytes
 
 <h3 class="pdoc-module-header" id="resultSetCacheHitRatio" data-link-title="resultSetCacheHitRatio">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L756">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L756">
         function <strong>resultSetCacheHitRatio</strong>
     </a>
 </h3>
@@ -1061,7 +1061,7 @@ The percentage of requests that are served by the Resultset cache.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="selectLatency" data-link-title="selectLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L765">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L765">
         function <strong>selectLatency</strong>
     </a>
 </h3>
@@ -1075,7 +1075,7 @@ The amount of latency for select queries, in milliseconds.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="selectThroughput" data-link-title="selectThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L774">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L774">
         function <strong>selectThroughput</strong>
     </a>
 </h3>
@@ -1089,7 +1089,7 @@ The average number of select queries per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="snapshotStorageUsed" data-link-title="snapshotStorageUsed">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L786">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L786">
         function <strong>snapshotStorageUsed</strong>
     </a>
 </h3>
@@ -1106,7 +1106,7 @@ instructions, see Understanding Aurora Backup Storage Usage. Units: Gibibytes (G
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="swapUsage" data-link-title="swapUsage">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L391">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L391">
         function <strong>swapUsage</strong>
     </a>
 </h3>
@@ -1121,7 +1121,7 @@ Server.
 Units: Bytes
 
 <h3 class="pdoc-module-header" id="totalBackupStorageBilled" data-link-title="totalBackupStorageBilled">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L798">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L798">
         function <strong>totalBackupStorageBilled</strong>
     </a>
 </h3>
@@ -1138,7 +1138,7 @@ see Understanding Aurora Backup Storage Usage. Units: Gibibytes (GiB)
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="transactionLogsDiskUsage" data-link-title="transactionLogsDiskUsage">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L400">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L400">
         function <strong>transactionLogsDiskUsage</strong>
     </a>
 </h3>
@@ -1152,7 +1152,7 @@ The disk space used by transaction logs. Applies to PostgreSQL.
 Units: Megabytes
 
 <h3 class="pdoc-module-header" id="transactionLogsGeneration" data-link-title="transactionLogsGeneration">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L409">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L409">
         function <strong>transactionLogsGeneration</strong>
     </a>
 </h3>
@@ -1166,7 +1166,7 @@ The size of transaction logs generated per second. Applies to PostgreSQL.
 Units: Megabytes/Second
 
 <h3 class="pdoc-module-header" id="updateLatency" data-link-title="updateLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L807">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L807">
         function <strong>updateLatency</strong>
     </a>
 </h3>
@@ -1180,7 +1180,7 @@ The amount of latency for update queries, in milliseconds.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="updateThroughput" data-link-title="updateThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L816">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L816">
         function <strong>updateThroughput</strong>
     </a>
 </h3>
@@ -1194,7 +1194,7 @@ The average number of update queries per second.
 Applies to: Aurora MySQL
 
 <h3 class="pdoc-module-header" id="volumeBytesUsed" data-link-title="volumeBytesUsed">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L826">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L826">
         function <strong>volumeBytesUsed</strong>
     </a>
 </h3>
@@ -1209,7 +1209,7 @@ of the Aurora DB cluster (for pricing information, see the Amazon RDS product pa
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="volumeReadIOPs" data-link-title="volumeReadIOPs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L844">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L844">
         function <strong>volumeReadIOPs</strong>
     </a>
 </h3>
@@ -1232,7 +1232,7 @@ read operations as query results are read from storage and then loaded into the 
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="volumeWriteIOPs" data-link-title="volumeWriteIOPs">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L855">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L855">
         function <strong>volumeWriteIOPs</strong>
     </a>
 </h3>
@@ -1248,7 +1248,7 @@ billed write operations are calculated.
 Applies to: Aurora MySQL and Aurora PostgreSQL
 
 <h3 class="pdoc-module-header" id="writeIOPS" data-link-title="writeIOPS">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L418">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L418">
         function <strong>writeIOPS</strong>
     </a>
 </h3>
@@ -1262,7 +1262,7 @@ The average number of disk write I/O operations per second.
 Units: Count/Second
 
 <h3 class="pdoc-module-header" id="writeLatency" data-link-title="writeLatency">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L427">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L427">
         function <strong>writeLatency</strong>
     </a>
 </h3>
@@ -1276,7 +1276,7 @@ The average amount of time taken per disk I/O operation.
 Units: Seconds
 
 <h3 class="pdoc-module-header" id="writeThroughput" data-link-title="writeThroughput">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/rds/metrics.ts#L436">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/rds/metrics.ts#L436">
         function <strong>writeThroughput</strong>
     </a>
 </h3>

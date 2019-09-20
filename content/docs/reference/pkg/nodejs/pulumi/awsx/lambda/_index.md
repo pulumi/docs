@@ -28,7 +28,7 @@ linktitle: "lambda"
 
 <h2 id="metrics" data-link-title="metrics">namespace <strong>metrics</strong></h2>
 <h3 class="pdoc-module-header" id="concurrentExecutions" data-link-title="concurrentExecutions">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L174">
         function <strong>concurrentExecutions</strong>
     </a>
 </h3>
@@ -45,7 +45,7 @@ an average metric if aggregated across a time period.
 Units: Count
 
 <h3 class="pdoc-module-header" id="deadLetterErrors" data-link-title="deadLetterErrors">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L126">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L126">
         function <strong>deadLetterErrors</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ Letter Queues. This could be due to the following:
 Units: Count
 
 <h3 class="pdoc-module-header" id="duration" data-link-title="duration">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L139">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L139">
         function <strong>duration</strong>
     </a>
 </h3>
@@ -83,7 +83,7 @@ nonzero value.
 Units: Count
 
 <h3 class="pdoc-module-header" id="errors" data-link-title="errors">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L111">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L111">
         function <strong>errors</strong>
     </a>
 </h3>
@@ -109,7 +109,7 @@ concurrent limits (error code 429) or failures due to internal service errors (e
 Units: Count
 
 <h3 class="pdoc-module-header" id="invocations" data-link-title="invocations">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L90">
         function <strong>invocations</strong>
     </a>
 </h3>
@@ -127,7 +127,7 @@ value.
 Units: Count
 
 <h3 class="pdoc-module-header" id="iteratorAge" data-link-title="iteratorAge">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L162">
         function <strong>iteratorAge</strong>
     </a>
 </h3>
@@ -144,14 +144,14 @@ record in the batch was written to the stream.
 Units: Milliseconds
 
 <h3 class="pdoc-module-header" id="LambdaMetricChange" data-link-title="LambdaMetricChange">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L25">
         interface <strong>LambdaMetricChange</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>LambdaMetricChange</span> <span class='kr'>extends</span> <a href='#MetricChange'>MetricChange</a></code></pre>
 <h4 class="pdoc-member-header" id="LambdaMetricChange-color">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L439">property <b>color</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L442">property <b>color</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>color?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ The six-digit HTML hex color code to be used for this metric.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L408">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L411">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Record&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>&gt;&gt;;</code></pre>
@@ -171,7 +171,7 @@ will be made.  However, if the property is there by set to [undefined] then the 
 cleared.
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-executedVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L40">property <b>executedVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L40">property <b>executedVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executedVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -180,7 +180,7 @@ Filters the metric data by Lambda function versions. This only applies to alias
 invocations.
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-extendedStatistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L426">property <b>extendedStatistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L429">property <b>extendedStatistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extendedStatistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -190,7 +190,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-function">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L29">property <b>function</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L29">property <b>function</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>function?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Function'>aws.lambda.Function</a>;</code></pre>
@@ -198,7 +198,7 @@ to [undefined] then the value will be set to the default.
 Optional Function this metric should be filtered down to.
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-label">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L448">property <b>label</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L451">property <b>label</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>label?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -210,7 +210,7 @@ widget.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L414">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L417">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ missing this property, then no change will be made.  However, if the property is
 to [undefined] then the value will be set to the default (300s).
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L34">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L34">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -228,7 +228,7 @@ to [undefined] then the value will be set to the default (300s).
 Filters the metric data by Lambda function resource, such as function version or alias.
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-statistic">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L420">property <b>statistic</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L423">property <b>statistic</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistic?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricStatistic'>MetricStatistic</a>&gt;;</code></pre>
@@ -238,7 +238,7 @@ property, then no change will be made.  However, if the property is there by set
 [undefined] then the value will be set to the default.
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-unit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L432">property <b>unit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L435">property <b>unit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>unit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='#MetricUnit'>MetricUnit</a>&gt;;</code></pre>
@@ -248,7 +248,7 @@ be made.  However, if the property is there by set to [undefined] then the value
 to the default.
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-visible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L456">property <b>visible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L459">property <b>visible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>visible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -259,7 +259,7 @@ default is true.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h4 class="pdoc-member-header" id="LambdaMetricChange-yAxis">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/cloudwatch/metric.ts#L463">property <b>yAxis</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/cloudwatch/metric.ts#L466">property <b>yAxis</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>yAxis?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"left"</span> | <span class='s2'>"right"</span>&gt;;</code></pre>
@@ -269,14 +269,14 @@ Where on the graph to display the y-axis for this metric. The default is left.
 Only used if this metric is displayed in a [Dashboard] with a [MetricWidget].
 
 <h3 class="pdoc-module-header" id="LambdaMetricName" data-link-title="LambdaMetricName">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L21">
         type <strong>LambdaMetricName</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> LambdaMetricName = <span class='s2'>"Invocations"</span> | <span class='s2'>"Errors"</span> | <span class='s2'>"DeadLetterErrors"</span> | <span class='s2'>"Duration"</span> | <span class='s2'>"Throttles"</span> | <span class='s2'>"IteratorAge"</span> | <span class='s2'>"ConcurrentExecutions"</span> | <span class='s2'>"UnreservedConcurrentExecutions"</span>;</code></pre>
 <h3 class="pdoc-module-header" id="metric" data-link-title="metric">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L60">
         function <strong>metric</strong>
     </a>
 </h3>
@@ -302,7 +302,7 @@ functions:
    to alias invocations.
 
 <h3 class="pdoc-module-header" id="throttles" data-link-title="throttles">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L150">
         function <strong>throttles</strong>
     </a>
 </h3>
@@ -318,7 +318,7 @@ invocations may trigger a retry attempt that succeeds.
 Units: Count
 
 <h3 class="pdoc-module-header" id="unreservedConcurrentExecutions" data-link-title="unreservedConcurrentExecutions">
-    <a href="https://github.com/pulumi/pulumi-awsx/blob/27592029c654cdf842eaee527e848a4f7ede759a/nodejs/awsx/lambda/metrics.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-awsx/blob/e996e22e1fe80b06727b3727282bf0424925b507/nodejs/awsx/lambda/metrics.ts#L186">
         function <strong>unreservedConcurrentExecutions</strong>
     </a>
 </h3>
