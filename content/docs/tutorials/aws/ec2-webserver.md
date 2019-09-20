@@ -6,7 +6,7 @@ aliases: ["/docs/reference/tutorials/aws/tutorial-ec2-webserver/"]
 
 {{< github-buttons "aws-js-webserver" "aws-py-webserver" >}}
 
-In this tutorial, we'll use JavaScript or Python to deploy a simple webserver using an Amazon EC2 instance. 
+In this tutorial, we will show you how to use JavaScript or Python to deploy a simple webserver using an Amazon EC2 instance.
 
 {{< multilang-tutorial-prereqs >}}
 
@@ -21,7 +21,6 @@ In this tutorial, we'll use JavaScript or Python to deploy a simple webserver us
 {{< /lang >}}
 
 ## Deploy the App
-
 
 ### Step 1: Create a new project from a template
 
@@ -140,6 +139,8 @@ pulumi.export('publicIp', server.public_ip)
 pulumi.export('publicHostName', server.public_dns)
 ```
 
+> **Note:** The example configuration is designed to work on most EC2 accounts, with access to a default VPC. For EC2 Classic users, please use t1.micro for `size`.
+
 This example uses the [`@pulumi/aws`]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}) package in JavaScript and TypeScript code and the [`pulumi_aws`]({{< relref "/docs/reference/pkg/python/pulumi_aws" >}}) package in Python code to create two resources:
 
 | AWS Resource | Description | TypeScript / JavaScript Resource | Python Resource |
@@ -151,193 +152,248 @@ This example uses the [`@pulumi/aws`]({{< relref "/docs/reference/pkg/nodejs/pul
 
 To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
-        $ pulumi up
-        Previewing update of stack 'webserver-dev'
-        Previewing changes:
+```bash
+Previewing update (webserver-dev):
 
-            Type                      Name                               Plan       Info
-        +   pulumi:pulumi:Stack       webserver-webserver-dev            create
-        +   ├─ aws:ec2:SecurityGroup  webserver-secgrp                   create
-        +   └─ aws:ec2:Instance       webserver-www                      create
+     Type                      Name                     Plan
+ +   pulumi:pulumi:Stack       myproject-webserver-dev  create
+ +   ├─ aws:ec2:SecurityGroup  webserver-secgrp         create
+ +   └─ aws:ec2:Instance       webserver-www            create
 
-        info: 3 changes previewed:
-            + 3 resources to create
+Resources:
+    + 3 to create
 
-Now, proceed with the deployment, which takes about 30 seconds to complete.
+Do you want to perform this update?
+  yes
+> no
+  details
+```
 
-        Do you want to perform this update? yes
-        Updating stack 'ec2-quickstart-dev'
-        Performing changes:
+Next, proceed with the deployment, which takes about 40 seconds to complete.
 
-            Type                      Name                               Status      Info
-        +   pulumi:pulumi:Stack       webserver-webserver-testing        created
-        +   ├─ aws:ec2:SecurityGroup  webserver-secgrp                   created
-        +   └─ aws:ec2:Instance       webserver-www                      created
+```bash
+Do you want to perform this update? yes
+Updating (webserver-dev):
 
-        ---outputs:---
-        publicHostName: "ec2-34-224-93-18.compute-1.amazonaws.com"
-        publicIp      : "34.224.93.18"
+     Type                      Name                     Status
+ +   pulumi:pulumi:Stack       myproject-webserver-dev  created
+ +   ├─ aws:ec2:SecurityGroup  webserver-secgrp         created
+ +   └─ aws:ec2:Instance       webserver-www            created
+ 
+Outputs:
+    publicHostName: "ec2-34-217-110-29.us-west-2.compute.amazonaws.com"
+    publicIp      : "34.217.110.29"
 
-        info: 3 changes performed:
-            + 3 resources created
-        Update duration: 32.938640858s
+Resources:
+    + 3 created
 
-        Permalink: https://app.pulumi.com/lindydonna/ec2-quickstart-dev/updates/3
+Duration: 40s
 
+Permalink: https://app.pulumi.com/bermudezmt/myproject/webserver-dev/updates/1
+```
 
-    To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on pulumi.com has a link to the AWS console for the provisioned EC2 instance.
+### Step 4: View your stack resources
 
-1.  To view the provisioned resources on the command line, run `pulumi stack`. You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}}) corresponding to the IP and full-qualified host name of the EC2 instance we've created.
+**Pulumi Console**
 
-    ```
-    $ pulumi stack
-    ...
+To see the full details of the deployment and the resources that are now part of the stack, open the update link in a browser. The **Resources** tab on the Pulumi Console has a link to the AWS console for the provisioned EC2 instance.
 
-    Current stack resources (3):
-        TYPE                                    NAME
-        pulumi:pulumi:Stack                     webserver-webserver-testing
-        aws:ec2/securityGroup:SecurityGroup     webserver-secgrp
-        aws:ec2/instance:Instance               webserver-www
+**Pulumi CLI**
 
-    Current stack outputs (2):
-        OUTPUT                                  VALUE
-        publicHostName                          ec2-54-213-251-255.us-west-2.compute.amazonaws.com
-        publicIp                                54.213.251.255
-    ```
+To view the provisioned resources on the command line, run [`pulumi stack`]({{< relref "/docs/reference/cli/pulumi_stack" >}}). You'll also see two [stack outputs]({{< relref "/docs/intro/concepts/stack#outputs" >}}) corresponding to the IP and the fully qualified domain name (FQDN) of the EC2 instance we've created.
 
-## Updating the Pulumi program
+```
+Current stack is webserver-dev:
+    Owner: <your-org-name>
+    Last updated: 10 minutes ago (2019-09-20 11:57:55.90881794 -0700 PDT)
+    Pulumi version: v1.1.0
+Current stack resources (4):
+    TYPE                                 NAME
+    pulumi:pulumi:Stack                  myproject-webserver-dev
+    pulumi:providers:aws                 default_1_2_1
+    aws:ec2/securityGroup:SecurityGroup  webserver-secgrp
+    aws:ec2/instance:Instance            webserver-www
 
-Now that we have an instance of our Pulumi program deployed, we may want to make changes. We do this by updating our
-Pulumi program to define the new state we want our infrastructure to be in, then and running `pulumi up` to commit the changes.
+More information at: https://app.pulumi.com/<your-org-name>/myproject/webserver-dev
 
-1.  Replace the creation of the two resources with the following. This exposes an additional port and adds a startup
-    script to run a simple HTTP server at startup.
+Use `pulumi stack select` to change stack; `pulumi stack ls` lists known ones
+```
 
-    {{< langchoose nogo >}}
+### Step 5: Update the Pulumi program
 
-    ```javascript
-    ...
+Now that you have an instance of the Pulumi program deployed, you may want to make changes. You do so by updating the
+Pulumi program to define the new state you want your infrastructure to be in, and then running `pulumi up` to commit the changes.
 
-    let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
-        ingress: [
-            { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-            // ^-- ADD THIS LINE
-        ],
-    });
+Replace the creation of the two resources with the following code. This exposes an additional port, `80`, and adds a startup
+script to run a simple HTTP server at startup.
 
-    let userData = // <-- ADD THIS DEFINITION
-    `#!/bin/bash
-    echo "Hello, World!" > index.html
-    nohup python -m SimpleHTTPServer 80 &`;
+{{< langchoose nogo >}}
 
-    let server = new aws.ec2.Instance("web-server-www", {
-        instanceType: size,
-        securityGroups: [ group.name ], // reference the group object above
-        ami: ami.id,
-        userData: userData,             // <-- ADD THIS LINE
-    });
+```javascript
+...
 
-    ...
-    ```
+let group = new aws.ec2.SecurityGroup("webserver-secgrp", {
+    ingress: [
+        { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+        { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+        // ^-- ADD THIS LINE
+    ],
+});
 
-    ```typescript
-    ...
+let userData = // <-- ADD THIS DEFINITION
+`#!/bin/bash
+echo "Hello, World!" > index.html
+nohup python -m SimpleHTTPServer 80 &`;
 
-    const group = new aws.ec2.SecurityGroup("webserver-secgrp", {
-        ingress: [
-            { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
-            { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
-            // ^-- ADD THIS LINE
-        ],
-    });
+let server = new aws.ec2.Instance("web-server-www", {
+    instanceType: size,
+    securityGroups: [ group.name ], // reference the group object above
+    ami: ami.id,
+    userData: userData,             // <-- ADD THIS LINE
+});
 
-    const userData = // <-- ADD THIS DEFINITION
-    `#!/bin/bash
-    echo "Hello, World!" > index.html
-    nohup python -m SimpleHTTPServer 80 &`;
+...
+```
 
-    const server = new aws.ec2.Instance("webserver-www", {
-        instanceType: size,
-        securityGroups: [ group.name ], // reference the security group resource above
-        ami: ami.id,
-        userData: userData,             // <-- ADD THIS LINE
-    });
+```typescript
+...
 
-    ...
-    ```
+const group = new aws.ec2.SecurityGroup("webserver-secgrp", {
+    ingress: [
+        { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+        { protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] },
+        // ^-- ADD THIS LINE
+    ],
+});
 
-    ```python
-    ...
+const userData = // <-- ADD THIS DEFINITION
+`#!/bin/bash
+echo "Hello, World!" > index.html
+nohup python -m SimpleHTTPServer 80 &`;
 
-    group = ec2.SecurityGroup('webserver-secgrp',
-        description='Enable HTTP access',
-        ingress=[
-            { 'protocol': 'tcp', 'from_port': 22, 'to_port': 22, 'cidr_blocks': ['0.0.0.0/0'] },
-            { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0'] }
-            # ^-- ADD THIS LINE
-        ])
+const server = new aws.ec2.Instance("webserver-www", {
+    instanceType: size,
+    securityGroups: [ group.name ], // reference the security group resource above
+    ami: ami.id,
+    userData: userData,             // <-- ADD THIS LINE
+});
 
-    user_data = """
-    #!/bin/bash
-    echo "Hello, World!" > index.html
-    nohup python -m SimpleHTTPServer 80 &
-    """
-    # ^-- ADD THIS DEFINITION
+...
+```
 
-    server = ec2.Instance('webserver-www',
-        instance_type=size,
-        security_groups=[group.name], # reference security group from above
-        user_data=user_data, # <-- ADD THIS LINE
-        ami=ami.id)
+```python
+...
 
-    ...
-    ```
+group = ec2.SecurityGroup('webserver-secgrp',
+    description='Enable HTTP access',
+    ingress=[
+        { 'protocol': 'tcp', 'from_port': 22, 'to_port': 22, 'cidr_blocks': ['0.0.0.0/0'] },
+        { 'protocol': 'tcp', 'from_port': 80, 'to_port': 80, 'cidr_blocks': ['0.0.0.0/0'] }
+        # ^-- ADD THIS LINE
+    ])
 
-    Note that we defined the `userData` script inline in a string.  Because we are using a programming language, we could also read
-    this from a file, construct this string programmatically, or even build up a string that depends on other resources
-    defined in our program.  We'll see in later sections how we can deploy and version the application code of our
-    program in a variety of different ways using Pulumi.
+user_data = """
+#!/bin/bash
+echo "Hello, World!" > index.html
+nohup python -m SimpleHTTPServer 80 &
+"""
+# ^-- ADD THIS DEFINITION
 
-1.  Run `pulumi up` to preview and deploy the changes. You'll see two changes: the `ingress` property of the `SecurityGroup` will be _updated_ in-place.  Second, the `Instance` will be _replaced_ with a new EC2 Instance which will run the new script on startup. Pulumi understands which changes to a given cloud resource can be made in-place, and which require replacement, and computes the minimally disruptive change to achieve the desired state.
+server = ec2.Instance('webserver-www',
+    instance_type=size,
+    security_groups=[group.name], # reference security group from above
+    user_data=user_data, # <-- ADD THIS LINE
+    ami=ami.id)
 
-        $ pulumi up
-        Previewing update of stack 'ec2-quickstart-dev'
-        ...
+...
+```
 
-        Updating stack 'ec2-quickstart-dev'
-        Performing changes:
+> Note that the `userData` script is defined inline in a string.  Because you are using a programming language to write your Pulumi program, you could also read this from a file, construct this string programmatically, or even build up a string that depends on other resources
+defined in your program.  You'll see in later sections how to deploy and version the application code of your
+program in a variety of different ways using Pulumi.
 
-            Type                      Name                               Status       Info
-        *   pulumi:pulumi:Stack       ec2-quickstart-ec2-quickstart-dev  done
-        ~   ├─ aws:ec2:SecurityGroup  webserver-secgrp                   updated      changes: ~ ingress
-        +-  └─ aws:ec2:Instance       webserver-www                      replaced     changes: + userData
+Run `pulumi up` to preview and deploy the changes. You'll see two changes: the `ingress` property of the `SecurityGroup` will be _updated_ in-place.  Secondly, the `Instance` will be _replaced_ with a new EC2 instance which will run the new script on startup. Pulumi understands which changes to a given cloud resource can be made in place, which require replacement, and computes the minimally disruptive change to achieve the desired state.
 
-        ---outputs:---
-        publicHostName: "ec2-52-23-161-125.compute-1.amazonaws.com"
-        publicIp      : "52.23.161.125"
+```bash
+Previewing update (webserver-dev):
 
-        info: 2 changes performed:
-            ~ 1 resource updated
-            +-1 resource replaced
-            1 resource unchanged
-        Update duration: 1m44.50461533s
+     Type                      Name                     Plan        Info
+     pulumi:pulumi:Stack       myproject-webserver-dev
+ ~   ├─ aws:ec2:SecurityGroup  webserver-secgrp         update      [diff: ~ingress]
+ +-  └─ aws:ec2:Instance       webserver-www            replace     [diff: +userData~securityGroups]
+ 
+Resources:
+    ~ 1 to update
+    +-1 to replace
+    2 changes. 1 unchanged
+```
+When prompted to confirm your update, you may review the planned changes to your stack resources by selecting `details`.
 
-        Permalink: https://app.pulumi.com/lindydonna/ec2-quickstart-dev/updates/6
+```bash
+Do you want to perform this update? details
+  pulumi:pulumi:Stack: (same)
+    [urn=urn:pulumi:webserver-dev::myproject::pulumi:pulumi:Stack::myproject-webserver-dev]
+    ~ aws:ec2/securityGroup:SecurityGroup: (update)
+        [id=sg-0317c16c7015d7fd0]
+        [urn=urn:pulumi:webserver-dev::myproject::aws:ec2/securityGroup:SecurityGroup::webserver-secgrp]
+        [provider=urn:pulumi:webserver-dev::myproject::pulumi:providers:aws::default_1_2_1::eec9bbfb-0881-4f75-a0cb-35395a0240e2]
+      ~ ingress: [
+          ~ [0]: {
+                  ~ cidrBlocks : [
+                      ~ [0]: "0.0.0.0/0" => "0.0.0.0/0"
+                    ]
+                  - description: ""
+                  ~ fromPort   : 22 => 22
+                  ~ protocol   : "tcp" => "tcp"
+                  ~ self       : false => false
+                  ~ toPort     : 22 => 22
+                }
+          + [1]: {
+                  + cidrBlocks: [
+                  +     [0]: "0.0.0.0/0"
+                    ]
+                  + fromPort  : 80
+                  + protocol  : "tcp"
+                  + self      : false
+                  + toPort    : 80
+                }
+        ]
+    ++aws:ec2/instance:Instance: (create-replacement)
+        [id=i-0a639b62c37bf712c]
+        [urn=urn:pulumi:webserver-dev::myproject::aws:ec2/instance:Instance::webserver-www]
+        [provider=urn:pulumi:webserver-dev::myproject::pulumi:providers:aws::default_1_2_1::eec9bbfb-0881-4f75-a0cb-35395a0240e2]
+      ~ securityGroups: [
+          ~ [0]: "webserver-secgrp-2398ba7" => output<string>
+        ]
+      + userData      : "#!/bin/bash\necho \"Hello, World!\" > index.html\nnohup python -m SimpleHTTPServer 80 &"
+    +-aws:ec2/instance:Instance: (replace)
+        [id=i-0a639b62c37bf712c]
+        [urn=urn:pulumi:webserver-dev::myproject::aws:ec2/instance:Instance::webserver-www]
+        [provider=urn:pulumi:webserver-dev::myproject::pulumi:providers:aws::default_1_2_1::eec9bbfb-0881-4f75-a0cb-35395a0240e2]
+      ~ securityGroups: [
+          ~ [0]: "webserver-secgrp-2398ba7" => output<string>
+        ]
+      + userData      : "#!/bin/bash\necho \"Hello, World!\" > index.html\nnohup python -m SimpleHTTPServer 80 &"
+    --aws:ec2/instance:Instance: (delete-replaced)
+        [id=i-0a639b62c37bf712c]
+        [urn=urn:pulumi:webserver-dev::myproject::aws:ec2/instance:Instance::webserver-www]
+        [provider=urn:pulumi:webserver-dev::myproject::pulumi:providers:aws::default_1_2_1::eec9bbfb-0881-4f75-a0cb-35395a0240e2]
+```
 
+Select `yes` to confirm the update.
 
-1.  We can use `pulumi stack output` to get the value of stack outputs from the CLI.  So we can `curl` the EC2 instance to see the HTTP server running there. Stack outputs can also be viewed on the Pulumi Console.
+You can use `pulumi stack output` to get the value of stack outputs from the CLI.  To do so, `curl` the EC2 instance to confirm that the HTTP server is running. Stack outputs can also be viewed on the Pulumi Console.
 
-    ```bash
-    $ curl $(pulumi stack output publicHostName)
-    Hello, World!
-    ```
+```bash
+$ curl $(pulumi stack output publicHostName)
+Hello, World!
+```
 
 ## Clean up
 
-Before moving on, let's tear down the resources that are part of our stack.
+Before moving on, tear down the resources that are part of your stack to avoid incurring any charges.
 
-1.  Run `pulumi destroy` to tear down all resources.  You'll be prompted to make sure you really want to delete these
+1.  Run `pulumi destroy` to tear down all resources. You'll be prompted to make sure you really want to delete these
    resources. This takes about 60 seconds; Pulumi waits for the EC2 instance to finish shutting down before
    it considers the destroy operation to be complete.
 
@@ -345,12 +401,24 @@ Before moving on, let's tear down the resources that are part of our stack.
 
 ## Summary
 
-In this tutorial, we saw how to use Pulumi programs to create and manage cloud resources in AWS, using our programming language of choice and its corresponding package manager. To preview and update infrastructure, use `pulumi up`. To clean up resources, run `pulumi destroy`.
+In this tutorial, we showed you how to use Pulumi programs to create and manage cloud resources in AWS, using TypeScript, JavaScript, or Python (and its corresponding package manager). You also learned how to work with the Pulumi CLI. To recap:
 
-For a similar example in other languages and clouds, see the [Pulumi examples collection](https://github.com/pulumi/examples).
+- Run `pulumi new <cloud>-<language> --name myproject` to create a new project from a language and cloud template.
+- Run `pulumi up` to preview and update your infrastructure.
+- Run `pulumi destroy` to clean up your resources.
+- Run `pulumi stack rm` to delete your stack.
+
+For a similar example in other languages and clouds, see the [Pulumi examples repo](https://github.com/pulumi/examples).
 
 <!-- Common links -->
 [EC2 Instance]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#Instance" >}}
 [Security Group]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws/ec2#SecurityGroup" >}}
 [@pulumi/aws]: {{< relref "/docs/reference/pkg/nodejs/pulumi/aws" >}}
 <!-- End common links -->
+
+## Next Steps
+
+- [Containers on ECS Fargate]({{< relref "/docs/tutorials/aws/ecs-fargate" >}})
+- [API Gateways and Lambda]({{< relref "/docs/tutorials/aws/rest-api" >}})
+- [Serve a Static Webstie from S3]({{< relref "/docs/tutorials/aws/s3-website" >}})
+
