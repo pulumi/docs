@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes: Deploying the Wordpress Helm chart"
+title: "Wordpress Helm Chart"
 no_edit_this_page: true
 ---
 

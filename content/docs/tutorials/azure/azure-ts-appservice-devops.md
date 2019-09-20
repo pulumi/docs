@@ -1,5 +1,5 @@
 ---
-title: "A Todo App on Azure App Service with SQL Database and Application Insights and deploys it to Azure DevOps"
+title: "Todo App Using Azure App Service with SQL Database and Integrated with Azure DevOps"
 no_edit_this_page: true
 ---
 

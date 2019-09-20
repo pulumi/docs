@@ -1,5 +1,5 @@
 ---
-title: "AWS Web Server example in Python"
+title: "Web Server Using Amazon EC2"
 no_edit_this_page: true
 ---
 

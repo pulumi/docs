@@ -1,5 +1,5 @@
 ---
-title: "Azure Web Server Virtual Machine"
+title: "Web Server Using Azure Virtual Machine"
 no_edit_this_page: true
 ---
 

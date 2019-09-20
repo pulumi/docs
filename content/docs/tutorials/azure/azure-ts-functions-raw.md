@@ -1,5 +1,5 @@
 ---
-title: "Azure Functions"
+title: "Azure Functions in All Supported Languages"
 no_edit_this_page: true
 ---
 

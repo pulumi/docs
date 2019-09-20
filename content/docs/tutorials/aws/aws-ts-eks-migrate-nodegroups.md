@@ -1,5 +1,5 @@
 ---
-title: "examples/aws-ts-eks-migrate-nodegroups"
+title: "Zero Downtime Migration of EKS Node Groups"
 no_edit_this_page: true
 ---
 
@@ -14,10 +14,11 @@ no_edit_this_page: true
 </p>
 
 
-Creates an EKS cluster with node groups and a workload, and showcases how add an
-additional node group to use for workload migration with zero downtime.
+Creates an EKS cluster with node groups and a workload, and showcases adding a
+node group to use for workload migration with zero downtime.
 
 For step-by-step instructions, check out the [tutorial][tutorial-migrate-nodegroups].
 
 [tutorial-migrate-nodegroups]: https://www.pulumi.com/docs/tutorials/kubernetes/eks-migrate-nodegroups/
+
 

@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Jenkins"
+title: "Continuous Integration with Jenkins"
 no_edit_this_page: true
 ---
 

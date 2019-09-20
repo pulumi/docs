@@ -1,5 +1,5 @@
 ---
-title: "Video Thumbnailer"
+title: "Video Thumbnailer Using AWS Fargate"
 no_edit_this_page: true
 ---
 

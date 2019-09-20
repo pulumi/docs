@@ -1,5 +1,5 @@
 ---
-title: "Voting app with two containers"
+title: "Voting app Using Redis and Flask"
 no_edit_this_page: true
 ---
 

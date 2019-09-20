@@ -1,5 +1,5 @@
 ---
-title: "Defining an AWS AppSync Endpoint"
+title: "GraphQL Endpoint in AWS AppSync"
 no_edit_this_page: true
 ---
 
@@ -17,7 +17,7 @@ no_edit_this_page: true
 </p>
 
 
-This example shows how to setup a basic GraphQL endpoint in AWS AppSync. The endpoint contains one query and one mutation that get and put items to a Dynamo DB table.
+This example shows how to set up a basic GraphQL endpoint in AWS AppSync. The endpoint contains one query and one mutation that get and put items to a Dynamo DB table.
 
 ## Deploying and running the Pulumi App
 

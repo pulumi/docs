@@ -1,5 +1,5 @@
 ---
-title: "Deploy a Spring Boot App using Jenkins and Pulumi"
+title: "Spring Boot App on Azure App Service Using Jenkins"
 no_edit_this_page: true
 ---
 

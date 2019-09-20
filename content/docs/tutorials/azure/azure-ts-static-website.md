@@ -1,5 +1,5 @@
 ---
-title: "A Static Website Hosted on Azure Blob Storage + Azure CDN"
+title: "Static Website Using Azure Blob Storage and CDN"
 no_edit_this_page: true
 ---
 

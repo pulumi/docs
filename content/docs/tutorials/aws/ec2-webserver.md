@@ -149,7 +149,7 @@ This example uses the [`@pulumi/aws`]({{< relref "/docs/reference/pkg/nodejs/pul
 
 ### Step 3: Preview and deploy your resources
 
-To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to whether to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
+To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cli/pulumi_up" >}}). The command shows a preview of the resources that will be created and prompts you to proceed with the deployment.  Note that the stack itself is counted as a resource, though it does not correspond to a physical cloud resource.
 
         $ pulumi up
         Previewing update of stack 'webserver-dev'
@@ -163,7 +163,7 @@ To preview your Pulumi program, run [`pulumi up`]({{< relref "/docs/reference/cl
         info: 3 changes previewed:
             + 3 resources to create
 
-1.  Now, proceed with the deployment, which takes about 30 seconds to complete.
+Now, proceed with the deployment, which takes about 30 seconds to complete.
 
         Do you want to perform this update? yes
         Updating stack 'ec2-quickstart-dev'

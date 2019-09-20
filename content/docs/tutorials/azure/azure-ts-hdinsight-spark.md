@@ -1,5 +1,5 @@
 ---
-title: "Spark on Azure HDInsight example"
+title: "Spark on Azure HDInsight"
 no_edit_this_page: true
 ---
 

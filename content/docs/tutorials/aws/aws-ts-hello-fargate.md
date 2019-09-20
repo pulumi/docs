@@ -1,5 +1,5 @@
 ---
-title: "Get Started with Docker on AWS Fargate"
+title: "Dockerized App Using ECS, ECR, and Fargate"
 no_edit_this_page: true
 ---
 

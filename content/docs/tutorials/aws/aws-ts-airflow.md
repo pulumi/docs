@@ -1,5 +1,5 @@
 ---
-title: "AWS RDS and Airflow example"
+title: "RDS Postgres and Containerized Airflow"
 no_edit_this_page: true
 ---
 

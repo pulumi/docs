@@ -1,5 +1,5 @@
 ---
-title: "AWS Step Functions (Python)"
+title: "AWS Step Functions"
 no_edit_this_page: true
 ---
 

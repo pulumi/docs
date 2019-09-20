@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes: Exposing a Deployment with a public IP address"
+title: "Exposing a Deployment with a Public IP Address"
 no_edit_this_page: true
 ---
 
