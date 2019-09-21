@@ -136,4 +136,18 @@ main {
     }
 }
 
+// This little trick prepends anchor targets with a pseudoelement that the browser picks
+// up as the anchor target, allowing us to position the actual target below the fixed
+// navbar.
+:target {
+    &::before {
+        content: " ";
+        display: block;
+
+        // 106px is the navbar height (90px) plus a 16px offset for some vertical padding.
+        height: 106px;
+        margin-top: -106px;
+    }
+}
+
 @tailwind utilities;
