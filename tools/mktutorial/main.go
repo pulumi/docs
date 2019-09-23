@@ -189,7 +189,7 @@ const (
 )
 
 var (
-	markdownLinkURL = regexp.MustCompile(`\[(.*)\]\((.*)\)`)
+	markdownLinkURL = regexp.MustCompile(`(?mU)\[(.*)\]\((.*)\)`)
 	imageLink       = regexp.MustCompile(`.*\.(?:png|gif|jpe?g)`)
 )
 
@@ -220,7 +220,7 @@ func cleanMarkdownBody(name, body string) string {
 		mdurl := tidied[loc[4]:loc[5]]
 
 		// If the URL contains a scheme, we have no reason to replace it.
-		if !strings.Contains(mdurl, "://") {
+		if !strings.Contains(mdurl, "://") && !strings.HasPrefix(mdurl, "../") {
 			// Otherwise, we need to make it relative to the Git repo's contents.
 			if strings.HasPrefix(mdurl, "./") {
 				mdurl = mdurl[2:]

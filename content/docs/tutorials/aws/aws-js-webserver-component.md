@@ -17,7 +17,7 @@ no_edit_this_page: true
 </p>
 
 
-Deploy an EC2 instance with the `@pulumi/aws` package, using a common module for creating an instance. We define a function, `createInstance`, in [webserver.js](webserver.js) and use it in the main program, [index.js](https://github.com/pulumi/examples/blob/master/aws-js-webserver-component/index.js).
+Deploy an EC2 instance with the `@pulumi/aws` package, using a common module for creating an instance. We define a function, `createInstance`, in [webserver.js](https://github.com/pulumi/examples/blob/master/aws-js-webserver-component/webserver.js) and use it in the main program, [index.js](https://github.com/pulumi/examples/blob/master/aws-js-webserver-component/index.js).
 
 For a walkthrough of the main example, see [Simple Web Server Using Amazon EC2](https://www.pulumi.com/docs/tutorials/aws/ec2-webserver/).
 
