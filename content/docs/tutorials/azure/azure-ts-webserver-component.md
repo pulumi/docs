@@ -1,5 +1,5 @@
 ---
-title: "Azure Web Server Virtual Machine Component"
+title: "Web Server Component Using Azure Virtual Machine"
 no_edit_this_page: true
 ---
 

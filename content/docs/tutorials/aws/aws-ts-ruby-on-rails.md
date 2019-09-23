@@ -1,5 +1,5 @@
 ---
-title: "AWS EC2 Ruby on Rails"
+title: "Ruby on Rails Server Using Amazon EC2"
 no_edit_this_page: true
 ---
 

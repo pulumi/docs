@@ -1,5 +1,5 @@
 ---
-title: "Globally distributed serverless URL-shortener"
+title: "Globally Distributed Serverless URL Shortener Using Azure Functions and Cosmos DB"
 no_edit_this_page: true
 ---
 

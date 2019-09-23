@@ -1,5 +1,5 @@
 ---
-title: "AWS Web Server component example"
+title: "AWS Web Server Component"
 no_edit_this_page: true
 ---
 
@@ -17,7 +17,7 @@ no_edit_this_page: true
 </p>
 
 
-Deploy an EC2 instance using `@pulumi/aws`, using a common module for creating an instance. A function `createInstance` is defined in [webserver.js](https://github.com/pulumi/examples/blob/master/aws-js-webserver-component/webserver.js) which is then used in main program.
+Deploy an EC2 instance with the `@pulumi/aws` package, using a common module for creating an instance. We define a function, `createInstance`, in [webserver.js](https://github.com/pulumi/examples/blob/master/aws-js-webserver-component/webserver.js) and use it in the main program, [index.js](https://github.com/pulumi/examples/blob/master/aws-js-webserver-component/index.js).
 
-For a walkthrough of the main example, [Infrastructure on AWS](https://www.pulumi.com/docs/tutorials/aws/ec2-webserver/).
+For a walkthrough of the main example, see [Simple Web Server Using Amazon EC2](https://www.pulumi.com/docs/tutorials/aws/ec2-webserver/).
 

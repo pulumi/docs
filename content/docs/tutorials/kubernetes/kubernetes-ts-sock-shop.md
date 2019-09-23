@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Sock Shop"
+title: "Sock Shop Pulumi Demo"
 no_edit_this_page: true
 ---
 

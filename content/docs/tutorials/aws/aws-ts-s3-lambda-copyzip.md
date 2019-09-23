@@ -1,5 +1,5 @@
 ---
-title: "Serverless App to Copy and Zip S3 Objects Between Buckets"
+title: "Serverless App to Copy and Zip Objects Between Amazon S3 Buckets"
 no_edit_this_page: true
 ---
 

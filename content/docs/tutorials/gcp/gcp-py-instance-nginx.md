@@ -1,5 +1,5 @@
 ---
-title: "Pulumi Nginx Server in a instance (GCP)"
+title: "Nginx Server Using Compute Engine"
 no_edit_this_page: true
 ---
 

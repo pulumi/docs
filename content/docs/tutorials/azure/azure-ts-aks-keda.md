@@ -1,5 +1,5 @@
 ---
-title: "Azure Kubernetes Service (AKS) cluster and Azure Functions with KEDA"
+title: "Azure Kubernetes Service (AKS) Cluster and Azure Functions with KEDA"
 no_edit_this_page: true
 ---
 

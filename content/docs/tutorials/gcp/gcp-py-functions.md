@@ -1,5 +1,5 @@
 ---
-title: "GCP Functions"
+title: "Google Cloud Functions"
 no_edit_this_page: true
 ---
 

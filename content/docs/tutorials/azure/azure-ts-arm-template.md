@@ -1,5 +1,5 @@
 ---
-title: "Deploy an Azure Resource Manager (ARM) Template in Pulumi"
+title: "Azure Resource Manager (ARM) Template"
 no_edit_this_page: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Azure Web Server example in Python"
+title: "Web Server Using Azure Virtual Machine"
 no_edit_this_page: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "A Node.js demo app deployed on AKS, using CosmosDB"
+title: "Azure Kubernetes Service (AKS) App Using CosmosDB"
 no_edit_this_page: true
 ---
 

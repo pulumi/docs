@@ -1,5 +1,5 @@
 ---
-title: "Pulumi web server (GCP)"
+title: "Web Server Using Compute Engine"
 no_edit_this_page: true
 ---
 

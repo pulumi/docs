@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes: Staged application rollout gated by Prometheus checks"
+title: "Staged App Rollout Gated by Prometheus Checks"
 no_edit_this_page: true
 ---
 

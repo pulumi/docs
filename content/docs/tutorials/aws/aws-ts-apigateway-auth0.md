@@ -1,5 +1,5 @@
 ---
-title: "Auth0 Protected Serverless REST API on AWS"
+title: "Secure Serverless REST API Using Auth0"
 no_edit_this_page: true
 ---
 

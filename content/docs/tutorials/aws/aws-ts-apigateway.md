@@ -1,5 +1,5 @@
 ---
-title: "Serverless REST API on AWS"
+title: "Serverless REST API"
 no_edit_this_page: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes: Triggering a rollout of an app by changing ConfigMap data"
+title: "App Rollout via ConfigMap Data Change"
 no_edit_this_page: true
 ---
 
