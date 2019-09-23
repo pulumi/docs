@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes: Triggering a rollout of an app by changing data in S3"
+title: "App Rollout via Data Change in Amazon S3"
 no_edit_this_page: true
 ---
 

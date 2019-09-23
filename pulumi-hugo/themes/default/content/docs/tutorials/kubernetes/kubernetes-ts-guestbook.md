@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Guestbook (Two Ways)"
+title: "Simple and Component-based Kubernetes Guestbook Apps"
 no_edit_this_page: true
 ---
 

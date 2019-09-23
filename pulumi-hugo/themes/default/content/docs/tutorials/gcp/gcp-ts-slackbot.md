@@ -1,5 +1,5 @@
 ---
-title: "A simple Slackbot running in GCP using Pulumi."
+title: "Slackbot for Posting Slack Mention Notifications"
 no_edit_this_page: true
 ---
 
