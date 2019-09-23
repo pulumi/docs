@@ -4,6 +4,9 @@
     </a>
 </h3>
 
+{{#IsDeprecated}}
+{{>deprecated}}
+{{/IsDeprecated}}
 {{#CodeDetails}}
 <pre class="highlight"><code>{{{CodeDetails}}}</code></pre>
 {{/CodeDetails}}
@@ -20,6 +23,9 @@
 {{/Children}}
 {{#Signatures}}
 
+{{#IsDeprecated}}
+{{>deprecated}}
+{{/IsDeprecated}}
 <pre class="highlight"><code>{{{Label}}}</code></pre>
 
 {{#Comment.ShortText}}

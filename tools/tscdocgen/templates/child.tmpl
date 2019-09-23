@@ -2,11 +2,17 @@
 <a class="pdoc-child-name" href="{{RepoURL}}/{{URLPath}}">{{{Label}}} <b>{{{Name}}}</b></a>
 </h4>
 
+{{#IsDeprecated}}
+{{>deprecated}}
+{{/IsDeprecated}}
 {{#CodeDetails}}
 <pre class="highlight"><code>{{{CodeDetails}}}</code></pre>
 {{/CodeDetails}}
 {{#Signatures}}
 
+{{#IsDeprecated}}
+{{>deprecated}}
+{{/IsDeprecated}}
 <pre class="highlight"><code>{{{Label}}}</code></pre>
 
 {{#Comment.ShortText}}
